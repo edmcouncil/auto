@@ -10,13 +10,11 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:auto-ec-mod="https://spec.edmcouncil.org/auto/ontology/EC/MetadataEC/"
-     xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
-     xmlns:auto-ec-sae-mod="https://spec.edmcouncil.org/auto/ontology/EC/SchemaAutomotive/MetadataECSchemaAutomotive/">
+     xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
     
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/MetadataEC/">
-        <owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/master/latest/EC/MetadataEC/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/master/latest/EC/SchemaAutomotive/MetadataECSchemaAutomotive/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/Utilities/AnnotationVocabulary/"/>
+        <owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/MetadataEC/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
         <dct:abstract>This ontology provides metadata about the vehicle information in e-commerce.</dct:abstract>
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-18T01:43:00</dct:issued>
         <dct:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opensource.org/licenses/MIT</dct:license>
@@ -24,7 +22,6 @@
         <sm:copyright>Copyright (c) 2020 EDM Council, Inc.</sm:copyright>
         <sm:fileAbbreviation>auto-ec-mod</sm:fileAbbreviation>
         <sm:filename>MetadataEC.rdf</sm:filename>
-        <rdfs:comment>QName: auto-ec-mod:</rdfs:comment>
         <rdfs:label>Metadata about the EDMC-AUTO e-commerce (BE) Domain</rdfs:label>
     </owl:Ontology>
 
@@ -35,7 +32,7 @@
         <rdf:type rdf:resource="http://www.omg.org/techprocess/ab/SpecificationMetadata/Module"/>
         <dct:abstract>Automotive Core: A schema.org-compliant fundamental ontology for vehicle information in e-commerce.</dct:abstract>
         <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.w3.org/community/gao/</dct:creator>
-        <dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/SchemaAutomotive/MetadataECSchemaAutomotive/SchemaAutomotiveModule"/>
+        <dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"/>
         <dct:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opensource.org/licenses/MIT</dct:license>
         <dct:title>EDMC Automotive Ontology (AUTO) EC Domain</dct:title>
         <sm:contributor>Automotive Group</sm:contributor>
@@ -46,7 +43,6 @@
         <sm:keyword>vehicle information in e-commerce</sm:keyword>
         <sm:keyword>automobiles from the retail market perspective</sm:keyword>
         <sm:moduleAbbreviation>auto-ec</sm:moduleAbbreviation>
-        <rdfs:comment>QName: auto-ec-mod:ECDomain</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/MetadataEC/"/>
         <rdfs:label>E-Commerce vehicle information</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://spec.edmcouncil.org/auto/</rdfs:seeAlso>
