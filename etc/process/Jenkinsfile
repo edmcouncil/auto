@@ -8,7 +8,7 @@
 // See https://jenkins.io/doc/book/pipeline/jenkinsfile/
 //
 //String[] derivedProducts = ['widoco', 'fibopedia', 'glossary', 'vocabulary', 'datadictionary', 'reference', 'htmlpages']
-String[] derivedProducts = ['glossary', 'vocabulary']
+String[] derivedProducts = []
 
 // name of <YOUR ONTOLOGY>
 env.ONTPUB_FAMILY='auto'
@@ -16,7 +16,7 @@ env.ONTPUB_FAMILY='auto'
 env.ONTPUB_SPEC_HOST='spec.edmcouncil.org'
 env.ONTPUB_IS_DARK_MODE='1'
 // ontology-publisher version: CREATE MD DESCIBING HOW TO CREATE ontology-publisher IMAGE: see https://github.com/edmcouncil/ontology-publisher/blob/master/README.md
-env.ONTPUB_IMAGE='edmcouncil/ontology-publisher:v0.1.4'
+env.ONTPUB_IMAGE='edmcouncil/ontology-publisher:v0.1.5'
 env.LC_ALL='en_US.UTF-8'
 env.LANG='en_US.UTF-8'
 env.LANGUAGE='en_US.UTF-8'
