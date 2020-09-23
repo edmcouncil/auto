@@ -9,7 +9,6 @@ def runInOntologyPublisherContainer(Map config, Closure body) {
   assert config.longStageName != null
   assert body != null
   assert gitScript != null
-  assert slackScript != null
 
   return {
     stage(config.longStageName) {
@@ -56,7 +55,6 @@ def runInOntologyPublisherContainer(Map config, Closure body) {
           if (config.archiveArtifacts == true) {
             archiveArtifacts artifacts: "output/${env.ONTPUB_FAMILY}/${config.shortStageName}/**/*.log", fingerprint: true
           }
-          slackScript.notifyStage()
         }
       }
     }
