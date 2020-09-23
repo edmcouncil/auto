@@ -21,7 +21,7 @@ env.LC_ALL='en_US.UTF-8'
 env.LANG='en_US.UTF-8'
 env.LANGUAGE='en_US.UTF-8'
 // main folder for nginx server - see nginx.conf, it must contain the line: "root /mnt/jenkins-disk/spec.edmcouncil.org;"
-env.NGINX_SPEC_ROOT='/mnt/jenkins-disk/spec.edmcouncil.org'
+env.NGINX_SPEC_ROOT='/opt'
 
 properties([
   buildDiscarder(
