@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/"
-     xml:base="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/"
+<rdf:RDF xmlns="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"
+     xml:base="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
      xmlns:dct="http://purl.org/dc/terms/"
@@ -13,10 +13,10 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:dctype="http://purl.org/dc/dcmitype/"
-     xmlns:auto-ec-as="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/"
+     xmlns:auto-ec-as="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"
      xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
      xmlns:fibo-fnd-utl-val="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/">
-    <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/">
+    <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/">
         <owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/SchemaAutomotive/AutoSchemaOrg/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/"/>
@@ -28,7 +28,7 @@
         <sm:fileAbbreviation>auto-ec-as</sm:fileAbbreviation>
         <sm:filename>AutoSchemaOrg.rdf</sm:filename>
         <rdfs:label>Auto Schema.Org Ontology</rdfs:label>
-        <skos:changeNote>The https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg.rdf version of this ontology was revised to guaranty compliance with the schema.org.</skos:changeNote>
+        <skos:changeNote>The https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg.rdf version of this ontology was revised to guaranty compliance with the schema.org.</skos:changeNote>
         <fibo-fnd-utl-av:hasMaturityLevel rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Provisional"/>
     </owl:Ontology>
     
@@ -51,12 +51,6 @@
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/dct:isPartOf -->
-
-    <owl:AnnotationProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/dct:isPartOf"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -68,11 +62,11 @@
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/accelerationTime -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/accelerationTime -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/accelerationTime">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/accelerationTime">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>accelerationTime</rdfs:label>
@@ -88,14 +82,14 @@ Typical unit code(s): SEC for seconds&lt;br/&gt;&lt;br/&gt;
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/bodyType -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/bodyType -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/bodyType">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/bodyType">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QualitativeValue"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QualitativeValue"/>
                     <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/TextValue"/>
                 </owl:unionOf>
             </owl:Class>
@@ -108,11 +102,11 @@ Typical unit code(s): SEC for seconds&lt;br/&gt;&lt;br/&gt;
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/cargoVolume -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/cargoVolume -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/cargoVolume">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/cargoVolume">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>cargoVolume</rdfs:label>
@@ -125,14 +119,14 @@ Note: You can use minValue and maxValue to indicate ranges.</skos:definition>
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/driveWheelConfiguration -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/driveWheelConfiguration -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/driveWheelConfiguration">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/driveWheelConfiguration">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/DriveWheelConfigurationValue"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/DriveWheelConfigurationValue"/>
                     <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/TextValue"/>
                 </owl:unionOf>
             </owl:Class>
@@ -145,11 +139,11 @@ Note: You can use minValue and maxValue to indicate ranges.</skos:definition>
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/engineDisplacement -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/engineDisplacement -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/engineDisplacement">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/EngineSpecification"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/engineDisplacement">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/EngineSpecification"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>engineDisplacement</rdfs:label>
@@ -162,11 +156,11 @@ Typical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ for cubic in
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/enginePower -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/enginePower -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/enginePower">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/EngineSpecification"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/enginePower">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/EngineSpecification"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>enginePower</rdfs:label>
@@ -183,14 +177,14 @@ Typical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ for cubic in
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/engineType -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/engineType -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/engineType">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/EngineSpecification"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/engineType">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/EngineSpecification"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QualitativeValue"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QualitativeValue"/>
                     <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/TextValue"/>
                 </owl:unionOf>
             </owl:Class>
@@ -203,11 +197,11 @@ Typical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ for cubic in
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/fuelCapacity -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/fuelCapacity -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/fuelCapacity">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/fuelCapacity">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>fuelCapacity</rdfs:label>
@@ -218,11 +212,11 @@ Typical unit code(s): LTR for liters, GLL of US gallons, GLI for UK / imperial g
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/fuelConsumption -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/fuelConsumption -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/fuelConsumption">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/fuelConsumption">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>fuelConsumption</rdfs:label>
@@ -235,11 +229,11 @@ Note 3: Often, the absolute value is useful only when related to driving speed (
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/fuelEfficiency -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/fuelEfficiency -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/fuelEfficiency">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/fuelEfficiency">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>fuelEfficiency</rdfs:label>
@@ -252,14 +246,14 @@ Note 3: Often, the absolute value is useful only when related to driving speed (
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/fuelType -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/fuelType -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/fuelType">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/fuelType">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
                     <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/TextValue"/>
                 </owl:unionOf>
             </owl:Class>
@@ -272,14 +266,14 @@ Note 3: Often, the absolute value is useful only when related to driving speed (
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/meetsEmissionStandard -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/meetsEmissionStandard -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/meetsEmissionStandard">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/meetsEmissionStandard">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QualitativeValue"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QualitativeValue"/>
                     <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/TextValue"/>
                 </owl:unionOf>
             </owl:Class>
@@ -292,11 +286,11 @@ Note 3: Often, the absolute value is useful only when related to driving speed (
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/mileageFromOdometer -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/mileageFromOdometer -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/mileageFromOdometer">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/mileageFromOdometer">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>mileageFromOdometer</rdfs:label>
@@ -307,14 +301,14 @@ Typical unit code(s): KMT for kilometers, SMI for statute miles</skos:definition
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/numberOfAxles -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfAxles -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/numberOfAxles">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfAxles">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
                     <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/NumericValue"/>
                 </owl:unionOf>
             </owl:Class>
@@ -329,14 +323,14 @@ Typical unit code(s): C62</skos:definition>
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/numberOfDoors -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfDoors -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/numberOfDoors">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfDoors">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
                     <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/NumericValue"/>
                 </owl:unionOf>
             </owl:Class>
@@ -351,14 +345,14 @@ Typical unit code(s): C62</skos:definition>
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/numberOfForwardGears -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfForwardGears -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/numberOfForwardGears">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfForwardGears">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
                     <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/NumericValue"/>
                 </owl:unionOf>
             </owl:Class>
@@ -373,14 +367,14 @@ Typical unit code(s): C62</skos:definition>
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/numberOfPreviousOwners -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfPreviousOwners -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/numberOfPreviousOwners">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfPreviousOwners">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
                     <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/NumericValue"/>
                 </owl:unionOf>
             </owl:Class>
@@ -395,11 +389,11 @@ Typical unit code(s): C62</skos:definition>
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/payload -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/payload -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/payload">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/payload">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>payload</rdfs:label>
@@ -418,18 +412,18 @@ Typical unit code(s): KGM for kilogram, LBR for pound&lt;br/&gt;&lt;br/&gt;
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/roofLoad -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/roofLoad -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/roofLoad">
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/roofLoad">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/BusOrCoach"/>
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Car"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/BusOrCoach"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Car"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>roofLoad</rdfs:label>
@@ -447,14 +441,14 @@ Typical unit code(s): KGM for kilogram, LBR for pound&lt;br/&gt;&lt;br/&gt;
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/seatingCapacity -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/seatingCapacity -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/seatingCapacity">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/seatingCapacity">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
                     <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/NumericValue"/>
                 </owl:unionOf>
             </owl:Class>
@@ -469,11 +463,11 @@ Typical unit code(s): C62 for persons</skos:definition>
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/speed -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/speed -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/speed">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/speed">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>speed</rdfs:label>
@@ -487,11 +481,11 @@ Typical unit code(s): KMH for km/h, HM for mile per hour (0.447 04 m/s), KNT for
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/steeringPosition -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/steeringPosition -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/steeringPosition">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/SteeringPositionValue"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/steeringPosition">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/SteeringPositionValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>steeringPosition</rdfs:label>
@@ -500,11 +494,11 @@ Typical unit code(s): KMH for km/h, HM for mile per hour (0.447 04 m/s), KNT for
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/tongueWeight -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/tongueWeight -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/tongueWeight">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/tongueWeight">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>tongueWeight</rdfs:label>
@@ -522,11 +516,11 @@ Typical unit code(s): KGM for kilogram, LBR for pound&lt;br/&gt;&lt;br/&gt;
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/torque -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/torque -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/torque">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/EngineSpecification"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/torque">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/EngineSpecification"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>torque</rdfs:label>
@@ -543,11 +537,11 @@ Typical unit code(s): NU for newton metre (N m), F17 for pound-force per foot, o
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/trailerWeight -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/trailerWeight -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/trailerWeight">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/trailerWeight">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>trailerWeight</rdfs:label>
@@ -564,11 +558,11 @@ Note 3: Note that you can use minValue and maxValue to indicate ranges.</skos:de
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/vehicleEngine -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleEngine -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/vehicleEngine">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/EngineSpecification"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleEngine">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/EngineSpecification"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>vehicleEngine</rdfs:label>
@@ -577,14 +571,14 @@ Note 3: Note that you can use minValue and maxValue to indicate ranges.</skos:de
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/vehicleSeatingCapacity -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleSeatingCapacity -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/vehicleSeatingCapacity">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleSeatingCapacity">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
                     <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/NumericValue"/>
                 </owl:unionOf>
             </owl:Class>
@@ -599,14 +593,14 @@ Typical unit code(s): C62 for persons.</skos:definition>
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/vehicleSpecialUsage -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleSpecialUsage -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/vehicleSpecialUsage">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleSpecialUsage">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/CarUsageType"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/CarUsageType"/>
                     <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/TextValue"/>
                 </owl:unionOf>
             </owl:Class>
@@ -619,14 +613,14 @@ Typical unit code(s): C62 for persons.</skos:definition>
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/vehicleTransmission -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleTransmission -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/vehicleTransmission">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleTransmission">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QualitativeValue"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QualitativeValue"/>
                     <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/TextValue"/>
                 </owl:unionOf>
             </owl:Class>
@@ -639,11 +633,11 @@ Typical unit code(s): C62 for persons.</skos:definition>
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/weightTotal -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/weightTotal -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/weightTotal">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/weightTotal">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>weightTotal</rdfs:label>
@@ -661,11 +655,11 @@ Typical unit code(s): KGM for kilogram, LBR for pound&lt;br/&gt;&lt;br/&gt;
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/wheelbase -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/wheelbase -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/wheelbase">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/wheelbase">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>wheelbase</rdfs:label>
@@ -687,14 +681,14 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/acrissCode -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/acrissCode -->
 
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/acrissCode">
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/acrissCode">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/BusOrCoach"/>
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Car"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/BusOrCoach"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Car"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -707,10 +701,10 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/dateVehicleFirstRegistered -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/dateVehicleFirstRegistered -->
 
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/dateVehicleFirstRegistered">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/dateVehicleFirstRegistered">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
@@ -720,10 +714,10 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/emissionsCO2 -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/emissionsCO2 -->
 
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/emissionsCO2">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/emissionsCO2">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
@@ -733,10 +727,10 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/knownVehicleDamages -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/knownVehicleDamages -->
 
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/knownVehicleDamages">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/knownVehicleDamages">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
@@ -746,10 +740,10 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/modelDate -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/modelDate -->
 
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/modelDate">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/modelDate">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
@@ -759,10 +753,10 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/numberOfAirbags -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfAirbags -->
 
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/numberOfAirbags">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfAirbags">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:unionOf rdf:parseType="Collection">
@@ -779,10 +773,10 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/productionDate -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/productionDate -->
 
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/productionDate">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/productionDate">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
@@ -792,10 +786,10 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/purchaseDate -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/purchaseDate -->
 
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/purchaseDate">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/purchaseDate">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
@@ -805,10 +799,10 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/vehicleConfiguration -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleConfiguration -->
 
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/vehicleConfiguration">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleConfiguration">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
@@ -818,10 +812,10 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/vehicleIdentificationNumber -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleIdentificationNumber -->
 
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/vehicleIdentificationNumber">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleIdentificationNumber">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
@@ -831,10 +825,10 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/vehicleInteriorColor -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleInteriorColor -->
 
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/vehicleInteriorColor">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleInteriorColor">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
@@ -844,10 +838,10 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/vehicleInteriorType -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleInteriorType -->
 
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/vehicleInteriorType">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleInteriorType">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
@@ -857,10 +851,10 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/vehicleModelDate -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleModelDate -->
 
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/vehicleModelDate">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleModelDate">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
@@ -881,20 +875,20 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/BusOrCoach -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/BusOrCoach -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/BusOrCoach">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/BusOrCoach">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/roofLoad"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/roofLoad"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/acrissCode"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/acrissCode"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
@@ -907,20 +901,20 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Car -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Car -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Car">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Car">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/roofLoad"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/roofLoad"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/acrissCode"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/acrissCode"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
@@ -933,10 +927,10 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/CarUsageType -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/CarUsageType -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/CarUsageType">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QualitativeValue"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/CarUsageType">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QualitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>CarUsageType</rdfs:label>
@@ -945,10 +939,10 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/DriveWheelConfigurationValue -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/DriveWheelConfigurationValue -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/DriveWheelConfigurationValue">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QualitativeValue"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/DriveWheelConfigurationValue">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QualitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>DriveWheelConfigurationValue</rdfs:label>
@@ -957,16 +951,16 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/EngineSpecification -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/EngineSpecification -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/EngineSpecification">
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/EngineSpecification">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/fuelType"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/fuelType"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QualitativeValue"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QualitativeValue"/>
                             <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/TextValue"/>
                         </owl:unionOf>
                     </owl:Class>
@@ -975,30 +969,30 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/engineDisplacement"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/engineDisplacement"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/enginePower"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/enginePower"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/engineType"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/engineType"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QualitativeValue"/>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QualitativeValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/torque"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/torque"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
@@ -1009,10 +1003,10 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Motorcycle -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Motorcycle -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Motorcycle">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Motorcycle">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>Motorcycle</rdfs:label>
@@ -1021,10 +1015,10 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/MotorizedBicycle -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/MotorizedBicycle -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/MotorizedBicycle">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/MotorizedBicycle">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>MotorizedBicycle</rdfs:label>
@@ -1033,9 +1027,9 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QualitativeValue -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QualitativeValue -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QualitativeValue">
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QualitativeValue">
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>QualitativeValue</rdfs:label>
@@ -1044,9 +1038,9 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue">
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue">
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>QuantitativeValue</rdfs:label>
@@ -1055,10 +1049,10 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/SteeringPositionValue -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/SteeringPositionValue -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/SteeringPositionValue">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QualitativeValue"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/SteeringPositionValue">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QualitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>SteeringPositionValue</rdfs:label>
@@ -1067,22 +1061,22 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/Vehicle">
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/fuelCapacity"/>
-                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/fuelCapacity"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/fuelType"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/fuelType"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
                             <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/TextValue"/>
                         </owl:unionOf>
                     </owl:Class>
@@ -1091,17 +1085,17 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/mileageFromOdometer"/>
-                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/mileageFromOdometer"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/numberOfAxles"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfAxles"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
                             <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/NumericValue"/>
                         </owl:unionOf>
                     </owl:Class>
@@ -1110,11 +1104,11 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/numberOfDoors"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfDoors"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
                             <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/NumericValue"/>
                         </owl:unionOf>
                     </owl:Class>
@@ -1123,11 +1117,11 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/numberOfForwardGears"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfForwardGears"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
                             <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/NumericValue"/>
                         </owl:unionOf>
                     </owl:Class>
@@ -1136,11 +1130,11 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/seatingCapacity"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/seatingCapacity"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
                             <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/NumericValue"/>
                         </owl:unionOf>
                     </owl:Class>
@@ -1149,23 +1143,23 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/steeringPosition"/>
-                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/SteeringPositionValue"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/steeringPosition"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/SteeringPositionValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/vehicleEngine"/>
-                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/EngineSpecification"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleEngine"/>
+                <owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/EngineSpecification"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/vehicleSeatingCapacity"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleSeatingCapacity"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
                             <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/NumericValue"/>
                         </owl:unionOf>
                     </owl:Class>
@@ -1174,19 +1168,19 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/accelerationTime"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/accelerationTime"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/bodyType"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/bodyType"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onClass>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QualitativeValue"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QualitativeValue"/>
                             <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/TextValue"/>
                         </owl:unionOf>
                     </owl:Class>
@@ -1195,19 +1189,19 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/cargoVolume"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/cargoVolume"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/driveWheelConfiguration"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/driveWheelConfiguration"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onClass>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/DriveWheelConfigurationValue"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/DriveWheelConfigurationValue"/>
                             <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/TextValue"/>
                         </owl:unionOf>
                     </owl:Class>
@@ -1216,26 +1210,26 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/fuelConsumption"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/fuelConsumption"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/fuelEfficiency"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/fuelEfficiency"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/meetsEmissionStandard"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/meetsEmissionStandard"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onClass>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QualitativeValue"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QualitativeValue"/>
                             <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/TextValue"/>
                         </owl:unionOf>
                     </owl:Class>
@@ -1244,12 +1238,12 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/numberOfPreviousOwners"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfPreviousOwners"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onClass>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
                             <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/NumericValue"/>
                         </owl:unionOf>
                     </owl:Class>
@@ -1258,40 +1252,40 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/payload"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/payload"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/speed"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/speed"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/tongueWeight"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/tongueWeight"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/trailerWeight"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/trailerWeight"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/vehicleSpecialUsage"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleSpecialUsage"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onClass>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/CarUsageType"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/CarUsageType"/>
                             <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/TextValue"/>
                         </owl:unionOf>
                     </owl:Class>
@@ -1300,12 +1294,12 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/vehicleTransmission"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleTransmission"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onClass>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QualitativeValue"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QualitativeValue"/>
                             <rdf:Description rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/TextValue"/>
                         </owl:unionOf>
                     </owl:Class>
@@ -1314,21 +1308,21 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/weightTotal"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/weightTotal"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/wheelbase"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/wheelbase"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/QuantitativeValue"/>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/QuantitativeValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/numberOfAirbags"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfAirbags"/>
                 <owl:someValuesFrom>
                     <rdfs:Datatype>
                         <owl:unionOf rdf:parseType="Collection">
@@ -1341,75 +1335,75 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/productionDate"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/productionDate"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/vehicleInteriorColor"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleInteriorColor"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/emissionsCO2"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/emissionsCO2"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/knownVehicleDamages"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/knownVehicleDamages"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/purchaseDate"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/purchaseDate"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/vehicleConfiguration"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleConfiguration"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/vehicleInteriorType"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleInteriorType"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/vehicleModelDate"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleModelDate"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/dateVehicleFirstRegistered"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/dateVehicleFirstRegistered"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/modelDate"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/modelDate"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/vehicleIdentificationNumber"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleIdentificationNumber"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
@@ -1433,18 +1427,18 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/AllWheelDriveConfiguration -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/AllWheelDriveConfiguration -->
 
-    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/AllWheelDriveConfiguration">
-        <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/DriveWheelConfigurationValue"/>
+    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/AllWheelDriveConfiguration">
+        <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/DriveWheelConfigurationValue"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/DrivingSchoolVehicleUsage -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/DrivingSchoolVehicleUsage -->
 
-    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/DrivingSchoolVehicleUsage">
-        <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/CarUsageType"/>
+    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/DrivingSchoolVehicleUsage">
+        <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/CarUsageType"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>DrivingSchoolVehicleUsage</rdfs:label>
@@ -1453,42 +1447,42 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/FourWheelDriveConfiguration -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/FourWheelDriveConfiguration -->
 
-    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/FourWheelDriveConfiguration">
-        <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/DriveWheelConfigurationValue"/>
+    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/FourWheelDriveConfiguration">
+        <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/DriveWheelConfigurationValue"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/FrontWheelDriveConfiguration -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/FrontWheelDriveConfiguration -->
 
-    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/FrontWheelDriveConfiguration">
-        <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/DriveWheelConfigurationValue"/>
+    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/FrontWheelDriveConfiguration">
+        <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/DriveWheelConfigurationValue"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/LeftHandDriving -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/LeftHandDriving -->
 
-    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/LeftHandDriving">
-        <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/SteeringPositionValue"/>
+    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/LeftHandDriving">
+        <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/SteeringPositionValue"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/RearWheelDriveConfiguration -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/RearWheelDriveConfiguration -->
 
-    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/RearWheelDriveConfiguration">
-        <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/DriveWheelConfigurationValue"/>
+    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/RearWheelDriveConfiguration">
+        <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/DriveWheelConfigurationValue"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/RentalVehicleUsage -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/RentalVehicleUsage -->
 
-    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/RentalVehicleUsage">
-        <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/CarUsageType"/>
+    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/RentalVehicleUsage">
+        <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/CarUsageType"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>RentalVehicleUsage</rdfs:label>
@@ -1497,18 +1491,18 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/RightHandDriving -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/RightHandDriving -->
 
-    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/RightHandDriving">
-        <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/SteeringPositionValue"/>
+    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/RightHandDriving">
+        <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/SteeringPositionValue"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/TaxiVehicleUsage -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/TaxiVehicleUsage -->
 
-    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/TaxiVehicleUsage">
-        <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AutoSchemaOrg/CarUsageType"/>
+    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/TaxiVehicleUsage">
+        <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/CarUsageType"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label>TaxiVehicleUsage</rdfs:label>

@@ -15,6 +15,8 @@
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/MetadataAuto/">
         <owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/MetadataAuto/"/>        
         <dct:abstract>This is the metadata ontology used to describe the AUTO Specification.</dct:abstract>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/MetadataEC/"/>        
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/FD/MetadataFD/"/>        
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-18T01:43:00</dct:issued>
         <dct:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opensource.org/licenses/MIT</dct:license>
         <sm:contentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
@@ -22,8 +24,6 @@
         <sm:fileAbbreviation>auto-spec</sm:fileAbbreviation>
         <sm:filename>MetadataAUTO.rdf</sm:filename>
         <rdfs:label>Metadata for the EDMC-AUTO Specification</rdfs:label>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/MetadataEC/"/>        
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/MetadataFD/"/>        
     </owl:Ontology>
 
     
@@ -32,7 +32,7 @@
         <rdfs:label>Automotive Ontology</rdfs:label>
         <dct:abstract>The Automotive Ontology (AUTO) is a collaborative effort among industry practitioners, semantic technology experts and information scientists to standardize the language used to precisely define the terms, conditions, and characteristics of automotive domain.  The definitions and relationships that comprise the AUTO specification have been modularized into a number of domains, which in turn include a number constituent ontologies.</dct:abstract>
         <dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/MetadataEC/"/>
-        <dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/MetadataFD/"/>        
+        <dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/FD/MetadataFD/"/>        
         <dct:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opensource.org/licenses/MIT</dct:license>
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-18T01:43:00</dct:issued>        
         <dct:title>Automotive Ontology (AUTO)</dct:title>

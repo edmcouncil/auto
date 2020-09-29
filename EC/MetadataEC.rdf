@@ -15,14 +15,14 @@
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/MetadataEC/">
         <owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/MetadataEC/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
-        <dct:abstract>This ontology provides metadata about the vehicle information in e-commerce.</dct:abstract>
+        <dct:abstract>This ontology provides metadata for the vehicle information in e-commerce.</dct:abstract>
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-18T01:43:00</dct:issued>
         <dct:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opensource.org/licenses/MIT</dct:license>
         <sm:contentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
         <sm:copyright>Copyright (c) 2020 EDM Council, Inc.</sm:copyright>
         <sm:fileAbbreviation>auto-ec-mod</sm:fileAbbreviation>
         <sm:filename>MetadataEC.rdf</sm:filename>
-        <rdfs:label>Metadata about the EDMC-AUTO e-commerce (BE) Domain</rdfs:label>
+        <rdfs:label>Metadata for the EDMC-AUTO e-commerce (EC) Domain</rdfs:label>
     </owl:Ontology>
 
     
