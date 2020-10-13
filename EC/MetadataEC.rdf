@@ -35,12 +35,12 @@
         <dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"/>
         <dct:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opensource.org/licenses/MIT</dct:license>
         <dct:title>EDMC Automotive Ontology (AUTO) EC Domain</dct:title>
-        <sm:contributor>Automotive Group</sm:contributor>
+        <sm:contributor>W3C Automotive Ontology Community Group</sm:contributor>
         <sm:contributor>Hepp Research GmbH</sm:contributor>
         <sm:contributor>Makolab SA</sm:contributor>
         <sm:copyright>Copyright (c) 2020 EDM Council, Inc.</sm:copyright>
         <sm:dependsOn rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.omg.org/techprocess/ab/SpecificationMetadata/</sm:dependsOn>
-        <sm:keyword>vehicle information in e-commerce</sm:keyword>
+        <sm:keyword>vehicles in e-commerce</sm:keyword>
         <sm:keyword>automobiles from the retail market perspective</sm:keyword>
         <sm:moduleAbbreviation>auto-ec</sm:moduleAbbreviation>
         <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/MetadataEC/"/>
