@@ -895,8 +895,12 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         </rdfs:subClassOf>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>BusOrCoach</rdfs:label>
-        <skos:definition>A bus (also omnibus or autobus) is a road vehicle designed to carry passengers. Coaches are luxury busses, usually in service for long distance travel.</skos:definition>
+        <dct:source rdf:resource="https://schema.org/BusOrCoach"/>
+        <rdfs:label xml:lang="en">bus</rdfs:label>
+        <skos:definition xml:lang="en">a road vehicle designed to carry passengers. Coaches are luxury busses, usually in service for long distance travel.</skos:definition>
+        <fibo-fnd-utl-av:synonym xml:lang="en">autobus</fibo-fnd-utl-av:synonym>
+        <fibo-fnd-utl-av:synonym xml:lang="en">coach</fibo-fnd-utl-av:synonym>
+        <fibo-fnd-utl-av:synonym xml:lang="en">omnibus</fibo-fnd-utl-av:synonym>
     </owl:Class>
     
 
@@ -921,8 +925,9 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         </rdfs:subClassOf>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>Car</rdfs:label>
-        <skos:definition>A value indicating a special usage of a car, e.g. commercial rental, driving school, or as a taxi.</skos:definition>
+        <sm:directSource rdf:resource="https://schema.org/Car"/>
+        <rdfs:label xml:lang="en">car</rdfs:label>
+        <skos:definition xml:lang="en">a wheeled, self-powered motor vehicle used for transportation</skos:definition>
     </owl:Class>
     
 
@@ -1009,8 +1014,10 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>Motorcycle</rdfs:label>
-        <skos:definition>A motorcycle or motorbike is a single-track, two-wheeled motor vehicle.</skos:definition>
+        <dct:source rdf:resource="https://schema.org/Motorcycle"/>
+        <rdfs:label xml:lang="en">motorcycle</rdfs:label>
+        <skos:definition xml:lang="en">a single-track, two-wheeled motor vehicle</skos:definition>
+        <fibo-fnd-utl-av:synonym xml:lang="en">motorbike</fibo-fnd-utl-av:synonym>
     </owl:Class>
     
 
@@ -1021,8 +1028,9 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>MotorizedBicycle</rdfs:label>
-        <skos:definition>A motorized bicycle is a bicycle with an attached motor used to power the vehicle, or to assist with pedaling.</skos:definition>
+        <dct:source rdf:resource="https://schema.org/MotorizedBicycle"/>
+        <rdfs:label xml:lang="en">motorized bicycle</rdfs:label>
+        <skos:definition xml:lang="en">a bicycle with an attached motor used to power the vehicle, or to assist with pedaling</skos:definition>
     </owl:Class>
     
 
