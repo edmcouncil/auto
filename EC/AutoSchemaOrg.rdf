@@ -1410,8 +1410,9 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         </rdfs:subClassOf>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>Vehicle</rdfs:label>
-        <skos:definition>A vehicle is a device that is designed or used to transport people or cargo over land, water, air, or through space.</skos:definition>
+        <sm:directSource rdf:resource="https://schema.org/Vehicle"/>
+        <rdfs:label xml:lang="en">vehicle</rdfs:label>
+        <skos:definition xml:lang="en">a device that is designed or used to transport people or cargo over land, water, air, or through space</skos:definition>
     </owl:Class>
     
 
