@@ -30,7 +30,7 @@ WHERE {
   FILTER (! (?p IN (owl:versionIRI, sm:dependsOn , owl:imports , sm:specificationVersionURL,
                     rdfs:seeAlso, dct:isPartOf, lcc-cr:isPartOf, lcc-cr:hasPart, dct:hasPart))) 
   BIND (
-    concat ("ERROR:", xsd:string (?o), " is referenced by ", afn:localname (?p), " but has no type.")
+    concat ("WARN:", xsd:string (?o), " is referenced by ", afn:localname (?p), " but has no type.")
 	  AS ?error
 	)
 }
