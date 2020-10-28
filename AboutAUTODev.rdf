@@ -16,6 +16,7 @@
      xmlns:auto-eo-vso="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/"
      xmlns:auto-eo-veo="https://spec.edmcouncil.org/auto/ontology/EO/VehicleEmissions/"
      xmlns:auto-eo-uco="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/"
+     xmlns:auto-eo-vsso="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/"
      xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
      xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
 
@@ -31,7 +32,8 @@
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VolkswagenVehicles/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleEmissions/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/"/>         
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/"/>         
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-08-17T18:00:00</dct:issued>
         <dct:license rdf:resource="http://opensource.org/licenses/MIT"/>
         <sm:contentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
