@@ -16,7 +16,7 @@
      xmlns:auto-eo-vso="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/"
      xmlns:auto-eo-veo="https://spec.edmcouncil.org/auto/ontology/EO/VehicleEmissions/"
      xmlns:auto-eo-uco="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/"
-     xmlns:auto-eo-vsso="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/"
+     xmlns:auto-eo-vsso="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/"
      xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
      xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
 
