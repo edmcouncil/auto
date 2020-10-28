@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/owl/owlapi/turtle#"
-     xml:base="http://www.semanticweb.org/owl/owlapi/turtle"
+<rdf:RDF xmlns="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/"
+     xml:base="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:cdt="http://w3id.org/lindt/custom_datatypes#"
      xmlns:dct="http://purl.org/dc/terms/"
@@ -15,6 +15,7 @@
      xmlns:sosa="http://www.w3.org/ns/sosa/"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:vsso="http://automotive.eurecom.fr/vsso#"
+     xmlns:auto-eo-vsso="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/"
      xmlns:schema="http://schema.org/">
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/">
         <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
