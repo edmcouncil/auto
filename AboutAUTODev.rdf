@@ -11,6 +11,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:auto-ec-mod="https://spec.edmcouncil.org/auto/ontology/EC/MetadataEC/"
      xmlns:auto-ec-aso="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"
+     xmlns:auto-eo-co="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/"
      xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
      xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
 
@@ -22,7 +23,10 @@
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/"/>  
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/"/>          
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VolkswagenVehicles/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleEmissions/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/"/>        
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-08-17T18:00:00</dct:issued>
         <dct:license rdf:resource="http://opensource.org/licenses/MIT"/>
         <sm:contentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
