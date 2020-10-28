@@ -17,7 +17,7 @@
         <dct:abstract>This is the metadata ontology used to describe the AUTO Specification.</dct:abstract>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/MetadataEC/"/>        
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/FD/MetadataFD/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/FD/MetadataEO/"/>         
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/MetadataEO/"/>         
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-18T01:43:00</dct:issued>
         <dct:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opensource.org/licenses/MIT</dct:license>
         <sm:contentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
