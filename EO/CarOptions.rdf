@@ -9,6 +9,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:auto-eo-co="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/"
      xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/">
         <dc:contributor xml:lang="en">Charles Sandeman-Craik, Tribal DDB; Chris Jenkins, Tribal DDB; Tim Redding, Tribal DDB; Yago Otero, Tribal DDB; William Greenly, Tribal DDB; Robin Dingle, Volkswagen UK;</dc:contributor>
