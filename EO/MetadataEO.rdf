@@ -34,7 +34,7 @@
         <rdf:type rdf:resource="http://www.omg.org/techprocess/ab/SpecificationMetadata/Module"/>
         <dct:abstract>This ontology provides metadata for the external automotive ontologies</dct:abstract>
         <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.w3.org/community/gao/</dct:creator>         
-        <dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptionsOntology/"/>          
+        <dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/"/>          
         <dct:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opensource.org/licenses/MIT</dct:license>
         <dct:title>EDMC Automotive Ontology (AUTO) EO Domain</dct:title>
         <sm:contributor>FIBO Community</sm:contributor>
