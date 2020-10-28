@@ -38,8 +38,8 @@
         <rdf:type rdf:resource="http://www.omg.org/techprocess/ab/SpecificationMetadata/Module"/>
         <dct:abstract>This ontology provides metadata for the external automotive ontologies</dct:abstract>
         <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.w3.org/community/gao/</dct:creator>         
-        <dct:hasPart rdf:resource="http://purl.org/coo/ns#"/>
-        <dct:hasPart rdf:resource="http://purl.org/uco/ns#"/>
+        <dct:hasPart rdf:resource="http://purl.org/coo/ns"/>
+        <dct:hasPart rdf:resource="http://purl.org/uco/ns"/>
         <dct:hasPart rdf:resource="http://purl.org/goodrelations/v1"/>          
         <dct:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opensource.org/licenses/MIT</dct:license>
         <dct:title>EDMC Automotive Ontology (AUTO) EO Domain</dct:title>
@@ -48,7 +48,7 @@
         <sm:dependsOn rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.omg.org/techprocess/ab/SpecificationMetadata/</sm:dependsOn>
         <sm:keyword>AUTO</sm:keyword>
         <sm:moduleAbbreviation>auto-eo</sm:moduleAbbreviation>
-        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/FD/MetadataFD/"/>
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/MetadataEO/"/>
         <rdfs:label>External automotive ontologies</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://spec.edmcouncil.org/auto/</rdfs:seeAlso>
     </owl:NamedIndividual>
