@@ -37,12 +37,10 @@
     <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/MetadataEO/EODomain">
         <rdf:type rdf:resource="http://www.omg.org/techprocess/ab/SpecificationMetadata/Module"/>
         <dct:abstract>This ontology provides metadata for the external automotive ontologies</dct:abstract>
-        <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.w3.org/community/gao/</dct:creator>
-        <dct:hasPart rdf:resource="https://lov.linkeddata.es/dataset/lov/vocabs/coo/versions/2010-10-12.n3"/>  
-        <dct:hasPart rdf:resource="https://lov.linkeddata.es/dataset/lov/vocabs/vvo/versions/2010-10-12.n3"/>           
-        <dct:hasPart rdf:resource="https://lov.linkeddata.es/dataset/lov/vocabs/veo/versions/2014-09-01.n3"/>           
-        <dct:hasPart rdf:resource="https://lov.linkeddata.es/dataset/lov/vocabs/vso/versions/2010-10-02.n3"/>           
-        <dct:hasPart rdf:resource="http://ontologies.makolab.com/uco/ns.owl"/>              
+        <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.w3.org/community/gao/</dct:creator>         
+        <dct:hasPart rdf:resource="http://purl.org/coo/ns#"/>
+        <dct:hasPart rdf:resource="http://purl.org/uco/ns#"/>
+        <dct:hasPart rdf:resource="http://purl.org/goodrelations/v1"/>          
         <dct:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opensource.org/licenses/MIT</dct:license>
         <dct:title>EDMC Automotive Ontology (AUTO) EO Domain</dct:title>
         <sm:contributor>FIBO Community</sm:contributor>
