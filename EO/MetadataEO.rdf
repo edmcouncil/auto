@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://spec.edmcouncil.org/auto/ontology/FD/MetadataFD/"
-     xml:base="https://spec.edmcouncil.org/auto/ontology/FD/MetadataFD/"
+<rdf:RDF xmlns="https://spec.edmcouncil.org/auto/ontology/EO/MetadataEO/"
+     xml:base="https://spec.edmcouncil.org/auto/ontology/EO/MetadataEO/"
      xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
      xmlns:dct="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -27,7 +27,7 @@
         <sm:contentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
         <sm:copyright>Copyright (c) 2020 EDM Council, Inc.</sm:copyright>
         <sm:fileAbbreviation>auto-eo-mod</sm:fileAbbreviation>
-        <sm:filename>MetadataOP.rdf</sm:filename>
+        <sm:filename>MetadataEO.rdf</sm:filename>
         <rdfs:label>Metadata for the external automotive ontologies</rdfs:label>
     </owl:Ontology>
 
