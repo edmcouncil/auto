@@ -37,7 +37,8 @@
         <dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/"/>
         <owl:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VolkswagenVehicles/"/>
         <owl:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleEmissions/"/>
-        <owl:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/"/>            
+        <owl:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/"/>
+        <owl:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/"/>             
         <dct:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opensource.org/licenses/MIT</dct:license>
         <dct:title>EDMC Automotive Ontology (AUTO) EO Domain</dct:title>
         <sm:contributor>FIBO Community</sm:contributor>
