@@ -965,16 +965,6 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ADAS"/>
             </owl:Restriction>
@@ -1100,16 +1090,6 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Acceleration">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -1401,16 +1381,6 @@
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Seat"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/position"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Airbag : Airbag signals</rdfs:comment>
         <rdfs:label xml:lang="en">Airbag</rdfs:label>
     </owl:Class>
@@ -1529,16 +1499,6 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/AngularVelocity">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -1712,16 +1672,6 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Drivetrain"/>
             </owl:Restriction>
@@ -1802,28 +1752,8 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Wheel"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/position"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Axle.RowX.Wheel.Left/Right.Brake : Brake signals for wheel</rdfs:comment>
@@ -2005,16 +1935,6 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Catalyst">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -2281,16 +2201,6 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ADAS"/>
             </owl:Restriction>
@@ -2369,16 +2279,6 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/OBD"/>
             </owl:Restriction>
@@ -2422,16 +2322,6 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CurrentLocation">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -2494,28 +2384,8 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Seat"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/position"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Cushion : Cushion signals.</rdfs:comment>
@@ -2638,28 +2508,8 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SeatSwitch"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/position"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.Cushion : Cushion switches</rdfs:comment>
@@ -2835,16 +2685,6 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Navigation"/>
             </owl:Restriction>
@@ -2908,16 +2748,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ObstacleDetection"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/position"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.ADAS.ObstacleDetection.DistanceToObject : Distance signals form Obstacle Sensor System</rdfs:comment>
@@ -2987,28 +2817,8 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Cabin"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/position"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Door : All doors</rdfs:comment>
@@ -3211,16 +3021,6 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ADAS"/>
             </owl:Restriction>
@@ -3407,16 +3207,6 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Engine">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -3828,16 +3618,6 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Drivetrain"/>
             </owl:Restriction>
@@ -4022,16 +3802,6 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Cabin"/>
             </owl:Restriction>
@@ -4076,16 +3846,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Seat"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/position"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.HeadRestraint : Head restraint settings</rdfs:comment>
@@ -4158,28 +3918,8 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SeatSwitch"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/position"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.HeadRestraint : Head restraint switches</rdfs:comment>
@@ -4478,16 +4218,6 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/InternalLights">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -5128,16 +4858,6 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ADAS"/>
             </owl:Restriction>
@@ -5340,28 +5060,8 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/HVAC"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/position"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.HVAC.RowX.Left/Right : Climate control</rdfs:comment>
@@ -5376,28 +5076,8 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/InternalLights"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/position"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Lights.RowX.Left/Right : Interior lights signals and sensors</rdfs:comment>
@@ -5549,28 +5229,8 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Seat"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/position"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Lumbar : Lumbar signals</rdfs:comment>
@@ -5713,28 +5373,8 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SeatSwitch"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/position"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.Lumbar : Lumbar switches</rdfs:comment>
@@ -5857,28 +5497,8 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SeatSwitch"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/position"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.Massage : Massage switches</rdfs:comment>
@@ -5924,16 +5544,6 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Media">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -6137,16 +5747,6 @@
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Mirrors"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/position"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Body.Mirrors.Left/Right.Heating : Mirror heater signals</rdfs:comment>
         <rdfs:label xml:lang="en">Heating</rdfs:label>
     </owl:Class>
@@ -6297,16 +5897,6 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Body"/>
             </owl:Restriction>
@@ -6372,16 +5962,6 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/OBD"/>
             </owl:Restriction>
@@ -6396,16 +5976,6 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/O2SensorOther">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -6468,16 +6038,6 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Vehicle"/>
             </owl:Restriction>
@@ -6492,16 +6052,6 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/OBDStatus">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -6534,16 +6084,6 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ObstacleDetection">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -6893,16 +6433,6 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Media"/>
             </owl:Restriction>
@@ -7023,16 +6553,6 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/RearShade">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -7197,28 +6717,8 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SeatSwitch"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/position"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.Recline : Recline switches</rdfs:comment>
@@ -7399,28 +6899,8 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Cabin"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/position"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat : All seats.</rdfs:comment>
@@ -7649,28 +7129,8 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Seat"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/position"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch : Seat switch signals</rdfs:comment>
@@ -7800,16 +7260,6 @@
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Seat"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/position"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.SideBolster : Side bolster settings</rdfs:comment>
         <rdfs:label xml:lang="en">SideBolster</rdfs:label>
     </owl:Class>
@@ -7844,28 +7294,8 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SeatSwitch"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/position"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.SideBolster : Side bolster switches</rdfs:comment>
@@ -7915,16 +7345,6 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SteeringWheel">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -8053,16 +7473,6 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Sunroof"/>
             </owl:Restriction>
@@ -8109,16 +7519,6 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Sunroof">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -8193,16 +7593,6 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/TCS">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -8523,28 +7913,8 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Wheel"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/position"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Axle.RowX.Wheel.Left/Right.Tire : Tire signals for wheel</rdfs:comment>
@@ -8688,16 +8058,6 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Drivetrain"/>
             </owl:Restriction>
@@ -8734,16 +8094,6 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Trunk">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -8851,16 +8201,6 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Vehicle">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Vehicle : High-vele vehicle data</rdfs:comment>
         <rdfs:label xml:lang="en">Vehicle</rdfs:label>
     </owl:Class>
@@ -9034,28 +8374,8 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Windshield"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/position"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Body.Windshield.Front/Rear.WasherFluid : Front/Rear windshield washer fluid signals</rdfs:comment>
@@ -9128,16 +8448,6 @@
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Axle"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/position"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Axle.RowX.Wheel : wheel signals</rdfs:comment>
         <rdfs:label xml:lang="en">Wheel</rdfs:label>
     </owl:Class>
@@ -9150,28 +8460,8 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Door"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/position"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Door.RowX.Left/Right.Window : Door window status</rdfs:comment>
@@ -9218,28 +8508,8 @@
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Door"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/position"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Door.RowX.Left/Right.Shade : Side window shade</rdfs:comment>
@@ -9348,16 +8618,6 @@
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Windshield"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/position"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Body.Windshield.Front/Rear.Heating : Front/Rear windshield heater signals</rdfs:comment>
         <rdfs:label xml:lang="en">Heating</rdfs:label>
     </owl:Class>
@@ -9427,16 +8687,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
                 <owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Windshield"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/position"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </owl:Class>
-                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Signal/Attribute.Body.Windshield.Front/Rear.Wiping : Front/Rear windshield wiper signals</rdfs:comment>
@@ -9582,8 +8832,8 @@
         <rdfs:label xml:lang="en">MaxTorque</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/model">
-        <rdfs:comment xml:lang="en">Attribute.Vehicle.VehicleIdentification.Model : Vehicle model</rdfs:comment>
         <rdfs:label xml:lang="en">Model</rdfs:label>
+        <rdfs:comment xml:lang="en">Attribute.Vehicle.VehicleIdentification.Model : Vehicle model</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/refuelPosition">
         <rdfs:label xml:lang="en">RefuelPosition</rdfs:label>

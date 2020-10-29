@@ -246,99 +246,23 @@
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+    </owl:Class>
     
 
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+    </owl:Class>
     
 
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/WarrantyScope -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/WarrantyScope"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/AllWheelDriveConfiguration -->
-
-    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/AllWheelDriveConfiguration"/>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/DrivingSchoolVehicleUsage -->
-
-    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/DrivingSchoolVehicleUsage">
-        <dct:isPartOf rdf:resource="http://auto.schema.org"/>
-        <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>DrivingSchoolVehicleUsage</rdfs:label>
-        <skos:definition>Indicates the usage of the vehicle for driving school.</skos:definition>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/FourWheelDriveConfiguration -->
-
-    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/FourWheelDriveConfiguration"/>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/FrontWheelDriveConfiguration -->
-
-    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/FrontWheelDriveConfiguration"/>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/LeftHandDriving -->
-
-    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/LeftHandDriving"/>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/RearWheelDriveConfiguration -->
-
-    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/RearWheelDriveConfiguration"/>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/RentalVehicleUsage -->
-
-    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/RentalVehicleUsage">
-        <dct:isPartOf rdf:resource="http://auto.schema.org"/>
-        <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>RentalVehicleUsage</rdfs:label>
-        <skos:definition>Indicates the usage of the vehicle as a rental car.</skos:definition>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/RightHandDriving -->
-
-    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/RightHandDriving"/>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/TaxiVehicleUsage -->
-
-    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/TaxiVehicleUsage">
-        <dct:isPartOf rdf:resource="http://auto.schema.org"/>
-        <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>TaxiVehicleUsage</rdfs:label>
-        <skos:definition>Indicates the usage of the car as a taxi.</skos:definition>
-    </owl:NamedIndividual>
 </rdf:RDF>
 
 

@@ -35,7 +35,8 @@
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>        
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/"/>       
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-08-17T18:00:00</dct:issued>
         <dct:license rdf:resource="http://opensource.org/licenses/MIT"/>
         <sm:contentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
