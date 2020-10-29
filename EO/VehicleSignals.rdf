@@ -158,11 +158,6 @@
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/driveType">
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/attribute"/>
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Transmission"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </owl:Class>
-        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -181,11 +176,6 @@
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/engineConfiguration">
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/attribute"/>
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/InternalCombustionEngine"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </owl:Class>
-        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -195,11 +185,6 @@
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/fuelType">
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/attribute"/>
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/InternalCombustionEngine"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </owl:Class>
-        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -227,11 +212,6 @@
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal">
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:comment xml:lang="en">Property of having signals in a branch</rdfs:comment>
         <rdfs:label xml:lang="en">has signal</rdfs:label>
     </owl:ObjectProperty>
@@ -314,11 +294,6 @@
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/refuelPosition">
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/attribute"/>
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Body"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </owl:Class>
-        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -382,11 +357,6 @@
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/steeringWheelSide">
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/attribute"/>
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SteeringWheel"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </owl:Class>
-        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -446,11 +416,6 @@
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/transmissionType">
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/attribute"/>
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Transmission"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:oneOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </owl:Class>
-        </rdfs:range>
     </owl:ObjectProperty>
     
 
