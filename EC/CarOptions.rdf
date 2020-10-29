@@ -1,17 +1,23 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/"
-     xml:base="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/"
+<rdf:RDF xmlns="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/"
+     xml:base="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:gr="http://purl.org/goodrelations/v1#"
-     xmlns:coo="https://spec.edmcouncil.org/auto/ontology/EO/CarOptionsOntology/"
+     xmlns:coo="https://spec.edmcouncil.org/auto/ontology/EC/CarOptionsOntology/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:dcterms="http://purl.org/dc/terms/"
-     xmlns:auto-eo-coo="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/">
-    <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/">
+     xmlns:auto-ec-coo="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/"
+     xmlns:auto-mo-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"     
+     xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
+     xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
+    <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/">
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>        
         <dc:contributor xml:lang="en">Charles Sandeman-Craik, Tribal DDB; Chris Jenkins, Tribal DDB; Tim Redding, Tribal DDB; Yago Otero, Tribal DDB; William Greenly, Tribal DDB; Robin Dingle, Volkswagen UK;</dc:contributor>
         <dc:creator xml:lang="en">Martin Hepp, Hepp Research GmbH</dc:creator>
         <dc:rights xml:lang="en">The Car Options Ontology is available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/. 
@@ -37,6 +43,7 @@ See http://purl.org/goodrelations/  and http://purl.org/vso/ns for more informat
         <rdfs:label xml:lang="en">Car Options Ontology</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.org/goodrelations/"/>
         <owl:versionInfo>V 1.1, Release 2010-10-12</owl:versionInfo>
+        <fibo-fnd-utl-av:hasMaturityLevel rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Informative"/>
     </owl:Ontology>
     
 
@@ -88,9 +95,9 @@ See http://purl.org/goodrelations/  and http://purl.org/vso/ns for more informat
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/hasID -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/hasID -->
 
-    <owl:AnnotationProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/hasID">
+    <owl:AnnotationProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/hasID">
         <rdfs:comment xml:lang="en">An annotation property that can be used to attach element identifiers from XML schemas for the corresponding XML data or schema.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
         <rdfs:label xml:lang="en">hasID (0..1)</rdfs:label>
@@ -109,11 +116,11 @@ See http://purl.org/goodrelations/  and http://purl.org/vso/ns for more informat
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/availableChoice -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/availableChoice -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/availableChoice">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/SpecItemCollection"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/ChoiceOrComponent"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/availableChoice">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/SpecItemCollection"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/ChoiceOrComponent"/>
         <rdfs:comment xml:lang="en">This property links available Choices or Components to a Spec Item.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
         <rdfs:label xml:lang="en">availableChoice (1..*)</rdfs:label>
@@ -121,11 +128,11 @@ See http://purl.org/goodrelations/  and http://purl.org/vso/ns for more informat
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/compatibility -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/compatibility -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/compatibility">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/Derivative"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/ConfigurationInfo"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/compatibility">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/Derivative"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/ConfigurationInfo"/>
         <rdfs:comment xml:lang="en">Links from a Derivative to information on whether a particular configuration is valid (true) or invalid (false)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
         <rdfs:label xml:lang="en">compatibility (0..*)</rdfs:label>
@@ -133,12 +140,12 @@ See http://purl.org/goodrelations/  and http://purl.org/vso/ns for more informat
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/compatibleWith -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/compatibleWith -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/compatibleWith">
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/compatibleWith">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/ChoiceOrComponent"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/ChoiceOrComponent"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/ChoiceOrComponent"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/ChoiceOrComponent"/>
         <rdfs:comment xml:lang="en">Indicates that two Choices or Components are compatible with each other.
 
 Note: This property is symmetric, i.e., if A is compatible with B, then B is also compatible with A.</rdfs:comment>
@@ -148,12 +155,12 @@ Note: This property is symmetric, i.e., if A is compatible with B, then B is als
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/default -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/default -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/default">
-        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/availableChoice"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/SpecItemCollection"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/ChoiceOrComponent"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/default">
+        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/availableChoice"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/SpecItemCollection"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/ChoiceOrComponent"/>
         <rdfs:comment xml:lang="en">This property links the default Choice or Component to a Spec Item. 
 Since it is defined a sub-property of coo:availableChoice, the default choice is automatically part of the available choices.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
@@ -162,12 +169,12 @@ Since it is defined a sub-property of coo:availableChoice, the default choice is
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/dependsOn -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/dependsOn -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/dependsOn">
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/dependsOn">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/ChoiceOrComponent"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/ChoiceOrComponent"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/ChoiceOrComponent"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/ChoiceOrComponent"/>
         <rdfs:comment xml:lang="en">Links a Choice or Component to one or multiple other Choices Or Components required for that choice  
 
 Note: This property is transitive, i.e., if B is required by A and C and D are required by B, then C and D are also required by A.</rdfs:comment>
@@ -177,18 +184,18 @@ Note: This property is transitive, i.e., if B is required by A and C and D are r
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/featureOverride -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/featureOverride -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/featureOverride">
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/featureOverride">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/ChoiceOrComponent"/>
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/ConfigurationInfo"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/ChoiceOrComponent"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/ConfigurationInfo"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/PropertySpecification"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/PropertySpecification"/>
         <rdfs:comment xml:lang="en">Links a coo:ConfigurationInfo node to information on how a choice or component or the combination of multiple choices will override the regular properties of the resulting vehicle</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
         <rdfs:label xml:lang="en">featureOverride (0..*)</rdfs:label>
@@ -196,11 +203,11 @@ Note: This property is transitive, i.e., if B is required by A and C and D are r
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/hasCompleteCarModel -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/hasCompleteCarModel -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/hasCompleteCarModel">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/Derivative"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/CompleteCarModel"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/hasCompleteCarModel">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/Derivative"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/CompleteCarModel"/>
         <rdfs:comment xml:lang="en">Links one or multiple Complete Car Models to the underlying Derivative</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
         <rdfs:label xml:lang="en">hasCompleteCarModel (0..*)</rdfs:label>
@@ -208,11 +215,11 @@ Note: This property is transitive, i.e., if B is required by A and C and D are r
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/hasDerivative -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/hasDerivative -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/hasDerivative">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/Trim"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/Derivative"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/hasDerivative">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/Trim"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/Derivative"/>
         <rdfs:comment xml:lang="en">Links a Derivative to a Trim</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
         <rdfs:label xml:lang="en">hasDerivative (0..*)</rdfs:label>
@@ -220,11 +227,11 @@ Note: This property is transitive, i.e., if B is required by A and C and D are r
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/hasSpecItemChoice -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/hasSpecItemChoice -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/hasSpecItemChoice">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/CompleteCarModel"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/ChoiceOrComponent"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/hasSpecItemChoice">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/CompleteCarModel"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/ChoiceOrComponent"/>
         <rdfs:comment xml:lang="en">Links a Complete Car Model to the choices for configurational options</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
         <rdfs:label xml:lang="en">hasSpecItemChoice (0..*)</rdfs:label>
@@ -232,11 +239,11 @@ Note: This property is transitive, i.e., if B is required by A and C and D are r
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/hasSpecItems -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/hasSpecItems -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/hasSpecItems">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/Derivative"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/SpecItemCollection"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/hasSpecItems">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/Derivative"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/SpecItemCollection"/>
         <rdfs:comment xml:lang="en">This property links available Spec Items to a Derivative.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
         <rdfs:label xml:lang="en">hasSpecItems (0..*)</rdfs:label>
@@ -244,11 +251,11 @@ Note: This property is transitive, i.e., if B is required by A and C and D are r
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/hasTrim -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/hasTrim -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/hasTrim">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/BaseModel"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/Trim"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/hasTrim">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/BaseModel"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/Trim"/>
         <rdfs:comment xml:lang="en">Links a Trim to Base Model</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
         <rdfs:label xml:lang="en">hasTrim (0..*)</rdfs:label>
@@ -256,12 +263,12 @@ Note: This property is transitive, i.e., if B is required by A and C and D are r
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/includes -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/includes -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/includes">
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/includes">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/ChoiceOrComponent"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/ChoiceOrComponent"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/ChoiceOrComponent"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/ChoiceOrComponent"/>
         <rdfs:comment xml:lang="en">Links a Choice or Component to one or multiple other Choices Or Components implicity contained
 
 Note: This property is transitive, i.e., if B is included in A and C and D are included in B, then C and D are also included in A.</rdfs:comment>
@@ -271,11 +278,11 @@ Note: This property is transitive, i.e., if B is included in A and C and D are i
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/includesChoices -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/includesChoices -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/includesChoices">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/ConfigurationInfo"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/ChoiceOrComponent"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/includesChoices">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/ConfigurationInfo"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/ChoiceOrComponent"/>
         <rdfs:comment xml:lang="en">Indicates the set of Choices Or Components to which the Configuration Info node refers
 
 Note 1: Complementing compatibility information can be attached to the components directly via coo:compatibleWith, coo:incompatibleWith, coo:dependsOn, and coo:includes.
@@ -289,12 +296,12 @@ Note 5: Under an Open World Assumption (OWA), only an explicit compatibility sta
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/incompatibleWith -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/incompatibleWith -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/incompatibleWith">
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/incompatibleWith">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/ChoiceOrComponent"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/ChoiceOrComponent"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/ChoiceOrComponent"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/ChoiceOrComponent"/>
         <rdfs:comment xml:lang="en">Indicates that two Choices or Components are incompatible with each other, independent from other choices.
 
 Note: This property is symmetric, i.e., if A is incompatible with B, then B is also incompatible with A.</rdfs:comment>
@@ -304,18 +311,18 @@ Note: This property is symmetric, i.e., if A is incompatible with B, then B is a
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/priceModifier -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/priceModifier -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/priceModifier">
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/priceModifier">
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/ChoiceOrComponent"/>
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/ConfigurationInfo"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/ChoiceOrComponent"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/ConfigurationInfo"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/RelativePriceSpecification"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/RelativePriceSpecification"/>
         <rdfs:comment xml:lang="en">Links a coo:ConfigurationInfo node to information on a choice or component or the combination of multiple choices will affect the regular pricing of the resulting vehicle
 
 Note: The use of gr:addOn is in general a better way of modeling surcharges</rdfs:comment>
@@ -336,9 +343,9 @@ Note: The use of gr:addOn is in general a better way of modeling surcharges</rdf
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/displayPos -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/displayPos -->
 
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/displayPos">
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/displayPos">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment xml:lang="en">The position at which the option or element should be listed in a menu or user dialog, lower numbers come first.
 The main usage of this property are coo:SpecItemCollection and coo:ChoiceOrComponent, but it is possible to apply it to any owl:Class.
@@ -350,10 +357,10 @@ Note: It is recommended to rely on this property only for data originating from 
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/max -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/max -->
 
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/max">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/SpecItemCollection"/>
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/max">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/SpecItemCollection"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment xml:lang="en">The maximum number of coo:ChoiceOrComponent entities that can be selected for a valid configuration</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
@@ -362,10 +369,10 @@ Note: It is recommended to rely on this property only for data originating from 
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/min -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/min -->
 
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/min">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/SpecItemCollection"/>
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/min">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/SpecItemCollection"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment xml:lang="en">The minimum number of coo:ChoiceOrComponent entities that must be selected for a valid configuration</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
@@ -374,10 +381,10 @@ Note: It is recommended to rely on this property only for data originating from 
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/valid -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/valid -->
 
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/valid">
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/ConfigurationInfo"/>
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/valid">
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/ConfigurationInfo"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">Indicates whether the attached set of choices is a valid (true) or invalid (false) configuration for the Derivative</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
@@ -397,30 +404,18 @@ Note: It is recommended to rely on this property only for data originating from 
     
 
 
-    <!-- http://purl.org/goodrelations/v1#PriceSpecification -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/BaseModel -->
 
-    <owl:Class rdf:about="http://purl.org/goodrelations/v1#PriceSpecification"/>
-    
-
-
-    <!-- http://purl.org/goodrelations/v1#ProductOrServiceModel -->
-
-    <owl:Class rdf:about="http://purl.org/goodrelations/v1#ProductOrServiceModel"/>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/BaseModel -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/BaseModel">
-        <rdfs:subClassOf rdf:resource="http://purl.org/goodrelations/v1#ProductOrServiceModel"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/ChoiceOrComponent"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/CompleteCarModel"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/ConfigurationInfo"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/Derivative"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/PropertySpecification"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/RelativePriceSpecification"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/SpecItemCollection"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/Trim"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/BaseModel">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrServiceModel"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/ChoiceOrComponent"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/CompleteCarModel"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/ConfigurationInfo"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/Derivative"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/PropertySpecification"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/RelativePriceSpecification"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/SpecItemCollection"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/Trim"/>
         <rdfs:comment xml:lang="en">A Base Model is an abstract entity specifying the basic features of a group of vehicles.
 
 Examples: VW Golf, VW Polo, VW Passat</rdfs:comment>
@@ -430,17 +425,17 @@ Examples: VW Golf, VW Polo, VW Passat</rdfs:comment>
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/ChoiceOrComponent -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/ChoiceOrComponent -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/ChoiceOrComponent">
-        <rdfs:subClassOf rdf:resource="http://purl.org/goodrelations/v1#ProductOrServiceModel"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/CompleteCarModel"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/ConfigurationInfo"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/Derivative"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/PropertySpecification"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/RelativePriceSpecification"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/SpecItemCollection"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/Trim"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/ChoiceOrComponent">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrServiceModel"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/CompleteCarModel"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/ConfigurationInfo"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/Derivative"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/PropertySpecification"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/RelativePriceSpecification"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/SpecItemCollection"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/Trim"/>
         <rdfs:comment xml:lang="en">A Choice or Component is a component (e.g. engine), add-on, feature (color &quot;ocean blue&quot;), or service that can be chosen to be part of a final vehicle configuration.
 	
 Example: Engine 1.6 l TDI, color ocean blue, trailer hitch</rdfs:comment>
@@ -450,16 +445,16 @@ Example: Engine 1.6 l TDI, color ocean blue, trailer hitch</rdfs:comment>
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/CompleteCarModel -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/CompleteCarModel -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/CompleteCarModel">
-        <rdfs:subClassOf rdf:resource="http://purl.org/goodrelations/v1#ProductOrServiceModel"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/ConfigurationInfo"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/Derivative"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/PropertySpecification"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/RelativePriceSpecification"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/SpecItemCollection"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/Trim"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/CompleteCarModel">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrServiceModel"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/ConfigurationInfo"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/Derivative"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/PropertySpecification"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/RelativePriceSpecification"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/SpecItemCollection"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/Trim"/>
         <rdfs:comment xml:lang="en">A Complete Car Model is an abstract entity specifying all features and configuration choices needed for actually producing a vehicle. In other words, it is the gr:ProductOrServiceModel (&quot;datasheet&quot;) for a completely configured vehicle.
 While a Complete Car Model can be defined indepently of a Base Model, Trim, or Derivative, it is usually based on a Derivative plus choices for all mandatory configurational options (coo:SpecItemCollection) of that Derivative.
 A Complete Car Model should be linked to its Derivative via gr:isVariantOf, if available.
@@ -473,14 +468,14 @@ Note: A coo:CompleteCarModel is NOT an actual car, but a complete feature descri
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/ConfigurationInfo -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/ConfigurationInfo -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/ConfigurationInfo">
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/Derivative"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/PropertySpecification"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/RelativePriceSpecification"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/SpecItemCollection"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/Trim"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/ConfigurationInfo">
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/Derivative"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/PropertySpecification"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/RelativePriceSpecification"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/SpecItemCollection"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/Trim"/>
         <rdfs:comment xml:lang="en">A Configuration Info is an abstract entity that gives information on whether a set of Choices Or Components results in a valid configuration. 
 Using coo:compatible, it is possible to indicate either compatibility (true) and incompatibility (false) so that modeling remains efficient, no matter whether most combinations are valid or whether most configurations are invalid.
 If no such statement is found, the validity of a configuration is unknown.
@@ -492,14 +487,14 @@ Note: The two properties coo:includes and coo:dependsOn, attached to coo:ChoiceO
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/Derivative -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/Derivative -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/Derivative">
-        <rdfs:subClassOf rdf:resource="http://purl.org/goodrelations/v1#ProductOrServiceModel"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/PropertySpecification"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/RelativePriceSpecification"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/SpecItemCollection"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/Trim"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/Derivative">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrServiceModel"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/PropertySpecification"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/RelativePriceSpecification"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/SpecItemCollection"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/Trim"/>
         <rdfs:comment xml:lang="en">A Derivative is an abstract entity specifying (1) the basic features plus (2) a set of functional (e.g. engine type) and non-functional configuration (e.g. upholstery) choices of a group of vehicles.
 A Derivative has often a number of remaining configuration choices (coo:SpecItemCollection attached via coo:hasSpecItems), which will determine the actual properties of the resulting vehicle.		 
 A Derivative should be linked to its Trim via gr:isVariantOf, if available.
@@ -511,13 +506,13 @@ Examples: VW Golf S 1.6 TDI 3door Manual</rdfs:comment>
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/PropertySpecification -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/PropertySpecification -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/PropertySpecification">
-        <rdfs:subClassOf rdf:resource="http://purl.org/goodrelations/v1#ProductOrServiceModel"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/RelativePriceSpecification"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/SpecItemCollection"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/Trim"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/PropertySpecification">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrServiceModel"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/RelativePriceSpecification"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/SpecItemCollection"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/Trim"/>
         <rdfs:comment xml:lang="en">A Property Specification is an abstract entity specifying a set of properties for a vehicle that results from a single choice or the combination of two or more choices and that override the individual properties of the resulting vehicle.
 
 Example 1: Power steering and Air conditioning in combination reduce the available engine power from 90 kW to 89 kW.
@@ -528,12 +523,12 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/RelativePriceSpecification -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/RelativePriceSpecification -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/RelativePriceSpecification">
-        <rdfs:subClassOf rdf:resource="http://purl.org/goodrelations/v1#PriceSpecification"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/SpecItemCollection"/>
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/Trim"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/RelativePriceSpecification">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/SpecItemCollection"/>
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/Trim"/>
         <rdfs:comment xml:lang="en">A shortcut for indicating the effect of a choice or set of choices on the unit price. Use positive values for a surcharge and negative values for a deduction.
 
 Note: Price information should in general be attached to a gr:Offering node, not to a Base Model, Trim, Derivative, or Complete Car Model. Use this shortcut with care.</rdfs:comment>
@@ -543,10 +538,10 @@ Note: Price information should in general be attached to a gr:Offering node, not
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/SpecItemCollection -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/SpecItemCollection -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/SpecItemCollection">
-        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/Trim"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/SpecItemCollection">
+        <owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/Trim"/>
         <rdfs:comment xml:lang="en">A Spec Item Collection is an entity collating multiple coo:ChoiceOrComponent options for a given coo:Derivative, i.e. the available configurational choices. 
 The default choice can be indicated using a coo:default link. All other choices are attached using coo:availableChoice. The number of coo:ChoiceOrComponent items that can / must be selected for a valid configuration are indicated via coo:min and coo:max.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
@@ -555,10 +550,10 @@ The default choice can be indicated using a coo:default link. All other choices 
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/Trim -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/Trim -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/Trim">
-        <rdfs:subClassOf rdf:resource="http://purl.org/goodrelations/v1#ProductOrServiceModel"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/Trim">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrServiceModel"/>
         <rdfs:comment xml:lang="en">A Trim is an abstract entity specifying (1) the basic features plus (2) a set of configuration choices (mostly non-functional) of a group of vehicles. 
 A Trim should be linked to its Base Model via gr:isVariantOf, if available.
 
@@ -566,6 +561,18 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
         <rdfs:label xml:lang="en">Trim</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrServiceModel -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrServiceModel"/>
 </rdf:RDF>
 
 

@@ -1,0 +1,347 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
+     xml:base="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfa="http://www.w3.org/ns/rdfa#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:dctype="http://purl.org/dc/dcmitype/"
+     xmlns:auto-mo-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
+     xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
+     xmlns:fibo-fnd-utl-val="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/">
+    <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/">
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
+        <dct:abstract>The Schema.org Auto Extension module corresponds to the the automotive extension of schema.org (https://schema.org/docs/automotive.html). It contains ontologies which define the most important real-world objects related to popular vehicles like cars, buses (coaches) and motorcycles. It focuses predominantly on passenger automobiles from the retail market perspective.</dct:abstract>
+        <dct:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opensource.org/licenses/MIT</dct:license>
+        <sm:contentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
+        <sm:copyright>Copyright (c) 2020 EDM Council, Inc.</sm:copyright>
+        <sm:dependsOn rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://spec.edmcouncil.org/auto/ontology/EC/</sm:dependsOn>
+        <sm:fileAbbreviation>auto-ec-as</sm:fileAbbreviation>
+        <sm:filename>AutoSchemaOrg.rdf</sm:filename>
+        <rdfs:label>Auto Schema.Org Ontology</rdfs:label>
+        <skos:changeNote>The https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg.rdf version of this ontology was revised to guaranty compliance with the schema.org.</skos:changeNote>
+        <fibo-fnd-utl-av:hasMaturityLevel rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Provisional"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/isPartOf -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isPartOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/qualitativeProductOrServiceProperty -->
+
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/qualitativeProductOrServiceProperty"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty -->
+
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/valueReference -->
+
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/valueReference"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/datatypeProductOrServiceProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/datatypeProductOrServiceProperty"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasMaxValueFloat -->
+
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasMaxValueFloat"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasMinValueFloat -->
+
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasMinValueFloat"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasUnitOfMeasurement -->
+
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasUnitOfMeasurement"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasValueFloat -->
+
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasValueFloat"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/serialNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/serialNumber"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntityType -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntityType"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Event -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Event"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Location -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Location">
+        <owl:equivalentClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Place"/>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Offering -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Offering"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Organization -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Organization">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PaymentMethod -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PaymentMethod"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Place -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Place"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PostalAddress -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PostalAddress"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrServiceModel -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrServiceModel"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QualitativeValue -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QualitativeValue">
+        <dct:isPartOf rdf:resource="http://auto.schema.org"/>
+        <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+        <sm:directSource rdf:resource="https://schema.org/QualitativeValue"/>
+        <rdfs:label xml:lang="en">qualitative value</rdfs:label>
+        <skos:definition xml:lang="en">a predefined value for a product characteristic, e.g. the power cord plug type &apos;US&apos; or the garment sizes &apos;S&apos;, &apos;M&apos;, &apos;L&apos;, and &apos;XL&apos;</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue">
+        <dct:isPartOf rdf:resource="http://auto.schema.org"/>
+        <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+        <sm:directSource rdf:resource="https://schema.org/QuantitativeValue"/>
+        <rdfs:label xml:lang="en">quantitative value</rdfs:label>
+        <skos:definition xml:lang="en">a point value or interval for product characteristics and other purposes</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/WarrantyScope -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/WarrantyScope"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/AllWheelDriveConfiguration -->
+
+    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/AllWheelDriveConfiguration"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/DrivingSchoolVehicleUsage -->
+
+    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/DrivingSchoolVehicleUsage">
+        <dct:isPartOf rdf:resource="http://auto.schema.org"/>
+        <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+        <rdfs:label>DrivingSchoolVehicleUsage</rdfs:label>
+        <skos:definition>Indicates the usage of the vehicle for driving school.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/FourWheelDriveConfiguration -->
+
+    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/FourWheelDriveConfiguration"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/FrontWheelDriveConfiguration -->
+
+    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/FrontWheelDriveConfiguration"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/LeftHandDriving -->
+
+    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/LeftHandDriving"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/RearWheelDriveConfiguration -->
+
+    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/RearWheelDriveConfiguration"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/RentalVehicleUsage -->
+
+    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/RentalVehicleUsage">
+        <dct:isPartOf rdf:resource="http://auto.schema.org"/>
+        <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+        <rdfs:label>RentalVehicleUsage</rdfs:label>
+        <skos:definition>Indicates the usage of the vehicle as a rental car.</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/RightHandDriving -->
+
+    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/RightHandDriving"/>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/TaxiVehicleUsage -->
+
+    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/TaxiVehicleUsage">
+        <dct:isPartOf rdf:resource="http://auto.schema.org"/>
+        <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+        <rdfs:label>TaxiVehicleUsage</rdfs:label>
+        <skos:definition>Indicates the usage of the car as a taxi.</skos:definition>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
