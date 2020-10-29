@@ -9,8 +9,8 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:auto-eo-uco="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/"
-     xmlns:dcterms="http://purl.org/dc/terms/">
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:auto-eo-uco="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/">
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/">
         <dcterms:creator xml:lang="en">Hepp Research GmbH and Makolab S.A.</dcterms:creator>
         <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
@@ -157,7 +157,7 @@ See http://purl.org/goodrelations/ and http://purl.org/vso/ns for more informati
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/currentLocation -->
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/currentLocation">
-        <rdfs:domain rdf:resource="http://purl.org/vso/ns#Vehicle"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/Vehicle"/>
         <rdfs:range rdf:resource="http://schema.org/Place"/>
         <rdfs:range rdf:resource="http://schema.org/PostalAddress"/>
         <rdfs:comment xml:lang="en">The current location of the vehicle, i.e. where the car could be tested. For indicating alternative locations to which the seller is willing to bring the car, use gr:availableAtOrFrom attached to the gr:Offering, since those are aspects of the offer, not of the vehicle.</rdfs:comment>
@@ -171,8 +171,8 @@ See http://purl.org/goodrelations/ and http://purl.org/vso/ns for more informati
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/currentOwner">
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/owner"/>
-        <rdfs:domain rdf:resource="http://purl.org/vso/ns#Vehicle"/>
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/OwnershipInfo"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/Vehicle"/>
         <rdfs:range rdf:resource="http://purl.org/goodrelations/v1#BusinessEntity"/>
         <rdfs:range rdf:resource="http://schema.org/Organization"/>
         <rdfs:range rdf:resource="http://schema.org/Person"/>
@@ -186,8 +186,8 @@ See http://purl.org/goodrelations/ and http://purl.org/vso/ns for more informati
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/driver -->
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/driver">
-        <rdfs:domain rdf:resource="http://purl.org/vso/ns#Vehicle"/>
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/OwnershipInfo"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/Vehicle"/>
         <rdfs:range rdf:resource="http://schema.org/Person"/>
         <rdfs:comment xml:lang="en">This property points to the driver or drivers that were regularly driving the vehicle during the respective period of time (when attached to uco:OwnershipInfo) or in total (when attached directly to a vso:Vehicle).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
@@ -199,7 +199,7 @@ See http://purl.org/goodrelations/ and http://purl.org/vso/ns for more informati
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/eventInformation -->
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/eventInformation">
-        <rdfs:domain rdf:resource="http://purl.org/vso/ns#Vehicle"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/Vehicle"/>
         <rdfs:range rdf:resource="http://schema.org/Event"/>
         <rdfs:comment xml:lang="en">This property points to events related to the vehicle, like accidents and damages or major modifications or maintenance.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
@@ -211,7 +211,7 @@ See http://purl.org/goodrelations/ and http://purl.org/vso/ns for more informati
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/feature -->
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/feature">
-        <rdfs:domain rdf:resource="http://purl.org/vso/ns#Vehicle"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/Vehicle"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/PropertyValue"/>
         <rdfs:comment xml:lang="en">This property points to vehicle features in a semi-structured property-value form.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
@@ -223,7 +223,7 @@ See http://purl.org/goodrelations/ and http://purl.org/vso/ns for more informati
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/hasOwnershipInfo -->
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/hasOwnershipInfo">
-        <rdfs:domain rdf:resource="http://purl.org/vso/ns#Vehicle"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/Vehicle"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/OwnershipInfo"/>
         <rdfs:comment xml:lang="en">This property points to information about the current and previous owners of the vehicle.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
@@ -235,7 +235,7 @@ See http://purl.org/goodrelations/ and http://purl.org/vso/ns for more informati
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/inspected -->
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/inspected">
-        <rdfs:domain rdf:resource="http://purl.org/vso/ns#Vehicle"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/Vehicle"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/Check"/>
         <rdfs:comment xml:lang="en">This property points to inspections and certifications that the vehicle has undergone.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
@@ -247,7 +247,7 @@ See http://purl.org/goodrelations/ and http://purl.org/vso/ns for more informati
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/listPrice -->
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/listPrice">
-        <rdfs:domain rdf:resource="http://purl.org/vso/ns#Vehicle"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/Vehicle"/>
         <rdfs:range rdf:resource="http://purl.org/goodrelations/v1#PriceSpecification"/>
         <rdfs:comment xml:lang="en">The original list price of the new car at the time of production</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
@@ -322,8 +322,8 @@ Typical unit code(s): KMT for kilometers, SMI for statute miles</rdfs:comment>
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/owner -->
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/owner">
-        <rdfs:domain rdf:resource="http://purl.org/vso/ns#Vehicle"/>
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/OwnershipInfo"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/Vehicle"/>
         <rdfs:range rdf:resource="http://purl.org/goodrelations/v1#BusinessEntity"/>
         <rdfs:range rdf:resource="http://schema.org/Organization"/>
         <rdfs:range rdf:resource="http://schema.org/Person"/>
@@ -337,8 +337,8 @@ Typical unit code(s): KMT for kilometers, SMI for statute miles</rdfs:comment>
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/parking -->
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/parking">
-        <rdfs:domain rdf:resource="http://purl.org/vso/ns#Vehicle"/>
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/OwnershipInfo"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/Vehicle"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/ParkingType"/>
         <rdfs:comment xml:lang="en">The main type(s) of parking that have been used for the vehicle during the period of ownership (if attached to uco:OwnershipInfo) or in general (if attached to the vso:Vehicle directly)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
@@ -350,8 +350,8 @@ Typical unit code(s): KMT for kilometers, SMI for statute miles</rdfs:comment>
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/pets -->
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/pets">
-        <rdfs:domain rdf:resource="http://purl.org/vso/ns#Vehicle"/>
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/OwnershipInfo"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/Vehicle"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/Species"/>
         <rdfs:comment xml:lang="en">The type(s) of animals that have been transported in the vehicle during the period of ownership (if attached to uco:OwnershipInfo) or in general (if attached to the vso:Vehicle directly). 
 	
@@ -365,8 +365,8 @@ If possible, use DBPedia URIs, e.g. http://dbpedia.org/resource/Dog.</rdfs:comme
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/usage -->
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/usage">
-        <rdfs:domain rdf:resource="http://purl.org/vso/ns#Vehicle"/>
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/OwnershipInfo"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/Vehicle"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/UsageType"/>
         <rdfs:comment xml:lang="en">The type(s) of usage during the period of ownership (if attached to uco:OwnershipInfo) or in general (if attached to the vso:Vehicle directly)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
@@ -378,7 +378,7 @@ If possible, use DBPedia URIs, e.g. http://dbpedia.org/resource/Dog.</rdfs:comme
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/valuation -->
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/valuation">
-        <rdfs:domain rdf:resource="http://purl.org/vso/ns#Vehicle"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/Vehicle"/>
         <rdfs:range rdf:resource="http://purl.org/goodrelations/v1#PriceSpecification"/>
         <rdfs:comment xml:lang="en">The market price assessment gained by the respective valuation. Use gr:name to indicate the name of the valuation service.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
@@ -404,8 +404,8 @@ If possible, use DBPedia URIs, e.g. http://dbpedia.org/resource/Dog.</rdfs:comme
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/vso/ns#Vehicle"/>
                     <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/DamageOrAccident"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/Vehicle"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -420,7 +420,7 @@ If possible, use DBPedia URIs, e.g. http://dbpedia.org/resource/Dog.</rdfs:comme
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/countryOfOrigin -->
 
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/countryOfOrigin">
-        <rdfs:domain rdf:resource="http://purl.org/vso/ns#Vehicle"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The country or geo-political region in which the vehicle was initially sold officially, indicated as the two-character version of ISO 3166-1 (ISO 3166-1 alpha-2) for regions or ISO 3166-2, which breaks down the countries from ISO 3166-1 into administrative subdivisions.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
@@ -432,7 +432,7 @@ If possible, use DBPedia URIs, e.g. http://dbpedia.org/resource/Dog.</rdfs:comme
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/countryOfRegistration -->
 
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/countryOfRegistration">
-        <rdfs:domain rdf:resource="http://purl.org/vso/ns#Vehicle"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The country or geo-political region in which the vehicle is currently registered, indicated as the two-character version of ISO 3166-1 (ISO 3166-1 alpha-2) for regions or ISO 3166-2, which breaks down the countries from ISO 3166-1 into administrative subdivisions.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
@@ -456,7 +456,7 @@ If possible, use DBPedia URIs, e.g. http://dbpedia.org/resource/Dog.</rdfs:comme
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/indicationOfOdometerRollback -->
 
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/indicationOfOdometerRollback">
-        <rdfs:domain rdf:resource="http://purl.org/vso/ns#Vehicle"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:comment xml:lang="en">This property indicates whether it is likely or known that the odometer of the vehicle does not properly reflect the total mileage of the vehicle, e.g. because the odometer has been replaced, reset, or tampered with </rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
@@ -495,8 +495,8 @@ If possible, use DBPedia URIs, e.g. http://dbpedia.org/resource/Dog.</rdfs:comme
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/vso/ns#Vehicle"/>
                     <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/OwnershipInfo"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/Vehicle"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -511,7 +511,7 @@ If possible, use DBPedia URIs, e.g. http://dbpedia.org/resource/Dog.</rdfs:comme
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/numberOfOwners -->
 
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/numberOfOwners">
-        <rdfs:domain rdf:resource="http://purl.org/vso/ns#Vehicle"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:comment xml:lang="en">The total number of people or organizations who owned the vehicle, including the current owner.
 
@@ -619,8 +619,8 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/vso/ns#Vehicle"/>
                     <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/DamageOrAccident"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/Vehicle"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -638,8 +638,8 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/vso/ns#Vehicle"/>
                     <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/OwnershipInfo"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/Vehicle"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -657,8 +657,8 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/vso/ns#Vehicle"/>
                     <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/DamageOrAccident"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/Vehicle"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -688,8 +688,8 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/vso/ns#Vehicle"/>
                     <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/DamageOrAccident"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/Vehicle"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
@@ -810,12 +810,6 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
     <!-- http://purl.org/goodrelations/v1#WarrantyScope -->
 
     <owl:Class rdf:about="http://purl.org/goodrelations/v1#WarrantyScope"/>
-    
-
-
-    <!-- http://purl.org/vso/ns#Vehicle -->
-
-    <owl:Class rdf:about="http://purl.org/vso/ns#Vehicle"/>
     
 
 
@@ -944,6 +938,12 @@ If possible, use DBPedia URIs, e.g. http://dbpedia.org/resource/Dog.</rdfs:comme
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
         <rdfs:label xml:lang="en">Usage Type</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/Vehicle -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/Vehicle"/>
     
 
 

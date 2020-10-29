@@ -9,8 +9,8 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:auto-eo-coo="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/"
-     xmlns:dcterms="http://purl.org/dc/terms/">
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:auto-eo-coo="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/">
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/">
         <dc:contributor xml:lang="en">Charles Sandeman-Craik, Tribal DDB; Chris Jenkins, Tribal DDB; Tim Redding, Tribal DDB; Yago Otero, Tribal DDB; William Greenly, Tribal DDB; Robin Dingle, Volkswagen UK;</dc:contributor>
         <dc:creator xml:lang="en">Martin Hepp, Hepp Research GmbH</dc:creator>
@@ -339,7 +339,6 @@ Note: The use of gr:addOn is in general a better way of modeling surcharges</rdf
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/displayPos -->
 
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/displayPos">
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <rdfs:comment xml:lang="en">The position at which the option or element should be listed in a menu or user dialog, lower numbers come first.
 The main usage of this property are coo:SpecItemCollection and coo:ChoiceOrComponent, but it is possible to apply it to any owl:Class.
@@ -407,12 +406,6 @@ Note: It is recommended to rely on this property only for data originating from 
     <!-- http://purl.org/goodrelations/v1#ProductOrServiceModel -->
 
     <owl:Class rdf:about="http://purl.org/goodrelations/v1#ProductOrServiceModel"/>
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#Class -->
-
-    <owl:Class rdf:about="http://www.w3.org/2002/07/owl#Class"/>
     
 
 

@@ -18,6 +18,7 @@
      xmlns:schema="http://schema.org/"
      xmlns:auto-eo-vsso="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/">
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/">
+        <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
         <dc:description>This ontology describes the car&apos;s attributes, branches and signals defined in GENIVI&apos;s Vehicle Signal Specification.</dc:description>
         <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-01-10</dct:created>
         <dct:creator>Benjamin Klotz</dct:creator>
@@ -51,51 +52,15 @@
     
 
 
-    <!-- http://purl.org/dc/terms/created -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/creator -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
-    
-
-
     <!-- http://purl.org/dc/terms/issued -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
     
 
 
-    <!-- http://purl.org/dc/terms/license -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
-    
-
-
     <!-- http://purl.org/dc/terms/modified -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/title -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
-    
-
-
-    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
-    
-
-
-    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
     
 
 
@@ -113,12 +78,6 @@
     <!-- http://www.w3.org/ns/sosa/isActuatedBy -->
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isActuatedBy"/>
-    
-
-
-    <!-- http://www.w3.org/ns/sosa/isObservedBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isObservedBy"/>
     
 
 
@@ -997,24 +956,6 @@
     <!-- http://www.w3.org/ns/sosa/ActuableProperty -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/sosa/ActuableProperty"/>
-    
-
-
-    <!-- http://www.w3.org/ns/sosa/Actuator -->
-
-    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Actuator"/>
-    
-
-
-    <!-- http://www.w3.org/ns/sosa/ObservableProperty -->
-
-    <owl:Class rdf:about="http://www.w3.org/ns/sosa/ObservableProperty"/>
-    
-
-
-    <!-- http://www.w3.org/ns/sosa/Sensor -->
-
-    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Sensor"/>
     
 
 
