@@ -17,7 +17,6 @@
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/FD/MetadataFD/">
         <owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/FD/MetadataFD/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/MetadataFNDUtilities/"/>           
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/MetadataFNDUtilities/UtilitiesModule"/>              
         <dct:abstract>This ontology provides metadata for the selected FIBO ontologies.</dct:abstract>
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-18T01:43:00</dct:issued>
         <dct:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opensource.org/licenses/MIT</dct:license>
