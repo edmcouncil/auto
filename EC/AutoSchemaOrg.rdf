@@ -19,9 +19,9 @@
      xmlns:fibo-fnd-utl-val="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/">
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/">
         <owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/SchemaAutomotive/AutoSchemaOrg/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
         <dct:abstract>The Schema.org Auto Extension module corresponds to the the automotive extension of schema.org (https://schema.org/docs/automotive.html). It contains ontologies which define the most important real-world objects related to popular vehicles like cars, buses (coaches) and motorcycles. It focuses predominantly on passenger automobiles from the retail market perspective.</dct:abstract>
         <dct:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opensource.org/licenses/MIT</dct:license>
         <sm:contentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
@@ -1448,6 +1448,8 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 
     <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/AllWheelDriveConfiguration">
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/DriveWheelConfigurationValue"/>
+        <rdfs:label xml:lang="en">all-wheel drive</rdfs:label>
+        <skos:definition xml:lang="en">All-wheel Drive is a transmission layout where the engine drives all four wheels.</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -1458,7 +1460,7 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/CarUsageType"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>DrivingSchoolVehicleUsage</rdfs:label>
+        <rdfs:label>driving school vehicle usage</rdfs:label>
         <skos:definition>Indicates the usage of the vehicle for driving school.</skos:definition>
     </owl:NamedIndividual>
     
@@ -1468,6 +1470,8 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 
     <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/FourWheelDriveConfiguration">
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/DriveWheelConfigurationValue"/>
+        <rdfs:label xml:lang="en">four-wheel drive</rdfs:label>
+        <skos:definition xml:lang="en">Four-wheel Drive is a transmission layout where the engine primarily drives two wheels with a part-time four-wheel drive capability.</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -1476,6 +1480,9 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 
     <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/FrontWheelDriveConfiguration">
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/DriveWheelConfigurationValue"/>
+        <rdfs:label xml:lang="en">front-wheel drive</rdfs:label>
+        <skos:definition xml:lang="en">Front-wheel drive is a transmission layout where the engine drives the front wheels.</skos:definition>
+        <fibo-fnd-utl-av:synonym xml:lang="en">FWD</fibo-fnd-utl-av:synonym>
     </owl:NamedIndividual>
     
 
@@ -1484,6 +1491,8 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 
     <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/LeftHandDriving">
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/SteeringPositionValue"/>
+        <rdfs:label xml:lang="en">left hand drive</rdfs:label>
+        <skos:definition xml:lang="en">The steering position is on the left side of the vehicle (viewed from the main direction of driving). For cars this means that you drive on the right side of the road.</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -1492,6 +1501,9 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 
     <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/RearWheelDriveConfiguration">
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/DriveWheelConfigurationValue"/>
+        <rdfs:label xml:lang="en">rear-wheel drive</rdfs:label>
+        <skos:definition xml:lang="en">Rear-wheel drive is a transmission layout where the engine drives the rear wheels.</skos:definition>
+        <fibo-fnd-utl-av:synonym xml:lang="en">RWD</fibo-fnd-utl-av:synonym>
     </owl:NamedIndividual>
     
 
@@ -1502,7 +1514,7 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/CarUsageType"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>RentalVehicleUsage</rdfs:label>
+        <rdfs:label>rental vehicle usage</rdfs:label>
         <skos:definition>Indicates the usage of the vehicle as a rental car.</skos:definition>
     </owl:NamedIndividual>
     
@@ -1512,6 +1524,8 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 
     <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/RightHandDriving">
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/SteeringPositionValue"/>
+        <rdfs:label xml:lang="en">right hand drive</rdfs:label>
+        <skos:definition xml:lang="en">The steering position is on the right side of the vehicle (viewed from the main direction of driving). For cars this means that you drive on the left side of the road.</skos:definition>
     </owl:NamedIndividual>
     
 
@@ -1522,7 +1536,7 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/CarUsageType"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>TaxiVehicleUsage</rdfs:label>
+        <rdfs:label>taxi vehicle usage</rdfs:label>
         <skos:definition>Indicates the usage of the car as a taxi.</skos:definition>
     </owl:NamedIndividual>
 </rdf:RDF>

@@ -137,19 +137,25 @@
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity">
+        <rdfs:label xml:lang="en">business entity</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntityType -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntityType"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntityType">
+        <rdfs:label xml:lang="en">business entity type</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Event -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Event"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Event">
+        <rdfs:label xml:lang="en">event</rdfs:label>
+    </owl:Class>
     
 
 
@@ -157,13 +163,17 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Location">
         <owl:equivalentClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Place"/>
+        <rdfs:label xml:lang="en">location</rdfs:label>
     </owl:Class>
     
 
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Offering -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Offering"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Offering">
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
+        <rdfs:label xml:lang="en">offering</rdfs:label>
+    </owl:Class>
     
 
 
@@ -171,13 +181,16 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Organization">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+        <rdfs:label xml:lang="en">organization</rdfs:label>
     </owl:Class>
     
 
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PaymentMethod -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PaymentMethod"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PaymentMethod">
+        <rdfs:label xml:lang="en">payment method</rdfs:label>
+    </owl:Class>
     
 
 
@@ -185,37 +198,49 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+        <rdfs:label xml:lang="en">person</rdfs:label>
     </owl:Class>
     
 
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Place -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Place"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Place">
+        <rdfs:label xml:lang="en">place</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PostalAddress -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PostalAddress"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PostalAddress">
+        <rdfs:label xml:lang="en">postal address</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification">
+        <rdfs:label xml:lang="en">price speciﬁcation</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService">
+        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
+        <rdfs:label xml:lang="en">product or service</rdfs:label>
+    </owl:Class>
     
 
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrServiceModel -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrServiceModel"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrServiceModel">
+        <rdfs:label xml:lang="en">product or service model</rdfs:label>
+    </owl:Class>
     
 
 
@@ -247,6 +272,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+        <rdfs:label xml:lang="en">quantitative value float</rdfs:label>
     </owl:Class>
     
 
@@ -255,6 +281,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+        <rdfs:label xml:lang="en">quantitative value integer</rdfs:label>
     </owl:Class>
     
 
@@ -267,14 +294,26 @@
 
 Note: Price information should in general be attached to a gr:Offering node, not to a Base Model, Trim, Derivative, or Complete Car Model. Use this shortcut with care.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-        <rdfs:label xml:lang="en">RelativePriceSpeciﬁcation</rdfs:label>
+        <rdfs:label xml:lang="en">relative price speciﬁcation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Service -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Service">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService"/>
+        <rdfs:label xml:lang="en">service</rdfs:label>
+        <skos:definition xml:lang="en">A service or service model. Typical instances are complementing services for a particular car.</skos:definition>
     </owl:Class>
     
 
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/WarrantyScope -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/WarrantyScope"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/WarrantyScope">
+        <rdfs:label xml:lang="en">warranty scope</rdfs:label>
+    </owl:Class>
 </rdf:RDF>
 
 

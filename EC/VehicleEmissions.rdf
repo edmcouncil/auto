@@ -18,10 +18,10 @@
      xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
      xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/">
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"/>        
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
         <ns10:license rdf:resource="https://creativecommons.org/licenses/by/3.0/"/>
         <ns8:contributor rdf:resource="https://plus.google.com/+MilosJovanovik"/>
         <ns8:creator rdf:resource="https://plus.google.com/+BojanNajdenov"/>
@@ -142,7 +142,7 @@
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/hasElectricEnergyConsumtion">
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Automobile"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment>This property represents the electric energy consumption of a vehicle measured in Wh/km.</rdfs:comment>
+        <skos:definition>This property represents the electric energy consumption of a vehicle measured in Wh/km.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -152,7 +152,7 @@
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/hasEmissionsReduction">
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Automobile"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment>This property represents emissions reduction measured in g/km that a vehicle has, through the implemented innovative technologies.</rdfs:comment>
+        <skos:definition>This property represents emissions reduction measured in g/km that a vehicle has, through the implemented innovative technologies.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -162,7 +162,7 @@
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/hasEngineCapacity">
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Automobile"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment>This property shows the capacity of the engine of a vehicle measured in cm3</rdfs:comment>
+        <skos:definition>This property shows the capacity of the engine of a vehicle measured in cm3</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -172,7 +172,7 @@
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/hasFuelMode">
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Automobile"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment>This property represents the fuel mode of a vehicle</rdfs:comment>
+        <skos:definition>This property represents the fuel mode of a vehicle</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -182,7 +182,7 @@
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/hasInnovativeTechnology">
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Automobile"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment>This property represents an innovation technology that a vehicle has implemented.</rdfs:comment>
+        <skos:definition>This property represents an innovation technology that a vehicle has implemented.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -192,7 +192,7 @@
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/hasMSRegManufacturerName">
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Automobile"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment>This property represents a manufacturer name as in the registry of Member States of the European Environment Agency.</rdfs:comment>
+        <skos:definition>This property represents a manufacturer name as in the registry of Member States of the European Environment Agency.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -202,7 +202,7 @@
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/hasManufacturerHarmonisedName">
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Automobile"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment>This property represents a manufacturer harmonised name.</rdfs:comment>
+        <skos:definition>This property represents a manufacturer harmonised name.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -212,7 +212,7 @@
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/hasManufacturerPooling">
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Automobile"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment>This property represents a manufacturers pooling.</rdfs:comment>
+        <skos:definition>This property represents a manufacturers pooling.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -222,7 +222,7 @@
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/hasOtherAxleWidth">
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Automobile"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment>This property represents the width of the other steering axle of a vehicle measured in mm.</rdfs:comment>
+        <skos:definition>This property represents the width of the other steering axle of a vehicle measured in mm.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -232,7 +232,7 @@
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/hasSteeringAxleWidth">
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Automobile"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment>This property represents the width of the steering axle of a vehicle measured in mm.</rdfs:comment>
+        <skos:definition>This property represents the width of the steering axle of a vehicle measured in mm.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -242,7 +242,7 @@
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/hasTotalNewRegistrations">
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Automobile"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment>This property represents the nubmer of total new registration of a vehicle.</rdfs:comment>
+        <skos:definition>This property represents the nubmer of total new registration of a vehicle.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -252,7 +252,7 @@
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/hasTypeApprovalNumber">
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Automobile"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment>This property represents an internal type approval number.</rdfs:comment>
+        <skos:definition>This property represents an internal type approval number.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -271,7 +271,7 @@
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/type">
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Automobile"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment>This property represents an internal type of vehicle.</rdfs:comment>
+        <skos:definition>This property represents an internal type of vehicle.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -281,7 +281,7 @@
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/variant">
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Automobile"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment>This property represents an internal variant code.</rdfs:comment>
+        <skos:definition>This property represents an internal variant code.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -291,7 +291,7 @@
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/vehicleTypeApprovedCategory">
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Automobile"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment>This property represents a category of the approved vehicle type.</rdfs:comment>
+        <skos:definition>This property represents a category of the approved vehicle type.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -301,7 +301,7 @@
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/version">
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Automobile"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:comment>This property represents an internal version code of a vehicle.</rdfs:comment>
+        <skos:definition>This property represents an internal version code of a vehicle.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -335,6 +335,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/AirplaneModel">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
+        <rdfs:label xml:lang="en">airplane model</rdfs:label>
     </owl:Class>
     
 
@@ -343,6 +344,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/Train">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
+        <rdfs:label xml:lang="en">train</rdfs:label>
     </owl:Class>
     
 
