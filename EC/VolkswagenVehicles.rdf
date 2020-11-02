@@ -21,7 +21,7 @@
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/">
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>        
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
         <dc:contributor>Charles Sandeman-Craik, Tribal DDB; Chris Jenkins, Tribal DDB; Tim Redding, Tribal DDB; Yago Otero, Tribal DDB; William Greenly, Tribal DDB; Robin Dingle, Volkswagen UK</dc:contributor>
         <dc:contributor xml:lang="en">Some class and property definitions are inspired by or based on abstracts from Wikipedia, the free encyclopedia.</dc:contributor>
@@ -157,7 +157,7 @@ See http://purl.org/goodrelations/ for more information.</rdfs:comment>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
         <rdfs:comment xml:lang="en">Indicates the advanced payment for the financing</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">advancedPayment (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">advanced payment</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -169,7 +169,7 @@ See http://purl.org/goodrelations/ for more information.</rdfs:comment>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
         <rdfs:comment xml:lang="en">Indicates the credit for the financing</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">credit (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">credit</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -181,7 +181,7 @@ See http://purl.org/goodrelations/ for more information.</rdfs:comment>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
         <rdfs:comment xml:lang="en">Indicates the customer cash price for the financing</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">customerCashPrice (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">customer cash price</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -193,7 +193,7 @@ See http://purl.org/goodrelations/ for more information.</rdfs:comment>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
         <rdfs:comment xml:lang="en">Indicates the customer deposit for the financing</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">customerDeposit (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">customer deposit</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -205,7 +205,7 @@ See http://purl.org/goodrelations/ for more information.</rdfs:comment>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
         <rdfs:comment xml:lang="en">Indicates the deposit contribution for the financing</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">depositContribution (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">deposit contribution</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -217,7 +217,7 @@ See http://purl.org/goodrelations/ for more information.</rdfs:comment>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
         <rdfs:comment xml:lang="en">Indicates the discount for the financing</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">discount (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">discount</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -229,7 +229,7 @@ See http://purl.org/goodrelations/ for more information.</rdfs:comment>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
         <rdfs:comment xml:lang="en">Indicates the rate for excess mileage</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">excessMileage (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">excess mileage</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -241,7 +241,7 @@ See http://purl.org/goodrelations/ for more information.</rdfs:comment>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
         <rdfs:comment xml:lang="en">Indicates the final payment fee for the financing</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">finalPaymentFee (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">final payment fee</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -253,7 +253,7 @@ See http://purl.org/goodrelations/ for more information.</rdfs:comment>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
         <rdfs:comment xml:lang="en">Indicates the first monthly payment fee for the financing</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">firstMonthlyPaymentFee (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">first monthly payment fee</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -266,7 +266,7 @@ See http://purl.org/goodrelations/ for more information.</rdfs:comment>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/GearboxTypeValue"/>
         <rdfs:comment xml:lang="en">The gearbox type of the vehicle or vehicle model</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">gearbox (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">gearbox</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/page/Transmission_%28mechanics%29"/>
         <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Transmission_%28mechanics%29"/>
     </owl:ObjectProperty>
@@ -282,7 +282,7 @@ See http://purl.org/goodrelations/ for more information.</rdfs:comment>
         <rdfs:comment xml:lang="en">The outer height of the vehicle with the bonnet open. Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.
 Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT for foot/feet</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">heightOpenBonnet (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">height open bonnet</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -296,7 +296,7 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <rdfs:comment xml:lang="en">The outer height of the vehicle with the tailgate open. Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.
 Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT for foot/feet</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">heightOpenTailgate (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">height open tailgate</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -313,7 +313,7 @@ Typical unit code(s): LTR for liters, FTQ for cubic foot/feet
 	
 Note: You can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">luggageCapacitySeatsFolded (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">luggage capacity seats folded</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -330,7 +330,7 @@ Typical unit code(s): LTR for liters, FTQ for cubic foot/feet
 	
 Note: You can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">luggageCapacitySeatsUpright (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">luggage capacity seats upright</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -342,7 +342,7 @@ Note: You can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
         <rdfs:comment xml:lang="en">Indicates the monthly payment for the financing</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">monthlyPayment (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">monthly payment</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -354,7 +354,7 @@ Note: You can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
         <rdfs:comment xml:lang="en">Indicates the OTR retail price for the financing</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">otrRetailPrice (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">otr retail price</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -367,7 +367,7 @@ Note: You can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/TrafficPattern"/>
         <rdfs:comment xml:lang="en">Indicates the traffic pattern to which the vso:fuelEconomy or vso:fuelConsumption value refers</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">refersToTrafficPattern  (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">refers to traffic pattern</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -381,7 +381,7 @@ Note: You can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges
         <rdfs:comment xml:lang="en">The rotational speed to which a vvo:torque or vso:enginePower value refers
 Typical unit code(s): RPM for revolutions per minute or RPS for revolutions per second</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">rotationalSpeedReference  (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">rotational speed reference</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -393,7 +393,7 @@ Typical unit code(s): RPM for revolutions per minute or RPS for revolutions per 
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
         <rdfs:comment xml:lang="en">Indicates the scrappage contribution for the financing</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">scrappageContribution (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">scrappage contribution</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -407,7 +407,7 @@ Typical unit code(s): RPM for revolutions per minute or RPS for revolutions per 
         <rdfs:comment xml:lang="en">The torque (turning force) of an engine
 Typical unit code(s): NU for newton metre (N m), F17 for pound-force per foot, or F48 for pound-force per inch</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">torque (0..*)</rdfs:label>
+        <rdfs:label xml:lang="en">torque</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -419,7 +419,7 @@ Typical unit code(s): NU for newton metre (N m), F17 for pound-force per foot, o
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
         <rdfs:comment xml:lang="en">Indicates the total payable for the financing</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">totalPayable (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">total payable</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -434,7 +434,7 @@ Typical unit code(s): NU for newton metre (N m), F17 for pound-force per foot, o
         <rdfs:comment xml:lang="en">The outer width of the vehicle, excluding door mirrors. Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.
 Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT for foot/feet</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">widthExcludingDoorMirrors (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">width excluding door mirrors</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -448,7 +448,7 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <rdfs:comment xml:lang="en">The outer width of the vehicle with the doors open. Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.
 Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT for foot/feet</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-        <rdfs:label xml:lang="en">widthWithDoorsOpen (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">width with doors open</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -845,7 +845,56 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/MotorizedRoadVehicle -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/MotorizedRoadVehicle"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/MotorizedRoadVehicle">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/gearbox"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/GearboxTypeValue"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/gearbox"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/GearboxTypeValue"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/luggageCapacitySeatsFolded"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/luggageCapacitySeatsFolded"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/luggageCapacitySeatsUpright"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/luggageCapacitySeatsUpright"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -894,6 +943,214 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/Financing">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PaymentMethod"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/advancedPayment"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/advancedPayment"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/credit"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/credit"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/customerCashPrice"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/customerCashPrice"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/customerDeposit"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/customerDeposit"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/depositContribution"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/depositContribution"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/discount"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/discount"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/excessMileage"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/excessMileage"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/finalPaymentFee"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/finalPaymentFee"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/firstMonthlyPaymentFee"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/firstMonthlyPaymentFee"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/monthlyPayment"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/monthlyPayment"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/otrRetailPrice"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/otrRetailPrice"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/scrappageContribution"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/scrappageContribution"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/totalPayable"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/totalPayable"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An instance of this class is the specification of a payment option via staged payments.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
         <rdfs:label xml:lang="en">Financing (gr:PaymentMethod)</rdfs:label>
@@ -1060,7 +1317,79 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/heightOpenBonnet"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/heightOpenBonnet"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/heightOpenTailgate"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/heightOpenTailgate"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/widthExcludingDoorMirrors"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/widthExcludingDoorMirrors"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/widthWithDoorsOpen"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/widthWithDoorsOpen"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/torque"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -1072,7 +1401,40 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/refersToTrafficPattern"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/TrafficPattern"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/refersToTrafficPattern"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/TrafficPattern"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/rotationalSpeedReference"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/rotationalSpeedReference"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
