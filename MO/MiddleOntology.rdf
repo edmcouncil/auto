@@ -259,6 +259,14 @@
     
 
 
+    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/RelativePriceSpecification -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/RelativePriceSpecification">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+    </owl:Class>
+    
+
+
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/WarrantyScope -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/WarrantyScope"/>
