@@ -263,6 +263,11 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/RelativePriceSpecification">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+        <rdfs:comment xml:lang="en">A shortcut for indicating the effect of a choice or set of choices on the unit price. Use positive values for a surcharge and negative values for a deduction.
+
+Note: Price information should in general be attached to a gr:Offering node, not to a Base Model, Trim, Derivative, or Complete Car Model. Use this shortcut with care.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
+        <rdfs:label xml:lang="en">RelativePriceSpeciﬁcation</rdfs:label>
     </owl:Class>
     
 

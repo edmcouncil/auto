@@ -427,7 +427,7 @@ Note: It is recommended to rely on this property only for data originating from 
 
 Examples: VW Golf, VW Polo, VW Passat</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-        <rdfs:label xml:lang="en">BaseModel</rdfs:label>
+        <rdfs:label xml:lang="en">base model</rdfs:label>
     </owl:Class>
     
 
@@ -514,7 +514,7 @@ Examples: VW Golf, VW Polo, VW Passat</rdfs:comment>
 	
 Example: Engine 1.6 l TDI, color ocean blue, trailer hitch</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-        <rdfs:label xml:lang="en">ChoiceOrComponent</rdfs:label>
+        <rdfs:label xml:lang="en">choice or component</rdfs:label>
     </owl:Class>
     
 
@@ -544,7 +544,7 @@ Example: VW Golf S 1.6 TDI 3door Manual in ocean blue with air-conditioning, CD 
 
 Note: A coo:CompleteCarModel is NOT an actual car, but a complete feature description of one or multiple actual cars.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-        <rdfs:label xml:lang="en">CompleteCarModel</rdfs:label>
+        <rdfs:label xml:lang="en">complete car model</rdfs:label>
     </owl:Class>
     
 
@@ -599,7 +599,7 @@ If no such statement is found, the validity of a configuration is unknown.
 
 Note: The two properties coo:includes and coo:dependsOn, attached to coo:ChoiceOrComponent, may contain additional information on the validity of configuration.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-        <rdfs:label xml:lang="en">ConfigurationInfo</rdfs:label>
+        <rdfs:label xml:lang="en">configuration info</rdfs:label>
     </owl:Class>
     
 
@@ -632,7 +632,7 @@ A Derivative should be linked to its Trim via gr:isVariantOf, if available.
 
 Examples: VW Golf S 1.6 TDI 3door Manual</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-        <rdfs:label xml:lang="en">Derivative</rdfs:label>
+        <rdfs:label xml:lang="en">derivative</rdfs:label>
     </owl:Class>
     
 
@@ -649,7 +649,7 @@ Examples: VW Golf S 1.6 TDI 3door Manual</rdfs:comment>
 Example 1: Power steering and Air conditioning in combination reduce the available engine power from 90 kW to 89 kW.
 Example 2: Choosing the color option &quot;blue&quot; changes the color of the car to &quot;blue&quot;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-        <rdfs:label xml:lang="en">PropertySpeciﬁcation</rdfs:label>
+        <rdfs:label xml:lang="en">property speciﬁcation</rdfs:label>
     </owl:Class>
     
 
@@ -732,7 +732,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
         <rdfs:comment xml:lang="en">A Spec Item Collection is an entity collating multiple coo:ChoiceOrComponent options for a given coo:Derivative, i.e. the available configurational choices. 
 The default choice can be indicated using a coo:default link. All other choices are attached using coo:availableChoice. The number of coo:ChoiceOrComponent items that can / must be selected for a valid configuration are indicated via coo:min and coo:max.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-        <rdfs:label xml:lang="en">SpecItemCollection</rdfs:label>
+        <rdfs:label xml:lang="en">spec item collection</rdfs:label>
     </owl:Class>
     
 
@@ -754,7 +754,7 @@ A Trim should be linked to its Base Model via gr:isVariantOf, if available.
 
 Examples: VW Golf S, VW Polo Match, VW Passat SE</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-        <rdfs:label xml:lang="en">Trim</rdfs:label>
+        <rdfs:label xml:lang="en">trim</rdfs:label>
     </owl:Class>
     
 
@@ -783,11 +783,6 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</rdfs:comment>
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/RelativePriceSpecification">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
-        <rdfs:comment xml:lang="en">A shortcut for indicating the effect of a choice or set of choices on the unit price. Use positive values for a surcharge and negative values for a deduction.
-
-Note: Price information should in general be attached to a gr:Offering node, not to a Base Model, Trim, Derivative, or Complete Car Model. Use this shortcut with care.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-        <rdfs:label xml:lang="en">RelativePriceSpeciﬁcation</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
