@@ -2,15 +2,14 @@
 <rdf:RDF xmlns="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/"
      xml:base="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:gr="http://purl.org/goodrelations/v1#"
-     xmlns:coo="https://spec.edmcouncil.org/auto/ontology/EC/CarOptionsOntology/"
+     xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"     
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:dct="http://purl.org/dc/terms/"
      xmlns:auto-mo-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
      xmlns:auto-ec-coo="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/"
      xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
@@ -18,31 +17,14 @@
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/">
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
-        <dc:contributor xml:lang="en">Charles Sandeman-Craik, Tribal DDB; Chris Jenkins, Tribal DDB; Tim Redding, Tribal DDB; Yago Otero, Tribal DDB; William Greenly, Tribal DDB; Robin Dingle, Volkswagen UK;</dc:contributor>
-        <dc:creator xml:lang="en">Martin Hepp, Hepp Research GmbH</dc:creator>
-        <dc:rights xml:lang="en">The Car Options Ontology is available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/. 
-In a nutshell, you are free to copy, distribute and transmit the work; to remix/adapt the work (e.g. to import the ontology and create specializations of its elements), 
-as long as you attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work).</dc:rights>
-        <dc:subject xml:lang="en">E-Commerce, E-Business, GoodRelations, Ontology, Cars, Automobiles</dc:subject>
-        <dc:title xml:lang="en">COO: The Car Options Ontology for Semantic Web-based E-Commerce</dc:title>
-        <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
-        <rdfs:comment xml:lang="en">COO: The Car Options Ontology
-    
-The COO provides a vocabulary for exposing available configuration options for car models. It allows indicating choices that can be made as well as compatibility, dependency, and inclusion information. 
-
-The ontology imports and extends the GoodRelations ontology for e-commerce, which provides an abstract framework for product model information via gr:ProductOrServiceModel and ist associated properies.
-
-The main difference between COO and the default patterns for model data in GoodRelations is that GoodRelations requires the materialization of all choices for features, which can quickly lead to very large amounts of data if features can be combines rather freely, due to the combinatorial effects.
-
-Vocabulary:    http://purl.org/coo/ns
-Namespace:     http://purl.org/coo/ns#
-
-The Car Options Ontology is designed to be used in combination with GoodRelations, a standard vocabulary for the commercial aspects of offers for sale or rental, and the Vehicle Sales Ontology.
-
-See http://purl.org/goodrelations/  and http://purl.org/vso/ns for more information.</rdfs:comment>
-        <rdfs:label xml:lang="en">Car Options Ontology</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.org/goodrelations/"/>
-        <owl:versionInfo>V 1.1, Release 2010-10-12</owl:versionInfo>
+        <rdfs:label xml:lang="en">The Car Options Ontology (COO) for Semantic Web-based E-Commerce</rdfs:label>
+        <dct:abstract xml:lang="en">The Car Options Ontology (COO) provides a vocabulary for exposing available configuration options for car models. It allows indicating choices that can be made as well as compatibility, dependency, and inclusion information.</dct:abstract> 
+        <rdfs:comment xml:lang="en">The Car Options Ontology (COO) has been initially created by Martin Hepp, Hepp Research GmbH, with the contribution of Charles Sandeman-Craik, Tribal DDB; Chris Jenkins, Tribal DDB; Tim Redding, Tribal DDB; Yago Otero, Tribal DDB; William Greenly, Tribal DDB; Robin Dingle, Volkswagen UK (see https://lov.linkeddata.es/dataset/lov/vocabs/coo). COO, as created by Martin Hepp, Hepp Research GmbH, is available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/.</rdfs:comment>
+        <sm:dependsOn rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://spec.edmcouncil.org/auto/ontology/EC/</sm:dependsOn>        
+        <sm:contentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
+        <dct:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+        <sm:fileAbbreviation>auto-ec-coo</sm:fileAbbreviation>
+        <sm:filename>CarOptions.rdf</sm:filename>        
         <fibo-fnd-utl-av:hasMaturityLevel rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Informative"/>
     </owl:Ontology>
     

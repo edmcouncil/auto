@@ -2,39 +2,33 @@
 <rdf:RDF xmlns="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/"
      xml:base="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:ns1="http://purl.org/vso/ns#"
-     xmlns:ns3="http://purl.org/vvo/ns#"
-     xmlns:ns5="http://www.ontotext.com/proton-ontology/"
-     xmlns:ns6="http://linkeddata.finki.ukim.mk/lod/ontology/veo#"
-     xmlns:ns8="http://purl.org/dc/terms/"
-     xmlns:ns9="http://purl.org/vocab/vann/"
+     xmlns:dct="http://purl.org/dc/terms/"     
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:ns10="http://creativecommons.org/ns#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"          
      xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
+     xmlns:auto-ec-as="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"
+     xmlns:auto-ec-veo="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/"
+     xmlns:auto-ec-vso="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/"
+     xmlns:auto-mo-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
      xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/">
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
-        <ns10:license rdf:resource="https://creativecommons.org/licenses/by/3.0/"/>
-        <ns8:contributor rdf:resource="https://plus.google.com/+MilosJovanovik"/>
-        <ns8:creator rdf:resource="https://plus.google.com/+BojanNajdenov"/>
-        <ns8:description>An ontology for describing vehicles and their emissions.</ns8:description>
-        <ns8:issued>2014-09-01</ns8:issued>
-        <ns8:modified>2016-08-28</ns8:modified>
-        <ns8:publisher rdf:resource="http://finki.ukim.mk/"/>
-        <ns8:rights>Copyright 2014, Bojan Najdenov</ns8:rights>
-        <ns8:title>Vehicle Emissions Ontology</ns8:title>
-        <ns9:preferredNamespacePrefix>veo</ns9:preferredNamespacePrefix>
-        <ns9:preferredNamespaceUri>http://linkeddata.finki.ukim.mk/lod/ontology/veo#</ns9:preferredNamespaceUri>
-        <rdfs:comment>An ontology for describing vehicles and their emissions.</rdfs:comment>
-        <owl:versionInfo>1.1</owl:versionInfo>
+        <rdfs:label>The Vehicle Emissions Ontology (VEO)</rdfs:label>
+        <dct:abstract>An ontology for describing vehicles and their emissions.</dct:abstract>        
+        <rdfs:comment xml:lang="en">The Vehicle Emissions Ontology (VEO) has been initially created by Bojan Najdenov, with the contribution of Milos Jovanovik (see https://lov.linkeddata.es/dataset/lov/vocabs/veo). VEO, as created by Bojan Najdenov, is available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/.</rdfs:comment>        
+        <dct:license rdf:resource="https://creativecommons.org/licenses/by/3.0/"/>
+        <sm:copyright>Copyright (c) 2020 EDM Council, Inc.</sm:copyright>
+        <sm:dependsOn rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://spec.edmcouncil.org/auto/ontology/EC/</sm:dependsOn>
+        <sm:fileAbbreviation>auto-ec-veo</sm:fileAbbreviation>
+        <sm:filename>VehicleEmissions.rdf</sm:filename>        
         <fibo-fnd-utl-av:hasMaturityLevel rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Informative"/>
     </owl:Ontology>
     
