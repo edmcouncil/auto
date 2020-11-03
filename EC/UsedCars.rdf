@@ -767,54 +767,62 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/currentOwner"/>
-                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Organization"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/currentOwner"/>
-                                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Organization"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/currentLocation"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Place"/>
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PostalAddress"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/currentLocation"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:maxQualifiedCardinality>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Place"/>
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PostalAddress"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Place"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/currentLocation"/>
-                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PostalAddress"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Place"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/currentLocation"/>
-                                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:maxQualifiedCardinality>
-                                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PostalAddress"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/currentOwner"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Organization"/>
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/currentOwner"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Organization"/>
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
@@ -992,19 +1000,6 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
                         <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Organization"/>
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/owner"/>
-                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
-                    </owl:Restriction>
-                </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1040,6 +1035,21 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/inspected"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/Check"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/owner"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Organization"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1080,26 +1090,30 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntityType"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/carriedOutBy"/>
-                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntityType"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/carriedOutBy"/>
-                                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/carriedOutBy"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntityType"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/carriedOutBy"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntityType"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
@@ -1165,26 +1179,30 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntityType"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/carriedOutBy"/>
-                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntityType"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/carriedOutBy"/>
-                                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/carriedOutBy"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntityType"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/carriedOutBy"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntityType"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
@@ -1314,26 +1332,30 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntityType"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/carriedOutBy"/>
-                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntityType"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/carriedOutBy"/>
-                                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/carriedOutBy"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntityType"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/carriedOutBy"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntityType"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
@@ -1425,28 +1447,32 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/currentOwner"/>
-                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Organization"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
-                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/currentOwner"/>
-                                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Organization"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/currentOwner"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Organization"/>
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/currentOwner"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Organization"/>
+                                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:onClass>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
@@ -1544,31 +1570,6 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
                         <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Organization"/>
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/owner"/>
-                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
-                    </owl:Restriction>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Place"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/mainLocation"/>
-                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PostalAddress"/>
-                    </owl:Restriction>
-                </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1583,6 +1584,35 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/driver"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/mainLocation"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Place"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PostalAddress"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/owner"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Organization"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1826,7 +1856,7 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
     <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/AuthorizedDealer">
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntityType"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">Authorized Dealer (gr:BusinessEntityType)</rdfs:label>
+        <rdfs:label xml:lang="en">Authorized Dealer</rdfs:label>
         <skos:definition xml:lang="en">An authorized dealer of the manufacturer of the respective vehicle</skos:definition>
     </owl:NamedIndividual>
     
@@ -1881,7 +1911,7 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
     <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/IndependentDealer">
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntityType"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">Independent Dealer (gr:BusinessEntityType)</rdfs:label>
+        <rdfs:label xml:lang="en">Independent Dealer</rdfs:label>
         <skos:definition xml:lang="en">An independent dealer</skos:definition>
     </owl:NamedIndividual>
     
@@ -1892,7 +1922,7 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
     <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/MoneyBack">
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/WarrantyScope"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">Money-back Guarantee (gr:WarrantyScope)</rdfs:label>
+        <rdfs:label xml:lang="en">Money-back Guarantee</rdfs:label>
         <skos:definition xml:lang="en">The promise to take back the vehicle without any specific reason for a full refund within a certain amount of time</skos:definition>
     </owl:NamedIndividual>
     
