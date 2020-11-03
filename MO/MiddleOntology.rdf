@@ -80,7 +80,6 @@
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/valueReference"/>
     
 
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -90,15 +89,12 @@
      -->
 
     
-
-
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/datatypeProductOrServiceProperty -->
 
     <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/datatypeProductOrServiceProperty">
         <rdfs:label xml:lang="en">datatype product or service property</rdfs:label>
     </owl:DatatypeProperty>
     
-
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasMaxValueFloat -->
 

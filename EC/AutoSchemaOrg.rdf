@@ -823,6 +823,7 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
         <rdfs:label xml:lang="en">vehicle identification number</rdfs:label>
         <skos:definition>The Vehicle Identification Number (VIN) is a unique serial number used by the automotive industry to identify individual motor vehicles.</skos:definition>
+        <fibo-fnd-utl-av:abbreviation>VIN</fibo-fnd-utl-av:abbreviation>
     </owl:DatatypeProperty>
     
 

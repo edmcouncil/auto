@@ -1,7 +1,9 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/"
      xml:base="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:gr="http://purl.org/goodrelations/v1#"
+     xmlns:dct="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:uco="http://purl.org/uco/ns#"
@@ -10,9 +12,6 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:dct="http://purl.org/dc/terms/" 
-     xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"                      
      xmlns:auto-ec-uco="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/"
      xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
      xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
@@ -20,12 +19,12 @@
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
-        <rdfs:label xml:lang="en">Used Cars Ontology (UCO)</rdfs:label>
         <dct:abstract xml:lang="en">The The Used Cars Ontology (UCO) is a Web vocabulary for describing aspects of used cars for e-commerce. The vocabulary is designed to be used in combination with the Vehicle Sales Ontology, a standard vocabulary for cars and other vehicles.</dct:abstract>
-        <rdfs:comment xml:lang="en">The Used Cars Ontology (UCO) has been initially created by Hepp Research GmbH and Makolab SA (see http://ontologies.makolab.com/uco/ns.html). UCO, as created by Hepp Research GmbH and Makolab SA, is available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/.</rdfs:comment>
         <dct:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
-        <sm:fileAbbreviation>auto-ec-uco</sm:fileAbbreviation>
-        <sm:filename>UsedCars.rdf</sm:filename>
+        <SpecificationMetadata:fileAbbreviation>auto-ec-uco</SpecificationMetadata:fileAbbreviation>
+        <SpecificationMetadata:filename>UsedCars.rdf</SpecificationMetadata:filename>
+        <rdfs:comment xml:lang="en">The Used Cars Ontology (UCO) has been initially created by Hepp Research GmbH and Makolab SA (see http://ontologies.makolab.com/uco/ns.html). UCO, as created by Hepp Research GmbH and Makolab SA, is available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/.</rdfs:comment>
+        <rdfs:label xml:lang="en">Used Cars Ontology (UCO)</rdfs:label>
         <fibo-fnd-utl-av:hasMaturityLevel rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Informative"/>
     </owl:Ontology>
     
@@ -130,7 +129,7 @@
             </owl:Class>
         </rdfs:range>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">carried out by (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">carried out by</rdfs:label>
         <skos:definition xml:lang="en">The business or type of business that carried out the check, repair, maintenance, or modification</skos:definition>
     </owl:ObjectProperty>
     
@@ -142,7 +141,7 @@
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/OwnershipInfo"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/OwnershipInfo"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">contains (0..*)</rdfs:label>
+        <rdfs:label xml:lang="en">contains</rdfs:label>
         <skos:definition xml:lang="en">A naive part-whole relation that allows providing more granular uco:OwnershipInfo data for a part of the duration of the ownership</skos:definition>
     </owl:ObjectProperty>
     
@@ -155,7 +154,7 @@
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Place"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PostalAddress"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">currentLocation (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">current location</rdfs:label>
         <skos:definition xml:lang="en">The current location of the vehicle, i.e. where the car could be tested. For indicating alternative locations to which the seller is willing to bring the car, use gr:availableAtOrFrom attached to the gr:Offering, since those are aspects of the offer, not of the vehicle.</skos:definition>
     </owl:ObjectProperty>
     
@@ -171,7 +170,7 @@
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Organization"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">currentOwner (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">current owner</rdfs:label>
         <skos:definition xml:lang="en">This property points to the current owner of the vehicle.</skos:definition>
     </owl:ObjectProperty>
     
@@ -184,7 +183,7 @@
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/OwnershipInfo"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">driver (0..*)</rdfs:label>
+        <rdfs:label xml:lang="en">driver</rdfs:label>
         <skos:definition xml:lang="en">This property points to the driver or drivers that were regularly driving the vehicle during the respective period of time (when attached to uco:OwnershipInfo) or in total (when attached directly to a vso:Vehicle).</skos:definition>
     </owl:ObjectProperty>
     
@@ -196,7 +195,7 @@
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Event"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">eventInformation (0..*)</rdfs:label>
+        <rdfs:label xml:lang="en">event information</rdfs:label>
         <skos:definition xml:lang="en">This property points to events related to the vehicle, like accidents and damages or major modifications or maintenance.</skos:definition>
     </owl:ObjectProperty>
     
@@ -208,7 +207,7 @@
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PropertyValue"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">feature (0..*)</rdfs:label>
+        <rdfs:label xml:lang="en">feature</rdfs:label>
         <skos:definition xml:lang="en">This property points to vehicle features in a semi-structured property-value form.</skos:definition>
     </owl:ObjectProperty>
     
@@ -220,7 +219,7 @@
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/OwnershipInfo"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">hasOwnershipInfo (0..*)</rdfs:label>
+        <rdfs:label xml:lang="en">has ownership info</rdfs:label>
         <skos:definition xml:lang="en">This property points to information about the current and previous owners of the vehicle.</skos:definition>
     </owl:ObjectProperty>
     
@@ -232,7 +231,7 @@
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/Check"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">inspected (0..*)</rdfs:label>
+        <rdfs:label xml:lang="en">inspected</rdfs:label>
         <skos:definition xml:lang="en">This property points to inspections and certifications that the vehicle has undergone.</skos:definition>
     </owl:ObjectProperty>
     
@@ -244,7 +243,7 @@
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">listPrice (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">list price</rdfs:label>
         <skos:definition xml:lang="en">The original list price of the new car at the time of production</skos:definition>
     </owl:ObjectProperty>
     
@@ -257,7 +256,7 @@
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Place"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PostalAddress"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">main location (0..*)</rdfs:label>
+        <rdfs:label xml:lang="en">main location</rdfs:label>
         <skos:definition xml:lang="en">The main location(s) of the vehicle during the period of ownership</skos:definition>
     </owl:ObjectProperty>
     
@@ -277,7 +276,7 @@
         </rdfs:domain>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">mileage (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">mileage</rdfs:label>
         <skos:definition xml:lang="en">The mileage of the vehicle at the event, e.g. at the accident, maintenance, check, or modification. 
 
 Typical unit code(s): KMT for kilometers, SMI for statute miles</skos:definition>
@@ -291,7 +290,7 @@ Typical unit code(s): KMT for kilometers, SMI for statute miles</skos:definition
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/OwnershipInfo"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">mileage end (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">mileage end</rdfs:label>
         <skos:definition xml:lang="en">The mileage of the vehicle at the end of the period of ownership. 
 
 Typical unit code(s): KMT for kilometers, SMI for statute miles</skos:definition>
@@ -305,7 +304,7 @@ Typical unit code(s): KMT for kilometers, SMI for statute miles</skos:definition
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/OwnershipInfo"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">mileage initial (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">mileage initial</rdfs:label>
         <skos:definition xml:lang="en">The mileage of the vehicle at the beginning of the period of ownership. 
 
 Typical unit code(s): KMT for kilometers, SMI for statute miles</skos:definition>
@@ -322,7 +321,7 @@ Typical unit code(s): KMT for kilometers, SMI for statute miles</skos:definition
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Organization"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">owner (0..*)</rdfs:label>
+        <rdfs:label xml:lang="en">owner</rdfs:label>
         <skos:definition xml:lang="en">This property points to the owner of the vehicle for the respective period of time, as indicated by the uco:OwnershipInfo node.</skos:definition>
     </owl:ObjectProperty>
     
@@ -335,7 +334,7 @@ Typical unit code(s): KMT for kilometers, SMI for statute miles</skos:definition
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/OwnershipInfo"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/ParkingType"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">parking (0..*)</rdfs:label>
+        <rdfs:label xml:lang="en">parking</rdfs:label>
         <skos:definition xml:lang="en">The main type(s) of parking that have been used for the vehicle during the period of ownership (if attached to uco:OwnershipInfo) or in general (if attached to the vso:Vehicle directly)</skos:definition>
     </owl:ObjectProperty>
     
@@ -348,7 +347,7 @@ Typical unit code(s): KMT for kilometers, SMI for statute miles</skos:definition
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/OwnershipInfo"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/Species"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">pets (0..*)</rdfs:label>
+        <rdfs:label xml:lang="en">pets</rdfs:label>
         <skos:definition xml:lang="en">The type(s) of animals that have been transported in the vehicle during the period of ownership (if attached to uco:OwnershipInfo) or in general (if attached to the vso:Vehicle directly). 
 	
 If possible, use DBPedia URIs, e.g. http://dbpedia.org/resource/Dog.</skos:definition>
@@ -363,7 +362,7 @@ If possible, use DBPedia URIs, e.g. http://dbpedia.org/resource/Dog.</skos:defin
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/OwnershipInfo"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/CarUsageType"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">usage (0..*)</rdfs:label>
+        <rdfs:label xml:lang="en">usage</rdfs:label>
         <skos:definition xml:lang="en">The type(s) of usage during the period of ownership (if attached to uco:OwnershipInfo) or in general (if attached to the vso:Vehicle directly)</skos:definition>
     </owl:ObjectProperty>
     
@@ -375,7 +374,7 @@ If possible, use DBPedia URIs, e.g. http://dbpedia.org/resource/Dog.</skos:defin
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">valuation (0..*)</rdfs:label>
+        <rdfs:label xml:lang="en">valuation</rdfs:label>
         <skos:definition xml:lang="en">The market price assessment gained by the respective valuation. Use gr:name to indicate the name of the valuation service.</skos:definition>
     </owl:ObjectProperty>
     
@@ -405,7 +404,7 @@ If possible, use DBPedia URIs, e.g. http://dbpedia.org/resource/Dog.</skos:defin
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">airbag deployment (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">airbag deployment</rdfs:label>
         <skos:definition xml:lang="en">This property indicates whether at least one of the airbags of the vehicle has been deployed in the respective accident (when attached to uco:DamageOrAccident) or ever (when directly applied to a vso:Vehicle).</skos:definition>
     </owl:DatatypeProperty>
     
@@ -417,7 +416,7 @@ If possible, use DBPedia URIs, e.g. http://dbpedia.org/resource/Dog.</skos:defin
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">country of origin (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">country of origin</rdfs:label>
         <skos:definition xml:lang="en">The country or geo-political region in which the vehicle was initially sold officially, indicated as the two-character version of ISO 3166-1 (ISO 3166-1 alpha-2) for regions or ISO 3166-2, which breaks down the countries from ISO 3166-1 into administrative subdivisions.</skos:definition>
     </owl:DatatypeProperty>
     
@@ -429,7 +428,7 @@ If possible, use DBPedia URIs, e.g. http://dbpedia.org/resource/Dog.</skos:defin
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">country of registration (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">country of registration</rdfs:label>
         <skos:definition xml:lang="en">The country or geo-political region in which the vehicle is currently registered, indicated as the two-character version of ISO 3166-1 (ISO 3166-1 alpha-2) for regions or ISO 3166-2, which breaks down the countries from ISO 3166-1 into administrative subdivisions.</skos:definition>
     </owl:DatatypeProperty>
     
@@ -441,7 +440,7 @@ If possible, use DBPedia URIs, e.g. http://dbpedia.org/resource/Dog.</skos:defin
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/OwnershipInfo"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">from (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">from</rdfs:label>
         <skos:definition xml:lang="en">This property indicates the beginning of the period of ownership represented by this uco:OwnershipInfo node.</skos:definition>
     </owl:DatatypeProperty>
     
@@ -453,7 +452,7 @@ If possible, use DBPedia URIs, e.g. http://dbpedia.org/resource/Dog.</skos:defin
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">indication of odometer rollback (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">indication of odometer rollback</rdfs:label>
         <skos:definition xml:lang="en">This property indicates whether it is likely or known that the odometer of the vehicle does not properly reflect the total mileage of the vehicle, e.g. because the odometer has been replaced, reset, or tampered with </skos:definition>
     </owl:DatatypeProperty>
     
@@ -465,7 +464,7 @@ If possible, use DBPedia URIs, e.g. http://dbpedia.org/resource/Dog.</skos:defin
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/OwnershipInfo"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">license plate (0..*)</rdfs:label>
+        <rdfs:label xml:lang="en">license plate</rdfs:label>
         <skos:definition xml:lang="en">The license plate string(s) assigned to the vehicle during the period of ownership</skos:definition>
     </owl:DatatypeProperty>
     
@@ -477,7 +476,7 @@ If possible, use DBPedia URIs, e.g. http://dbpedia.org/resource/Dog.</skos:defin
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/DamageOrAccident"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">total loss (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">not-at-fault accident</rdfs:label>
         <skos:definition xml:lang="en">This property indicates whether the accident leading to the damage was a not-at-fault accident from the perspective of the owner.</skos:definition>
     </owl:DatatypeProperty>
     
@@ -496,7 +495,7 @@ If possible, use DBPedia URIs, e.g. http://dbpedia.org/resource/Dog.</skos:defin
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">number of drivers (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">number of drivers</rdfs:label>
         <skos:definition xml:lang="en">The number of people who were/are regularly driving the vehicle in the respective period of time (when attached to uco:OwnershipInfo) or in total (when directly applied to a vso:Vehicle)</skos:definition>
     </owl:DatatypeProperty>
     
@@ -508,7 +507,7 @@ If possible, use DBPedia URIs, e.g. http://dbpedia.org/resource/Dog.</skos:defin
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">number of owners (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">number of owners</rdfs:label>
         <skos:definition xml:lang="en">The total number of people or organizations who owned the vehicle, including the current owner.
 
 Note that this value can be higher (but not lower) than the number of uco:OwnershipInfo nodes, since those records may be incomplete.</skos:definition>
@@ -529,7 +528,7 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">original parts only (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">original parts only</rdfs:label>
         <skos:definition xml:lang="en">This indicates whether the parts used for repairing a damage, for a maintenance task, or a modification were all original.</skos:definition>
     </owl:DatatypeProperty>
     
@@ -541,7 +540,7 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/ModificationOrMaintenance"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">part added (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">part added</rdfs:label>
         <skos:definition xml:lang="en">A textual description of the part or parts added in the modification (e.g. tuning) or maintenance task</skos:definition>
     </owl:DatatypeProperty>
     
@@ -553,7 +552,7 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/ModificationOrMaintenance"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">part removed (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">part removed</rdfs:label>
         <skos:definition xml:lang="en">A textual description of the part or parts removed in the modification (e.g. tuning) or maintenance task</skos:definition>
     </owl:DatatypeProperty>
     
@@ -565,7 +564,7 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/ModificationOrMaintenance"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">part replaced (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">part replaced</rdfs:label>
         <skos:definition xml:lang="en">A textual description of the part or parts replaced in the modification (e.g. tuning) or maintenance (e.g. new engine) task</skos:definition>
     </owl:DatatypeProperty>
     
@@ -577,7 +576,7 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PropertyValue"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">property ID (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">property ID</rdfs:label>
         <skos:definition xml:lang="en">A global identifier, e.g. a URI, a prefixed string, or any other identifier that can be used to refer to a standardized property type</skos:definition>
     </owl:DatatypeProperty>
     
@@ -589,7 +588,7 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PropertyValue"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">property name (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">property name</rdfs:label>
         <skos:definition xml:lang="en">The name of the property</skos:definition>
     </owl:DatatypeProperty>
     
@@ -601,7 +600,7 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PropertyValue"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">property value (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">property value</rdfs:label>
         <skos:definition xml:lang="en">The value of of the property</skos:definition>
     </owl:DatatypeProperty>
     
@@ -620,7 +619,7 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">repaired (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">repaired</rdfs:label>
         <skos:definition xml:lang="en">This indicates whether damages resulting from a certain uco:DamageOrAccident (when attached to this type) or all damages (when directly attached to a vso:Vehicle) have been properly repaired. Do not use this propery on a vso:Vehicle if it never had a damage.</skos:definition>
     </owl:DatatypeProperty>
     
@@ -639,7 +638,7 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">smoking (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">smoking</rdfs:label>
         <skos:definition xml:lang="en">This property indicates whether it has been smoked inside the car in the respective period of time (when attached to uco:OwnershipInfo) or ever (when directly applied to a vso:Vehicle).</skos:definition>
     </owl:DatatypeProperty>
     
@@ -658,7 +657,7 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">structural damage (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">structural damage</rdfs:label>
         <skos:definition xml:lang="en">This property indicates whether the vehicle has suffered from structural damage in the respective accident (when attached to uco:DamageOrAccident) or ever (when directly applied to a vso:Vehicle).</skos:definition>
     </owl:DatatypeProperty>
     
@@ -670,7 +669,7 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/OwnershipInfo"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">to (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">to</rdfs:label>
         <skos:definition xml:lang="en">This property indicates the end of the period of ownership represented by this uco:OwnershipInfo node.</skos:definition>
     </owl:DatatypeProperty>
     
@@ -689,7 +688,7 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">total loss (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">total loss</rdfs:label>
         <skos:definition xml:lang="en">This property indicates whether the vehicle is considered a total loss as the result of a damage in the respective accident (when attached to uco:DamageOrAccident) or in general (when directly applied to a vso:Vehicle).</skos:definition>
     </owl:DatatypeProperty>
     
@@ -701,7 +700,7 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PropertyValue"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">unit code (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">unit code</rdfs:label>
         <skos:definition xml:lang="en">A UN/CEFACT Common Code for indicating the unit of measurement of the value, if available</skos:definition>
     </owl:DatatypeProperty>
     
@@ -713,7 +712,7 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PropertyValue"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">unit text (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">unit text</rdfs:label>
         <skos:definition xml:lang="en">A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for uco:unitCode.</skos:definition>
     </owl:DatatypeProperty>
     
@@ -725,7 +724,7 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/Check"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">valid from (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">valid from</rdfs:label>
         <skos:definition xml:lang="en">This property indicates the beginning of the validity of the inspection represented by the uco:Check node. This is typically the day of the inspection.</skos:definition>
     </owl:DatatypeProperty>
     
@@ -737,7 +736,7 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/Check"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-        <rdfs:label xml:lang="en">valid to (0..1)</rdfs:label>
+        <rdfs:label xml:lang="en">valid to</rdfs:label>
         <skos:definition xml:lang="en">This property indicates the end of the validity of the inspection represented by the uco:Check node. This is typically the day of the inspection plus one (UK MOT) or two years (e.g. German TÜV).</skos:definition>
     </owl:DatatypeProperty>
     
@@ -764,13 +763,394 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/currentOwner"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Organization"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/currentOwner"/>
+                                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Organization"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Place"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/currentLocation"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PostalAddress"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Place"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/currentLocation"/>
+                                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:maxQualifiedCardinality>
+                                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PostalAddress"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/listPrice"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/listPrice"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/airbagDeployment"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/airbagDeployment"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/countryOfOrigin"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/countryOfOrigin"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/countryOfRegistration"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/countryOfRegistration"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/indicationOfOdometerRollback"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/indicationOfOdometerRollback"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/numberOfDrivers"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/numberOfDrivers"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/numberOfOwners"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/numberOfOwners"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/repaired"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/repaired"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/smoking"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/smoking"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/structuralDamage"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/structuralDamage"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/totalLoss"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/totalLoss"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Organization"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/owner"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/driver"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/eventInformation"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/feature"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PropertyValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/hasOwnershipInfo"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/OwnershipInfo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/inspected"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/Check"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/parking"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/ParkingType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/pets"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/Species"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/usage"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/CarUsageType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/valuation"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/Check -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/Check">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntityType"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/carriedOutBy"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntityType"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/carriedOutBy"/>
+                                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/mileage"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/mileage"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/validFrom"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/validFrom"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/validThrough"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/validThrough"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
         <rdfs:label xml:lang="en">check</rdfs:label>
         <skos:definition xml:lang="en">a mandatory or optional technical inspection, e.g. the MOT, a vendor-specific certification of used cars, etc.</skos:definition>
@@ -782,6 +1162,144 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/DamageOrAccident">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Event"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntityType"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/carriedOutBy"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntityType"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/carriedOutBy"/>
+                                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/mileage"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/mileage"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/airbagDeployment"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/airbagDeployment"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/notAtFaultAccident"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/notAtFaultAccident"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/originalPartsOnly"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/originalPartsOnly"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/repaired"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/repaired"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/structuralDamage"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/structuralDamage"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/totalLoss"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/totalLoss"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
         <rdfs:label xml:lang="en">damage or accident</rdfs:label>
         <skos:definition xml:lang="en">an event in which the vehicle is being damaged</skos:definition>
@@ -793,6 +1311,106 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/ModificationOrMaintenance">
         <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Event"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntityType"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/carriedOutBy"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntityType"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/carriedOutBy"/>
+                                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/mileage"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/mileage"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/originalPartsOnly"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/originalPartsOnly"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/partAdded"/>
+                        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/partAdded"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/partRemoved"/>
+                        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/partRemoved"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/partReplaced"/>
+                        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/partReplaced"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Typical examples are the replacement of the engine or the installation of a trailor-hitch.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
         <rdfs:label xml:lang="en">modification or maintenance</rdfs:label>
@@ -804,6 +1422,197 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
     <!-- https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/OwnershipInfo -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/OwnershipInfo">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/currentOwner"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Organization"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+                            <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/currentOwner"/>
+                                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Organization"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/mileageEnd"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/mileageEnd"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/mileageInitial"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QualitativeValue"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/mileageInitial"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QualitativeValue"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/from"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/from"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/numberOfDrivers"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/numberOfDrivers"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/smoking"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/smoking"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/to"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/to"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Organization"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/owner"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Place"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/mainLocation"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PostalAddress"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/contains"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/OwnershipInfo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/driver"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/parking"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/ParkingType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/pets"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/Species"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/usage"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/CarUsageType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/licensePlate"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
         <rdfs:label xml:lang="en">ownership info</rdfs:label>
         <skos:definition xml:lang="en">a structured value representing information about the period of ownership of a vehicle by a person or organisation</skos:definition>
@@ -906,7 +1715,80 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PropertyValue -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PropertyValue"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PropertyValue">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/propertyID"/>
+                        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/propertyID"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/propertyName"/>
+                        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/propertyName"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/propertyValue"/>
+                        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/propertyValue"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/unitCode"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/unitCode"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/unitText"/>
+                        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/unitText"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 

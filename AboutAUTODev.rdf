@@ -1,50 +1,52 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://spec.edmcouncil.org/auto/ontology/AboutAUTODev/"
      xml:base="https://spec.edmcouncil.org/auto/ontology/AboutAUTODev/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:dct="http://purl.org/dc/terms/"     
+     xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:auto-ec-mod="https://spec.edmcouncil.org/auto/ontology/EC/MetadataEC/"
-     xmlns:auto-mo-mod="https://spec.edmcouncil.org/auto/ontology/EC/MetadataMO/"     
+     xmlns:Analytics="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/"
+     xmlns:auto-mo-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
      xmlns:auto-ec-aso="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"
-     xmlns:auto-ec-coo="https://spec.edmcouncil.org/auto/ontology/EO/CarOptions/"
-     xmlns:auto-ec-vvo="https://spec.edmcouncil.org/auto/ontology/EO/VolkswagenVehicles/"
-     xmlns:auto-ec-vso="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSales/"
-     xmlns:auto-ec-veo="https://spec.edmcouncil.org/auto/ontology/EO/VehicleEmissions/"
-     xmlns:auto-ec-uco="https://spec.edmcouncil.org/auto/ontology/EO/UsedCars/"
+     xmlns:auto-ec-coo="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/"
+     xmlns:auto-ec-mod="https://spec.edmcouncil.org/auto/ontology/EC/MetadataEC/"
+     xmlns:auto-ec-uco="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/"
+     xmlns:auto-ec-veo="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/"
+     xmlns:auto-ec-vso="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/"
+     xmlns:auto-ec-vvo="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/"
+     xmlns:auto-mo-mod="https://spec.edmcouncil.org/auto/ontology/EC/MetadataMO/"
      xmlns:auto-eo-vsso="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/"
-     xmlns:auto-mo-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"     
-     xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
-     xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
-
+     xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/AboutAUTODev/">
-        <rdfs:label>About AUTO Development</rdfs:label>
-        <dct:abstract>This ontology is provided for the convenience of AUTO users.  It loads the very latest version of every AUTO ontology (released, provisional, and informative) based on the contents of GitHub, for use in particular while working on revisions.  Note that metadata files are included.</dct:abstract>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MetadataAUTO/"/>        
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/"/>  
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/"/>       
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-08-17T18:00:00</dct:issued>
-        <dct:license rdf:resource="http://opensource.org/licenses/MIT"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MetadataAUTO/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/"/>        
+        <terms:abstract>This ontology is provided for the convenience of AUTO users.  It loads the very latest version of every AUTO ontology (released, provisional, and informative) based on the contents of GitHub, for use in particular while working on revisions.  Note that metadata files are included.</terms:abstract>
+        <terms:license rdf:resource="http://opensource.org/licenses/MIT"/>
         <sm:contentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
         <sm:copyright>Copyright (c) 2020 EDM Council, Inc.</sm:copyright>
-        <sm:submitter>Makolab</sm:submitter>
         <sm:fileAbbreviation>auto-dev</sm:fileAbbreviation>
         <sm:filename>AboutAutoDev.rdf</sm:filename>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://spec.edmcouncil.org/auto/</rdfs:seeAlso>                
+        <sm:submitter>Makolab</sm:submitter>
+        <rdfs:label>About AUTO Development</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://spec.edmcouncil.org/auto/</rdfs:seeAlso>
     </owl:Ontology>
 </rdf:RDF>
 
