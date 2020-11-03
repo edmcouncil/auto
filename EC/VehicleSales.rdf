@@ -103,6 +103,24 @@
     
 
 
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/accelerationTime -->
+
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/accelerationTime">
+        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Boat"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/MotorizedRoadVehicle"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Ship"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/cargoVolume -->
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/cargoVolume">
@@ -116,12 +134,6 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">cargoVolume</rdfs:label>
-        <skos:definition xml:lang="en">The available volume for cargo or luggage. For automobiles, this is usually the trunk space.
-Typical unit code(s): LTR for liters, FTQ for cubic foot/feet
-	
-Note: You can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -154,14 +166,6 @@ Note: You can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">engineDisplacement</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Engine_displacement"/>
-        <skos:definition xml:lang="en">The volume swept by all of the pistons inside the cylinders of an internal combustion engine in a single movement. If there are multiple engines, simply attach this property multiple times.
-Typical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ for cubic inches
-	
-Note 1: You can link to information about how the given value has been determined using the gr:valueReference property.
-Note 2: You can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -180,15 +184,6 @@ Note 2: You can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate rang
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">enginePower</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Horsepower"/>
-        <skos:definition xml:lang="en">The power of the vehicle&apos;s engine. If there are multiple engines, simply attach this property multiple times.
-Typical unit code(s): KWT for kilowatt 
-	
-Note 1: There are many different ways of measuring an engine&apos;s power. For an overview, see  http://en.wikipedia.org/wiki/Horsepower#Engine_power_test_codes.
-Note 2: You can link to information about how the given value has been determined using the gr:valueReference property.
-Note 3: You can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -222,6 +217,24 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
     
 
 
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/fuelCapacity -->
+
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/fuelCapacity">
+        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Boat"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/MotorizedRoadVehicle"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Ship"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/fuelConsumption -->
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/fuelConsumption">
@@ -236,15 +249,16 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">fuelConsumption</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Fuel_economy_in_automobiles"/>
-        <skos:definition xml:lang="en">The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km)
-Typical unit code(s): LTR for liters, GLL of US Gallons, GLI for UK / Imperial Gallons
-		
-Note 1: There are unfortunately no standard unit codes for &quot;liters per 100 km&quot;. Simply use &quot;LTR&quot; for liters, &quot;GLL&quot; of US Gallons, or &quot;GLI&quot; for UK / Imperial Gallons, and indicate the distance in the rdfs:label of the gr:QuantitativeValueFloat or use vso:referenceDistance to model the reference distance (e.g. 100 km). 
-Note 2: There are two ways of indicating the fuel consumption, vso:fuelConsumption (e.g. 8 liters per 100 km) and vso:fuelEconomy (e.g. 30 miles per gallon). They are reciprocal.
-Note 3: Often, the absolute value is useful only when related to driving speed (&quot;at 80 km/h&quot;) or usage pattern (&quot;city traffic&quot;). You can use gr:valueReference to link the value for the fuel consumption to another value.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/fuelEfficiency -->
+
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/fuelEfficiency">
+        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/MotorizedRoadVehicle"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
     </owl:ObjectProperty>
     
 
@@ -299,12 +313,56 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty"/>
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/MotorizedRoadVehicle"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">mileageFromOdometer</rdfs:label>
-        <skos:definition xml:lang="en">The total distance travelled by the particular vehicle since its initial production, as read from its odometer
-Typical unit code(s): KMT for kilometers, SMI for statute miles
-	
-Note: This property should be used with gr:ActualProductOrServiceInstance (when offering a vehicle) or gr:ProductOrServicesSomeInstancesPlaceholder (when seeking a vehicle using gr:seeks) only.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfAxles -->
+
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfAxles">
+        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/MotorizedRoadVehicle"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfDoors -->
+
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfDoors">
+        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/MotorizedRoadVehicle"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfForwardGears -->
+
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfForwardGears">
+        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Bicycle"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Boat"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/MotorizedRoadVehicle"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Quadracycle"/>
+                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Ship"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfPreviousOwners -->
+
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfPreviousOwners">
+        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService"/>
+        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
     </owl:ObjectProperty>
     
 
@@ -315,15 +373,6 @@ Note: This property should be used with gr:ActualProductOrServiceInstance (when 
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty"/>
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">payload</rdfs:label>
-        <skos:definition xml:lang="en">The permited weight of passengers and cargo, EXCLUDING the weight of the empty vehicle
-Typical unit code(s): KGM for kilogram, LBR for pound
-	
-Note 1: Many databases specify the permitted TOTAL weight instead, which is the sum of vso:weight and vso:payload.
-Note 2: You can indicate additional information in the rdfs:label of the gr:QuantitativeValueFloat node.
-Note 3: You may also link to a gr:QualitativeValue node that provides additional information using gr:valueReference.
-Note 4: Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -334,14 +383,6 @@ Note 4: Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to ind
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty"/>
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/MotorizedRoadVehicle"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">roofLoad</rdfs:label>
-        <skos:definition xml:lang="en">The permited total weight of cargo and installations (e.g. a roof rack) on top of the vehicle
-Typical unit code(s): KGM for kilogram, LBR for pound
-	
-Note 1: You can indicate additional information in the rdfs:label of the gr:QuantitativeValueFloat node.
-Note 2: You may also link to a gr:QualitativeValue node that provides additional information using gr:valueReference.
-Note 3: Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -352,10 +393,6 @@ Note 3: Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to ind
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty"/>
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">seatingCapacity</rdfs:label>
-        <skos:definition xml:lang="en">The number of passengers that can be seated in the vehicle, both in terms of the physical space available, and in terms of limitations set by law
-Typical unit code(s): C62 for persons </skos:definition>
     </owl:ObjectProperty>
     
 
@@ -366,13 +403,6 @@ Typical unit code(s): C62 for persons </skos:definition>
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty"/>
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">speed</rdfs:label>
-        <skos:definition xml:lang="en">The speed range of the vehicle. If the vehicle is powered by an engine, the upper limit of the speed range (indicated by gr:hasMaxValueFloat) should be the maximum speed achievable under regular conditions.
-Typical unit code(s): KMH for km/h, HM for mile per hour (0.447 04 m/s), KNT for knot
-	
-Note 1: Use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate the range. Typically, the minimal value is zero.
-Note 2: There are many different ways of measuring the speed range. You can link to information about how the given value has been determined using the gr:valueReference property.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -396,15 +426,6 @@ Note 2: There are many different ways of measuring the speed range. You can link
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty"/>
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/MotorizedRoadVehicle"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">tongueWeight</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Towing"/>
-        <skos:definition xml:lang="en">The permited vertical load (TWR) of a trailer attached to the vehicle. Also referred to as Tongue Load Rating (TLR) or Vertical Load Rating (VLR).
-	Typical unit code(s): KGM for kilogram, LBR for pound
-
-Note 1: You can indicate additional information in the rdfs:label of the gr:QuantitativeValueFloat node.
-Note 2: You may also link to a gr:QualitativeValue node that provides additional information using gr:valueReference.
-Note 3: Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -415,15 +436,6 @@ Note 3: Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to ind
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty"/>
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/MotorizedRoadVehicle"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">trailerWeight</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Towing"/>
-        <skos:definition xml:lang="en">The permited weight of a trailer attached to the vehicle.
-Typical unit code(s): KGM for kilogram, LBR for pound
-
-Note 1: You can indicate additional information in the rdfs:label of the gr:QuantitativeValueFloat node.
-Note 2: You may also link to a gr:QualitativeValue node that provides additional information using gr:valueReference.
-Note 3: Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -434,14 +446,6 @@ Note 3: Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to ind
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty"/>
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService"/>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">weightTotal</rdfs:label>
-        <skos:definition xml:lang="en">The permited total weight of the loaded vehicle, including passengers and cargo and the weight of the empty vehicle
-Typical unit code(s): KGM for kilogram, LBR for pound
-	
-Note 1: You can indicate additional information in the rdfs:label of the gr:QuantitativeValueFloat node.
-Note 2: You may also link to a gr:QualitativeValue node that provides additional information using gr:valueReference.
-Note 3: Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -460,49 +464,6 @@ Note 3: Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to ind
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">wheelbase</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Wheelbase"/>
-        <skos:definition xml:lang="en">The distance between the centers of the front and rear wheels
-Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT for foot/feet</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/acceleration -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/acceleration">
-        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Boat"/>
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/MotorizedRoadVehicle"/>
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Ship"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">acceleration</rdfs:label>
-        <skos:definition xml:lang="en">The time needed to accelerate the vehicle from a given start velocity to a given target velocity
-Typical unit code(s): SEC for seconds
-
-Note: There are unfortunately no standard unit codes for seconds/0..100 km/h or seconds/0..60 mph. Simply use &quot;SEC&quot; for seconds and indicate the velocities in the rdfs:label of the gr:QuantitativeValueFloat, or use vso:referenceSpeeds with vso:0to60MPH (0..60 mph) or vso:0to100KMH (0..100 km/h) to specify the reference speeds.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/axles -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/axles">
-        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/MotorizedRoadVehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">axles</rdfs:label>
-        <skos:definition xml:lang="en">The number of axles 
-Typical unit code(s): C62</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -528,20 +489,6 @@ Use DBPedia resources to indicate the features, if possible. Popular identifiers
 See also http://en.wikipedia.org/wiki/Car_body_styles.
 
 If you cannot find a suitable identifier in DBPedia, define your own as an instance of vso:BodyStyleValue.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/doors -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/doors">
-        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/MotorizedRoadVehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">doors</rdfs:label>
-        <skos:definition xml:lang="en">The number of doors
-Typical unit code(s): C62</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -579,75 +526,6 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/fuelEconomy -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/fuelEconomy">
-        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/MotorizedRoadVehicle"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">fuelEconomy</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Fuel_economy_in_automobiles"/>
-        <skos:definition xml:lang="en">The distance traveled per unit of fuel used; most commonly miles per gallon (mpg) or kilometers per liter (km/L)
-Typical unit code(s): KMT for kilometers, SMI for statute miles
-	
-Note 1: There are unfortunately no standard unit codes for miles per gallon or kilometers per liter. 
-Simply use &quot;SMI&quot; for statute miles (common miles in the US and UK) or &quot;KMT&quot; for kilometers, and indicate 
-the fuel amount of reference in the rdfs:label of the gr:QuantitativeValueFloat, or use vso:referenceFuelQuantity with vso:1LTR (1 liter), vso:1GLL (1 US Gallon), or vso:1GLI (1 British Gallon). 
-Note 2: In the absence of a vso:referenceFuelQuantity one may assume that the quantity of reference is 1 gallon for distances given in miles and 1 liter for distances given in kilometers. However, note that the original unit may be obscured by unit conversion services, so this heuristic is far from perfect.
-Note 3: There are two ways of indicating the fuel consumption, vso:fuelConsumption (e.g. 8 liters per 100 km) and vso:fuelEconomy (e.g. 30 miles per gallon). They are reciprocal.
-Note 4: Often, the absolute value is useful only when related to driving speed (&quot;at 80 km/h&quot;) or usage pattern (&quot;city traffic&quot;). You can use gr:valueReference to link the value for the fuel economy to another value.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/fuelTankVolume -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/fuelTankVolume">
-        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Boat"/>
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/MotorizedRoadVehicle"/>
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Ship"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">fuelTankVolume</rdfs:label>
-        <skos:definition xml:lang="en">The volume of the fuel tank. If there are multiple tanks, this should indicate the total of all tanks.
-Typical unit code(s): LTR for liters, GLL of US gallons, GLI for UK / imperial gallons</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/gearsTotal -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/gearsTotal">
-        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Bicycle"/>
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Boat"/>
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/MotorizedRoadVehicle"/>
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Quadracycle"/>
-                    <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/Ship"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">gearsTotal</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Gear"/>
-        <skos:definition xml:lang="en">The total number of forward and reverse gears available for the transmission system of the vehicle
-Typical unit code(s): C62</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/height -->
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/height">
@@ -672,22 +550,6 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <rdfs:label xml:lang="en">length</rdfs:label>
         <skos:definition xml:lang="en">The outer length of the vehicle. Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.
 Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT for foot/feet</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/previousOwners -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/previousOwners">
-        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">previousOwners</rdfs:label>
-        <skos:definition xml:lang="en">The number of previous owners of the vehicle, including the current one
-Typical unit code(s): C62
-	
-Note: This property should be used with gr:ActualProductOrServiceInstance (when offering a vehicle) or gr:ProductOrServicesSomeInstancesPlaceholder (when seeking a vehicle using gr:seeks) only.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -762,26 +624,6 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/weight -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/weight">
-        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService"/>
-        <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">weight</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Curb_weight"/>
-        <skos:definition xml:lang="en">The weight of the empty vehicle (&quot;curb weight&quot; for cars), i.e. with standard equipment, all necessary operating consumables (e.g. motor oil and coolant), a full tank of fuel, while not loaded with either passengers or cargo
-Typical unit code(s): KGM for kilogram, LBR for pound
-
-Note 1: There are many varying definitions in place for specifying the weight of a vehicle. E.g., the many European Union car manufacturers include the weight of a 75 kilogram driver to follow European Directive 95/48/EC. Make sure to subtract those 75 kg when converting respective data.
-Note 2: You can indicate additional information in the rdfs:label of the gr:QuantitativeValueFloat node.
-Note 3: You may also link to a gr:QualitativeValue node that provides additional information using gr:valueReference.
-Note 4: Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/width -->
 
     <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/width">
@@ -825,9 +667,9 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/ACRISSCode -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/acrissCode -->
 
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/ACRISSCode">
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/acrissCode">
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/datatypeProductOrServiceProperty"/>
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/MotorizedRoadVehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -840,9 +682,35 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
     
 
 
-    <!-- https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/VIN -->
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/dateVehicleFirstRegistered -->
 
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/VIN">
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/dateVehicleFirstRegistered">
+        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/datatypeProductOrServiceProperty"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
+        <rdfs:label xml:lang="en">firstRegistration</rdfs:label>
+        <skos:definition xml:lang="en">The date of the first registration of the vehicle with the respective public authorities. This property should be used mainly with gr:ActualProductOrServiceInstance.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/productionDate -->
+
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/productionDate">
+        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/datatypeProductOrServiceProperty"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
+        <rdfs:label xml:lang="en">productionDate</rdfs:label>
+        <skos:definition xml:lang="en">The date of production of the vehicle. This property should be used mainly with gr:ActualProductOrServiceInstance.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleIdentificationNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleIdentificationNumber">
         <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/serialNumber"/>
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/MotorizedRoadVehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -852,6 +720,19 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Vehicle_Identification_Number"/>
         <skos:definition xml:lang="en">A unique serial number used by the automotive industry to identify individual motor vehicles</skos:definition>
         <fibo-fnd-utl-av:synonym xml:lang="en">Vehicle Identification Number</fibo-fnd-utl-av:synonym>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleModelDate -->
+
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleModelDate">
+        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/datatypeProductOrServiceProperty"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
+        <rdfs:label xml:lang="en">modelDate</rdfs:label>
+        <skos:definition xml:lang="en">The release date of a vehicle model (often used to differentiate versions of the same make and model)</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -915,45 +796,6 @@ Note: This property should be used with gr:ActualProductOrServiceInstance (when 
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
         <rdfs:label xml:lang="en">engineName</rdfs:label>
         <skos:definition xml:lang="en">A short text indicating the engine(s) of the vehicle</skos:definition>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/firstRegistration -->
-
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/firstRegistration">
-        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/datatypeProductOrServiceProperty"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">firstRegistration</rdfs:label>
-        <skos:definition xml:lang="en">The date of the first registration of the vehicle with the respective public authorities. This property should be used mainly with gr:ActualProductOrServiceInstance.</skos:definition>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/modelDate -->
-
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/modelDate">
-        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/datatypeProductOrServiceProperty"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">modelDate</rdfs:label>
-        <skos:definition xml:lang="en">The release date of a vehicle model (often used to differentiate versions of the same make and model)</skos:definition>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/productionDate -->
-
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/productionDate">
-        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/datatypeProductOrServiceProperty"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">productionDate</rdfs:label>
-        <skos:definition xml:lang="en">The date of production of the vehicle. This property should be used mainly with gr:ActualProductOrServiceInstance.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -1108,12 +950,12 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/gearsTotal"/>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfForwardGears"/>
                         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                         <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/gearsTotal"/>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfForwardGears"/>
                         <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                         <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
                     </owl:Restriction>
@@ -1151,12 +993,12 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/fuelTankVolume"/>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/fuelCapacity"/>
                         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                         <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/fuelTankVolume"/>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/fuelCapacity"/>
                         <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                         <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
                     </owl:Restriction>
@@ -1167,12 +1009,12 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/gearsTotal"/>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfForwardGears"/>
                         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                         <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/gearsTotal"/>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfForwardGears"/>
                         <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                         <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
                     </owl:Restriction>
@@ -1181,7 +1023,7 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/acceleration"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/accelerationTime"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
             </owl:Restriction>
@@ -1358,44 +1200,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/axles"/>
-                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/axles"/>
-                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/doors"/>
-                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/doors"/>
-                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/fuelTankVolume"/>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/fuelCapacity"/>
                         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                         <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/fuelTankVolume"/>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/fuelCapacity"/>
                         <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                         <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
                     </owl:Restriction>
@@ -1406,12 +1216,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/gearsTotal"/>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfAxles"/>
                         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                         <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/gearsTotal"/>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfAxles"/>
                         <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                         <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
                     </owl:Restriction>
@@ -1422,12 +1232,44 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/ACRISSCode"/>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfDoors"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfDoors"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfForwardGears"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfForwardGears"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/acrissCode"/>
                         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                         <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/ACRISSCode"/>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/acrissCode"/>
                         <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                         <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                     </owl:Restriction>
@@ -1438,12 +1280,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/VIN"/>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleIdentificationNumber"/>
                         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                         <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/VIN"/>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleIdentificationNumber"/>
                         <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                         <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
                     </owl:Restriction>
@@ -1452,14 +1294,14 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/acceleration"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/accelerationTime"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/fuelEconomy"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/fuelEfficiency"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
             </owl:Restriction>
@@ -1494,12 +1336,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/gearsTotal"/>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfForwardGears"/>
                         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                         <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/gearsTotal"/>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfForwardGears"/>
                         <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                         <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
                     </owl:Restriction>
@@ -1558,12 +1400,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/fuelTankVolume"/>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/fuelCapacity"/>
                         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                         <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/fuelTankVolume"/>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/fuelCapacity"/>
                         <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                         <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
                     </owl:Restriction>
@@ -1574,12 +1416,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/gearsTotal"/>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfForwardGears"/>
                         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                         <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/gearsTotal"/>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfForwardGears"/>
                         <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                         <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
                     </owl:Restriction>
@@ -1588,7 +1430,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/acceleration"/>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/accelerationTime"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
             </owl:Restriction>
@@ -1687,6 +1529,38 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfPreviousOwners"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/numberOfPreviousOwners"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/weightTotal"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/weightTotal"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
                         <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/bodyStyle"/>
                         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                         <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/BodyStyleValue"/>
@@ -1735,38 +1609,6 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/previousOwners"/>
-                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/previousOwners"/>
-                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/weight"/>
-                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/weight"/>
-                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                        <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
                         <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/width"/>
                         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                         <owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat"/>
@@ -1783,12 +1625,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/firstRegistration"/>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/dateVehicleFirstRegistered"/>
                         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                         <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/firstRegistration"/>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/dateVehicleFirstRegistered"/>
                         <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                         <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
                     </owl:Restriction>
@@ -1799,12 +1641,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/modelDate"/>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/productionDate"/>
                         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                         <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/modelDate"/>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/productionDate"/>
                         <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                         <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
                     </owl:Restriction>
@@ -1815,12 +1657,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/productionDate"/>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleModelDate"/>
                         <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
                         <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/productionDate"/>
+                        <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleModelDate"/>
                         <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                         <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
                     </owl:Restriction>
