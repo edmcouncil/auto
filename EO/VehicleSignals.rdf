@@ -4,7 +4,6 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:cdt="http://w3id.org/lindt/custom_datatypes#"
      xmlns:dct="http://purl.org/dc/terms/"
-     xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"     
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -14,7 +13,9 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:sosa="http://www.w3.org/ns/sosa/"
+     xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:schema="http://schema.org/"
+     xmlns:auto-ec-aso="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"
      xmlns:auto-eo-vsso="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/"
      xmlns:AnnotationVocabulary="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
      xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
@@ -22,12 +23,12 @@
         <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"/>
         <dct:abstract>This Vehicle Signals Ontology (VSSO) describes the car&apos;s parts and signals. It is based on the GENIVI&apos;s Vehicle Signal Specification.</dct:abstract>
-        <rdfs:comment xml:lang="en">The GENIVI VSS Ontology (VSSO) has been initially created by Benjamin Klotz, Daniel Wilms, and Raphael Troncy (see http://automotive.eurecom.fr/vsso). VSSO, as created by Benjamin Klotz, Daniel Wilms, and Raphael Troncy, is available under the Creative Commons Attribution 4.0 International license; see http://creativecommons.org/licenses/by/4.0/. VSSO describes the car&apos;s attributes, branches and signals defined in GENIVI&apos;s Vehicle Signal Specification.</rdfs:comment>        
         <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-01-10</dct:created>
         <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <SpecificationMetadata:fileAbbreviation>auto-ec-vsso</SpecificationMetadata:fileAbbreviation>
+        <SpecificationMetadata:filename>VehicleSignals.rdf</SpecificationMetadata:filename>
+        <rdfs:comment xml:lang="en">The GENIVI VSS Ontology (VSSO) has been initially created by Benjamin Klotz, Daniel Wilms, and Raphael Troncy (see http://automotive.eurecom.fr/vsso). VSSO, as created by Benjamin Klotz, Daniel Wilms, and Raphael Troncy, is available under the Creative Commons Attribution 4.0 International license; see http://creativecommons.org/licenses/by/4.0/. VSSO describes the car&apos;s attributes, branches and signals defined in GENIVI&apos;s Vehicle Signal Specification.</rdfs:comment>
         <rdfs:label>Vehicle Signals Ontology (VSSO)</rdfs:label>
-        <sm:fileAbbreviation>auto-ec-vsso</sm:fileAbbreviation>
-        <sm:filename>VehicleSignals.rdf</sm:filename>            
     </owl:Ontology>
     
 
@@ -932,7 +933,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ABS -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ABS">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -1021,7 +1022,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ADAS -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ADAS">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -1059,7 +1060,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Acceleration -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Acceleration">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -1075,7 +1076,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/AcceleratorPedal -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/AcceleratorPedal">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
@@ -1338,7 +1339,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Airbag -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Airbag">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
@@ -1386,7 +1387,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/AltenateO2Sensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/AltenateO2Sensor">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -1468,7 +1469,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/AngularVelocity -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/AngularVelocity">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -1546,7 +1547,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Axle -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Axle">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -1582,13 +1583,17 @@
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Bank2 -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Bank2"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Bank2">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
     
 
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Barometer -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Barometer"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Barometer">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
     
 
 
@@ -1639,7 +1644,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/BatteryManagement -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/BatteryManagement">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -1664,7 +1669,9 @@
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/BatterySensor -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/BatterySensor"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/BatterySensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
     
 
 
@@ -1703,7 +1710,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Body -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Body">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -1719,7 +1726,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Brake -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Brake">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -1819,7 +1826,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/BrakePedal -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/BrakePedal">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
@@ -1879,8 +1886,9 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch">
-        <rdfs:label xml:lang="en">Branch</rdfs:label>
+        <rdfs:label xml:lang="en">vehicle or vehicle part</rdfs:label>
         <skos:definition xml:lang="en">Branch of the vehicle. Either a component (Body, Chassis...) or the complete vehicle</skos:definition>
+        <AnnotationVocabulary:synonym xml:lang="en">Branch</AnnotationVocabulary:synonym>
     </owl:Class>
     
 
@@ -1888,7 +1896,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Cabin -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Cabin">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -1904,7 +1912,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Catalyst -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Catalyst">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -1941,14 +1949,16 @@
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CatalystTemperatureSensor -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CatalystTemperatureSensor"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CatalystTemperatureSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
     
 
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Chassis -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Chassis">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -2145,7 +2155,9 @@
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CoolantTemperatureSensor -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CoolantTemperatureSensor"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CoolantTemperatureSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
     
 
 
@@ -2161,14 +2173,16 @@
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CrankshaftPositionSensor -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CrankshaftPositionSensor"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CrankshaftPositionSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
     
 
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CruiseControl -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CruiseControl">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -2246,7 +2260,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CurrentDriveCycleStatus -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CurrentDriveCycleStatus">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -2291,7 +2305,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CurrentLocation -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CurrentLocation">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -2351,7 +2365,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Cushion -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Cushion">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -2468,14 +2482,16 @@
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CushionPositionSensor -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CushionPositionSensor"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CushionPositionSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
     
 
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CushionSwitch -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CushionSwitch">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -2652,7 +2668,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/DestinatonSet -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/DestinatonSet">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -2667,7 +2683,9 @@
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/DiagnosticSystem -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/DiagnosticSystem"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/DiagnosticSystem">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
     
 
 
@@ -2707,7 +2725,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/DistanceToObject -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/DistanceToObject">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
@@ -2784,7 +2802,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Door -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Door">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -2900,7 +2918,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Drivetrain -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Drivetrain">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -2959,7 +2977,9 @@
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/EGRSystemMonitor -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/EGRSystemMonitor"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/EGRSystemMonitor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
     
 
 
@@ -2988,7 +3008,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ESC -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ESC">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -3076,7 +3096,9 @@
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/EVAPSystem -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/EVAPSystem"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/EVAPSystem">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
     
 
 
@@ -3149,7 +3171,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ElectricMotor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ElectricMotor">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -3176,7 +3198,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Engine -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Engine">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -3258,7 +3280,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ExternalLights -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ExternalLights">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
@@ -3354,7 +3376,9 @@
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/FluidSensor -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/FluidSensor"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/FluidSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
     
 
 
@@ -3403,7 +3427,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/FuelCell -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/FuelCell">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -3462,7 +3486,9 @@
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/FuelPressureSensor -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/FuelPressureSensor"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/FuelPressureSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
     
 
 
@@ -3512,7 +3538,9 @@
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/FuelRailPressureSensor -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/FuelRailPressureSensor"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/FuelRailPressureSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
     
 
 
@@ -3585,7 +3613,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/FuelSystem -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/FuelSystem">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -3769,7 +3797,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/HVAC -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/HVAC">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -3805,7 +3833,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/HeadRestraint -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/HeadRestraint">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
@@ -3885,7 +3913,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/HeadRestraintSwitch -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/HeadRestraintSwitch">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -3937,7 +3965,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Hood -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Hood">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
@@ -3999,7 +4027,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Horn -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Horn">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
@@ -4115,7 +4143,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Infotainment -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Infotainment">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -4152,7 +4180,9 @@
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Intake-AirTemperatureSensor -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Intake-AirTemperatureSensor"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Intake-AirTemperatureSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
     
 
 
@@ -4180,14 +4210,16 @@
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/InternalCombustionEngine -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/InternalCombustionEngine"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/InternalCombustionEngine">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
+    </owl:Class>
     
 
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/InternalLights -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/InternalLights">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -4230,7 +4262,9 @@
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/IsBackUpLightOn -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/IsBackUpLightOn"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/IsBackUpLightOn">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ActuableSignal"/>
+    </owl:Class>
     
 
 
@@ -4825,7 +4859,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/LaneDepartureDetection -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/LaneDepartureDetection">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -4978,7 +5012,9 @@
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/LeftIndicatorLight -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/LeftIndicatorLight"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/LeftIndicatorLight">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ActuableSignal"/>
+    </owl:Class>
     
 
 
@@ -5027,7 +5063,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/LocalHVAC -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/LocalHVAC">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -5043,7 +5079,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/LocalLights -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/LocalLights">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -5196,7 +5232,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Lumbar -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Lumbar">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -5333,14 +5369,16 @@
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/LumbarPressureSensor -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/LumbarPressureSensor"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/LumbarPressureSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
     
 
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/LumbarSwitch -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/LumbarSwitch">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -5393,7 +5431,9 @@
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/MAFSensor -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/MAFSensor"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/MAFSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
     
 
 
@@ -5464,7 +5504,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/MassageSwitch -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/MassageSwitch">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -5513,7 +5553,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Media -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Media">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -5704,7 +5744,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/MirrorHeating -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/MirrorHeating">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
@@ -5864,7 +5904,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Mirrors -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Mirrors">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -5891,7 +5931,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Navigation -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Navigation">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -5929,7 +5969,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/O2Sensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/O2Sensor">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -5945,7 +5985,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/O2SensorOther -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/O2SensorOther">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -6005,7 +6045,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/OBD -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/OBD">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -6021,7 +6061,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/OBDStatus -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/OBDStatus">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -6053,7 +6093,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ObstacleDetection -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ObstacleDetection">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -6193,7 +6233,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ParkingBrake -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ParkingBrake">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
@@ -6400,7 +6440,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Played -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Played">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -6458,7 +6498,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Raindetection -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Raindetection">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
@@ -6522,7 +6562,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/RearShade -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/RearShade">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -6590,7 +6630,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/RearviewMirror -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/RearviewMirror">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
@@ -6684,7 +6724,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ReclineSwitch -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ReclineSwitch">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -6753,7 +6793,9 @@
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/RightIndicatorLight -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/RightIndicatorLight"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/RightIndicatorLight">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ActuableSignal"/>
+    </owl:Class>
     
 
 
@@ -6866,7 +6908,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Seat -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Seat">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -7096,7 +7138,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SeatSwitch -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SeatSwitch">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -7217,7 +7259,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SideBolster -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SideBolster">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
@@ -7261,7 +7303,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SideBolsterSwitch -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SideBolsterSwitch">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -7314,7 +7356,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SteeringWheel -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SteeringWheel">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -7440,7 +7482,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SunRoofShade -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SunRoofShade">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -7488,7 +7530,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Sunroof -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Sunroof">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -7562,7 +7604,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/TCS -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/TCS">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -7743,7 +7785,9 @@
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ThrottleActuator -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ThrottleActuator"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ThrottleActuator">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    </owl:Class>
     
 
 
@@ -7880,7 +7924,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Tire -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Tire">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -8025,7 +8069,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Transmission -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Transmission">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -8063,7 +8107,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Trunk -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Trunk">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -8170,7 +8214,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleIdentification -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleIdentification">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -8179,6 +8223,15 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">VehicleIdentification</rdfs:label>
         <skos:definition xml:lang="en">Attribute.Vehicle.VehicleIdentification : Attributes that identify a vehicle</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart">
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:label xml:lang="en">vehicle part</rdfs:label>
     </owl:Class>
     
 
@@ -8302,7 +8355,9 @@
 
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VoltageSensor -->
 
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VoltageSensor"/>
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VoltageSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    </owl:Class>
     
 
 
@@ -8331,7 +8386,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/WasherFluid -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/WasherFluid">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -8401,7 +8456,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Wheel -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Wheel">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -8417,7 +8472,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Window -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Window">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -8465,7 +8520,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/WindowShade -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/WindowShade">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -8529,7 +8584,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Windshield -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Windshield">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/partOf"/>
@@ -8565,7 +8620,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/WindshieldHeating -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/WindshieldHeating">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
@@ -8636,7 +8691,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Wiping -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Wiping">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Branch"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/hasSignal"/>
