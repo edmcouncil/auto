@@ -20,7 +20,7 @@
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
-        <rdfs:label xml:lang="en">The Used Cars Ontology (UCO) for Semantic Web-based E-Commerce</rdfs:label>
+        <rdfs:label xml:lang="en">Used Cars Ontology (UCO)</rdfs:label>
         <dct:abstract xml:lang="en">The The Used Cars Ontology (UCO) is a Web vocabulary for describing aspects of used cars for e-commerce. The vocabulary is designed to be used in combination with the Vehicle Sales Ontology, a standard vocabulary for cars and other vehicles.</dct:abstract>
         <rdfs:comment xml:lang="en">The Used Cars Ontology (UCO) has been initially created by Hepp Research GmbH and Makolab SA (see http://ontologies.makolab.com/uco/ns.html). UCO, as created by Hepp Research GmbH and Makolab SA, is available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/.</rdfs:comment>
         <dct:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>

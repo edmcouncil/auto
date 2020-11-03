@@ -4,6 +4,7 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:cdt="http://w3id.org/lindt/custom_datatypes#"
      xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"     
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -13,8 +14,6 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:sosa="http://www.w3.org/ns/sosa/"
-     xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:vsso="http://automotive.eurecom.fr/vsso#"
      xmlns:schema="http://schema.org/"
      xmlns:auto-eo-vsso="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/"
      xmlns:AnnotationVocabulary="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
@@ -22,18 +21,13 @@
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/">
         <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"/>
-        <dc:description>This ontology describes the car&apos;s attributes, branches and signals defined in GENIVI&apos;s Vehicle Signal Specification.</dc:description>
+        <dct:abstract>This Vehicle Signals Ontology (VSSO) describes the car&apos;s parts and signals. It is based on the GENIVI&apos;s Vehicle Signal Specification.</dct:abstract>
+        <rdfs:comment xml:lang="en">The GENIVI VSS Ontology (VSSO) has been initially created by Benjamin Klotz, Daniel Wilms, and Raphael Troncy (see http://automotive.eurecom.fr/vsso). VSSO, as created by Benjamin Klotz, Daniel Wilms, and Raphael Troncy, is available under the Creative Commons Attribution 4.0 International license; see http://creativecommons.org/licenses/by/4.0/. VSSO describes the car&apos;s attributes, branches and signals defined in GENIVI&apos;s Vehicle Signal Specification.</rdfs:comment>        
         <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-01-10</dct:created>
-        <dct:creator>Benjamin Klotz</dct:creator>
-        <dct:creator>Daniel Wilms</dct:creator>
-        <dct:creator>Raphael Troncy</dct:creator>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-04-23</dct:issued>
         <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
-        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-06-23</dct:modified>
-        <dct:title>VSSo: The GENIVI VSS Ontology</dct:title>
-        <vann:preferredNamespacePrefix>vsso</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri>http://automotive.eurecom.fr/vsso</vann:preferredNamespaceUri>
-        <owl:versionInfo xml:lang="en">v1.0 23/06/2020</owl:versionInfo>
+        <rdfs:label>Vehicle Signals Ontology (VSSO)</rdfs:label>
+        <sm:fileAbbreviation>auto-ec-vsso</sm:fileAbbreviation>
+        <sm:filename>VehicleSignals.rdf</sm:filename>            
     </owl:Ontology>
     
 

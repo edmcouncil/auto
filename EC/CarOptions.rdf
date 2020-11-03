@@ -17,7 +17,7 @@
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/">
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
-        <rdfs:label xml:lang="en">The Car Options Ontology (COO) for Semantic Web-based E-Commerce</rdfs:label>
+        <rdfs:label xml:lang="en">Car Options Ontology (COO)</rdfs:label>
         <dct:abstract xml:lang="en">The Car Options Ontology (COO) provides a vocabulary for exposing available configuration options for car models. It allows indicating choices that can be made as well as compatibility, dependency, and inclusion information.</dct:abstract> 
         <rdfs:comment xml:lang="en">The Car Options Ontology (COO) has been initially created by Martin Hepp, Hepp Research GmbH, with the contribution of Charles Sandeman-Craik, Tribal DDB; Chris Jenkins, Tribal DDB; Tim Redding, Tribal DDB; Yago Otero, Tribal DDB; William Greenly, Tribal DDB; Robin Dingle, Volkswagen UK (see https://lov.linkeddata.es/dataset/lov/vocabs/coo). COO, as created by Martin Hepp, Hepp Research GmbH, is available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/.</rdfs:comment>
         <sm:dependsOn rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://spec.edmcouncil.org/auto/ontology/EC/</sm:dependsOn>        

@@ -2,52 +2,30 @@
 <rdf:RDF xmlns="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/"
      xml:base="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:gr="http://purl.org/goodrelations/v1#"
-     xmlns:coo="http://purl.org/coo/ns#"
+     xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+     xmlns:dct="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:vso="http://purl.org/vso/ns#"
-     xmlns:vvo="http://purl.org/vvo/ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:auto-ec-aso="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"
      xmlns:auto-ec-coo="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/"
      xmlns:auto-ec-vso="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/"
      xmlns:auto-ec-vvo="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/"
-     xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
-     xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
+     xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/">
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
-        <dc:contributor>Charles Sandeman-Craik, Tribal DDB; Chris Jenkins, Tribal DDB; Tim Redding, Tribal DDB; Yago Otero, Tribal DDB; William Greenly, Tribal DDB; Robin Dingle, Volkswagen UK</dc:contributor>
-        <dc:contributor xml:lang="en">Some class and property definitions are inspired by or based on abstracts from Wikipedia, the free encyclopedia.</dc:contributor>
-        <dc:creator xml:lang="en">Martin Hepp</dc:creator>
-        <dc:rights xml:lang="en">The Volkswagen Vehicles Ontology is available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/. 
-In a nutshell, you are free to copy, distribute and transmit the work; to remix/adapt the work (e.g. to import the ontology and create specializations of its elements), 
-as long as you attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work).</dc:rights>
-        <dc:subject xml:lang="en">Volkswagen, E-Commerce, E-Business, GoodRelations, Ontology, Cars, Automobiles</dc:subject>
-        <dc:title xml:lang="en">VVO: The Volkswagen Vehicles Ontology for Semantic Web-based E-Commerce</dc:title>
-        <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
-        <rdfs:comment xml:lang="en">VVO: The Volkswagen Vehicles Ontology
-    
-A vocabulary for describing Volkswagen-specific features of automobiles and their components
-
-Vocabulary:    http://purl.org/vvo/ns
-Namespace:     http://purl.org/vvo/ns#
-
-
-The vocabulary is designed to be used in combination with 
-(1) GoodRelations, a standard vocabulary for the commercial aspects of offers for sale, rental, repair, or disposal;
-(2) the Vehicle Sales Ontology, a standard vocabulary for cars and other vehicles; and
-(3) the Car Options Ontology, a standard vocabulary for buildability / configuration information for cars. 
-
-See http://purl.org/goodrelations/ for more information.</rdfs:comment>
-        <rdfs:label xml:lang="en">Volkswagen Vehicles Ontology</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.org/goodrelations/"/>
+        <dct:abstract xml:lang="en">The Volkswagen Vehicles Ontology (VVO) is a vocabulary for describing Volkswagen-specific features of automobiles and their components. The vocabulary is designed to be used in combination with the Vehicle Sales Ontology, a standard vocabulary for cars and other vehicles and the Car Options Ontology, a standard vocabulary for buildability / configuration information for cars.</dct:abstract>
+        <dct:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+        <sm:fileAbbreviation>auto-ec-vvo</sm:fileAbbreviation>
+        <sm:filename>VolkswagenVehicles.rdf</sm:filename>
+        <rdfs:comment xml:lang="en">The Volkswagen Vehicles Ontology has been initially created by Martin Hepp with the contribution of Charles Sandeman-Craik, Tribal DDB; Chris Jenkins, Tribal DDB; Tim Redding, Tribal DDB; Yago Otero, Tribal DDB; William Greenly, Tribal DDB; Robin Dingle, Volkswagen UK (see https://lov.linkeddata.es/dataset/lov/vocabs/vvo). VVO, as created by Martin Hepp, is available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/. Some class and property definitions are inspired by or based on abstracts from Wikipedia, the free encyclopedia.</rdfs:comment>
+        <rdfs:label xml:lang="en">Volkswagen Vehicles Ontology (VVO)</rdfs:label>
         <fibo-fnd-utl-av:hasMaturityLevel rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Informative"/>
     </owl:Ontology>
     

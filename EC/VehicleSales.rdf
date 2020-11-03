@@ -2,44 +2,27 @@
 <rdf:RDF xmlns="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/"
      xml:base="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:gr="http://purl.org/goodrelations/v1#"
+     xmlns:dct="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:vso="http://purl.org/vso/ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:dbpedia="http://dbpedia.org/resource/"
-     xmlns:dcterms="http://purl.org/dc/terms/"
-     xmlns:wikipedia="http://en.wikipedia.org/wiki/"
-     xmlns:MiddleOntology="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
+     xmlns:auto-mo-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
+     xmlns:auto-ec-vso="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/"
      xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
      xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/">
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
-        <dc:contributor xml:lang="en">Many class and property definitions are inspired by or based on abstracts from Wikipedia, the free encyclopedia.</dc:contributor>
-        <dc:creator xml:lang="en">Martin Hepp</dc:creator>
-        <dc:rights xml:lang="en">The Vehicle Sales Ontology ontology is available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/. 
-In a nutshell, you are free to copy, distribute and transmit the work; to remix/adapt the work (e.g. to import the ontology and create specializations of its elements), 
-as long as you attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work).</dc:rights>
-        <dc:subject xml:lang="en">E-Commerce, E-Business, GoodRelations, Ontology, Cars, Automobiles, Boats, Bikes</dc:subject>
-        <dc:title xml:lang="en">VSO: The Vehicle Sales Ontology for Semantic Web-based E-Commerce</dc:title>
-        <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
-        <rdfs:comment xml:lang="en">VSO: The Vehicle Sales Ontology
-    
-A Web vocabulary for describings cars, boats, bikes, and other vehicles for e-commerce.
-
-Vocabulary:    http://purl.org/vso/ns
-Namespace:     http://purl.org/vso/ns#
-
-The Vehicle Sales Ontology is designed to be used in combination with GoodRelations, a standard vocabulary for the commercial aspects of offers for sale or rental. 
-
-See http://purl.org/goodrelations/ for more information.</rdfs:comment>
-        <rdfs:label xml:lang="en">Vehicle Sales Ontology</rdfs:label>
-        <rdfs:seeAlso rdf:resource="http://purl.org/goodrelations/"/>
+        <dct:abstract xml:lang="en">The Vehicle Sales Ontology (VSO) is a web vocabulary for describings cars, boats, bikes, and other vehicles for e-commerce. The Vehicle Sales Ontology is designed to be used in combination with a standard vocabulary for the commercial aspects of offers for sale or rental.</dct:abstract>
+        <dct:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+        <SpecificationMetadata:fileAbbreviation>auto-ec-vso</SpecificationMetadata:fileAbbreviation>
+        <SpecificationMetadata:filename>VehicleSales.rdf</SpecificationMetadata:filename>
+        <rdfs:comment xml:lang="en">The Vehicle Sales Ontology (VSO) has been initially created by Martin Hepp (see https://lov.linkeddata.es/dataset/lov/vocabs/vso). VSO, as created by Martin Hepp, is available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/. Many class and property definitions are inspired by or based on abstracts from Wikipedia, the free encyclopedia.</rdfs:comment>
+        <rdfs:label xml:lang="en">Vehicle Sales Ontology (VSO)</rdfs:label>
         <fibo-fnd-utl-av:hasMaturityLevel rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Informative"/>
     </owl:Ontology>
     
@@ -1473,9 +1456,9 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 
     <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/0to100KMH">
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/SpeedInterval"/>
-        <MiddleOntology:hasMaxValueFloat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</MiddleOntology:hasMaxValueFloat>
-        <MiddleOntology:hasMinValueFloat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</MiddleOntology:hasMinValueFloat>
-        <MiddleOntology:hasUnitOfMeasurement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KMH</MiddleOntology:hasUnitOfMeasurement>
+        <auto-mo-mo:hasMaxValueFloat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100.0</auto-mo-mo:hasMaxValueFloat>
+        <auto-mo-mo:hasMinValueFloat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</auto-mo-mo:hasMinValueFloat>
+        <auto-mo-mo:hasUnitOfMeasurement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KMH</auto-mo-mo:hasUnitOfMeasurement>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
         <rdfs:label xml:lang="en">0to100KMH</rdfs:label>
         <skos:definition xml:lang="en">The speed interval from 0 to 100 km/h</skos:definition>
@@ -1487,9 +1470,9 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 
     <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/0to60MPH">
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/SpeedInterval"/>
-        <MiddleOntology:hasMaxValueFloat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">60.0</MiddleOntology:hasMaxValueFloat>
-        <MiddleOntology:hasMinValueFloat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</MiddleOntology:hasMinValueFloat>
-        <MiddleOntology:hasUnitOfMeasurement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HM</MiddleOntology:hasUnitOfMeasurement>
+        <auto-mo-mo:hasMaxValueFloat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">60.0</auto-mo-mo:hasMaxValueFloat>
+        <auto-mo-mo:hasMinValueFloat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</auto-mo-mo:hasMinValueFloat>
+        <auto-mo-mo:hasUnitOfMeasurement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HM</auto-mo-mo:hasUnitOfMeasurement>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
         <rdfs:label xml:lang="en">0to60MPH</rdfs:label>
         <skos:definition xml:lang="en">The speed interval from 0 to 60 mph</skos:definition>
@@ -1501,8 +1484,8 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 
     <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/1GLI">
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/FuelQuantity"/>
-        <MiddleOntology:hasUnitOfMeasurement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GLI</MiddleOntology:hasUnitOfMeasurement>
-        <MiddleOntology:hasValueFloat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</MiddleOntology:hasValueFloat>
+        <auto-mo-mo:hasUnitOfMeasurement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GLI</auto-mo-mo:hasUnitOfMeasurement>
+        <auto-mo-mo:hasValueFloat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</auto-mo-mo:hasValueFloat>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
         <rdfs:label xml:lang="en">1GLI</rdfs:label>
         <skos:definition xml:lang="en">The fuel quantity of 1 British (imperial) gallon</skos:definition>
@@ -1514,8 +1497,8 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 
     <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/1GLL">
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/FuelQuantity"/>
-        <MiddleOntology:hasUnitOfMeasurement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GLL</MiddleOntology:hasUnitOfMeasurement>
-        <MiddleOntology:hasValueFloat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</MiddleOntology:hasValueFloat>
+        <auto-mo-mo:hasUnitOfMeasurement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GLL</auto-mo-mo:hasUnitOfMeasurement>
+        <auto-mo-mo:hasValueFloat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</auto-mo-mo:hasValueFloat>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
         <rdfs:label xml:lang="en">1GLL</rdfs:label>
         <skos:definition xml:lang="en">The fuel quantity of 1 US gallon</skos:definition>
@@ -1527,8 +1510,8 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 
     <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/1LTR">
         <rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/FuelQuantity"/>
-        <MiddleOntology:hasUnitOfMeasurement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LTR</MiddleOntology:hasUnitOfMeasurement>
-        <MiddleOntology:hasValueFloat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</MiddleOntology:hasValueFloat>
+        <auto-mo-mo:hasUnitOfMeasurement rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LTR</auto-mo-mo:hasUnitOfMeasurement>
+        <auto-mo-mo:hasValueFloat rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</auto-mo-mo:hasValueFloat>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
         <rdfs:label xml:lang="en">1LTR</rdfs:label>
         <skos:definition xml:lang="en">The fuel quantity of 1 liter</skos:definition>

@@ -17,7 +17,6 @@
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
         <dct:abstract>This ontology provides metadata for the vehicle information in e-commerce.</dct:abstract>
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-18T01:43:00</dct:issued>
-        <dct:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opensource.org/licenses/MIT</dct:license>
         <sm:contentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
         <sm:copyright>Copyright (c) 2020 EDM Council, Inc.</sm:copyright>
         <sm:fileAbbreviation>auto-ec-mod</sm:fileAbbreviation>
@@ -42,11 +41,18 @@
         <dct:title>EDMC Automotive Ontology (AUTO) EC Domain</dct:title>
         <sm:contributor>W3C Automotive Ontology Community Group</sm:contributor>
         <sm:contributor>Hepp Research GmbH</sm:contributor>
-        <sm:contributor>Makolab SA</sm:contributor>
+        <sm:contributor>Makolab SA</sm:contributor>      
         <sm:copyright>Copyright (c) 2020 EDM Council, Inc.</sm:copyright>
         <sm:dependsOn rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.omg.org/techprocess/ab/SpecificationMetadata/</sm:dependsOn>
-        <sm:keyword>vehicles in e-commerce</sm:keyword>
-        <sm:keyword>automobiles from the retail market perspective</sm:keyword>
+        <sm:keyword>E-Commerce</sm:keyword>
+        <sm:keyword>Cars</sm:keyword>
+        <sm:keyword>Automobiles</sm:keyword>
+        <sm:keyword>E-Business</sm:keyword>
+        <sm:keyword>Vehicles</sm:keyword>
+        <sm:keyword>Used Cars</sm:keyword>
+        <sm:keyword>Boats</sm:keyword>
+        <sm:keyword>Bikes</sm:keyword>        
+        <sm:keyword>Ontology</sm:keyword>
         <sm:moduleAbbreviation>auto-ec</sm:moduleAbbreviation>
         <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/MetadataEC/"/>
         <rdfs:label>E-Commerce vehicle information</rdfs:label>

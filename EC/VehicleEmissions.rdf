@@ -11,7 +11,7 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"          
      xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
-     xmlns:auto-ec-as="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"
+     xmlns:auto-ec-aso="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"
      xmlns:auto-ec-veo="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/"
      xmlns:auto-ec-vso="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/"
      xmlns:auto-mo-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
@@ -21,7 +21,7 @@
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
-        <rdfs:label>The Vehicle Emissions Ontology (VEO)</rdfs:label>
+        <rdfs:label>Vehicle Emissions Ontology (VEO)</rdfs:label>
         <dct:abstract>An ontology for describing vehicles and their emissions.</dct:abstract>        
         <rdfs:comment xml:lang="en">The Vehicle Emissions Ontology (VEO) has been initially created by Bojan Najdenov, with the contribution of Milos Jovanovik (see https://lov.linkeddata.es/dataset/lov/vocabs/veo). VEO, as created by Bojan Najdenov, is available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/.</rdfs:comment>        
         <dct:license rdf:resource="https://creativecommons.org/licenses/by/3.0/"/>
