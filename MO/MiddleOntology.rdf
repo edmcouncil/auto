@@ -61,13 +61,17 @@
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/qualitativeProductOrServiceProperty -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/qualitativeProductOrServiceProperty"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/qualitativeProductOrServiceProperty">
+        <rdfs:label xml:lang="en">qualitative product or service property</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty -->
 
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty"/>
+    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty">
+        <rdfs:label xml:lang="en">quantitative product or service property</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -90,37 +94,49 @@
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/datatypeProductOrServiceProperty -->
 
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/datatypeProductOrServiceProperty"/>
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/datatypeProductOrServiceProperty">
+        <rdfs:label xml:lang="en">datatype product or service property</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasMaxValueFloat -->
 
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasMaxValueFloat"/>
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasMaxValueFloat">
+        <rdfs:label xml:lang="en">has max value float</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasMinValueFloat -->
 
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasMinValueFloat"/>
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasMinValueFloat">
+        <rdfs:label xml:lang="en">has min value float</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasUnitOfMeasurement -->
 
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasUnitOfMeasurement"/>
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasUnitOfMeasurement">
+        <rdfs:label xml:lang="en">has unit of measurement</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasValueFloat -->
 
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasValueFloat"/>
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasValueFloat">
+        <rdfs:label xml:lang="en">has value float</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 
     <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/serialNumber -->
 
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/serialNumber"/>
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/serialNumber">
+        <rdfs:label xml:lang="en">serial number</rdfs:label>
+    </owl:DatatypeProperty>
     
 
 

@@ -22,7 +22,6 @@
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/"/>
-        <rdfs:label>Auto Schema.Org Ontology</rdfs:label>
         <dct:abstract>The Schema.org Auto Extension module corresponds to the the automotive extension of schema.org (https://schema.org/docs/automotive.html). It contains ontologies which define the most important real-world objects related to popular vehicles like cars, buses (coaches) and motorcycles. It focuses predominantly on passenger automobiles from the retail market perspective.</dct:abstract>
         <dct:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opensource.org/licenses/MIT</dct:license>
         <sm:contentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
@@ -30,6 +29,7 @@
         <sm:dependsOn rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://spec.edmcouncil.org/auto/ontology/EC/</sm:dependsOn>
         <sm:fileAbbreviation>auto-ec-as</sm:fileAbbreviation>
         <sm:filename>AutoSchemaOrg.rdf</sm:filename>
+        <rdfs:label>Auto Schema.Org Ontology</rdfs:label>
         <skos:changeNote>The https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg.rdf version of this ontology was revised to guaranty compliance with the schema.org.</skos:changeNote>
         <fibo-fnd-utl-av:hasMaturityLevel rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Provisional"/>
     </owl:Ontology>
@@ -71,7 +71,7 @@
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>accelerationTime</rdfs:label>
+        <rdfs:label xml:lang="en">acceleration time</rdfs:label>
         <skos:definition>The time needed to accelerate the vehicle from a given start velocity to a given target velocity.&lt;br/&gt;&lt;br/&gt;
 
 Typical unit code(s): SEC for seconds&lt;br/&gt;&lt;br/&gt;
@@ -98,7 +98,7 @@ Typical unit code(s): SEC for seconds&lt;br/&gt;&lt;br/&gt;
         </rdfs:range>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>bodyType</rdfs:label>
+        <rdfs:label xml:lang="en">body type</rdfs:label>
         <skos:definition>Indicates the design and body style of the vehicle (e.g. station wagon, hatchback, etc.).</skos:definition>
     </owl:ObjectProperty>
     
@@ -111,7 +111,7 @@ Typical unit code(s): SEC for seconds&lt;br/&gt;&lt;br/&gt;
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>cargoVolume</rdfs:label>
+        <rdfs:label xml:lang="en">cargo volume</rdfs:label>
         <skos:definition>The available volume for cargo or luggage. For automobiles, this is usually the trunk volume.
 
 Typical unit code(s): LTR for liters, FTQ for cubic foot/feet
@@ -135,7 +135,7 @@ Note: You can use minValue and maxValue to indicate ranges.</skos:definition>
         </rdfs:range>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>driveWheelConfiguration</rdfs:label>
+        <rdfs:label xml:lang="en">drive wheel configuration</rdfs:label>
         <skos:definition>The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle&apos;s engine via the drivetrain.</skos:definition>
     </owl:ObjectProperty>
     
@@ -148,7 +148,7 @@ Note: You can use minValue and maxValue to indicate ranges.</skos:definition>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>engineDisplacement</rdfs:label>
+        <rdfs:label xml:lang="en">engine displacement</rdfs:label>
         <skos:definition>The volume swept by all of the pistons inside the cylinders of an internal combustion engine in a single movement. &lt;br/&gt;&lt;br/&gt;
 
 Typical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ for cubic inches
@@ -165,7 +165,7 @@ Typical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ for cubic in
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>enginePower</rdfs:label>
+        <rdfs:label xml:lang="en">engine power</rdfs:label>
         <skos:definition>The power of the vehicle&apos;s engine.
     Typical unit code(s): KWT for kilowatt, BHP for brake horsepower, N12 for metric horsepower (PS, with 1 PS = 735,49875 W)&lt;br/&gt;&lt;br/&gt;
 
@@ -193,7 +193,7 @@ Typical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ for cubic in
         </rdfs:range>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>engineType</rdfs:label>
+        <rdfs:label>engine type</rdfs:label>
         <skos:definition>The type of engine or engines powering the vehicle.</skos:definition>
     </owl:ObjectProperty>
     
@@ -206,7 +206,7 @@ Typical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ for cubic in
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>fuelCapacity</rdfs:label>
+        <rdfs:label xml:lang="en">fuel capacity</rdfs:label>
         <skos:definition>The capacity of the fuel tank or in the case of electric cars, the battery. If there are multiple components for storage, this should indicate the total of all storage of the same type.&lt;br/&gt;&lt;br/&gt;
 
 Typical unit code(s): LTR for liters, GLL of US gallons, GLI for UK / imperial gallons, AMH for ampere-hours (for electrical vehicles).</skos:definition>
@@ -221,7 +221,7 @@ Typical unit code(s): LTR for liters, GLL of US gallons, GLI for UK / imperial g
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>fuelConsumption</rdfs:label>
+        <rdfs:label xml:lang="en">fuel consumption</rdfs:label>
         <skos:definition>The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km).
 
 Note 1: There are unfortunately no standard unit codes for liters per 100 km. Use unitText to indicate the unit of measurement, e.g. L/100 km.
@@ -238,7 +238,7 @@ Note 3: Often, the absolute value is useful only when related to driving speed (
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>fuelEfficiency</rdfs:label>
+        <rdfs:label xml:lang="en">fuel efficiency</rdfs:label>
         <skos:definition>The distance traveled per unit of fuel used; most commonly miles per gallon (mpg) or kilometers per liter (km/L).
 
 Note 1: There are unfortunately no standard unit codes for miles per gallon or kilometers per liter. Use unitText to indicate the unit of measurement, e.g. mpg or km/L.
@@ -262,7 +262,7 @@ Note 3: Often, the absolute value is useful only when related to driving speed (
         </rdfs:range>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>fuelType</rdfs:label>
+        <rdfs:label xml:lang="en">fuel type</rdfs:label>
         <skos:definition>The type of fuel suitable for the engine or engines of the vehicle. If the vehicle has only one engine, this property can be attached directly to the vehicle.</skos:definition>
     </owl:ObjectProperty>
     
@@ -282,7 +282,7 @@ Note 3: Often, the absolute value is useful only when related to driving speed (
         </rdfs:range>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>meetsEmissionStandard</rdfs:label>
+        <rdfs:label xml:lang="en">meets emission standard</rdfs:label>
         <skos:definition>Indicates that the vehicle meets the respective emission standard.</skos:definition>
     </owl:ObjectProperty>
     
@@ -295,7 +295,7 @@ Note 3: Often, the absolute value is useful only when related to driving speed (
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>mileageFromOdometer</rdfs:label>
+        <rdfs:label xml:lang="en">mileage from odometer</rdfs:label>
         <skos:definition>The total distance travelled by the particular vehicle since its initial production, as read from its odometer.
 
 Typical unit code(s): KMT for kilometers, SMI for statute miles</skos:definition>
@@ -317,7 +317,7 @@ Typical unit code(s): KMT for kilometers, SMI for statute miles</skos:definition
         </rdfs:range>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>numberOfAxles</rdfs:label>
+        <rdfs:label xml:lang="en">number of axles</rdfs:label>
         <skos:definition>The number of axles.
 
 Typical unit code(s): C62</skos:definition>
@@ -339,7 +339,7 @@ Typical unit code(s): C62</skos:definition>
         </rdfs:range>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>numberOfDoors</rdfs:label>
+        <rdfs:label xml:lang="en">number of doors</rdfs:label>
         <skos:definition>The number of doors.
 
 Typical unit code(s): C62</skos:definition>
@@ -361,7 +361,7 @@ Typical unit code(s): C62</skos:definition>
         </rdfs:range>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>numberOfForwardGears</rdfs:label>
+        <rdfs:label xml:lang="en">number of forward gears</rdfs:label>
         <skos:definition>The total number of forward gears available for the transmission system of the vehicle.
 
 Typical unit code(s): C62</skos:definition>
@@ -383,7 +383,7 @@ Typical unit code(s): C62</skos:definition>
         </rdfs:range>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>numberOfPreviousOwners</rdfs:label>
+        <rdfs:label xml:lang="en">number of previous owners</rdfs:label>
         <skos:definition>The number of owners of the vehicle, including the current one.
 
 Typical unit code(s): C62</skos:definition>
@@ -398,7 +398,7 @@ Typical unit code(s): C62</skos:definition>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>payload</rdfs:label>
+        <rdfs:label xml:lang="en">payload</rdfs:label>
         <skos:definition>The permitted weight of passengers and cargo, EXCLUDING the weight of the empty vehicle.&lt;br/&gt;&lt;br/&gt;
 
 Typical unit code(s): KGM for kilogram, LBR for pound&lt;br/&gt;&lt;br/&gt;
@@ -428,7 +428,7 @@ Typical unit code(s): KGM for kilogram, LBR for pound&lt;br/&gt;&lt;br/&gt;
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>roofLoad</rdfs:label>
+        <rdfs:label xml:lang="en">roof load</rdfs:label>
         <skos:definition>The permitted total weight of cargo and installations (e.g. a roof rack) on top of the vehicle.&lt;br/&gt;&lt;br/&gt;
 
 Typical unit code(s): KGM for kilogram, LBR for pound&lt;br/&gt;&lt;br/&gt;
@@ -457,7 +457,7 @@ Typical unit code(s): KGM for kilogram, LBR for pound&lt;br/&gt;&lt;br/&gt;
         </rdfs:range>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>seatingCapacity</rdfs:label>
+        <rdfs:label xml:lang="en">seating capacity</rdfs:label>
         <skos:definition>The number of persons that can be seated (e.g. in a vehicle), both in terms of the physical space available, and in terms of limitations set by law.&lt;br/&gt;&lt;br/&gt;
 
 Typical unit code(s): C62 for persons</skos:definition>
@@ -472,7 +472,7 @@ Typical unit code(s): C62 for persons</skos:definition>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>speed</rdfs:label>
+        <rdfs:label xml:lang="en">speed</rdfs:label>
         <skos:definition>The speed range of the vehicle. If the vehicle is powered by an engine, the upper limit of the speed range (indicated by &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/maxValue&quot;&gt;maxValue&lt;/a&gt; should be the maximum speed achievable under regular conditions.&lt;br/&gt;&lt;br/&gt;
 
 Typical unit code(s): KMH for km/h, HM for mile per hour (0.447 04 m/s), KNT for knot&lt;br/&gt;&lt;br/&gt;
@@ -490,7 +490,7 @@ Typical unit code(s): KMH for km/h, HM for mile per hour (0.447 04 m/s), KNT for
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/SteeringPositionValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>steeringPosition</rdfs:label>
+        <rdfs:label xml:lang="en">steering position</rdfs:label>
         <skos:definition>The position of the steering wheel or similar device (mostly for cars).</skos:definition>
     </owl:ObjectProperty>
     
@@ -503,7 +503,7 @@ Typical unit code(s): KMH for km/h, HM for mile per hour (0.447 04 m/s), KNT for
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>tongueWeight</rdfs:label>
+        <rdfs:label xml:lang="en">tongue weight</rdfs:label>
         <skos:definition>The permitted vertical load (TWR) of a trailer attached to the vehicle. Also referred to as Tongue Load Rating (TLR) or Vertical Load Rating (VLR)&lt;br/&gt;&lt;br/&gt;
 
 Typical unit code(s): KGM for kilogram, LBR for pound&lt;br/&gt;&lt;br/&gt;
@@ -525,7 +525,7 @@ Typical unit code(s): KGM for kilogram, LBR for pound&lt;br/&gt;&lt;br/&gt;
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>torque</rdfs:label>
+        <rdfs:label xml:lang="en">torque</rdfs:label>
         <skos:definition>The torque (turning force) of the vehicle&apos;s engine.&lt;br/&gt;&lt;br/&gt;
 
 Typical unit code(s): NU for newton metre (N m), F17 for pound-force per foot, or F48 for pound-force per inch&lt;br/&gt;&lt;br/&gt;
@@ -546,7 +546,7 @@ Typical unit code(s): NU for newton metre (N m), F17 for pound-force per foot, o
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>trailerWeight</rdfs:label>
+        <rdfs:label xml:lang="en">trailer weight</rdfs:label>
         <skos:definition>The permitted weight of a trailer attached to the vehicle.
 
 Typical unit code(s): KGM for kilogram, LBR for pound
@@ -567,7 +567,7 @@ Note 3: Note that you can use minValue and maxValue to indicate ranges.</skos:de
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/EngineSpecification"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>vehicleEngine</rdfs:label>
+        <rdfs:label xml:lang="en">vehicle engine</rdfs:label>
         <skos:definition>Information about the engine or engines of the vehicle.</skos:definition>
     </owl:ObjectProperty>
     
@@ -587,7 +587,7 @@ Note 3: Note that you can use minValue and maxValue to indicate ranges.</skos:de
         </rdfs:range>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>vehicleSeatingCapacity</rdfs:label>
+        <rdfs:label xml:lang="en">vehicle seating capacity</rdfs:label>
         <skos:definition>The number of passengers that can be seated in the vehicle, both in terms of the physical space available, and in terms of limitations set by law.
 
 Typical unit code(s): C62 for persons.</skos:definition>
@@ -609,7 +609,7 @@ Typical unit code(s): C62 for persons.</skos:definition>
         </rdfs:range>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>vehicleSpecialUsage</rdfs:label>
+        <rdfs:label xml:lang="en">vehicle special usage</rdfs:label>
         <skos:definition>Indicates whether the vehicle has been used for special purposes, like commercial rental, driving school, or as a taxi. The legislation in many countries requires this information to be revealed when offering a car for sale.</skos:definition>
     </owl:ObjectProperty>
     
@@ -629,7 +629,7 @@ Typical unit code(s): C62 for persons.</skos:definition>
         </rdfs:range>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>vehicleTransmission</rdfs:label>
+        <rdfs:label xml:lang="en">vehicle transmission</rdfs:label>
         <skos:definition>The type of component used for transmitting the power from a rotating power source to the wheels or other relevant component(s) (&quot;gearbox&quot; for cars).</skos:definition>
     </owl:ObjectProperty>
     
@@ -642,7 +642,7 @@ Typical unit code(s): C62 for persons.</skos:definition>
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>weightTotal</rdfs:label>
+        <rdfs:label xml:lang="en">weight total</rdfs:label>
         <skos:definition>The permitted total weight of the loaded vehicle, including passengers and cargo and the weight of the empty vehicle.&lt;br/&gt;&lt;br/&gt;
 
 Typical unit code(s): KGM for kilogram, LBR for pound&lt;br/&gt;&lt;br/&gt;
@@ -664,7 +664,7 @@ Typical unit code(s): KGM for kilogram, LBR for pound&lt;br/&gt;&lt;br/&gt;
         <rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>wheelbase</rdfs:label>
+        <rdfs:label xml:lang="en">wheelbase</rdfs:label>
         <skos:definition>The distance between the centers of the front and rear wheels.&lt;br/&gt;&lt;br/&gt;
 
 Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT for foot/feet</skos:definition>
@@ -697,7 +697,7 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>acrissCode</rdfs:label>
+        <rdfs:label xml:lang="en">acriss code</rdfs:label>
         <skos:definition>The ACRISS Car Classification Code is a code used by many car rental companies, for classifying vehicles. ACRISS stands for Association of Car Rental Industry Systems and Standards.</skos:definition>
     </owl:DatatypeProperty>
     
@@ -710,7 +710,7 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>dateVehicleFirstRegistered</rdfs:label>
+        <rdfs:label xml:lang="en">date vehicle first registered</rdfs:label>
         <skos:definition>The date of the first registration of the vehicle with the respective public authorities.</skos:definition>
     </owl:DatatypeProperty>
     
@@ -723,7 +723,7 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>emissionsCO2</rdfs:label>
+        <rdfs:label xml:lang="en">emissions CO2</rdfs:label>
         <skos:definition>The CO2 emissions in g/km. When used in combination with a QuantitativeValue, put &quot;g/km&quot; into the unitText property of that value, since there is no UN/CEFACT Common Code for &quot;g/km&quot;.</skos:definition>
     </owl:DatatypeProperty>
     
@@ -736,7 +736,7 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>knownVehicleDamages</rdfs:label>
+        <rdfs:label xml:lang="en">known vehicle damages</rdfs:label>
         <skos:definition>A textual description of known damages, both repaired and unrepaired.</skos:definition>
     </owl:DatatypeProperty>
     
@@ -749,7 +749,7 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>modelDate</rdfs:label>
+        <rdfs:label xml:lang="en">model date</rdfs:label>
         <skos:definition>The release date of a vehicle model (often used to differentiate versions of the same make and model).</skos:definition>
     </owl:DatatypeProperty>
     
@@ -769,7 +769,7 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         </rdfs:range>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>numberOfAirbags</rdfs:label>
+        <rdfs:label xml:lang="en">number of airbags</rdfs:label>
         <skos:definition>The number or type of airbags in the vehicle.</skos:definition>
     </owl:DatatypeProperty>
     
@@ -782,7 +782,7 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>productionDate</rdfs:label>
+        <rdfs:label xml:lang="en">production date</rdfs:label>
         <skos:definition>The date of production of the item, e.g. vehicle.</skos:definition>
     </owl:DatatypeProperty>
     
@@ -795,7 +795,7 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>purchaseDate</rdfs:label>
+        <rdfs:label xml:lang="en">purchase date</rdfs:label>
         <skos:definition>The date the item e.g. vehicle was purchased by the current owner.</skos:definition>
     </owl:DatatypeProperty>
     
@@ -808,7 +808,7 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>vehicleConfiguration</rdfs:label>
+        <rdfs:label xml:lang="en">vehicle configuration</rdfs:label>
         <skos:definition>A short text indicating the configuration of the vehicle, e.g. &apos;5dr hatchback ST 2.5 MT 225 hp&apos; or &apos;limited edition&apos;.</skos:definition>
     </owl:DatatypeProperty>
     
@@ -821,7 +821,7 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>vehicleIdentificationNumber</rdfs:label>
+        <rdfs:label xml:lang="en">vehicle identification number</rdfs:label>
         <skos:definition>The Vehicle Identification Number (VIN) is a unique serial number used by the automotive industry to identify individual motor vehicles.</skos:definition>
     </owl:DatatypeProperty>
     
@@ -834,7 +834,7 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>vehicleInteriorColor</rdfs:label>
+        <rdfs:label xml:lang="en">vehicle interior color</rdfs:label>
         <skos:definition>The color or color combination of the interior of the vehicle.</skos:definition>
     </owl:DatatypeProperty>
     
@@ -847,7 +847,7 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>vehicleInteriorType</rdfs:label>
+        <rdfs:label xml:lang="en">vehicle interior type</rdfs:label>
         <skos:definition>The type or material of the interior of the vehicle (e.g. synthetic fabric, leather, wood, etc.). While most interior types are characterized by the material used, an interior type can also be based on vehicle usage or target audience.</skos:definition>
     </owl:DatatypeProperty>
     
@@ -860,7 +860,7 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <dct:isPartOf rdf:resource="http://auto.schema.org"/>
         <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <rdfs:label>vehicleModelDate</rdfs:label>
+        <rdfs:label xml:lang="en">vehicle model date</rdfs:label>
         <skos:definition>The release date of a vehicle model (often used to differentiate versions of the same make and model).</skos:definition>
     </owl:DatatypeProperty>
     

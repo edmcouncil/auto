@@ -674,7 +674,6 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/MotorizedRoadVehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">ACRISSCode</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/ACRISS_Car_Classification_Code"/>
         <rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/ACRISS_Car_Classification_Code"/>
         <skos:definition xml:lang="en">The ACRISS Car Classification Code is a code used by many car rental companies, for classifying vehicles. ACRISS stands for Association of Car Rental Industry Systems and Standards.</skos:definition>
@@ -689,8 +688,21 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">firstRegistration</rdfs:label>
         <skos:definition xml:lang="en">The date of the first registration of the vehicle with the respective public authorities. This property should be used mainly with gr:ActualProductOrServiceInstance.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/knownVehicleDamages -->
+
+    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/knownVehicleDamages">
+        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/datatypeProductOrServiceProperty"/>
+        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
+        <skos:definition xml:lang="en">A textual description of known damages, both repaired and unrepaired.
+
+Note: This property should be used with gr:ActualProductOrServiceInstance (when offering a vehicle) or gr:ProductOrServicesSomeInstancesPlaceholder (when seeking a vehicle using gr:seeks) only.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -702,7 +714,6 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">productionDate</rdfs:label>
         <skos:definition xml:lang="en">The date of production of the vehicle. This property should be used mainly with gr:ActualProductOrServiceInstance.</skos:definition>
     </owl:DatatypeProperty>
     
@@ -731,7 +742,6 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">modelDate</rdfs:label>
         <skos:definition xml:lang="en">The release date of a vehicle model (often used to differentiate versions of the same make and model)</skos:definition>
     </owl:DatatypeProperty>
     
@@ -759,21 +769,6 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
         <rdfs:label xml:lang="en">condition</rdfs:label>
         <skos:definition xml:lang="en">A textual description of the condition of the vehicle. This property should be mainly used with gr:ActualProductOrServiceInstance.</skos:definition>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/damages -->
-
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/damages">
-        <rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/datatypeProductOrServiceProperty"/>
-        <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">damages</rdfs:label>
-        <skos:definition xml:lang="en">A textual description of known damages, both repaired and unrepaired.
-
-Note: This property should be used with gr:ActualProductOrServiceInstance (when offering a vehicle) or gr:ProductOrServicesSomeInstancesPlaceholder (when seeking a vehicle using gr:seeks) only.</skos:definition>
     </owl:DatatypeProperty>
     
 
@@ -807,7 +802,7 @@ Note: This property should be used with gr:ActualProductOrServiceInstance (when 
         <rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-        <rdfs:label xml:lang="en">rentalUsage</rdfs:label>
+        <rdfs:label xml:lang="en">rental usage</rdfs:label>
         <skos:definition xml:lang="en">Indicates whether the vehicle has been used for commercial rental. The legislation in many countries requires this information to be revealed when offering a car for sale. 
 
 Note 1: This property should be used with gr:ActualProductOrServiceInstance (when offering a vehicle) or gr:ProductOrServicesSomeInstancesPlaceholder (when seeking a vehicle using gr:seeks) only.
@@ -1694,6 +1689,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/knownVehicleDamages"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/color"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
@@ -1701,12 +1702,6 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/condition"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/damages"/>
                 <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
