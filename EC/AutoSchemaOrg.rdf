@@ -18,7 +18,7 @@
      xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
      xmlns:fibo-fnd-utl-val="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/">
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/">
-        <owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/SchemaAutomotive/AutoSchemaOrg/"/>
+        <owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/"/>
