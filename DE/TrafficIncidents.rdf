@@ -16,7 +16,7 @@
      xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/">
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/master/latest/EC/SchemaAutomotive/AutoSchemaOrg/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"/>
         <rdfs:label>Traffic Incident Ontology (TIO)</rdfs:label>
         <dct:abstract xml:lang="en">The Traffic Incident Ontology (TIO) is a Web vocabulary for traffic incidents.</dct:abstract>
         <dct:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
