@@ -29,6 +29,7 @@
         <SpecificationMetadata:filename>VehicleSignals.rdf</SpecificationMetadata:filename>
         <rdfs:comment xml:lang="en">The GENIVI VSS Ontology (VSSO) has been initially created by Benjamin Klotz, Daniel Wilms, and Raphael Troncy (see http://automotive.eurecom.fr/vsso). VSSO, as created by Benjamin Klotz, Daniel Wilms, and Raphael Troncy, is available under the Creative Commons Attribution 4.0 International license; see http://creativecommons.org/licenses/by/4.0/. VSSO describes the car&apos;s attributes, branches and signals defined in GENIVI&apos;s Vehicle Signal Specification.</rdfs:comment>
         <rdfs:label>Vehicle Signals Ontology (VSSO)</rdfs:label>
+        <AnnotationVocabulary:hasMaturityLevel rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Provisional"/>
     </owl:Ontology>
     
 
@@ -1142,7 +1143,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Accelerometer -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Accelerometer">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Accelerometer</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the linear acceleration</skos:definition>
     </owl:Class>
@@ -1271,7 +1272,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/AirConditioningSystem">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Air conditioning system</rdfs:label>
         <skos:definition xml:lang="en">Air conditioning system</skos:definition>
     </owl:Class>
@@ -1377,7 +1378,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/AirbagSystem -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/AirbagSystem">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Airbag system</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring if the airbag is deployed</skos:definition>
     </owl:Class>
@@ -1486,7 +1487,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/AntilockBrakingSystem">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Antilock braking system</rdfs:label>
         <skos:definition xml:lang="en">Appliance that allows thes wheels to maintain tractive contact by prevent them from locking up</skos:definition>
     </owl:Class>
@@ -1574,7 +1575,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/BackupLightSwitch -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/BackupLightSwitch">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Backup light switch</rdfs:label>
         <skos:definition xml:lang="en">Senses if the backup light switch is on</skos:definition>
     </owl:Class>
@@ -1584,7 +1585,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Bank2 -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Bank2">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
     </owl:Class>
     
 
@@ -1592,7 +1593,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Barometer -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Barometer">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
     </owl:Class>
     
 
@@ -1660,7 +1661,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/BatteryMonitor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/BatteryMonitor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Battery monitor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the capacity of a battery</skos:definition>
     </owl:Class>
@@ -1670,7 +1671,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/BatterySensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/BatterySensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
     </owl:Class>
     
 
@@ -1700,7 +1701,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/BeltSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/BeltSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Belt sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring if a seat is belted</skos:definition>
     </owl:Class>
@@ -1786,7 +1787,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/BrakeFluidLevelSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/BrakeFluidLevelSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Brake fluid level sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the brake fluid level</skos:definition>
     </owl:Class>
@@ -1806,7 +1807,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/BrakeLightSwitch -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/BrakeLightSwitch">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Brake light switch</rdfs:label>
         <skos:definition xml:lang="en">Senses if the brake light switch is on</skos:definition>
     </owl:Class>
@@ -1816,7 +1817,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/BrakePadWearSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/BrakePadWearSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Brake padwear sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the padwear of a brake</skos:definition>
     </owl:Class>
@@ -1950,7 +1951,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CatalystTemperatureSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CatalystTemperatureSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
     </owl:Class>
     
 
@@ -1975,7 +1976,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ChildLock">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Child lock</rdfs:label>
         <skos:definition xml:lang="en">Child lock</skos:definition>
     </owl:Class>
@@ -2007,7 +2008,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ClutchWearIndicator -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ClutchWearIndicator">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Clutch wear indicator</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the wear of the clutch</skos:definition>
     </owl:Class>
@@ -2156,7 +2157,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CoolantTemperatureSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CoolantTemperatureSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
     </owl:Class>
     
 
@@ -2164,7 +2165,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CoolantThermometer -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CoolantThermometer">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Coolant thermometer</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the temperature of the coolant fluid</skos:definition>
     </owl:Class>
@@ -2174,7 +2175,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CrankshaftPositionSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CrankshaftPositionSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
     </owl:Class>
     
 
@@ -2250,7 +2251,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CruiseControlSystem">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Cruise control system</rdfs:label>
         <skos:definition xml:lang="en">Appliance that automatically controls the speed of a vehicle</skos:definition>
     </owl:Class>
@@ -2483,7 +2484,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CushionPositionSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/CushionPositionSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
     </owl:Class>
     
 
@@ -2600,7 +2601,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Defroster">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Defroster</rdfs:label>
         <skos:definition xml:lang="en">Windshield defroster</skos:definition>
     </owl:Class>
@@ -2684,7 +2685,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/DiagnosticSystem -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/DiagnosticSystem">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
     </owl:Class>
     
 
@@ -2693,7 +2694,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/DimmingSystem">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Dimming system</rdfs:label>
         <skos:definition xml:lang="en">Mirror dimming system</skos:definition>
     </owl:Class>
@@ -2792,7 +2793,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/DomeLight">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Dome light</rdfs:label>
         <skos:definition xml:lang="en">Dome light</skos:definition>
     </owl:Class>
@@ -2828,7 +2829,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/DoorContactSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/DoorContactSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Door contact sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring if a door is open or closed</skos:definition>
     </owl:Class>
@@ -2897,7 +2898,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/DoorLock">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Door lock</rdfs:label>
         <skos:definition xml:lang="en">Door lock</skos:definition>
     </owl:Class>
@@ -2908,7 +2909,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/DriveSystem">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Drive system</rdfs:label>
         <skos:definition xml:lang="en">Driving mode control</skos:definition>
     </owl:Class>
@@ -2978,7 +2979,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/EGRSystemMonitor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/EGRSystemMonitor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
     </owl:Class>
     
 
@@ -3097,7 +3098,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/EVAPSystem -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/EVAPSystem">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
     </owl:Class>
     
 
@@ -3188,7 +3189,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ElectronicStabilityControlSystem">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Electronic stability control system</rdfs:label>
         <skos:definition xml:lang="en">System detecting loss of traction (skidding) and reducing it</skos:definition>
     </owl:Class>
@@ -3328,7 +3329,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/FanSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/FanSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Fan sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the fan speed</skos:definition>
     </owl:Class>
@@ -3367,7 +3368,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/FlowSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/FlowSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Flow sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the flow of a fluid (fuel)</skos:definition>
     </owl:Class>
@@ -3377,7 +3378,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/FluidSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/FluidSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
     </owl:Class>
     
 
@@ -3417,7 +3418,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/FrontFogLightSwitch -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/FrontFogLightSwitch">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Front fog position switch</rdfs:label>
         <skos:definition xml:lang="en">Senses if the front fog light switch is on</skos:definition>
     </owl:Class>
@@ -3487,7 +3488,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/FuelPressureSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/FuelPressureSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
     </owl:Class>
     
 
@@ -3539,7 +3540,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/FuelRailPressureSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/FuelRailPressureSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
     </owl:Class>
     
 
@@ -3629,7 +3630,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/FuelTankLevelSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/FuelTankLevelSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Fuel tank level sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the fuel tank level</skos:definition>
     </owl:Class>
@@ -3662,7 +3663,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/GPS">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
     </owl:Class>
     
 
@@ -3744,7 +3745,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Gearbox">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Gearbox system</rdfs:label>
         <skos:definition xml:lang="en">Gearbox monitoring system</skos:definition>
     </owl:Class>
@@ -3777,7 +3778,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/GloveBoxLight">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Glove box light</rdfs:label>
         <skos:definition xml:lang="en">Glove box light</skos:definition>
     </owl:Class>
@@ -3787,7 +3788,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Gyroscope -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Gyroscope">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Gyroscope</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the angular orientation and angular velocity</skos:definition>
     </owl:Class>
@@ -3823,7 +3824,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/HazardLightSwitch -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/HazardLightSwitch">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Hazard light switch</rdfs:label>
         <skos:definition xml:lang="en">Senses if the hazard light switch is on</skos:definition>
     </owl:Class>
@@ -3903,7 +3904,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/HeadRestraintSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/HeadRestraintSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Head restraint sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the position of the head restraint</skos:definition>
     </owl:Class>
@@ -3955,7 +3956,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/HighBeamLightSwitch -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/HighBeamLightSwitch">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">High Beam Light Switch</rdfs:label>
         <skos:definition xml:lang="en">Senses if the high beam switch is on</skos:definition>
     </owl:Class>
@@ -4017,7 +4018,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/HoodLatch">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Hood latch</rdfs:label>
         <skos:definition xml:lang="en">System controling the hood</skos:definition>
     </owl:Class>
@@ -4079,7 +4080,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/HornSystem">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Horn system</rdfs:label>
         <skos:definition xml:lang="en">Horn/honk system</skos:definition>
     </owl:Class>
@@ -4181,7 +4182,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Intake-AirTemperatureSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Intake-AirTemperatureSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
     </owl:Class>
     
 
@@ -4927,7 +4928,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/LaneDepartureDetectionSensor">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Lane departure detection sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring when a lane is crossed</skos:definition>
     </owl:Class>
@@ -5021,7 +5022,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/LeftIndicatorSwitch -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/LeftIndicatorSwitch">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Left indicator switch</rdfs:label>
         <skos:definition xml:lang="en">Senses if the left indicator switch is on</skos:definition>
     </owl:Class>
@@ -5053,7 +5054,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/LightSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/LightSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Light sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the light intensity</skos:definition>
     </owl:Class>
@@ -5222,7 +5223,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/LowBeamLightSwitch -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/LowBeamLightSwitch">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Low Beam Light Switch</rdfs:label>
         <skos:definition xml:lang="en">Senses if the low beam light switch is on</skos:definition>
     </owl:Class>
@@ -5350,7 +5351,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/LumbarPositionSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/LumbarPositionSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Lumbar position sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the lumbar position</skos:definition>
     </owl:Class>
@@ -5370,7 +5371,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/LumbarPressureSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/LumbarPressureSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
     </owl:Class>
     
 
@@ -5432,7 +5433,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/MAFSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/MAFSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
     </owl:Class>
     
 
@@ -5484,7 +5485,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ManifoldAirPressureSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ManifoldAirPressureSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Manifold Air Pressure Sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the MAP (manifold air pressure)</skos:definition>
     </owl:Class>
@@ -5494,7 +5495,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/MassAirFlowSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/MassAirFlowSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Mass air flow sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the MAF (mass air flow)</skos:definition>
     </owl:Class>
@@ -5521,7 +5522,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/MassageSystem">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Massage system</rdfs:label>
         <skos:definition xml:lang="en">Massage system for car seats</skos:definition>
     </owl:Class>
@@ -5834,7 +5835,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/MirrorPanSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/MirrorPanSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Mirror Pan Sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the pan of a mirror</skos:definition>
     </owl:Class>
@@ -5883,7 +5884,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/MirrorTiltSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/MirrorTiltSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Mirro Tilt Sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the tilt of a mirror</skos:definition>
     </owl:Class>
@@ -5894,7 +5895,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Mirrorheater">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Mirror heater</rdfs:label>
         <skos:definition xml:lang="en">Mirror heating appliance</skos:definition>
     </owl:Class>
@@ -5921,7 +5922,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/MultimediaSystem">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Multimedia system</rdfs:label>
         <skos:definition xml:lang="en">Multimedia system</skos:definition>
     </owl:Class>
@@ -6161,7 +6162,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ObstacleDetectionSensor">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Obstacle detection Sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the distance to obstacles</skos:definition>
     </owl:Class>
@@ -6171,7 +6172,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/OccupantClassificationSystem -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/OccupantClassificationSystem">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Occupant classification system</rdfs:label>
         <skos:definition xml:lang="en">Sensor detecting the presence of a passenger in a seat</skos:definition>
     </owl:Class>
@@ -6181,7 +6182,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Odometer -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Odometer">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Odometer</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the travelled distance</skos:definition>
     </owl:Class>
@@ -6191,7 +6192,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/OilPressureSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/OilPressureSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Oil pressure sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the pressure of oil in the engine</skos:definition>
     </owl:Class>
@@ -6201,7 +6202,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/OilThermometer -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/OilThermometer">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Oil thermometer</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the oil temperature</skos:definition>
     </owl:Class>
@@ -6284,7 +6285,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ParkingBrakeSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ParkingBrakeSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Parking brake sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring if the parking brake is engaged</skos:definition>
     </owl:Class>
@@ -6314,7 +6315,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ParkingLightSwitch -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ParkingLightSwitch">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Parking light switch</rdfs:label>
         <skos:definition xml:lang="en">Senses if the parking lkight switch is on</skos:definition>
     </owl:Class>
@@ -6325,7 +6326,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/PassengerLight">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Passenger light</rdfs:label>
         <skos:definition xml:lang="en">Individual passenger light system</skos:definition>
     </owl:Class>
@@ -6335,7 +6336,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/PedalPositionSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/PedalPositionSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Pedal position sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the pedal position</skos:definition>
     </owl:Class>
@@ -6456,7 +6457,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/PowerMeter -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/PowerMeter">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Power meter</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the engine power</skos:definition>
     </owl:Class>
@@ -6488,7 +6489,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/RainSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/RainSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Rain sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the rain intensity</skos:definition>
     </owl:Class>
@@ -6552,7 +6553,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/RearFogLightSwitch -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/RearFogLightSwitch">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Rear for light switch</rdfs:label>
         <skos:definition xml:lang="en">Senses if the rear fog light switch is on</skos:definition>
     </owl:Class>
@@ -6682,7 +6683,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/RecirculationSystem">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Recirculation system</rdfs:label>
         <skos:definition xml:lang="en">Recirculation system</skos:definition>
     </owl:Class>
@@ -6802,7 +6803,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/RightIndicatorSwitch -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/RightIndicatorSwitch">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Right indicator switch</rdfs:label>
         <skos:definition xml:lang="en">Senses if the right indicator switch is on</skos:definition>
     </owl:Class>
@@ -6834,7 +6835,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/RotationalSpeedSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/RotationalSpeedSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Rotational speed sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the rotational speed</skos:definition>
     </owl:Class>
@@ -6898,7 +6899,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/RunningLightSwitch -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/RunningLightSwitch">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Running light switch</rdfs:label>
         <skos:definition xml:lang="en">Senses if the running light switch is on</skos:definition>
     </owl:Class>
@@ -7020,7 +7021,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SeatHeater -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SeatHeater">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">seat heater</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the </skos:definition>
     </owl:Class>
@@ -7106,7 +7107,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SeatPositionSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SeatPositionSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Seat position sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the position of the seat</skos:definition>
     </owl:Class>
@@ -7348,7 +7349,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Speedometer -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Speedometer">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
     </owl:Class>
     
 
@@ -7394,7 +7395,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SteeringWheelAngleSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SteeringWheelAngleSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Steering wheel angle sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the angle of the steering wheel</skos:definition>
     </owl:Class>
@@ -7443,7 +7444,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SteeringWheelPositionSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SteeringWheelPositionSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Steering wheel position sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the position of a steering wheel</skos:definition>
     </owl:Class>
@@ -7578,7 +7579,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SunroofPositionSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/SunroofPositionSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Sunroof position sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the position of the sunroof</skos:definition>
     </owl:Class>
@@ -7747,7 +7748,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Thermometer -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Thermometer">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Thermometer</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the temperature</skos:definition>
     </owl:Class>
@@ -7838,7 +7839,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ThrottlePositionSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/ThrottlePositionSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Throttle position</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the trottle position</skos:definition>
     </owl:Class>
@@ -7892,7 +7893,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Timer -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/Timer">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Timer</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the elapsed time</skos:definition>
     </owl:Class>
@@ -7984,7 +7985,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/TirePressureMonitoringSystem -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/TirePressureMonitoringSystem">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Tire pressure monitoring system</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the pressure of a tire</skos:definition>
     </owl:Class>
@@ -8016,7 +8017,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/TireTemperatureSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/TireTemperatureSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Tire temperature sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the temperature of a tire</skos:definition>
     </owl:Class>
@@ -8048,7 +8049,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/TorqueMeter -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/TorqueMeter">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Torquemeter</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring a torque</skos:definition>
     </owl:Class>
@@ -8059,7 +8060,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/TractionControlSystem">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Traction control system</rdfs:label>
         <skos:definition xml:lang="en">Appliance designed to prevent loss of traction of wheels</skos:definition>
     </owl:Class>
@@ -8182,7 +8183,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/TrunkLatch">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Trunk latch</rdfs:label>
         <skos:definition xml:lang="en">System opening the trunk</skos:definition>
     </owl:Class>
@@ -8193,7 +8194,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/TrunkLight">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Trunk light</rdfs:label>
         <skos:definition xml:lang="en">Trunk light</skos:definition>
     </owl:Class>
@@ -8204,7 +8205,7 @@
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/TrunkLock">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Trunk lock</rdfs:label>
         <skos:definition xml:lang="en">System locking the trunk</skos:definition>
     </owl:Class>
@@ -8276,6 +8277,16 @@
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Roll</rdfs:label>
         <skos:definition xml:lang="en">Signal.Vehicle.AngularVelocity.Roll : Vehicle rotation rate along X (longitudinal).</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor -->
+
+    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehiclePart"/>
+        <rdfs:label xml:lang="en">vehicle sensor</rdfs:label>
     </owl:Class>
     
 
@@ -8356,7 +8367,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VoltageSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VoltageSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
     </owl:Class>
     
 
@@ -8446,7 +8457,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/WasherFuildLevelSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/WasherFuildLevelSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Washer fluid level sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the washer fluid level</skos:definition>
     </owl:Class>
@@ -8510,7 +8521,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/WindowPositionSensor -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/WindowPositionSensor">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Window position sensor</rdfs:label>
         <skos:definition xml:lang="en">Sensor measuring the position of a window</skos:definition>
     </owl:Class>
@@ -8610,7 +8621,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/WindshieldHeaterSwitch -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/WindshieldHeaterSwitch">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Windshield heater switch</rdfs:label>
         <skos:definition xml:lang="en">Senses the windshield heater status</skos:definition>
     </owl:Class>
@@ -8681,7 +8692,7 @@
     <!-- https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/WiperSwitch -->
 
     <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/WiperSwitch">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/VehicleSensor"/>
         <rdfs:label xml:lang="en">Wiper switch</rdfs:label>
         <skos:definition xml:lang="en">Senses the wiping level</skos:definition>
     </owl:Class>
@@ -8787,8 +8798,8 @@
         <skos:definition xml:lang="en">Attribute.Chassis.Axle.Count : Number of axles on the vehicle</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/bodyType">
-        <skos:definition xml:lang="en">Attribute.Body.BodyType : Body type code as defined by ISO 3779</skos:definition>
         <rdfs:label xml:lang="en">BodyType</rdfs:label>
+        <skos:definition xml:lang="en">Attribute.Body.BodyType : Body type code as defined by ISO 3779</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/brand">
         <skos:definition xml:lang="en">Attribute.Vehicle.VehicleIdentification.Brand : Vehicle brand or manufacturer</skos:definition>
@@ -8835,8 +8846,8 @@
         <rdfs:label xml:lang="en">Height</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/length">
-        <skos:definition xml:lang="en">Attribute.Chassis.Length : Overall vehicle length, in mm.</skos:definition>
         <rdfs:label xml:lang="en">Length</rdfs:label>
+        <skos:definition xml:lang="en">Attribute.Chassis.Length : Overall vehicle length, in mm.</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/maxPower">
         <skos:definition xml:lang="en">Attribute.Drivetrain.InternalCombustionEngine.MaxPower : Peak power, in kilowatts, that engine can generate.</skos:definition>

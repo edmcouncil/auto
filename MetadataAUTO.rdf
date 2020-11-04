@@ -18,7 +18,8 @@
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/MetadataEC/"/>        
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/FD/MetadataFD/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MetadataMO/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/MetadataEO/"/>                  
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/MetadataEO/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/MetadataDE/"/>                                            
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-18T01:43:00</dct:issued>
         <dct:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opensource.org/licenses/MIT</dct:license>
         <sm:contentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
@@ -36,7 +37,8 @@
         <dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/MetadataEC/"/>
         <dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/FD/MetadataFD/"/>
         <dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MetadataMO/"/>
-        <dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/MetadataEO/"/>                          
+        <dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/MetadataEO/"/>
+        <dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/MetadataDE/"/>                                   
         <dct:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opensource.org/licenses/MIT</dct:license>
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-18T01:43:00</dct:issued>        
         <dct:title>Automotive Ontology (AUTO)</dct:title>
