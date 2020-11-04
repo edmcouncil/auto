@@ -24,7 +24,7 @@
      xmlns:auto-ec-vvo="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/"
      xmlns:auto-mo-mod="https://spec.edmcouncil.org/auto/ontology/EC/MetadataMO/"
      xmlns:auto-eo-vsso="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/"
-     xmlns:auto-de-tio="https://spec.edmcouncil.org/auto/TrafficIncidents/"     
+     xmlns:auto-de-tio="https://spec.edmcouncil.org/auto/ontology/EO/TrafficIncidents/"     
      xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/AboutAUTODev/">
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MetadataAUTO/"/>
