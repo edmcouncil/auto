@@ -29,7 +29,7 @@
         <sm:dependsOn rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://spec.edmcouncil.org/auto/ontology/EC/</sm:dependsOn>
         <sm:fileAbbreviation>auto-ec-veo</sm:fileAbbreviation>
         <sm:filename>VehicleEmissions.rdf</sm:filename>        
-        <fibo-fnd-utl-av:hasMaturityLevel rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Informative"/>
+        <fibo-fnd-utl-av:hasMaturityLevel rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Provisional"/>
     </owl:Ontology>
     
 

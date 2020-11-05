@@ -25,7 +25,7 @@
         <dct:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
         <sm:fileAbbreviation>auto-ec-coo</sm:fileAbbreviation>
         <sm:filename>CarOptions.rdf</sm:filename>        
-        <fibo-fnd-utl-av:hasMaturityLevel rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Informative"/>
+        <fibo-fnd-utl-av:hasMaturityLevel rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Provisional"/>
     </owl:Ontology>
     
 

@@ -23,7 +23,7 @@
         <SpecificationMetadata:filename>VehicleSales.rdf</SpecificationMetadata:filename>
         <rdfs:comment xml:lang="en">The Vehicle Sales Ontology (VSO) has been initially created by Martin Hepp (see https://lov.linkeddata.es/dataset/lov/vocabs/vso). VSO, as created by Martin Hepp, is available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/. Many class and property definitions are inspired by or based on abstracts from Wikipedia, the free encyclopedia.</rdfs:comment>
         <rdfs:label xml:lang="en">Vehicle Sales Ontology (VSO)</rdfs:label>
-        <fibo-fnd-utl-av:hasMaturityLevel rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Informative"/>
+        <fibo-fnd-utl-av:hasMaturityLevel rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Provisional"/>
     </owl:Ontology>
     
 

@@ -23,7 +23,7 @@
      xmlns:auto-ec-vso="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/"
      xmlns:auto-ec-vvo="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/"
      xmlns:auto-mo-mod="https://spec.edmcouncil.org/auto/ontology/EC/MetadataMO/"
-     xmlns:auto-eo-vsso="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/"
+     xmlns:auto-vs-vsso="https://spec.edmcouncil.org/auto/ontology/VS/VehicleSignals/"
      xmlns:auto-de-tio="https://spec.edmcouncil.org/auto/ontology/EO/TrafficIncidents/"     
      xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/AboutAUTODev/">
@@ -38,7 +38,7 @@
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EO/VehicleSignals/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VS/VehicleSignals/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/"/>        
         <terms:abstract>This ontology is provided for the convenience of AUTO users.  It loads the very latest version of every AUTO ontology (released, provisional, and informative) based on the contents of GitHub, for use in particular while working on revisions.  Note that metadata files are included.</terms:abstract>
         <terms:license rdf:resource="http://opensource.org/licenses/MIT"/>

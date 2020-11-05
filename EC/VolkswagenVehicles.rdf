@@ -26,7 +26,7 @@
         <sm:filename>VolkswagenVehicles.rdf</sm:filename>
         <rdfs:comment xml:lang="en">The Volkswagen Vehicles Ontology has been initially created by Martin Hepp with the contribution of Charles Sandeman-Craik, Tribal DDB; Chris Jenkins, Tribal DDB; Tim Redding, Tribal DDB; Yago Otero, Tribal DDB; William Greenly, Tribal DDB; Robin Dingle, Volkswagen UK (see https://lov.linkeddata.es/dataset/lov/vocabs/vvo). VVO, as created by Martin Hepp, is available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/. Some class and property definitions are inspired by or based on abstracts from Wikipedia, the free encyclopedia.</rdfs:comment>
         <rdfs:label xml:lang="en">Volkswagen Vehicles Ontology (VVO)</rdfs:label>
-        <fibo-fnd-utl-av:hasMaturityLevel rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Informative"/>
+        <fibo-fnd-utl-av:hasMaturityLevel rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Provisional"/>
     </owl:Ontology>
     
 

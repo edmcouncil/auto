@@ -23,7 +23,7 @@
         <SpecificationMetadata:filename>UsedCars.rdf</SpecificationMetadata:filename>
         <rdfs:comment xml:lang="en">The Used Cars Ontology (UCO) has been initially created by Hepp Research GmbH and Makolab SA (see http://ontologies.makolab.com/uco/ns.html). UCO, as created by Hepp Research GmbH and Makolab SA, is available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/.</rdfs:comment>
         <rdfs:label xml:lang="en">Used Cars Ontology (UCO)</rdfs:label>
-        <fibo-fnd-utl-av:hasMaturityLevel rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Informative"/>
+        <fibo-fnd-utl-av:hasMaturityLevel rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Provisional"/>
     </owl:Ontology>
     
 
