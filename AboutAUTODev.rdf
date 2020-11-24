@@ -40,6 +40,7 @@
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VS/VehicleSignals/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/"/>        
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/"/>
         <terms:abstract>This ontology is provided for the convenience of AUTO users.  It loads the very latest version of every AUTO ontology (released, provisional, and informative) based on the contents of GitHub, for use in particular while working on revisions.  Note that metadata files are included.</terms:abstract>
         <terms:license rdf:resource="http://opensource.org/licenses/MIT"/>
         <sm:contentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
