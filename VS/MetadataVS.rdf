@@ -1,52 +1,59 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://spec.edmcouncil.org/auto/ontology/VS/MetadataVS/"
-     xml:base="https://spec.edmcouncil.org/auto/ontology/VS/MetadataVS/"
-     xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
-     xmlns:dct="http://purl.org/dc/terms/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:fibo-fnd-utl-mod="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/MetadataFNDUtilities/"
-     xmlns:auto-vs-mod="https://spec.edmcouncil.org/auto/ontology/VS/MetadataVS/"
-     xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
-     xmlns:fibo-fnd-utl-val="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/">
-    
-    <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/VS/MetadataVS/">
-        <owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/VS/MetadataVS/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
-        <dct:abstract>This ontology provides metadata for the Vehicle Signals Ontologies</dct:abstract>
-        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-18T01:43:00</dct:issued>
-        <dct:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opensource.org/licenses/MIT</dct:license>
-        <sm:contentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
-        <sm:copyright>Copyright (c) 2020 EDM Council, Inc.</sm:copyright>
-        <sm:fileAbbreviation>auto-vs-mod</sm:fileAbbreviation>
-        <sm:filename>MetadataVS.rdf</sm:filename>
-        <rdfs:label>Metadata for the Vehicle Signals Ontologies</rdfs:label>
-    </owl:Ontology>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY auto-vs-mod "https://spec.edmcouncil.org/auto/ontology/VS/MetadataVS/">
+	<!ENTITY dct "http://purl.org/dc/terms/">
+	<!ENTITY fibo-fnd-utl-av "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
+	<!ENTITY fibo-fnd-utl-mod "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/MetadataFNDUtilities/">
+	<!ENTITY fibo-fnd-utl-val "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/">
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY skos "http://www.w3.org/2004/02/skos/core#">
+	<!ENTITY sm "http://www.omg.org/techprocess/ab/SpecificationMetadata/">
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+<rdf:RDF xml:base="https://spec.edmcouncil.org/auto/ontology/VS/MetadataVS/"
+	xmlns="https://spec.edmcouncil.org/auto/ontology/VS/MetadataVS/"
+	xmlns:auto-vs-mod="https://spec.edmcouncil.org/auto/ontology/VS/MetadataVS/"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
+	xmlns:fibo-fnd-utl-mod="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/MetadataFNDUtilities/"
+	xmlns:fibo-fnd-utl-val="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	
+	<owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/VS/MetadataVS/">
+		<rdfs:label>Metadata for the Vehicle Signals Ontologies</rdfs:label>
+		<dct:abstract>This ontology provides metadata for the Vehicle Signals Ontologies</dct:abstract>
+		<dct:issued rdf:datatype="&xsd;dateTime">2020-03-18T01:43:00</dct:issued>
+		<dct:license rdf:datatype="&xsd;anyURI">http://opensource.org/licenses/MIT</dct:license>
+		<sm:contentLanguage rdf:datatype="&xsd;anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
+		<sm:copyright>Copyright (c) 2020 EDM Council, Inc.</sm:copyright>
+		<sm:fileAbbreviation>auto-vs-mod</sm:fileAbbreviation>
+		<sm:filename>MetadataVS.rdf</sm:filename>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
+		<owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/VS/MetadataVS/"/>
+	</owl:Ontology>
+	
+	<owl:NamedIndividual rdf:about="&auto-vs-mod;VSDomain">
+		<rdf:type rdf:resource="&sm;Module"/>
+		<rdfs:label>Vehicle Signals Ontologies</rdfs:label>
+		<dct:abstract>This ontology provides metadata for the Vehicle Signals Ontologies</dct:abstract>
+		<dct:creator rdf:datatype="&xsd;anyURI">https://www.w3.org/community/gao/</dct:creator>
+		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/VS/VehicleSignals/"/>
+		<dct:license rdf:datatype="&xsd;anyURI">http://opensource.org/licenses/MIT</dct:license>
+		<dct:title>EDMC Automotive Ontology (AUTO) VS Domain</dct:title>
+		<sm:contributor>FIBO Community</sm:contributor>
+		<sm:copyright>Copyright (c) 2020 EDM Council, Inc.</sm:copyright>
+		<sm:dependsOn rdf:datatype="&xsd;anyURI">http://www.omg.org/techprocess/ab/SpecificationMetadata/</sm:dependsOn>
+		<sm:keyword>Vehicle Signals</sm:keyword>
+		<sm:moduleAbbreviation>auto-vs</sm:moduleAbbreviation>
+		<rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/VS/MetadataVS/"/>
+		<rdfs:seeAlso rdf:datatype="&xsd;anyURI">https://spec.edmcouncil.org/auto/</rdfs:seeAlso>
+	</owl:NamedIndividual>
 
-    
-    <owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/VS/MetadataVS/VSDomain">
-        <rdf:type rdf:resource="http://www.omg.org/techprocess/ab/SpecificationMetadata/Module"/>
-        <dct:abstract>This ontology provides metadata for the Vehicle Signals Ontologies</dct:abstract>
-        <dct:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.w3.org/community/gao/</dct:creator>
-        <dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/VS/VehicleSignals/"/>                 
-        <dct:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opensource.org/licenses/MIT</dct:license>
-        <dct:title>EDMC Automotive Ontology (AUTO) VS Domain</dct:title>
-        <sm:contributor>FIBO Community</sm:contributor>
-        <sm:copyright>Copyright (c) 2020 EDM Council, Inc.</sm:copyright>
-        <sm:dependsOn rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.omg.org/techprocess/ab/SpecificationMetadata/</sm:dependsOn>
-        <sm:keyword>Vehicle Signals</sm:keyword>
-        <sm:moduleAbbreviation>auto-vs</sm:moduleAbbreviation>
-        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/VS/MetadataVS/"/>
-        <rdfs:label>Vehicle Signals Ontologies</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://spec.edmcouncil.org/auto/</rdfs:seeAlso>
-    </owl:NamedIndividual>
 </rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
-

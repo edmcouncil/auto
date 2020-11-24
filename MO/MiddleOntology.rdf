@@ -1,346 +1,192 @@
-<?xml version="1.0"?>
-<rdf:RDF xmlns="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
-     xml:base="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
-     xmlns:dct="http://purl.org/dc/terms/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:rdfa="http://www.w3.org/ns/rdfa#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:dctype="http://purl.org/dc/dcmitype/"
-     xmlns:auto-mo-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
-     xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
-     xmlns:fibo-fnd-utl-val="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/">
-    <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/">
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
-        <dct:abstract>The EDMC-AUTO middle ontology</dct:abstract>
-        <dct:license rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://opensource.org/licenses/MIT</dct:license>
-        <sm:contentLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
-        <sm:copyright>Copyright (c) 2020 EDM Council, Inc.</sm:copyright>
-        <sm:dependsOn rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://spec.edmcouncil.org/auto/ontology/MO/</sm:dependsOn>
-        <sm:fileAbbreviation>auto-mo-mo</sm:fileAbbreviation>
-        <sm:filename>MiddleOntology.rdf</sm:filename>
-        <rdfs:label>EDMC-AUTO Middle Ontology</rdfs:label>
-        <fibo-fnd-utl-av:hasMaturityLevel rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/Provisional"/>
-    </owl:Ontology>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.org/dc/terms/isPartOf -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isPartOf"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/qualitativeProductOrServiceProperty -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/qualitativeProductOrServiceProperty">
-        <rdfs:label xml:lang="en">qualitative product or service property</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/quantitativeProductOrServiceProperty">
-        <rdfs:label xml:lang="en">quantitative product or service property</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/valueReference -->
-
-    <owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/valueReference"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/datatypeProductOrServiceProperty -->
-
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/datatypeProductOrServiceProperty">
-        <rdfs:label xml:lang="en">datatype product or service property</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasMaxValueFloat -->
-
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasMaxValueFloat">
-        <rdfs:label xml:lang="en">has max value float</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasMinValueFloat -->
-
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasMinValueFloat">
-        <rdfs:label xml:lang="en">has min value float</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasUnitOfMeasurement -->
-
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasUnitOfMeasurement">
-        <rdfs:label xml:lang="en">has unit of measurement</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasValueFloat -->
-
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/hasValueFloat">
-        <rdfs:label xml:lang="en">has value float</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/serialNumber -->
-
-    <owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/serialNumber">
-        <rdfs:label xml:lang="en">serial number</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity">
-        <rdfs:label xml:lang="en">business entity</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntityType -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntityType">
-        <rdfs:label xml:lang="en">business entity type</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Event -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Event">
-        <rdfs:label xml:lang="en">event</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Location -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Location">
-        <owl:equivalentClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Place"/>
-        <rdfs:label xml:lang="en">location</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Offering -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Offering">
-        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
-        <rdfs:label xml:lang="en">offering</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Organization -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Organization">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
-        <rdfs:label xml:lang="en">organization</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PaymentMethod -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PaymentMethod">
-        <rdfs:label xml:lang="en">payment method</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/BusinessEntity"/>
-        <rdfs:label xml:lang="en">person</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Place -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Place">
-        <rdfs:label xml:lang="en">place</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PostalAddress -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PostalAddress">
-        <rdfs:label xml:lang="en">postal address</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification">
-        <rdfs:label xml:lang="en">price speciﬁcation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService">
-        <rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
-        <rdfs:label xml:lang="en">product or service</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrServiceModel -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrServiceModel">
-        <rdfs:label xml:lang="en">product or service model</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PropertyValue -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PropertyValue">
-        <rdfs:label xml:lang="en">property value</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QualitativeValue -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QualitativeValue">
-        <dct:isPartOf rdf:resource="http://auto.schema.org"/>
-        <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <sm:directSource rdf:resource="https://schema.org/QualitativeValue"/>
-        <rdfs:label xml:lang="en">qualitative value</rdfs:label>
-        <skos:definition xml:lang="en">a predefined value for a product characteristic, e.g. the power cord plug type &apos;US&apos; or the garment sizes &apos;S&apos;, &apos;M&apos;, &apos;L&apos;, and &apos;XL&apos;</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue">
-        <dct:isPartOf rdf:resource="http://auto.schema.org"/>
-        <dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-        <sm:directSource rdf:resource="https://schema.org/QuantitativeValue"/>
-        <rdfs:label xml:lang="en">quantitative value</rdfs:label>
-        <skos:definition xml:lang="en">a point value or interval for product characteristics and other purposes</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueFloat">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
-        <rdfs:label xml:lang="en">quantitative value float</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValueInteger">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QuantitativeValue"/>
-        <rdfs:label xml:lang="en">quantitative value integer</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/RelativePriceSpecification -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/RelativePriceSpecification">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/PriceSpecification"/>
-        <rdfs:comment xml:lang="en">A shortcut for indicating the effect of a choice or set of choices on the unit price. Use positive values for a surcharge and negative values for a deduction.
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY auto-mo-mo "https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/">
+	<!ENTITY dc "http://purl.org/dc/elements/1.1/">
+	<!ENTITY dct "http://purl.org/dc/terms/">
+	<!ENTITY dctype "http://purl.org/dc/dcmitype/">
+	<!ENTITY fibo-fnd-utl-av "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
+	<!ENTITY fibo-fnd-utl-val "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/">
+	<!ENTITY foaf "http://xmlns.com/foaf/0.1/">
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY rdfa "http://www.w3.org/ns/rdfa#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY skos "http://www.w3.org/2004/02/skos/core#">
+	<!ENTITY sm "http://www.omg.org/techprocess/ab/SpecificationMetadata/">
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+<rdf:RDF xml:base="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
+	xmlns="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
+	xmlns:auto-mo-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:dctype="http://purl.org/dc/dcmitype/"
+	xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
+	xmlns:fibo-fnd-utl-val="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfa="http://www.w3.org/ns/rdfa#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	
+	<owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/">
+		<rdfs:label>EDMC-AUTO Middle Ontology</rdfs:label>
+		<dct:abstract>The EDMC-AUTO middle ontology</dct:abstract>
+		<dct:license rdf:datatype="&xsd;anyURI">http://opensource.org/licenses/MIT</dct:license>
+		<sm:contentLanguage rdf:datatype="&xsd;anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
+		<sm:copyright>Copyright (c) 2020 EDM Council, Inc.</sm:copyright>
+		<sm:dependsOn rdf:datatype="&xsd;anyURI">https://spec.edmcouncil.org/auto/ontology/MO/</sm:dependsOn>
+		<sm:fileAbbreviation>auto-mo-mo</sm:fileAbbreviation>
+		<sm:filename>MiddleOntology.rdf</sm:filename>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
+		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
+	</owl:Ontology>
+	
+	<owl:AnnotationProperty rdf:about="&dct;isPartOf">
+	</owl:AnnotationProperty>
+	
+	<owl:Class rdf:about="&auto-mo-mo;BusinessEntity">
+		<rdfs:label xml:lang="en">business entity</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-mo-mo;BusinessEntityType">
+		<rdfs:label xml:lang="en">business entity type</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-mo-mo;Event">
+		<rdfs:label xml:lang="en">event</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-mo-mo;Location">
+		<rdfs:label xml:lang="en">location</rdfs:label>
+		<owl:equivalentClass rdf:resource="&auto-mo-mo;Place"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-mo-mo;Offering">
+		<rdfs:label xml:lang="en">offering</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-mo-mo;Organization">
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;BusinessEntity"/>
+		<rdfs:label xml:lang="en">organization</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-mo-mo;PaymentMethod">
+		<rdfs:label xml:lang="en">payment method</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-mo-mo;Person">
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;BusinessEntity"/>
+		<rdfs:label xml:lang="en">person</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-mo-mo;Place">
+		<rdfs:label xml:lang="en">place</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-mo-mo;PostalAddress">
+		<rdfs:label xml:lang="en">postal address</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-mo-mo;PriceSpecification">
+		<rdfs:label xml:lang="en">price speciﬁcation</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-mo-mo;ProductOrService">
+		<rdfs:label xml:lang="en">product or service</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-mo-mo;ProductOrServiceModel">
+		<rdfs:label xml:lang="en">product or service model</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-mo-mo;PropertyValue">
+		<rdfs:label xml:lang="en">property value</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-mo-mo;QualitativeValue">
+		<rdfs:label xml:lang="en">qualitative value</rdfs:label>
+		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
+		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+		<sm:directSource rdf:resource="https://schema.org/QualitativeValue"/>
+		<skos:definition xml:lang="en">a predefined value for a product characteristic, e.g. the power cord plug type &apos;US&apos; or the garment sizes &apos;S&apos;, &apos;M&apos;, &apos;L&apos;, and &apos;XL&apos;</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-mo-mo;QuantitativeValue">
+		<rdfs:label xml:lang="en">quantitative value</rdfs:label>
+		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
+		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
+		<sm:directSource rdf:resource="https://schema.org/QuantitativeValue"/>
+		<skos:definition xml:lang="en">a point value or interval for product characteristics and other purposes</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-mo-mo;QuantitativeValueFloat">
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QuantitativeValue"/>
+		<rdfs:label xml:lang="en">quantitative value float</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-mo-mo;QuantitativeValueInteger">
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QuantitativeValue"/>
+		<rdfs:label xml:lang="en">quantitative value integer</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-mo-mo;RelativePriceSpecification">
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;PriceSpecification"/>
+		<rdfs:label xml:lang="en">relative price speciﬁcation</rdfs:label>
+		<rdfs:comment xml:lang="en">A shortcut for indicating the effect of a choice or set of choices on the unit price. Use positive values for a surcharge and negative values for a deduction.
 
 Note: Price information should in general be attached to a gr:Offering node, not to a Base Model, Trim, Derivative, or Complete Car Model. Use this shortcut with care.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-        <rdfs:label xml:lang="en">relative price speciﬁcation</rdfs:label>
-    </owl:Class>
-    
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-mo-mo;Service">
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;ProductOrService"/>
+		<rdfs:label xml:lang="en">service</rdfs:label>
+		<skos:definition xml:lang="en">A service or service model. Typical instances are complementing services for a particular car.</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-mo-mo;WarrantyScope">
+		<rdfs:label xml:lang="en">warranty scope</rdfs:label>
+	</owl:Class>
+	
+	<owl:DatatypeProperty rdf:about="&auto-mo-mo;datatypeProductOrServiceProperty">
+		<rdfs:label xml:lang="en">datatype product or service property</rdfs:label>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-mo-mo;hasMaxValueFloat">
+		<rdfs:label xml:lang="en">has max value float</rdfs:label>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-mo-mo;hasMinValueFloat">
+		<rdfs:label xml:lang="en">has min value float</rdfs:label>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-mo-mo;hasUnitOfMeasurement">
+		<rdfs:label xml:lang="en">has unit of measurement</rdfs:label>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-mo-mo;hasValueFloat">
+		<rdfs:label xml:lang="en">has value float</rdfs:label>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-mo-mo;qualitativeProductOrServiceProperty">
+		<rdfs:label xml:lang="en">qualitative product or service property</rdfs:label>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-mo-mo;quantitativeProductOrServiceProperty">
+		<rdfs:label xml:lang="en">quantitative product or service property</rdfs:label>
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-mo-mo;serialNumber">
+		<rdfs:label xml:lang="en">serial number</rdfs:label>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-mo-mo;valueReference">
+	</owl:ObjectProperty>
 
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Service -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Service">
-        <rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService"/>
-        <rdfs:label xml:lang="en">service</rdfs:label>
-        <skos:definition xml:lang="en">A service or service model. Typical instances are complementing services for a particular car.</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/WarrantyScope -->
-
-    <owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/WarrantyScope">
-        <rdfs:label xml:lang="en">warranty scope</rdfs:label>
-    </owl:Class>
 </rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
-
