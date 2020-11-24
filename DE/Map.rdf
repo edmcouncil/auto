@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY auto-de-map "https://spec.edmcouncil.org/auto/ontology/DE/Map/">
+	<!ENTITY dc "http://purl.org/dc/elements/1.1/">
+	<!ENTITY dct "http://purl.org/dc/terms/">
+	<!ENTITY fibo-fnd-utl-av "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
+	<!ENTITY geo "http://www.w3.org/2003/01/geo/wgs84_pos#">
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY skos "http://www.w3.org/2004/02/skos/core#">
+	<!ENTITY sm "http://www.omg.org/techprocess/ab/SpecificationMetadata/">
+	<!ENTITY swrl "http://www.w3.org/2003/11/swrl#">
+	<!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#">
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+<rdf:RDF xml:base="https://spec.edmcouncil.org/auto/ontology/DE/Map/"
+	xmlns="https://spec.edmcouncil.org/auto/ontology/DE/Map/"
+	xmlns:auto-de-map="https://spec.edmcouncil.org/auto/ontology/DE/Map/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+	xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+	xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	
+	<owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/Map/">
+		<rdfs:label xml:lang="en">Map Ontology (MAP)</rdfs:label>
+		<rdfs:comment xml:lang="en">The Map Ontology (MAP) has been initially created by Lihua Zhao and Yutaka Sasaki at the Computational Intelligence Laboratory, Toyota Technological Institute, Nagoya, Japan (see https://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/) and published by the Toyota Technological Institute Smart Vehicle Research Project. MAP, as created by the Computational Intelligence Laboratory, is available under the Creative Commons - Attribution-NonCommercial-ShareAlike
+4.0 International (http://creativecommons.org/licenses/by-nc-sa/4.0/).</rdfs:comment>
+		<dct:abstract xml:lang="en">A sophisticated machine understandable map is required for autonomous vehicles to perceive driving environments. Therefore, we construct a map ontology.</dct:abstract>
+		<dct:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+		<sm:contentLanguage rdf:datatype="&xsd;anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
+		<sm:dependsOn rdf:datatype="&xsd;anyURI">https://spec.edmcouncil.org/auto/ontology/EC/</sm:dependsOn>
+		<sm:fileAbbreviation>auto-de-map</sm:fileAbbreviation>
+		<sm:filename>Map.rdf</sm:filename>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
+		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
+	</owl:Ontology>
+	
+	<owl:AnnotationProperty rdf:about="&dct;creator">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&dct;license">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&dct;publisher">
+	</owl:AnnotationProperty>
+	
+	<owl:Class rdf:about="&auto-de-map;Airport">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Infrastructure"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;Amenity">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Place"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;AuxiliaryRoadSign">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;RoadSign"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;Bank">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Building"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;Building">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Place"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;BusLane">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Lane"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;BusStation">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Station"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;BusStop">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;BusStation"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;College">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;EducationalInstitute"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;Convenience">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Shop"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;CrosswalkRoadSegment">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;RoadSegment"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;DirectionalRoadSign">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;RoadSign"/>
+		<rdfs:comment>Directional road sign</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;EducationalInstitute">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Building"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;FastFood">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Restaurant"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;FireStation">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Building"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;Forest">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;NaturalPlace"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;GasStation">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Infrastructure"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;Highway">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;RoadType"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;Hospital">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Building"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;Infrastructure">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Place"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;InstructionRoadSign">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;RoadSign"/>
+		<rdfs:comment xml:lang="en">Instruction road sign</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;InstructionSurfaceSign">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;RoadSurfaceMarking"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;Intersection">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Junction"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;Junction">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;RoadPart"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;Kindergarten">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;EducationalInstitute"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;Lake">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;NaturalPlace"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;Lane">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;RoadPart"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;LaneAdapter">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Junction"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;Leisure">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Amenity"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;LocalRoad">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;OrdinaryRoad"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;MetroStation">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Station"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;MunicipalRoad">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;OrdinaryRoad"/>
+		<rdfs:comment>MunicipalRoad</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;NationalRoad">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;OrdinaryRoad"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;NaturalPlace">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Place"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;Object">
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;OneWayLane">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Lane"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;OrdinaryRoad">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;RoadType"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;OtherSigns">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;RoadSurfaceMarking"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;Park">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Leisure"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;ParkingPlace">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Amenity"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;Pharmacy">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Shop"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;Place">
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;PoliceStation">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Building"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;PostOffice">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Building"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;PrefecturalRoad">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;OrdinaryRoad"/>
+		<rdfs:comment>PrefecturalRoad</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;PrivateRoad">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;OrdinaryRoad"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;RailwayStation">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Station"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;RegulatoryRoadSign">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;RoadSign"/>
+		<rdfs:comment xml:lang="en">Regulatory sign</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;RegulatorySurfaceSign">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;RoadSurfaceMarking"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;Restaurant">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Amenity"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;River">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;NaturalPlace"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;RoadPart">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;RouteOfTransportation"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;RoadSegment">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;RoadPart"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;RoadSign">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;TrafficSign"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;RoadSurfaceMarking">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;TrafficSign"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;RoadType">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;RouteOfTransportation"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;Roundabout">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Junction"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;RouteOfTransportation">
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;School">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;EducationalInstitute"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;Shop">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Amenity"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;SpeedLimit">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;RouteOfTransportation"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;SpeedLimit100">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;SpeedLimit"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;SpeedLimit25">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;SpeedLimit"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;SpeedLimit30">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;SpeedLimit"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;SpeedLimit40">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;SpeedLimit"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;SpeedLimit50">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;SpeedLimit"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;SpeedLimit60">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;SpeedLimit"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;SpeedLimit70">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;SpeedLimit"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;SpeedLimit80">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;SpeedLimit"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;SportsCentre">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Leisure"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;Station">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Infrastructure"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;Supermarket">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Shop"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;TollGate">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Infrastructure"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;TrafficSign">
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;TrafficSignal">
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;Turn">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Junction"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;TwoWayLane">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Lane"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;University">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;EducationalInstitute"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;UtilityPole">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;Object"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-map;WarningRoadSign">
+		<rdfs:subClassOf rdf:resource="&auto-de-map;RoadSign"/>
+		<rdfs:comment xml:lang="en">Warning sign</rdfs:comment>
+	</owl:Class>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;address">
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;adminArea">
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;allowLaneChange">
+		<rdfs:range rdf:resource="&xsd;boolean"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;allowedDir">
+		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+		<rdfs:domain rdf:resource="&auto-de-map;Lane"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;alt">
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;angle">
+		<rdfs:domain rdf:resource="&auto-de-map;TrafficSignal"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;boundCoordinate">
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;boundPos">
+		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;brand">
+	</owl:DatatypeProperty>
+	
+	<rdfs:Datatype rdf:about="&auto-de-map;byte">
+	</rdfs:Datatype>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;curve_id">
+	</owl:DatatypeProperty>
+	
+	<rdfs:Datatype rdf:about="&auto-de-map;deg">
+	</rdfs:Datatype>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;drivingDir">
+		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+		<rdfs:domain rdf:resource="&auto-de-map;Lane"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;enterPos">
+		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+		<rdfs:domain rdf:resource="&auto-de-map;Lane"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;exitPos">
+		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+		<rdfs:domain rdf:resource="&auto-de-map;Lane"/>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-map;goStraightTo">
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-map;hasCar">
+		<rdfs:domain rdf:resource="&auto-de-map;RouteOfTransportation"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-map;hasIntersection">
+		<rdfs:subPropertyOf rdf:resource="&auto-de-map;hasJunction"/>
+		<rdfs:domain rdf:resource="&auto-de-map;RoadType"/>
+		<rdfs:range rdf:resource="&auto-de-map;Intersection"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-map;hasJunction">
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-map;hasLane">
+		<rdfs:domain rdf:resource="&auto-de-map;RoadSegment"/>
+		<rdfs:range rdf:resource="&auto-de-map;Lane"/>
+		<owl:inverseOf rdf:resource="&auto-de-map;isLaneOf"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-map;hasRoadSegment">
+		<owl:inverseOf rdf:resource="&auto-de-map;isRoadSegmentOf"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-map;isConnectedTo">
+		<rdf:type rdf:resource="&owl;SymmetricProperty"/>
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;isEmpty">
+		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+		<rdfs:domain rdf:resource="&auto-de-map;RoadPart"/>
+		<rdfs:range rdf:resource="&xsd;boolean"/>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-map;isLaneOf">
+		<rdfs:domain rdf:resource="&auto-de-map;Lane"/>
+		<rdfs:range rdf:resource="&auto-de-map;RoadSegment"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-map;isLeftOf">
+		<owl:inverseOf rdf:resource="&auto-de-map;isRightOf"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-map;isNextTo">
+		<rdfs:domain rdf:resource="&auto-de-map;Lane"/>
+		<rdfs:range rdf:resource="&auto-de-map;Lane"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-map;isOn">
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-map;isRightOf">
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-map;isRoadSegmentOf">
+	</owl:ObjectProperty>
+	
+	<rdfs:Datatype rdf:about="&auto-de-map;kHz">
+		<rdfs:label>kilohertz</rdfs:label>
+	</rdfs:Datatype>
+	
+	<rdfs:Datatype rdf:about="&auto-de-map;kmh">
+		<rdfs:comment>kilometer per hour</rdfs:comment>
+	</rdfs:Datatype>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;lat">
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;loc_x">
+		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;loc_y">
+		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;loc_z">
+		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;lon">
+	</owl:DatatypeProperty>
+	
+	<rdfs:Datatype rdf:about="&auto-de-map;mm">
+		<rdfs:label>millimeter</rdfs:label>
+	</rdfs:Datatype>
+	
+	<rdfs:Datatype rdf:about="&auto-de-map;mm_pixel">
+	</rdfs:Datatype>
+	
+	<rdfs:Datatype rdf:about="&auto-de-map;ms">
+		<rdfs:label>millisecond</rdfs:label>
+	</rdfs:Datatype>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;name">
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-map;nearTo">
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;opening_hours">
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;operator">
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;orientation">
+		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;osm_node_id">
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;osm_ref">
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;osm_way_id">
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;phone">
+	</owl:DatatypeProperty>
+	
+	<rdfs:Datatype rdf:about="&auto-de-map;pixel">
+	</rdfs:Datatype>
+	
+	<rdfs:Datatype rdf:about="&auto-de-map;pixl">
+	</rdfs:Datatype>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;postcode">
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;pubFacAdmin">
+	</owl:DatatypeProperty>
+	
+	<rdfs:Datatype rdf:about="&auto-de-map;rad">
+	</rdfs:Datatype>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-map;relatedTrafficLight">
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;river_id">
+		<rdfs:domain rdf:resource="&auto-de-map;River"/>
+	</owl:DatatypeProperty>
+	
+	<rdfs:Datatype rdf:about="&auto-de-map;sec">
+		<rdfs:label>second</rdfs:label>
+	</rdfs:Datatype>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;speedMax">
+		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-map;turnLeftTo">
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-map;turnRightTo">
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-map;website">
+	</owl:DatatypeProperty>
+
+</rdf:RDF>

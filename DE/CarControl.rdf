@@ -1,50 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE rdf:RDF [
-	<!ENTITY AnnotationVocabulary "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
-	<!ENTITY SpecificationMetadata "http://www.omg.org/techprocess/ab/SpecificationMetadata/">
 	<!ENTITY auto-de-cco "https://spec.edmcouncil.org/auto/ontology/DE/CarControl/">
 	<!ENTITY dc "http://purl.org/dc/elements/1.1/">
-	<!ENTITY dcterms "http://purl.org/dc/terms/">
+	<!ENTITY dct "http://purl.org/dc/terms/">
+	<!ENTITY fibo-fnd-utl-av "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
 	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
 	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
 	<!ENTITY skos "http://www.w3.org/2004/02/skos/core#">
+	<!ENTITY sm "http://www.omg.org/techprocess/ab/SpecificationMetadata/">
 	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
 ]>
 <rdf:RDF xml:base="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/"
 	xmlns="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/"
-	xmlns:AnnotationVocabulary="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
-	xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
 	xmlns:auto-de-cco="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 	
 	<owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/">
 		<rdfs:label xml:lang="en">Car Control Ontology (CCO)</rdfs:label>
 		<rdfs:comment xml:lang="en">The Car Control Ontology (CCO) has been initially created by Lihua Zhao and Yutaka Sasaki at the Computational Intelligence Laboratory, Toyota Technological Institute, Nagoya, Japan (see https://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/) and published by the Toyota Technological Institute Smart Vehicle Research Project. CCO, as created by the Computational Intelligence Laboratory, is available under the Creative Commons - Attribution-NonCommercial-ShareAlike
 4.0 International (http://creativecommons.org/licenses/by-nc-sa/4.0/).</rdfs:comment>
-		<dcterms:abstract xml:lang="en">The Car Control Ontology (CCO) has been constructed to describe driving actions and paths of autonomous vehicles.</dcterms:abstract>
-		<dcterms:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
-		<SpecificationMetadata:contentLanguage rdf:datatype="&xsd;anyURI">http://www.w3.org/standards/techs/owl#w3c_all</SpecificationMetadata:contentLanguage>
-		<SpecificationMetadata:dependsOn rdf:datatype="&xsd;anyURI">https://spec.edmcouncil.org/auto/ontology/EC/</SpecificationMetadata:dependsOn>
-		<SpecificationMetadata:fileAbbreviation>auto-de-cco</SpecificationMetadata:fileAbbreviation>
-		<SpecificationMetadata:filename>CarControl.rdf</SpecificationMetadata:filename>
+		<dct:abstract xml:lang="en">The Car Control Ontology (CCO) has been constructed to describe driving actions and paths of autonomous vehicles.</dct:abstract>
+		<dct:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+		<sm:contentLanguage rdf:datatype="&xsd;anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
+		<sm:dependsOn rdf:datatype="&xsd;anyURI">https://spec.edmcouncil.org/auto/ontology/EC/</sm:dependsOn>
+		<sm:fileAbbreviation>auto-de-cco</sm:fileAbbreviation>
+		<sm:filename>CarControl.rdf</sm:filename>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
-		<AnnotationVocabulary:hasMaturityLevel rdf:resource="&AnnotationVocabulary;Provisional"/>
+		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
 	</owl:Ontology>
 	
-	<owl:AnnotationProperty rdf:about="&dcterms;creator">
+	<owl:AnnotationProperty rdf:about="&dct;creator">
 	</owl:AnnotationProperty>
 	
-	<owl:AnnotationProperty rdf:about="&dcterms;license">
+	<owl:AnnotationProperty rdf:about="&dct;license">
 	</owl:AnnotationProperty>
 	
-	<owl:AnnotationProperty rdf:about="&dcterms;publisher">
+	<owl:AnnotationProperty rdf:about="&dct;publisher">
 	</owl:AnnotationProperty>
 	
 	<owl:Class rdf:about="&auto-de-cco;BackwardCollisionWarning">
@@ -226,6 +226,7 @@
 	</owl:Class>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-cco;approachTo">
+		<rdfs:label xml:lang="en">approach to</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-cco;collisionWarningWith">
