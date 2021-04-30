@@ -50,10 +50,26 @@
 		<rdfs:comment>Active safety systems are vehicle systems that sense and monitor conditions inside and outside the vehicle for the purpose of identifying perceived present and potential dangers to the vehicle, occupants, and/or other road users, and automatically intervene to help avoid or mitigate potential collisions via various methods, including alerts to the driver, vehicle system adjustments, and/or active control of the vehicle subsystems (brakes, throttle, suspension, etc.).</rdfs:comment>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-av;ADS-DEDICATED_VEHICLE">
-		<rdfs:subClassOf rdf:resource="&auto-de-av;AutonomousVehicle"/>
-		<rdfs:label>ADS-DV</rdfs:label>
+	<owl:Class rdf:about="&auto-de-av;ADSDedicatedVehicle">
+		<rdfs:subClassOf rdf:resource="&auto-ec-as;Vehicle"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-de-av;isCapableOfDrivingAt"/>
+				<owl:someValuesFrom>
+					<owl:Class>
+						<owl:oneOf rdf:parseType="Collection">
+							<rdf:Description rdf:about="&auto-de-av;FullAutomation">
+							</rdf:Description>
+							<rdf:Description rdf:about="&auto-de-av;HighAutomation">
+							</rdf:Description>
+						</owl:oneOf>
+					</owl:Class>
+				</owl:someValuesFrom>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">ADS Dedicated Vehicle</rdfs:label>
 		<rdfs:comment>A vehicle designed to be operated exclusively by a level 4 or level 5 ADS for all trips within its given ODD limitations (if any).</rdfs:comment>
+		<fibo-fnd-utl-av:synonym>ADS-DV</fibo-fnd-utl-av:synonym>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;AUTOMATED_DRIVING_SYSTEM">
@@ -64,13 +80,48 @@
 	<owl:Class rdf:about="&auto-de-av;Actions">
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-av;AutonomousVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-ec-as;Vehicle"/>
-		<rdfs:label xml:lang="en">autonomous vehicle</rdfs:label>
+	<owl:Class rdf:about="&auto-de-av;AutomatedDrivingLevel">
+		<rdfs:subClassOf rdf:resource="&auto-de-av;DrivingAutomationLevel"/>
+		<rdfs:label xml:lang="en">automated driving</rdfs:label>
+		<skos:definition xml:lang="en">Automated driving system monitors the driving environment</skos:definition>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-av;CONVENTIONAL_VEHICLE">
-		<rdfs:subClassOf rdf:resource="&auto-de-av;AutonomousVehicle"/>
+	<owl:Class rdf:about="&auto-de-av;AutonomousVehicle">
+		<rdfs:subClassOf rdf:resource="&auto-ec-as;Vehicle"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-de-av;isCapableOfDrivingAt"/>
+				<owl:someValuesFrom rdf:resource="&auto-de-av;AutomatedDrivingLevel"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">autonomous vehicle</rdfs:label>
+		<skos:definition xml:lang="en">A vehicle that is capable of driving itself, typically classified at SAE levels 3, 4, or 5 for driving automation</skos:definition>
+	</owl:Class>
+	
+	<owl:NamedIndividual rdf:about="&auto-de-av;ConditionalAutomation">
+		<rdf:type rdf:resource="&auto-de-av;AutomatedDrivingLevel"/>
+		<rdfs:label xml:lang="en">Conditional Automation</rdfs:label>
+		<skos:definition xml:lang="en">The driving mode-specific performance by an automated driving system of all aspects of the dynamic driving task with the expectation that the human driver will respond appropriately to a request to intervene</skos:definition>
+		<fibo-fnd-utl-av:synonym xml:lang="en">SAE Level 3</fibo-fnd-utl-av:synonym>
+	</owl:NamedIndividual>
+	
+	<owl:Class rdf:about="&auto-de-av;ConventionalVehicle">
+		<rdfs:subClassOf rdf:resource="&auto-ec-as;Vehicle"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-de-av;isCapableOfDrivingAt"/>
+				<owl:someValuesFrom>
+					<owl:Class>
+						<owl:oneOf rdf:parseType="Collection">
+							<rdf:Description rdf:about="&auto-de-av;DriverAssistance">
+							</rdf:Description>
+							<rdf:Description rdf:about="&auto-de-av;NoAutomation">
+							</rdf:Description>
+						</owl:oneOf>
+					</owl:Class>
+				</owl:someValuesFrom>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:comment>A vehicle designed to be operated by a conventional driver during part or all of every trip.</rdfs:comment>
 		<skos:example>A vehicle equipped with a level 4 parking valet feature designed to allow the user to exit the vehicle near a parking lot and then dispatch it to a parking space.</skos:example>
 		<skos:example>A vehicle equipped with level 1 adaptive cruise control, level 1 lane centering, and a level 3 ADS feature designed to perform the complete DDT during traffic jams on fully access-controlled freeways. The level 3 ADS traffic jam feature requires the user to drive the vehicle to the freeway before engaging the feature, as well as again driving the vehicle upon exiting the freeway in order to complete the trip.</skos:example>
@@ -78,13 +129,6 @@
 		<fibo-fnd-utl-av:explanatoryNote>A conventional vehicle may be equipped with one or more level 1 or 2 driving automation system features that support the driver in performing the DDT, but do not perform the complete DDT, as well as level 3 and 4 ADS features that require a conventional driver to operate the vehicle during portions of each trip.</fibo-fnd-utl-av:explanatoryNote>
 		<fibo-fnd-utl-av:explanatoryNote>While it may be counterintuitive to call a vehicle equipped with an ADS “conventional,” it is appropriate in this context because a conventional driver is required for at least part of every trip. As emphasized below, J3016 classifies the driving automation level of features rather than of vehicles (although, in the special case of an ADS-DV, the classification of the ADS and the vehicle are effectively the same).</fibo-fnd-utl-av:explanatoryNote>
 	</owl:Class>
-	
-	<owl:NamedIndividual rdf:about="&auto-de-av;ConditionalAutomation">
-		<rdf:type rdf:resource="&auto-de-av;DrivingAutomationLevels"/>
-		<rdfs:label xml:lang="en">Conditional Automation</rdfs:label>
-		<skos:definition xml:lang="en">The driving mode-specific performance by an automated driving system of all aspects of the dynamic driving task with the expectation that the human driver will respond appropriately to a request to intervene</skos:definition>
-		<fibo-fnd-utl-av:synonym xml:lang="en">SAE Level 3</fibo-fnd-utl-av:synonym>
-	</owl:NamedIndividual>
 	
 	<owl:Class rdf:about="&auto-de-av;DISPATCH">
 		<rdfs:subClassOf rdf:resource="&auto-de-av;Actions"/>
@@ -127,14 +171,6 @@
 		<fibo-fnd-utl-av:explanatoryNote>In contrast to this generic term for any level 1-5 system, the specific term for a level 3-5 system is “Automated Driving System (ADS).” Given the similarity between the generic term, “driving automation system,” and the level 3-5-specific term, “Automated Driving System,” the latter term should be capitalized when spelled out and reduced to its acronym, ADS, as much as possible, while the former term should not be (see 3.2).</fibo-fnd-utl-av:explanatoryNote>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-av;DUAL-MODE_VEHICLE">
-		<rdfs:subClassOf rdf:resource="&auto-de-av;AutonomousVehicle"/>
-		<rdfs:comment>A type of ADS-equipped vehicle designed for both driverless operation and operation by a conventional driver for complete trips.</rdfs:comment>
-		<skos:scopeNote>[ADS-EQUIPPED]</skos:scopeNote>
-		<fibo-fnd-utl-av:explanatoryNote>An ADS feature that is usable during only part of a trip, such as a feature designed to perform the complete DDT during traffic jams on freeways, would not be sufficient to classify its host vehicle as a dual-mode vehicle because it would not be capable of driverless operation for a complete trip.</fibo-fnd-utl-av:explanatoryNote>
-		<fibo-fnd-utl-av:explanatoryNote>An ADS-equipped dual-mode vehicle may be designed such that it can be dispatched in driverless operation.</fibo-fnd-utl-av:explanatoryNote>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-de-av;DYNAMIC_DRIVING_TASK">
 		<rdfs:subClassOf rdf:resource="&auto-de-av;Operation"/>
 		<rdfs:label>DDT</rdfs:label>
@@ -155,15 +191,24 @@ For purposes of DDT performance, level 1 encompasses automation of part of the i
 	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-de-av;DriverAssistance">
-		<rdf:type rdf:resource="&auto-de-av;DrivingAutomationLevels"/>
+		<rdf:type rdf:resource="&auto-de-av;HumanDrivingLevel"/>
 		<rdfs:label xml:lang="en">Driver Assistance</rdfs:label>
 		<skos:definition xml:lang="en">The driving mode-specific execution by a driver assistance system of &quot;either steering or acceleration/deceleration&quot; using information about the driving environment and with the expectation that the human driver performs all remaining aspects of the dynamic driving task</skos:definition>
 		<fibo-fnd-utl-av:synonym xml:lang="en">SAE Level 1</fibo-fnd-utl-av:synonym>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&auto-de-av;DrivingAutomationLevels">
+	<owl:Class rdf:about="&auto-de-av;DrivingAutomationLevel">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QualitativeValue"/>
-		<rdfs:label xml:lang="en">levels of driving automation</rdfs:label>
+		<rdfs:label xml:lang="en">driving automation level</rdfs:label>
+		<fibo-fnd-utl-av:synonym xml:lang="en">SAE Levels</fibo-fnd-utl-av:synonym>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-av;DualModeVehicle">
+		<rdfs:subClassOf rdf:resource="&auto-ec-as;Vehicle"/>
+		<rdfs:comment>A type of ADS-equipped vehicle designed for both driverless operation and operation by a conventional driver for complete trips.</rdfs:comment>
+		<skos:scopeNote>[ADS-EQUIPPED]</skos:scopeNote>
+		<fibo-fnd-utl-av:explanatoryNote>An ADS feature that is usable during only part of a trip, such as a feature designed to perform the complete DDT during traffic jams on freeways, would not be sufficient to classify its host vehicle as a dual-mode vehicle because it would not be capable of driverless operation for a complete trip.</fibo-fnd-utl-av:explanatoryNote>
+		<fibo-fnd-utl-av:explanatoryNote>An ADS-equipped dual-mode vehicle may be designed such that it can be dispatched in driverless operation.</fibo-fnd-utl-av:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;FALLBACK">
@@ -190,18 +235,24 @@ For purposes of DDT performance, level 1 encompasses automation of part of the i
 	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-de-av;FullAutomation">
-		<rdf:type rdf:resource="&auto-de-av;DrivingAutomationLevels"/>
+		<rdf:type rdf:resource="&auto-de-av;AutomatedDrivingLevel"/>
 		<rdfs:label xml:lang="en">Full Automation</rdfs:label>
 		<skos:definition xml:lang="en">The driving mode-specific performance by an automated driving system of all aspects of the dynamic driving task under all roadway and environmental conditions that can be managed by a human driver</skos:definition>
 		<fibo-fnd-utl-av:synonym xml:lang="en">SAE Level 5</fibo-fnd-utl-av:synonym>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="&auto-de-av;HighAutomation">
-		<rdf:type rdf:resource="&auto-de-av;DrivingAutomationLevels"/>
+		<rdf:type rdf:resource="&auto-de-av;AutomatedDrivingLevel"/>
 		<rdfs:label xml:lang="en">High Automation</rdfs:label>
 		<skos:definition xml:lang="en">The driving mode-specific performance by an automated driving system of all aspects of the dynamic driving task even if a human driver does not respond appropriately to a request to intervene the car can pull over safely by guiding system</skos:definition>
 		<fibo-fnd-utl-av:synonym xml:lang="en">SAE Level 4</fibo-fnd-utl-av:synonym>
 	</owl:NamedIndividual>
+	
+	<owl:Class rdf:about="&auto-de-av;HumanDrivingLevel">
+		<rdfs:subClassOf rdf:resource="&auto-de-av;DrivingAutomationLevel"/>
+		<rdfs:label xml:lang="en">human driving</rdfs:label>
+		<skos:definition xml:lang="en">Human driver monitors the driving environment</skos:definition>
+	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;LATERAL_VEHICLE_MOTION_CONTROL">
 		<rdfs:subClassOf rdf:resource="&auto-de-av;DYNAMIC_DRIVING_TASK"/>
@@ -216,7 +267,7 @@ For purposes of DDT performance, level 1 encompasses automation of part of the i
 	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-de-av;NoAutomation">
-		<rdf:type rdf:resource="&auto-de-av;DrivingAutomationLevels"/>
+		<rdf:type rdf:resource="&auto-de-av;HumanDrivingLevel"/>
 		<rdfs:label xml:lang="en">No Automation</rdfs:label>
 		<skos:definition xml:lang="en">The full-time performance by the human driver of all aspects of the dynamic driving task, even when &quot;enhanced by warning or intervention systems&quot;</skos:definition>
 		<fibo-fnd-utl-av:synonym xml:lang="en">SAE Level 0</fibo-fnd-utl-av:synonym>
@@ -226,7 +277,7 @@ For purposes of DDT performance, level 1 encompasses automation of part of the i
 	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-de-av;PartialAutomation">
-		<rdf:type rdf:resource="&auto-de-av;DrivingAutomationLevels"/>
+		<rdf:type rdf:resource="&auto-de-av;HumanDrivingLevel"/>
 		<rdfs:label xml:lang="en">Partial Automation</rdfs:label>
 		<skos:definition xml:lang="en">The driving mode-specific execution by one or more driver assistance systems of both steering and acceleration/deceleration using information about the driving environment and with the expectation that the human driver performs all remaining aspects of the dynamic driving task</skos:definition>
 		<fibo-fnd-utl-av:synonym xml:lang="en">SAE Level 2</fibo-fnd-utl-av:synonym>
@@ -234,5 +285,8 @@ For purposes of DDT performance, level 1 encompasses automation of part of the i
 	
 	<owl:Class rdf:about="&auto-de-av;Vehicle_Systems">
 	</owl:Class>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-av;isCapableOfDrivingAt">
+	</owl:ObjectProperty>
 
 </rdf:RDF>
