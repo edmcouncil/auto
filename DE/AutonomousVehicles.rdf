@@ -72,11 +72,6 @@
 		<fibo-fnd-utl-av:synonym>ADS-DV</fibo-fnd-utl-av:synonym>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-av;AUTOMATED_DRIVING_SYSTEM">
-		<rdfs:label xml:lang="en">ADS</rdfs:label>
-		<rdfs:comment>The hardware and software that are collectively capable of performing the entire DDT on a sustained basis, regardless of whether it is limited to a specific operational design domain (ODD); this term is used specifically to describe a level 3, 4, or 5 driving automation system.</rdfs:comment>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-de-av;Actions">
 	</owl:Class>
 	
@@ -84,6 +79,12 @@
 		<rdfs:subClassOf rdf:resource="&auto-de-av;DrivingAutomationLevel"/>
 		<rdfs:label xml:lang="en">automated driving</rdfs:label>
 		<skos:definition xml:lang="en">Automated driving system monitors the driving environment</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-av;AutomatedDrivingSystem">
+		<rdfs:label xml:lang="en">Automated Driving System</rdfs:label>
+		<rdfs:comment xml:lang="en">The hardware and software that are collectively capable of performing the entire dynamic driving task (DDT) on a sustained basis, regardless of whether it is limited to a specific operational design domain (ODD); this term is used specifically to describe a level 3, 4, or 5 driving automation system.</rdfs:comment>
+		<fibo-fnd-utl-av:abbreviation>ADS</fibo-fnd-utl-av:abbreviation>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;AutonomousVehicle">
@@ -287,6 +288,7 @@ For purposes of DDT performance, level 1 encompasses automation of part of the i
 	</owl:Class>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-av;isCapableOfDrivingAt">
+		<rdfs:label xml:lang="en">is capable of driving at</rdfs:label>
 	</owl:ObjectProperty>
 
 </rdf:RDF>
