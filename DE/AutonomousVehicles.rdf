@@ -46,7 +46,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;ActiveSafetySystem">
-		<rdfs:subClassOf rdf:resource="&auto-de-av;VehicleSystems"/>
+		<rdfs:subClassOf rdf:resource="&auto-de-av;VehicleSystem"/>
 		<rdfs:label xml:lang="en">Active Safety System</rdfs:label>
 		<skos:definition xml:lang="en">Active safety systems are vehicle systems that sense and monitor conditions inside and outside the vehicle for the purpose of identifying perceived present and potential dangers to the vehicle, occupants, and/or other road users, and automatically intervene to help avoid or mitigate potential collisions via various methods, including alerts to the driver, vehicle system adjustments, and/or active control of the vehicle subsystems (brakes, throttle, suspension, etc.).</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.1</fibo-fnd-utl-av:adaptedFrom>
@@ -67,12 +67,12 @@
 	
 	<owl:Class rdf:about="&auto-de-av;AutomatedDrivingLevel">
 		<rdfs:subClassOf rdf:resource="&auto-de-av;DrivingAutomationLevel"/>
-		<rdfs:label xml:lang="en">automated driving</rdfs:label>
+		<rdfs:label xml:lang="en">Automated Driving Level</rdfs:label>
 		<skos:definition xml:lang="en">Automated driving system monitors the driving environment</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;AutomatedDrivingSystem">
-		<rdfs:subClassOf rdf:resource="&auto-de-av;VehicleSystems"/>
+		<rdfs:subClassOf rdf:resource="&auto-de-av;VehicleSystem"/>
 		<rdfs:label xml:lang="en">Automated Driving System</rdfs:label>
 		<skos:definition xml:lang="en">The hardware and software that are collectively capable of performing the entire DDT on a sustained basis, regardless of whether it is limited to a specific operational design domain ( ODD ); this term is used specifically to describe a level 3, 4, or 5 driving automation system.</skos:definition>
 		<fibo-fnd-utl-av:abbreviation>ADS</fibo-fnd-utl-av:abbreviation>
@@ -188,7 +188,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;DDTPerformanceRelevantSystemFailure">
-		<rdfs:subClassOf rdf:resource="&auto-de-av;VehicleSystems"/>
+		<rdfs:subClassOf rdf:resource="&auto-de-av;VehicleSystem"/>
 		<rdfs:label xml:lang="en">DDT Performance-Relevant System Failure</rdfs:label>
 		<skos:definition xml:lang="en">A malfunction in a driving automation system and/or other vehicle system that prevents the driving automation system from reliably performing the portion of the DDT on a sustained basis, including the complete DDT, that it would otherwise perform.</skos:definition>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">This definition applies to vehicle fault conditions and driving automation system failures that prevent a driving automation system from performing at full capability according to design intention.</fibo-fnd-utl-av:explanatoryNote>
@@ -197,13 +197,6 @@
 		<fibo-fnd-utl-av:usageNote xml:lang="en">A level 3 ADS experiences a DDT performance-relevant system failure in one of its radar sensors, which prevents it from reliably detecting objects in the vehicle’s pathway. The ADS responds by issuing a request to intervene to the DDT fallback-ready user. The ADS continues to perform the DDT, while reducing vehicle speed, for several seconds to allow time for the DDT fallback-ready user to resume operation of the vehicle in an orderly manner.</fibo-fnd-utl-av:usageNote>
 		<fibo-fnd-utl-av:usageNote xml:lang="en">A level 4 ADS experiences a DDT performance-relevant system failure in one of its computing modules. The ADS transitions to DDT fallback by engaging a redundant computing module(s) to achieve a minimal risk condition.</fibo-fnd-utl-av:usageNote>
 		<fibo-fnd-utl-av:usageNote xml:lang="en">A vehicle with an engaged level 3 ADS experiences a broken tie rod, which causes the vehicle to handle very poorly, giving the fallback-ready user ample kinesthetic feedback indicating a vehicle malfunction necessitating intervention. The fallback-ready user responds by resuming the DDT, turning on the hazard lamps, and pulling the vehicle onto the closest road shoulder, thereby achieving a minimal risk condition.</fibo-fnd-utl-av:usageNote>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-av;DRIVER_SUPPORT">
-		<rdfs:subClassOf rdf:resource="&auto-de-av;DrivingAutomationSystemOrTechnology"/>
-		<rdfs:comment>A general term for level 1 and level 2 driving automation system features.</rdfs:comment>
-		<skos:scopeNote>[DRIVING AUTOMATION SYSTEM] FEATURE</skos:scopeNote>
-		<fibo-fnd-utl-av:explanatoryNote>Level 1 (driver assistance) and level 2 (partial automation) features are capable of performing only part of the DDT, and thus require a driver to perform the remainder of the DDT, as well as to supervise the feature’s performance while engaged. As such, these features, when engaged, support, but do not replace, a driver in performing the DDT.</fibo-fnd-utl-av:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;DispatchInDriverlessOperation">
@@ -286,7 +279,7 @@ The upper three levels of driving automation (3-5) refer to cases in which the A
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;DrivingAutomationSystemOrTechnology">
-		<rdfs:subClassOf rdf:resource="&auto-de-av;VehicleSystems"/>
+		<rdfs:subClassOf rdf:resource="&auto-de-av;VehicleSystem"/>
 		<skos:definition xml:lang="en">The hardware and software that are collectively capable of performing part or all of the DDT on a sustained basis; this term is used generically to describe any system capable of level 1-5 driving automation.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.8</fibo-fnd-utl-av:adaptedFrom>
 		<fibo-fnd-utl-av:explanatoryNote>In contrast to this generic term for any level 1-5 system, the specific term for a level 3-5 system is “Automated Driving System (ADS).” Given the similarity between the generic term, “driving automation system,” and the level 3-5-specific term, “Automated Driving System,” the latter term should be capitalized when spelled out and reduced to its acronym, ADS, as much as possible, while the former term should not be (see 3.2).</fibo-fnd-utl-av:explanatoryNote>
@@ -334,15 +327,6 @@ For purposes of DDT performance, level 1 encompasses automation of part of the i
 		<fibo-fnd-utl-av:usageNote xml:lang="en">A level 4 ADS-dedicated vehicle (ADS-DV) that performs the entire DDT within a geo-fenced city center experiences a DDT performance-relevant system failure.</fibo-fnd-utl-av:usageNote>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-av;FEATURE_or_APPLICATION">
-		<rdfs:subClassOf rdf:resource="&auto-de-av;DrivingAutomationSystemOrTechnology"/>
-		<rdfs:comment>A level 1-5 driving automation system’s design-specific functionality at a given level of driving automation within a particular ODD, if applicable.</rdfs:comment>
-		<fibo-fnd-utl-av:explanatoryNote>A given driving automation system may have multiple features, each associated with a particular level of driving automation and ODD.</fibo-fnd-utl-av:explanatoryNote>
-		<fibo-fnd-utl-av:explanatoryNote>Each feature satisfies a usage specification</fibo-fnd-utl-av:explanatoryNote>
-		<fibo-fnd-utl-av:explanatoryNote>Features may be referred to by generic names (e.g., automated parking) or by proprietary names.</fibo-fnd-utl-av:explanatoryNote>
-		<fibo-fnd-utl-av:usageNote>A level 3 ADS feature that performs the DDT, excluding DDT fallback, in high-volume traffic on fully access-controlled freeways.</fibo-fnd-utl-av:usageNote>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-de-av;Feature">
 	</owl:Class>
 	
@@ -380,7 +364,7 @@ For purposes of DDT performance, level 1 encompasses automation of part of the i
 	
 	<owl:Class rdf:about="&auto-de-av;HumanDrivingLevel">
 		<rdfs:subClassOf rdf:resource="&auto-de-av;DrivingAutomationLevel"/>
-		<rdfs:label xml:lang="en">human driving</rdfs:label>
+		<rdfs:label xml:lang="en">Human Driving Level</rdfs:label>
 		<skos:definition xml:lang="en">Human driver monitors the driving environment</skos:definition>
 	</owl:Class>
 	
@@ -598,7 +582,8 @@ For purposes of DDT performance, level 1 encompasses automation of part of the i
 		<fibo-fnd-utl-av:usageNote xml:lang="en">Level 4 driving automation in designated urban centers.</fibo-fnd-utl-av:usageNote>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-av;VehicleSystems">
+	<owl:Class rdf:about="&auto-de-av;VehicleSystem">
+		<rdfs:label xml:lang="en">Vehicle System</rdfs:label>
 	</owl:Class>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-av;isCapableOfDrivingAt">
