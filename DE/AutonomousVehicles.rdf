@@ -44,6 +44,15 @@
 		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
 	</owl:Ontology>
 	
+	<owl:AnnotationProperty rdf:about="&skos;definition">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&skos;example">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&skos;scopeNote">
+	</owl:AnnotationProperty>
+	
 	<owl:Class rdf:about="&auto-de-av;ACTIVE_SAFETY_SYSTEM">
 		<rdfs:subClassOf rdf:resource="&auto-de-av;Vehicle_Systems"/>
 		<rdfs:label xml:lang="en">ASS</rdfs:label>
@@ -139,12 +148,6 @@
 		<fibo-fnd-utl-av:explanatoryNote>The term “dispatch” as used outside of the context of ADS-equipped vehicles, is generally understood to mean sending a particular vehicle to a particular pick-up or drop-off location for purposes of providing a transportation service. In the context of ADS-equipped vehicles, and as used herein, this term includes software-enabled dispatch of multiple ADS-equipped vehicles in driverless operation that may complete multiple trips involving pick-up and drop-off of passengers or goods throughout a day or other pre-defined period of service, and which may involve multiple agents performing various tasks related to the dispatch function. In order to highlight this specialized use of the term dispatch, the term is modified and conditioned by the stipulation that it refers exclusively to dispatching vehicles in driverless operation. Consideration of whether a more appropriate term and definition should be specified for this concept will be taken up in the next revision of J3016, which will be developed jointly with ISO.</fibo-fnd-utl-av:explanatoryNote>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-av;DISPATCHING_ENTITY">
-		<rdfs:comment>An entity that dispatches an ADS-equipped vehicle(s) in driverless operation</rdfs:comment>
-		<skos:example>A fleet of level 4 closed campus ADS-dedicated vehicles is placed into service by a driverless operation dispatching entity, which engages the ADS for each vehicle after verifying its operational readiness and disengages the ADS when each vehicle is taken out of service.</skos:example>
-		<fibo-fnd-utl-av:explanatoryNote>The functions carried out by a dispatching entity may be divided among one or several agents, depending on the usage specification for the ADS-equipped vehicle(s) in question.</fibo-fnd-utl-av:explanatoryNote>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-de-av;DRIVERLESS_OPERATION">
 		<rdfs:subClassOf rdf:resource="&auto-de-av;Operation"/>
 		<rdfs:comment>Operation of an ADS-equipped vehicle in which either no on-board user is present, or in which on-board users are not drivers or fallback-ready users.</rdfs:comment>
@@ -189,6 +192,12 @@ Figure 1 - http://sopek.net/aco/f1.jpg
 For purposes of DDT performance, level 1 encompasses automation of part of the innermost loop (i.e., either lateral vehicle motion control functionality or longitudinal vehicle motion control functionality and limited OEDR associated with the given axis of vehicle motion control); level 2 encompasses automation of the innermost loop (lateral and longitudinal vehicle motion control and limited OEDR associated with vehicle motion control), and levels 3-5 encompass automation of both inner loops (lateral and longitudinal vehicle motion control and complete OEDR). Note that DDT performance does not include strategic aspects of driving (e.g., determining whether, when and where to travel).</fibo-fnd-utl-av:explanatoryNote>
 		<fibo-fnd-utl-av:explanatoryNote>For simplification and to provide a useful shorthand term, subtasks (3) and (4) are referred to collectively as object and event detection and response (OEDR)</fibo-fnd-utl-av:explanatoryNote>
 		<fibo-fnd-utl-av:explanatoryNote>In this document, reference is made to “complete(ing) the DDT.” This means fully performing all of the subtasks of the DDT, whether by the (human) driver, by the driving automation system, or by both</fibo-fnd-utl-av:explanatoryNote>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-av;DispatchingEntity">
+		<rdfs:comment>An entity that dispatches an ADS-equipped vehicle(s) in driverless operation</rdfs:comment>
+		<skos:example>A fleet of level 4 closed campus ADS-dedicated vehicles is placed into service by a driverless operation dispatching entity, which engages the ADS for each vehicle after verifying its operational readiness and disengages the ADS when each vehicle is taken out of service.</skos:example>
+		<fibo-fnd-utl-av:explanatoryNote>The functions carried out by a dispatching entity may be divided among one or several agents, depending on the usage specification for the ADS-equipped vehicle(s) in question.</fibo-fnd-utl-av:explanatoryNote>
 	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-de-av;DriverAssistance">
@@ -290,5 +299,20 @@ For purposes of DDT performance, level 1 encompasses automation of part of the i
 	<owl:ObjectProperty rdf:about="&auto-de-av;isCapableOfDrivingAt">
 		<rdfs:label xml:lang="en">is capable of driving at</rdfs:label>
 	</owl:ObjectProperty>
+	
+	<owl:Class rdf:about="&auto-ec-as;Vehicle">
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QualitativeValue">
+	</owl:Class>
+	
+	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;abbreviation">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;explanatoryNote">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;synonym">
+	</owl:AnnotationProperty>
 
 </rdf:RDF>
