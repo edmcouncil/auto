@@ -117,18 +117,6 @@
 		<fibo-fnd-utl-av:usageNote xml:lang="en">A level 5 ADS-DV capable of operating on all mapped roads in the US that are navigable by a human driver. The user simply inputs a destination, and the ADS-DV automatically navigates to that destination.</fibo-fnd-utl-av:usageNote>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-av;AutonomousVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-ec-as;Vehicle"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-de-av;isCapableOfDrivingAt"/>
-				<owl:someValuesFrom rdf:resource="&auto-de-av;AutomatedDrivingLevel"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">autonomous vehicle</rdfs:label>
-		<skos:definition xml:lang="en">A vehicle that is capable of driving itself, typically classified at SAE levels 3, 4, or 5 for driving automation</skos:definition>
-	</owl:Class>
-	
 	<owl:NamedIndividual rdf:about="&auto-de-av;ConditionalDrivingAutomation">
 		<rdf:type rdf:resource="&auto-de-av;AutomatedDrivingLevel"/>
 		<rdfs:label xml:lang="en">Conditional Driving Automation</rdfs:label>
@@ -191,6 +179,7 @@
 		<rdfs:subClassOf rdf:resource="&auto-de-av;VehicleSystem"/>
 		<rdfs:label xml:lang="en">DDT Performance-Relevant System Failure</rdfs:label>
 		<skos:definition xml:lang="en">A malfunction in a driving automation system and/or other vehicle system that prevents the driving automation system from reliably performing the portion of the DDT on a sustained basis, including the complete DDT, that it would otherwise perform.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.18</fibo-fnd-utl-av:adaptedFrom>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">This definition applies to vehicle fault conditions and driving automation system failures that prevent a driving automation system from performing at full capability according to design intention.</fibo-fnd-utl-av:explanatoryNote>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">This term does not apply to transient lapses in performance by a level 1 or 2 driving automation system that are due to inherent design limitations and that do not otherwise prevent the system from performing its part of the DDT on a sustained basis.</fibo-fnd-utl-av:explanatoryNote>
 		<fibo-fnd-utl-av:usageNote xml:lang="en">A level 1 driving automation system that performs the lateral vehicle motion control subtask of the DDT experiences a DDT performance-relevant system failure in one of its cameras, which prevents it from reliably detecting lane markings. The feature causes a malfunction indication message to be displayed in the center console at the same time that the feature automatically disengages, requiring the driver to immediately resume performing the lateral vehicle motion control subtask of the DDT.</fibo-fnd-utl-av:usageNote>
@@ -283,19 +272,6 @@ The upper three levels of driving automation (3-5) refer to cases in which the A
 		<skos:definition xml:lang="en">The hardware and software that are collectively capable of performing part or all of the DDT on a sustained basis; this term is used generically to describe any system capable of level 1-5 driving automation.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.8</fibo-fnd-utl-av:adaptedFrom>
 		<fibo-fnd-utl-av:explanatoryNote>In contrast to this generic term for any level 1-5 system, the specific term for a level 3-5 system is “Automated Driving System (ADS).” Given the similarity between the generic term, “driving automation system,” and the level 3-5-specific term, “Automated Driving System,” the latter term should be capitalized when spelled out and reduced to its acronym, ADS, as much as possible, while the former term should not be (see 3.2).</fibo-fnd-utl-av:explanatoryNote>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-av;DrivingAutomationSystemTechnology">
-		<rdfs:label xml:lang="en">Driving Automation System Technology</rdfs:label>
-		<skos:definition xml:lang="en">or The hardware and software that are collectively capable of performing part or all of the DDT on a sustained basis ; this term is used generically to describe any system capable of level 1-5 driving automation.</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-av;DualModeVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-ec-as;Vehicle"/>
-		<rdfs:comment>A type of ADS-equipped vehicle designed for both driverless operation and operation by a conventional driver for complete trips.</rdfs:comment>
-		<skos:scopeNote>[ADS-EQUIPPED]</skos:scopeNote>
-		<fibo-fnd-utl-av:explanatoryNote>An ADS feature that is usable during only part of a trip, such as a feature designed to perform the complete DDT during traffic jams on freeways, would not be sufficient to classify its host vehicle as a dual-mode vehicle because it would not be capable of driverless operation for a complete trip.</fibo-fnd-utl-av:explanatoryNote>
-		<fibo-fnd-utl-av:explanatoryNote>An ADS-equipped dual-mode vehicle may be designed such that it can be dispatched in driverless operation.</fibo-fnd-utl-av:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;DynamicDrivingTask">
