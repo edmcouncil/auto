@@ -123,6 +123,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;Activity">
+		<rdfs:label xml:lang="en">Activity</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;Actor">
