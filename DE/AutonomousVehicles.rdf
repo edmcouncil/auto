@@ -46,6 +46,12 @@
 		<rdfs:subClassOf rdf:resource="&auto-de-av;ADSEquippedVehicle"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-de-av;isOperatedBy"/>
+				<owl:someValuesFrom rdf:resource="&auto-de-av;AutomatedDrivingSystem"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-de-av;operatesAtADSLevel"/>
 				<owl:someValuesFrom>
 					<owl:Class>
@@ -74,6 +80,21 @@
 	
 	<owl:Class rdf:about="&auto-de-av;ADSEquippedDualModeVehicle">
 		<rdfs:subClassOf rdf:resource="&auto-de-av;ADSEquippedVehicle"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-de-av;isOperatedBy"/>
+				<owl:someValuesFrom>
+					<owl:Class>
+						<owl:unionOf rdf:parseType="Collection">
+							<rdf:Description rdf:about="&auto-de-av;AutomatedDrivingSystem">
+							</rdf:Description>
+							<rdf:Description rdf:about="&auto-de-av;HumanDriver">
+							</rdf:Description>
+						</owl:unionOf>
+					</owl:Class>
+				</owl:someValuesFrom>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">Ads-Equipped Dual-Mode Vehicle</rdfs:label>
 		<skos:definition xml:lang="en">A type of ADS-equipped vehicle designed for both driverless operation and operation by a conventional driver for complete trips.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.12</fibo-fnd-utl-av:adaptedFrom>
@@ -104,7 +125,8 @@
 	<owl:Class rdf:about="&auto-de-av;Activity">
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-av;Agent">
+	<owl:Class rdf:about="&auto-de-av;Actor">
+		<rdfs:label xml:lang="en">Actor</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;AutomatedDrivingLevel">
@@ -114,7 +136,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;AutomatedDrivingSystem">
-		<rdfs:subClassOf rdf:resource="&auto-de-av;Agent"/>
+		<rdfs:subClassOf rdf:resource="&auto-de-av;Actor"/>
 		<rdfs:subClassOf rdf:resource="&auto-de-av;VehicleSystem"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
@@ -237,7 +259,6 @@
 	</owl:NamedIndividual>
 	
 	<owl:Class rdf:about="&auto-de-av;DriverSupportDrivingAutomationSystemFeature">
-		<rdfs:subClassOf rdf:resource="&auto-de-av;Feature"/>
 		<rdfs:label xml:lang="en">Driver Support Driving Automation System Feature</rdfs:label>
 		<skos:definition xml:lang="en">A general term for level 1 and level 2 driving automation system features.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.10</fibo-fnd-utl-av:adaptedFrom>
@@ -252,7 +273,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;DriverlessOperationDispatchingEntity">
-		<rdfs:subClassOf rdf:resource="&auto-de-av;Agent"/>
+		<rdfs:subClassOf rdf:resource="&auto-de-av;HumanUser"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-de-av;does"/>
@@ -267,7 +288,7 @@
 		<fibo-fnd-utl-av:usageNote>A fleet of level 4 closed campus ADS-dedicated vehicles is placed into service by a driverless operation dispatching entity, which engages the ADS for each vehicle after verifying its operational readiness and disengages the ADS when each vehicle is taken out of service.</fibo-fnd-utl-av:usageNote>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-av;DriverlessOperationOfAnADSEquippedVehicle">
+	<owl:Class rdf:about="&auto-de-av;DriverlessOperationOfADSEquippedVehicle">
 		<rdfs:subClassOf rdf:resource="&auto-de-av;Activity"/>
 		<rdfs:label xml:lang="en">Driverless Operation Of An ADS-Equipped Vehicle</rdfs:label>
 		<skos:definition xml:lang="en">Operation of an ADS-equipped vehicle in which either no on-board user is present , or in which on-board users are not drivers or fallback-ready users.</skos:definition>
@@ -277,7 +298,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;DrivingAutomation">
-		<rdfs:subClassOf rdf:resource="&auto-de-av;Activity"/>
+		<rdfs:subClassOf rdf:resource="&auto-de-av;DynamicDrivingTaskSubtask"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-de-av;isPartOf"/>
@@ -291,7 +312,7 @@
 	
 	<owl:Class rdf:about="&auto-de-av;DrivingAutomationLevel">
 		<rdfs:label xml:lang="en">Driving Automation Level</rdfs:label>
-		<skos:definition xml:lang="en">The level of driving automation is based on the functionality of the driving automation system, as determined by an allocation of roles in DDT and DDT fallback performance between that system and the (human) user (if any). The manufacturer of a driving automation system determines that system’s requirements, operational design domain (ODD), and operating characteristics, including the level of driving automation, as defined below. The manufacturer also defines the proper use of that system.
+		<skos:definition xml:lang="en">the level of driving automation is based on the functionality of the driving automation system, as determined by an allocation of roles in DDT and DDT fallback performance between that system and the (human) user (if any). The manufacturer of a driving automation system determines that system’s requirements, operational design domain (ODD), and operating characteristics, including the level of driving automation, as defined below. The manufacturer also defines the proper use of that system.
 The lower two levels of driving automation (1-2) refer to cases in which the (human) driver continues to perform part of the DDT while the driving automation system is engaged.
 The upper three levels of driving automation (3-5) refer to cases in which the Automated Driving System (ADS) performs the entire the DDT on a sustained basis while it is engaged.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 5.</fibo-fnd-utl-av:adaptedFrom>
@@ -299,7 +320,6 @@ The upper three levels of driving automation (3-5) refer to cases in which the A
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;DrivingAutomationSystemFeatureOrApplication">
-		<rdfs:subClassOf rdf:resource="&auto-de-av;Feature"/>
 		<rdfs:label xml:lang="en">Driving Automation System Feature or Application</rdfs:label>
 		<skos:definition xml:lang="en">A level 1-5 driving automation system’s design-specific functionality at a given level of driving automation within a particular ODD, if applicable.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.9</fibo-fnd-utl-av:adaptedFrom>
@@ -322,7 +342,7 @@ The upper three levels of driving automation (3-5) refer to cases in which the A
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-de-av;hasPart"/>
-				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/AutonomousVehicles/Enhancing_conspicuity_via_lighting,_signaling_and_gesturing,_etc."/>
+				<owl:someValuesFrom rdf:resource="&auto-de-av;EnhancingConspicuity"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
@@ -340,11 +360,23 @@ The upper three levels of driving automation (3-5) refer to cases in which the A
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-de-av;hasPart"/>
-				<owl:someValuesFrom rdf:resource="&auto-de-av;Maneuver_planning"/>
+				<owl:someValuesFrom rdf:resource="&auto-de-av;ManeuverPlanning"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-de-av;hasPart"/>
+				<owl:someValuesFrom rdf:resource="&auto-de-av;Monitor"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-de-av;hasPart"/>
+				<owl:someValuesFrom rdf:resource="&auto-de-av;ObjectAndEventDetectionAndResponse"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">Dynamic Driving Task</rdfs:label>
-		<skos:definition xml:lang="en">all of the real-time operational and tactical functions required to operate a vehicle in on-road traffic, excluding the strategic functionssuchastripschedulingandselectionofdestinationsand waypoints</skos:definition>
+		<skos:definition xml:lang="en">all of the real-time operational and tactical functions required to operate a vehicle in on-road traffic, excluding the strategic functions such as trip scheduling and selection of destinations and waypoints</skos:definition>
 		<fibo-fnd-utl-av:abbreviation>DDT</fibo-fnd-utl-av:abbreviation>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.13</fibo-fnd-utl-av:adaptedFrom>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Figure 1 displays a schematic view of the driving task.</fibo-fnd-utl-av:explanatoryNote>
@@ -391,12 +423,10 @@ The upper three levels of driving automation (3-5) refer to cases in which the A
 		<rdfs:label xml:lang="en">Dynamic Driving Task Subtask</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/AutonomousVehicles/Enhancing_conspicuity_via_lighting,_signaling_and_gesturing,_etc.">
+	<owl:Class rdf:about="&auto-de-av;EnhancingConspicuity">
 		<rdfs:subClassOf rdf:resource="&auto-de-av;DynamicDrivingTaskSubtask"/>
-		<rdfs:label xml:lang="en">Enhancing conspicuity via lighting, signaling and gesturing, etc.</rdfs:label>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-av;Feature">
+		<rdfs:label xml:lang="en">Enhancing conspicuity</rdfs:label>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Enhancing conspicuity via lighting, signaling and gesturing, etc.</fibo-fnd-utl-av:explanatoryNote>
 	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-de-av;FullDrivingAutomation">
@@ -439,7 +469,7 @@ The upper three levels of driving automation (3-5) refer to cases in which the A
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;HumanUser">
-		<rdfs:subClassOf rdf:resource="&auto-de-av;Agent"/>
+		<rdfs:subClassOf rdf:resource="&auto-de-av;Actor"/>
 		<rdfs:label xml:lang="en">Human User</rdfs:label>
 		<skos:definition xml:lang="en">the human role in driving automation</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.29</fibo-fnd-utl-av:adaptedFrom>
@@ -463,9 +493,9 @@ The upper three levels of driving automation (3-5) refer to cases in which the A
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Longitudinal vehicle motion control includes maintaining set speed as well as detecting a preceding vehicle in the path of the subject vehicle, maintaining an appropriate gap to the preceding vehicle and applying propulsion or braking inputs to cause the vehicle to maintain that speed or gap.</fibo-fnd-utl-av:explanatoryNote>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-av;Maneuver_planning">
+	<owl:Class rdf:about="&auto-de-av;ManeuverPlanning">
 		<rdfs:subClassOf rdf:resource="&auto-de-av;DynamicDrivingTaskSubtask"/>
-		<rdfs:label xml:lang="en">Maneuver planning</rdfs:label>
+		<rdfs:label xml:lang="en">Maneuver Planning</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;MinimalRiskCondition">
@@ -497,7 +527,7 @@ The upper three levels of driving automation (3-5) refer to cases in which the A
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;Monitor">
-		<rdfs:subClassOf rdf:resource="&auto-de-av;Activity"/>
+		<rdfs:subClassOf rdf:resource="&auto-de-av;DynamicDrivingTaskSubtask"/>
 		<rdfs:label xml:lang="en">Monitor</rdfs:label>
 		<skos:definition xml:lang="en">a range of functions involving real-time human or machine sensing and processing of data used to operate a vehicle, or to support its operation</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.19</fibo-fnd-utl-av:adaptedFrom>
@@ -524,6 +554,7 @@ The upper three levels of driving automation (3-5) refer to cases in which the A
 		<rdfs:label xml:lang="en">Monitor The Driving Environment</rdfs:label>
 		<skos:definition xml:lang="en">the activities automated routines that accomplish real-time roadway environmental object and event detection, recognition, classification, and response preparation ( excluding actual response ), as needed to operate a vehicle</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.19.2</fibo-fnd-utl-av:adaptedFrom>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Monitoring the driving environment via object and event detection, recognition, classification, and response preparation</fibo-fnd-utl-av:explanatoryNote>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">When operating conventional vehicles that are not equipped with an engaged ADS, drivers visually sample the road scene sufficiently to competently perform the DDT while also performing secondary tasks that require short periods of eyes-off-road time (e.g., adjusting cabin comfort settings, scanning road signs, tuning a radio, etc.). Thus, monitoring the driving environment does not necessarily entail continuous eyes- on-road time by the driver.</fibo-fnd-utl-av:explanatoryNote>
 	</owl:Class>
 	
@@ -546,11 +577,6 @@ The upper three levels of driving automation (3-5) refer to cases in which the A
 		<fibo-fnd-utl-av:usageNote xml:lang="en">While a level 4 ADS is engaged in stop-and-go traffic, a malfunctioning brake caliper causes the vehicle to pull to the left when the brakes are applied.</fibo-fnd-utl-av:usageNote>
 	</owl:Class>
 	
-	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/AutonomousVehicles/Monitoring_the_driving_environment_via_object_and_event_detection,_recognition,_classification,_and_response_preparation">
-		<rdfs:subClassOf rdf:resource="&auto-de-av;DynamicDrivingTaskSubtask"/>
-		<rdfs:label xml:lang="en">Monitoring the driving environment via object and event detection, recognition, classification, and response preparation</rdfs:label>
-	</owl:Class>
-	
 	<owl:NamedIndividual rdf:about="&auto-de-av;NoAutomation">
 		<rdf:type rdf:resource="&auto-de-av;HumanDrivingLevel"/>
 		<rdfs:label xml:lang="en">No Automation</rdfs:label>
@@ -564,13 +590,13 @@ The upper three levels of driving automation (3-5) refer to cases in which the A
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-de-av;hasPart"/>
-				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/AutonomousVehicles/Monitoring_the_driving_environment_via_object_and_event_detection,_recognition,_classification,_and_response_preparation"/>
+				<owl:someValuesFrom rdf:resource="&auto-de-av;MonitorDrivingEnvironment"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-de-av;hasPart"/>
-				<owl:someValuesFrom rdf:resource="&auto-de-av;Object_and_event_response_execution"/>
+				<owl:someValuesFrom rdf:resource="&auto-de-av;ObjectAndEventResponseExecution"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">Object And Event Detection And Response</rdfs:label>
@@ -579,7 +605,7 @@ The upper three levels of driving automation (3-5) refer to cases in which the A
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.20</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-av;Object_and_event_response_execution">
+	<owl:Class rdf:about="&auto-de-av;ObjectAndEventResponseExecution">
 		<rdfs:subClassOf rdf:resource="&auto-de-av;DynamicDrivingTaskSubtask"/>
 		<rdfs:label xml:lang="en">Object and event response execution</rdfs:label>
 	</owl:Class>
