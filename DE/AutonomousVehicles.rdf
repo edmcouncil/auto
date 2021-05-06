@@ -102,18 +102,6 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;Activity">
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-de-av;hasPart"/>
-				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/AutonomousVehicles/Monitoring_the_driving_environment_via_object_and_event_detection,_recognition,_classification,_and_response_preparation"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-de-av;hasPart"/>
-				<owl:someValuesFrom rdf:resource="&auto-de-av;Object_and_event_response_execution"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;Agent">
@@ -340,6 +328,18 @@ The upper three levels of driving automation (3-5) refer to cases in which the A
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-de-av;hasPart"/>
+				<owl:someValuesFrom rdf:resource="&auto-de-av;LateralVehicleMotionControl"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-de-av;hasPart"/>
+				<owl:someValuesFrom rdf:resource="&auto-de-av;LongitudinalVehicleMotionControl"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-de-av;hasPart"/>
 				<owl:someValuesFrom rdf:resource="&auto-de-av;Maneuver_planning"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -561,6 +561,18 @@ The upper three levels of driving automation (3-5) refer to cases in which the A
 	
 	<owl:Class rdf:about="&auto-de-av;ObjectAndEventDetectionAndResponse">
 		<rdfs:subClassOf rdf:resource="&auto-de-av;DynamicDrivingTaskSubtask"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-de-av;hasPart"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/AutonomousVehicles/Monitoring_the_driving_environment_via_object_and_event_detection,_recognition,_classification,_and_response_preparation"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-de-av;hasPart"/>
+				<owl:someValuesFrom rdf:resource="&auto-de-av;Object_and_event_response_execution"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">Object And Event Detection And Response</rdfs:label>
 		<skos:definition xml:lang="en">The subtasks of the DDT that include monitoring the driving environment ( detecting , recognizing , and classifying objects and events and preparing to respond as needed ) and executing an appropriate response to such objects and events ( i.e. , as needed to complete the DDT and/or DDT fallback ).</skos:definition>
 		<fibo-fnd-utl-av:abbreviation>OEDR</fibo-fnd-utl-av:abbreviation>
