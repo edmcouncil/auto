@@ -1,0 +1,1128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY auto-de-tc "https://spec.edmcouncil.org/auto/ontology/DE/TrafficCrashes/">
+	<!ENTITY fibo-fnd-utl-av "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY skos "http://www.w3.org/2004/02/skos/core#">
+	<!ENTITY sm "http://www.omg.org/techprocess/ab/SpecificationMetadata/">
+	<!ENTITY terms "http://purl.org/dc/terms/">
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+<rdf:RDF xml:base="https://spec.edmcouncil.org/auto/ontology/DE/TrafficCrashes/"
+	xmlns="https://spec.edmcouncil.org/auto/ontology/DE/TrafficCrashes/"
+	xmlns:auto-de-tc="https://spec.edmcouncil.org/auto/ontology/DE/TrafficCrashes/"
+	xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+	xmlns:terms="http://purl.org/dc/terms/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	
+	<owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficCrashes/">
+		<rdfs:label xml:lang="en">Traffic Crashes Ontology (TC)</rdfs:label>
+		<terms:abstract xml:lang="en">An inital ontology for Traffic Crashes. Based on the Classification of Motor Vehicle Traffic Crashes (AMERICAN NATIONAL STANDARD, ANSI D.16-2017).</terms:abstract>
+		<terms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+		<sm:fileAbbreviation>auto-de-tc</sm:fileAbbreviation>
+		<sm:filename>TrafficCrashes.rdf</sm:filename>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"/>
+		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
+	</owl:Ontology>
+	
+	<owl:AnnotationProperty rdf:about="&skos;definition">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&skos;scopeNote">
+	</owl:AnnotationProperty>
+	
+	<owl:Class rdf:about="&auto-de-tc;Aircraft">
+		<rdfs:label xml:lang="en">Aircraft</rdfs:label>
+		<skos:definition xml:lang="en">An aircraft is a transport vehicle designed primarily for, or in use for, moving persons or property through the air from one place to another.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;AircraftAccident">
+		<rdfs:label xml:lang="en">Aircraft Accident</rdfs:label>
+		<skos:definition xml:lang="en">An aircraft accident is a transport accident that involves an aircraft in-transport.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.10</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Airway">
+		<rdfs:label xml:lang="en">Airway</rdfs:label>
+		<skos:definition xml:lang="en">An airway is a transport way reserved primarily for use by aircraft taking off, in flight, or landing.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.9</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;At-IntersectionCrash">
+		<rdfs:label xml:lang="en">At-Intersection Crash</rdfs:label>
+		<skos:definition xml:lang="en">An at-intersection crash is a traffic crash in which 2.9.6 At Work A person is at work when engaged in duties, activities or tasks that produce a product or service; that are done in exchange for money, goods, services, profit or benefit; and that are legal activities in the United States. This definition is adapted from the definition used in the Census of Fatal Occupational Injuries program at the Bureau of Labor Statistics. the first harmful event occurs within the limits of an intersection.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.7.3</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;AtGradeIntersection">
+		<rdfs:label xml:lang="en">At Grade Intersection</rdfs:label>
+		<skos:definition xml:lang="en">An at-grade intersection is an intersection where all roadways cross or join at the same level.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.12</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Autocycle">
+		<rdfs:label xml:lang="en">Autocycle</rdfs:label>
+		<skos:definition xml:lang="en">An autocycle is a large motorcycle with one rear wheel and two front wheels, with either a saddle and handlebars or seat (s) and a steering wheel, that can be fully enclosed, partially enclosed, or unenclosed.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.9.7</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Automobile">
+		<rdfs:label xml:lang="en">Automobile</rdfs:label>
+		<skos:definition xml:lang="en">An automobile is a motor vehicle other than a motorcycle, utility vehicle or low speed vehicle consisting of a transport device typically designed for carrying eight or fewer persons. Automobiles may be classified by size or weight, or both. Size classification is based on wheelbase. Weight classification is based on curb weight, the weight of an automobile with standard equipment and a full complement of fuel and other fluids, but with no load of persons or property. Before classification, wheelbase should be rounded to the nearest inch and curb weight should be rounded to the nearest 100 pounds.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.12</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;BicycleLane">
+		<rdfs:label xml:lang="en">Bicycle Lane</rdfs:label>
+		<skos:definition xml:lang="en">A bicycle lane is a bikeway adjacent to travel lanes which has been designated for preferential or exclusive use by pedalcyclists through striping, signage or pavement markings 2.2.44 Bicycle Trail A bicycle trail (also known as a shared use path) is a bikeway reserved for pedalcycles and separated from roadways by open space or barriers.. 2.2.43 Bikeway A bikeway is that part of a trafficway specifically designated as being open for pedalcycle travel or, where various classes of pedalcycle are segregated, that part of a trafficway open for a particular class (See 2.2.28).</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.45</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Bus">
+		<rdfs:label xml:lang="en">Bus</rdfs:label>
+		<skos:definition xml:lang="en">A bus is a motor vehicle with seating for transporting nine or more persons, including the driver.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.10</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;CargoVan">
+		<rdfs:label xml:lang="en">Cargo Van</rdfs:label>
+		<skos:definition xml:lang="en">A cargo van is any van where the area behind the driver or cab is designed for transporting cargo or operated for general commercial use.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.14.2</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Cataclysm">
+		<rdfs:label xml:lang="en">Cataclysm</rdfs:label>
+		<skos:definition xml:lang="en">A cataclysm is an avalanche, landslide/mudslide, hurricane, cyclone, downburst, flood, torrential rain, cloudburst, lightning, tornado, tidal wave, earthquake or volcanic eruption (See 2.4.9 transport crash).</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;ChannelizedIntersection">
+		<rdfs:label xml:lang="en">Channelized Intersection</rdfs:label>
+		<skos:definition xml:lang="en">A channelized intersection is an at-grade intersection in which traffic is diverted into definite paths by raised or painted traffic islands.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.13</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;CharterBus">
+		<rdfs:label xml:lang="en">Charter Bus</rdfs:label>
+		<skos:definition xml:lang="en">A charter bus is a bus providing contract service for a group tour or outing, usually on a round-trip basis.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.10.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;CityStreet">
+		<rdfs:label xml:lang="en">City Street</rdfs:label>
+		<skos:definition xml:lang="en">A city street is a trafficway within a city trafficway system that is not an Interstate highway, other U.S. route numbered highway, other state route numbered highway, or county road.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.8</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;CollisionCrash">
+		<rdfs:label xml:lang="en">Collision Crash</rdfs:label>
+		<skos:definition xml:lang="en">A collision crash is a road vehicle crash other than an overturning crash in which the first harmful event is a collision of a road vehicle in- transport with another road vehicle, other property or pedestrians.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.2</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;CollisioninvolvingAnimal">
+		<rdfs:label xml:lang="en">Collision involving Animal</rdfs:label>
+		<skos:definition xml:lang="en">A collision involving animal is a collision crash in which the first harmful event is the collision of an animal, other than an animal powering an other road vehicle, and a road vehicle in-transport.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.11</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;CollisioninvolvingFixedObject">
+		<rdfs:label xml:lang="en">Collision involving Fixed Object</rdfs:label>
+		<skos:definition xml:lang="en">A collision involving fixed object is a collision crash in which the first harmful event is the striking of a fixed object by a road vehicle in- transport. Fixed objects include such objects as guardrails, bridge railings or abutments, construction barricades, impact attenuators, trees, embedded rocks, utility poles, ditches, steep earth or rock slopes, culverts, fences and buildings.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.12</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;CollisioninvolvingMotorVehicleinTransport">
+		<rdfs:label xml:lang="en">Collision involving Motor Vehicle in-Transport</rdfs:label>
+		<skos:definition xml:lang="en">A collision involving motor vehicle in-transport is Transport a crash that is both a motor vehicle crash and a collision crash in which the first harmful event is the collision of two or more motor vehicles in- transport.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.6</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;CollisioninvolvingOtherObject">
+		<rdfs:label xml:lang="en">Collision involving Other Object</rdfs:label>
+		<skos:definition xml:lang="en">A collision involving other object is any collision crash other than a (1) collision involving pedestrian, (2) collision involving motor vehicle in-transport, (3) collision involving other road vehicle in-transport, (4) collision involving parked motor vehicle, (5) collision involving railway vehicle, (6) collision involving pedalcycle, (7) collision involving animal, or (8) collision involving fixed object.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.13</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;CollisioninvolvingOtherRoadVehicle">
+		<rdfs:label xml:lang="en">Collision involving Other Road Vehicle</rdfs:label>
+		<skos:definition xml:lang="en">A collision involving other road vehicle in- in Transport transport is a crash that is both an other-road- vehicle crash and a collision crash in which the first harmful event is the collision of two or more other road vehicles in-transport.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.7</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;CollisioninvolvingParkedMotor">
+		<rdfs:label xml:lang="en">Collision involving Parked Motor</rdfs:label>
+		<skos:definition xml:lang="en">A collision involving parked motor vehicle (See Vehicle 2.2.34.2) is a crash in which the first harmful event is the striking of a motor vehicle not in- transport (See 2.2.34.1) by a road vehicle in- transport (See 2.2.34).</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.8</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;CollisioninvolvingPedalcycle">
+		<rdfs:label xml:lang="en">Collision involving Pedalcycle</rdfs:label>
+		<skos:definition xml:lang="en">A collision involving pedalcycle is a crash that is both a motor vehicle crash and a collision crash in which the first harmful event is the collision of a pedalcycle in-transport and a motor vehicle in- transport.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.10</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;CollisioninvolvingPedestrianCrash">
+		<rdfs:label xml:lang="en">Collision involving Pedestrian Crash</rdfs:label>
+		<skos:definition xml:lang="en">A collision involving pedestrian is a collision crash in which the first harmful event is the collision of a pedestrian and a road vehicle in- transport. crash in which the first harmful event is the collision of a road vehicle in-transport and a railway vehicle.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;CollisioninvolvingRailwayVehicle">
+		<rdfs:label xml:lang="en">Collision involving Railway Vehicle</rdfs:label>
+		<skos:definition xml:lang="en">A collision involving railway vehicle is a collision 2.9.1 Commerce Commerce is any trade, traffic or transportation of commodities or persons for financial consideration or exchange, or in the furtherance of a business enterprise.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.9</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;CommercialMotorVehicle">
+		<rdfs:label xml:lang="en">Commercial Motor Vehicle</rdfs:label>
+		<skos:definition xml:lang="en">A commercial motor vehicle is any motor vehicle used for the transportation of goods, property or people in interstate (See 2.9.2) or intrastate (2.9.3) commerce.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.7.3</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:NamedIndividual rdf:about="&auto-de-tc;ConditionalDrivingAutomation">
+		<rdfs:label xml:lang="en">Conditional Driving Automation</rdfs:label>
+		<skos:definition xml:lang="en">The sustained and ODD-specific performance by an ADS of the entire DDT with the expectation that the DDT fallback-ready user is receptive to ADS-issued requests to intervene, as well as to DDT performance-relevant system failures in other vehicle systems, and will respond appropriately.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 5.4</fibo-fnd-utl-av:adaptedFrom>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">A level 3 ADS’s DDT fallback-ready user is also expected to be receptive to evident DDT performance- relevant system failures in vehicle systems that do not necessarily trigger an ADS-issued request to intervene, such as a broken body or a suspension component.</fibo-fnd-utl-av:explanatoryNote>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">An “appropriate” response by a DDT fallback-ready user to a request to intervene may entail bringing the vehicle to a minimal risk condition or continuing to operate the vehicle after the ADS has disengaged.</fibo-fnd-utl-av:explanatoryNote>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">In the event of a DDT performance-relevant system failure in a level 3 ADS or in the event that the ADS will soon exit its ODD, the ADS will issue a request to intervene within sufficient time for a typical person to respond appropriately to the driving situation at hand.</fibo-fnd-utl-av:explanatoryNote>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">The DDT fallback-ready user need not supervise a level 3 ADS while it is engaged but is expected to be prepared to either resume the DDT when the ADS issues a request to intervene or to perform the fallback and achieve a minimal risk condition if the failure condition precludes normal operation.</fibo-fnd-utl-av:explanatoryNote>
+		<fibo-fnd-utl-av:synonym xml:lang="en">Level 3</fibo-fnd-utl-av:synonym>
+		<fibo-fnd-utl-av:usageNote xml:lang="en">An ADS feature capable of performing the entire DDT in low-speed, stop-and-go freeway traffic.</fibo-fnd-utl-av:usageNote>
+	</owl:NamedIndividual>
+	
+	<owl:Class rdf:about="&auto-de-tc;ContactVehicle">
+		<rdfs:label xml:lang="en">Contact Vehicle</rdfs:label>
+		<skos:definition xml:lang="en">A contact vehicle is any road vehicle which comes in contact with one or more road vehicles, non-motorists or property in a collision crash, or has a noncollision crash. A contact vehicle is directly involved in a crash. (See 2.6.2 Collision crash and 2.6.3 Noncollision crash.)</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.7</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;CountyRoad">
+		<rdfs:label xml:lang="en">County Road</rdfs:label>
+		<skos:definition xml:lang="en">A county road is a trafficway within a county trafficway system that is not an Interstate highway, other U.S. route numbered highway, or other state route numbered highway.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.7</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Crash">
+		<rdfs:label xml:lang="en">Crash</rdfs:label>
+		<skos:definition xml:lang="en">A crash is an unstabilized situation which includes at least one harmful event.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.6</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Crosswalk">
+		<rdfs:label xml:lang="en">Crosswalk</rdfs:label>
+		<skos:definition xml:lang="en">A crosswalk is (1) that part of a roadway at an intersection included within the connections of the lateral lines of the sidewalks on opposite sides of the roadway measured from the curbs or, in the absence of curbs, from the edges of the traversable roadway, or (2) any portion of a roadway at an intersection or elsewhere distinctly indicated for pedestrian crossing by lines or other markings on the surface of the roadway.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.21</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;CurbReturn">
+		<rdfs:label xml:lang="en">Curb Return</rdfs:label>
+		<skos:definition xml:lang="en">A curb return is the curved section of curb used at intersections in joining straight sections of curb.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.20</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Damage">
+		<rdfs:label xml:lang="en">Damage</rdfs:label>
+		<skos:definition xml:lang="en">Damage is harm to property that reduces the monetary value of that property.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.3.7</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;DeliberateIntent">
+		<rdfs:label xml:lang="en">Deliberate Intent</rdfs:label>
+		<skos:definition xml:lang="en">Deliberate intent is the classification given to the cause of an event which occurs when a person acts deliberately to cause the event or deliberately refrains from prudent acts which would prevent occurrence of the event. precludes departure of the vehicle from the scene of the crash in its usual operating manner by daylight after simple repairs.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.2</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Disablingdamage">
+		<rdfs:label xml:lang="en">Disabling damage</rdfs:label>
+		<skos:definition xml:lang="en">Disabling damage is road vehicle damage which 2.2.37 Driver A driver is an occupant who is in actual physical control of a transport vehicle or, for an out-of- control vehicle, an occupant who was in control until control was lost.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.3.11</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:NamedIndividual rdf:about="&auto-de-tc;DriverAssistance">
+		<rdfs:label xml:lang="en">Driver Assistance</rdfs:label>
+		<skos:definition xml:lang="en">The sustained and ODD-specific execution by a driving automation system of either the lateral or the longitudinal vehicle motion control subtask of the DDT (but not both simultaneously) with the expectation that the driver performs the remainder of the DDT.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 5.2</fibo-fnd-utl-av:adaptedFrom>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">A level 1 feature performing either the lateral or the longitudinal vehicle motion control subtask of the DDT is capable of only limited OEDR within its dimension (lateral or longitudinal), meaning that there are some events that the driving automation system is not capable of recognizing or responding to. Therefore, the driver must supervise the driving automation system performance by completing the OEDR subtask of the DDT as well as performing the other dimension of vehicle motion control. See Figure 1 (discussing the three primary subtasks of the DDT).</fibo-fnd-utl-av:explanatoryNote>
+		<fibo-fnd-utl-av:synonym xml:lang="en">Level 1</fibo-fnd-utl-av:synonym>
+	</owl:NamedIndividual>
+	
+	<owl:Class rdf:about="&auto-de-tc;Driveway">
+		<rdfs:label xml:lang="en">Driveway</rdfs:label>
+		<skos:definition xml:lang="en">A driveway is a private way which provides vehicular access to the public from a trafficway to property, parking or loading areas outside the boundaries of the trafficway, but is considered to be not open to the public for transportation purposes as a trafficway. A driveway is outside the trafficway and is typically not provided an official identification name or number.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.9.1</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;DrivewayAccess">
+		<rdfs:label xml:lang="en">Driveway Access</rdfs:label>
+		<skos:definition xml:lang="en">A driveway access is a portion of the trafficway at the end of a driveway (See 2.5.9.1), providing access to property adjacent to a trafficway.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.9</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;DrivewayAccess-RelatedCrash">
+		<rdfs:label xml:lang="en">Driveway Access-Related Crash</rdfs:label>
+		<skos:definition xml:lang="en">A driveway access-related crash is a traffic crash that (1) occurs adjacent to a driveway, (2) is not a driveway access crash and (3) results from an activity, behavior or control related to the movement of traffic units onto or out of a driveway.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.7.4.1</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;DrivewayaccessCrash">
+		<rdfs:label xml:lang="en">Driveway access Crash</rdfs:label>
+		<skos:definition xml:lang="en">A driveway access crash is a traffic crash in which the first harmful event occurs on a driveway access (See 2.5.9) or involves a road vehicle entering or leaving another roadway by way of a driveway access (See Figure 4). This requires at least one traffic unit (vehicle, pedalcyclist or pedestrian) to be physically on the driveway access within the trafficway.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.7.4</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficCrashes/Entrance/ExitRamp-relatedCrashAnEntrance/Exit">
+		<rdfs:label xml:lang="en">Entrance/Exit Ramp-related Crash An Entrance/Exit</rdfs:label>
+		<skos:definition xml:lang="en">Ramp-related crash is a traffic crash in which the first harmful event occurs off the entrance/exit ramp roadway, but is related to the use of or entry onto the ramp. If the first harmful event occurs in the intersection of a ramp and a surface roadway, then it would be classified under 2.7.3 – at-intersection crash.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.7.9.1</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficCrashes/Entrance/ExitRampCrashAn">
+		<rdfs:label xml:lang="en">Entrance/Exit Ramp Crash An</rdfs:label>
+		<skos:definition xml:lang="en">Entrance/Exit ramp crash is a traffic crash in which the first harmful event occurs on an entrance or exit ramp roadway and is not the result of an activity, behavior or control related to the movement of traffic units through an intersection. This would include all the areas between the gore and termination of the entrance/exit ramp.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.7.9</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;FatalCrash">
+		<rdfs:label xml:lang="en">Fatal Crash</rdfs:label>
+		<skos:definition xml:lang="en">A fatal crash is any injury crash that results in one or more fatal injuries.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.27</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficCrashes/FatalInjury(K)">
+		<rdfs:label xml:lang="en">Fatal Injury (K)</rdfs:label>
+		<skos:definition xml:lang="en">K) A fatal injury is any injury that results in death (See 3.1.3) within 30 days after the motor vehicle crash in which the injury occurred. If the person did not die at the scene but died within 30 days of the motor vehicle crash in which the injury occurred, the injury classification should be changed from the attribute previously assigned to the attribute “ Fatal injury ” 2.3.3 Fatality A fatality is any death resulting from a fatal injury (See 3.1.3).</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.3.2</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;FrontageRoad">
+		<rdfs:label xml:lang="en">Frontage Road</rdfs:label>
+		<skos:definition xml:lang="en">A frontage road is a roadway generally paralleling an expressway, freeway, parkway or through street so designed as to intercept, collect and distribute traffic desiring to cross, enter or leave such facility and to furnish access to property which otherwise would be isolated as a result of controlled-access features. The frontage road may be within the same trafficway as the main roadway or in a separate trafficway.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.18</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:NamedIndividual rdf:about="&auto-de-tc;FullDrivingAutomation">
+		<rdfs:label xml:lang="en">Full Driving Automation</rdfs:label>
+		<skos:definition xml:lang="en">The sustained and unconditional (i.e., not ODD-specific) performance by an ADS of the entire DDT and DDT fallback without any expectation that a user will respond to a request to intervene.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 5.6</fibo-fnd-utl-av:adaptedFrom>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">In the event of a DDT performance-relevant system failure (of an ADS or the vehicle), a level 5 ADS automatically performs the DDT fallback and achieves a minimal risk condition.</fibo-fnd-utl-av:explanatoryNote>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">The user does not need to supervise a level 5 ADS, nor be receptive to a request to intervene while it is engaged.</fibo-fnd-utl-av:explanatoryNote>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">“Unconditional/not ODD-specific” means that the ADS can operate the vehicle under all driver-manageable road conditions within its region of the world. This means, for example, that there are no design-based weather, time-of-day, or geographical restrictions on where and when the ADS can operate the vehicle. However, there may be conditions not manageable by a driver in which the ADS would also be unable to complete a given trip (e.g., white-out snow storm, flooded roads, glare ice, etc.) until or unless the adverse conditions clear. At the onset of such unmanageable conditions the ADS would perform the DDT fallback to achieve a minimal risk condition (e.g., by pulling over to the side of the road and waiting for the conditions to change).</fibo-fnd-utl-av:explanatoryNote>
+		<fibo-fnd-utl-av:synonym xml:lang="en">Level 5</fibo-fnd-utl-av:synonym>
+		<fibo-fnd-utl-av:usageNote xml:lang="en">A vehicle with an ADS that, once programmed with a destination, is capable of operating the vehicle throughout complete trips on public roadways, regardless of the starting and end points or intervening road, traffic, and weather conditions.</fibo-fnd-utl-av:usageNote>
+	</owl:NamedIndividual>
+	
+	<owl:Class rdf:about="&auto-de-tc;FullTrailer">
+		<rdfs:label xml:lang="en">Full Trailer</rdfs:label>
+		<skos:definition xml:lang="en">A full trailer is a trailer, other than a pole trailer, designed for carrying property and so constructed that no part of its weight rests upon or is carried by the towing road vehicle. An auxiliary undercarriage assembly, commonly known as a converter dolly and consisting of a chassis, fifth wheel and one or more tow bars, is sometimes used to convert a semitrailer to a full trailer. A semitrailer equipped with a converter dolly is considered to be a full trailer.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.18</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Fully-controlledAccessHighway">
+		<rdfs:label xml:lang="en">Fully-controlled Access Highway</rdfs:label>
+		<skos:definition xml:lang="en">A fully-controlled access highway is a trafficway on which preference is given to through traffic by permitting access only from other trafficways and by providing grade separations at all crossing trafficways.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.15</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;FunctionalDamage">
+		<rdfs:label xml:lang="en">Functional Damage</rdfs:label>
+		<skos:definition xml:lang="en">Functional damage is any road vehicle damage, other than disabling damage, which affects operation of the road vehicle or its parts.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.3.12</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Gore">
+		<rdfs:label xml:lang="en">Gore</rdfs:label>
+		<skos:definition xml:lang="en">A gore is an area of land where two roadways diverge or converge. The area is bounded on two sides by the edges of the roadways, which join at the point of divergence or convergence. The direction of traffic shall be the same on both sides of these roadways. The area includes shoulders or marked pavement, if any, between the roadways. The third side is 60 meters (approximately 200 feet) from the point of divergence or convergence or, if any other road is within 70 meters (230 feet) of that point, a line 10 meters (33 feet) from the nearest edge of such road.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.19</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;GradeSeparation">
+		<rdfs:label xml:lang="en">Grade Separation</rdfs:label>
+		<skos:definition xml:lang="en">A grade separation is a crossing at different levels of two trafficways, or a trafficway and a railway.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.14</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficCrashes/GrossCombinationWeightRating(GCWR)">
+		<rdfs:label xml:lang="en">Gross Combination Weight Rating (GCWR)</rdfs:label>
+		<skos:definition xml:lang="en">GCWR) Gross combination weight rating is the value specified by the manufacturer (s) as the recommended maximum loaded weight of a combination (articulated) motor vehicle. This is for truck tractors and single-unit trucks pulling a trailer (s). GCWR is the sum of the gross vehicle weight ratings (GVWR) of all units; power unit and its trailer (s).</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.23.1</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficCrashes/GrossVehicleWeight(GVW)">
+		<rdfs:label xml:lang="en">Gross Vehicle Weight (GVW)</rdfs:label>
+		<skos:definition xml:lang="en">GVW) Gross vehicle weight is the actual weight of a road vehicle including the weight of the road vehicle, its load of persons and property, and all added equipment.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.22</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficCrashes/GrossVehicleWeightRating(GVWR)">
+		<rdfs:label xml:lang="en">Gross Vehicle Weight Rating (GVWR)</rdfs:label>
+		<skos:definition xml:lang="en">GVWR) A gross vehicle weight rating is the value specified by the manufacturer as the recommended maximum loaded weight of a single motor vehicle. This rating includes the maximum rated capacity of a vehicle, including the base vehicle, mounted equipment and any cargo and passengers. Most of the time, GVWR is the sum of the maximum rated capacity of the axles of the vehicle.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.23</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;HarmfulEvent">
+		<rdfs:label xml:lang="en">Harmful Event</rdfs:label>
+		<skos:definition xml:lang="en">A harmful event is an occurrence of injury or damage.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.1</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;HazardousMaterial">
+		<rdfs:label xml:lang="en">Hazardous Material</rdfs:label>
+		<skos:definition xml:lang="en">Hazardous material is a substance or material which has been designated by the U.S. Department of Transportation, or other authorizing entity, as capable of posing an unreasonable risk to health, safety and property when transported in commerce. Any motor vehicle transporting quantities of hazardous materials in quantities above the thresholds established by the U.S. Department of Transportation, or other authorized entity, is required to display a hazardous materials placard.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.9.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;HazardousMaterialsPlacard">
+		<rdfs:label xml:lang="en">Hazardous Materials Placard</rdfs:label>
+		<skos:definition xml:lang="en">A hazardous materials placard is a sign required to be affixed to any motor vehicle transporting quantities of hazardous materials in quantities above the thresholds established by the U.S. Department of Transportation, or other authorized entity. This placard identifies the hazard class division number, 4-digit hazardous material identification number, or name of the hazardous material being transported.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.9.5.1</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;HeavyTruck">
+		<rdfs:label xml:lang="en">Heavy Truck</rdfs:label>
+		<skos:definition xml:lang="en">A heavy truck is a truck which has a gross vehicle weight rating (GVWR) of more than 26,000 pounds (11,793 kilograms).</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.26</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:NamedIndividual rdf:about="&auto-de-tc;HighDrivingAutomation">
+		<rdfs:label xml:lang="en">High Driving Automation</rdfs:label>
+		<skos:definition xml:lang="en">The sustained and ODD-specific performance by an ADS of the entire DDT and DDT fallback, without any expectation that a user will respond to a request to intervene.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 5.5</fibo-fnd-utl-av:adaptedFrom>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Level 4 ADS features may be designed to operate the vehicle throughout complete trips (e.g., a closed campus shuttle feature), or they may be designed to operate the vehicle during only part of a given trip, after ODD requirements are met (e.g., a high-speed freeway cruising feature), For example, in order to complete a given trip, a user of a vehicle equipped with a level 4 ADS feature designed to operate the vehicle during high-speed freeway conditions will generally choose to perform the DDT when the freeway ends; otherwise the ADS will automatically perform DDT fallback and achieve a minimal risk condition as needed. However, unlike at level 3, this user is not a DDT fallback-ready user while the ADS is engaged (see Example 2, below).</fibo-fnd-utl-av:explanatoryNote>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">The user does not need to supervise a level 4 ADS feature or be receptive to a request to intervene while the ADS is engaged. A level 4 ADS is capable of automatically performing DDT fallback, as well as achieving a minimal risk condition if a user does not resume performance of the DDT. This automated DDT fallback and minimal risk condition achievement capability is the primary difference between level 4 and level 3 ADS features. This means that the user of an engaged level 4 ADS feature is a passenger who need not respond to requests to intervene or to DDT performance-relevant system failures.</fibo-fnd-utl-av:explanatoryNote>
+		<fibo-fnd-utl-av:synonym xml:lang="en">Level 4</fibo-fnd-utl-av:synonym>
+		<fibo-fnd-utl-av:usageNote xml:lang="en">A driveless operation dispatcher may engage a level 4 ADS-DV capable of following a pre-defined route within a confined geographical area (e.g., residential community, military base, university campus).</fibo-fnd-utl-av:usageNote>
+		<fibo-fnd-utl-av:usageNote xml:lang="en">A level 4 ADS feature capable of performing the entire DDT during sustained operation on a motorway or freeway (i.e., within its ODD). (Note: The presence of a user in the driver’s seat who is capable of performing the DDT is envisioned in this example, as driver performance of the DDT would have been necessary before entering, and would again be necessary after leaving, the motorway or freeway. Thus, such a feature would alert the user that s/he should resume vehicle operation shortly before exiting the ODD, but if the user fails to respond to such an alert, the ADS will nevertheless perform the DDT fallback and achieve a minimal risk condition automatically.)</fibo-fnd-utl-av:usageNote>
+		<fibo-fnd-utl-av:usageNote xml:lang="en">A level 4 ADS feature capable of performing the entire DDT during valet parking (i.e., curb-to-door or vice versa) without any driver supervision.</fibo-fnd-utl-av:usageNote>
+	</owl:NamedIndividual>
+	
+	<owl:Class rdf:about="&auto-de-tc;In-transport">
+		<rdfs:label xml:lang="en">In-transport</rdfs:label>
+		<skos:definition xml:lang="en">The term “ in-transport &apos;&apos; denotes the state or condition of a transport vehicle which is in motion or within the portion of a transport way ordinarily used by similar transport vehicles. When applied to motor vehicles, “ in-transport &apos;&apos; means on a roadway or in motion within or outside the trafficway. A transport vehicle which is also a working motor vehicle at the time of the unstabilized situation is not `` in-transport. &apos;&apos; In roadway lanes used for travel during some periods and for parking during other periods, a parked motor vehicle should be considered to be in-transport during periods when parking is forbidden.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.34</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Injury">
+		<rdfs:label xml:lang="en">Injury</rdfs:label>
+		<skos:definition xml:lang="en">An injury is bodily harm to a person.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.3.1</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;InjuryCrash">
+		<rdfs:label xml:lang="en">Injury Crash</rdfs:label>
+		<skos:definition xml:lang="en">An injury crash is any road vehicle crash that results in one or more injuries.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.26</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Interchange">
+		<rdfs:label xml:lang="en">Interchange</rdfs:label>
+		<skos:definition xml:lang="en">An interchange is a system of interconnecting roadways in conjunction with one or more grade separations, providing for the movement of traffic between two or more roadways on different levels.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.16</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;InterchangeCrash">
+		<rdfs:label xml:lang="en">Interchange Crash</rdfs:label>
+		<skos:definition xml:lang="en">An interchange crash is a traffic crash in which the first harmful event occurs within boundaries which include all ramps of auxiliary roadways and include each roadway entering or leaving the interchange to a point 30 meters (100 feet) beyond the gore or curb return at the outermost ramp connection. Interchange crashes may include at-intersection crashes, intersection- related crashes, driveway access crashes or nonjunction crashes.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.7.7</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;IntercityBus">
+		<rdfs:label xml:lang="en">Intercity Bus</rdfs:label>
+		<skos:definition xml:lang="en">An intercity bus is a bus used for long-distance passenger transportation between cities over fixed routes with regular schedules.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.10.4</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Intersection">
+		<rdfs:label xml:lang="en">Intersection</rdfs:label>
+		<skos:definition xml:lang="en">An intersection is an area which (1) contains a crossing or connection of two or more roadways not classified as driveway access and (2) is embraced within the prolongation of the lateral curb lines or, if none, the lateral boundary lines of the roadways. Where the distance along a roadway between two areas meeting these criteria is less than 10 meters (33 feet), the two areas and the roadway connecting them are considered to be parts of a single intersection.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.10</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Intersection-relatedCrash">
+		<rdfs:label xml:lang="en">Intersection-related Crash</rdfs:label>
+		<skos:definition xml:lang="en">An intersection-related crash is a traffic crash in which the first harmful event (1) occurs on an approach to or exit from an intersection and (2) results from an activity, behavior or control related to the movement of traffic units through the intersection.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.7.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;InterstateCommerce">
+		<rdfs:label xml:lang="en">Interstate Commerce</rdfs:label>
+		<skos:definition xml:lang="en">Interstate commerce is commerce in the United States where the transit between the points of origin and termination does not occur entirely within the borders of the state of origin.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.9.2</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;InterstateHighwayAn">
+		<rdfs:label xml:lang="en">Interstate Highway An</rdfs:label>
+		<skos:definition xml:lang="en">Interstate highway is a trafficway on the Interstate System.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.4</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;InterstateSystemTheInterstate">
+		<rdfs:label xml:lang="en">Interstate System The Interstate</rdfs:label>
+		<skos:definition xml:lang="en">System is the National System of Interstate and Defense Highways as defined in Section 101, Title 23, United States Code.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.3</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;IntrastateCommerce">
+		<rdfs:label xml:lang="en">Intrastate Commerce</rdfs:label>
+		<skos:definition xml:lang="en">Intrastate commerce is commerce in any state where the transit between the points of origin and termination occurs entirely within the borders of the state of origin.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.9.3</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;JackknifeCrash">
+		<rdfs:label xml:lang="en">Jackknife Crash</rdfs:label>
+		<skos:definition xml:lang="en">A jackknife crash is a noncollision crash in which the first harmful event results from unintended contact between any two units of a multi-unit road vehicle such as a truck combination.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.4</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Junction">
+		<rdfs:label xml:lang="en">Junction</rdfs:label>
+		<skos:definition xml:lang="en">A junction is either an intersection or the connection between a driveway access and a roadway other than a driveway access.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.11</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;LandVehicle">
+		<rdfs:label xml:lang="en">Land Vehicle</rdfs:label>
+		<skos:definition xml:lang="en">A land vehicle is a transport vehicle which is neither an aircraft nor a watercraft.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.7</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;LandWay">
+		<rdfs:label xml:lang="en">Land Way</rdfs:label>
+		<skos:definition xml:lang="en">A land way is the space within property lines or other boundary lines of any transport way that is neither an airway nor a waterway.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.11</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;LargeBus">
+		<rdfs:label xml:lang="en">Large Bus</rdfs:label>
+		<skos:definition xml:lang="en">A large bus is a bus with seating for sixteen or more persons, including the driver.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.10.2</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;LargeMotorcycle">
+		<rdfs:label xml:lang="en">Large Motorcycle</rdfs:label>
+		<skos:definition xml:lang="en">A large motorcycle is any motorcycle other than a motor-driven cycle.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.9.2</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;LegalIntervention">
+		<rdfs:label xml:lang="en">Legal Intervention</rdfs:label>
+		<skos:definition xml:lang="en">Legal intervention is a category of deliberate intent in which the person who acts or refrains from acting is a law-enforcing agent or other official.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.3</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;LightTruck">
+		<rdfs:label xml:lang="en">Light Truck</rdfs:label>
+		<skos:definition xml:lang="en">A light truck is a truck which has a gross vehicle weight rating (GVWR) of 10,000 pounds (4,536 kilograms) or less 2.2.7.1 Low Speed Vehicle A low speed vehicle (LSV) is a motor vehicle with four or more wheels whose top speed is greater than 20 miles per hour, but not greater than 25 miles per hour. LSVs are required to be equipped with basic items of safety equipment : headlamps, stop lamps, turn signal lamps, tail lamps, reflex reflectors, parking brake, windshields of either type AS-1 or AS-5 glazing, rearview mirrors, seat belts and vehicle identification numbers (VINs).</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.24</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Median">
+		<rdfs:label xml:lang="en">Median</rdfs:label>
+		<skos:definition xml:lang="en">A median is an area of a trafficway between parallel roads separating travel in opposite directions. A flush or painted median should be 4 or more feet wide between inside roadway edge lines. Medians fewer than 4 feet wide shall have a barrier to be considered a median. Continuous left-turn lanes are not considered painted medians.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.29</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;MediumTruck">
+		<rdfs:label xml:lang="en">Medium Truck</rdfs:label>
+		<skos:definition xml:lang="en">A medium truck is a truck which has a gross vehicle weight rating (GVWR) of more than 10,000 pounds and less than or equal to 26,000 pounds (4,536 to 11,793 kilograms).</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.25</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Moped">
+		<rdfs:label xml:lang="en">Moped</rdfs:label>
+		<skos:definition xml:lang="en">A moped is a speed-limited motor-driven cycle which may be propelled by pedaling.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.9.4</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Motor-drivenCycle">
+		<rdfs:label xml:lang="en">Motor-driven Cycle</rdfs:label>
+		<skos:definition xml:lang="en">A motor-driven cycle is any motorcycle having an engine with less than 150 cubic centimeters displacement or with 5-brake horsepower or less.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.9.1</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;MotorCarrier">
+		<rdfs:label xml:lang="en">Motor Carrier</rdfs:label>
+		<skos:definition xml:lang="en">A motor carrier is the legal business entity, individual, partnership, corporation or organization that directs, controls and is responsible for the transportation of goods, property or people.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.9.4</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;MotorVehicle">
+		<rdfs:label xml:lang="en">Motor Vehicle</rdfs:label>
+		<skos:definition xml:lang="en">A motor vehicle is any motorized (mechanically or electrically powered) road vehicle not operated on rails (See 2.2.7.1, 2.2.7.2, 2.2.9 - 2.2.26). (1) involves a motor vehicle in-transport, (2) is not an aircraft accident or watercraft accident, and (3) does not include any harmful event involving a railway train in-transport prior to involvement of a motor vehicle in-transport.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.7</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;MotorVehicleCrash">
+		<rdfs:label xml:lang="en">Motor Vehicle Crash</rdfs:label>
+		<skos:definition xml:lang="en">A motor vehicle crash is a transport crash that 55 2.3.9 2.4.22 Term Motor Vehicle Damage Motor Vehicle Traffic Crash Motor vehicle damage is road vehicle damage to a motor vehicle. A motor vehicle traffic crash is a motor vehicle crash which is a traffic crash.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.12</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;MotorVehicleIn-transport">
+		<rdfs:label xml:lang="en">Motor Vehicle In-transport</rdfs:label>
+		<skos:definition xml:lang="en">See In-transport</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.34</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;MotorVehicleNontrafficCrash">
+		<rdfs:label xml:lang="en">MotorVehicleNontrafficCrash</rdfs:label>
+		<skos:definition xml:lang="en">A motor vehicle nontraffic crash is a motor vehicle crash which is a nontraffic crash.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.23</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Motorcycle">
+		<rdfs:label xml:lang="en">Motorcycle</rdfs:label>
+		<skos:definition xml:lang="en">A motorcycle is any motor vehicle having a seat or saddle for the use of its operator and designed to travel on not more than three wheels in contact with the ground.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.9</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;MotorcycleConversionKit">
+		<rdfs:label xml:lang="en">Motorcycle Conversion Kit</rdfs:label>
+		<skos:definition xml:lang="en">A motorcycle conversion assembly makes it possible to convert a conventional two-wheel motorcycle into a motorcycle having the look and the stability of a tricycle-type vehicle, which improves stability and increases ease of operation.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.9.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Motorist">
+		<rdfs:label xml:lang="en">Motorist</rdfs:label>
+		<skos:definition xml:lang="en">A motorist is any occupant of a motor vehicle in- transport.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.40</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficCrashes/NoApparentInjury(O)">
+		<rdfs:label xml:lang="en">No Apparent Injury (O)</rdfs:label>
+		<skos:definition xml:lang="en">O) No apparent injury is a situation where there is no reason to believe that the person received any bodily harm from the motor vehicle crash. There is no physical evidence of injury and the person does not report any change in normal function.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.3.6.1</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;NoApparentInjuryCrash">
+		<rdfs:label xml:lang="en">No Apparent Injury Crash</rdfs:label>
+		<skos:definition xml:lang="en">A no apparent injury crash is any road vehicle crash other than an injury crash. A no apparent injury crash is also called a property damage only crash.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.29</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:NamedIndividual rdf:about="&auto-de-tc;NoAutomation">
+		<rdfs:label xml:lang="en">No Automation</rdfs:label>
+		<skos:definition xml:lang="en">The performance by the driver of the entire DDT, even when enhanced by active safety systems.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 5.1</fibo-fnd-utl-av:adaptedFrom>
+		<fibo-fnd-utl-av:synonym xml:lang="en">Level 0</fibo-fnd-utl-av:synonym>
+	</owl:NamedIndividual>
+	
+	<owl:Class rdf:about="&auto-de-tc;Non-contactVehicle">
+		<rdfs:label xml:lang="en">Non-contact Vehicle</rdfs:label>
+		<skos:definition xml:lang="en">A non-contact vehicle is any vehicle other than a contact vehicle. A noncontact vehicle is indirectly involved in a crash 2.4.28 Non-fatal Injury Crash A non-fatal injury crash is any injury crash other than a fatal crash.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.8</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Non-junctionCrash">
+		<rdfs:label xml:lang="en">Non-junction Crash</rdfs:label>
+		<skos:definition xml:lang="en">A non-junction crash is a road vehicle crash that is not an at-intersection crash, a driveway access crash or an intersection-related crash.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.7.6</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Non-trafficCrash">
+		<rdfs:label xml:lang="en">Non-traffic Crash</rdfs:label>
+		<skos:definition xml:lang="en">A non-traffic crash is a road vehicle crash which 2.2.35 Occupant An occupant is any person who is part of a transport vehicle. is not a traffic crash.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.19</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;NoncollisionCrash">
+		<rdfs:label xml:lang="en">Noncollision Crash</rdfs:label>
+		<skos:definition xml:lang="en">A noncollision crash is any road vehicle crash other than a collision crash.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.3</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;On-roadwayCrash">
+		<rdfs:label xml:lang="en">On-roadway Crash</rdfs:label>
+		<skos:definition xml:lang="en">An on-roadway crash is (1) a collision crash in which the initial point of contact between colliding units in the first harmful event is within a roadway or (2) a non-collision crash in which the road vehicle involved was partly or entirely on the roadway at the time of the first harmful event.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.7.1</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Other-road-vehicleCrash">
+		<rdfs:label xml:lang="en">Other-road-vehicle Crash</rdfs:label>
+		<skos:definition xml:lang="en">An other-road-vehicle crash is a transport crash that (1) involves an other road vehicle in- transport and (2) is not an aircraft accident, watercraft accident, motor vehicle crash or railway accident.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.14</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Other-road-vehicleDamage">
+		<rdfs:label xml:lang="en">Other-road-vehicle Damage</rdfs:label>
+		<skos:definition xml:lang="en">Other-road-vehicle damage is road vehicle damage to an other road vehicle.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.3.10</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Other-road-vehicleNontrafficCrash">
+		<rdfs:label xml:lang="en">Other-road-vehicle Nontraffic Crash</rdfs:label>
+		<skos:definition xml:lang="en">An other-road-vehicle nontraffic crash is an other-road-vehicle crash which is a nontraffic
+crash.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.25</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Other-road-vehicleTrafficCrash">
+		<rdfs:label xml:lang="en">Other-road-vehicle Traffic Crash</rdfs:label>
+		<skos:definition xml:lang="en">An other-road-vehicle traffic crash is an other- road-vehicle crash which is a traffic crash.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.24</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;OtherBus">
+		<rdfs:label xml:lang="en">Other Bus</rdfs:label>
+		<skos:definition xml:lang="en">An other bus is any bus used for transportation purposes other than school bus, transit bus, intercity bus or charter bus.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.10.6</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;OtherRoadVehicle">
+		<rdfs:label xml:lang="en">Other Road Vehicle</rdfs:label>
+		<skos:definition xml:lang="en">An other road vehicle is any road vehicle other than a motor vehicle.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.8</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;OtherStateRouteNumbered">
+		<rdfs:label xml:lang="en">Other State Route Numbered</rdfs:label>
+		<skos:definition xml:lang="en">An other state route numbered highway is a Highway trafficway within a state trafficway system, but not an interstate highway or other U.S. route numbered highway.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.6</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;OtherUSRouteNumberedHighwayAnother">
+		<rdfs:label xml:lang="en">Other US Route Numbered Highway An other</rdfs:label>
+		<skos:definition xml:lang="en">U.S. route numbered highway is a trafficway numbered by the American Association of State Highway Officials, but not an interstate highway.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;OverturningCrash">
+		<rdfs:label xml:lang="en">Overturning Crash</rdfs:label>
+		<skos:definition xml:lang="en">An overturning crash is a road vehicle crash in which the first harmful event is the overturning of a road vehicle.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.1</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;ParkedMotorVehicle">
+		<rdfs:label xml:lang="en">Parked Motor Vehicle</rdfs:label>
+		<skos:definition xml:lang="en">A parked motor vehicle is a motor vehicle not in- transport, other than a working motor vehicle, that is not in motion and not located on the roadway.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.34.2</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;ParkingLot">
+		<rdfs:label xml:lang="en">Parking Lot</rdfs:label>
+		<skos:definition xml:lang="en">A parking lot is an area used primarily for parking road vehicles. When paved and marked, it commonly includes the following areas : 1.) Parking stalls — areas reserved primarily for parked road vehicles, 2.) Parking lot aisles — areas used primarily for vehicular access to parking stalls, Parking lot aisles are not trafficways. 3.) Parking lot ways — land ways which are used primarily for vehicular circulation within parking lots and for vehicular access to parking lot aisles.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.22</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;ParkingLotWay">
+		<rdfs:label xml:lang="en">Parking Lot Way</rdfs:label>
+		<skos:definition xml:lang="en">Parking lot ways in parking lots open to the public are trafficways.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.22.1</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:NamedIndividual rdf:about="&auto-de-tc;PartialDrivingAutomation">
+		<rdfs:label xml:lang="en">Partial Driving Automation</rdfs:label>
+		<skos:definition xml:lang="en">The sustained and ODD-specific execution by a driving automation system of both the lateral and longitudinal vehicle motion control subtasks of the DDT with the expectation that the driver completes the OEDR subtask and supervises the driving automation system.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 5.3</fibo-fnd-utl-av:adaptedFrom>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">A level 2 driving automation feature is capable of only limited OEDR, meaning that there are some events that the driving automation system is not capable of recognizing or responding to. Therefore, the driver supervises the driving automation system performance by completing the OEDR subtask of the DDT. See Figure 1 (discussing the three primary subtasks of the DDT).</fibo-fnd-utl-av:explanatoryNote>
+		<fibo-fnd-utl-av:synonym xml:lang="en">Level 2</fibo-fnd-utl-av:synonym>
+	</owl:NamedIndividual>
+	
+	<owl:Class rdf:about="&auto-de-tc;Passenger">
+		<rdfs:label xml:lang="en">Passenger</rdfs:label>
+		<skos:definition xml:lang="en">A passenger is any occupant of a road vehicle other than its driver. Pedalcycle A pedalcycle is a non-motorized other road vehicle propelled by pedaling.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.38</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;PassengerVan">
+		<rdfs:label xml:lang="en">Passenger Van</rdfs:label>
+		<skos:definition xml:lang="en">A passenger van is any van where the area behind the driver or cab is designated for carrying passengers.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.14.1</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;PedalcycleCrash">
+		<rdfs:label xml:lang="en">PedalcycleCrash</rdfs:label>
+		<skos:definition xml:lang="en">A pedalcycle crash is an other-road-vehicle crash that (1) involves a pedalcycle in-transport and (2) is not a streetcar crash.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.16</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Pedalcyclist">
+		<rdfs:label xml:lang="en">Pedalcyclist</rdfs:label>
+		<skos:definition xml:lang="en">A pedalcyclist is any occupant of a pedalcycle in-transport.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.39</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Pedestrian">
+		<rdfs:label xml:lang="en">Pedestrian</rdfs:label>
+		<skos:definition xml:lang="en">A pedestrian is any person who is not an occupant.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.36</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Person">
+		<rdfs:label xml:lang="en">Person</rdfs:label>
+		<skos:definition xml:lang="en">A person is any living human. Within the context of this manual, a fetus is considered part of a pregnant woman rather than a separate individual. After death, a human body is not considered to be a person. transport device, used by a pedestrian (See 2.2.36) for personal mobility assistance or recreation. These devices can be motorized or human powered, but not propelled by pedaling.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.1</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;PersonalConveyance">
+		<rdfs:label xml:lang="en">Personal Conveyance</rdfs:label>
+		<skos:definition xml:lang="en">A personal conveyance is a device, other than a 2.2.16 Pole Trailer A pole trailer is a trailer designed to be attached to the towing road vehicle by means of a reach or pole, or by being boomed or otherwise secured to the towing road vehicle, and ordinarily used for carrying property of a long or irregular shape such as poles, pipes or structural members that are generally capable of sustaining themselves as beams between the supporting connections.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.6.1</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;PolicePursuit">
+		<rdfs:label xml:lang="en">Police Pursuit</rdfs:label>
+		<skos:definition xml:lang="en">A police pursuit is an event that is initiated when a law enforcement officer, operating an authorized emergency vehicle, gives notice to stop to a motorist the officer is attempting to contact, and that motorist fails to comply with the signal by either maintaining his/her speed, increasing speed, or taking other evasive action to elude the officer &apos;s continued attempts to stop the motorist. This notice needs to be either through the use of visual or audible emergency signals, including alternating flashing headlights, or a combination of emergency devices. A pursuit is terminated when the motorist stops, or when the attempt to apprehend is discontinued.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.3.1</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficCrashes/PossibleInjury(C)">
+		<rdfs:label xml:lang="en">PossibleInjury (C)</rdfs:label>
+		<skos:definition xml:lang="en">C) A possible injury is any injury reported or claimed which is not a fatal, suspected serious, or suspected minor injury. Possible injuries are those that are reported by the person or are indicated by his/her behavior, but no wounds or injuries are readily evident, and includes : Momentary loss of consciousness or claim of injury, limping, or complaint of pain or nausea.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.3.6</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;PrivateWay">
+		<rdfs:label xml:lang="en">Private Way</rdfs:label>
+		<skos:definition xml:lang="en">A private way is any land way other than a trafficway. The space within a crossing of a private way and a trafficway shall be considered a trafficway.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.2</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Property">
+		<rdfs:label xml:lang="en">Property</rdfs:label>
+		<skos:definition xml:lang="en">Property is any physical object other than a person.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.2</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;PropertyDamageOnlyCrash">
+		<rdfs:label xml:lang="en">Property Damage Only Crash</rdfs:label>
+		<skos:definition xml:lang="en">A property damage only crash is a no apparent injury crash.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.30</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Railway">
+		<rdfs:label xml:lang="en">Railway</rdfs:label>
+		<skos:definition xml:lang="en">A railway is any private way reserved primarily for land vehicles moving persons or property from one place to another on rails.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.3</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;RailwayAccident">
+		<rdfs:label xml:lang="en">Railway Accident</rdfs:label>
+		<skos:definition xml:lang="en">A railway accident is a transport accident that (1) involves a railway train in-transport and (2) is not an aircraft accident, watercraft accident or motor vehicle crash.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.13</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;RailwayTrain">
+		<rdfs:label xml:lang="en">Railway Train</rdfs:label>
+		<skos:definition xml:lang="en">A railway train is any motorized railway vehicle.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;RailwayVehicle">
+		<rdfs:label xml:lang="en">Railway Vehicle</rdfs:label>
+		<skos:definition xml:lang="en">A railway vehicle is any land vehicle that is (1) designed primarily for, or in use for, moving persons or property from one place to another on rails and (2) not in use on a land way other than a railway.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.4</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Ramp">
+		<rdfs:label xml:lang="en">Ramp</rdfs:label>
+		<skos:definition xml:lang="en">A ramp is an auxiliary roadway used for entering or leaving through-traffic lanes. Road Vehicle A road vehicle is any land vehicle other than a railway vehicle.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.17</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Road">
+		<rdfs:label xml:lang="en">Road</rdfs:label>
+		<skos:definition xml:lang="en">Road is that part of a trafficway which includes both the roadway and any shoulder alongside the roadway 2.4.17 Road Vehicle Crash A road vehicle crash is a transport crash that is either a motor vehicle crash or an other-road- vehicle crash.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.33</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;RoadVehicleDamage">
+		<rdfs:label xml:lang="en">Road Vehicle Damage</rdfs:label>
+		<skos:definition xml:lang="en">Road vehicle damage is damage to a road vehicle.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.3.8</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;RoadVehicleNontrafficCrash">
+		<rdfs:label xml:lang="en">Road Vehicle Nontraffic Crash</rdfs:label>
+		<skos:definition xml:lang="en">A road vehicle nontraffic crash is a nontraffic crash.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.21</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;RoadVehicleTrafficCrash">
+		<rdfs:label xml:lang="en">Road Vehicle Traffic Crash</rdfs:label>
+		<skos:definition xml:lang="en">A road vehicle traffic crash is a traffic crash.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.20</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Roadside">
+		<rdfs:label xml:lang="en">Roadside</rdfs:label>
+		<skos:definition xml:lang="en">Roadside is the outermost part of the trafficway from the property line or other boundary in to the edge of the first road.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.31</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Roadway">
+		<rdfs:label xml:lang="en">Roadway</rdfs:label>
+		<skos:definition xml:lang="en">A roadway is that part of a trafficway designed, improved and ordinarily used for motor vehicle travel or, where various classes of motor vehicles are segregated, that part of a trafficway used by a particular class. Separate roadways may be provided for opposing directions of traffic or for trucks and automobiles 2.5.2 Rural Area A rural area is any area which is not within urban areas.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.28</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;SchoolBus">
+		<rdfs:label xml:lang="en">School Bus</rdfs:label>
+		<skos:definition xml:lang="en">A school bus is a motor vehicle used for the transportation of any school pupil at or below the 12th-grade level to or from a public or private school or school-related activity. A motor vehicle is not a school bus while on trips which involve the transportation exclusively of other passengers or exclusively for other purposes. A motor vehicle is a school bus only if it is externally identifiable by the following characteristics : 1.) Its color is yellow, 2.) The words “ school bus &apos;&apos; appear on the front and rear, 3.) Flashing red lights are located on the front and rear, 4.) Lettering on both sides identifies the school or school district served, or the company operating the bus.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.8.1</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;SchoolBusCrash">
+		<rdfs:label xml:lang="en">School Bus Crash</rdfs:label>
+		<skos:definition xml:lang="en">A school bus crash is (1) a motor vehicle crash in which a school bus, with or without a pupil on board, is involved directly as a contact vehicle, or (2) a motor vehicle crash or an other-road- vehicle crash in which a school bus, with or without a pupil on board, is involved indirectly as a noncontact vehicle.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.8.2</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Semitrailer">
+		<rdfs:label xml:lang="en">Semitrailer</rdfs:label>
+		<skos:definition xml:lang="en">A semitrailer is a trailer, other than a pole trailer, designed for carrying property and so constructed that part of its weight rests upon or is carried by the towing road vehicle.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.17</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Separator">
+		<rdfs:label xml:lang="en">Separator</rdfs:label>
+		<skos:definition xml:lang="en">A separator is the area of a trafficway between parallel roads separating travel in the same direction or separating a frontage road (See 2.5.18) from other roads.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.30</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;SharedRoad">
+		<rdfs:label xml:lang="en">Shared Road</rdfs:label>
+		<skos:definition xml:lang="en">A shared road is any bikeway which is part of a roadway, but not a bicycle lane.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.46</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Shoulder">
+		<rdfs:label xml:lang="en">Shoulder</rdfs:label>
+		<skos:definition xml:lang="en">A shoulder is that part of a trafficway contiguous with the roadway for emergency use, for accommodation of stopped road vehicles, and for lateral support of the roadway structure.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.32</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;SingleUnitTruck">
+		<rdfs:label xml:lang="en">Single Unit Truck</rdfs:label>
+		<skos:definition xml:lang="en">A single-unit truck is a truck consisting primarily of a single motorized transport device designed for carrying property. When connected to a trailer, such a device may be part of a truck combination. (See 2.2.21) 2.2.10.1 Small bus A small bus is a bus with seating for nine to fifteen persons, including the driver.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.19</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Speed-limitedMotor-drivenCycle">
+		<rdfs:label xml:lang="en">Speed-limited Motor-driven Cycle</rdfs:label>
+		<skos:definition xml:lang="en">A speed-limited motor-driven cycle is any motor- driven cycle which : 1.) will not attain a speed of more than 30 miles per hour (48 kilometers per hour) in one mile (1.609 kilometers) from a standing start, 2.) has an engine with not more than 50 cubic centimeters displacement or with 2-brake horsepower or less, and 3.) has a power drive system which does not require its operator to shift gears.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.9.3</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;StreetcarCrash">
+		<rdfs:label xml:lang="en">Streetcar Crash</rdfs:label>
+		<skos:definition xml:lang="en">A streetcar crash is an other-road-vehicle crash that involves a streetcar in-transport.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.15</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficCrashes/SuspectedMinorInjury(B)">
+		<rdfs:label xml:lang="en">Suspected Minor Injury (B)</rdfs:label>
+		<skos:definition xml:lang="en">B) A suspected minor injury is any injury that is evident at the scene of the crash, other than fatal or serious injuries, including lump on the head, abrasions, bruises, minor lacerations (cuts on the skin surface with minimal bleeding and no exposure of deeper tissue /muscles).</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.3.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficCrashes/SuspectedSeriousInjury(A)">
+		<rdfs:label xml:lang="en">Suspected Serious Injury (A)</rdfs:label>
+		<skos:definition xml:lang="en">A) A suspected serious injury is any injury other than fatal which results in one or more of the following : Severe laceration resulting in exposure of underlying tissues /muscle /organs or resulting in significant loss of blood; broken or distorted extremity (arm or leg); crush injuries; suspected skull, chest, or abdominal injury other than bruises or minor lacerations; significant burns (second and third degree burns over 10 % or more of the body); unconsciousness when taken from the crash scene, or paralysis.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.3.4</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Three-wheeledmotorcycle">
+		<rdfs:label xml:lang="en">Three-wheeled motorcycle</rdfs:label>
+		<skos:definition xml:lang="en">A three-wheeled motorcycle is any motor vehicle having a seat or saddle for the use of its operator, and having three wheels in contact with the ground.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.9.6</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;TotalLanesinRoadway">
+		<rdfs:label xml:lang="en">Total Lanes in Roadway</rdfs:label>
+		<skos:definition xml:lang="en">The total number of lanes in a roadway is collected for each vehicle, on the roadway on which that vehicle was traveling. Through lanes also includes shared through/turn lanes but excludes, turn-only lanes, auxiliary lanes, such as collector-distributor lanes, weaving lanes, frontage road lanes, parking lanes, acceleration/deceleration lanes, toll collection lanes and truck climbing lanes. Total lanes are collected in two parts as total through lanes and total auxiliary lanes.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.33.1</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;TrafficCrash">
+		<rdfs:label xml:lang="en">Traffic Crash</rdfs:label>
+		<skos:definition xml:lang="en">A traffic crash is a road vehicle crash in which (1) the unstabilized situation originates on a trafficway or (2) a harmful event occurs on a trafficway.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.18</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;TrafficUnit">
+		<rdfs:label xml:lang="en">Traffic Unit</rdfs:label>
+		<skos:definition xml:lang="en">A traffic unit is a land vehicle or a pedestrian..</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.42</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Trafficway">
+		<rdfs:label xml:lang="en">Trafficway</rdfs:label>
+		<skos:definition xml:lang="en">A trafficway is any land way open to the public as a matter of right or custom for moving persons or property from one place to another.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.1</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Trailer">
+		<rdfs:label xml:lang="en">Trailer</rdfs:label>
+		<skos:definition xml:lang="en">A trailer is a road vehicle designed to be drawn by another road vehicle.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.15</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;TransitBus">
+		<rdfs:label xml:lang="en">Transit Bus</rdfs:label>
+		<skos:definition xml:lang="en">A transit bus is a bus used for passenger transportation over fixed, scheduled routes within primarily urban geographical areas.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.10.3</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;TransportCrash">
+		<rdfs:label xml:lang="en">Transport Crash</rdfs:label>
+		<skos:definition xml:lang="en">A transport crash is a crash (1) that involves a transport vehicle in-transport, (2) in which the first harmful event is not produced by the discharge of a firearm or explosive device, and (3) that does not directly result from a cataclysm where the timing is such that the cataclysm is occurring at the time of the accident or crash.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.9</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;TransportDevice">
+		<rdfs:label xml:lang="en">Transport Device</rdfs:label>
+		<skos:definition xml:lang="en">A transport device is any device designed primarily for moving persons or property along with the device itself from one place to another, except (1) a weapon, (2) a device used primarily within the confines of a building and its premises, or (3) a personal conveyance.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.3</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;TransportVehicle">
+		<rdfs:label xml:lang="en">Transport Vehicle</rdfs:label>
+		<skos:definition xml:lang="en">A transport vehicle consists of one or more devices or animals and their load. Such devices or animals shall include at least one of the following : 1.) A transport device, or a unit, made up of connected transport devices, while idle or in use, for moving persons or property from one place to another, 2.) An animal or team of animals while in use for moving person or property other than the animal or team itself from one place to another, or 3.) A movable device such as construction, farm or industrial machinery outside the confines of a building and its premises while in use for moving persons, the device itself, or other property from one place to another.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.4</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;TransportWay">
+		<rdfs:label xml:lang="en">Transport Way</rdfs:label>
+		<skos:definition xml:lang="en">A transport way is any way or place reserved or commonly used for the operation of transport vehicles.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.8</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Truck">
+		<rdfs:label xml:lang="en">Truck</rdfs:label>
+		<skos:definition xml:lang="en">A truck is a motor vehicle designed primarily for carrying property.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.13</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;TruckCombination">
+		<rdfs:label xml:lang="en">TruckCombination</rdfs:label>
+		<skos:definition xml:lang="en">A truck combination is a truck consisting primarily of a transport device which is a single- unit truck or truck tractor together with one or more attached trailers.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.21</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;TruckTractor">
+		<rdfs:label xml:lang="en">Truck Tractor</rdfs:label>
+		<skos:definition xml:lang="en">A truck tractor is a motor vehicle consisting of a single motorized transport device designed primarily for drawing trailers.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.20</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;TurnLane">
+		<rdfs:label xml:lang="en">Turn Lane</rdfs:label>
+		<skos:definition xml:lang="en">A turn lane is a lane exclusively designated for vehicles turning from one trafficway to another 2.4.4 Unstabilized Situation An unstabilized situation is a set of events not under human control. It originates when control is lost and terminates when control is regained or, in the absence of persons who are able to regain control, when all persons and property are at rest.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.23</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;UrbanArea">
+		<rdfs:label xml:lang="en">Urban Area</rdfs:label>
+		<skos:definition xml:lang="en">An urban area is an area whose boundaries shall be those fixed by responsible state and local officials in cooperation with each other and approved by Administration, Transportation. established in accordance with the provisions of Title 23 of the United States Code. Urban area boundary information is available from state highway or transportation departments. In the event that boundaries have not been fixed as above for any urban place designated by the Bureau of the Census having a population of 5000 or more, the area within boundaries fixed by the Bureau of the Census shall be an urban area. the Federal Highway U.S. Department of Such boundaries are 2.2.11 Utility Vehicle A utility vehicle is a motor vehicle other than a motorcycle or large bus consisting primarily of a transport device designed for carrying persons, and generally considered a multi-purpose vehicle that is designed to have off-road capabilities. These vehicles are generally four- wheel-drive (4 x 4) and have increased ground clearance. A utility vehicle typically has a gross vehicle weight rating (GVWR) of 10,000 pounds or less. Utility vehicles with wheelbases greater than 88 inches are classified by overall width. The wheelbase and overall width should be rounded to the nearest inch.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.1</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Van">
+		<rdfs:label xml:lang="en">Van</rdfs:label>
+		<skos:definition xml:lang="en">A van is a motor vehicle consisting primarily of a transport device which has a gross vehicle weight rating (GVWR) of 10,000 pounds or less and is basically a “ box on wheels ” that is identifiable by its enclosed passenger and/or cargo area, step-up floor, and relatively short (or nonexistent) hood. Vans are classified by size based on frame type and overall vehicle body width. Before classification, vehicle width should be rounded to the nearest inch.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.14</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Van-basedBus">
+		<rdfs:label xml:lang="en">Van-based Bus</rdfs:label>
+		<skos:definition xml:lang="en">A van-based bus is any passenger van designed for carrying nine or more persons, including the driver.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.14.4</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Van-basedMotorhome">
+		<rdfs:label xml:lang="en">Van-based Motorhome</rdfs:label>
+		<skos:definition xml:lang="en">A van-based motorhome is any van where a frame-mounted recreational unit is added behind the driver or cab area.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.14.3</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Watercraft">
+		<rdfs:label xml:lang="en">Watercraft</rdfs:label>
+		<skos:definition xml:lang="en">A watercraft is a transport vehicle designed primarily for, or in use for, moving persons or property on or through, and supported by, water from one place to another.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.6</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;WatercraftAccident">
+		<rdfs:label xml:lang="en">Watercraft Accident</rdfs:label>
+		<skos:definition xml:lang="en">A watercraft accident is a transport accident if it (1) involves a watercraft in-transport and (2) is not an aircraft accident.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.11</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;Waterway">
+		<rdfs:label xml:lang="en">Waterway</rdfs:label>
+		<skos:definition xml:lang="en">A waterway is a transport way reserved primarily for use by watercraft.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.10</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;WorkZone">
+		<rdfs:label xml:lang="en">Work Zone</rdfs:label>
+		<skos:definition xml:lang="en">A work zone is an area of a trafficway where construction, maintenance or utility work activities are identified by warning signs/signals/indicators, including those on transport devices (e.g., signs, flashing lights, channelizing devices, barriers, pavement markings, flagmen, warning signs and arrow boards mounted on the vehicles in a mobile maintenance activity) that mark the beginning and end of a construction, maintenance or utility work activity. It extends from the first warning sign, signal or flashing lights to the END ROAD WORK sign or the last traffic control device pertinent for that work activity. Work zones also include roadway sections where there is ongoing, moving (mobile) work activity such as lane line painting or roadside mowing only if the beginning of the ongoing, moving (mobile) work activity is designated by warning signs or signals.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.24</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;WorkZoneCrash">
+		<rdfs:label xml:lang="en">Work Zone Crash</rdfs:label>
+		<skos:definition xml:lang="en">A work zone crash is a motor vehicle traffic crash in which the first harmful event occurs within the boundaries of a work zone or on an approach to or exit from a work zone, resulting from an activity, behavior or control related to the movement of the traffic units through the work zone.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.7.8</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-tc;achievedBy">
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-tc;does">
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-tc;hasAgent">
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-tc;hasPart">
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-tc;hasPatient">
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-tc;isOperatedBy">
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-tc;isPartOf">
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-tc;isPatientOf">
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-tc;operatesAtADSLevel">
+		<rdfs:label xml:lang="en">is capable of driving at</rdfs:label>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-tc;performsOnSustainedBasis">
+		<rdfs:label xml:lang="en">performs on a sustained basis</rdfs:label>
+	</owl:ObjectProperty>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle">
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QualitativeValue">
+	</owl:Class>
+	
+	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;abbreviation">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;explanatoryNote">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;synonym">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;usageNote">
+	</owl:AnnotationProperty>
+
+</rdf:RDF>

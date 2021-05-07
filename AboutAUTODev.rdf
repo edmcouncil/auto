@@ -40,7 +40,8 @@
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VS/VehicleSignals/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/AutonomousVehicles/"/>        
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/AutonomousVehicles/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficCrashes/"/>      
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/Map/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/Car/"/>
