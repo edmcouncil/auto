@@ -44,7 +44,6 @@
 		<rdfs:label>Driving events ontologies</rdfs:label>
 		<dct:abstract>This ontology provides metadata for the driving events ontologies</dct:abstract>
 		<dct:creator>Piotr Kulicki</dct:creator>
-		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/AutonomousVehicles/"/>
 		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/Car/"/>
 		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/"/>
 		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/Map/"/>
