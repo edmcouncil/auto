@@ -365,7 +365,6 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;datatypeProductOrServiceProperty"/>
 		<rdfs:domain rdf:resource="&auto-mo-mo;ProductOrService"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:range rdf:resource="&xsd;date"/>
 		<skos:definition xml:lang="en">The date of production of the vehicle. This property should be used mainly with gr:ActualProductOrServiceInstance.</skos:definition>
 	</owl:DatatypeProperty>
 	
