@@ -711,7 +711,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 							</rdf:Description>
 							<owl:Restriction>
 								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasis"/>
-								<owl:allValuesFrom rdf:resource="&auto-de-av;HumanDriver"/>
+								<owl:allValuesFrom rdf:resource="&auto-de-av;AutomatedDrivingSystem"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
