@@ -500,6 +500,12 @@
 		<skos:definition xml:lang="en">the performance by systems of part or all of the DDT on a sustained basis</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.7</fibo-fnd-utl-av:adaptedFrom>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 5.</fibo-fnd-utl-av:adaptedFrom>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Driving automation systems are categorized into levels based on:
+a. Whether the driving automation system performs either the longitudinal or the lateral vehicle motion control subtask of the DDT.
+b. Whether the driving automation system performs both the longitudinal and the lateral vehicle motion control subtasks of the DDT simultaneously.
+c. Whether the driving automation system also performs the OEDR subtask of the DDT. 
+d. Whether the driving automation system also performs DDT fallback.
+e. Whether the driving automation system is limited by an ODD.</fibo-fnd-utl-av:explanatoryNote>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">The level of driving automation is based on the functionality of the driving automation system, as determined by an allocation of roles in DDT and DDT fallback performance between that system and the (human) user (if any). The manufacturer of a driving automation system determines that system’s requirements, operational design domain (ODD), and operating characteristics, including the level of driving automation. The manufacturer also defines the proper use of that system.
 
 The lower two levels of driving automation (1-2) refer to cases in which the (human) driver continues to perform part of the DDT while the driving automation system is engaged.
@@ -711,7 +717,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 							</rdf:Description>
 							<owl:Restriction>
 								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasis"/>
-								<owl:allValuesFrom rdf:resource="&auto-de-av;AutomatedDrivingSystem"/>
+								<owl:allValuesFrom rdf:resource="&auto-de-av;HumanDriver"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
