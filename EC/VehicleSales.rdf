@@ -57,7 +57,7 @@
 	<owl:AnnotationProperty rdf:about="&dct;license">
 	</owl:AnnotationProperty>
 	
-	<rdfs:Datatype rdf:about="&xsd;date">
+	<rdfs:Datatype rdf:about="&xsd;dateTime">
 	</rdfs:Datatype>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/BusOrCoach">
@@ -123,7 +123,6 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;datatypeProductOrServiceProperty"/>
 		<rdfs:domain rdf:resource="&auto-ec-vso;MotorizedRoadVehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:range rdf:resource="&xsd;string"/>
 		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/ACRISS_Car_Classification_Code"/>
 		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/ACRISS_Car_Classification_Code"/>
 		<skos:definition xml:lang="en">The ACRISS Car Classification Code is a code used by many car rental companies, for classifying vehicles. ACRISS stands for Association of Car Rental Industry Systems and Standards.</skos:definition>
@@ -148,7 +147,6 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;datatypeProductOrServiceProperty"/>
 		<rdfs:domain rdf:resource="&auto-mo-mo;ProductOrService"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:range rdf:resource="&xsd;date"/>
 		<skos:definition xml:lang="en">The date of the first registration of the vehicle with the respective public authorities. This property should be used mainly with gr:ActualProductOrServiceInstance.</skos:definition>
 	</owl:DatatypeProperty>
 	
@@ -285,7 +283,6 @@ For two-stroke mixtures, use vso:TwoStrokeMixture.</skos:definition>
 		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;datatypeProductOrServiceProperty"/>
 		<rdfs:domain rdf:resource="&auto-mo-mo;ProductOrService"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition xml:lang="en">A textual description of known damages, both repaired and unrepaired.
 
 Note: This property should be used with gr:ActualProductOrServiceInstance (when offering a vehicle) or gr:ProductOrServicesSomeInstancesPlaceholder (when seeking a vehicle using gr:seeks) only.</skos:definition>
@@ -423,7 +420,6 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;datatypeProductOrServiceProperty"/>
 		<rdfs:domain rdf:resource="&auto-mo-mo;ProductOrService"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:range rdf:resource="&xsd;date"/>
 		<skos:definition xml:lang="en">The release date of a vehicle model (often used to differentiate versions of the same make and model)</skos:definition>
 	</owl:DatatypeProperty>
 	
@@ -1319,12 +1315,12 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/dateVehicleFirstRegistered"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&xsd;date"/>
+						<owl:onDataRange rdf:resource="&xsd;dateTime"/>
 					</owl:Restriction>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/dateVehicleFirstRegistered"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&xsd;date"/>
+						<owl:onDataRange rdf:resource="&xsd;dateTime"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -1335,12 +1331,12 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/productionDate"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&xsd;date"/>
+						<owl:onDataRange rdf:resource="&xsd;dateTime"/>
 					</owl:Restriction>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/productionDate"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&xsd;date"/>
+						<owl:onDataRange rdf:resource="&xsd;dateTime"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
@@ -1351,12 +1347,12 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleModelDate"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&xsd;date"/>
+						<owl:onDataRange rdf:resource="&xsd;dateTime"/>
 					</owl:Restriction>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/vehicleModelDate"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&xsd;date"/>
+						<owl:onDataRange rdf:resource="&xsd;dateTime"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>

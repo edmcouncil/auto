@@ -47,7 +47,6 @@
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/"/>
 		<owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"/>
-		<skos:changeNote>The https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg.rdf version of this ontology was revised to guaranty compliance with the schema.org.</skos:changeNote>
 		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
 	</owl:Ontology>
 	
@@ -1165,7 +1164,6 @@ Note 3: Note that you can use minValue and maxValue to indicate ranges.</skos:de
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
 		<rdfs:domain rdf:resource="&auto-ec-as;Vehicle"/>
-		<rdfs:range rdf:resource="&xsd;string"/>
 		<skos:definition>The Vehicle Identification Number (VIN) is a unique serial number used by the automotive industry to identify individual motor vehicles.</skos:definition>
 		<fibo-fnd-utl-av:abbreviation>VIN</fibo-fnd-utl-av:abbreviation>
 	</owl:DatatypeProperty>

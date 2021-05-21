@@ -62,9 +62,6 @@
 	<owl:AnnotationProperty rdf:about="&dct;license">
 	</owl:AnnotationProperty>
 	
-	<rdfs:Datatype rdf:about="&xsd;date">
-	</rdfs:Datatype>
-	
 	<owl:Class rdf:about="&auto-ec-coo;ChoiceOrComponent">
 		<rdfs:subClassOf>
 			<owl:Class>
@@ -1119,7 +1116,7 @@
 		<rdfs:label xml:lang="en">date launched</rdfs:label>
 		<rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ProductOrService"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<rdfs:range rdf:resource="&xsd;date"/>
+		<rdfs:range rdf:resource="&xsd;dateTime"/>
 		<skos:definition xml:lang="en">The date of the official launch of the car model</skos:definition>
 	</owl:DatatypeProperty>
 	
@@ -1757,12 +1754,12 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-vvo;dateLaunched"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&xsd;date"/>
+						<owl:onDataRange rdf:resource="&xsd;dateTime"/>
 					</owl:Restriction>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-vvo;dateLaunched"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&xsd;date"/>
+						<owl:onDataRange rdf:resource="&xsd;dateTime"/>
 					</owl:Restriction>
 				</owl:intersectionOf>
 			</owl:Class>
