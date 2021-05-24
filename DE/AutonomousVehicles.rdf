@@ -47,6 +47,24 @@
 		<rdfs:subClassOf rdf:resource="&auto-de-av;ADSEquippedVehicle"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-de-av;isDispatchedIn"/>
+				<owl:allValuesFrom rdf:resource="&auto-de-av;DriverlessOperationOfADSEquippedVehicle"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-de-av;isDispatchedBy"/>
+				<owl:onClass>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-de-av;playsRole"/>
+						<owl:someValuesFrom rdf:resource="&auto-de-av;DriverlessOperationDispatcher"/>
+					</owl:Restriction>
+				</owl:onClass>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-de-av;isOperatedBy"/>
 				<owl:someValuesFrom rdf:resource="&auto-de-av;AutomatedDrivingSystem"/>
 			</owl:Restriction>
@@ -170,11 +188,15 @@
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">Automated Driving System</rdfs:label>
-		<skos:definition xml:lang="en">the hardware and software that are collectively capable of performing the entire dynmic driving task (DDT) on a sustained basis, regardless of whether it is limited to a specific operational design domain (ODD)</skos:definition>
+		<skos:definition xml:lang="en">the hardware and software that are collectively capable of performing the entire dynamic driving task (DDT) on a sustained basis, regardless of whether it is limited to a specific operational design domain (ODD)</skos:definition>
 		<fibo-fnd-utl-av:abbreviation>ADS</fibo-fnd-utl-av:abbreviation>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.2</fibo-fnd-utl-av:adaptedFrom>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">&quot;Automated Driving Sytem&quot; is used specifically to describe a level 3, 4, or 5 driving automation system.</fibo-fnd-utl-av:explanatoryNote>
 		<fibo-fnd-utl-av:usageNote xml:lang="en">In contrast to ADS, the generic term “driving automation system” refers to any level 1-5 system or feature that performs part or all of the dynamic driving task (DDT) on a sustained basis. Given the similarity between the generic term, “driving automation system,” and the level 3-5-specific term, “Automated Driving System,” the latter term should be capitalized when spelled out and reduced to its acronym, ADS, as much as possible, while the former term should not be.</fibo-fnd-utl-av:usageNote>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-av;Condition">
+		<rdfs:label xml:lang="en">Condition</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;ConditionalDrivingAutomation">
@@ -217,7 +239,7 @@
 							<rdf:Description rdf:about="&auto-de-av;LateralVehicleMotionControl">
 							</rdf:Description>
 							<owl:Restriction>
-								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasis"/>
+								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasisBy"/>
 								<owl:allValuesFrom rdf:resource="&auto-de-av;AutomatedDrivingSystem"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
@@ -234,7 +256,7 @@
 							<rdf:Description rdf:about="&auto-de-av;LongitudinalVehicleMotionControl">
 							</rdf:Description>
 							<owl:Restriction>
-								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasis"/>
+								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasisBy"/>
 								<owl:allValuesFrom rdf:resource="&auto-de-av;AutomatedDrivingSystem"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
@@ -251,7 +273,7 @@
 							<rdf:Description rdf:about="&auto-de-av;ObjectAndEventDetectionAndResponse">
 							</rdf:Description>
 							<owl:Restriction>
-								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasis"/>
+								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasisBy"/>
 								<owl:allValuesFrom rdf:resource="&auto-de-av;HumanDriver"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
@@ -389,7 +411,7 @@
 							<rdf:Description rdf:about="&auto-de-av;LateralVehicleMotionControl">
 							</rdf:Description>
 							<owl:Restriction>
-								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasis"/>
+								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasisBy"/>
 								<owl:someValuesFrom>
 									<owl:Class>
 										<owl:unionOf rdf:parseType="Collection">
@@ -415,7 +437,7 @@
 							<rdf:Description rdf:about="&auto-de-av;LongitudinalVehicleMotionControl">
 							</rdf:Description>
 							<owl:Restriction>
-								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasis"/>
+								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasisBy"/>
 								<owl:someValuesFrom>
 									<owl:Class>
 										<owl:unionOf rdf:parseType="Collection">
@@ -441,7 +463,7 @@
 							<rdf:Description rdf:about="&auto-de-av;ObjectAndEventDetectionAndResponse">
 							</rdf:Description>
 							<owl:Restriction>
-								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasis"/>
+								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasisBy"/>
 								<owl:allValuesFrom rdf:resource="&auto-de-av;HumanDriver"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
@@ -457,7 +479,8 @@
 	</owl:NamedIndividual>
 	
 	<owl:Class rdf:about="&auto-de-av;DriverSupportDrivingAutomationSystemFeature">
-		<rdfs:label xml:lang="en">Driver Support Driving Automation System Feature</rdfs:label>
+		<rdfs:subClassOf rdf:resource="&auto-de-av;DrivingAutomationSystemFeatureOrApplication"/>
+		<rdfs:label xml:lang="en">Driver Support [Driving Automation System] Feature</rdfs:label>
 		<skos:definition xml:lang="en">level 1 and level 2 driving automation system features</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.10</fibo-fnd-utl-av:adaptedFrom>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Level 1 (driver assistance) and level 2 (partial automation) features are capable of performing only part of the DDT, and thus require a driver to perform the remainder of the DDT, as well as to supervise the feature’s performance while engaged. As such, these features, when engaged, support, but do not replace, a driver in performing the DDT.</fibo-fnd-utl-av:explanatoryNote>
@@ -487,15 +510,40 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;DriverlessOperationOfADSEquippedVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-de-av;Activity"/>
+		<rdfs:subClassOf rdf:resource="&auto-de-av;OperateMotorVehicle"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-de-av;dependsOn"/>
+				<owl:someValuesFrom rdf:resource="&auto-de-av;DispatchInDriverlessOperation"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-de-av;hasAgent"/>
+				<owl:someValuesFrom rdf:resource="&auto-de-av;AutomatedDrivingSystem"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-de-av;hasPatient"/>
+				<owl:someValuesFrom rdf:resource="&auto-de-av;ADSEquippedVehicle"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">Driverless Operation Of An ADS-Equipped Vehicle</rdfs:label>
-		<skos:definition xml:lang="en">Operation of an ADS-equipped vehicle in which either no on-board user is present , or in which on-board users are not drivers or fallback-ready users.</skos:definition>
+		<skos:definition xml:lang="en">an operation of an ADS-equipped vehicle in which either no on-board user is present, or in which on-board users are not drivers or fallback-ready users</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.11</fibo-fnd-utl-av:adaptedFrom>
-		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">ADS-DVs are always dispatched in driverless operation (subject to NOTE 4 in 3.3).</fibo-fnd-utl-av:explanatoryNote>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">ADS-DVs are always dispatched in driverless operation.</fibo-fnd-utl-av:explanatoryNote>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">ADS-equipped dual-mode vehicles may be dispatched in driverless operation.</fibo-fnd-utl-av:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;DrivingAutomation">
+		<rdfs:subClassOf rdf:resource="&auto-de-av;SustainedOperationOfVehicle"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-de-av;isDeterminedBy"/>
+				<owl:someValuesFrom rdf:resource="&auto-de-av;DrivingAutomationSystemFeatureOrApplication"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">Driving Automation</rdfs:label>
 		<skos:definition xml:lang="en">the performance by systems of part or all of the DDT on a sustained basis</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.7</fibo-fnd-utl-av:adaptedFrom>
@@ -514,7 +562,7 @@ The upper three levels of driving automation (3-5) refer to cases in which the A
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;DrivingAutomationSystemFeatureOrApplication">
-		<rdfs:label xml:lang="en">Driving Automation System Feature or Application</rdfs:label>
+		<rdfs:label xml:lang="en">[Driving Automation System] Feature or Application</rdfs:label>
 		<skos:definition xml:lang="en">A level 1-5 driving automation system’s design-specific functionality at a given level of driving automation within a particular ODD, if applicable.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.9</fibo-fnd-utl-av:adaptedFrom>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">A given driving automation system may have multiple features, each associated with a particular level of driving automation and ODD.</fibo-fnd-utl-av:explanatoryNote>
@@ -550,7 +598,7 @@ The upper three levels of driving automation (3-5) refer to cases in which the A
 		<rdfs:subClassOf rdf:resource="&auto-de-av;Function"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-de-av;hasRelizationIn"/>
+				<owl:onProperty rdf:resource="&auto-de-av;hasRealizationIn"/>
 				<owl:onClass rdf:resource="&auto-de-av;OperateMotorVehicle"/>
 				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 			</owl:Restriction>
@@ -682,7 +730,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 							<rdf:Description rdf:about="&auto-de-av;LateralVehicleMotionControl">
 							</rdf:Description>
 							<owl:Restriction>
-								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasis"/>
+								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasisBy"/>
 								<owl:allValuesFrom rdf:resource="&auto-de-av;AutomatedDrivingSystem"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
@@ -699,7 +747,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 							<rdf:Description rdf:about="&auto-de-av;LongitudinalVehicleMotionControl">
 							</rdf:Description>
 							<owl:Restriction>
-								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasis"/>
+								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasisBy"/>
 								<owl:allValuesFrom rdf:resource="&auto-de-av;AutomatedDrivingSystem"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
@@ -716,7 +764,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 							<rdf:Description rdf:about="&auto-de-av;ObjectAndEventDetectionAndResponse">
 							</rdf:Description>
 							<owl:Restriction>
-								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasis"/>
+								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasisBy"/>
 								<owl:allValuesFrom rdf:resource="&auto-de-av;HumanDriver"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
@@ -735,13 +783,6 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;Function">
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-de-av;hasRealizationIn"/>
-				<owl:onClass rdf:resource="&auto-de-av;OperateMotorVehicle"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">Function</rdfs:label>
 	</owl:Class>
 	
@@ -780,7 +821,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 							<rdf:Description rdf:about="&auto-de-av;LateralVehicleMotionControl">
 							</rdf:Description>
 							<owl:Restriction>
-								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasis"/>
+								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasisBy"/>
 								<owl:allValuesFrom rdf:resource="&auto-de-av;AutomatedDrivingSystem"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
@@ -797,7 +838,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 							<rdf:Description rdf:about="&auto-de-av;LongitudinalVehicleMotionControl">
 							</rdf:Description>
 							<owl:Restriction>
-								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasis"/>
+								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasisBy"/>
 								<owl:allValuesFrom rdf:resource="&auto-de-av;AutomatedDrivingSystem"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
@@ -814,7 +855,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 							<rdf:Description rdf:about="&auto-de-av;ObjectAndEventDetectionAndResponse">
 							</rdf:Description>
 							<owl:Restriction>
-								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasis"/>
+								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasisBy"/>
 								<owl:allValuesFrom rdf:resource="&auto-de-av;HumanDriver"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
@@ -834,13 +875,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;HumanDriver">
-		<rdfs:subClassOf rdf:resource="&auto-de-av;Actor"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-de-av;playsRole"/>
-				<owl:someValuesFrom rdf:resource="&auto-de-av;HumanUser"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
+		<rdfs:subClassOf rdf:resource="&auto-de-av;HumanUser"/>
 		<rdfs:label xml:lang="en">Human Driver</rdfs:label>
 		<skos:definition xml:lang="en">a user who performs in real-time part or all of the DDT and/or DDT fallback for a particular vehicle</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.29.1</fibo-fnd-utl-av:adaptedFrom>
@@ -859,7 +894,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-de-av;isPlayedBy"/>
-				<owl:someValuesFrom rdf:resource="&auto-de-av;HumanDriver"/>
+				<owl:someValuesFrom rdf:resource="&auto-de-av;Person"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">Human User</rdfs:label>
@@ -891,6 +926,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;MinimalRiskCondition">
+		<rdfs:subClassOf rdf:resource="&auto-de-av;Condition"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-de-av;achievedBy"/>
@@ -1000,7 +1036,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 							<rdf:Description rdf:about="&auto-de-av;LateralVehicleMotionControl">
 							</rdf:Description>
 							<owl:Restriction>
-								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasis"/>
+								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasisBy"/>
 								<owl:allValuesFrom rdf:resource="&auto-de-av;HumanDriver"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
@@ -1017,7 +1053,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 							<rdf:Description rdf:about="&auto-de-av;LongitudinalVehicleMotionControl">
 							</rdf:Description>
 							<owl:Restriction>
-								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasis"/>
+								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasisBy"/>
 								<owl:allValuesFrom rdf:resource="&auto-de-av;HumanDriver"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
@@ -1034,7 +1070,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 							<rdf:Description rdf:about="&auto-de-av;ObjectAndEventDetectionAndResponse">
 							</rdf:Description>
 							<owl:Restriction>
-								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasis"/>
+								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasisBy"/>
 								<owl:allValuesFrom rdf:resource="&auto-de-av;HumanDriver"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
@@ -1079,6 +1115,13 @@ are referred to collectively as object and event detection and response (OEDR).<
 		<rdfs:subClassOf rdf:resource="&auto-de-av;Activity"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-de-av;isRealizedBy"/>
+				<owl:onClass rdf:resource="&auto-de-av;DynamicDrivingTask"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-de-av;hasAgent"/>
 				<owl:someValuesFrom>
 					<owl:Class>
@@ -1092,14 +1135,30 @@ are referred to collectively as object and event detection and response (OEDR).<
 				</owl:someValuesFrom>
 			</owl:Restriction>
 		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-de-av;hasPatient"/>
+				<owl:someValuesFrom>
+					<owl:Class>
+						<owl:unionOf rdf:parseType="Collection">
+							<rdf:Description rdf:about="&auto-de-av;ADSEquippedVehicle">
+							</rdf:Description>
+							<rdf:Description rdf:about="&auto-de-av;ConventionalVehicle">
+							</rdf:Description>
+						</owl:unionOf>
+					</owl:Class>
+				</owl:someValuesFrom>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">Operate A Motor Vehicle</rdfs:label>
 		<skos:definition xml:lang="en">the activities performed by a (human) driver (with or without support from one or more level 1 or 2 driving automation features ) or by an ADS (level 3-5) to perform the entire DDT for a given vehicle during a trip</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.21</fibo-fnd-utl-av:adaptedFrom>
-		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Although use of the term operate/operating implies the existence of a vehicle “operator,” this term is not defined or used in this document, which otherwise provides very specific terms and definitions for the various types of ADS-equipped vehicle users (see 3.29).</fibo-fnd-utl-av:explanatoryNote>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Although use of the term operate/operating implies the existence of a vehicle “operator,” this term is not defined or used in this document, which otherwise provides very specific terms and definitions for the various types of ADS-equipped vehicle users.</fibo-fnd-utl-av:explanatoryNote>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">The term “drive” is not used in this document, however, in many cases it could be used correctly in lieu of “operate.”</fibo-fnd-utl-av:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;OperationalDesignDomain">
+		<rdfs:subClassOf rdf:resource="&auto-de-av;Condition"/>
 		<rdfs:label xml:lang="en">Operational Design Domain</rdfs:label>
 		<skos:definition xml:lang="en">operating conditions under which a given driving automation system or feature thereof is specifically designed to function, including, but not limited to, environmental, geographical, and time-of-day restrictions, and/or the requisite presence or absence of certain traffic or roadway characteristics</skos:definition>
 		<fibo-fnd-utl-av:abbreviation>ODD</fibo-fnd-utl-av:abbreviation>
@@ -1112,7 +1171,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	<owl:Class rdf:about="&auto-de-av;OperationalEffort">
 		<rdfs:subClassOf rdf:resource="&auto-de-av;DynamicDrivingTaskSubtask"/>
 		<rdfs:label xml:lang="en">Operational effort</rdfs:label>
-		<skos:definition xml:lang="en">involves split-second reactions that can be considered pre-cognitive or innate, such as making micro- corrections to steering, braking and accelerating to maintain lane position in traffic or to avoid a sudden obstacle or hazardous event in the vehicle’s pathway</skos:definition>
+		<skos:definition xml:lang="en">a function that involves split-second reactions that can be considered pre-cognitive or innate, such as making micro- corrections to steering, braking and accelerating to maintain lane position in traffic or to avoid a sudden obstacle or hazardous event in the vehicle’s pathway</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 8.11</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
@@ -1151,7 +1210,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 							<rdf:Description rdf:about="&auto-de-av;LateralVehicleMotionControl">
 							</rdf:Description>
 							<owl:Restriction>
-								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasis"/>
+								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasisBy"/>
 								<owl:allValuesFrom rdf:resource="&auto-de-av;AutomatedDrivingSystem"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
@@ -1168,7 +1227,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 							<rdf:Description rdf:about="&auto-de-av;LongitudinalVehicleMotionControl">
 							</rdf:Description>
 							<owl:Restriction>
-								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasis"/>
+								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasisBy"/>
 								<owl:allValuesFrom rdf:resource="&auto-de-av;AutomatedDrivingSystem"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
@@ -1185,7 +1244,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 							<rdf:Description rdf:about="&auto-de-av;ObjectAndEventDetectionAndResponse">
 							</rdf:Description>
 							<owl:Restriction>
-								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasis"/>
+								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasisBy"/>
 								<owl:allValuesFrom rdf:resource="&auto-de-av;HumanDriver"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
@@ -1210,6 +1269,18 @@ are referred to collectively as object and event detection and response (OEDR).<
 		<fibo-fnd-utl-av:usageNote xml:lang="en">The person seated in the driver’s seat of a vehicle equipped with a level 4 ADS feature designed to automate high-speed vehicle operation on controlled-access freeways is a passenger while this level 4 feature is engaged. This same person, however, is a driver before engaging this level 4 ADS feature and again after disengaging the feature in order to exit the controlled access freeway.</fibo-fnd-utl-av:usageNote>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-de-av;Person">
+		<rdfs:subClassOf rdf:resource="&auto-de-av;Actor"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-de-av;playsRole"/>
+				<owl:onClass rdf:resource="&auto-de-av;HumanUser"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Person</rdfs:label>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-de-av;ReceptivityOfUser">
 		<rdfs:label xml:lang="en">Receptivity Of The User</rdfs:label>
 		<skos:definition xml:lang="en">an aspect of consciousness characterized by a person’s ability to reliably and appropriately focus his/her attention in response to a stimulus</skos:definition>
@@ -1222,7 +1293,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;RemoteDriver">
-		<rdfs:subClassOf rdf:resource="&auto-de-av;HumanUser"/>
+		<rdfs:subClassOf rdf:resource="&auto-de-av;HumanDriver"/>
 		<rdfs:label xml:lang="en">Remote Driver</rdfs:label>
 		<skos:definition xml:lang="en">a driver who is not seated in a position to manually exercise in-vehicle braking, accelerating, steering, and transmission gear selection input devices (if any) but is able to operate the vehicle</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.29.1.2</fibo-fnd-utl-av:adaptedFrom>
@@ -1248,13 +1319,13 @@ are referred to collectively as object and event detection and response (OEDR).<
 	<owl:Class rdf:about="&auto-de-av;SuperviseDrivingAutomationSystemPerformance">
 		<rdfs:subClassOf rdf:resource="&auto-de-av;Activity"/>
 		<rdfs:label xml:lang="en">Supervise Driving Automation System Performance</rdfs:label>
-		<skos:definition xml:lang="en">The driver activities , performed while operating a vehicle with an engaged level 1 or 2 driving automation system feature , to monitor that feature ’ s performance , respond to inappropriate actions taken by the feature , and to otherwise complete the DDT.</skos:definition>
+		<skos:definition xml:lang="en">the driver activities, performed while operating a vehicle with an engaged level 1 or 2 driving automation system feature, to monitor that feature’s performance, respond to inappropriate actions taken by the feature, and to otherwise complete the DDT</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.25</fibo-fnd-utl-av:adaptedFrom>
 		<fibo-fnd-utl-av:usageNote xml:lang="en">A driver notices that an engaged adaptive cruise control (ACC) feature is not maintaining headway to a preceding vehicle in a curve and brakes accordingly.</fibo-fnd-utl-av:usageNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;SustainedOperationOfVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-de-av;Activity"/>
+		<rdfs:subClassOf rdf:resource="&auto-de-av;OperateMotorVehicle"/>
 		<rdfs:label xml:lang="en">Sustained Operation Of A Vehicle</rdfs:label>
 		<skos:definition xml:lang="en">a performance of part or all of the DDT both between and across external events, including responding to external events and continuing performance of part or all of the DDT in the absence of external events</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.26</fibo-fnd-utl-av:adaptedFrom>
@@ -1266,7 +1337,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	<owl:Class rdf:about="&auto-de-av;TacticalEffort">
 		<rdfs:subClassOf rdf:resource="&auto-de-av;DynamicDrivingTaskSubtask"/>
 		<rdfs:label xml:lang="en">Tactical effort</rdfs:label>
-		<skos:definition xml:lang="en">involves maneuvering the vehicle in traffic during a trip, including deciding whether and when to overtake another vehicle or change lanes, selecting an appropriate speed, checking mirrors, etc</skos:definition>
+		<skos:definition xml:lang="en">a function that involves maneuvering the vehicle in traffic during a trip, including deciding whether and when to overtake another vehicle or change lanes, selecting an appropriate speed, checking mirrors, etc</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 8.11</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
@@ -1274,7 +1345,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-de-av;isConstitutedBy"/>
-				<owl:onClass rdf:resource="&auto-de-av;DynamicDrivingTask"/>
+				<owl:onClass rdf:resource="&auto-de-av;SustainedOperationOfVehicle"/>
 				<owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -1285,6 +1356,18 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;UsageSpecification">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&owl;topObjectProperty"/>
+				<owl:someValuesFrom rdf:resource="&auto-de-av;DrivingAutomation"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&owl;topObjectProperty"/>
+				<owl:someValuesFrom rdf:resource="&auto-de-av;OperationalDesignDomain"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">Usage Specification</rdfs:label>
 		<skos:definition xml:lang="en">a particular level of driving automation within a particular ODD</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.28</fibo-fnd-utl-av:adaptedFrom>
@@ -1294,6 +1377,9 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:Class>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-av;achievedBy">
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-av;dependsOn">
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-av;does">
@@ -1314,13 +1400,21 @@ are referred to collectively as object and event detection and response (OEDR).<
 		<owl:inverseOf rdf:resource="&auto-de-av;isRealizedBy"/>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="&auto-de-av;hasRelizationIn">
-	</owl:ObjectProperty>
-	
 	<owl:ObjectProperty rdf:about="&auto-de-av;isAgentOf">
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-av;isConstitutedBy">
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-av;isDeterminedBy">
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-av;isDispatchedBy">
+		<rdfs:domain rdf:resource="&auto-de-av;ADSDedicatedVehicle"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-av;isDispatchedIn">
+		<rdfs:domain rdf:resource="&auto-de-av;ADSDedicatedVehicle"/>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-av;isEquippedWith">
@@ -1340,7 +1434,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	<owl:ObjectProperty rdf:about="&auto-de-av;isPatientOf">
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="&auto-de-av;isPerformedOnSustainedBasis">
+	<owl:ObjectProperty rdf:about="&auto-de-av;isPerformedOnSustainedBasisBy">
 		<rdfs:domain>
 			<owl:Class>
 				<owl:unionOf rdf:parseType="Collection">
@@ -1360,6 +1454,12 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-av;isRealizedBy">
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-av;link1">
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-av;link2">
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-av;operatesAtADSLevel">
