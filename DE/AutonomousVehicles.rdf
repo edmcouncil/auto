@@ -274,7 +274,7 @@
 							</rdf:Description>
 							<owl:Restriction>
 								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasisBy"/>
-								<owl:allValuesFrom rdf:resource="&auto-de-av;HumanDriver"/>
+								<owl:allValuesFrom rdf:resource="&auto-de-av;Person"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -394,7 +394,7 @@
 							</rdf:Description>
 							<owl:Restriction>
 								<owl:onProperty rdf:resource="&auto-de-av;hasAgent"/>
-								<owl:allValuesFrom rdf:resource="&auto-de-av;HumanDriver"/>
+								<owl:allValuesFrom rdf:resource="&auto-de-av;Person"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -417,7 +417,7 @@
 										<owl:unionOf rdf:parseType="Collection">
 											<rdf:Description rdf:about="&auto-de-av;AutomatedDrivingSystem">
 											</rdf:Description>
-											<rdf:Description rdf:about="&auto-de-av;HumanDriver">
+											<rdf:Description rdf:about="&auto-de-av;Person">
 											</rdf:Description>
 										</owl:unionOf>
 									</owl:Class>
@@ -443,7 +443,7 @@
 										<owl:unionOf rdf:parseType="Collection">
 											<rdf:Description rdf:about="&auto-de-av;AutomatedDrivingSystem">
 											</rdf:Description>
-											<rdf:Description rdf:about="&auto-de-av;HumanDriver">
+											<rdf:Description rdf:about="&auto-de-av;Person">
 											</rdf:Description>
 										</owl:unionOf>
 									</owl:Class>
@@ -464,7 +464,7 @@
 							</rdf:Description>
 							<owl:Restriction>
 								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasisBy"/>
-								<owl:allValuesFrom rdf:resource="&auto-de-av;HumanDriver"/>
+								<owl:allValuesFrom rdf:resource="&auto-de-av;Person"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -472,7 +472,7 @@
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">Driver Assistance</rdfs:label>
-		<skos:definition xml:lang="en">The sustained and ODD-specific execution by a driving automation system of either the lateral or the longitudinal vehicle motion control subtask of the DDT (but not both simultaneously) with the expectation that the driver performs the remainder of the DDT.</skos:definition>
+		<skos:definition xml:lang="en">the sustained and ODD-specific execution by a driving automation system of either the lateral or the longitudinal vehicle motion control subtask of the DDT (but not both simultaneously) with the expectation that the driver performs the remainder of the DDT</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 5.2</fibo-fnd-utl-av:adaptedFrom>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">A level 1 feature performing either the lateral or the longitudinal vehicle motion control subtask of the DDT is capable of only limited OEDR within its dimension (lateral or longitudinal), meaning that there are some events that the driving automation system is not capable of recognizing or responding to. Therefore, the driver must supervise the driving automation system performance by completing the OEDR subtask of the DDT as well as performing the other dimension of vehicle motion control. See Figure 1 (discussing the three primary subtasks of the DDT).</fibo-fnd-utl-av:explanatoryNote>
 		<fibo-fnd-utl-av:synonym xml:lang="en">Level 1</fibo-fnd-utl-av:synonym>
@@ -765,7 +765,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 							</rdf:Description>
 							<owl:Restriction>
 								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasisBy"/>
-								<owl:allValuesFrom rdf:resource="&auto-de-av;HumanDriver"/>
+								<owl:allValuesFrom rdf:resource="&auto-de-av;Person"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -773,7 +773,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">Full Driving Automation</rdfs:label>
-		<skos:definition xml:lang="en">The sustained and unconditional (i.e., not ODD-specific) performance by an ADS of the entire DDT and DDT fallback without any expectation that a user will respond to a request to intervene.</skos:definition>
+		<skos:definition xml:lang="en">the sustained and unconditional (i.e., not ODD-specific) performance by an ADS of the entire DDT and DDT fallback without any expectation that a user will respond to a request to intervene</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 5.6</fibo-fnd-utl-av:adaptedFrom>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">In the event of a DDT performance-relevant system failure (of an ADS or the vehicle), a level 5 ADS automatically performs the DDT fallback and achieves a minimal risk condition.</fibo-fnd-utl-av:explanatoryNote>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">The user does not need to supervise a level 5 ADS, nor be receptive to a request to intervene while it is engaged.</fibo-fnd-utl-av:explanatoryNote>
@@ -856,7 +856,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 							</rdf:Description>
 							<owl:Restriction>
 								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasisBy"/>
-								<owl:allValuesFrom rdf:resource="&auto-de-av;HumanDriver"/>
+								<owl:allValuesFrom rdf:resource="&auto-de-av;Person"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -1019,7 +1019,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 							</rdf:Description>
 							<owl:Restriction>
 								<owl:onProperty rdf:resource="&auto-de-av;hasAgent"/>
-								<owl:allValuesFrom rdf:resource="&auto-de-av;HumanDriver"/>
+								<owl:allValuesFrom rdf:resource="&auto-de-av;Person"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -1037,7 +1037,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 							</rdf:Description>
 							<owl:Restriction>
 								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasisBy"/>
-								<owl:allValuesFrom rdf:resource="&auto-de-av;HumanDriver"/>
+								<owl:allValuesFrom rdf:resource="&auto-de-av;Person"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -1054,7 +1054,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 							</rdf:Description>
 							<owl:Restriction>
 								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasisBy"/>
-								<owl:allValuesFrom rdf:resource="&auto-de-av;HumanDriver"/>
+								<owl:allValuesFrom rdf:resource="&auto-de-av;Person"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -1071,7 +1071,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 							</rdf:Description>
 							<owl:Restriction>
 								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasisBy"/>
-								<owl:allValuesFrom rdf:resource="&auto-de-av;HumanDriver"/>
+								<owl:allValuesFrom rdf:resource="&auto-de-av;Person"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -1079,7 +1079,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">No Automation</rdfs:label>
-		<skos:definition xml:lang="en">The performance by the driver of the entire DDT, even when enhanced by active safety systems.</skos:definition>
+		<skos:definition xml:lang="en">the performance by the driver of the entire DDT, even when enhanced by active safety systems</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 5.1</fibo-fnd-utl-av:adaptedFrom>
 		<fibo-fnd-utl-av:synonym xml:lang="en">Level 0</fibo-fnd-utl-av:synonym>
 	</owl:NamedIndividual>
@@ -1193,7 +1193,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 							</rdf:Description>
 							<owl:Restriction>
 								<owl:onProperty rdf:resource="&auto-de-av;hasAgent"/>
-								<owl:allValuesFrom rdf:resource="&auto-de-av;HumanDriver"/>
+								<owl:allValuesFrom rdf:resource="&auto-de-av;Person"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -1245,7 +1245,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 							</rdf:Description>
 							<owl:Restriction>
 								<owl:onProperty rdf:resource="&auto-de-av;isPerformedOnSustainedBasisBy"/>
-								<owl:allValuesFrom rdf:resource="&auto-de-av;HumanDriver"/>
+								<owl:allValuesFrom rdf:resource="&auto-de-av;Person"/>
 							</owl:Restriction>
 						</owl:intersectionOf>
 					</owl:Class>
@@ -1253,7 +1253,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">Partial Driving Automation</rdfs:label>
-		<skos:definition xml:lang="en">The sustained and ODD-specific execution by a driving automation system of both the lateral and longitudinal vehicle motion control subtasks of the DDT with the expectation that the driver completes the OEDR subtask and supervises the driving automation system.</skos:definition>
+		<skos:definition xml:lang="en">the sustained and ODD-specific execution by a driving automation system of both the lateral and longitudinal vehicle motion control subtasks of the DDT with the expectation that the driver completes the OEDR subtask and supervises the driving automation system</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 5.3</fibo-fnd-utl-av:adaptedFrom>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">A level 2 driving automation feature is capable of only limited OEDR, meaning that there are some events that the driving automation system is not capable of recognizing or responding to. Therefore, the driver supervises the driving automation system performance by completing the OEDR subtask of the DDT. See Figure 1 (discussing the three primary subtasks of the DDT).</fibo-fnd-utl-av:explanatoryNote>
 		<fibo-fnd-utl-av:synonym xml:lang="en">Level 2</fibo-fnd-utl-av:synonym>
@@ -1382,10 +1382,8 @@ are referred to collectively as object and event detection and response (OEDR).<
 	<owl:ObjectProperty rdf:about="&auto-de-av;dependsOn">
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="&auto-de-av;does">
-	</owl:ObjectProperty>
-	
 	<owl:ObjectProperty rdf:about="&auto-de-av;hasAgent">
+		<rdfs:label xml:lang="en">has agent</rdfs:label>
 		<owl:inverseOf rdf:resource="&auto-de-av;isAgentOf"/>
 	</owl:ObjectProperty>
 	
@@ -1393,27 +1391,34 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-av;hasPatient">
+		<rdfs:label xml:lang="en">has patient</rdfs:label>
 		<owl:inverseOf rdf:resource="&auto-de-av;isPatientOf"/>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-av;hasRealizationIn">
+		<rdfs:label xml:lang="en">has realization in</rdfs:label>
 		<owl:inverseOf rdf:resource="&auto-de-av;isRealizedBy"/>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-av;isAgentOf">
+		<rdfs:label xml:lang="en">is agent of</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-av;isConstitutedBy">
+		<rdfs:label xml:lang="en">is constituted by</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-av;isDeterminedBy">
+		<rdfs:label xml:lang="en">is determined by</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-av;isDispatchedBy">
+		<rdfs:label xml:lang="en">is dispatched by</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-de-av;ADSDedicatedVehicle"/>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-av;isDispatchedIn">
+		<rdfs:label xml:lang="en">is dispached in</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-de-av;ADSDedicatedVehicle"/>
 	</owl:ObjectProperty>
 	
@@ -1432,9 +1437,11 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-av;isPatientOf">
+		<rdfs:label xml:lang="en">is patient of</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-av;isPerformedOnSustainedBasisBy">
+		<rdfs:label xml:lang="en">is performed on sustained basis by</rdfs:label>
 		<rdfs:domain>
 			<owl:Class>
 				<owl:unionOf rdf:parseType="Collection">
@@ -1449,11 +1456,13 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-av;isPlayedBy">
+		<rdfs:label xml:lang="en">is played by</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-de-av;Role"/>
 		<owl:inverseOf rdf:resource="&auto-de-av;playsRole"/>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-av;isRealizedBy">
+		<rdfs:label xml:lang="en">is realized by</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-av;link1">
@@ -1463,10 +1472,12 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-av;operatesAtADSLevel">
+		<rdfs:subPropertyOf rdf:resource="&auto-de-av;isPatientOf"/>
 		<rdfs:label xml:lang="en">is capable of driving at</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-av;performsOnSustainedBasis">
+		<rdfs:subPropertyOf rdf:resource="&auto-de-av;isAgentOf"/>
 		<rdfs:label xml:lang="en">performs on a sustained basis</rdfs:label>
 		<rdfs:range>
 			<owl:Class>
@@ -1481,6 +1492,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-av;playsRole">
+		<rdfs:label xml:lang="en">plays role</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:Class rdf:about="&auto-ec-as;Vehicle">
