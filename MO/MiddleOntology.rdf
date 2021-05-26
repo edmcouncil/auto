@@ -4,6 +4,7 @@
 	<!ENTITY dc "http://purl.org/dc/elements/1.1/">
 	<!ENTITY dct "http://purl.org/dc/terms/">
 	<!ENTITY dctype "http://purl.org/dc/dcmitype/">
+	<!ENTITY dolce "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#">
 	<!ENTITY fibo-fnd-utl-av "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
 	<!ENTITY fibo-fnd-utl-val "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/">
 	<!ENTITY foaf "http://xmlns.com/foaf/0.1/">
@@ -21,6 +22,7 @@
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:dct="http://purl.org/dc/terms/"
 	xmlns:dctype="http://purl.org/dc/dcmitype/"
+	xmlns:dolce="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#"
 	xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
 	xmlns:fibo-fnd-utl-val="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/"
 	xmlns:foaf="http://xmlns.com/foaf/0.1/"
@@ -58,6 +60,8 @@
 	
 	<owl:Class rdf:about="&auto-mo-mo;Event">
 		<rdfs:label xml:lang="en">event</rdfs:label>
+		<dct:source>DOLCE</dct:source>
+		<skos:definition xml:lang="en">an entity that extends in time by accumulating different temporal parts, so that, at any time it is present, it is only partially present</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;Location">
@@ -82,6 +86,10 @@
 	<owl:Class rdf:about="&auto-mo-mo;Person">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;BusinessEntity"/>
 		<rdfs:label xml:lang="en">person</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-mo-mo;PhysicalObject">
+		<rdfs:label xml:lang="en">physical object</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;Place">
@@ -142,6 +150,10 @@
 
 Note: Price information should in general be attached to a gr:Offering node, not to a Base Model, Trim, Derivative, or Complete Car Model. Use this shortcut with care.</rdfs:comment>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-mo-mo;Role">
+		<rdfs:label xml:lang="en">role</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;Service">
