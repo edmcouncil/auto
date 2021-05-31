@@ -48,10 +48,38 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;AircraftAccident">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Crash"/>
+		<rdfs:subClassOf rdf:resource="&auto-de-tc;TransportCrash"/>
 		<rdfs:label xml:lang="en">Aircraft Accident</rdfs:label>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&auto-de-tc;TransportCrash">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-de-tc;hasParticipant"/>
+						<owl:someValuesFrom rdf:resource="&auto-de-tc;AircraftIn-transport"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
 		<skos:definition xml:lang="en">A transport accident that involves an aircraft in-transport.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.10</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;AircraftIn-transport">
+		<rdfs:label>Aircraft In-transport</rdfs:label>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&auto-de-tc;Aircraft">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-de-tc;isInState"/>
+						<owl:someValuesFrom rdf:resource="&auto-de-tc;In-transport"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;Airway">
@@ -132,7 +160,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;Cataclysm">
-		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Event"/>
+		<rdfs:subClassOf rdf:resource="&auto-de-tc;UnstabilizedSituation"/>
 		<rdfs:label xml:lang="en">Cataclysm</rdfs:label>
 		<skos:definition xml:lang="en">An avalanche, landslide/mudslide, hurricane, cyclone, downburst, flood, torrential rain, cloudburst, lightning, tornado, tidal wave, earthquake or volcanic eruption (See 2.4.9 transport crash).</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.5</fibo-fnd-utl-av:adaptedFrom>
@@ -277,8 +305,19 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;Crash">
-		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Event"/>
 		<rdfs:label xml:lang="en">Crash</rdfs:label>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&auto-de-tc;UnstabilizedSituation">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-de-tc;hasPart"/>
+						<owl:someValuesFrom rdf:resource="&auto-de-tc;HarmfulEvent"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
 		<skos:definition xml:lang="en">An unstabilized situation which includes at least one harmful event.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.6</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -315,6 +354,10 @@
 		<rdfs:label xml:lang="en">Disabling damage</rdfs:label>
 		<skos:definition xml:lang="en">A road vehicle damage which precludes departure of the vehicle from the scene of the crash in its usual operating manner by daylight after simple repairs.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.3.11</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;DischargeOfFirearmOrExplosiveDevice">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Event"/>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;Driver">
@@ -371,9 +414,20 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;Entrance-ExitRampCrash">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Crash"/>
 		<rdfs:label xml:lang="en">Entrance/Exit Ramp Crash</rdfs:label>
 		<rdfs:comment xml:lang="en">This would include all the areas between the gore and termination of the entrance/exit ramp.</rdfs:comment>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&auto-de-tc;Crash">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-de-tc;firstHarmfulEventOccursOn"/>
+						<owl:someValuesFrom rdf:resource="&auto-de-tc;Ramp"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
 		<skos:definition xml:lang="en">A traffic crash in which the first harmful event occurs on an entrance or exit ramp roadway and is not the result of an activity, behavior or control related to the movement of traffic units through an intersection.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.7.9</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -599,7 +653,6 @@
 	
 	<owl:Class rdf:about="&auto-de-tc;LandVehicle">
 		<rdfs:subClassOf rdf:resource="&auto-de-tc;TransportDevice"/>
-		<rdfs:subClassOf rdf:resource="&auto-ec-as;Vehicle"/>
 		<rdfs:label xml:lang="en">Land Vehicle</rdfs:label>
 		<skos:definition xml:lang="en">A transport vehicle which is neither an aircraft nor a watercraft.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.7</fibo-fnd-utl-av:adaptedFrom>
@@ -696,9 +749,32 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;MotorVehicleCrash">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Crash"/>
 		<rdfs:label xml:lang="en">Motor Vehicle Crash</rdfs:label>
-		<skos:definition xml:lang="en">A transport crash that (1) involves a motor vehicle in-transport, (2) is not an aircraft accident or watercraft accident, and (3) does not include any harmful event involving a railway train in-transport prior to involvement of a motor vehicle in-transport.</skos:definition>
+		<rdfs:comment xml:lang="en">Original definition:
+
+A transport crash that (1) involves a motor vehicle in-transport, (2) is not an aircraft accident or watercraft accident, and (3) does not include any harmful event involving a railway train in-transport prior to involvement of a motor vehicle in-transport.</rdfs:comment>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&auto-de-tc;TransportCrash">
+					</rdf:Description>
+					<owl:Class>
+						<owl:complementOf rdf:resource="&auto-de-tc;AircraftAccident"/>
+					</owl:Class>
+					<owl:Class>
+						<owl:complementOf rdf:resource="&auto-de-tc;RailwayAccident"/>
+					</owl:Class>
+					<owl:Class>
+						<owl:complementOf rdf:resource="&auto-de-tc;WatercraftAccident"/>
+					</owl:Class>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-de-tc;hasParticipant"/>
+						<owl:someValuesFrom rdf:resource="&auto-de-tc;MotorVehicleIn-transport"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
+		<skos:definition xml:lang="en">A transport crash that (1) involves a motor vehicle in-transport, (2) is not an aircraft accident, watercraft accident or railway train accident.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.12</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
@@ -709,10 +785,21 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;MotorVehicleIn-transport">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;MotorVehicle"/>
 		<rdfs:label xml:lang="en">Motor Vehicle In-transport</rdfs:label>
 		<rdfs:comment xml:lang="en">A motor vehicle that is In-transport state.</rdfs:comment>
 		<rdfs:comment xml:lang="en">See In-transport</rdfs:comment>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&auto-de-tc;MotorVehicle">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-de-tc;isInState"/>
+						<owl:someValuesFrom rdf:resource="&auto-de-tc;In-transport"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.34</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
@@ -847,8 +934,31 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;Other-road-vehicleCrash">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Crash"/>
 		<rdfs:label xml:lang="en">Other-road-vehicle Crash</rdfs:label>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&auto-de-tc;TransportCrash">
+					</rdf:Description>
+					<owl:Class>
+						<owl:complementOf rdf:resource="&auto-de-tc;AircraftAccident"/>
+					</owl:Class>
+					<owl:Class>
+						<owl:complementOf rdf:resource="&auto-de-tc;MotorVehicleCrash"/>
+					</owl:Class>
+					<owl:Class>
+						<owl:complementOf rdf:resource="&auto-de-tc;RailwayAccident"/>
+					</owl:Class>
+					<owl:Class>
+						<owl:complementOf rdf:resource="&auto-de-tc;WatercraftAccident"/>
+					</owl:Class>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-de-tc;hasParticipant"/>
+						<owl:someValuesFrom rdf:resource="&auto-de-tc;OtherRoadVehicleIn-transport"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
 		<skos:definition xml:lang="en">A transport crash that (1) involves an other road vehicle in- transport and (2) is not an aircraft accident, watercraft accident, motor vehicle crash or railway accident.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.14</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -886,6 +996,21 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<rdfs:label xml:lang="en">Other Road Vehicle</rdfs:label>
 		<skos:definition xml:lang="en">Any road vehicle other than a motor vehicle.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.8</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;OtherRoadVehicleIn-transport">
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&auto-de-tc;OtherRoadVehicle">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-de-tc;isInState"/>
+						<owl:someValuesFrom rdf:resource="&auto-de-tc;In-transport"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;OtherStateRouteNumberedHighway">
@@ -964,7 +1089,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;PedalcycleCrash">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Crash"/>
+		<rdfs:subClassOf rdf:resource="&auto-de-tc;Other-road-vehicleCrash"/>
 		<rdfs:label xml:lang="en">PedalcycleCrash</rdfs:label>
 		<skos:definition xml:lang="en">An other-road-vehicle crash that (1) involves a pedalcycle in-transport and (2) is not a streetcar crash.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.16</fibo-fnd-utl-av:adaptedFrom>
@@ -1061,9 +1186,28 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;RailwayAccident">
-		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Event"/>
+		<rdfs:subClassOf rdf:resource="&auto-de-tc;TransportCrash"/>
 		<rdfs:label xml:lang="en">Railway Accident</rdfs:label>
-		<skos:definition xml:lang="en">A transport accident that (1) involves a railway train in-transport and (2) is not an aircraft accident, watercraft accident or motor vehicle crash.</skos:definition>
+		<rdfs:comment xml:lang="en">Original ANSI D.16-2017 definition: &quot;A transport accident that (1) involves a railway train in-transport and (2) is not an aircraft accident, watercraft accident or motor vehicle crash.&quot;</rdfs:comment>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&auto-de-tc;TransportCrash">
+					</rdf:Description>
+					<owl:Class>
+						<owl:complementOf rdf:resource="&auto-de-tc;AircraftAccident"/>
+					</owl:Class>
+					<owl:Class>
+						<owl:complementOf rdf:resource="&auto-de-tc;WatercraftAccident"/>
+					</owl:Class>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-de-tc;hasParticipant"/>
+						<owl:someValuesFrom rdf:resource="&auto-de-tc;RailwayTrainIn-transport"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
+		<skos:definition xml:lang="en">A transport accident that (1) involves a railway train in-transport and (2) is neither an aircraft accident nor watercraft accident.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.13</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
@@ -1072,6 +1216,21 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<rdfs:label xml:lang="en">Railway Train</rdfs:label>
 		<skos:definition xml:lang="en">Any motorized railway vehicle.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;RailwayTrainIn-transport">
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&auto-de-tc;RailwayTrain">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-de-tc;isInState"/>
+						<owl:someValuesFrom rdf:resource="&auto-de-tc;In-transport"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;RailwayVehicle">
@@ -1084,7 +1243,6 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	<owl:Class rdf:about="&auto-de-tc;Ramp">
 		<rdfs:subClassOf rdf:resource="&auto-de-tc;PartOfTrafficway"/>
 		<rdfs:label xml:lang="en">Ramp</rdfs:label>
-		<rdfs:comment xml:lang="en">Road Vehicle A road vehicle is any land vehicle other than a railway vehicle.</rdfs:comment>
 		<skos:definition xml:lang="en">An auxiliary roadway used for entering or leaving through-traffic lanes.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.17</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -1103,8 +1261,18 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;RoadVehicleCrash">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Crash"/>
+		<rdfs:subClassOf rdf:resource="&auto-de-tc;TransportCrash"/>
 		<rdfs:label xml:lang="en">Road Vehicle Crash</rdfs:label>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&auto-de-tc;MotorVehicleCrash">
+					</rdf:Description>
+					<rdf:Description rdf:about="&auto-de-tc;Other-road-vehicleCrash">
+					</rdf:Description>
+				</owl:unionOf>
+			</owl:Class>
+		</owl:equivalentClass>
 		<skos:definition xml:lang="en">A transport crash that is either a motor vehicle crash or an other-road vehicle crash.</skos:definition>
 	</owl:Class>
 	
@@ -1226,7 +1394,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;StreetcarCrash">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Crash"/>
+		<rdfs:subClassOf rdf:resource="&auto-de-tc;Other-road-vehicleCrash"/>
 		<rdfs:label xml:lang="en">Streetcar Crash</rdfs:label>
 		<skos:definition xml:lang="en">An other-road-vehicle crash that involves a streetcar in-transport.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.15</fibo-fnd-utl-av:adaptedFrom>
@@ -1291,8 +1459,35 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;TransportCrash">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Crash"/>
 		<rdfs:label xml:lang="en">Transport Crash</rdfs:label>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&auto-de-tc;Crash">
+					</rdf:Description>
+					<owl:Class>
+						<owl:complementOf>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="&auto-de-tc;isCausedBy"/>
+								<owl:someValuesFrom rdf:resource="&auto-de-tc;Cataclysm"/>
+							</owl:Restriction>
+						</owl:complementOf>
+					</owl:Class>
+					<owl:Class>
+						<owl:complementOf>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="&auto-de-tc;isCausedBy"/>
+								<owl:someValuesFrom rdf:resource="&auto-de-tc;DischargeOfFirearmOrExplosiveDevice"/>
+							</owl:Restriction>
+						</owl:complementOf>
+					</owl:Class>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-de-tc;hasParticipant"/>
+						<owl:someValuesFrom rdf:resource="&auto-de-tc;VehicleIn-transport"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
 		<skos:definition xml:lang="en">A crash (1) that involves a transport vehicle in-transport, (2) in which the first harmful event is not produced by the discharge of a firearm or explosive device, and (3) that does not directly result from a cataclysm where the timing is such that the cataclysm is occurring at the time of the accident or crash.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.9</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -1348,6 +1543,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;UnstabilizedSituation">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Event"/>
 		<rdfs:label xml:lang="en">Unstabilized Situation</rdfs:label>
 		<rdfs:comment xml:lang="en">It originates when control is lost and terminates when control is regained or, in the absence of persons who are able to regain control, when all persons and propertyare at rest.</rdfs:comment>
 		<skos:definition xml:lang="en">A set of events not under human control.</skos:definition>
@@ -1390,6 +1586,21 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.14.3</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-de-tc;VehicleIn-transport">
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&auto-de-tc;TransportDevice">
+					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-de-tc;isInState"/>
+						<owl:someValuesFrom rdf:resource="&auto-de-tc;In-transport"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-de-tc;Watercraft">
 		<rdfs:subClassOf rdf:resource="&auto-de-tc;TransportDevice"/>
 		<rdfs:label xml:lang="en">Watercraft</rdfs:label>
@@ -1398,10 +1609,29 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;WatercraftAccident">
-		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Event"/>
 		<rdfs:label xml:lang="en">Watercraft Accident</rdfs:label>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&auto-de-tc;TransportCrash">
+					</rdf:Description>
+					<owl:Class>
+						<owl:complementOf rdf:resource="&auto-de-tc;AircraftAccident"/>
+					</owl:Class>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-de-tc;hasParticipant"/>
+						<owl:someValuesFrom rdf:resource="&auto-de-tc;WatercraftIn-transport"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</owl:equivalentClass>
 		<skos:definition xml:lang="en">A transport accident if it (1) involves a watercraft in-transport and (2) is not an aircraft accident.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.11</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;WatercraftIn-transport">
+		<rdfs:subClassOf rdf:resource="&auto-de-tc;Watercraft"/>
+		<rdfs:label>Watercraft In-transport</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;Waterway">
@@ -1440,6 +1670,10 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	<owl:ObjectProperty rdf:about="&auto-de-tc;does">
 	</owl:ObjectProperty>
 	
+	<owl:ObjectProperty rdf:about="&auto-de-tc;firstHarmfulEventOccursOn">
+		<rdfs:subPropertyOf rdf:resource="&auto-de-tc;hasLocation"/>
+	</owl:ObjectProperty>
+	
 	<owl:DatatypeProperty rdf:about="&auto-de-tc;grossCombinationWeightRating">
 		<rdfs:label xml:lang="en">Gross Combination Weight Rating</rdfs:label>
 		<rdfs:comment xml:lang="en">This is for truck tractors and single-unit trucks pulling a trailer (s). GCWR is the sum of the gross vehicle weight ratings (GVWR) of all units; power unit and its trailer (s).</rdfs:comment>
@@ -1466,10 +1700,26 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	<owl:ObjectProperty rdf:about="&auto-de-tc;hasAgent">
 	</owl:ObjectProperty>
 	
+	<owl:ObjectProperty rdf:about="&auto-de-tc;hasLocation">
+	</owl:ObjectProperty>
+	
 	<owl:ObjectProperty rdf:about="&auto-de-tc;hasPart">
 	</owl:ObjectProperty>
 	
+	<owl:ObjectProperty rdf:about="&auto-de-tc;hasParticipant">
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-tc;hasParticipantInInitialStage">
+		<rdfs:subPropertyOf rdf:resource="&auto-de-tc;hasParticipant"/>
+	</owl:ObjectProperty>
+	
 	<owl:ObjectProperty rdf:about="&auto-de-tc;hasPatient">
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-tc;isCausedBy">
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-tc;isInState">
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-tc;isOperatedBy">
