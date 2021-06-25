@@ -37,7 +37,6 @@
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VS/VehicleSignals/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/AutonomousVehicles/"/>

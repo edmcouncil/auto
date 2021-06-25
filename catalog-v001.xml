@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1624626519610" name="https://spec.edmcouncil.org/auto/ontology/AboutAUTODev/" uri="AboutAUTODev.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1624626519610" name="https://spec.edmcouncil.org/auto/ontology/DE/AutonomousVehicles/" uri="DE/AutonomousVehicles.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1624626519610" name="https://spec.edmcouncil.org/auto/ontology/DE/Car/" uri="DE/Car.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1624626519610" name="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/" uri="DE/CarControl.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1624626519610" name="https://spec.edmcouncil.org/auto/ontology/DE/Map/" uri="DE/Map.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1624626519610" name="https://spec.edmcouncil.org/auto/ontology/DE/MetadataDE/" uri="DE/MetadataDE.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1624626519610" name="https://spec.edmcouncil.org/auto/ontology/DE/TrafficCrashes/" uri="DE/TrafficCrashes.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1624626519610" name="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/" uri="DE/TrafficIncidents.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1624626519610" name="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/" uri="EC/AutoSchemaOrg.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1624626519610" name="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/" uri="EC/CarOptions.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1624626519610" name="https://spec.edmcouncil.org/auto/ontology/EC/MetadataEC/" uri="EC/MetadataEC.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1624626519610" name="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/" uri="EC/UsedCars.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1624626519610" name="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/" uri="EC/VehicleEmissions.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1624626519610" name="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/" uri="EC/VehicleSales.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1624626519610" name="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/" uri="EC/VolkswagenVehicles.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1624626519610" name="https://spec.edmcouncil.org/auto/ontology/FD/MetadataFD/" uri="FD/MetadataFD.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1624626519610" name="https://spec.edmcouncil.org/auto/ontology/MO/MetadataMO/" uri="MO/MetadataMO.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1624626519610" name="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/" uri="MO/MiddleOntology.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1624626519610" name="https://spec.edmcouncil.org/auto/ontology/MetadataAUTO/" uri="MetadataAUTO.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1624626519610" name="https://spec.edmcouncil.org/auto/ontology/VS/MetadataVS/" uri="VS/MetadataVS.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1624626519610" name="https://spec.edmcouncil.org/auto/ontology/VS/VehicleSignals/" uri="VS/VehicleSignals.rdf"/>
+    </group>
+</catalog>

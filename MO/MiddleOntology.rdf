@@ -6,7 +6,6 @@
 	<!ENTITY dctype "http://purl.org/dc/dcmitype/">
 	<!ENTITY dolce "http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#">
 	<!ENTITY fibo-fnd-utl-av "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
-	<!ENTITY fibo-fnd-utl-val "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/">
 	<!ENTITY foaf "http://xmlns.com/foaf/0.1/">
 	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
 	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -24,7 +23,6 @@
 	xmlns:dctype="http://purl.org/dc/dcmitype/"
 	xmlns:dolce="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#"
 	xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
-	xmlns:fibo-fnd-utl-val="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/"
 	xmlns:foaf="http://xmlns.com/foaf/0.1/"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"

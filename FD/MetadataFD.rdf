@@ -4,7 +4,6 @@
 	<!ENTITY dct "http://purl.org/dc/terms/">
 	<!ENTITY fibo-fnd-utl-av "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
 	<!ENTITY fibo-fnd-utl-mod "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/MetadataFNDUtilities/">
-	<!ENTITY fibo-fnd-utl-val "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/">
 	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
 	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
@@ -18,7 +17,6 @@
 	xmlns:dct="http://purl.org/dc/terms/"
 	xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
 	xmlns:fibo-fnd-utl-mod="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/MetadataFNDUtilities/"
-	xmlns:fibo-fnd-utl-val="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -45,7 +43,6 @@
 		<dct:abstract>This ontology provides metadata for the selected FIBO ontologies.</dct:abstract>
 		<dct:creator rdf:datatype="&xsd;anyURI">https://www.w3.org/community/gao/</dct:creator>
 		<dct:hasPart rdf:resource="&fibo-fnd-utl-mod;UtilitiesModule"/>
-		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/"/>
 		<dct:license rdf:datatype="&xsd;anyURI">http://opensource.org/licenses/MIT</dct:license>
 		<dct:title>EDMC Automotive Ontology (AUTO) FD Domain</dct:title>
 		<sm:contributor>FIBO Community</sm:contributor>
