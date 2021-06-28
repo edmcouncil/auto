@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/Quantities/QuantitiesAndUnits/" uri="https://spec.edmcouncil.org/fibo/ontology/FND/Quantities/QuantitiesAndUnits/"/>
+    <uri id="Imports Wizard Entry" name="https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/AgentsAndPeople/Agents/" uri="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/Agents/"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
         <uri id="Automatically generated entry, Timestamp=1624626923854" name="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/" uri="AutoSchemaOrg.rdf"/>
         <uri id="Automatically generated entry, Timestamp=1624626923854" name="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/" uri="CarOptions.rdf"/>

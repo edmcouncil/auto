@@ -45,6 +45,8 @@
 		<sm:filename>AutoSchemaOrg.rdf</sm:filename>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/AgentsAndPeople/Agents/"/>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/Quantities/QuantitiesAndUnits/"/>
 		<owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"/>
 		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
 	</owl:Ontology>
@@ -170,8 +172,10 @@
 						<owl:unionOf rdf:parseType="Collection">
 							<rdf:Description rdf:about="&auto-mo-mo;QualitativeValue">
 							</rdf:Description>
-							<rdf:Description rdf:about="&fibo-fnd-utl-val;TextValue">
-							</rdf:Description>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/Agents/hasTextValue"/>
+								<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+							</owl:Restriction>
 						</owl:unionOf>
 					</owl:Class>
 				</owl:someValuesFrom>
@@ -339,8 +343,10 @@
 						<owl:unionOf rdf:parseType="Collection">
 							<rdf:Description rdf:about="&auto-ec-as;CarUsageType">
 							</rdf:Description>
-							<rdf:Description rdf:about="&fibo-fnd-utl-val;TextValue">
-							</rdf:Description>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/Agents/hasTextValue"/>
+								<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+							</owl:Restriction>
 						</owl:unionOf>
 					</owl:Class>
 				</owl:onClass>
@@ -355,40 +361,10 @@
 						<owl:unionOf rdf:parseType="Collection">
 							<rdf:Description rdf:about="&auto-ec-as;DriveWheelConfigurationValue">
 							</rdf:Description>
-							<rdf:Description rdf:about="&fibo-fnd-utl-val;TextValue">
-							</rdf:Description>
-						</owl:unionOf>
-					</owl:Class>
-				</owl:onClass>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-ec-as;meetsEmissionStandard"/>
-				<owl:onClass>
-					<owl:Class>
-						<owl:unionOf rdf:parseType="Collection">
-							<rdf:Description rdf:about="&auto-mo-mo;QualitativeValue">
-							</rdf:Description>
-							<rdf:Description rdf:about="&fibo-fnd-utl-val;TextValue">
-							</rdf:Description>
-						</owl:unionOf>
-					</owl:Class>
-				</owl:onClass>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-ec-as;vehicleTransmission"/>
-				<owl:onClass>
-					<owl:Class>
-						<owl:unionOf rdf:parseType="Collection">
-							<rdf:Description rdf:about="&auto-mo-mo;QualitativeValue">
-							</rdf:Description>
-							<rdf:Description rdf:about="&fibo-fnd-utl-val;TextValue">
-							</rdf:Description>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/Agents/hasTextValue"/>
+								<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+							</owl:Restriction>
 						</owl:unionOf>
 					</owl:Class>
 				</owl:onClass>
@@ -403,8 +379,46 @@
 						<owl:unionOf rdf:parseType="Collection">
 							<rdf:Description rdf:about="&auto-mo-mo;QualitativeValue">
 							</rdf:Description>
-							<rdf:Description rdf:about="&fibo-fnd-utl-val;TextValue">
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/Agents/hasTextValue"/>
+								<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+							</owl:Restriction>
+						</owl:unionOf>
+					</owl:Class>
+				</owl:onClass>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-ec-as;meetsEmissionStandard"/>
+				<owl:onClass>
+					<owl:Class>
+						<owl:unionOf rdf:parseType="Collection">
+							<rdf:Description rdf:about="&auto-mo-mo;QualitativeValue">
 							</rdf:Description>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/Agents/hasTextValue"/>
+								<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+							</owl:Restriction>
+						</owl:unionOf>
+					</owl:Class>
+				</owl:onClass>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-ec-as;vehicleTransmission"/>
+				<owl:onClass>
+					<owl:Class>
+						<owl:unionOf rdf:parseType="Collection">
+							<rdf:Description rdf:about="&auto-mo-mo;QualitativeValue">
+							</rdf:Description>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/Agents/hasTextValue"/>
+								<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+							</owl:Restriction>
 						</owl:unionOf>
 					</owl:Class>
 				</owl:onClass>
@@ -419,8 +433,10 @@
 						<owl:unionOf rdf:parseType="Collection">
 							<rdf:Description rdf:about="&auto-mo-mo;QuantitativeValue">
 							</rdf:Description>
-							<rdf:Description rdf:about="&fibo-fnd-utl-val;NumericValue">
-							</rdf:Description>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Quantities/QuantitiesAndUnits/hasNumericValue"/>
+								<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+							</owl:Restriction>
 						</owl:unionOf>
 					</owl:Class>
 				</owl:onClass>
@@ -504,8 +520,10 @@
 						<owl:unionOf rdf:parseType="Collection">
 							<rdf:Description rdf:about="&auto-mo-mo;QuantitativeValue">
 							</rdf:Description>
-							<rdf:Description rdf:about="&fibo-fnd-utl-val;TextValue">
-							</rdf:Description>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/Agents/hasTextValue"/>
+								<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+							</owl:Restriction>
 						</owl:unionOf>
 					</owl:Class>
 				</owl:someValuesFrom>
@@ -540,8 +558,10 @@
 						<owl:unionOf rdf:parseType="Collection">
 							<rdf:Description rdf:about="&auto-mo-mo;QuantitativeValue">
 							</rdf:Description>
-							<rdf:Description rdf:about="&fibo-fnd-utl-val;NumericValue">
-							</rdf:Description>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Quantities/QuantitiesAndUnits/hasNumericValue"/>
+								<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+							</owl:Restriction>
 						</owl:unionOf>
 					</owl:Class>
 				</owl:someValuesFrom>
@@ -555,8 +575,10 @@
 						<owl:unionOf rdf:parseType="Collection">
 							<rdf:Description rdf:about="&auto-mo-mo;QuantitativeValue">
 							</rdf:Description>
-							<rdf:Description rdf:about="&fibo-fnd-utl-val;NumericValue">
-							</rdf:Description>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Quantities/QuantitiesAndUnits/hasNumericValue"/>
+								<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+							</owl:Restriction>
 						</owl:unionOf>
 					</owl:Class>
 				</owl:someValuesFrom>
@@ -570,8 +592,10 @@
 						<owl:unionOf rdf:parseType="Collection">
 							<rdf:Description rdf:about="&auto-mo-mo;QuantitativeValue">
 							</rdf:Description>
-							<rdf:Description rdf:about="&fibo-fnd-utl-val;NumericValue">
-							</rdf:Description>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Quantities/QuantitiesAndUnits/hasNumericValue"/>
+								<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+							</owl:Restriction>
 						</owl:unionOf>
 					</owl:Class>
 				</owl:someValuesFrom>
@@ -591,8 +615,10 @@
 						<owl:unionOf rdf:parseType="Collection">
 							<rdf:Description rdf:about="&auto-mo-mo;QuantitativeValue">
 							</rdf:Description>
-							<rdf:Description rdf:about="&fibo-fnd-utl-val;NumericValue">
-							</rdf:Description>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Quantities/QuantitiesAndUnits/hasNumericValue"/>
+								<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+							</owl:Restriction>
 						</owl:unionOf>
 					</owl:Class>
 				</owl:someValuesFrom>
@@ -624,8 +650,10 @@
 						<owl:unionOf rdf:parseType="Collection">
 							<rdf:Description rdf:about="&auto-mo-mo;QuantitativeValue">
 							</rdf:Description>
-							<rdf:Description rdf:about="&fibo-fnd-utl-val;NumericValue">
-							</rdf:Description>
+							<owl:Restriction>
+								<owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Quantities/QuantitiesAndUnits/hasNumericValue"/>
+								<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+							</owl:Restriction>
 						</owl:unionOf>
 					</owl:Class>
 				</owl:someValuesFrom>
@@ -681,8 +709,10 @@ Typical unit code(s): SEC for seconds&lt;br/&gt;&lt;br/&gt;
 				<owl:unionOf rdf:parseType="Collection">
 					<rdf:Description rdf:about="&auto-mo-mo;QualitativeValue">
 					</rdf:Description>
-					<rdf:Description rdf:about="&fibo-fnd-utl-val;TextValue">
-					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/Agents/hasTextValue"/>
+						<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+					</owl:Restriction>
 				</owl:unionOf>
 			</owl:Class>
 		</rdfs:range>
@@ -721,8 +751,10 @@ Note: You can use minValue and maxValue to indicate ranges.</skos:definition>
 				<owl:unionOf rdf:parseType="Collection">
 					<rdf:Description rdf:about="&auto-ec-as;DriveWheelConfigurationValue">
 					</rdf:Description>
-					<rdf:Description rdf:about="&fibo-fnd-utl-val;TextValue">
-					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/Agents/hasTextValue"/>
+						<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+					</owl:Restriction>
 				</owl:unionOf>
 			</owl:Class>
 		</rdfs:range>
@@ -777,8 +809,10 @@ Typical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ for cubic in
 				<owl:unionOf rdf:parseType="Collection">
 					<rdf:Description rdf:about="&auto-mo-mo;QualitativeValue">
 					</rdf:Description>
-					<rdf:Description rdf:about="&fibo-fnd-utl-val;TextValue">
-					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/Agents/hasTextValue"/>
+						<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+					</owl:Restriction>
 				</owl:unionOf>
 			</owl:Class>
 		</rdfs:range>
@@ -832,8 +866,10 @@ Note 3: Often, the absolute value is useful only when related to driving speed (
 				<owl:unionOf rdf:parseType="Collection">
 					<rdf:Description rdf:about="&auto-mo-mo;QuantitativeValue">
 					</rdf:Description>
-					<rdf:Description rdf:about="&fibo-fnd-utl-val;TextValue">
-					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/Agents/hasTextValue"/>
+						<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+					</owl:Restriction>
 				</owl:unionOf>
 			</owl:Class>
 		</rdfs:range>
@@ -859,8 +895,10 @@ Note 3: Often, the absolute value is useful only when related to driving speed (
 				<owl:unionOf rdf:parseType="Collection">
 					<rdf:Description rdf:about="&auto-mo-mo;QualitativeValue">
 					</rdf:Description>
-					<rdf:Description rdf:about="&fibo-fnd-utl-val;TextValue">
-					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/Agents/hasTextValue"/>
+						<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+					</owl:Restriction>
 				</owl:unionOf>
 			</owl:Class>
 		</rdfs:range>
@@ -915,8 +953,10 @@ Typical unit code(s): KMT for kilometers, SMI for statute miles</skos:definition
 				<owl:unionOf rdf:parseType="Collection">
 					<rdf:Description rdf:about="&auto-mo-mo;QuantitativeValue">
 					</rdf:Description>
-					<rdf:Description rdf:about="&fibo-fnd-utl-val;NumericValue">
-					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Quantities/QuantitiesAndUnits/hasNumericValue"/>
+						<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+					</owl:Restriction>
 				</owl:unionOf>
 			</owl:Class>
 		</rdfs:range>
@@ -935,8 +975,10 @@ Typical unit code(s): C62</skos:definition>
 				<owl:unionOf rdf:parseType="Collection">
 					<rdf:Description rdf:about="&auto-mo-mo;QuantitativeValue">
 					</rdf:Description>
-					<rdf:Description rdf:about="&fibo-fnd-utl-val;NumericValue">
-					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Quantities/QuantitiesAndUnits/hasNumericValue"/>
+						<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+					</owl:Restriction>
 				</owl:unionOf>
 			</owl:Class>
 		</rdfs:range>
@@ -955,8 +997,10 @@ Typical unit code(s): C62</skos:definition>
 				<owl:unionOf rdf:parseType="Collection">
 					<rdf:Description rdf:about="&auto-mo-mo;QuantitativeValue">
 					</rdf:Description>
-					<rdf:Description rdf:about="&fibo-fnd-utl-val;NumericValue">
-					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Quantities/QuantitiesAndUnits/hasNumericValue"/>
+						<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+					</owl:Restriction>
 				</owl:unionOf>
 			</owl:Class>
 		</rdfs:range>
@@ -975,8 +1019,10 @@ Typical unit code(s): C62</skos:definition>
 				<owl:unionOf rdf:parseType="Collection">
 					<rdf:Description rdf:about="&auto-mo-mo;QuantitativeValue">
 					</rdf:Description>
-					<rdf:Description rdf:about="&fibo-fnd-utl-val;NumericValue">
-					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Quantities/QuantitiesAndUnits/hasNumericValue"/>
+						<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+					</owl:Restriction>
 				</owl:unionOf>
 			</owl:Class>
 		</rdfs:range>
@@ -1057,8 +1103,10 @@ Typical unit code(s): KGM for kilogram, LBR for pound&lt;br/&gt;&lt;br/&gt;
 				<owl:unionOf rdf:parseType="Collection">
 					<rdf:Description rdf:about="&auto-mo-mo;QuantitativeValue">
 					</rdf:Description>
-					<rdf:Description rdf:about="&fibo-fnd-utl-val;NumericValue">
-					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Quantities/QuantitiesAndUnits/hasNumericValue"/>
+						<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+					</owl:Restriction>
 				</owl:unionOf>
 			</owl:Class>
 		</rdfs:range>
@@ -1204,8 +1252,10 @@ Note 3: Note that you can use minValue and maxValue to indicate ranges.</skos:de
 				<owl:unionOf rdf:parseType="Collection">
 					<rdf:Description rdf:about="&auto-mo-mo;QuantitativeValue">
 					</rdf:Description>
-					<rdf:Description rdf:about="&fibo-fnd-utl-val;NumericValue">
-					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Quantities/QuantitiesAndUnits/hasNumericValue"/>
+						<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+					</owl:Restriction>
 				</owl:unionOf>
 			</owl:Class>
 		</rdfs:range>
@@ -1224,8 +1274,10 @@ Typical unit code(s): C62 for persons.</skos:definition>
 				<owl:unionOf rdf:parseType="Collection">
 					<rdf:Description rdf:about="&auto-ec-as;CarUsageType">
 					</rdf:Description>
-					<rdf:Description rdf:about="&fibo-fnd-utl-val;TextValue">
-					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/Agents/hasTextValue"/>
+						<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+					</owl:Restriction>
 				</owl:unionOf>
 			</owl:Class>
 		</rdfs:range>
@@ -1242,8 +1294,10 @@ Typical unit code(s): C62 for persons.</skos:definition>
 				<owl:unionOf rdf:parseType="Collection">
 					<rdf:Description rdf:about="&auto-mo-mo;QualitativeValue">
 					</rdf:Description>
-					<rdf:Description rdf:about="&fibo-fnd-utl-val;TextValue">
-					</rdf:Description>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/AgentsAndPeople/Agents/hasTextValue"/>
+						<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+					</owl:Restriction>
 				</owl:unionOf>
 			</owl:Class>
 		</rdfs:range>
