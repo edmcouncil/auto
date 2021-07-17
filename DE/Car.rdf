@@ -7,6 +7,7 @@
 	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
 	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY skos "http://www.w3.org/2004/02/skos/core#">
 	<!ENTITY sm "http://www.omg.org/techprocess/ab/SpecificationMetadata/">
 	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
 ]>
@@ -19,6 +20,7 @@
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 	xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 	
@@ -32,6 +34,8 @@
 		<sm:dependsOn rdf:datatype="&xsd;anyURI">https://spec.edmcouncil.org/auto/ontology/EC/</sm:dependsOn>
 		<sm:fileAbbreviation>auto-de-car</sm:fileAbbreviation>
 		<sm:filename>Car.rdf</sm:filename>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"/>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
 		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
 	</owl:Ontology>
@@ -50,11 +54,11 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-car;Automobile">
-		<rdfs:subClassOf rdf:resource="&auto-de-car;Vehicle"/>
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-car;Bicycle">
-		<rdfs:subClassOf rdf:resource="&auto-de-car;Vehicle"/>
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-car;Bus">
@@ -74,6 +78,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-car;CarParts">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Endurant"/>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-car;ConstantSpeed">
@@ -105,7 +110,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-car;Motorcycle">
-		<rdfs:subClassOf rdf:resource="&auto-de-car;Vehicle"/>
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle"/>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-car;MyCar">
@@ -161,13 +166,11 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-car;Trajectory">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Endurant"/>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-car;Truck">
 		<rdfs:subClassOf rdf:resource="&auto-de-car;Automobile"/>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-car;Vehicle">
 	</owl:Class>
 	
 	<owl:DatatypeProperty rdf:about="&auto-de-car;brake">
@@ -250,5 +253,8 @@
 		<rdfs:domain rdf:resource="&auto-de-car;Car"/>
 		<rdfs:range rdf:resource="&auto-de-car;mm"/>
 	</owl:DatatypeProperty>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/Vehicle">
+	</owl:Class>
 
 </rdf:RDF>

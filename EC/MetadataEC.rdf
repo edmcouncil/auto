@@ -39,12 +39,7 @@
 		<rdfs:label>E-Commerce vehicle information</rdfs:label>
 		<dct:abstract>Automotive Core: A schema.org-compliant fundamental ontology for vehicle information in e-commerce.</dct:abstract>
 		<dct:creator rdf:datatype="&xsd;anyURI">https://www.w3.org/community/gao/</dct:creator>
-		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"/>
-		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/CarOptions/"/>
-		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/UsedCars/"/>
-		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleEmissions/"/>
-		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/"/>
-		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VolkswagenVehicles/"/>
+		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleECommerce/"/>
 		<dct:license rdf:datatype="&xsd;anyURI">http://opensource.org/licenses/MIT</dct:license>
 		<dct:title>EDMC Automotive Ontology (AUTO) EC Domain</dct:title>
 		<sm:contributor>Hepp Research GmbH</sm:contributor>

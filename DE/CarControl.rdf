@@ -34,6 +34,7 @@
 		<sm:dependsOn rdf:datatype="&xsd;anyURI">https://spec.edmcouncil.org/auto/ontology/EC/</sm:dependsOn>
 		<sm:fileAbbreviation>auto-de-cco</sm:fileAbbreviation>
 		<sm:filename>CarControl.rdf</sm:filename>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
 		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
 	</owl:Ontology>
@@ -63,6 +64,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-cco;DrivingAction">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Perdurant"/>
 		<rdfs:label xml:lang="en">driving action</rdfs:label>
 	</owl:Class>
 	
@@ -110,6 +112,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-cco;LaneChange">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Perdurant"/>
 		<rdfs:label xml:lang="en">lane change</rdfs:label>
 	</owl:Class>
 	
@@ -139,6 +142,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-cco;Path">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Endurant"/>
 		<rdfs:label xml:lang="en">path</rdfs:label>
 	</owl:Class>
 	
@@ -158,6 +162,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-cco;RoadCondition">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Endurant"/>
 		<rdfs:label xml:lang="en">road condition</rdfs:label>
 	</owl:Class>
 	
@@ -195,6 +200,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-cco;TrafficSignalControl">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Endurant"/>
 		<rdfs:label xml:lang="en">traffic signal control</rdfs:label>
 	</owl:Class>
 	
@@ -217,6 +223,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-cco;Warning">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Perdurant"/>
 		<rdfs:label xml:lang="en">warning</rdfs:label>
 	</owl:Class>
 	

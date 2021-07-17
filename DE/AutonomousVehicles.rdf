@@ -37,7 +37,13 @@
 		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
 	</owl:Ontology>
 	
+	<owl:AnnotationProperty rdf:about="&terms;contributor">
+	</owl:AnnotationProperty>
+	
 	<owl:AnnotationProperty rdf:about="&skos;definition">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&skos;historyNote">
 	</owl:AnnotationProperty>
 	
 	<owl:AnnotationProperty rdf:about="&skos;scopeNote">
@@ -157,10 +163,12 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;Activity">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Perdurant"/>
 		<rdfs:label xml:lang="en">Activity</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;Actor">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Role"/>
 		<rdfs:label xml:lang="en">Actor</rdfs:label>
 	</owl:Class>
 	
@@ -196,6 +204,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;Condition">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Endurant"/>
 		<rdfs:label xml:lang="en">Condition</rdfs:label>
 	</owl:Class>
 	
@@ -343,6 +352,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;DDTPerformanceRelevantSystemFailure">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Perdurant"/>
 		<rdfs:label xml:lang="en">DDT Performance-Relevant System Failure</rdfs:label>
 		<skos:definition xml:lang="en">A malfunction in a driving automation system and/or other vehicle system that prevents the driving automation system from reliably performing the portion of the DDT on a sustained basis, including the complete DDT, that it would otherwise perform.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.18</fibo-fnd-utl-av:adaptedFrom>
@@ -556,6 +566,7 @@ The upper three levels of driving automation (3-5) refer to cases in which the A
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;DrivingAutomationSystemFeatureOrApplication">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Quality"/>
 		<rdfs:label xml:lang="en">[Driving Automation System] Feature or Application</rdfs:label>
 		<skos:definition xml:lang="en">A level 1-5 driving automation system’s design-specific functionality at a given level of driving automation within a particular ODD, if applicable.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.9</fibo-fnd-utl-av:adaptedFrom>
@@ -567,6 +578,7 @@ The upper three levels of driving automation (3-5) refer to cases in which the A
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;DrivingAutomationSystemOrTechnology">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Endurant"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-de-av;performsOnSustainedBasis"/>
@@ -777,6 +789,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;Function">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Perdurant"/>
 		<rdfs:label xml:lang="en">Function</rdfs:label>
 	</owl:Class>
 	
@@ -884,7 +897,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;HumanUser">
-		<rdfs:subClassOf rdf:resource="&auto-de-av;Role"/>
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Role"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-de-av;isPlayedBy"/>
@@ -1276,6 +1289,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;ReceptivityOfUser">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Quality"/>
 		<rdfs:label xml:lang="en">Receptivity Of The User</rdfs:label>
 		<skos:definition xml:lang="en">an aspect of consciousness characterized by a person’s ability to reliably and appropriately focus his/her attention in response to a stimulus</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.23</fibo-fnd-utl-av:adaptedFrom>
@@ -1306,10 +1320,6 @@ are referred to collectively as object and event detection and response (OEDR).<
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.24</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-av;Role">
-		<rdfs:label xml:lang="en">Role</rdfs:label>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-de-av;SuperviseDrivingAutomationSystemPerformance">
 		<rdfs:subClassOf rdf:resource="&auto-de-av;Activity"/>
 		<rdfs:label xml:lang="en">Supervise Driving Automation System Performance</rdfs:label>
@@ -1336,6 +1346,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;Trip">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Perdurant"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-de-av;isConstitutedBy"/>
@@ -1350,6 +1361,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;UsageSpecification">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Quality"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&owl;topObjectProperty"/>
@@ -1451,7 +1463,6 @@ are referred to collectively as object and event detection and response (OEDR).<
 	
 	<owl:ObjectProperty rdf:about="&auto-de-av;isPlayedBy">
 		<rdfs:label xml:lang="en">is played by</rdfs:label>
-		<rdfs:domain rdf:resource="&auto-de-av;Role"/>
 		<owl:inverseOf rdf:resource="&auto-de-av;playsRole"/>
 	</owl:ObjectProperty>
 	
@@ -1492,10 +1503,19 @@ are referred to collectively as object and event detection and response (OEDR).<
 	<owl:Class rdf:about="&auto-ec-as;Vehicle">
 	</owl:Class>
 	
+	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Perdurant">
+		<rdfs:label xml:lang="en">perdurant</rdfs:label>
+		<terms:source>DOLCE</terms:source>
+		<skos:definition xml:lang="en">an entity that extends in time by accumulating different temporal parts, so that, at any time it is present, it is only partially present</skos:definition>
+	</rdf:Description>
+	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/QualitativeValue">
 	</owl:Class>
 	
 	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;abbreviation">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;adaptedFrom">
 	</owl:AnnotationProperty>
 	
 	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;explanatoryNote">

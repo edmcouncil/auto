@@ -4,8 +4,6 @@
 	<!ENTITY SpecificationMetadata "http://www.omg.org/techprocess/ab/SpecificationMetadata/">
 	<!ENTITY auto-de-tio "https://spec.edmcouncil.org/auto/TrafficIncidents/">
 	<!ENTITY dc "http://purl.org/dc/elements/1.1/">
-	<!ENTITY dct "http://purl.org/dc/terms/">
-	<!ENTITY fibo-fnd-utl-av "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
 	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
 	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
@@ -19,8 +17,6 @@
 	xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
 	xmlns:auto-de-tio="https://spec.edmcouncil.org/auto/TrafficIncidents/"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:dct="http://purl.org/dc/terms/"
-	xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -36,7 +32,8 @@
 		<SpecificationMetadata:filename>TrafficIncidents.rdf</SpecificationMetadata:filename>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/"/>
-		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
+		<AnnotationVocabulary:hasMaturityLevel rdf:resource="&AnnotationVocabulary;Provisional"/>
 	</owl:Ontology>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/Accident">
@@ -229,6 +226,7 @@
 	</owl:DatatypeProperty>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/OtherObjectsWithWhichCarCanCollide">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Endurant"/>
 		<rdfs:label xml:lang="pl">inne przedmioty z którymi samochód może się zderzyć</rdfs:label>
 		<rdfs:label xml:lang="en">other objects with which car can colide</rdfs:label>
 	</owl:Class>
@@ -311,6 +309,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/TrafficIncident">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Perdurant"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/hasTrafficUser"/>
@@ -336,6 +335,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/TrafficIncidentCauses">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Perdurant"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/hasTrafficUser"/>
@@ -347,6 +347,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/TrafficIncidentEffect">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Perdurant"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/hasTrafficUser"/>
@@ -358,6 +359,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/TrafficParticipant">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Endurant"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/isParticipantOf"/>
@@ -371,6 +373,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/TrafficViolation">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Perdurant"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/hasTrafficUser"/>
@@ -404,6 +407,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/Weather">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Endurant"/>
 		<rdfs:label xml:lang="pl">pogoda</rdfs:label>
 		<rdfs:label xml:lang="en">weather</rdfs:label>
 	</owl:Class>
