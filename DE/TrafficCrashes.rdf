@@ -31,6 +31,7 @@
 		<sm:fileAbbreviation>auto-de-tc</sm:fileAbbreviation>
 		<sm:filename>TrafficCrashes.rdf</sm:filename>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"/>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
 		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
 	</owl:Ontology>
 	
@@ -132,7 +133,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;Cataclysm">
-		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Event"/>
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Perdurant"/>
 		<rdfs:label xml:lang="en">Cataclysm</rdfs:label>
 		<skos:definition xml:lang="en">An avalanche, landslide/mudslide, hurricane, cyclone, downburst, flood, torrential rain, cloudburst, lightning, tornado, tidal wave, earthquake or volcanic eruption (See 2.4.9 transport crash).</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.5</fibo-fnd-utl-av:adaptedFrom>
@@ -237,6 +238,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;Commerce">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Perdurant"/>
 		<rdfs:label xml:lang="en">Commerce</rdfs:label>
 		<skos:definition xml:lang="en">Any trade, traffic or transportation of commodities or persons for financial consideration or exchange, or in the furtherance of a business enterprise.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">ANSI D.16-2017, section 2.9.1</fibo-fnd-utl-av:adaptedFrom>
@@ -277,7 +279,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;Crash">
-		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Event"/>
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Perdurant"/>
 		<rdfs:label xml:lang="en">Crash</rdfs:label>
 		<skos:definition xml:lang="en">An unstabilized situation which includes at least one harmful event.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.6</fibo-fnd-utl-av:adaptedFrom>
@@ -305,6 +307,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;DeliberateIntent">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Endurant"/>
 		<rdfs:label xml:lang="en">Deliberate Intent</rdfs:label>
 		<skos:definition xml:lang="en">The classification given to the cause of an event which occurs when a person acts deliberately to cause the event or deliberately refrains from prudent acts which would prevent occurrence of the event.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.2</fibo-fnd-utl-av:adaptedFrom>
@@ -458,7 +461,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;HarmfulEvent">
-		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Event"/>
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Perdurant"/>
 		<rdfs:label xml:lang="en">Harmful Event</rdfs:label>
 		<skos:definition xml:lang="en">An occurrence of injury or damage.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.1</fibo-fnd-utl-av:adaptedFrom>
@@ -473,6 +476,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;HazardousMaterialsPlacard">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Endurant"/>
 		<rdfs:label xml:lang="en">Hazardous Materials Placard</rdfs:label>
 		<rdfs:comment xml:lang="en">This placard identifies the hazard class division number, 4-digit hazardous material identification number, or name of the hazardous material being transported.</rdfs:comment>
 		<skos:definition xml:lang="en">A sign required to be affixed to any motor vehicle transporting quantities of hazardous materials in quantities above the thresholds established by the U.S. Department of Transportation, or other authorized entity.</skos:definition>
@@ -571,6 +575,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;InterstateSystem">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Endurant"/>
 		<rdfs:label xml:lang="en">Interstate System</rdfs:label>
 		<skos:definition xml:lang="en">The National System of Interstate and Defense Highways as defined in Section 101, Title 23, United States Code.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.3</fibo-fnd-utl-av:adaptedFrom>
@@ -985,6 +990,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;Person">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Endurant"/>
 		<rdfs:label xml:lang="en">Person</rdfs:label>
 		<rdfs:comment xml:lang="en">Within the context of this manual, a fetus is considered part of a pregnant woman rather than a separate individual. After death, a human body is not considered to be a person.</rdfs:comment>
 		<skos:definition xml:lang="en">Any living human.</skos:definition>
@@ -1005,7 +1011,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;PolicePursuit">
-		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Event"/>
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Perdurant"/>
 		<rdfs:label xml:lang="en">Police Pursuit</rdfs:label>
 		<rdfs:comment xml:lang="en">This notice needs to be either through the use of visual or audible emergency signals, including alternating flashing headlights, or a combination of emergency devices. A pursuit is terminated when the motorist stops, or when the attempt to apprehend is discontinued.</rdfs:comment>
 		<skos:definition xml:lang="en">An event that is initiated when a law enforcement officer, operating an authorized emergency vehicle, gives notice to stop to a motorist the officer is attempting to contact, and that motorist fails to comply with the signal by either maintaining his/her speed, increasing speed, or taking other evasive action to elude the officer &apos;s continued attempts to stop the motorist.</skos:definition>
@@ -1061,7 +1067,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;RailwayAccident">
-		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Event"/>
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Perdurant"/>
 		<rdfs:label xml:lang="en">Railway Accident</rdfs:label>
 		<skos:definition xml:lang="en">A transport accident that (1) involves a railway train in-transport and (2) is not an aircraft accident, watercraft accident or motor vehicle crash.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.13</fibo-fnd-utl-av:adaptedFrom>
@@ -1223,6 +1229,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;State">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Perdurant"/>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;StreetcarCrash">
@@ -1348,6 +1355,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;UnstabilizedSituation">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Endurant"/>
 		<rdfs:label xml:lang="en">Unstabilized Situation</rdfs:label>
 		<rdfs:comment xml:lang="en">It originates when control is lost and terminates when control is regained or, in the absence of persons who are able to regain control, when all persons and propertyare at rest.</rdfs:comment>
 		<skos:definition xml:lang="en">A set of events not under human control.</skos:definition>
@@ -1398,7 +1406,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;WatercraftAccident">
-		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Event"/>
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Perdurant"/>
 		<rdfs:label xml:lang="en">Watercraft Accident</rdfs:label>
 		<skos:definition xml:lang="en">A transport accident if it (1) involves a watercraft in-transport and (2) is not an aircraft accident.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.11</fibo-fnd-utl-av:adaptedFrom>
@@ -1498,9 +1506,6 @@ The total number of lanes in a roadway is collected for each vehicle, on the roa
 	</owl:DatatypeProperty>
 	
 	<owl:Class rdf:about="&auto-ec-as;Vehicle">
-	</owl:Class>
-	
-	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Event">
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Location">

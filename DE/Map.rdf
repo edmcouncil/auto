@@ -40,6 +40,7 @@
 		<sm:dependsOn rdf:datatype="&xsd;anyURI">https://spec.edmcouncil.org/auto/ontology/EC/</sm:dependsOn>
 		<sm:fileAbbreviation>auto-de-map</sm:fileAbbreviation>
 		<sm:filename>Map.rdf</sm:filename>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
 		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
 	</owl:Ontology>
@@ -193,6 +194,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-map;Object">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Endurant"/>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-map;OneWayLane">
@@ -220,6 +222,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-map;Place">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Quality"/>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-map;PoliceStation">
@@ -285,6 +288,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-map;RouteOfTransportation">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Endurant"/>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-map;School">
@@ -348,9 +352,11 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-map;TrafficSign">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Endurant"/>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-map;TrafficSignal">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Perdurant"/>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-map;Turn">
