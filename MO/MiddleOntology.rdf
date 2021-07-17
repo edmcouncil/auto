@@ -80,6 +80,20 @@
 	<owl:AnnotationProperty rdf:about="&skos;definition">
 	</owl:AnnotationProperty>
 	
+	<owl:Class rdf:about="&auto-mo-mo;BusinessEntity">
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Endurant"/>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&auto-mo-mo;Organization">
+					</rdf:Description>
+					<rdf:Description rdf:about="&auto-mo-mo;Person">
+					</rdf:Description>
+				</owl:unionOf>
+			</owl:Class>
+		</owl:equivalentClass>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-mo-mo;BusinessEntityType">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Quality"/>
 		<rdfs:label xml:lang="en">business entity type</rdfs:label>
@@ -207,10 +221,6 @@ Note: Price information should in general be attached to a gr:Offering node, not
 		<rdfs:label xml:lang="en">warranty scope</rdfs:label>
 	</owl:Class>
 	
-	<owl:DatatypeProperty rdf:about="&auto-mo-mo;datatypeProductOrServiceProperty">
-		<rdfs:label xml:lang="en">datatype product or service property</rdfs:label>
-	</owl:DatatypeProperty>
-	
 	<owl:DatatypeProperty rdf:about="&auto-mo-mo;hasMaxValueFloat">
 		<rdfs:label xml:lang="en">has max value float</rdfs:label>
 	</owl:DatatypeProperty>
@@ -234,10 +244,6 @@ Note: Price information should in general be attached to a gr:Offering node, not
 	<owl:ObjectProperty rdf:about="&auto-mo-mo;quantitativeProductOrServiceProperty">
 		<rdfs:label xml:lang="en">quantitative product or service property</rdfs:label>
 	</owl:ObjectProperty>
-	
-	<owl:DatatypeProperty rdf:about="&auto-mo-mo;serialNumber">
-		<rdfs:label xml:lang="en">serial number</rdfs:label>
-	</owl:DatatypeProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-mo-mo;valueReference">
 	</owl:ObjectProperty>
