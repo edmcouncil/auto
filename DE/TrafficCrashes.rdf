@@ -30,8 +30,8 @@
 		<terms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
 		<sm:fileAbbreviation>auto-de-tc</sm:fileAbbreviation>
 		<sm:filename>TrafficCrashes.rdf</sm:filename>
-		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/AutoSchemaOrg/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
 		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
 	</owl:Ontology>
 	
@@ -84,21 +84,6 @@
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">ANSI D.16-2017, section 2.9.6</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-tc;Autocycle">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Motorcycle"/>
-		<rdfs:label xml:lang="en">Autocycle</rdfs:label>
-		<skos:definition xml:lang="en">A large motorcycle with one rear wheel and two front wheels, with either a saddle and handlebars or seat (s) and a steering wheel, that can be fully enclosed, partially enclosed, or unenclosed.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.9.7</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;Automobile">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;MotorVehicle"/>
-		<rdfs:label xml:lang="en">Automobile</rdfs:label>
-		<rdfs:comment>Automobiles may be classified by size or weight, or both. Size classification is based on wheelbase. Weight classification is based on curb weight, the weight of an automobile with standard equipment and a full complement of fuel and other fluids, but with no load of persons or property. Before classification, wheelbase should be rounded to the nearest inch and curb weight should be rounded to the nearest 100 pounds.</rdfs:comment>
-		<skos:definition xml:lang="en">A motor vehicle other than a motorcycle, utility vehicle or low speed vehicle consisting of a transport device typically designed for carrying eight or fewer persons.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.12</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-de-tc;BicycleLane">
 		<rdfs:subClassOf rdf:resource="&auto-de-tc;Bikeway"/>
 		<rdfs:label xml:lang="en">Bicycle Lane</rdfs:label>
@@ -118,20 +103,6 @@
 		<skos:definition xml:lang="en">A trafficway specifically designated as being open for pedalcycle travel or, where various classes of pedalcycle are segregated, that part of a trafficway open for a particular class (See 2.2.28)</skos:definition>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-tc;Bus">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;MotorVehicle"/>
-		<rdfs:label xml:lang="en">Bus</rdfs:label>
-		<skos:definition xml:lang="en">A motor vehicle with seating for transporting nine or more persons, including the driver.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.10</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;CargoVan">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Van"/>
-		<rdfs:label xml:lang="en">Cargo Van</rdfs:label>
-		<skos:definition xml:lang="en">Any van where the area behind the driver or cab is designed for transporting cargo or operated for general commercial use.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.14.2</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-de-tc;Cataclysm">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Perdurant"/>
 		<rdfs:label xml:lang="en">Cataclysm</rdfs:label>
@@ -144,13 +115,6 @@
 		<rdfs:label xml:lang="en">Channelized Intersection</rdfs:label>
 		<skos:definition xml:lang="en">An at-grade intersection in which traffic is diverted into definite paths by raised or painted traffic islands.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.13</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;CharterBus">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Bus"/>
-		<rdfs:label xml:lang="en">Charter Bus</rdfs:label>
-		<skos:definition xml:lang="en">A bus providing contract service for a group tour or outing, usually on a round-trip basis.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.10.5</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;CityStreet">
@@ -172,12 +136,6 @@
 		<rdfs:label xml:lang="en">Collision Involving Motor Vehicle in-Transport</rdfs:label>
 		<skos:definition xml:lang="en">A crash that is both a motor vehicle crash and a collision crash in which the first harmful event is the collision of two or more motor vehicles in-transport.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.6</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;CollisionInvolvingOtherRoadVehicleInTransport">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;CollisionCrash"/>
-		<rdfs:label xml:lang="en">Collision Involving Other Road Vehicle In Transport</rdfs:label>
-		<skos:definition xml:lang="en">A crash that is both an other-road vehicle crash and a collision crash in which the first harmful event is the collision of two or more other road vehicles in-transport.</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;CollisioninvolvingAnimal">
@@ -230,25 +188,11 @@
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.5</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-tc;CollisioninvolvingRailwayVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;CollisionCrash"/>
-		<rdfs:label xml:lang="en">Collision involving Railway Vehicle</rdfs:label>
-		<skos:definition xml:lang="en">A collision crash in which the first harmful event is the collision of a road vehicle in-transport and a railway vehicle.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.9</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-de-tc;Commerce">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Perdurant"/>
 		<rdfs:label xml:lang="en">Commerce</rdfs:label>
 		<skos:definition xml:lang="en">Any trade, traffic or transportation of commodities or persons for financial consideration or exchange, or in the furtherance of a business enterprise.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">ANSI D.16-2017, section 2.9.1</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;CommercialMotorVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;MotorVehicle"/>
-		<rdfs:label xml:lang="en">Commercial Motor Vehicle</rdfs:label>
-		<skos:definition xml:lang="en">Any motor vehicle used for the transportation of goods, property or people in interstate (See 2.9.2) or intrastate (2.9.3) commerce.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.7.3</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-de-tc;ConditionalDrivingAutomation">
@@ -423,14 +367,6 @@
 		<fibo-fnd-utl-av:usageNote xml:lang="en">A vehicle with an ADS that, once programmed with a destination, is capable of operating the vehicle throughout complete trips on public roadways, regardless of the starting and end points or intervening road, traffic, and weather conditions.</fibo-fnd-utl-av:usageNote>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&auto-de-tc;FullTrailer">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Trailer"/>
-		<rdfs:label xml:lang="en">Full Trailer</rdfs:label>
-		<rdfs:comment xml:lang="en">An auxiliary undercarriage assembly, commonly known as a converter dolly and consisting of a chassis, fifth wheel and one or more tow bars, is sometimes used to convert a semitrailer to a full trailer. A semitrailer equipped with a converter dolly is considered to be a full trailer.</rdfs:comment>
-		<skos:definition xml:lang="en">A trailer, other than a pole trailer, designed for carrying property and so constructed that no part of its weight rests upon or is carried by the towing road vehicle.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.18</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-de-tc;Fully-controlledAccessHighway">
 		<rdfs:subClassOf rdf:resource="&auto-de-tc;Trafficway"/>
 		<rdfs:label xml:lang="en">Fully-controlled Access Highway</rdfs:label>
@@ -483,13 +419,6 @@
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.9.5.1</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-tc;HeavyTruck">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Truck"/>
-		<rdfs:label xml:lang="en">Heavy Truck</rdfs:label>
-		<skos:definition xml:lang="en">A truck which has a gross vehicle weight rating (GVWR) of more than 26,000 pounds (11,793 kilograms).</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.26</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
 	<owl:NamedIndividual rdf:about="&auto-de-tc;HighDrivingAutomation">
 		<rdfs:label xml:lang="en">High Driving Automation</rdfs:label>
 		<skos:definition xml:lang="en">The sustained and ODD-specific performance by an ADS of the entire DDT and DDT fallback, without any expectation that a user will respond to a request to intervene.</skos:definition>
@@ -536,13 +465,6 @@
 		<rdfs:label xml:lang="en">Interchange Crash</rdfs:label>
 		<skos:definition xml:lang="en">A traffic crash in which the first harmful event occurs within boundaries which include all ramps of auxiliary roadways and include each roadway entering or leaving the interchange to a point 30 meters (100 feet) beyond the gore or curb return at the outermost ramp connection. Interchange crashes may include at-intersection crashes, intersection- related crashes, driveway access crashes or nonjunction crashes.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.7.7</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;IntercityBus">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Bus"/>
-		<rdfs:label xml:lang="en">Intercity Bus</rdfs:label>
-		<skos:definition xml:lang="en">A bus used for long-distance passenger transportation between cities over fixed routes with regular schedules.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.10.4</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;Intersection">
@@ -602,33 +524,11 @@
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.11</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-tc;LandVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;TransportDevice"/>
-		<rdfs:subClassOf rdf:resource="&auto-ec-as;Vehicle"/>
-		<rdfs:label xml:lang="en">Land Vehicle</rdfs:label>
-		<skos:definition xml:lang="en">A transport vehicle which is neither an aircraft nor a watercraft.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.7</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-de-tc;LandWay">
 		<rdfs:subClassOf rdf:resource="&auto-de-tc;Trafficway"/>
 		<rdfs:label xml:lang="en">Land Way</rdfs:label>
 		<skos:definition xml:lang="en">The space within property lines or other boundary lines of any transport way that is neither an airway nor a waterway.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.11</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;LargeBus">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Bus"/>
-		<rdfs:label xml:lang="en">Large Bus</rdfs:label>
-		<skos:definition xml:lang="en">A bus with seating for sixteen or more persons, including the driver.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.10.2</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;LargeMotorcycle">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Motorcycle"/>
-		<rdfs:label xml:lang="en">Large Motorcycle</rdfs:label>
-		<skos:definition xml:lang="en">Any motorcycle other than a motor-driven cycle.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.9.2</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;LegalIntervention">
@@ -638,22 +538,8 @@
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.3</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-tc;LightTruck">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Truck"/>
-		<rdfs:label xml:lang="en">Light Truck</rdfs:label>
-		<skos:definition xml:lang="en">A truck which has a gross vehicle weight rating (GVWR) of 10,000 pounds (4,536 kilograms) or less</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.24</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-de-tc;LongitudinalPartOfTrafficway">
 		<rdfs:subClassOf rdf:resource="&auto-de-tc;PartOfTrafficway"/>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;LowSpeedVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;MotorVehicle"/>
-		<rdfs:label xml:lang="en">Low Speed Vehicle</rdfs:label>
-		<rdfs:comment xml:lang="en">LSVs are required to be equipped with basic items of safety equipment: headlamps, stop lamps, turn signal lamps, tail lamps, reflex reflectors, parking brake, windshields of either type AS-1 or AS-5 glazing, rearview mirrors, seat belts and vehicle identification numbers (VINs).</rdfs:comment>
-		<skos:definition xml:lang="en">A motor vehicle with four or more wheels whose top speed is greater than 20 miles per hour, but not greater than 25 miles per hour.</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;Median">
@@ -664,40 +550,11 @@
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.29</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-tc;MediumTruck">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Truck"/>
-		<rdfs:label xml:lang="en">Medium Truck</rdfs:label>
-		<skos:definition xml:lang="en">A truck which has a gross vehicle weight rating (GVWR) of more than 10,000 pounds and less than or equal to 26,000 pounds (4,536 to 11,793 kilograms).</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.25</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;Moped">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Motorcycle"/>
-		<rdfs:label xml:lang="en">Moped</rdfs:label>
-		<skos:definition xml:lang="en">A speed-limited motor-driven cycle which may be propelled by pedaling.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.9.4</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;Motor-drivenCycle">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Motorcycle"/>
-		<rdfs:label xml:lang="en">Motor-driven Cycle</rdfs:label>
-		<skos:definition xml:lang="en">Any motorcycle having an engine with less than 150 cubic centimeters displacement or with 5-brake horsepower or less.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.9.1</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-de-tc;MotorCarrier">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Role"/>
 		<rdfs:label xml:lang="en">Motor Carrier</rdfs:label>
 		<skos:definition xml:lang="en">The legal business entity, individual, partnership, corporation or organization that directs, controls and is responsible for the transportation of goods, property or people.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.9.4</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;MotorVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;RoadVehicle"/>
-		<rdfs:label xml:lang="en">Motor Vehicle</rdfs:label>
-		<rdfs:comment xml:lang="en">See 2.2.7.1, 2.2.7.2, 2.2.9 - 2.2.26</rdfs:comment>
-		<skos:definition xml:lang="en">Any motorized (mechanically or electrically powered) road vehicle not operated on rails.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.7</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;MotorVehicleCrash">
@@ -713,14 +570,6 @@
 		<skos:definition xml:lang="en">A road vehicle damage to a motor vehicle.</skos:definition>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-tc;MotorVehicleIn-transport">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;MotorVehicle"/>
-		<rdfs:label xml:lang="en">Motor Vehicle In-transport</rdfs:label>
-		<rdfs:comment xml:lang="en">A motor vehicle that is In-transport state.</rdfs:comment>
-		<rdfs:comment xml:lang="en">See In-transport</rdfs:comment>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.34</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-de-tc;MotorVehicleNontrafficCrash">
 		<rdfs:subClassOf rdf:resource="&auto-de-tc;Crash"/>
 		<rdfs:label xml:lang="en">Motor Vehicle Nontraffic Crash</rdfs:label>
@@ -732,13 +581,6 @@
 		<rdfs:subClassOf rdf:resource="&auto-de-tc;Crash"/>
 		<rdfs:label xml:lang="en">Motor Vehicle Traffic Crash</rdfs:label>
 		<skos:definition xml:lang="en">A motor vehicle cash which is a traffic crash.</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;Motorcycle">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;MotorVehicle"/>
-		<rdfs:label xml:lang="en">Motorcycle</rdfs:label>
-		<skos:definition xml:lang="en">Any motor vehicle having a seat or saddle for the use of its operator and designed to travel on not more than three wheels in contact with the ground.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.9</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;MotorcycleConversionKit">
@@ -879,20 +721,6 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.24</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-tc;OtherBus">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Bus"/>
-		<rdfs:label xml:lang="en">Other Bus</rdfs:label>
-		<skos:definition xml:lang="en">Any bus used for transportation purposes other than school bus, transit bus, intercity bus or charter bus.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.10.6</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;OtherRoadVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;RoadVehicle"/>
-		<rdfs:label xml:lang="en">Other Road Vehicle</rdfs:label>
-		<skos:definition xml:lang="en">Any road vehicle other than a motor vehicle.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.8</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-de-tc;OtherStateRouteNumberedHighway">
 		<rdfs:subClassOf rdf:resource="&auto-de-tc;Trafficway"/>
 		<rdfs:label xml:lang="en">Other State Route Numbered Highway</rdfs:label>
@@ -912,13 +740,6 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<rdfs:label xml:lang="en">Overturning Crash</rdfs:label>
 		<skos:definition xml:lang="en">A road vehicle crash in which the first harmful event is the overturning of a road vehicle.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.1</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;ParkedMotorVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;MotorVehicle"/>
-		<rdfs:label xml:lang="en">Parked Motor Vehicle</rdfs:label>
-		<skos:definition xml:lang="en">A motor vehicle not in- transport, other than a working motor vehicle, that is not in motion and not located on the roadway.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.34.2</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;ParkingLot">
@@ -955,19 +776,6 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.38</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-tc;PassengerVan">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Van"/>
-		<rdfs:label xml:lang="en">Passenger Van</rdfs:label>
-		<skos:definition xml:lang="en">Any van where the area behind the driver or cab is designated for carrying passengers.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.14.1</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;Pedalcycle">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;OtherRoadVehicle"/>
-		<rdfs:label xml:lang="en">Pedalcycle</rdfs:label>
-		<skos:definition xml:lang="en">A non-motorized other road vehicle propelled by pedaling.</skos:definition>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-de-tc;PedalcycleCrash">
 		<rdfs:subClassOf rdf:resource="&auto-de-tc;Crash"/>
 		<rdfs:label xml:lang="en">PedalcycleCrash</rdfs:label>
@@ -1002,12 +810,6 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<rdfs:label xml:lang="en">Personal Conveyance</rdfs:label>
 		<skos:definition xml:lang="en">A device, other than a transport device, used by a pedestrian (See 2.2.36) for personal mobility assistance or recreation. These devices can be motorized or human powered, but not propelled by pedaling.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.6.1</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;PoleTrailer">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Trailer"/>
-		<rdfs:label xml:lang="en">Pole Trailer</rdfs:label>
-		<skos:definition xml:lang="en">A trailer designed to be attached to the towing road vehicle by means of a reach or pole, or by being boomed or otherwise secured to the towing road vehicle, and ordinarily used for carrying property of a long or irregular shape such as poles, pipes or structural members that are generally capable of sustaining themselves as beams between the supporting connections.</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;PolicePursuit">
@@ -1073,20 +875,6 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.13</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-tc;RailwayTrain">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;RailwayVehicle"/>
-		<rdfs:label xml:lang="en">Railway Train</rdfs:label>
-		<skos:definition xml:lang="en">Any motorized railway vehicle.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.5</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;RailwayVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;LandVehicle"/>
-		<rdfs:label xml:lang="en">Railway Vehicle</rdfs:label>
-		<skos:definition xml:lang="en">Any land vehicle that is (1) designed primarily for, or in use for, moving persons or property from one place to another on rails and (2) not in use on a land way other than a railway.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.4</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-de-tc;Ramp">
 		<rdfs:subClassOf rdf:resource="&auto-de-tc;PartOfTrafficway"/>
 		<rdfs:label xml:lang="en">Ramp</rdfs:label>
@@ -1100,12 +888,6 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<rdfs:label xml:lang="en">Road</rdfs:label>
 		<skos:definition xml:lang="en">A part of a trafficway which includes both the roadway and any shoulder alongside the roadway.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.33</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;RoadVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;LandVehicle"/>
-		<rdfs:label xml:lang="en">Road Vehicle</rdfs:label>
-		<rdfs:comment xml:lang="en">A superclass of classes addopted from ANSI D.16-2017.</rdfs:comment>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;RoadVehicleCrash">
@@ -1164,26 +946,11 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<skos:definition xml:lang="en">Any area which is not within urban areas.</skos:definition>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-tc;SchoolBus">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Bus"/>
-		<rdfs:label xml:lang="en">School Bus</rdfs:label>
-		<rdfs:comment xml:lang="en">A motor vehicle is not a school bus while on trips which involve the transportation exclusively of other passengers or exclusively for other purposes. A motor vehicle is a school bus only if it is externally identifiable by the following characteristics : 1.) Its color is yellow, 2.) The words “ school bus &apos;&apos; appear on the front and rear, 3.) Flashing red lights are located on the front and rear, 4.) Lettering on both sides identifies the school or school district served, or the company operating the bus.</rdfs:comment>
-		<skos:definition xml:lang="en">A motor vehicle used for the transportation of any school pupil at or below the 12th-grade level to or from a public or private school or school-related activity.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.8.1</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-de-tc;SchoolBusCrash">
 		<rdfs:subClassOf rdf:resource="&auto-de-tc;Crash"/>
 		<rdfs:label xml:lang="en">School Bus Crash</rdfs:label>
 		<skos:definition xml:lang="en">(1) a motor vehicle crash in which a school bus, with or without a pupil on board, is involved directly as a contact vehicle, or (2) a motor vehicle crash or an other-road- vehicle crash in which a school bus, with or without a pupil on board, is involved indirectly as a noncontact vehicle.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.8.2</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;Semitrailer">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Trailer"/>
-		<rdfs:label xml:lang="en">Semitrailer</rdfs:label>
-		<skos:definition xml:lang="en">A trailer, other than a pole trailer, designed for carrying property and so constructed that part of its weight rests upon or is carried by the towing road vehicle.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.17</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;Separator">
@@ -1205,27 +972,6 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<rdfs:label xml:lang="en">Shoulder</rdfs:label>
 		<skos:definition xml:lang="en">A part of a trafficway contiguous with the roadway for emergency use, for accommodation of stopped road vehicles, and for lateral support of the roadway structure.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.32</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;SingleUnitTruck">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Truck"/>
-		<rdfs:label xml:lang="en">Single Unit Truck</rdfs:label>
-		<rdfs:comment xml:lang="en">When connected to a trailer, such a device may be part of a truck combination.</rdfs:comment>
-		<skos:definition xml:lang="en">A truck consisting primarily of a single motorized transport device designed for carrying property.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.19</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;SmallBus">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Bus"/>
-		<rdfs:label xml:lang="en">Small bus</rdfs:label>
-		<skos:definition xml:lang="en">A bus with seating for nine to fifteen persons, including the driver.</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;Speed-limitedMotor-drivenCycle">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Motorcycle"/>
-		<rdfs:label xml:lang="en">Speed-limited Motor-driven Cycle</rdfs:label>
-		<skos:definition xml:lang="en">Any motor- driven cycle which : 1.) will not attain a speed of more than 30 miles per hour (48 kilometers per hour) in one mile (1.609 kilometers) from a standing start, 2.) has an engine with not more than 50 cubic centimeters displacement or with 2-brake horsepower or less, and 3.) has a power drive system which does not require its operator to shift gears.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.9.3</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;State">
@@ -1255,13 +1001,6 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.3.4</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-tc;Three-wheeledMotorcycle">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Motorcycle"/>
-		<rdfs:label xml:lang="en">Three-wheeled motorcycle</rdfs:label>
-		<skos:definition xml:lang="en">Any motor vehicle having a seat or saddle for the use of its operator, and having three wheels in contact with the ground.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.9.6</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-de-tc;TrafficCrash">
 		<rdfs:subClassOf rdf:resource="&auto-de-tc;Crash"/>
 		<rdfs:label xml:lang="en">Traffic Crash</rdfs:label>
@@ -1283,20 +1022,6 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.1</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-tc;Trailer">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;OtherRoadVehicle"/>
-		<rdfs:label xml:lang="en">Trailer</rdfs:label>
-		<skos:definition xml:lang="en">A road vehicle designed to be drawn by another road vehicle.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.15</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;TransitBus">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Bus"/>
-		<rdfs:label xml:lang="en">Transit Bus</rdfs:label>
-		<skos:definition xml:lang="en">A bus used for passenger transportation over fixed, scheduled routes within primarily urban geographical areas.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.10.3</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-de-tc;TransportCrash">
 		<rdfs:subClassOf rdf:resource="&auto-de-tc;Crash"/>
 		<rdfs:label xml:lang="en">Transport Crash</rdfs:label>
@@ -1311,40 +1036,11 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.3</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-tc;TransportVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;RoadVehicle"/>
-		<rdfs:label xml:lang="en">Transport Vehicle</rdfs:label>
-		<rdfs:comment xml:lang="en">Such devices or animals shall include at least one of the following : 1.) A transport device, or a unit, made up of connected transport devices, while idle or in use, for moving persons or property from one place to another, 2.) An animal or team of animals while in use for moving person or property other than the animal or team itself from one place to another, or 3.) A movable device such as construction, farm or industrial machinery outside the confines of a building and its premises while in use for moving persons, the device itself, or other property from one place to another.</rdfs:comment>
-		<skos:definition xml:lang="en">Consists of one or more devices or animals and their load.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.4</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-de-tc;TransportWay">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Location"/>
 		<rdfs:label xml:lang="en">Transport Way</rdfs:label>
 		<skos:definition xml:lang="en">Any way or place reserved or commonly used for the operation of transport vehicles.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.8</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;Truck">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;MotorVehicle"/>
-		<rdfs:label xml:lang="en">Truck</rdfs:label>
-		<skos:definition xml:lang="en">A motor vehicle designed primarily for carrying property.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.13</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;TruckCombination">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Truck"/>
-		<rdfs:label xml:lang="en">Truck Combination</rdfs:label>
-		<skos:definition xml:lang="en">A truck consisting primarily of a transport device which is a single- unit truck or truck tractor together with one or more attached trailers.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.21</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;TruckTractor">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;MotorVehicle"/>
-		<rdfs:label xml:lang="en">Truck Tractor</rdfs:label>
-		<skos:definition xml:lang="en">A motor vehicle consisting of a single motorized transport device designed primarily for drawing trailers.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.20</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;TurnLane">
@@ -1367,35 +1063,6 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<rdfs:comment xml:lang="en">Such boundaries are established in accordance with the provisions of Title 23 of the United States Code. Urban area boundary information is available from state highway or transportation departments. In the event that boundaries have not been fixed as above for any urban place designated by the Bureau of the Census having population of 5000 or more, the area within boundaries fixed by the Bureau of the Census shall be an urban area.</rdfs:comment>
 		<skos:definition xml:lang="en">An area whose boundaries shall be those fixed by responsible state and local officials in cooperation with each other and approved by the Federal Highway Administration, U.S. Department of Transportation.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.1</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;UtilityVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;MotorVehicle"/>
-		<rdfs:label xml:lang="en">Utility Vehicle</rdfs:label>
-		<rdfs:comment xml:lang="en">These vehicles are generally four wheel-drive (4 x 4) and have increased ground clearance. A utility vehicle typically has a gross vehicle weight rating (GVWR) of 10,000 pounds or less. Utility vehicles with wheelbases greater than 88 inches are classified by overall width. The wheelbase and overall width should be rounded to the nearest inch.</rdfs:comment>
-		<skos:definition xml:lang="en">A motor vehicle other than a motorcycle or large bus consisting primarily of a transport device designed for carrying persons, and generally considered a multi-purpose vehicle that is designed to have off-road capabilities.</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;Van">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;MotorVehicle"/>
-		<rdfs:label xml:lang="en">Van</rdfs:label>
-		<rdfs:comment xml:lang="en">Vans are classified by size based on frame type and overall vehicle body width. Before classification, vehicle width should be rounded to the nearest inch.</rdfs:comment>
-		<skos:definition xml:lang="en">A gross vehicle weight rating (GVWR) of 10,000 pounds or less and is basically a “ box on wheels ” that is identifiable by its enclosed passenger and/or cargo area, step-up floor, and relatively short (or nonexistent) hood.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.14</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;Van-basedBus">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Van"/>
-		<rdfs:label xml:lang="en">Van-based Bus</rdfs:label>
-		<skos:definition xml:lang="en">Any passenger van designed for carrying nine or more persons, including the driver.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.14.4</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;Van-basedMotorhome">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;Van"/>
-		<rdfs:label xml:lang="en">Van-based Motorhome</rdfs:label>
-		<skos:definition xml:lang="en">Any van where a frame-mounted recreational unit is added behind the driver or cab area.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.14.3</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;Watercraft">
@@ -1432,14 +1099,6 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<rdfs:label xml:lang="en">Work Zone Crash</rdfs:label>
 		<skos:definition xml:lang="en">A motor vehicle traffic crash in which the first harmful event occurs within the boundaries of a work zone or on an approach to or exit from a work zone, resulting from an activity, behavior or control related to the movement of the traffic units through the work zone.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.7.8</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-tc;WorkingMotorVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-de-tc;MotorVehicle"/>
-		<rdfs:label xml:lang="en">Working Motor Vehicle</rdfs:label>
-		<rdfs:comment xml:lang="en">This &quot;work&quot; may be located within open or closed portions of the trafficway and motor vehicles performing these activities can be within or outside of the trafficway boundaries.</rdfs:comment>
-		<skos:definition xml:lang="en">A motor vehicle in the act of performing construction, maintenance or utility work related to the trafficway.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.7.2.</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-tc;achievedBy">
@@ -1520,6 +1179,14 @@ The total number of lanes in a roadway is collected for each vehicle, on the roa
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Role">
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/LandVehicle">
+		<rdfs:subClassOf rdf:resource="&auto-de-tc;TransportDevice"/>
+		<rdfs:subClassOf rdf:resource="&auto-ec-as;Vehicle"/>
+		<rdfs:label xml:lang="en">Land Vehicle</rdfs:label>
+		<skos:definition xml:lang="en">A transport vehicle which is neither an aircraft nor a watercraft.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.7</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;abbreviation">
