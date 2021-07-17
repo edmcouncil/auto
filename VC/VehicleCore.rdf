@@ -41,7 +41,7 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 	
 	<owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/">
-		<rdfs:label>Vehicle Core Ontology</rdfs:label>
+		<rdfs:label>Vehicle core ontology</rdfs:label>
 		<dct:abstract>...</dct:abstract>
 		<dct:license rdf:datatype="&xsd;anyURI">http://opensource.org/licenses/MIT</dct:license>
 		<sm:contentLanguage rdf:datatype="&xsd;anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
