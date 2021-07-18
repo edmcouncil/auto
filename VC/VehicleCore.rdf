@@ -131,53 +131,6 @@ It contains many classes and properties extracted from:
 	<owl:AnnotationProperty rdf:about="&VechicleECommerce;hasID">
 	</owl:AnnotationProperty>
 	
-	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/0to100KMH">
-		<rdf:type rdf:resource="&auto-vc-vc;SpeedInterval"/>
-		<rdfs:label xml:lang="en">0to100KMH</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<skos:definition xml:lang="en">The speed interval from 0 to 100 km/h</skos:definition>
-		<auto-mo-mo:hasMaxValueFloat rdf:datatype="&xsd;float">100.0</auto-mo-mo:hasMaxValueFloat>
-		<auto-mo-mo:hasMinValueFloat rdf:datatype="&xsd;float">0.0</auto-mo-mo:hasMinValueFloat>
-		<auto-mo-mo:hasUnitOfMeasurement>KMH</auto-mo-mo:hasUnitOfMeasurement>
-	</owl:NamedIndividual>
-	
-	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/0to60MPH">
-		<rdf:type rdf:resource="&auto-vc-vc;SpeedInterval"/>
-		<rdfs:label xml:lang="en">0to60MPH</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<skos:definition xml:lang="en">The speed interval from 0 to 60 mph</skos:definition>
-		<auto-mo-mo:hasMaxValueFloat rdf:datatype="&xsd;float">60.0</auto-mo-mo:hasMaxValueFloat>
-		<auto-mo-mo:hasMinValueFloat rdf:datatype="&xsd;float">0.0</auto-mo-mo:hasMinValueFloat>
-		<auto-mo-mo:hasUnitOfMeasurement>HM</auto-mo-mo:hasUnitOfMeasurement>
-	</owl:NamedIndividual>
-	
-	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/1GLI">
-		<rdf:type rdf:resource="&auto-vc-vc;FuelQuantity"/>
-		<rdfs:label xml:lang="en">1GLI</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<skos:definition xml:lang="en">The fuel quantity of 1 British (imperial) gallon</skos:definition>
-		<auto-mo-mo:hasUnitOfMeasurement>GLI</auto-mo-mo:hasUnitOfMeasurement>
-		<auto-mo-mo:hasValueFloat rdf:datatype="&xsd;float">1.0</auto-mo-mo:hasValueFloat>
-	</owl:NamedIndividual>
-	
-	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/1GLL">
-		<rdf:type rdf:resource="&auto-vc-vc;FuelQuantity"/>
-		<rdfs:label xml:lang="en">1GLL</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<skos:definition xml:lang="en">The fuel quantity of 1 US gallon</skos:definition>
-		<auto-mo-mo:hasUnitOfMeasurement>GLL</auto-mo-mo:hasUnitOfMeasurement>
-		<auto-mo-mo:hasValueFloat rdf:datatype="&xsd;float">1.0</auto-mo-mo:hasValueFloat>
-	</owl:NamedIndividual>
-	
-	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/1LTR">
-		<rdf:type rdf:resource="&auto-vc-vc;FuelQuantity"/>
-		<rdfs:label xml:lang="en">1LTR</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<skos:definition xml:lang="en">The fuel quantity of 1 liter</skos:definition>
-		<auto-mo-mo:hasUnitOfMeasurement>LTR</auto-mo-mo:hasUnitOfMeasurement>
-		<auto-mo-mo:hasValueFloat rdf:datatype="&xsd;float">1.0</auto-mo-mo:hasValueFloat>
-	</owl:NamedIndividual>
-	
 	<owl:Class rdf:about="&auto-mo-mo;BusinessEntityType">
 	</owl:Class>
 	
@@ -413,6 +366,53 @@ It contains many classes and properties extracted from:
 	
 	<owl:ObjectProperty rdf:about="&auto-mo-mo;valueReference">
 	</owl:ObjectProperty>
+	
+	<owl:NamedIndividual rdf:about="&auto-vc-vc;0to100KMH">
+		<rdf:type rdf:resource="&auto-vc-vc;SpeedInterval"/>
+		<rdfs:label xml:lang="en">0to100KMH</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
+		<skos:definition xml:lang="en">The speed interval from 0 to 100 km/h</skos:definition>
+		<auto-mo-mo:hasMaxValueFloat rdf:datatype="&xsd;float">100.0</auto-mo-mo:hasMaxValueFloat>
+		<auto-mo-mo:hasMinValueFloat rdf:datatype="&xsd;float">0.0</auto-mo-mo:hasMinValueFloat>
+		<auto-mo-mo:hasUnitOfMeasurement>KMH</auto-mo-mo:hasUnitOfMeasurement>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="&auto-vc-vc;0to60MPH">
+		<rdf:type rdf:resource="&auto-vc-vc;SpeedInterval"/>
+		<rdfs:label xml:lang="en">0to60MPH</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
+		<skos:definition xml:lang="en">The speed interval from 0 to 60 mph</skos:definition>
+		<auto-mo-mo:hasMaxValueFloat rdf:datatype="&xsd;float">60.0</auto-mo-mo:hasMaxValueFloat>
+		<auto-mo-mo:hasMinValueFloat rdf:datatype="&xsd;float">0.0</auto-mo-mo:hasMinValueFloat>
+		<auto-mo-mo:hasUnitOfMeasurement>HM</auto-mo-mo:hasUnitOfMeasurement>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="&auto-vc-vc;1GLI">
+		<rdf:type rdf:resource="&auto-vc-vc;FuelQuantity"/>
+		<rdfs:label xml:lang="en">1GLI</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
+		<skos:definition xml:lang="en">The fuel quantity of 1 British (imperial) gallon</skos:definition>
+		<auto-mo-mo:hasUnitOfMeasurement>GLI</auto-mo-mo:hasUnitOfMeasurement>
+		<auto-mo-mo:hasValueFloat rdf:datatype="&xsd;float">1.0</auto-mo-mo:hasValueFloat>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="&auto-vc-vc;1GLL">
+		<rdf:type rdf:resource="&auto-vc-vc;FuelQuantity"/>
+		<rdfs:label xml:lang="en">1GLL</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
+		<skos:definition xml:lang="en">The fuel quantity of 1 US gallon</skos:definition>
+		<auto-mo-mo:hasUnitOfMeasurement>GLL</auto-mo-mo:hasUnitOfMeasurement>
+		<auto-mo-mo:hasValueFloat rdf:datatype="&xsd;float">1.0</auto-mo-mo:hasValueFloat>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="&auto-vc-vc;1LTR">
+		<rdf:type rdf:resource="&auto-vc-vc;FuelQuantity"/>
+		<rdfs:label xml:lang="en">1LTR</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
+		<skos:definition xml:lang="en">The fuel quantity of 1 liter</skos:definition>
+		<auto-mo-mo:hasUnitOfMeasurement>LTR</auto-mo-mo:hasUnitOfMeasurement>
+		<auto-mo-mo:hasValueFloat rdf:datatype="&xsd;float">1.0</auto-mo-mo:hasValueFloat>
+	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="&auto-vc-vc;AllWheelDriveConfiguration">
 		<rdf:type rdf:resource="&auto-vc-vc;DriveWheelConfigurationValue"/>
