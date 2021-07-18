@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE rdf:RDF [
-	<!ENTITY VehicleECommerce "https://spec.edmcouncil.org/auto/ontology/EC/VehicleECommerce/">
-	<!ENTITY auto-ec-vec "https://spec.edmcouncil.org/auto/ontology/EC/VechicleECommerce/">
+	<!ENTITY VechicleECommerce "https://spec.edmcouncil.org/auto/ontology/EC/VechicleECommerce/">
+	<!ENTITY auto-ec-ec "https://spec.edmcouncil.org/auto/ontology/EC/VehicleECommerce/">
 	<!ENTITY auto-mo-mo "https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/">
 	<!ENTITY auto-vc-vc "https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/">
 	<!ENTITY dc "http://purl.org/dc/elements/1.1/">
@@ -21,9 +21,9 @@
 	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
 ]>
 <rdf:RDF xml:base="https://spec.edmcouncil.org/auto/ontology/EC/VehicleECommerce/"
-	xmlns="https://spec.edmcouncil.org/auto/ontology/EC/VechicleECommerce/"
-	xmlns:VehicleECommerce="https://spec.edmcouncil.org/auto/ontology/EC/VehicleECommerce/"
-	xmlns:auto-ec-vec="https://spec.edmcouncil.org/auto/ontology/EC/VechicleECommerce/"
+	xmlns="https://spec.edmcouncil.org/auto/ontology/EC/VehicleECommerce/"
+	xmlns:VechicleECommerce="https://spec.edmcouncil.org/auto/ontology/EC/VechicleECommerce/"
+	xmlns:auto-ec-ec="https://spec.edmcouncil.org/auto/ontology/EC/VehicleECommerce/"
 	xmlns:auto-mo-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
 	xmlns:auto-vc-vc="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -44,12 +44,18 @@
 	
 	<owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleECommerce/">
 		<rdfs:label>Vehicle e-commerce ontology</rdfs:label>
-		<dct:abstract>The Schema.org Auto Extension module corresponds to the the automotive extension of schema.org (https://schema.org/docs/automotive.html). It contains ontologies which define the most important real-world objects related to popular vehicles like cars, buses (coaches) and motorcycles. It focuses predominantly on passenger automobiles from the retail market perspective.</dct:abstract>
+		<dct:abstract>The Vehicle E-Commerce module focuses predominantly on the vehicles from the retail market perspective.
+
+It contains many classes and properties extracted from:
+- the automotive extension of schema.org (https://schema.org/docs/automotive.html). 
+- the Used Cars Ontology (UCO) (created by Hepp Research GmbH and Makolab SA (see http://ontologies.makolab.com/uco/ns.html) and available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/)
+- the Vehicle Sales Ontology (VSO) (created by Martin Hepp (see https://lov.linkeddata.es/dataset/lov/vocabs/vso) and available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/).</dct:abstract>
+		<dct:contributor>Robert Trypuz</dct:contributor>
 		<dct:license rdf:datatype="&xsd;anyURI">http://opensource.org/licenses/MIT</dct:license>
 		<sm:contentLanguage rdf:datatype="&xsd;anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
-		<sm:copyright>Copyright (c) 2020 EDM Council, Inc.</sm:copyright>
+		<sm:copyright>Copyright (c) 2021 EDM Council, Inc.</sm:copyright>
 		<sm:dependsOn rdf:datatype="&xsd;anyURI">https://spec.edmcouncil.org/auto/ontology/EC/</sm:dependsOn>
-		<sm:fileAbbreviation>auto-ec-as</sm:fileAbbreviation>
+		<sm:fileAbbreviation>auto-ec-ec</sm:fileAbbreviation>
 		<sm:filename>VechicleECommerce.rdf</sm:filename>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
@@ -124,152 +130,89 @@
 	<owl:AnnotationProperty rdf:about="&foaf;primaryTopic">
 	</owl:AnnotationProperty>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;AllWheelDriveConfiguration">
-		<rdf:type rdf:resource="&VehicleECommerce;DriveWheelConfigurationValue"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;AllWheelDriveConfiguration">
 		<rdfs:label xml:lang="en">all-wheel drive</rdfs:label>
 		<skos:definition xml:lang="en">All-wheel Drive is a transmission layout where the engine drives all four wheels.</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&VehicleECommerce;AudioAndNavigation">
-		<rdfs:subClassOf rdf:resource="&VehicleECommerce;ChoiceOrComponent"/>
-		<rdfs:label xml:lang="en">audio and navigation choice or component</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<skos:definition xml:lang="en">The class of audio and navigation choices or components (CD/DVD/SatNav, a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 1</skos:definition>
-		<VehicleECommerce:hasID>1</VehicleECommerce:hasID>
-	</owl:Class>
-	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;AuthorizedDealer">
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;AuthorizedDealer">
 		<rdf:type rdf:resource="&auto-mo-mo;BusinessEntityType"/>
 		<rdfs:label xml:lang="en">Authorized Dealer</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<skos:definition xml:lang="en">An authorized dealer of the manufacturer of the respective vehicle</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&VehicleECommerce;BaseModel">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Model"/>
-		<rdfs:label xml:lang="en">base model</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-		<owl:disjointWith rdf:resource="&VehicleECommerce;ChoiceOrComponent"/>
-		<owl:disjointWith rdf:resource="&VehicleECommerce;CompleteCarModel"/>
-		<owl:disjointWith rdf:resource="&VehicleECommerce;Derivative"/>
-		<owl:disjointWith rdf:resource="&VehicleECommerce;PropertySpecification"/>
-		<owl:disjointWith rdf:resource="&VehicleECommerce;Trim"/>
-		<owl:disjointWith rdf:resource="&auto-mo-mo;RelativePriceSpecification"/>
-		<skos:definition xml:lang="en">A Base Model is an abstract entity specifying the basic features of a group of vehicles.
-
-Examples: VW Golf, VW Polo, VW Passat</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&VehicleECommerce;Boat">
-		<rdfs:subClassOf rdf:resource="&VehicleECommerce;Watercraft"/>
-		<rdfs:label xml:lang="en">boat</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Boat"/>
-		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Boat"/>
-		<skos:definition xml:lang="en">a watercraft of modest size designed to float or plane, to provide passage across water</skos:definition>
-	</owl:Class>
-	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;BodyStyle4X4">
-		<rdf:type rdf:resource="&VehicleECommerce;BodyStyleValue"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;BodyStyle4X4">
 		<rdfs:label xml:lang="en">4 X 4 (vso:BodyStyleValue)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">Four-by-Four Vehicle, VW ID: 6</skos:definition>
-		<VehicleECommerce:hasID>6</VehicleECommerce:hasID>
+		<auto-ec-ec:hasID>6</auto-ec-ec:hasID>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;BodyStyleCabriolet">
-		<rdf:type rdf:resource="&VehicleECommerce;BodyStyleValue"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;BodyStyleCabriolet">
 		<rdfs:label xml:lang="en">Cabriolet (vso:BodyStyleValue)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">Cabriolet, VW ID: 4</skos:definition>
-		<VehicleECommerce:hasID>4</VehicleECommerce:hasID>
+		<auto-ec-ec:hasID>4</auto-ec-ec:hasID>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;BodyStyleCoupe">
-		<rdf:type rdf:resource="&VehicleECommerce;BodyStyleValue"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;BodyStyleCoupe">
 		<rdfs:label xml:lang="en">Coupe (vso:BodyStyleValue)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">Coupe, VW ID: 7</skos:definition>
-		<VehicleECommerce:hasID>7</VehicleECommerce:hasID>
+		<auto-ec-ec:hasID>7</auto-ec-ec:hasID>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;BodyStyleEstate">
-		<rdf:type rdf:resource="&VehicleECommerce;BodyStyleValue"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;BodyStyleEstate">
 		<rdfs:label xml:lang="en">Estate (vso:BodyStyleValue)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">Estate, VW ID: 3</skos:definition>
-		<VehicleECommerce:hasID>3</VehicleECommerce:hasID>
+		<auto-ec-ec:hasID>3</auto-ec-ec:hasID>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;BodyStyleHatchback">
-		<rdf:type rdf:resource="&VehicleECommerce;BodyStyleValue"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;BodyStyleHatchback">
 		<rdfs:label xml:lang="en">Hatchback (vso:BodyStyleValue)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">Hatchback, VW ID: 1</skos:definition>
-		<VehicleECommerce:hasID>1</VehicleECommerce:hasID>
+		<auto-ec-ec:hasID>1</auto-ec-ec:hasID>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;BodyStyleMPV">
-		<rdf:type rdf:resource="&VehicleECommerce;BodyStyleValue"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;BodyStyleMPV">
 		<rdfs:label xml:lang="en">MPV (vso:BodyStyleValue)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">Multi-purpose Vehicle, VW ID: 5</skos:definition>
-		<VehicleECommerce:hasID>5</VehicleECommerce:hasID>
+		<auto-ec-ec:hasID>5</auto-ec-ec:hasID>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;BodyStyleSaloon">
-		<rdf:type rdf:resource="&VehicleECommerce;BodyStyleValue"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;BodyStyleSaloon">
 		<rdfs:label xml:lang="en">Saloon (vso:BodyStyleValue)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">Saloon, VW ID: 2</skos:definition>
-		<VehicleECommerce:hasID>2</VehicleECommerce:hasID>
+		<auto-ec-ec:hasID>2</auto-ec-ec:hasID>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;BodyStyleUnspecified">
-		<rdf:type rdf:resource="&VehicleECommerce;BodyStyleValue"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;BodyStyleUnspecified">
 		<rdfs:label xml:lang="en">Unspecified (vso:BodyStyleValue)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">Unspecified, VW ID: 0</skos:definition>
-		<VehicleECommerce:hasID>0</VehicleECommerce:hasID>
+		<auto-ec-ec:hasID>0</auto-ec-ec:hasID>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&VehicleECommerce;BodyStyleValue">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QualitativeValue"/>
-		<rdfs:label xml:lang="en">body style value</rdfs:label>
-		<rdfs:comment xml:lang="en">You can safely use any reasonable DBPedia URI, e.g. 
-  http://dbpedia.org/resource/Convertible
-  http://dbpedia.org/resource/Hatchback
-  http://dbpedia.org/resource/Station_wagon
-  http://dbpedia.org/resource/Sport_utility_vehicle
-  http://dbpedia.org/resource/Roadster</rdfs:comment>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<skos:definition xml:lang="en">a value indicating the body style of a vehicle</skos:definition>
-	</owl:Class>
-	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;Business">
-		<rdf:type rdf:resource="&VehicleECommerce;CarUsageType"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;Business">
+		<rdf:type rdf:resource="&auto-ec-ec;CarUsageType"/>
 		<rdfs:label xml:lang="en">business</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<skos:definition xml:lang="en">The usage of a vehicle for general business purposes, i.e. excluding usages like as a taxi, rental car, or driving instructions.</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&VehicleECommerce;Canoe">
-		<rdfs:subClassOf rdf:resource="&VehicleECommerce;Boat"/>
-		<rdfs:label xml:lang="en">canoe</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Canoe"/>
-		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Canoe"/>
-		<skos:definition xml:lang="en">a small narrow boat, typically human-powered, though it may also be powered by sails or small electric or gas motors</skos:definition>
-	</owl:Class>
-	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;CarSharing">
-		<rdf:type rdf:resource="&VehicleECommerce;CarUsageType"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;CarSharing">
+		<rdf:type rdf:resource="&auto-ec-ec;CarUsageType"/>
 		<rdfs:label xml:lang="en">car sharing</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<skos:definition xml:lang="en">The usage of a vehicle for car sharing networks</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&VehicleECommerce;CarUsageType">
+	<owl:Class rdf:about="&auto-ec-ec;CarUsageType">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QualitativeValue"/>
 		<rdfs:label xml:lang="en">car usage</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
@@ -278,20 +221,20 @@ Examples: VW Golf, VW Polo, VW Passat</skos:definition>
 		<skos:definition xml:lang="en">a special usage of a car, e.g. commercial rental, driving school, or as a taxi</skos:definition>
 	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;Carport">
-		<rdf:type rdf:resource="&VehicleECommerce;ParkingType"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;Carport">
+		<rdf:type rdf:resource="&auto-ec-ec;ParkingType"/>
 		<rdfs:label xml:lang="en">carport</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<skos:definition xml:lang="en">The parking of a vehicle under a protective roof, e.g. in a carport</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&VehicleECommerce;Check">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Perdurant"/>
+	<owl:Class rdf:about="&auto-ec-ec;Check">
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Process"/>
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;carriedOutBy"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;carriedOutBy"/>
 						<owl:onClass>
 							<owl:Class>
 								<owl:unionOf rdf:parseType="Collection">
@@ -305,7 +248,7 @@ Examples: VW Golf, VW Polo, VW Passat</skos:definition>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;carriedOutBy"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;carriedOutBy"/>
 						<owl:onClass>
 							<owl:Class>
 								<owl:unionOf rdf:parseType="Collection">
@@ -326,83 +269,19 @@ Examples: VW Golf, VW Polo, VW Passat</skos:definition>
 		<skos:definition xml:lang="en">a mandatory or optional technical inspection, e.g. the MOT, a vendor-specific certification of used cars, etc.</skos:definition>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&VehicleECommerce;ChoiceOrComponent">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Model"/>
-		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;priceModifier"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;RelativePriceSpecification"/>
-						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-					</owl:Restriction>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;priceModifier"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;RelativePriceSpecification"/>
-						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;productCode"/>
-						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&xsd;string"/>
-					</owl:Restriction>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;productCode"/>
-						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&xsd;string"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">choice or component</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-		<owl:disjointWith rdf:resource="&VehicleECommerce;CompleteCarModel"/>
-		<owl:disjointWith rdf:resource="&VehicleECommerce;Derivative"/>
-		<owl:disjointWith rdf:resource="&VehicleECommerce;PropertySpecification"/>
-		<owl:disjointWith rdf:resource="&VehicleECommerce;Trim"/>
-		<owl:disjointWith rdf:resource="&auto-mo-mo;RelativePriceSpecification"/>
-		<skos:definition xml:lang="en">A Choice or Component is a component (e.g. engine), add-on, feature (color &quot;ocean blue&quot;), or service that can be chosen to be part of a final vehicle configuration.
-  
-Example: Engine 1.6 l TDI, color ocean blue, trailer hitch</skos:definition>
-	</owl:Class>
-	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;Combined">
-		<rdf:type rdf:resource="&VehicleECommerce;TrafficPattern"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;Combined">
 		<rdfs:label xml:lang="en">Combined (vvo:TrafficPattern)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">Combined usage as a traffic pattern</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&VehicleECommerce;CompleteCarModel">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Model"/>
-		<rdfs:label xml:lang="en">complete car model</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-		<owl:disjointWith rdf:resource="&VehicleECommerce;Derivative"/>
-		<owl:disjointWith rdf:resource="&VehicleECommerce;PropertySpecification"/>
-		<owl:disjointWith rdf:resource="&VehicleECommerce;Trim"/>
-		<owl:disjointWith rdf:resource="&auto-mo-mo;RelativePriceSpecification"/>
-		<skos:definition xml:lang="en">A Complete Car Model is an abstract entity specifying all features and configuration choices needed for actually producing a vehicle. In other words, it is the gr:ProductOrServiceModel (&quot;datasheet&quot;) for a completely configured vehicle.
-While a Complete Car Model can be defined indepently of a Base Model, Trim, or Derivative, it is usually based on a Derivative plus choices for all mandatory configurational options (coo:SpecItemCollection) of that Derivative.
-A Complete Car Model should be linked to its Derivative via gr:isVariantOf, if available.
-
-Example: VW Golf S 1.6 TDI 3door Manual in ocean blue with air-conditioning, CD player, trailer hitch, power steering, and power windows
-
-Note: A coo:CompleteCarModel is NOT an actual car, but a complete feature description of one or multiple actual cars.</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&VehicleECommerce;DamageOrAccident">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Perdurant"/>
+	<owl:Class rdf:about="&auto-ec-ec;DamageOrAccident">
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Process"/>
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;carriedOutBy"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;carriedOutBy"/>
 						<owl:onClass>
 							<owl:Class>
 								<owl:unionOf rdf:parseType="Collection">
@@ -416,7 +295,7 @@ Note: A coo:CompleteCarModel is NOT an actual car, but a complete feature descri
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;carriedOutBy"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;carriedOutBy"/>
 						<owl:onClass>
 							<owl:Class>
 								<owl:unionOf rdf:parseType="Collection">
@@ -436,12 +315,12 @@ Note: A coo:CompleteCarModel is NOT an actual car, but a complete feature descri
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;airbagDeployment"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;airbagDeployment"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;boolean"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;airbagDeployment"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;airbagDeployment"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;boolean"/>
 					</owl:Restriction>
@@ -452,12 +331,12 @@ Note: A coo:CompleteCarModel is NOT an actual car, but a complete feature descri
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;notAtFaultAccident"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;notAtFaultAccident"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;boolean"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;notAtFaultAccident"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;notAtFaultAccident"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;boolean"/>
 					</owl:Restriction>
@@ -468,12 +347,12 @@ Note: A coo:CompleteCarModel is NOT an actual car, but a complete feature descri
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;originalPartsOnly"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;originalPartsOnly"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;boolean"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;originalPartsOnly"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;originalPartsOnly"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;boolean"/>
 					</owl:Restriction>
@@ -484,12 +363,12 @@ Note: A coo:CompleteCarModel is NOT an actual car, but a complete feature descri
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;repaired"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;repaired"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;boolean"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;repaired"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;repaired"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;boolean"/>
 					</owl:Restriction>
@@ -500,12 +379,12 @@ Note: A coo:CompleteCarModel is NOT an actual car, but a complete feature descri
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;structuralDamage"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;structuralDamage"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;boolean"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;structuralDamage"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;structuralDamage"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;boolean"/>
 					</owl:Restriction>
@@ -517,162 +396,69 @@ Note: A coo:CompleteCarModel is NOT an actual car, but a complete feature descri
 		<skos:definition xml:lang="en">an event in which the vehicle is being damaged</skos:definition>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&VehicleECommerce;DecorativeTrims">
-		<rdfs:subClassOf rdf:resource="&VehicleECommerce;ChoiceOrComponent"/>
-		<rdfs:label xml:lang="en">decorative trims choice or component</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<skos:definition xml:lang="en">The class of decorative trim choices or components (a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 8</skos:definition>
-		<VehicleECommerce:hasID>8</VehicleECommerce:hasID>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&VehicleECommerce;Derivative">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Model"/>
-		<rdfs:label xml:lang="en">derivative</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-		<owl:disjointWith rdf:resource="&VehicleECommerce;PropertySpecification"/>
-		<owl:disjointWith rdf:resource="&VehicleECommerce;Trim"/>
-		<owl:disjointWith rdf:resource="&auto-mo-mo;RelativePriceSpecification"/>
-		<skos:definition xml:lang="en">A Derivative is an abstract entity specifying (1) the basic features plus (2) a set of functional (e.g. engine type) and non-functional configuration (e.g. upholstery) choices of a group of vehicles.
-A Derivative has often a number of remaining configuration choices (coo:SpecItemCollection attached via coo:hasSpecItems), which will determine the actual properties of the resulting vehicle.    
-A Derivative should be linked to its Trim via gr:isVariantOf, if available.
-
-Examples: VW Golf S 1.6 TDI 3door Manual</skos:definition>
-	</owl:Class>
-	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;Diesel">
-		<rdf:type rdf:resource="&VehicleECommerce;FuelTypeValue"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;Diesel">
 		<rdfs:label xml:lang="en">Diesel (vso:FuelTypeValue)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">Diesel, VW ID: 2</skos:definition>
-		<VehicleECommerce:hasID>2</VehicleECommerce:hasID>
+		<auto-ec-ec:hasID>2</auto-ec-ec:hasID>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&VehicleECommerce;DriveWheelConfigurationValue">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QualitativeValue"/>
-		<rdfs:label xml:lang="en">drive wheel configuration value</rdfs:label>
-		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
-		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-		<sm:directSource rdf:resource="https://schema.org/DriveWheelConfigurationValue"/>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<skos:definition xml:lang="en">a value indicating which roadwheels will receive torque</skos:definition>
-	</owl:Class>
-	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;DrivingSchoolVehicleUsage">
-		<rdf:type rdf:resource="&VehicleECommerce;CarUsageType"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;DrivingSchoolVehicleUsage">
+		<rdf:type rdf:resource="&auto-ec-ec;CarUsageType"/>
 		<rdfs:label>driving school vehicle usage</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
 		<skos:definition>Indicates the usage of the vehicle for driving school.</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&VehicleECommerce;EmissionStandardValue">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QualitativeValue"/>
-		<rdfs:label xml:lang="en">emission standard value</rdfs:label>
-		<rdfs:comment xml:lang="en">You can safely use any reasonable DBPedia URI, e.g. 
-  http://dbpedia.org/resource/Super_Ultra_Low_Emission_Vehicle
-  http://dbpedia.org/resource/Partial_zero-emissions_vehicle
-
-See also http://en.wikipedia.org/wiki/Emissions_standard.
-
-Unfortunately, there are no DBPedia identifiers for the popular Euro 1 - Euro 5 standards available.
-If you cannot find a suitable identifier in DBPedia, define your own as an instance of vso:EmissionStandardValue.</rdfs:comment>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<skos:definition xml:lang="en">a value indicating the an emission standard</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&VehicleECommerce;Engine">
-		<rdfs:subClassOf rdf:resource="&VehicleECommerce;ChoiceOrComponent"/>
-		<rdfs:label xml:lang="en">engine choice or component</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<skos:definition xml:lang="en">The class of engines as choices or components</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&VehicleECommerce;EngineTypeValue">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QualitativeValue"/>
-		<rdfs:label xml:lang="en">engine type value</rdfs:label>
-		<rdfs:comment xml:lang="en">You can safely use any reasonable DBPedia URI, e.g. 
-  http://dbpedia.org/resource/Two-stroke_engine
-  http://dbpedia.org/resource/Four-stroke_engine
-  http://dbpedia.org/resource/Wankel_engine
-  http://dbpedia.org/resource/Electric_motor</rdfs:comment>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<skos:definition xml:lang="en">a value indicating an engine type</skos:definition>
-	</owl:Class>
-	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;Euro1">
-		<rdf:type rdf:resource="&VehicleECommerce;EmissionStandardValue"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;Euro1">
 		<rdfs:label xml:lang="en">Euro 1 (vso:EmissionStandardValue)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">The emission standard EURO 1</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;Euro2">
-		<rdf:type rdf:resource="&VehicleECommerce;EmissionStandardValue"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;Euro2">
 		<rdfs:label xml:lang="en">Euro 2 (vso:EmissionStandardValue)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">The emission standard EURO 2</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;Euro3">
-		<rdf:type rdf:resource="&VehicleECommerce;EmissionStandardValue"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;Euro3">
 		<rdfs:label xml:lang="en">Euro 3 (vso:EmissionStandardValue)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">The emission standard EURO 3</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;Euro4">
-		<rdf:type rdf:resource="&VehicleECommerce;EmissionStandardValue"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;Euro4">
 		<rdfs:label xml:lang="en">Euro 4 (vso:EmissionStandardValue)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">The emission standard EURO 4</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;Euro5">
-		<rdf:type rdf:resource="&VehicleECommerce;EmissionStandardValue"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;Euro5">
 		<rdfs:label xml:lang="en">Euro 5 (vso:EmissionStandardValue)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">The emission standard EURO 5</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;ExtraUrban">
-		<rdf:type rdf:resource="&VehicleECommerce;TrafficPattern"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;ExtraUrban">
 		<rdfs:label xml:lang="en">ExtraUrban (vvo:TrafficPattern)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">Extra urban as a traffic pattern</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&VehicleECommerce;FeatureValue">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QualitativeValue"/>
-		<rdfs:label xml:lang="en">feature value</rdfs:label>
-		<rdfs:comment xml:lang="en">You can safely use any reasonable DBPedia URI, e.g. 
-  http://dbpedia.org/resource/Anti-lock_braking_system
-  http://dbpedia.org/resource/Electronic_stability_control
-  http://dbpedia.org/resource/Armrest
-  http://dbpedia.org/resource/Spoiler_%28automotive%29
-  http://dbpedia.org/resource/CD_Changer
-  http://dbpedia.org/resource/Cup_holder
-  http://dbpedia.org/resource/Tow_hitch
-  http://dbpedia.org/resource/Power_window
-  http://dbpedia.org/resource/Power_steering
-  http://dbpedia.org/resource/Air_conditioner
-  http://dbpedia.org/resource/Child_safety_lock
-  http://dbpedia.org/resource/Parking_sensors</rdfs:comment>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<skos:definition xml:lang="en">a value indicating the features or accessories that are attached to or belong to a vehicle</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&VehicleECommerce;Financing">
+	<owl:Class rdf:about="&auto-ec-ec;Financing">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;PaymentMethod"/>
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;advancedPayment"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;advancedPayment"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;advancedPayment"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;advancedPayment"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
@@ -683,12 +469,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;credit"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;credit"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;credit"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;credit"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
@@ -699,12 +485,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;customerCashPrice"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;customerCashPrice"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;customerCashPrice"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;customerCashPrice"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
@@ -715,12 +501,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;customerDeposit"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;customerDeposit"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;customerDeposit"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;customerDeposit"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
@@ -731,12 +517,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;depositContribution"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;depositContribution"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;depositContribution"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;depositContribution"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
@@ -747,12 +533,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;discount"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;discount"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;discount"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;discount"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
@@ -763,12 +549,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;excessMileage"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;excessMileage"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;excessMileage"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;excessMileage"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
@@ -779,12 +565,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;finalPaymentFee"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;finalPaymentFee"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;finalPaymentFee"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;finalPaymentFee"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
@@ -795,12 +581,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;firstMonthlyPaymentFee"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;firstMonthlyPaymentFee"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;firstMonthlyPaymentFee"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;firstMonthlyPaymentFee"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
@@ -811,12 +597,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;monthlyPayment"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;monthlyPayment"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;monthlyPayment"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;monthlyPayment"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
@@ -827,12 +613,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;otrRetailPrice"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;otrRetailPrice"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;otrRetailPrice"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;otrRetailPrice"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
@@ -843,12 +629,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;scrappageContribution"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;scrappageContribution"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;scrappageContribution"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;scrappageContribution"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
@@ -859,12 +645,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;totalPayable"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;totalPayable"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;totalPayable"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;totalPayable"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
@@ -875,28 +661,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;shortSubtitle"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;shortSubtitle"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;shortSubtitle"/>
-						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;shortTitle"/>
-						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
-					</owl:Restriction>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;shortTitle"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;shortSubtitle"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
 					</owl:Restriction>
@@ -907,12 +677,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;subtitle"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;shortTitle"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;subtitle"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;shortTitle"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
 					</owl:Restriction>
@@ -923,12 +693,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;termsAndConditions"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;subtitle"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;termsAndConditions"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;subtitle"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
 					</owl:Restriction>
@@ -939,28 +709,28 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;apr"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;termsAndConditions"/>
+						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-ec-ec;termsAndConditions"/>
+						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-ec-ec;apr"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;decimal"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;apr"/>
-						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&xsd;decimal"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;finalPayment"/>
-						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&xsd;decimal"/>
-					</owl:Restriction>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;finalPayment"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;apr"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;decimal"/>
 					</owl:Restriction>
@@ -971,12 +741,28 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;noOfMonthlyPayments"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;finalPayment"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;decimal"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;noOfMonthlyPayments"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;finalPayment"/>
+						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+						<owl:onDataRange rdf:resource="&xsd;decimal"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-ec-ec;noOfMonthlyPayments"/>
+						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+						<owl:onDataRange rdf:resource="&xsd;decimal"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-ec-ec;noOfMonthlyPayments"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;decimal"/>
 					</owl:Restriction>
@@ -988,117 +774,82 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		<skos:definition xml:lang="en">the specification of a payment option via staged payments</skos:definition>
 	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;FourWheelDriveConfiguration">
-		<rdf:type rdf:resource="&VehicleECommerce;DriveWheelConfigurationValue"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;FourWheelDriveConfiguration">
 		<rdfs:label xml:lang="en">four-wheel drive</rdfs:label>
 		<skos:definition xml:lang="en">Four-wheel Drive is a transmission layout where the engine primarily drives two wheels with a part-time four-wheel drive capability.</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;FrontWheelDriveConfiguration">
-		<rdf:type rdf:resource="&VehicleECommerce;DriveWheelConfigurationValue"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;FrontWheelDriveConfiguration">
 		<rdfs:label xml:lang="en">front-wheel drive</rdfs:label>
 		<skos:definition xml:lang="en">Front-wheel drive is a transmission layout where the engine drives the front wheels.</skos:definition>
 		<fibo-fnd-utl-av:synonym xml:lang="en">FWD</fibo-fnd-utl-av:synonym>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&VehicleECommerce;FuelQuantity">
+	<owl:Class rdf:about="&auto-ec-ec;FuelQuantity">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QuantitativeValueFloat"/>
 		<rdfs:label xml:lang="en">fuel quantity</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
 		<skos:definition xml:lang="en">a value indicating an amount of fuel</skos:definition>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&VehicleECommerce;FuelTypeValue">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QualitativeValue"/>
-		<rdfs:label xml:lang="en">fuel type value</rdfs:label>
-		<rdfs:comment xml:lang="en">You can safely use any reasonable DBPedia URI, e.g. 
-  http://dbpedia.org/resource/Gasoline
-  http://dbpedia.org/resource/Diesel
-  http://dbpedia.org/resource/Biodiesel
-  http://dbpedia.org/resource/Kerosene</rdfs:comment>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<skos:definition xml:lang="en">a value indicating a type of fuel</skos:definition>
-	</owl:Class>
-	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;Garage">
-		<rdf:type rdf:resource="&VehicleECommerce;ParkingType"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;Garage">
+		<rdf:type rdf:resource="&auto-ec-ec;ParkingType"/>
 		<rdfs:label xml:lang="en">garage</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<skos:definition xml:lang="en">The parking of a vehicle in a closed garage</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;GearboxAutomatic">
-		<rdf:type rdf:resource="&VehicleECommerce;GearboxTypeValue"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;GearboxAutomatic">
 		<rdfs:label xml:lang="en">Automatic (vvo:GearboxTypeValue)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">Automatic gearbox, VW ID: 2</skos:definition>
-		<VehicleECommerce:hasID>2</VehicleECommerce:hasID>
+		<auto-ec-ec:hasID>2</auto-ec-ec:hasID>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;GearboxDSG">
-		<rdf:type rdf:resource="&VehicleECommerce;GearboxTypeValue"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;GearboxDSG">
 		<rdfs:label xml:lang="en">DSG (vvo:GearboxTypeValue)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">DSG gearbox, VW ID: 3</skos:definition>
-		<VehicleECommerce:hasID>3</VehicleECommerce:hasID>
+		<auto-ec-ec:hasID>3</auto-ec-ec:hasID>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;GearboxManual">
-		<rdf:type rdf:resource="&VehicleECommerce;GearboxTypeValue"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;GearboxManual">
 		<rdfs:label xml:lang="en">Manual (vvo:GearboxTypeValue)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">Manual gearbox, VW ID: 1</skos:definition>
-		<VehicleECommerce:hasID>1</VehicleECommerce:hasID>
+		<auto-ec-ec:hasID>1</auto-ec-ec:hasID>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&VehicleECommerce;GearboxTypeValue">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QualitativeValue"/>
-		<rdfs:label xml:lang="en">gearbox type value</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<skos:definition xml:lang="en">A value indicating a gearbox type.</skos:definition>
-	</owl:Class>
-	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;Hybrid">
-		<rdf:type rdf:resource="&VehicleECommerce;FuelTypeValue"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;Hybrid">
 		<rdfs:label xml:lang="en">Hybrid (vso:FuelTypeValue)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">Hybrid, VW ID: 3</skos:definition>
-		<VehicleECommerce:hasID>3</VehicleECommerce:hasID>
+		<auto-ec-ec:hasID>3</auto-ec-ec:hasID>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;IndependentDealer">
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;IndependentDealer">
 		<rdf:type rdf:resource="&auto-mo-mo;BusinessEntityType"/>
 		<rdfs:label xml:lang="en">Independent Dealer</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<skos:definition xml:lang="en">An independent dealer</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&VehicleECommerce;Kayak">
-		<rdfs:subClassOf rdf:resource="&VehicleECommerce;Watercraft"/>
-		<rdfs:label xml:lang="en">kayak</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Kayak"/>
-		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Kayak"/>
-		<skos:definition xml:lang="en">a small human-powered watercraft that traditionally has a covered deck, and one or more cockpits, each seating one paddler who strokes a double-bladed paddle. In this ontology, kayaks are considered watercrafts of their own kind, not a subtype of boat</skos:definition>
-	</owl:Class>
-	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;LeftHandDriving">
-		<rdf:type rdf:resource="&VehicleECommerce;SteeringPositionValue"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;LeftHandDriving">
 		<rdfs:label xml:lang="en">left hand drive</rdfs:label>
 		<skos:definition xml:lang="en">The steering position is on the left side of the vehicle (viewed from the main direction of driving). For cars this means that you drive on the right side of the road.</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&VehicleECommerce;ModificationOrMaintenance">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Perdurant"/>
+	<owl:Class rdf:about="&auto-ec-ec;ModificationOrMaintenance">
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Process"/>
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;partAdded"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;partAdded"/>
 						<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;partAdded"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;partAdded"/>
 						<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
 					</owl:Restriction>
 				</owl:intersectionOf>
@@ -1108,11 +859,11 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;partRemoved"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;partRemoved"/>
 						<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;partRemoved"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;partRemoved"/>
 						<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
 					</owl:Restriction>
 				</owl:intersectionOf>
@@ -1122,11 +873,11 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;partReplaced"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;partReplaced"/>
 						<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;partReplaced"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;partReplaced"/>
 						<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
 					</owl:Restriction>
 				</owl:intersectionOf>
@@ -1136,7 +887,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;carriedOutBy"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;carriedOutBy"/>
 						<owl:onClass>
 							<owl:Class>
 								<owl:unionOf rdf:parseType="Collection">
@@ -1150,7 +901,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;carriedOutBy"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;carriedOutBy"/>
 						<owl:onClass>
 							<owl:Class>
 								<owl:unionOf rdf:parseType="Collection">
@@ -1170,12 +921,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;originalPartsOnly"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;originalPartsOnly"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;boolean"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;originalPartsOnly"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;originalPartsOnly"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;boolean"/>
 					</owl:Restriction>
@@ -1188,34 +939,109 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		<skos:definition xml:lang="en">an event in which a part of the vehicle is being replaced or removed, or a new part is being added.</skos:definition>
 	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;MoneyBack">
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;MoneyBack">
 		<rdf:type rdf:resource="&auto-mo-mo;WarrantyScope"/>
 		<rdfs:label xml:lang="en">Money-back Guarantee</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<skos:definition xml:lang="en">The promise to take back the vehicle without any specific reason for a full refund within a certain amount of time</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&VehicleECommerce;MotorBoat">
-		<rdfs:subClassOf rdf:resource="&VehicleECommerce;Boat"/>
-		<rdfs:label xml:lang="en">motor boat</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Motorboat"/>
-		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Motorboat"/>
-		<skos:definition xml:lang="en">a boat which is powered by an engine</skos:definition>
+	<owl:Class rdf:about="&auto-ec-ec;Offering">
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;NonPhysicalObject"/>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-ec-ec;shortSubtitle"/>
+						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-ec-ec;shortSubtitle"/>
+						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-ec-ec;shortTitle"/>
+						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-ec-ec;shortTitle"/>
+						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-ec-ec;subtitle"/>
+						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-ec-ec;subtitle"/>
+						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-ec-ec;termsAndConditions"/>
+						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-ec-ec;termsAndConditions"/>
+						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-ec-ec;offerPromoCode"/>
+						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+						<owl:onDataRange rdf:resource="&xsd;string"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-ec-ec;offerPromoCode"/>
+						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+						<owl:onDataRange rdf:resource="&xsd;string"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&VehicleECommerce;OwnershipInfo">
+	<owl:Class rdf:about="&auto-ec-ec;OwnershipInfo">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Quality"/>
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;mileageInitial"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;mileageInitial"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;QualitativeValue"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;mileageInitial"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;mileageInitial"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;QualitativeValue"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
@@ -1226,12 +1052,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;mileageEnd"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;mileageEnd"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValue"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;mileageEnd"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;mileageEnd"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValue"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
@@ -1242,7 +1068,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;currentOwner"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;currentOwner"/>
 						<owl:onClass>
 							<owl:Class>
 								<owl:unionOf rdf:parseType="Collection">
@@ -1258,7 +1084,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;currentOwner"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;currentOwner"/>
 						<owl:onClass>
 							<owl:Class>
 								<owl:unionOf rdf:parseType="Collection">
@@ -1280,12 +1106,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;smoking"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;smoking"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;boolean"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;smoking"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;smoking"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;boolean"/>
 					</owl:Restriction>
@@ -1296,12 +1122,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;from"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;from"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;dateTime"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;from"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;from"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;dateTime"/>
 					</owl:Restriction>
@@ -1312,12 +1138,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;to"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;to"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;dateTime"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;to"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;to"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;dateTime"/>
 					</owl:Restriction>
@@ -1328,12 +1154,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;numberOfDrivers"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;numberOfDrivers"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;integer"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;numberOfDrivers"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;numberOfDrivers"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;integer"/>
 					</owl:Restriction>
@@ -1342,35 +1168,35 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&VehicleECommerce;usage"/>
-				<owl:onClass rdf:resource="&VehicleECommerce;CarUsageType"/>
+				<owl:onProperty rdf:resource="&auto-ec-ec;usage"/>
+				<owl:onClass rdf:resource="&auto-ec-ec;CarUsageType"/>
 				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&VehicleECommerce;contains"/>
-				<owl:onClass rdf:resource="&VehicleECommerce;OwnershipInfo"/>
+				<owl:onProperty rdf:resource="&auto-ec-ec;contains"/>
+				<owl:onClass rdf:resource="&auto-ec-ec;OwnershipInfo"/>
 				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&VehicleECommerce;parking"/>
-				<owl:onClass rdf:resource="&VehicleECommerce;ParkingType"/>
+				<owl:onProperty rdf:resource="&auto-ec-ec;parking"/>
+				<owl:onClass rdf:resource="&auto-ec-ec;ParkingType"/>
 				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&VehicleECommerce;pets"/>
-				<owl:onClass rdf:resource="&VehicleECommerce;Species"/>
+				<owl:onProperty rdf:resource="&auto-ec-ec;pets"/>
+				<owl:onClass rdf:resource="&auto-ec-ec;Species"/>
 				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&VehicleECommerce;owner"/>
+				<owl:onProperty rdf:resource="&auto-ec-ec;owner"/>
 				<owl:onClass>
 					<owl:Class>
 						<owl:unionOf rdf:parseType="Collection">
@@ -1388,7 +1214,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&VehicleECommerce;mainLocation"/>
+				<owl:onProperty rdf:resource="&auto-ec-ec;mainLocation"/>
 				<owl:onClass>
 					<owl:Class>
 						<owl:unionOf rdf:parseType="Collection">
@@ -1404,7 +1230,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&VehicleECommerce;licensePlate"/>
+				<owl:onProperty rdf:resource="&auto-ec-ec;licensePlate"/>
 				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 				<owl:onDataRange rdf:resource="&xsd;string"/>
 			</owl:Restriction>
@@ -1414,23 +1240,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		<skos:definition xml:lang="en">a structured value representing information about the period of ownership of a vehicle by a person or organisation</skos:definition>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&VehicleECommerce;Paint">
-		<rdfs:subClassOf rdf:resource="&VehicleECommerce;ChoiceOrComponent"/>
-		<rdfs:label xml:lang="en">paint choice or component</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<skos:definition xml:lang="en">The class of paint choices or components (a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 3</skos:definition>
-		<VehicleECommerce:hasID>3</VehicleECommerce:hasID>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&VehicleECommerce;Parking">
-		<rdfs:subClassOf rdf:resource="&VehicleECommerce;ChoiceOrComponent"/>
-		<rdfs:label xml:lang="en">parking choice or component</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<skos:definition xml:lang="en">The class of parking-related choices or components (a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 7</skos:definition>
-		<VehicleECommerce:hasID>7</VehicleECommerce:hasID>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&VehicleECommerce;ParkingType">
+	<owl:Class rdf:about="&auto-ec-ec;ParkingType">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QualitativeValue"/>
 		<rdfs:label xml:lang="en">parking type</rdfs:label>
 		<rdfs:comment xml:lang="en">You can use DBpedia URIs for additional types.</rdfs:comment>
@@ -1438,90 +1248,40 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		<skos:definition xml:lang="en">a type of parking for a vehicle, e.g. in a garage, on the street (open-sky), or in a carport</skos:definition>
 	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;Petrol">
-		<rdf:type rdf:resource="&VehicleECommerce;FuelTypeValue"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;Petrol">
 		<rdfs:label xml:lang="en">Petrol (vso:FuelTypeValue)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">Petrol, VW ID: 1</skos:definition>
-		<VehicleECommerce:hasID>1</VehicleECommerce:hasID>
+		<auto-ec-ec:hasID>1</auto-ec-ec:hasID>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;Private">
-		<rdf:type rdf:resource="&VehicleECommerce;CarUsageType"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;Private">
+		<rdf:type rdf:resource="&auto-ec-ec;CarUsageType"/>
 		<rdfs:label xml:lang="en">private</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<skos:definition xml:lang="en">The usage of a vehicle soleley for private purposes</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&VehicleECommerce;PropertySpecification">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Model"/>
-		<rdfs:label xml:lang="en">property speciﬁcation</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-		<owl:disjointWith rdf:resource="&VehicleECommerce;Trim"/>
-		<owl:disjointWith rdf:resource="&auto-mo-mo;RelativePriceSpecification"/>
-		<skos:definition xml:lang="en">A Property Specification is an abstract entity specifying a set of properties for a vehicle that results from a single choice or the combination of two or more choices and that override the individual properties of the resulting vehicle.
-
-Example 1: Power steering and Air conditioning in combination reduce the available engine power from 90 kW to 89 kW.
-Example 2: Choosing the color option &quot;blue&quot; changes the color of the car to &quot;blue&quot;.</skos:definition>
-	</owl:Class>
-	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;RearWheelDriveConfiguration">
-		<rdf:type rdf:resource="&VehicleECommerce;DriveWheelConfigurationValue"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;RearWheelDriveConfiguration">
 		<rdfs:label xml:lang="en">rear-wheel drive</rdfs:label>
 		<skos:definition xml:lang="en">Rear-wheel drive is a transmission layout where the engine drives the rear wheels.</skos:definition>
 		<fibo-fnd-utl-av:synonym xml:lang="en">RWD</fibo-fnd-utl-av:synonym>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;RentalVehicleUsage">
-		<rdf:type rdf:resource="&VehicleECommerce;CarUsageType"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;RentalVehicleUsage">
+		<rdf:type rdf:resource="&auto-ec-ec;CarUsageType"/>
 		<rdfs:label>rental vehicle usage</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
 		<skos:definition>Indicates the usage of the vehicle as a rental car.</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;RightHandDriving">
-		<rdf:type rdf:resource="&VehicleECommerce;SteeringPositionValue"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;RightHandDriving">
 		<rdfs:label xml:lang="en">right hand drive</rdfs:label>
 		<skos:definition xml:lang="en">The steering position is on the right side of the vehicle (viewed from the main direction of driving). For cars this means that you drive on the left side of the road.</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&VehicleECommerce;Roofs">
-		<rdfs:subClassOf rdf:resource="&VehicleECommerce;ChoiceOrComponent"/>
-		<rdfs:label xml:lang="en">roofs choice or component</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<skos:definition xml:lang="en">The class of roof choices or components (a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 5</skos:definition>
-		<VehicleECommerce:hasID>5</VehicleECommerce:hasID>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&VehicleECommerce;SailingBoat">
-		<rdfs:subClassOf rdf:resource="&VehicleECommerce;Boat"/>
-		<rdfs:label xml:lang="en">sailing boat</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Sailboat"/>
-		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Sailboat"/>
-		<skos:definition xml:lang="en">a boat propelled partly or entirely by sails</skos:definition>
-		<fibo-fnd-utl-av:synonym xml:lang="en">sailboat</fibo-fnd-utl-av:synonym>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&VehicleECommerce;Seats">
-		<rdfs:subClassOf rdf:resource="&VehicleECommerce;ChoiceOrComponent"/>
-		<rdfs:label xml:lang="en">seats choice or component</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<skos:definition xml:lang="en">The class of seat-related choices or components (a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 9</skos:definition>
-		<VehicleECommerce:hasID>9</VehicleECommerce:hasID>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&VehicleECommerce;Ship">
-		<rdfs:subClassOf rdf:resource="&VehicleECommerce;Watercraft"/>
-		<rdfs:label xml:lang="en">ship</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Ship"/>
-		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Ship"/>
-		<skos:definition xml:lang="en">a large watercraft that floats on water</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&VehicleECommerce;Species">
+	<owl:Class rdf:about="&auto-ec-ec;Species">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QualitativeValue"/>
 		<rdfs:label xml:lang="en">species</rdfs:label>
 		<rdfs:comment xml:lang="en">If possible, use DBPedia URIs, e.g. http://dbpedia.org/resource/Dog.</rdfs:comment>
@@ -1529,227 +1289,129 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
 		<skos:definition xml:lang="en">typically a pet, for indicating the type of animals that were regularly transported in the vehicle</skos:definition>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&VehicleECommerce;SpeedInterval">
+	<owl:Class rdf:about="&auto-ec-ec;SpeedInterval">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QuantitativeValueFloat"/>
 		<rdfs:label xml:lang="en">speed interval</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
 		<skos:definition xml:lang="en">a value indicating a speed interval, mostly for explaining acceleration data</skos:definition>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&VehicleECommerce;SteeringPositionValue">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QualitativeValue"/>
-		<rdfs:label xml:lang="en">steering position value</rdfs:label>
-		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
-		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-		<sm:directSource rdf:resource="https://schema.org/SteeringPositionValue"/>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<skos:definition xml:lang="en">a value indicating a steering position</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&VehicleECommerce;SteeringWheels">
-		<rdfs:subClassOf rdf:resource="&VehicleECommerce;ChoiceOrComponent"/>
-		<rdfs:label xml:lang="en">steering wheels choice or component</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<skos:definition xml:lang="en">The class of steering wheels choices or components (a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 6</skos:definition>
-		<VehicleECommerce:hasID>6</VehicleECommerce:hasID>
-	</owl:Class>
-	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;Street">
-		<rdf:type rdf:resource="&VehicleECommerce;ParkingType"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;Street">
+		<rdf:type rdf:resource="&auto-ec-ec;ParkingType"/>
 		<rdfs:label xml:lang="en">street</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<skos:definition xml:lang="en">The parking of a vehicle on a public or private street</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;TT4SpeedAuto">
-		<rdf:type rdf:resource="&VehicleECommerce;TransmissionTypeValueAutomatic"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;TT4SpeedAuto">
 		<rdfs:label xml:lang="en">4 Speed auto (vvo:TransmissionTypeValueAutomatic)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">4 Speed auto. VW ID: 1</skos:definition>
-		<VehicleECommerce:gearboxTypeId>1</VehicleECommerce:gearboxTypeId>
-		<VehicleECommerce:hasID>1</VehicleECommerce:hasID>
+		<auto-ec-ec:gearboxTypeId>1</auto-ec-ec:gearboxTypeId>
+		<auto-ec-ec:hasID>1</auto-ec-ec:hasID>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;TT5SpeedAutoDSG">
-		<rdf:type rdf:resource="&VehicleECommerce;TransmissionTypeValueAutomatic"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;TT5SpeedAutoDSG">
 		<rdfs:label xml:lang="en">5 Speed auto DSG (vvo:TransmissionTypeValueAutomatic)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">5 Speed auto DSG, VW ID: 8</skos:definition>
-		<VehicleECommerce:gearboxTypeId>3</VehicleECommerce:gearboxTypeId>
-		<VehicleECommerce:hasID>8</VehicleECommerce:hasID>
+		<auto-ec-ec:gearboxTypeId>3</auto-ec-ec:gearboxTypeId>
+		<auto-ec-ec:hasID>8</auto-ec-ec:hasID>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;TT5SpeedAutoTiptronic">
-		<rdf:type rdf:resource="&VehicleECommerce;TransmissionTypeValueAutomatic"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;TT5SpeedAutoTiptronic">
 		<rdfs:label xml:lang="en">5 Speed auto tiptronic (vvo:TransmissionTypeValueAutomatic)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">5 Speed auto tiptronic, VW ID: 3</skos:definition>
-		<VehicleECommerce:gearboxTypeId>2</VehicleECommerce:gearboxTypeId>
-		<VehicleECommerce:hasID>3</VehicleECommerce:hasID>
+		<auto-ec-ec:gearboxTypeId>2</auto-ec-ec:gearboxTypeId>
+		<auto-ec-ec:hasID>3</auto-ec-ec:hasID>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;TT5SpeedManual">
-		<rdf:type rdf:resource="&VehicleECommerce;TransmissionTypeValueManual"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;TT5SpeedManual">
 		<rdfs:label xml:lang="en">5 Speed manual (vvo:TransmissionTypeValueManual)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">5 Speed manual, VW ID: 2</skos:definition>
-		<VehicleECommerce:gearboxTypeId>1</VehicleECommerce:gearboxTypeId>
-		<VehicleECommerce:hasID>2</VehicleECommerce:hasID>
+		<auto-ec-ec:gearboxTypeId>1</auto-ec-ec:gearboxTypeId>
+		<auto-ec-ec:hasID>2</auto-ec-ec:hasID>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;TT6SpeedAuto">
-		<rdf:type rdf:resource="&VehicleECommerce;TransmissionTypeValueAutomatic"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;TT6SpeedAuto">
 		<rdfs:label xml:lang="en">6 Speed auto (vvo:TransmissionTypeValueAutomatic)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">6 Speed auto, VW ID: 5</skos:definition>
-		<VehicleECommerce:gearboxTypeId>2</VehicleECommerce:gearboxTypeId>
-		<VehicleECommerce:hasID>5</VehicleECommerce:hasID>
+		<auto-ec-ec:gearboxTypeId>2</auto-ec-ec:gearboxTypeId>
+		<auto-ec-ec:hasID>5</auto-ec-ec:hasID>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;TT6SpeedAutoDSG">
-		<rdf:type rdf:resource="&VehicleECommerce;TransmissionTypeValueAutomatic"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;TT6SpeedAutoDSG">
 		<rdfs:label xml:lang="en">6 Speed auto DSG (vvo:TransmissionTypeValueAutomatic)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">6 Speed auto DSG, VW ID: 6</skos:definition>
-		<VehicleECommerce:gearboxTypeId>3</VehicleECommerce:gearboxTypeId>
-		<VehicleECommerce:hasID>6</VehicleECommerce:hasID>
+		<auto-ec-ec:gearboxTypeId>3</auto-ec-ec:gearboxTypeId>
+		<auto-ec-ec:hasID>6</auto-ec-ec:hasID>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;TT6SpeedAutoTiptronic">
-		<rdf:type rdf:resource="&VehicleECommerce;TransmissionTypeValueAutomatic"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;TT6SpeedAutoTiptronic">
 		<rdfs:label xml:lang="en">6 Speed auto tiptronic (vvo:TransmissionTypeValueAutomatic)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">6 Speed auto tiptronic, VW ID: 7</skos:definition>
-		<VehicleECommerce:gearboxTypeId>2</VehicleECommerce:gearboxTypeId>
-		<VehicleECommerce:hasID>7</VehicleECommerce:hasID>
+		<auto-ec-ec:gearboxTypeId>2</auto-ec-ec:gearboxTypeId>
+		<auto-ec-ec:hasID>7</auto-ec-ec:hasID>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;TT6SpeedManual">
-		<rdf:type rdf:resource="&VehicleECommerce;TransmissionTypeValueManual"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;TT6SpeedManual">
 		<rdfs:label xml:lang="en">6 Speed manual (vvo:TransmissionTypeValueManual)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">6 Speed manual, VW ID: 4</skos:definition>
-		<VehicleECommerce:gearboxTypeId>1</VehicleECommerce:gearboxTypeId>
-		<VehicleECommerce:hasID>4</VehicleECommerce:hasID>
+		<auto-ec-ec:gearboxTypeId>1</auto-ec-ec:gearboxTypeId>
+		<auto-ec-ec:hasID>4</auto-ec-ec:hasID>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;TT7SpeedAutoDSG">
-		<rdf:type rdf:resource="&VehicleECommerce;TransmissionTypeValueAutomatic"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;TT7SpeedAutoDSG">
 		<rdfs:label xml:lang="en">7 Speed auto DSG (vvo:TransmissionTypeValueAutomatic)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">7 Speed auto DSG, VW ID: 9</skos:definition>
-		<VehicleECommerce:gearboxTypeId>3</VehicleECommerce:gearboxTypeId>
-		<VehicleECommerce:hasID>9</VehicleECommerce:hasID>
+		<auto-ec-ec:gearboxTypeId>3</auto-ec-ec:gearboxTypeId>
+		<auto-ec-ec:hasID>9</auto-ec-ec:hasID>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;TT8SpeedAuto">
-		<rdf:type rdf:resource="&VehicleECommerce;TransmissionTypeValueAutomatic"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;TT8SpeedAuto">
 		<rdfs:label xml:lang="en">8 Speed auto (vvo:TransmissionTypeValueAutomatic)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">8 Speed auto, VW ID: 10</skos:definition>
-		<VehicleECommerce:gearboxTypeId>2</VehicleECommerce:gearboxTypeId>
-		<VehicleECommerce:hasID>10</VehicleECommerce:hasID>
+		<auto-ec-ec:gearboxTypeId>2</auto-ec-ec:gearboxTypeId>
+		<auto-ec-ec:hasID>10</auto-ec-ec:hasID>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;TTUnspecified">
-		<rdf:type rdf:resource="&VehicleECommerce;TransmissionTypeValue"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;TTUnspecified">
 		<rdfs:label xml:lang="en">Unspecified (vso:TransmissionTypeValue)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">Unspecified, VW ID: 0</skos:definition>
-		<VehicleECommerce:gearboxTypeId>1</VehicleECommerce:gearboxTypeId>
-		<VehicleECommerce:hasID>0</VehicleECommerce:hasID>
+		<auto-ec-ec:gearboxTypeId>1</auto-ec-ec:gearboxTypeId>
+		<auto-ec-ec:hasID>0</auto-ec-ec:hasID>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;TaxiVehicleUsage">
-		<rdf:type rdf:resource="&VehicleECommerce;CarUsageType"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;TaxiVehicleUsage">
+		<rdf:type rdf:resource="&auto-ec-ec;CarUsageType"/>
 		<rdfs:label>taxi vehicle usage</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
 		<skos:definition>Indicates the usage of the car as a taxi.</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&VehicleECommerce;TrafficPattern">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QualitativeValue"/>
-		<rdfs:label xml:lang="en">traffic pattern value</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<skos:definition xml:lang="en">A value indicating a traffic pattern, to be used as a reference for vso:fuelConsumption or vso:fuelEconomy</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&VehicleECommerce;TransmissionTypeValue">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QualitativeValue"/>
-		<rdfs:label xml:lang="en">transmission type value</rdfs:label>
-		<rdfs:comment xml:lang="en">You can safely use any reasonable DBPedia URI, e.g. 
-  http://dbpedia.org/resource/Manual_transmission
-  http://dbpedia.org/resource/Automatic_transmission</rdfs:comment>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<skos:definition xml:lang="en">a value indicating a type of transmission</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&VehicleECommerce;TransmissionTypeValueAutomatic">
-		<rdfs:subClassOf rdf:resource="&VehicleECommerce;TransmissionTypeValue"/>
-		<rdfs:label xml:lang="en">transmission type value automatic</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<skos:definition xml:lang="en">The class of all automatic transmission types</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&VehicleECommerce;TransmissionTypeValueManual">
-		<rdfs:subClassOf rdf:resource="&VehicleECommerce;TransmissionTypeValue"/>
-		<rdfs:label xml:lang="en">transmission type value manual</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<skos:definition xml:lang="en">The class of all manual transmission types</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&VehicleECommerce;Trim">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Model"/>
-		<rdfs:label xml:lang="en">trim</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-		<owl:disjointWith rdf:resource="&auto-mo-mo;RelativePriceSpecification"/>
-		<skos:definition xml:lang="en">A Trim is an abstract entity specifying (1) the basic features plus (2) a set of configuration choices (mostly non-functional) of a group of vehicles. 
-A Trim should be linked to its Base Model via gr:isVariantOf, if available.
-
-Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
-	</owl:Class>
-	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;TwoStrokeMixture">
-		<rdf:type rdf:resource="&VehicleECommerce;FuelTypeValue"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;TwoStrokeMixture">
 		<rdfs:label xml:lang="en">two-stroke mixture</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
 		<skos:definition xml:lang="en">A pre-mixed fuel-oil mixture</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&VehicleECommerce;Upholstery">
-		<rdfs:subClassOf rdf:resource="&VehicleECommerce;ChoiceOrComponent"/>
-		<rdfs:label xml:lang="en">upholstery choice or component</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<skos:definition xml:lang="en">The class of upholstery choices or components (a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 4</skos:definition>
-		<VehicleECommerce:hasID>4</VehicleECommerce:hasID>
-	</owl:Class>
-	
-	<owl:NamedIndividual rdf:about="&VehicleECommerce;Urban">
-		<rdf:type rdf:resource="&VehicleECommerce;TrafficPattern"/>
+	<owl:NamedIndividual rdf:about="&auto-ec-ec;Urban">
 		<rdfs:label xml:lang="en">Urban (vvo:TrafficPattern)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">Urban usage as a traffic pattern</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&VehicleECommerce;Watercraft">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Vehicle"/>
-		<rdfs:label xml:lang="en">watercraft</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Watercraft"/>
-		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Watercraft"/>
-		<skos:definition xml:lang="en">a vehicle, vessel or craft designed to move across or through water</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&VehicleECommerce;Wheels">
-		<rdfs:subClassOf rdf:resource="&VehicleECommerce;ChoiceOrComponent"/>
-		<rdfs:label xml:lang="en">wheels choice or component</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<skos:definition xml:lang="en">The class of wheels-related choices or components (a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 2</skos:definition>
-		<VehicleECommerce:hasID>2</VehicleECommerce:hasID>
-	</owl:Class>
-	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;acrissCode">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;acrissCode">
 		<rdfs:label xml:lang="en">acriss code</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
@@ -1772,20 +1434,20 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
 		<skos:definition>The ACRISS Car Classification Code is a code used by many car rental companies, for classifying vehicles. ACRISS stands for Association of Car Rental Industry Systems and Standards.</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;advancedPayment">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;advancedPayment">
 		<rdfs:label xml:lang="en">advanced payment</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;Financing"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
 		<skos:definition xml:lang="en">Indicates the advanced payment for the financing</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;airbagDeployment">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;airbagDeployment">
 		<rdfs:label xml:lang="en">airbag deployment</rdfs:label>
 		<rdfs:domain>
 			<owl:Class>
 				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&VehicleECommerce;DamageOrAccident">
+					<rdf:Description rdf:about="&auto-ec-ec;DamageOrAccident">
 					</rdf:Description>
 					<rdf:Description rdf:about="&auto-vc-vc;Vehicle">
 					</rdf:Description>
@@ -1797,24 +1459,24 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
 		<skos:definition xml:lang="en">This property indicates whether at least one of the airbags of the vehicle has been deployed in the respective accident (when attached to uco:DamageOrAccident) or ever (when directly applied to a vso:Vehicle).</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;apr">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;apr">
 		<rdfs:label xml:lang="en">apr</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;Financing"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<rdfs:range rdf:resource="&xsd;decimal"/>
 		<skos:definition xml:lang="en">Annual percentage rate. Note: 7.5 % is encoded as &quot;7.5&quot;^^xsd:decimal, not &quot;0.075&quot;^^xsd:decimal.</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;carriedOutBy">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;carriedOutBy">
 		<rdfs:label xml:lang="en">carried out by</rdfs:label>
 		<rdfs:domain>
 			<owl:Class>
 				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&VehicleECommerce;Check">
+					<rdf:Description rdf:about="&auto-ec-ec;Check">
 					</rdf:Description>
-					<rdf:Description rdf:about="&VehicleECommerce;DamageOrAccident">
+					<rdf:Description rdf:about="&auto-ec-ec;DamageOrAccident">
 					</rdf:Description>
-					<rdf:Description rdf:about="&VehicleECommerce;ModificationOrMaintenance">
+					<rdf:Description rdf:about="&auto-ec-ec;ModificationOrMaintenance">
 					</rdf:Description>
 				</owl:unionOf>
 			</owl:Class>
@@ -1833,7 +1495,7 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
 		<skos:definition xml:lang="en">The business or type of business that carried out the check, repair, maintenance, or modification</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;condition">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;condition">
 		<rdfs:label xml:lang="en">condition</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
@@ -1841,23 +1503,23 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
 		<skos:definition xml:lang="en">A textual description of the condition of the vehicle. This property should be mainly used with gr:ActualProductOrServiceInstance.</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;contains">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;contains">
 		<rdfs:label xml:lang="en">contains</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;OwnershipInfo"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;OwnershipInfo"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-		<rdfs:range rdf:resource="&VehicleECommerce;OwnershipInfo"/>
+		<rdfs:range rdf:resource="&auto-ec-ec;OwnershipInfo"/>
 		<skos:definition xml:lang="en">A naive part-whole relation that allows providing more granular uco:OwnershipInfo data for a part of the duration of the ownership</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;credit">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;credit">
 		<rdfs:label xml:lang="en">credit</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;Financing"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
 		<skos:definition xml:lang="en">Indicates the credit for the financing</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;currentLocation">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;currentLocation">
 		<rdfs:label xml:lang="en">current location</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
@@ -1866,10 +1528,10 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
 		<skos:definition xml:lang="en">The current location of the vehicle, i.e. where the car could be tested. For indicating alternative locations to which the seller is willing to bring the car, use gr:availableAtOrFrom attached to the gr:Offering, since those are aspects of the offer, not of the vehicle.</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;currentOwner">
-		<rdfs:subPropertyOf rdf:resource="&VehicleECommerce;owner"/>
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;currentOwner">
+		<rdfs:subPropertyOf rdf:resource="&auto-ec-ec;owner"/>
 		<rdfs:label xml:lang="en">current owner</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;OwnershipInfo"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;OwnershipInfo"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;BusinessEntity"/>
@@ -1878,91 +1540,91 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
 		<skos:definition xml:lang="en">This property points to the current owner of the vehicle.</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;customerCashPrice">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;customerCashPrice">
 		<rdfs:label xml:lang="en">customer cash price</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;Financing"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
 		<skos:definition xml:lang="en">Indicates the customer cash price for the financing</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;customerDeposit">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;customerDeposit">
 		<rdfs:label xml:lang="en">customer deposit</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;Financing"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
 		<skos:definition xml:lang="en">Indicates the customer deposit for the financing</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;depositContribution">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;depositContribution">
 		<rdfs:label xml:lang="en">deposit contribution</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;Financing"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
 		<skos:definition xml:lang="en">Indicates the deposit contribution for the financing</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;discount">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;discount">
 		<rdfs:label xml:lang="en">discount</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;Financing"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
 		<skos:definition xml:lang="en">Indicates the discount for the financing</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;eventInformation">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;eventInformation">
 		<rdfs:label xml:lang="en">event information</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<skos:definition xml:lang="en">This property points to events related to the vehicle, like accidents and damages or major modifications or maintenance.</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;excessMileage">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;excessMileage">
 		<rdfs:label xml:lang="en">excess mileage</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;Financing"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
 		<skos:definition xml:lang="en">Indicates the rate for excess mileage</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;finalPayment">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;finalPayment">
 		<rdfs:label xml:lang="en">final payment</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;Financing"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<rdfs:range rdf:resource="&xsd;decimal"/>
 		<skos:definition xml:lang="en">Indicates the final payment for the financing</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;finalPaymentFee">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;finalPaymentFee">
 		<rdfs:label xml:lang="en">final payment fee</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;Financing"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
 		<skos:definition xml:lang="en">Indicates the final payment fee for the financing</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;firstMonthlyPaymentFee">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;firstMonthlyPaymentFee">
 		<rdfs:label xml:lang="en">first monthly payment fee</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;Financing"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
 		<skos:definition xml:lang="en">Indicates the first monthly payment fee for the financing</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;from">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;from">
 		<rdfs:label xml:lang="en">from</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;OwnershipInfo"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;OwnershipInfo"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<rdfs:range rdf:resource="&xsd;dateTime"/>
 		<skos:definition xml:lang="en">This property indicates the beginning of the period of ownership represented by this uco:OwnershipInfo node.</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:AnnotationProperty rdf:about="&VehicleECommerce;gearboxTypeId">
-		<rdfs:domain rdf:resource="&VehicleECommerce;TransmissionTypeValue"/>
+	<owl:AnnotationProperty rdf:about="&auto-ec-ec;gearboxTypeId">
+		<rdfs:domain rdf:resource="&auto-ec-ec;TransmissionTypeValue"/>
 		<rdfs:range rdf:resource="&xsd;string"/>
 	</owl:AnnotationProperty>
 	
-	<owl:AnnotationProperty rdf:about="&VehicleECommerce;hasID">
+	<owl:AnnotationProperty rdf:about="&auto-ec-ec;hasID">
 		<rdfs:label xml:lang="en">hasID</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
@@ -1970,15 +1632,15 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
 		<skos:definition xml:lang="en">An annotation property that can be used to attach element identifiers from XML schemas for the corresponding XML data or schema.</skos:definition>
 	</owl:AnnotationProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;hasOwnershipInfo">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;hasOwnershipInfo">
 		<rdfs:label xml:lang="en">has ownership info</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-		<rdfs:range rdf:resource="&VehicleECommerce;OwnershipInfo"/>
+		<rdfs:range rdf:resource="&auto-ec-ec;OwnershipInfo"/>
 		<skos:definition xml:lang="en">This property points to information about the current and previous owners of the vehicle.</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;indicationOfOdometerRollback">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;indicationOfOdometerRollback">
 		<rdfs:label xml:lang="en">indication of odometer rollback</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
@@ -1986,7 +1648,7 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
 		<skos:definition xml:lang="en">This property indicates whether it is likely or known that the odometer of the vehicle does not properly reflect the total mileage of the vehicle, e.g. because the odometer has been replaced, reset, or tampered with</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;insuranceGroup">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;insuranceGroup">
 		<rdfs:label xml:lang="en">insurance group</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;MotorizedRoadVehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
@@ -1994,7 +1656,7 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
 		<skos:definition xml:lang="en">The insurance group code</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;insuranceGroup50">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;insuranceGroup50">
 		<rdfs:label xml:lang="en">insurance group 50</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;MotorizedRoadVehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
@@ -2002,7 +1664,7 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
 		<skos:definition xml:lang="en">The insurance group 50 code</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;knownVehicleDamages">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;knownVehicleDamages">
 		<rdfs:label xml:lang="en">known vehicle damages</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
@@ -2015,15 +1677,15 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
 Note: This property should be used with gr:ActualProductOrServiceInstance (when offering a vehicle) or gr:ProductOrServicesSomeInstancesPlaceholder (when seeking a vehicle using gr:seeks) only.</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;licensePlate">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;licensePlate">
 		<rdfs:label xml:lang="en">license plate</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;OwnershipInfo"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;OwnershipInfo"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<rdfs:range rdf:resource="&xsd;string"/>
 		<skos:definition xml:lang="en">The license plate string(s) assigned to the vehicle during the period of ownership</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;listPrice">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;listPrice">
 		<rdfs:label xml:lang="en">list price</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
@@ -2031,18 +1693,18 @@ Note: This property should be used with gr:ActualProductOrServiceInstance (when 
 		<skos:definition xml:lang="en">The original list price of the new car at the time of production</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;mainLocation">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;mainLocation">
 		<rdfs:label xml:lang="en">main location</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;OwnershipInfo"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;OwnershipInfo"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;Location"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;PostalAddress"/>
 		<skos:definition xml:lang="en">The main location(s) of the vehicle during the period of ownership</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;mileageEnd">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;mileageEnd">
 		<rdfs:label xml:lang="en">mileage end</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;OwnershipInfo"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;OwnershipInfo"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValue"/>
 		<skos:definition xml:lang="en">The mileage of the vehicle at the end of the period of ownership. 
@@ -2050,9 +1712,9 @@ Note: This property should be used with gr:ActualProductOrServiceInstance (when 
 Typical unit code(s): KMT for kilometers, SMI for statute miles</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;mileageInitial">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;mileageInitial">
 		<rdfs:label xml:lang="en">mileage initial</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;OwnershipInfo"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;OwnershipInfo"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValue"/>
 		<skos:definition xml:lang="en">The mileage of the vehicle at the beginning of the period of ownership. 
@@ -2060,36 +1722,36 @@ Typical unit code(s): KMT for kilometers, SMI for statute miles</skos:definition
 Typical unit code(s): KMT for kilometers, SMI for statute miles</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;monthlyPayment">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;monthlyPayment">
 		<rdfs:label xml:lang="en">monthly payment</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;Financing"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
 		<skos:definition xml:lang="en">Indicates the monthly payment for the financing</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;noOfMonthlyPayments">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;noOfMonthlyPayments">
 		<rdfs:label xml:lang="en">number of monthly payments</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;Financing"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<rdfs:range rdf:resource="&xsd;decimal"/>
 		<skos:definition xml:lang="en">The number of monthly payments</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;notAtFaultAccident">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;notAtFaultAccident">
 		<rdfs:label xml:lang="en">not-at-fault accident</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;DamageOrAccident"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;DamageOrAccident"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<rdfs:range rdf:resource="&xsd;boolean"/>
 		<skos:definition xml:lang="en">This property indicates whether the accident leading to the damage was a not-at-fault accident from the perspective of the owner.</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;numberOfDrivers">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;numberOfDrivers">
 		<rdfs:label xml:lang="en">number of drivers</rdfs:label>
 		<rdfs:domain>
 			<owl:Class>
 				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&VehicleECommerce;OwnershipInfo">
+					<rdf:Description rdf:about="&auto-ec-ec;OwnershipInfo">
 					</rdf:Description>
 					<rdf:Description rdf:about="&auto-vc-vc;Vehicle">
 					</rdf:Description>
@@ -2101,7 +1763,7 @@ Typical unit code(s): KMT for kilometers, SMI for statute miles</skos:definition
 		<skos:definition xml:lang="en">The number of people who were/are regularly driving the vehicle in the respective period of time (when attached to uco:OwnershipInfo) or in total (when directly applied to a vso:Vehicle)</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;numberOfOwners">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;numberOfOwners">
 		<rdfs:label xml:lang="en">number of owners</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
@@ -2111,22 +1773,22 @@ Typical unit code(s): KMT for kilometers, SMI for statute miles</skos:definition
 Note that this value can be higher (but not lower) than the number of uco:OwnershipInfo nodes, since those records may be incomplete.</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;offerPromoCode">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;offerPromoCode">
 		<rdfs:label xml:lang="en">offer promo code</rdfs:label>
-		<rdfs:domain rdf:resource="&auto-mo-mo;Offering"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;Offering"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<rdfs:range rdf:resource="&xsd;string"/>
 		<skos:definition xml:lang="en">The code for a promotional offer</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;originalPartsOnly">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;originalPartsOnly">
 		<rdfs:label xml:lang="en">original parts only</rdfs:label>
 		<rdfs:domain>
 			<owl:Class>
 				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&VehicleECommerce;DamageOrAccident">
+					<rdf:Description rdf:about="&auto-ec-ec;DamageOrAccident">
 					</rdf:Description>
-					<rdf:Description rdf:about="&VehicleECommerce;ModificationOrMaintenance">
+					<rdf:Description rdf:about="&auto-ec-ec;ModificationOrMaintenance">
 					</rdf:Description>
 				</owl:unionOf>
 			</owl:Class>
@@ -2136,17 +1798,17 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
 		<skos:definition xml:lang="en">This indicates whether the parts used for repairing a damage, for a maintenance task, or a modification were all original.</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;otrRetailPrice">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;otrRetailPrice">
 		<rdfs:label xml:lang="en">otr retail price</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;Financing"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
 		<skos:definition xml:lang="en">Indicates the OTR retail price for the financing</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;owner">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;owner">
 		<rdfs:label xml:lang="en">owner</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;OwnershipInfo"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;OwnershipInfo"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;BusinessEntity"/>
@@ -2155,51 +1817,51 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
 		<skos:definition xml:lang="en">This property points to the owner of the vehicle for the respective period of time, as indicated by the uco:OwnershipInfo node.</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;parking">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;parking">
 		<rdfs:label xml:lang="en">parking</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;OwnershipInfo"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;OwnershipInfo"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-		<rdfs:range rdf:resource="&VehicleECommerce;ParkingType"/>
+		<rdfs:range rdf:resource="&auto-ec-ec;ParkingType"/>
 		<skos:definition xml:lang="en">The main type(s) of parking that have been used for the vehicle during the period of ownership (if attached to uco:OwnershipInfo) or in general (if attached to the vso:Vehicle directly)</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;partAdded">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;partAdded">
 		<rdfs:label xml:lang="en">part added</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;ModificationOrMaintenance"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;ModificationOrMaintenance"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition xml:lang="en">A textual description of the part or parts added in the modification (e.g. tuning) or maintenance task</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;partRemoved">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;partRemoved">
 		<rdfs:label xml:lang="en">part removed</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;ModificationOrMaintenance"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;ModificationOrMaintenance"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition xml:lang="en">A textual description of the part or parts removed in the modification (e.g. tuning) or maintenance task</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;partReplaced">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;partReplaced">
 		<rdfs:label xml:lang="en">part replaced</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;ModificationOrMaintenance"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;ModificationOrMaintenance"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition xml:lang="en">A textual description of the part or parts replaced in the modification (e.g. tuning) or maintenance (e.g. new engine) task</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;pets">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;pets">
 		<rdfs:label xml:lang="en">pets</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;OwnershipInfo"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;OwnershipInfo"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-		<rdfs:range rdf:resource="&VehicleECommerce;Species"/>
+		<rdfs:range rdf:resource="&auto-ec-ec;Species"/>
 		<skos:definition xml:lang="en">The type(s) of animals that have been transported in the vehicle during the period of ownership (if attached to uco:OwnershipInfo) or in general (if attached to the vso:Vehicle directly). 
   
 If possible, use DBPedia URIs, e.g. http://dbpedia.org/resource/Dog.</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;priceModifier">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;priceModifier">
 		<rdfs:label xml:lang="en">price modiﬁer</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;RelativePriceSpecification"/>
@@ -2208,24 +1870,14 @@ If possible, use DBPedia URIs, e.g. http://dbpedia.org/resource/Dog.</skos:defin
 Note: The use of gr:addOn is in general a better way of modeling surcharges</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;productCode">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;productCode">
 		<rdfs:label xml:lang="en">product code</rdfs:label>
-		<rdfs:domain>
-			<owl:Class>
-				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&VehicleECommerce;ChoiceOrComponent">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;MotorizedRoadVehicle">
-					</rdf:Description>
-				</owl:unionOf>
-			</owl:Class>
-		</rdfs:domain>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<rdfs:range rdf:resource="&xsd;string"/>
 		<skos:definition xml:lang="en">The Volkswagen-specific product code for the vehicle model, choice, component, spare part, or service</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;purchaseDate">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;purchaseDate">
 		<rdfs:label xml:lang="en">purchase date</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
@@ -2234,7 +1886,7 @@ Note: The use of gr:addOn is in general a better way of modeling surcharges</sko
 		<skos:definition>The date the item e.g. vehicle was purchased by the current owner.</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;rentalUsage">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;rentalUsage">
 		<rdfs:label xml:lang="en">rental usage</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
@@ -2245,12 +1897,12 @@ Note 1: This property should be used with gr:ActualProductOrServiceInstance (whe
 Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasBusinessFunction gr:Sell).</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;repaired">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;repaired">
 		<rdfs:label xml:lang="en">repaired</rdfs:label>
 		<rdfs:domain>
 			<owl:Class>
 				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&VehicleECommerce;DamageOrAccident">
+					<rdf:Description rdf:about="&auto-ec-ec;DamageOrAccident">
 					</rdf:Description>
 					<rdf:Description rdf:about="&auto-vc-vc;Vehicle">
 					</rdf:Description>
@@ -2262,22 +1914,22 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
 		<skos:definition xml:lang="en">This indicates whether damages resulting from a certain uco:DamageOrAccident (when attached to this type) or all damages (when directly attached to a vso:Vehicle) have been properly repaired. Do not use this propery on a vso:Vehicle if it never had a damage.</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;scrappageContribution">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;scrappageContribution">
 		<rdfs:label xml:lang="en">scrappage contribution</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;Financing"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
 		<skos:definition xml:lang="en">Indicates the scrappage contribution for the financing</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;shortSubtitle">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;shortSubtitle">
 		<rdfs:label xml:lang="en">short subtitle</rdfs:label>
 		<rdfs:domain>
 			<owl:Class>
 				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&VehicleECommerce;Financing">
+					<rdf:Description rdf:about="&auto-ec-ec;Financing">
 					</rdf:Description>
-					<rdf:Description rdf:about="&auto-mo-mo;Offering">
+					<rdf:Description rdf:about="&auto-ec-ec;Offering">
 					</rdf:Description>
 					<rdf:Description rdf:about="&auto-vc-vc;Vehicle">
 					</rdf:Description>
@@ -2289,14 +1941,14 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
 		<skos:definition xml:lang="en">The short subtitle for a vehicle, component, offer, or financing option</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;shortTitle">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;shortTitle">
 		<rdfs:label xml:lang="en">short title</rdfs:label>
 		<rdfs:domain>
 			<owl:Class>
 				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&VehicleECommerce;Financing">
+					<rdf:Description rdf:about="&auto-ec-ec;Financing">
 					</rdf:Description>
-					<rdf:Description rdf:about="&auto-mo-mo;Offering">
+					<rdf:Description rdf:about="&auto-ec-ec;Offering">
 					</rdf:Description>
 					<rdf:Description rdf:about="&auto-vc-vc;Vehicle">
 					</rdf:Description>
@@ -2308,12 +1960,12 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
 		<skos:definition xml:lang="en">The short title for a vehicle, component, offer, or financing option</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;smoking">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;smoking">
 		<rdfs:label xml:lang="en">smoking</rdfs:label>
 		<rdfs:domain>
 			<owl:Class>
 				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&VehicleECommerce;OwnershipInfo">
+					<rdf:Description rdf:about="&auto-ec-ec;OwnershipInfo">
 					</rdf:Description>
 					<rdf:Description rdf:about="&auto-vc-vc;Vehicle">
 					</rdf:Description>
@@ -2325,12 +1977,12 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
 		<skos:definition xml:lang="en">This property indicates whether it has been smoked inside the car in the respective period of time (when attached to uco:OwnershipInfo) or ever (when directly applied to a vso:Vehicle).</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;structuralDamage">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;structuralDamage">
 		<rdfs:label xml:lang="en">structural damage</rdfs:label>
 		<rdfs:domain>
 			<owl:Class>
 				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&VehicleECommerce;DamageOrAccident">
+					<rdf:Description rdf:about="&auto-ec-ec;DamageOrAccident">
 					</rdf:Description>
 					<rdf:Description rdf:about="&auto-vc-vc;Vehicle">
 					</rdf:Description>
@@ -2342,14 +1994,14 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
 		<skos:definition xml:lang="en">This property indicates whether the vehicle has suffered from structural damage in the respective accident (when attached to uco:DamageOrAccident) or ever (when directly applied to a vso:Vehicle).</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;subtitle">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;subtitle">
 		<rdfs:label xml:lang="en">subtitle</rdfs:label>
 		<rdfs:domain>
 			<owl:Class>
 				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&VehicleECommerce;Financing">
+					<rdf:Description rdf:about="&auto-ec-ec;Financing">
 					</rdf:Description>
-					<rdf:Description rdf:about="&auto-mo-mo;Offering">
+					<rdf:Description rdf:about="&auto-ec-ec;Offering">
 					</rdf:Description>
 					<rdf:Description rdf:about="&auto-vc-vc;Vehicle">
 					</rdf:Description>
@@ -2361,14 +2013,14 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
 		<skos:definition xml:lang="en">The subtitle for a vehicle, component, offer, or financing option</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;termsAndConditions">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;termsAndConditions">
 		<rdfs:label xml:lang="en">terms and conditions</rdfs:label>
 		<rdfs:domain>
 			<owl:Class>
 				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&VehicleECommerce;Financing">
+					<rdf:Description rdf:about="&auto-ec-ec;Financing">
 					</rdf:Description>
-					<rdf:Description rdf:about="&auto-mo-mo;Offering">
+					<rdf:Description rdf:about="&auto-ec-ec;Offering">
 					</rdf:Description>
 					<rdf:Description rdf:about="&auto-vc-vc;Vehicle">
 					</rdf:Description>
@@ -2380,32 +2032,32 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
 		<skos:definition xml:lang="en">Terms and conditions of the service, offer, or financing option</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;to">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;to">
 		<rdfs:label xml:lang="en">to</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;OwnershipInfo"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;OwnershipInfo"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<rdfs:range rdf:resource="&xsd;dateTime"/>
 		<skos:definition xml:lang="en">This property indicates the end of the period of ownership represented by this uco:OwnershipInfo node.</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;totalPayable">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;totalPayable">
 		<rdfs:label xml:lang="en">total payable</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;Financing"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
 		<skos:definition xml:lang="en">Indicates the total payable for the financing</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;usage">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;usage">
 		<rdfs:label xml:lang="en">usage</rdfs:label>
-		<rdfs:domain rdf:resource="&VehicleECommerce;OwnershipInfo"/>
+		<rdfs:domain rdf:resource="&auto-ec-ec;OwnershipInfo"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-		<rdfs:range rdf:resource="&VehicleECommerce;CarUsageType"/>
+		<rdfs:range rdf:resource="&auto-ec-ec;CarUsageType"/>
 		<skos:definition xml:lang="en">The type(s) of usage during the period of ownership (if attached to uco:OwnershipInfo) or in general (if attached to the vso:Vehicle directly)</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="&VehicleECommerce;valuation">
+	<owl:ObjectProperty rdf:about="&auto-ec-ec;valuation">
 		<rdfs:label xml:lang="en">valuation</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
@@ -2413,7 +2065,7 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
 		<skos:definition xml:lang="en">The market price assessment gained by the respective valuation. Use gr:name to indicate the name of the valuation service.</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:DatatypeProperty rdf:about="&VehicleECommerce;vehicleModelDate">
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;vehicleModelDate">
 		<rdfs:label xml:lang="en">vehicle model date</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
@@ -2425,7 +2077,7 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
 	</owl:DatatypeProperty>
 	
 	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/0to100KMH">
-		<rdf:type rdf:resource="&VehicleECommerce;SpeedInterval"/>
+		<rdf:type rdf:resource="&auto-ec-ec;SpeedInterval"/>
 		<rdfs:label xml:lang="en">0to100KMH</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
 		<skos:definition xml:lang="en">The speed interval from 0 to 100 km/h</skos:definition>
@@ -2435,7 +2087,7 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/0to60MPH">
-		<rdf:type rdf:resource="&VehicleECommerce;SpeedInterval"/>
+		<rdf:type rdf:resource="&auto-ec-ec;SpeedInterval"/>
 		<rdfs:label xml:lang="en">0to60MPH</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
 		<skos:definition xml:lang="en">The speed interval from 0 to 60 mph</skos:definition>
@@ -2445,7 +2097,7 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/1GLI">
-		<rdf:type rdf:resource="&VehicleECommerce;FuelQuantity"/>
+		<rdf:type rdf:resource="&auto-ec-ec;FuelQuantity"/>
 		<rdfs:label xml:lang="en">1GLI</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
 		<skos:definition xml:lang="en">The fuel quantity of 1 British (imperial) gallon</skos:definition>
@@ -2454,7 +2106,7 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/1GLL">
-		<rdf:type rdf:resource="&VehicleECommerce;FuelQuantity"/>
+		<rdf:type rdf:resource="&auto-ec-ec;FuelQuantity"/>
 		<rdfs:label xml:lang="en">1GLL</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
 		<skos:definition xml:lang="en">The fuel quantity of 1 US gallon</skos:definition>
@@ -2463,7 +2115,7 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleSales/1LTR">
-		<rdf:type rdf:resource="&VehicleECommerce;FuelQuantity"/>
+		<rdf:type rdf:resource="&auto-ec-ec;FuelQuantity"/>
 		<rdfs:label xml:lang="en">1LTR</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
 		<skos:definition xml:lang="en">The fuel quantity of 1 liter</skos:definition>
@@ -2472,7 +2124,7 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
 	</owl:NamedIndividual>
 	
 	<owl:Class rdf:about="&auto-mo-mo;BusinessEntity">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Endurant"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Object"/>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;BusinessEntityType">
@@ -2487,96 +2139,13 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
 	<owl:Class rdf:about="&auto-mo-mo;NumericalValue">
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;Offering">
-		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;shortSubtitle"/>
-						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
-					</owl:Restriction>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;shortSubtitle"/>
-						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;shortTitle"/>
-						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
-					</owl:Restriction>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;shortTitle"/>
-						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;subtitle"/>
-						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
-					</owl:Restriction>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;subtitle"/>
-						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;termsAndConditions"/>
-						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
-					</owl:Restriction>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;termsAndConditions"/>
-						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;offerPromoCode"/>
-						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&xsd;string"/>
-					</owl:Restriction>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;offerPromoCode"/>
-						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&xsd;string"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
-		</rdfs:subClassOf>
+	<owl:Class rdf:about="&auto-mo-mo;Object">
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;Organization">
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;PaymentMethod">
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-mo-mo;Perdurant">
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;Person">
@@ -2586,6 +2155,9 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;PriceSpecification">
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-mo-mo;Process">
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;PropertyValue">
@@ -2650,7 +2222,7 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
 	<owl:Class rdf:about="&auto-vc-vc;BusOrCoach">
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&VehicleECommerce;acrissCode"/>
+				<owl:onProperty rdf:resource="&auto-ec-ec;acrissCode"/>
 				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 				<owl:onDataRange rdf:resource="&xsd;string"/>
 			</owl:Restriction>
@@ -2675,7 +2247,7 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 	<owl:Class rdf:about="&auto-vc-vc;Car">
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&VehicleECommerce;acrissCode"/>
+				<owl:onProperty rdf:resource="&auto-ec-ec;acrissCode"/>
 				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 				<owl:onDataRange rdf:resource="&xsd;string"/>
 			</owl:Restriction>
@@ -2687,17 +2259,52 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 		<skos:definition xml:lang="en">a wheeled, self-powered motor vehicle used for transportation</skos:definition>
 	</owl:Class>
 	
+	<rdf:Description rdf:about="&auto-vc-vc;ChoiceOrComponent">
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-ec-ec;priceModifier"/>
+						<owl:onClass rdf:resource="&auto-mo-mo;RelativePriceSpecification"/>
+						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-ec-ec;priceModifier"/>
+						<owl:onClass rdf:resource="&auto-mo-mo;RelativePriceSpecification"/>
+						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-ec-ec;productCode"/>
+						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+						<owl:onDataRange rdf:resource="&xsd;string"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-ec-ec;productCode"/>
+						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+						<owl:onDataRange rdf:resource="&xsd;string"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+	</rdf:Description>
+	
 	<owl:Class rdf:about="&auto-vc-vc;MotorizedRoadVehicle">
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;acrissCode"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;acrissCode"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;string"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;acrissCode"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;acrissCode"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;string"/>
 					</owl:Restriction>
@@ -2708,12 +2315,12 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;insuranceGroup"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;insuranceGroup"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;string"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;insuranceGroup"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;insuranceGroup"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;string"/>
 					</owl:Restriction>
@@ -2724,12 +2331,12 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;insuranceGroup50"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;insuranceGroup50"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;string"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;insuranceGroup50"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;insuranceGroup50"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;string"/>
 					</owl:Restriction>
@@ -2740,12 +2347,12 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;productCode"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;productCode"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;string"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;productCode"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;productCode"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;string"/>
 					</owl:Restriction>
@@ -2764,12 +2371,12 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;listPrice"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;listPrice"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;listPrice"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;listPrice"/>
 						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
@@ -2780,7 +2387,7 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;currentOwner"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;currentOwner"/>
 						<owl:onClass>
 							<owl:Class>
 								<owl:unionOf rdf:parseType="Collection">
@@ -2796,7 +2403,7 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;currentOwner"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;currentOwner"/>
 						<owl:onClass>
 							<owl:Class>
 								<owl:unionOf rdf:parseType="Collection">
@@ -2818,7 +2425,7 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;currentLocation"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;currentLocation"/>
 						<owl:onClass>
 							<owl:Class>
 								<owl:unionOf rdf:parseType="Collection">
@@ -2832,7 +2439,7 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;currentLocation"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;currentLocation"/>
 						<owl:onClass>
 							<owl:Class>
 								<owl:unionOf rdf:parseType="Collection">
@@ -2852,28 +2459,12 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;shortSubtitle"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;shortSubtitle"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;shortSubtitle"/>
-						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;shortTitle"/>
-						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
-					</owl:Restriction>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;shortTitle"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;shortSubtitle"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
 					</owl:Restriction>
@@ -2884,28 +2475,12 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;subtitle"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;shortTitle"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;subtitle"/>
-						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;termsAndConditions"/>
-						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
-					</owl:Restriction>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;termsAndConditions"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;shortTitle"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
 					</owl:Restriction>
@@ -2916,12 +2491,44 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;airbagDeployment"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;subtitle"/>
+						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-ec-ec;subtitle"/>
+						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-ec-ec;termsAndConditions"/>
+						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
+					</owl:Restriction>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-ec-ec;termsAndConditions"/>
+						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+						<owl:onDataRange rdf:resource="&rdf;PlainLiteral"/>
+					</owl:Restriction>
+				</owl:intersectionOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:intersectionOf rdf:parseType="Collection">
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="&auto-ec-ec;airbagDeployment"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;boolean"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;airbagDeployment"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;airbagDeployment"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;boolean"/>
 					</owl:Restriction>
@@ -2932,12 +2539,12 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;indicationOfOdometerRollback"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;indicationOfOdometerRollback"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;boolean"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;indicationOfOdometerRollback"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;indicationOfOdometerRollback"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;boolean"/>
 					</owl:Restriction>
@@ -2948,12 +2555,12 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;rentalUsage"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;rentalUsage"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;boolean"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;rentalUsage"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;rentalUsage"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;boolean"/>
 					</owl:Restriction>
@@ -2964,12 +2571,12 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;repaired"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;repaired"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;boolean"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;repaired"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;repaired"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;boolean"/>
 					</owl:Restriction>
@@ -2980,12 +2587,12 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;smoking"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;smoking"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;boolean"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;smoking"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;smoking"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;boolean"/>
 					</owl:Restriction>
@@ -2996,12 +2603,12 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;structuralDamage"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;structuralDamage"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;boolean"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;structuralDamage"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;structuralDamage"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;boolean"/>
 					</owl:Restriction>
@@ -3012,12 +2619,12 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;vehicleModelDate"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;vehicleModelDate"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;dateTime"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;vehicleModelDate"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;vehicleModelDate"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;dateTime"/>
 					</owl:Restriction>
@@ -3028,12 +2635,12 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;numberOfDrivers"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;numberOfDrivers"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;integer"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;numberOfDrivers"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;numberOfDrivers"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;integer"/>
 					</owl:Restriction>
@@ -3044,12 +2651,12 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;numberOfOwners"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;numberOfOwners"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;integer"/>
 					</owl:Restriction>
 					<owl:Restriction>
-						<owl:onProperty rdf:resource="&VehicleECommerce;numberOfOwners"/>
+						<owl:onProperty rdf:resource="&auto-ec-ec;numberOfOwners"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 						<owl:onDataRange rdf:resource="&xsd;integer"/>
 					</owl:Restriction>
@@ -3058,54 +2665,54 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&VehicleECommerce;condition"/>
+				<owl:onProperty rdf:resource="&auto-ec-ec;condition"/>
 				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&VehicleECommerce;knownVehicleDamages"/>
+				<owl:onProperty rdf:resource="&auto-ec-ec;knownVehicleDamages"/>
 				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&VehicleECommerce;usage"/>
-				<owl:onClass rdf:resource="&VehicleECommerce;CarUsageType"/>
+				<owl:onProperty rdf:resource="&auto-ec-ec;usage"/>
+				<owl:onClass rdf:resource="&auto-ec-ec;CarUsageType"/>
 				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&VehicleECommerce;hasOwnershipInfo"/>
-				<owl:onClass rdf:resource="&VehicleECommerce;OwnershipInfo"/>
+				<owl:onProperty rdf:resource="&auto-ec-ec;hasOwnershipInfo"/>
+				<owl:onClass rdf:resource="&auto-ec-ec;OwnershipInfo"/>
 				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&VehicleECommerce;parking"/>
-				<owl:onClass rdf:resource="&VehicleECommerce;ParkingType"/>
+				<owl:onProperty rdf:resource="&auto-ec-ec;parking"/>
+				<owl:onClass rdf:resource="&auto-ec-ec;ParkingType"/>
 				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&VehicleECommerce;pets"/>
-				<owl:onClass rdf:resource="&VehicleECommerce;Species"/>
+				<owl:onProperty rdf:resource="&auto-ec-ec;pets"/>
+				<owl:onClass rdf:resource="&auto-ec-ec;Species"/>
 				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&VehicleECommerce;valuation"/>
+				<owl:onProperty rdf:resource="&auto-ec-ec;valuation"/>
 				<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
 				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&VehicleECommerce;owner"/>
+				<owl:onProperty rdf:resource="&auto-ec-ec;owner"/>
 				<owl:onClass>
 					<owl:Class>
 						<owl:unionOf rdf:parseType="Collection">
@@ -3123,21 +2730,21 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&VehicleECommerce;purchaseDate"/>
+				<owl:onProperty rdf:resource="&auto-ec-ec;purchaseDate"/>
 				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 				<owl:onDataRange rdf:resource="&xsd;dateTime"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&VehicleECommerce;vehicleModelDate"/>
+				<owl:onProperty rdf:resource="&auto-ec-ec;vehicleModelDate"/>
 				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 				<owl:onDataRange rdf:resource="&xsd;dateTime"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&VehicleECommerce;knownVehicleDamages"/>
+				<owl:onProperty rdf:resource="&auto-ec-ec;knownVehicleDamages"/>
 				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 				<owl:onDataRange rdf:resource="&xsd;string"/>
 			</owl:Restriction>

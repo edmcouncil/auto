@@ -35,7 +35,7 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 	
 	<owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/">
-		<rdfs:label>EDMC-AUTO Middle Ontology</rdfs:label>
+		<rdfs:label>EDMC-AUTO Middle Ontology (MO)</rdfs:label>
 		<dct:abstract>The EDMC-AUTO middle ontology</dct:abstract>
 		<dct:license rdf:datatype="&xsd;anyURI">http://opensource.org/licenses/MIT</dct:license>
 		<sm:contentLanguage rdf:datatype="&xsd;anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
@@ -81,7 +81,7 @@
 	</owl:AnnotationProperty>
 	
 	<owl:Class rdf:about="&auto-mo-mo;BusinessEntity">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Endurant"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Object"/>
 		<owl:equivalentClass>
 			<owl:Class>
 				<owl:unionOf rdf:parseType="Collection">
@@ -99,9 +99,6 @@
 		<rdfs:label xml:lang="en">business entity type</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;Endurant">
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-mo-mo;Location">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Quality"/>
 		<rdfs:label xml:lang="en">location</rdfs:label>
@@ -114,11 +111,14 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;NonPhysicalObject">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Endurant"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Object"/>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;NumericalValue">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QuantitativeValue"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-mo-mo;Object">
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;Organization">
@@ -131,16 +131,13 @@
 		<rdfs:label xml:lang="en">payment method</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;Perdurant">
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-mo-mo;Person">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;PhysicalObject"/>
 		<rdfs:label xml:lang="en">person</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;PhysicalObject">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Endurant"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Object"/>
 		<rdfs:label xml:lang="en">physical object</rdfs:label>
 	</owl:Class>
 	
@@ -159,8 +156,11 @@
 		<rdfs:label xml:lang="en">price speciﬁcation</rdfs:label>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-mo-mo;Process">
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-mo-mo;PropertyValue">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Region"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;ValueSpace"/>
 		<rdfs:label xml:lang="en">property value</rdfs:label>
 	</owl:Class>
 	
@@ -177,7 +177,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;QuantitativeValue">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Region"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;ValueSpace"/>
 		<rdfs:label xml:lang="en">quantitative value</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
@@ -193,9 +193,6 @@
 	<owl:Class rdf:about="&auto-mo-mo;QuantitativeValueInteger">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;NumericalValue"/>
 		<rdfs:label xml:lang="en">quantitative value integer</rdfs:label>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-mo-mo;Region">
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;RelativePriceSpecification">
@@ -214,6 +211,9 @@ Note: Price information should in general be attached to a gr:Offering node, not
 	
 	<owl:Class rdf:about="&auto-mo-mo;TextValue">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QuantitativeValue"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-mo-mo;ValueSpace">
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;WarrantyScope">

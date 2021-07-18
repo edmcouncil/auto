@@ -25,6 +25,7 @@
 	<owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MetadataMO/">
 		<rdfs:label>Metadata for the EDMC-AUTO middle ontology (MO)</rdfs:label>
 		<dct:abstract>This ontology provides metadata for the middle ontology.</dct:abstract>
+		<dct:creator>Robert Trypuz</dct:creator>
 		<dct:issued rdf:datatype="&xsd;dateTime">2020-10-29T01:43:00</dct:issued>
 		<dct:license rdf:datatype="&xsd;anyURI">http://opensource.org/licenses/MIT</dct:license>
 		<sm:contentLanguage rdf:datatype="&xsd;anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
@@ -34,6 +35,9 @@
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
 		<owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MetadataMO/"/>
 	</owl:Ontology>
+	
+	<owl:AnnotationProperty rdf:about="&dct;hasPart">
+	</owl:AnnotationProperty>
 	
 	<owl:NamedIndividual rdf:about="&auto-mo-mod;ECDomain">
 		<rdf:type rdf:resource="&sm;Module"/>
