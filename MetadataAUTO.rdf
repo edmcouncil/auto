@@ -33,9 +33,9 @@
 		<sm:filename>MetadataAUTO.rdf</sm:filename>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/MetadataDE/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/MetadataEC/"/>
-		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/MetadataVC/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/FD/MetadataFD/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MetadataMO/"/>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/MetadataVC/"/>
 		<owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/MetadataAUTO/"/>
 	</owl:Ontology>
 	
