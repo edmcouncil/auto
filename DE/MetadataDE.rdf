@@ -41,7 +41,7 @@
 	
 	<owl:NamedIndividual rdf:about="&auto-de-mod;DEDomain">
 		<rdf:type rdf:resource="&sm;Module"/>
-		<rdfs:label>Driving events ontologies</rdfs:label>
+		<rdfs:label>Driving Events</rdfs:label>
 		<dct:abstract>This ontology provides metadata for the driving events ontologies</dct:abstract>
 		<dct:creator>Piotr Kulicki</dct:creator>
 		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/Car/"/>
@@ -54,7 +54,7 @@
 		<sm:contributor>AUTO Community</sm:contributor>
 		<sm:contributor>Piotr Kulicki</sm:contributor>
 		<sm:contributor>Robert Trypuz</sm:contributor>
-		<sm:copyright>Copyright (c) 2020 EDM Council, Inc.</sm:copyright>
+		<sm:copyright>Copyright (c) 2021 EDM Council, Inc.</sm:copyright>
 		<sm:dependsOn rdf:datatype="&xsd;anyURI">http://www.omg.org/techprocess/ab/SpecificationMetadata/</sm:dependsOn>
 		<sm:keyword>Driving events</sm:keyword>
 		<sm:moduleAbbreviation>auto-de</sm:moduleAbbreviation>

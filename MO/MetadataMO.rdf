@@ -41,7 +41,7 @@
 	
 	<owl:NamedIndividual rdf:about="&auto-mo-mod;ECDomain">
 		<rdf:type rdf:resource="&sm;Module"/>
-		<rdfs:label>EDMC-AUTO middle ontology</rdfs:label>
+		<rdfs:label>Middle Ontology</rdfs:label>
 		<dct:abstract>EDMC-AUTO middle ontology</dct:abstract>
 		<dct:creator rdf:datatype="&xsd;anyURI">https://www.w3.org/community/gao/</dct:creator>
 		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>

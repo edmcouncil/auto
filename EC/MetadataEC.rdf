@@ -40,7 +40,7 @@
 	
 	<owl:NamedIndividual rdf:about="&auto-ec-mod;ECDomain">
 		<rdf:type rdf:resource="&sm;Module"/>
-		<rdfs:label>E-Commerce vehicle information</rdfs:label>
+		<rdfs:label>Vehicle Retail</rdfs:label>
 		<dct:abstract>Automotive Core: A schema.org-compliant fundamental ontology for vehicle information in e-commerce.</dct:abstract>
 		<dct:creator rdf:datatype="&xsd;anyURI">https://www.w3.org/community/gao/</dct:creator>
 		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleECommerce/"/>
