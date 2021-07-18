@@ -23,8 +23,9 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 	
 	<owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/MetadataVC/">
-		<rdfs:label>Metadata for the EDMC-AUTO e-commerce (EC) Domain</rdfs:label>
+		<rdfs:label>Metadata for the EDMC-AUTO Vehicle Core (VC) Domain</rdfs:label>
 		<dct:abstract>This ontology provides metadata for the vehicle core concepts.</dct:abstract>
+		<dct:creator>Robert Trypuz</dct:creator>
 		<dct:issued rdf:datatype="&xsd;dateTime">2021-07-17T01:43:00</dct:issued>
 		<sm:contentLanguage rdf:datatype="&xsd;anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
 		<sm:copyright>Copyright (c) 2021 EDM Council, Inc.</sm:copyright>
@@ -34,9 +35,12 @@
 		<owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/MetadataVC/"/>
 	</owl:Ontology>
 	
+	<owl:AnnotationProperty rdf:about="&dct;hasPart">
+	</owl:AnnotationProperty>
+	
 	<owl:NamedIndividual rdf:about="&auto-vc-mod;VCDomain">
 		<rdf:type rdf:resource="&sm;Module"/>
-		<rdfs:label>E-Commerce vehicle information</rdfs:label>
+		<rdfs:label>Vehicle Core</rdfs:label>
 		<dct:abstract>Automotive Core: A schema.org-compliant fundamental ontology for vehicle information in e-commerce.</dct:abstract>
 		<dct:creator rdf:datatype="&xsd;anyURI">https://www.w3.org/community/gao/</dct:creator>
 		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>

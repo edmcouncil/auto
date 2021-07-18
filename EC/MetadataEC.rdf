@@ -23,8 +23,9 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 	
 	<owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/MetadataEC/">
-		<rdfs:label>Metadata for the EDMC-AUTO e-commerce (EC) Domain</rdfs:label>
+		<rdfs:label>Metadata for the EDMC-AUTO E-Commerce (EC) Domain</rdfs:label>
 		<dct:abstract>This ontology provides metadata for the vehicle information in e-commerce.</dct:abstract>
+		<dct:creator>Robert Trypuz</dct:creator>
 		<dct:issued rdf:datatype="&xsd;dateTime">2020-03-18T01:43:00</dct:issued>
 		<sm:contentLanguage rdf:datatype="&xsd;anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
 		<sm:copyright>Copyright (c) 2020 EDM Council, Inc.</sm:copyright>
@@ -33,6 +34,9 @@
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
 		<owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/MetadataEC/"/>
 	</owl:Ontology>
+	
+	<owl:AnnotationProperty rdf:about="&dct;hasPart">
+	</owl:AnnotationProperty>
 	
 	<owl:NamedIndividual rdf:about="&auto-ec-mod;ECDomain">
 		<rdf:type rdf:resource="&sm;Module"/>
