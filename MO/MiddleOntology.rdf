@@ -82,6 +82,7 @@
 	
 	<owl:Class rdf:about="&auto-mo-mo;BusinessEntity">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Object"/>
+		<rdfs:label xml:lang="en">business entity</rdfs:label>
 		<owl:equivalentClass>
 			<owl:Class>
 				<owl:unionOf rdf:parseType="Collection">
@@ -112,6 +113,7 @@
 	
 	<owl:Class rdf:about="&auto-mo-mo;NonPhysicalObject">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Object"/>
+		<rdfs:label xml:lang="en">non-physical object</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;NumericalValue">
@@ -119,6 +121,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;Object">
+		<rdfs:label xml:lang="en">object</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;Organization">
@@ -157,6 +160,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;Process">
+		<rdfs:label xml:lang="en">process</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;PropertyValue">
@@ -174,6 +178,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;Quality">
+		<rdfs:label xml:lang="en">quality</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;QuantitativeValue">
@@ -247,6 +252,10 @@ Note: Price information should in general be attached to a gr:Offering node, not
 	
 	<owl:ObjectProperty rdf:about="&auto-mo-mo;valueReference">
 	</owl:ObjectProperty>
+	
+	<rdf:Description rdf:about="&fibo-fnd-utl-av;MaturityLevel">
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;ValueSpace"/>
+	</rdf:Description>
 	
 	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;hasMaturityLevel">
 	</owl:AnnotationProperty>

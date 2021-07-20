@@ -731,7 +731,6 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">Automobile</rdfs:label>
 		<rdfs:label xml:lang="en">automobile</rdfs:label>
 		<rdfs:label xml:lang="en">car</rdfs:label>
 		<rdfs:comment>Automobiles may be classified by size or weight, or both. Size classification is based on wheelbase. Weight classification is based on curb weight, the weight of an automobile with standard equipment and a full complement of fuel and other fluids, but with no load of persons or property. Before classification, wheelbase should be rounded to the nearest inch and curb weight should be rounded to the nearest 100 pounds.</rdfs:comment>
@@ -837,22 +836,6 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 		<skos:definition xml:lang="en">A Choice or Component is a component (e.g. engine), add-on, feature (color &quot;ocean blue&quot;), or service that can be chosen to be part of a final vehicle configuration.
   
 Example: Engine 1.6 l TDI, color ocean blue, trailer hitch</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;CollisionCrash">
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;CollisionInvolvingOtherRoadVehicleInTransport">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;CollisionCrash"/>
-		<rdfs:label xml:lang="en">Collision Involving Other Road Vehicle In Transport</rdfs:label>
-		<skos:definition xml:lang="en">A crash that is both an other-road vehicle crash and a collision crash in which the first harmful event is the collision of two or more other road vehicles in-transport.</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;CollisioninvolvingRailwayVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;CollisionCrash"/>
-		<rdfs:label xml:lang="en">Collision involving Railway Vehicle</rdfs:label>
-		<skos:definition xml:lang="en">A collision crash in which the first harmful event is the collision of a road vehicle in-transport and a railway vehicle.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.9</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-vc-vc;Combined">
@@ -1330,6 +1313,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 	
 	<owl:Class rdf:about="&auto-vc-vc;LandVehicle">
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Vehicle"/>
+		<rdfs:label xml:lang="en">land vehicle</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc-vc;LargeBus">
@@ -1367,7 +1351,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc-vc;LowSpeedVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;MotorizedRoadVehicle"/>
+		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:label xml:lang="en">Low Speed Vehicle</rdfs:label>
 		<rdfs:comment xml:lang="en">LSVs are required to be equipped with basic items of safety equipment: headlamps, stop lamps, turn signal lamps, tail lamps, reflex reflectors, parking brake, windshields of either type AS-1 or AS-5 glazing, rearview mirrors, seat belts and vehicle identification numbers (VINs).</rdfs:comment>
 		<skos:definition xml:lang="en">A motor vehicle with four or more wheels whose top speed is greater than 20 miles per hour, but not greater than 25 miles per hour.</skos:definition>
@@ -1612,6 +1596,42 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-vc-vc;fuelCapacity"/>
+				<owl:someValuesFrom rdf:resource="&auto-mo-mo;QuantitativeValue"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-vc-vc;fuelType"/>
+				<owl:someValuesFrom>
+					<owl:Class>
+						<owl:unionOf rdf:parseType="Collection">
+							<rdf:Description rdf:about="&auto-mo-mo;QuantitativeValue">
+							</rdf:Description>
+							<rdf:Description rdf:about="&auto-mo-mo;TextValue">
+							</rdf:Description>
+						</owl:unionOf>
+					</owl:Class>
+				</owl:someValuesFrom>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-vc-vc;numberOfAirbags"/>
+				<owl:someValuesFrom>
+					<rdfs:Datatype>
+						<owl:unionOf rdf:parseType="Collection">
+							<rdf:Description rdf:about="&xsd;decimal">
+							</rdf:Description>
+							<rdf:Description rdf:about="&xsd;string">
+							</rdf:Description>
+						</owl:unionOf>
+					</rdfs:Datatype>
+				</owl:someValuesFrom>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">Motor Vehicle</rdfs:label>
 		<rdfs:label xml:lang="en">motorized road vehicle</rdfs:label>
 		<rdfs:comment xml:lang="en">See 2.2.7.1, 2.2.7.2, 2.2.9 - 2.2.26</rdfs:comment>
@@ -1685,7 +1705,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 	
 	<owl:Class rdf:about="&auto-vc-vc;Pedalcycle">
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;HumanPoweredLandVehicle"/>
-		<rdfs:label xml:lang="en">Pedalcycle</rdfs:label>
+		<rdfs:label xml:lang="en">pedalcycle</rdfs:label>
 		<skos:definition xml:lang="en">A non-motorized other road vehicle propelled by pedaling.</skos:definition>
 	</owl:Class>
 	
@@ -2230,7 +2250,7 @@ The default choice can be indicated using a coo:default link. All other choices 
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc-vc;TransportVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;RoadVehicle"/>
+		<rdfs:subClassOf rdf:resource="&auto-vc-vc;SpecialVehicle"/>
 		<rdfs:label xml:lang="en">Transport Vehicle</rdfs:label>
 		<rdfs:comment xml:lang="en">Such devices or animals shall include at least one of the following : 1.) A transport device, or a unit, made up of connected transport devices, while idle or in use, for moving persons or property from one place to another, 2.) An animal or team of animals while in use for moving person or property other than the animal or team itself from one place to another, or 3.) A movable device such as construction, farm or industrial machinery outside the confines of a building and its premises while in use for moving persons, the device itself, or other property from one place to another.</rdfs:comment>
 		<skos:definition xml:lang="en">Consists of one or more devices or animals and their load.</skos:definition>
@@ -2305,7 +2325,7 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
 	</owl:NamedIndividual>
 	
 	<owl:Class rdf:about="&auto-vc-vc;UtilityVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;MotorizedRoadVehicle"/>
+		<rdfs:subClassOf rdf:resource="&auto-vc-vc;SpecialVehicle"/>
 		<rdfs:label xml:lang="en">Utility Vehicle</rdfs:label>
 		<rdfs:comment xml:lang="en">These vehicles are generally four wheel-drive (4 x 4) and have increased ground clearance. A utility vehicle typically has a gross vehicle weight rating (GVWR) of 10,000 pounds or less. Utility vehicles with wheelbases greater than 88 inches are classified by overall width. The wheelbase and overall width should be rounded to the nearest inch.</rdfs:comment>
 		<skos:definition xml:lang="en">A motor vehicle other than a motorcycle or large bus consisting primarily of a transport device designed for carrying persons, and generally considered a multi-purpose vehicle that is designed to have off-road capabilities.</skos:definition>
@@ -2593,13 +2613,6 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;fuelConsumption"/>
-				<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValue"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-vc-vc;payload"/>
 				<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValue"/>
 				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
@@ -2739,44 +2752,8 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;fuelCapacity"/>
-				<owl:someValuesFrom rdf:resource="&auto-mo-mo;QuantitativeValue"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;fuelType"/>
-				<owl:someValuesFrom>
-					<owl:Class>
-						<owl:unionOf rdf:parseType="Collection">
-							<rdf:Description rdf:about="&auto-mo-mo;QuantitativeValue">
-							</rdf:Description>
-							<rdf:Description rdf:about="&auto-mo-mo;TextValue">
-							</rdf:Description>
-						</owl:unionOf>
-					</owl:Class>
-				</owl:someValuesFrom>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-vc-vc;mileageFromOdometer"/>
 				<owl:someValuesFrom rdf:resource="&auto-mo-mo;QuantitativeValue"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;numberOfAirbags"/>
-				<owl:someValuesFrom>
-					<rdfs:Datatype>
-						<owl:unionOf rdf:parseType="Collection">
-							<rdf:Description rdf:about="&xsd;decimal">
-							</rdf:Description>
-							<rdf:Description rdf:about="&xsd;string">
-							</rdf:Description>
-						</owl:unionOf>
-					</rdfs:Datatype>
-				</owl:someValuesFrom>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>

@@ -138,6 +138,12 @@
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.6</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-de-tc;CollisionInvolvingOtherRoadVehicleInTransport">
+		<rdfs:subClassOf rdf:resource="&auto-de-tc;CollisionCrash"/>
+		<rdfs:label xml:lang="en">Collision Involving Other Road Vehicle In Transport</rdfs:label>
+		<skos:definition xml:lang="en">A crash that is both an other-road vehicle crash and a collision crash in which the first harmful event is the collision of two or more other road vehicles in-transport.</skos:definition>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-de-tc;CollisioninvolvingAnimal">
 		<rdfs:subClassOf rdf:resource="&auto-de-tc;CollisionCrash"/>
 		<rdfs:label xml:lang="en">Collision involving Animal</rdfs:label>
@@ -186,6 +192,13 @@
 		<rdfs:label xml:lang="en">Collision involving Pedestrian Crash</rdfs:label>
 		<skos:definition xml:lang="en">A collision crash in which the first harmful event is the collision of a pedestrian and a road vehicle in- transport.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-tc;CollisioninvolvingRailwayVehicle">
+		<rdfs:subClassOf rdf:resource="&auto-de-tc;CollisionCrash"/>
+		<rdfs:label xml:lang="en">Collision involving Railway Vehicle</rdfs:label>
+		<skos:definition xml:lang="en">A collision crash in which the first harmful event is the collision of a road vehicle in-transport and a railway vehicle.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.9</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-tc;Commerce">
