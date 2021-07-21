@@ -25,10 +25,8 @@
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>    
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleECommerce/"/>            
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/AutonomousVehicles/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/Car/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/Map/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficCrashes/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MetadataAUTO/"/>

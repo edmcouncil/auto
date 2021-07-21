@@ -43,13 +43,15 @@
 	<owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/">
 		<rdfs:label>Vehicle core ontology</rdfs:label>
 		<dc:contributor>Robert Trypuz</dc:contributor>
-		<dct:abstract>The Vehicle Core (VC) module focuses on the core concepts related to vehicles&apos; types, structure and configuration.
+		<dct:abstract xml:lang="en">The Vehicle Core (VC) module focuses on the core concepts related to vehicles&apos; types, structure and configuration.
 
 It contains many classes and properties extracted from:
 - the automotive extension of schema.org (https://schema.org/docs/automotive.html). 
 - the Volkswagen Vehicles Ontology created by Martin Hepp with the contribution of Charles Sandeman-Craik, Tribal DDB; Chris Jenkins, Tribal DDB; Tim Redding, Tribal DDB; Yago Otero, Tribal DDB; William Greenly, Tribal DDB; Robin Dingle, Volkswagen UK (see https://lov.linkeddata.es/dataset/lov/vocabs/vvo) and available under the Creative Commons Attribution 3.0 Unported license (see http://creativecommons.org/licenses/by/3.0/). 
-- the Car Options Ontology (COO) has been initially created by Martin Hepp, Hepp Research GmbH, with the contribution of Charles Sandeman-Craik, Tribal DDB; Chris Jenkins, Tribal DDB; Tim Redding, Tribal DDB; Yago Otero, Tribal DDB; William Greenly, Tribal DDB; Robin Dingle, Volkswagen UK (see https://lov.linkeddata.es/dataset/lov/vocabs/coo) and available under the Creative Commons Attribution 3.0 Unported license (see http://creativecommons.org/licenses/by/3.0/).
-- the Vehicle Emissions Ontology (VEO) created by Bojan Najdenov, with the contribution of Milos Jovanovik (see https://lov.linkeddata.es/dataset/lov/vocabs/veo) and available under the Creative Commons Attribution 3.0 Unported license (see http://creativecommons.org/licenses/by/3.0/).</dct:abstract>
+- the Car Options Ontology (COO) created by Martin Hepp, Hepp Research GmbH, with the contribution of Charles Sandeman-Craik, Tribal DDB; Chris Jenkins, Tribal DDB; Tim Redding, Tribal DDB; Yago Otero, Tribal DDB; William Greenly, Tribal DDB; Robin Dingle, Volkswagen UK (see https://lov.linkeddata.es/dataset/lov/vocabs/coo) and available under the Creative Commons Attribution 3.0 Unported license (see http://creativecommons.org/licenses/by/3.0/).
+- the Vehicle Emissions Ontology (VEO) created by Bojan Najdenov, with the contribution of Milos Jovanovik (see https://lov.linkeddata.es/dataset/lov/vocabs/veo) and available under the Creative Commons Attribution 3.0 Unported license (see http://creativecommons.org/licenses/by/3.0/).
+- the Car Ontology (CAR) created by Lihua Zhao and Yutaka Sasaki at the Computational Intelligence Laboratory, Toyota Technological Institute, Nagoya, Japan (see https://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/) and published by the Toyota Technological Institute Smart Vehicle Research Project. MAP, as created by the Computational Intelligence Laboratory, is available under the Creative Commons - Attribution-NonCommercial-ShareAlike
+4.0 International (http://creativecommons.org/licenses/by-nc-sa/4.0/).</dct:abstract>
 		<dct:license rdf:datatype="&xsd;anyURI">http://opensource.org/licenses/MIT</dct:license>
 		<sm:contentLanguage rdf:datatype="&xsd;anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
 		<sm:copyright>Copyright (c) 2021 EDM Council, Inc.</sm:copyright>
@@ -153,6 +155,9 @@ It contains many classes and properties extracted from:
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;Person">
+		<rdfs:comment xml:lang="en">Within the context of this manual, a fetus is considered part of a pregnant woman rather than a separate individual. After death, a human body is not considered to be a person.</rdfs:comment>
+		<skos:definition xml:lang="en">Any living human.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.1</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;PostalAddress">
@@ -414,6 +419,17 @@ It contains many classes and properties extracted from:
 		<auto-mo-mo:hasValueFloat rdf:datatype="&xsd;float">1.0</auto-mo-mo:hasValueFloat>
 	</owl:NamedIndividual>
 	
+	<owl:Class rdf:about="&auto-vc-vc;Acceleration">
+		<rdfs:subClassOf rdf:resource="&auto-vc-vc;SpeedProfile"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vc-vc;Aircraft">
+		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Vehicle"/>
+		<rdfs:label xml:lang="en">aircraft</rdfs:label>
+		<skos:definition xml:lang="en">A transport vehicle designed primarily for, or in use for, moving persons or property through the air from one place to another.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
 	<owl:NamedIndividual rdf:about="&auto-vc-vc;AllWheelDriveConfiguration">
 		<rdf:type rdf:resource="&auto-vc-vc;DriveWheelConfigurationValue"/>
 		<rdfs:label xml:lang="en">all-wheel drive</rdfs:label>
@@ -497,7 +513,11 @@ Examples: VW Golf, VW Polo, VW Passat</skos:definition>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">bicycle</rdfs:label>
+		<rdfs:label xml:lang="pl">rower</rdfs:label>
+		<rdfs:comment>QName: auto-vc-vc:Bicycle</rdfs:comment>
+		<rdfs:comment xml:lang="pl">pojazd o szerokości nieprzekraczającej 0,9 m poruszany siłą mięśni osoby jadącej tym pojazdem; rower może być wyposażony w uruchamiany naciskiem na pedały pomocniczy napęd elektryczny zasilany prądem o napięciu nie wyższym niż 48 V o znamionowej mocy ciągłej nie większej niż 250 W, którego moc wyjściowa zmniejsza się stopniowo i spada do zera po przekroczeniu prędkości 25 km/h</rdfs:comment>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
+		<rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
 		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Bicycle"/>
 		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Bicycle"/>
 		<skos:definition xml:lang="en">a pedal-driven, human-powered, single-track vehicle, having two wheels attached to a frame, one behind the other. Some bicycles have a small combustion or electric engine that assists with the pedaling.</skos:definition>
@@ -658,13 +678,17 @@ Examples: VW Golf, VW Polo, VW Passat</skos:definition>
 				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
+		<rdfs:label xml:lang="pl">autobus</rdfs:label>
 		<rdfs:label xml:lang="en">bus</rdfs:label>
 		<rdfs:comment xml:lang="en">A bus (also omnibus or autobus) is a road vehicle designed to carry passengers. Buses have a capacity as high as 300 passengers and are widely used for public transportation. 
 Coaches are luxury busses, usually in service for long distance travel.</rdfs:comment>
+		<rdfs:comment>QName: auto-vc-vc:BusOrCoach</rdfs:comment>
+		<rdfs:comment xml:lang="pl">pojazd samochodowy przeznaczony konstrukcyjnie do przewozu więcej niż 9 osób łącznie z kierowcą</rdfs:comment>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
 		<sm:directSource rdf:resource="https://schema.org/BusOrCoach"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
+		<rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
 		<rdfs:seeAlso rdf:resource="http://dbpedia.org/page/Coach_%28vehicle%29"/>
 		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Bus"/>
 		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Bus"/>
@@ -680,6 +704,16 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<skos:definition xml:lang="en">The usage of a vehicle for general business purposes, i.e. excluding usages like as a taxi, rental car, or driving instructions.</skos:definition>
 	</owl:NamedIndividual>
+	
+	<owl:Class rdf:about="&auto-vc-vc;CAN">
+		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Sensor"/>
+		<rdfs:label xml:lang="en">CAN</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vc-vc;Camera">
+		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Sensor"/>
+		<rdfs:label xml:lang="en">camera</rdfs:label>
+	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc-vc;Canoe">
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Boat"/>
@@ -715,11 +749,14 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">automobile</rdfs:label>
 		<rdfs:label xml:lang="en">car</rdfs:label>
+		<rdfs:label xml:lang="pl">samochód</rdfs:label>
 		<rdfs:comment>Automobiles may be classified by size or weight, or both. Size classification is based on wheelbase. Weight classification is based on curb weight, the weight of an automobile with standard equipment and a full complement of fuel and other fluids, but with no load of persons or property. Before classification, wheelbase should be rounded to the nearest inch and curb weight should be rounded to the nearest 100 pounds.</rdfs:comment>
+		<rdfs:comment>QName: auto-vc-vc:Car</rdfs:comment>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
 		<sm:directSource rdf:resource="https://schema.org/Car"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
+		<rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
 		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Automobile"/>
 		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Automobile"/>
 		<skos:definition xml:lang="en">A motor vehicle other than a motorcycle, utility vehicle or low speed vehicle consisting of a transport device typically designed for carrying eight or fewer persons.</skos:definition>
@@ -756,6 +793,7 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 	
 	<owl:Class rdf:about="&auto-vc-vc;ChoiceOrComponent">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Model"/>
+		<rdfs:subClassOf rdf:resource="&auto-vc-vc;VehiclePart"/>
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
@@ -892,6 +930,14 @@ Using coo:compatible, it is possible to indicate either compatibility (true) and
 If no such statement is found, the validity of a configuration is unknown.
 
 Note: The two properties coo:includes and coo:dependsOn, attached to coo:ChoiceOrComponent, may contain additional information on the validity of configuration.</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vc-vc;ConstantSpeed">
+		<rdfs:subClassOf rdf:resource="&auto-vc-vc;SpeedProfile"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vc-vc;Deceleration">
+		<rdfs:subClassOf rdf:resource="&auto-vc-vc;SpeedProfile"/>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc-vc;DecorativeTrims">
@@ -1214,6 +1260,15 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.18</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-vc-vc;GPS">
+		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Sensor"/>
+		<rdfs:label xml:lang="en">GPS</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vc-vc;GPSTrack">
+		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Path"/>
+	</owl:Class>
+	
 	<owl:NamedIndividual rdf:about="&auto-vc-vc;Garage">
 		<rdfs:label xml:lang="en">garage</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
@@ -1295,7 +1350,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 	
 	<owl:Class rdf:about="&auto-vc-vc;LandVehicle">
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Vehicle"/>
+		<rdfs:label xml:lang="en">Land Vehicle</rdfs:label>
 		<rdfs:label xml:lang="en">land vehicle</rdfs:label>
+		<rdfs:comment>QName: auto-vc-vc:LandVehicle</rdfs:comment>
+		<rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
+		<skos:definition xml:lang="en">A transport vehicle which is neither an aircraft nor a watercraft.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.7</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc-vc;LargeBus">
@@ -1324,6 +1384,11 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		<rdfs:label xml:lang="en">left hand drive</rdfs:label>
 		<skos:definition xml:lang="en">The steering position is on the left side of the vehicle (viewed from the main direction of driving). For cars this means that you drive on the right side of the road.</skos:definition>
 	</owl:NamedIndividual>
+	
+	<owl:Class rdf:about="&auto-vc-vc;Lidar">
+		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Sensor"/>
+		<rdfs:label xml:lang="en">lidar</rdfs:label>
+	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc-vc;LightTruck">
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Truck"/>
@@ -1380,11 +1445,15 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 	<owl:Class rdf:about="&auto-vc-vc;Motorcycle">
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;MotorizedRoadVehicle"/>
 		<rdfs:label xml:lang="en">Motorcycle</rdfs:label>
+		<rdfs:label xml:lang="pl">motocykl</rdfs:label>
 		<rdfs:label xml:lang="en">motorcycle</rdfs:label>
+		<rdfs:comment>QName: auto-vc-vc:Motorcycle</rdfs:comment>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
 		<sm:directSource rdf:resource="https://schema.org/Motorcycle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
+		<rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
+		<rdfs:isDefinedBy xml:lang="pl">pojazd samochodowy zaopatrzony w silnik spalinowy, dwukołowy lub z bocznym wózkiem – wielośladowy</rdfs:isDefinedBy>
 		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Motorcycle"/>
 		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Motorcycle"/>
 		<skos:definition xml:lang="en">Any motor vehicle having a seat or saddle for the use of its operator and designed to travel on not more than three wheels in contact with the ground.</skos:definition>
@@ -1836,6 +1905,10 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.14.1</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-vc-vc;Path">
+		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Trajectory"/>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-vc-vc;Pedalcycle">
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;HumanPoweredLandVehicle"/>
 		<rdfs:label xml:lang="en">pedalcycle</rdfs:label>
@@ -2005,6 +2078,11 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.17</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-vc-vc;Sensor">
+		<rdfs:subClassOf rdf:resource="&auto-vc-vc;VehiclePart"/>
+		<rdfs:label xml:lang="en">sensor</rdfs:label>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-vc-vc;Ship">
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Watercraft"/>
 		<rdfs:subClassOf>
@@ -2085,6 +2163,19 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
 		<rdfs:label xml:lang="pl">mały pojazd specjalny</rdfs:label>
 		<rdfs:label xml:lang="en">small special vehicle</rdfs:label>
 		<rdfs:seeAlso>source: https://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/TTICarOnto.owl</rdfs:seeAlso>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vc-vc;SmoothAcceleration">
+		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Acceleration"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vc-vc;SmoothDeceleration">
+		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Deceleration"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vc-vc;Sonar">
+		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Sensor"/>
+		<rdfs:label xml:lang="en">sonar</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc-vc;SpecItemCollection">
@@ -2168,6 +2259,11 @@ The default choice can be indicated using a coo:default link. All other choices 
 	
 	<owl:Class rdf:about="&auto-vc-vc;SpecialVehicle">
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Car"/>
+		<rdfs:label xml:lang="pl">pojazd specjalny</rdfs:label>
+		<rdfs:label xml:lang="en">special vehicle</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">a vehicle or trailer intended to perform a special function requiring body adjustments or special equipment; this vehicle is capable of carrying persons and objects associated with the performance of this function</rdfs:isDefinedBy>
+		<rdfs:isDefinedBy xml:lang="pl">pojazd samochodowy lub przyczepa przeznaczone do wykonywania specjalnej funkcji, która powoduje konieczność dostosowania nadwozia lub posiadania specjalnego wyposażenia; w pojeździe tym mogą być przewożone osoby i rzeczy związane z wykonywaniem tej funkcji</rdfs:isDefinedBy>
+		<rdfs:seeAlso xml:lang="en">source: https://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/TTICarOnto.owl</rdfs:seeAlso>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc-vc;Speed-limitedMotor-drivenCycle">
@@ -2182,6 +2278,10 @@ The default choice can be indicated using a coo:default link. All other choices 
 		<rdfs:label xml:lang="en">speed interval</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
 		<skos:definition xml:lang="en">a value indicating a speed interval, mostly for explaining acceleration data</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vc-vc;SpeedProfile">
+		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Trajectory"/>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc-vc;SteeringPositionValue">
@@ -2207,6 +2307,14 @@ The default choice can be indicated using a coo:default link. All other choices 
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<skos:definition xml:lang="en">The parking of a vehicle on a public or private street</skos:definition>
 	</owl:NamedIndividual>
+	
+	<owl:Class rdf:about="&auto-vc-vc;SuddenAcceleration">
+		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Acceleration"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vc-vc;SuddenDeceleration">
+		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Deceleration"/>
+	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-vc-vc;TT4SpeedAuto">
 		<rdf:type rdf:resource="&auto-vc-vc;TransmissionTypeValueAutomatic"/>
@@ -2335,6 +2443,10 @@ The default choice can be indicated using a coo:default link. All other choices 
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.15</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-vc-vc;Trajectory">
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Object"/>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-vc-vc;TransitBus">
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Bus"/>
 		<rdfs:label xml:lang="en">Transit Bus</rdfs:label>
@@ -2411,8 +2523,12 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;LargeSpecialVehicle"/>
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;TransportVehicle"/>
 		<rdfs:label xml:lang="en">Truck</rdfs:label>
+		<rdfs:label xml:lang="pl">samochód ciężarowy</rdfs:label>
 		<rdfs:label xml:lang="en">truck</rdfs:label>
+		<rdfs:comment>QName: auto-vc-vc:Truck</rdfs:comment>
+		<rdfs:comment xml:lang="pl">pojazd samochodowy przeznaczony konstrukcyjnie do przewozu ładunków</rdfs:comment>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
+		<rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
 		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Truck"/>
 		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Truck"/>
 		<skos:definition xml:lang="en">A motor vehicle designed primarily for carrying property.</skos:definition>
@@ -2517,13 +2633,20 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
 		<skos:definition xml:lang="en">a device that is designed or used to transport people or cargo over land, water, air, or through space</skos:definition>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-vc-vc;VehiclePart">
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;PhysicalObject"/>
+		<rdfs:label xml:lang="en">vehicle part</rdfs:label>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-vc-vc;Watercraft">
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:label xml:lang="en">watercraft</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
 		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Watercraft"/>
 		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Watercraft"/>
+		<skos:definition xml:lang="en">A transport vehicle designed primarily for, or in use for, moving persons or property on or through, and supported by, water from one place to another.</skos:definition>
 		<skos:definition xml:lang="en">a vehicle, vessel or craft designed to move across or through water</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.6</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc-vc;Wheels">

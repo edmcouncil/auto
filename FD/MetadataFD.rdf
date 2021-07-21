@@ -41,7 +41,7 @@
 	
 	<owl:NamedIndividual rdf:about="&auto-fd-mod;FDDomain">
 		<rdf:type rdf:resource="&sm;Module"/>
-		<rdfs:label>EDMC-FIBO selected ontologies</rdfs:label>
+		<rdfs:label>FIBO Ontologies</rdfs:label>
 		<dct:abstract>This ontology provides metadata for the selected FIBO ontologies.</dct:abstract>
 		<dct:creator rdf:datatype="&xsd;anyURI">https://www.w3.org/community/gao/</dct:creator>
 		<dct:hasPart rdf:resource="&fibo-fnd-utl-mod;UtilitiesModule"/>
