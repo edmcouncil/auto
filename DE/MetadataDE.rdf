@@ -45,7 +45,7 @@
 		<dct:abstract>This ontology provides metadata for the driving events ontologies</dct:abstract>
 		<dct:creator>Piotr Kulicki</dct:creator>
 		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/"/>
-		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/Map/"/>
+		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/"/>
 		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/"/>
 		<dct:license rdf:datatype="&xsd;anyURI">http://opensource.org/licenses/MIT</dct:license>
 		<dct:title>EDMC Automotive Ontology (AUTO) DE Domain</dct:title>

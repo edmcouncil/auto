@@ -1,0 +1,943 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY auto-de-ev "https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/">
+	<!ENTITY auto-mo-mo "https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/">
+	<!ENTITY dc "http://purl.org/dc/elements/1.1/">
+	<!ENTITY dct "http://purl.org/dc/terms/">
+	<!ENTITY fibo-fnd-utl-av "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
+	<!ENTITY geo "http://www.w3.org/2003/01/geo/wgs84_pos#">
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY skos "http://www.w3.org/2004/02/skos/core#">
+	<!ENTITY sm "http://www.omg.org/techprocess/ab/SpecificationMetadata/">
+	<!ENTITY swrl "http://www.w3.org/2003/11/swrl#">
+	<!ENTITY swrlb "http://www.w3.org/2003/11/swrlb#">
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+<rdf:RDF xml:base="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/"
+	xmlns="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/"
+	xmlns:auto-de-ev="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/"
+	xmlns:auto-mo-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+	xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+	xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	
+	<owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/">
+		<rdfs:label xml:lang="en">Map Ontology (MAP)</rdfs:label>
+		<rdfs:comment xml:lang="en">The Map Ontology (MAP) has been initially created by Lihua Zhao and Yutaka Sasaki at the Computational Intelligence Laboratory, Toyota Technological Institute, Nagoya, Japan (see https://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/) and published by the Toyota Technological Institute Smart Vehicle Research Project. MAP, as created by the Computational Intelligence Laboratory, is available under the Creative Commons - Attribution-NonCommercial-ShareAlike
+4.0 International (http://creativecommons.org/licenses/by-nc-sa/4.0/).</rdfs:comment>
+		<dct:abstract xml:lang="en">A sophisticated machine understandable map is required for autonomous vehicles to perceive driving environments. Therefore, we construct a map ontology.</dct:abstract>
+		<dct:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+		<sm:contentLanguage rdf:datatype="&xsd;anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
+		<sm:dependsOn rdf:datatype="&xsd;anyURI">https://spec.edmcouncil.org/auto/ontology/EC/</sm:dependsOn>
+		<sm:fileAbbreviation>auto-de-map</sm:fileAbbreviation>
+		<sm:filename>Map.rdf</sm:filename>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
+		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
+	</owl:Ontology>
+	
+	<owl:AnnotationProperty rdf:about="&dct;creator">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&dct;license">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&dct;publisher">
+	</owl:AnnotationProperty>
+	
+	<owl:Class rdf:about="&auto-de-ev;Airport">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Infrastructure"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Airway">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;TransportWay"/>
+		<rdfs:label xml:lang="en">Airway</rdfs:label>
+		<skos:definition xml:lang="en">A transport way reserved primarily for use by aircraft taking off, in flight, or landing.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.9</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Amenity">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Infrastructure"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;AtGradeIntersection">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Intersection"/>
+		<rdfs:label xml:lang="en">At Grade Intersection</rdfs:label>
+		<skos:definition xml:lang="en">An intersection where all roadways cross or join at the same level.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.12</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;AuxiliaryRoadSign">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;RoadSign"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Bank">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Building"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;BicycleLane">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Bikeway"/>
+		<rdfs:label xml:lang="en">Bicycle Lane</rdfs:label>
+		<skos:definition xml:lang="en">A bikeway adjacent to travel lanes which has been designated for preferential or exclusive use by pedalcyclists through striping, signage or pavement markings</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.45</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;BicycleTrail">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Bikeway"/>
+		<rdfs:label xml:lang="en">Bicycle Trail</rdfs:label>
+		<skos:definition xml:lang="en">A bikeway reserved for pedalcycles and separated from roadways by open space or barriers.</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Bikeway">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;TransportWay"/>
+		<rdfs:label xml:lang="en">Bikeway</rdfs:label>
+		<skos:definition xml:lang="en">A trafficway specifically designated as being open for pedalcycle travel or, where various classes of pedalcycle are segregated, that part of a trafficway open for a particular class (See 2.2.28)</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Building">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Infrastructure"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;BusLane">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Lane"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;BusStation">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Station"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;BusStop">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;BusStation"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;ChannelizedIntersection">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;AtGradeIntersection"/>
+		<rdfs:label xml:lang="en">Channelized Intersection</rdfs:label>
+		<skos:definition xml:lang="en">An at-grade intersection in which traffic is diverted into definite paths by raised or painted traffic islands.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.13</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;CityStreet">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Trafficway"/>
+		<rdfs:label xml:lang="en">City Street</rdfs:label>
+		<skos:definition xml:lang="en">A trafficway within a city trafficway system that is not an Interstate highway, other U.S. route numbered highway, other state route numbered highway, or county road.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.8</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;College">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;EducationalInstitute"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Commerce">
+		<rdfs:label xml:lang="en">Commerce</rdfs:label>
+		<skos:definition xml:lang="en">Any trade, traffic or transportation of commodities or persons for financial consideration or exchange, or in the furtherance of a business enterprise.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">ANSI D.16-2017, section 2.9.1</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Convenience">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Shop"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;CountyRoad">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Trafficway"/>
+		<rdfs:label xml:lang="en">County Road</rdfs:label>
+		<skos:definition xml:lang="en">A trafficway within a county trafficway system that is not an Interstate highway, other U.S. route numbered highway, or other state route numbered highway.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.7</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Crosswalk">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;PartOfTrafficway"/>
+		<rdfs:label xml:lang="en">Crosswalk</rdfs:label>
+		<skos:definition xml:lang="en">(1) that part of a roadway at an intersection included within the connections of the lateral lines of the sidewalks on opposite sides of the roadway measured from the curbs or, in the absence of curbs, from the edges of the traversable roadway, or (2) any portion of a roadway at an intersection or elsewhere distinctly indicated for pedestrian crossing by lines or other markings on the surface of the roadway.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.21</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;CrosswalkRoadSegment">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;RoadSegment"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;CurbReturn">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;PartOfTrafficway"/>
+		<rdfs:label xml:lang="en">Curb Return</rdfs:label>
+		<skos:definition xml:lang="en">The curved section of curb used at intersections in joining straight sections of curb.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.20</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;DeliberateIntent">
+		<rdfs:label xml:lang="en">Deliberate Intent</rdfs:label>
+		<skos:definition xml:lang="en">The classification given to the cause of an event which occurs when a person acts deliberately to cause the event or deliberately refrains from prudent acts which would prevent occurrence of the event.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.2</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;DirectionalRoadSign">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;RoadSign"/>
+		<rdfs:comment>Directional road sign</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Driveway">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Trafficway"/>
+		<rdfs:label xml:lang="en">Driveway</rdfs:label>
+		<rdfs:comment xml:lang="en">A driveway is outside the trafficway and is typically not provided an official identification name or number.</rdfs:comment>
+		<skos:definition xml:lang="en">A private way which provides vehicular access to the public from a trafficway to property, parking or loading areas outside the boundaries of the trafficway, but is considered to be not open to the public for transportation purposes as a trafficway.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.9.1</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;DrivewayAccess">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;PartOfTrafficway"/>
+		<rdfs:label xml:lang="en">Driveway Access</rdfs:label>
+		<skos:definition xml:lang="en">A portion of the trafficway at the end of a driveway (See 2.5.9.1), providing access to property adjacent to a trafficway.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.9</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;EducationalInstitute">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Building"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;FastFood">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Restaurant"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;FireStation">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Building"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Forest">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;NaturalPlace"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;FrontageRoad">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Trafficway"/>
+		<rdfs:label xml:lang="en">Frontage Road</rdfs:label>
+		<rdfs:comment xml:lang="en">The frontage road may be within the same trafficway as the main roadway or in a separate trafficway.</rdfs:comment>
+		<skos:definition xml:lang="en">A roadway generally paralleling an expressway, freeway, parkway or through street so designed as to intercept, collect and distribute traffic desiring to cross, enter or leave such facility and to furnish access to property which otherwise would be isolated as a result of controlled-access features.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.18</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Fully-controlledAccessHighway">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Trafficway"/>
+		<rdfs:label xml:lang="en">Fully-controlled Access Highway</rdfs:label>
+		<skos:definition xml:lang="en">A trafficway on which preference is given to through traffic by permitting access only from other trafficways and by providing grade separations at all crossing trafficways.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.15</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;GasStation">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Infrastructure"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Gore">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;PartOfTrafficway"/>
+		<rdfs:label xml:lang="en">Gore</rdfs:label>
+		<rdfs:comment xml:lang="en">The area is bounded on two sides by the edges of the roadways, which join at the point of divergence or convergence. The direction of traffic shall be the same on both sides of these roadways. The area includes shoulders or marked pavement, if any, between the roadways. The third side is 60 meters (approximately 200 feet) from the point of divergence or convergence or, if any other road is within 70 meters (230 feet) of that point, a line 10 meters (33 feet) from the nearest edge of such road.</rdfs:comment>
+		<skos:definition xml:lang="en">An area of land where two roadways diverge or converge.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.19</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;GradeSeparation">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Intersection"/>
+		<rdfs:label xml:lang="en">Grade Separation</rdfs:label>
+		<skos:definition xml:lang="en">A crossing at different levels of two trafficways, or a trafficway and a railway.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.14</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Highway">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;RoadType"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Hospital">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Building"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Infrastructure">
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Object"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;InstructionRoadSign">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;RoadSign"/>
+		<rdfs:comment xml:lang="en">Instruction road sign</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;InstructionSurfaceSign">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;RoadSurfaceMarking"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Intersection">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Junction"/>
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;PartOfTrafficway"/>
+		<rdfs:label xml:lang="en">Intersection</rdfs:label>
+		<rdfs:comment xml:lang="en">Where the distance along a roadway between two areas meeting these criteria is less than 10 meters (33 feet), the two areas and the roadway connecting them are considered to be parts of a single intersection.</rdfs:comment>
+		<skos:definition xml:lang="en">An area which (1) contains a crossing or connection of two or more roadways not classified as driveway access and (2) is embraced within the prolongation of the lateral curb lines or, if none, the lateral boundary lines of the roadways.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.10</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;InterstateHighway">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Trafficway"/>
+		<rdfs:label xml:lang="en">Interstate Highway</rdfs:label>
+		<skos:definition xml:lang="en">A trafficway on the Interstate System.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.4</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;InterstateSystem">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Infrastructure"/>
+		<rdfs:label xml:lang="en">Interstate System</rdfs:label>
+		<skos:definition xml:lang="en">The National System of Interstate and Defense Highways as defined in Section 101, Title 23, United States Code.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.3</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Junction">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;PartOfTrafficway"/>
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;RoadPart"/>
+		<rdfs:label xml:lang="en">Junction</rdfs:label>
+		<skos:definition xml:lang="en">An intersection or the connection between a driveway access and a roadway other than a driveway access.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.11</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Kindergarten">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;EducationalInstitute"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Lake">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;NaturalPlace"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;LandWay">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Trafficway"/>
+		<rdfs:label xml:lang="en">Land Way</rdfs:label>
+		<skos:definition xml:lang="en">The space within property lines or other boundary lines of any transport way that is neither an airway nor a waterway.</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Lane">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;RoadPart"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;LaneAdapter">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Junction"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Leisure">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Amenity"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;LocalRoad">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;OrdinaryRoad"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;LongitudinalPartOfTrafficway">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Infrastructure"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;MetroStation">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Station"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;MunicipalRoad">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;OrdinaryRoad"/>
+		<rdfs:comment>MunicipalRoad</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;NationalRoad">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;OrdinaryRoad"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;NaturalPlace">
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Object"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;OneWayLane">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Lane"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;OrdinaryRoad">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;RoadType"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;OtherSigns">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;RoadSurfaceMarking"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;OtherStateRouteNumberedHighway">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Trafficway"/>
+		<rdfs:label xml:lang="en">Other State Route Numbered Highway</rdfs:label>
+		<skos:definition xml:lang="en">A trafficway within a state trafficway system, but not an interstate highway or other U.S. route numbered highway.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.6</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;OtherUSRouteNumberedHighwayAnother">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Trafficway"/>
+		<rdfs:label xml:lang="en">Other US Route Numbered Highway An other</rdfs:label>
+		<skos:definition xml:lang="en">A trafficway numbered by the American Association of State Highway Officials, but not an interstate highway.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Park">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Leisure"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;ParkingLot">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Infrastructure"/>
+		<rdfs:label xml:lang="en">Parking Lot</rdfs:label>
+		<rdfs:comment xml:lang="en">When paved and marked, it commonly includes the following areas : 1.) Parking stalls — areas reserved primarily for parked road vehicles, 2.) Parking lot aisles — areas used primarily for vehicular access to parking stalls, Parking lot aisles are not trafficways. 3.) Parking lot ways — land ways which are used primarily for vehicular circulation within parking lots and for vehicular access to parking lot aisles.</rdfs:comment>
+		<skos:definition xml:lang="en">An area used primarily for parking road vehicles.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.22</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;ParkingLotWay">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Trafficway"/>
+		<rdfs:label xml:lang="en">Parking Lot Way</rdfs:label>
+		<skos:definition xml:lang="en">A parking lots open to the public are trafficways.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.22.1</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;ParkingPlace">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Amenity"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;PartOfTrafficway">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;TransportWay"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Pharmacy">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Shop"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;PoliceStation">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Building"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;PostOffice">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Building"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;PrefecturalRoad">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;OrdinaryRoad"/>
+		<rdfs:comment>PrefecturalRoad</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;PrivateRoad">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;OrdinaryRoad"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;PrivateWay">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Trafficway"/>
+		<rdfs:label xml:lang="en">Private Way</rdfs:label>
+		<rdfs:comment xml:lang="en">The space within a crossing of a private way and a trafficway shall be considered a trafficway.</rdfs:comment>
+		<skos:definition xml:lang="en">Any land way other than a trafficway.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.2</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Railway">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Infrastructure"/>
+		<rdfs:label xml:lang="en">Railway</rdfs:label>
+		<skos:definition xml:lang="en">Any private way reserved primarily for land vehicles moving persons or property from one place to another on rails.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.3</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;RailwayStation">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Station"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Ramp">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;PartOfTrafficway"/>
+		<rdfs:label xml:lang="en">Ramp</rdfs:label>
+		<rdfs:comment xml:lang="en">Road Vehicle A road vehicle is any land vehicle other than a railway vehicle.</rdfs:comment>
+		<skos:definition xml:lang="en">An auxiliary roadway used for entering or leaving through-traffic lanes.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.17</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;RegulatoryRoadSign">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;RoadSign"/>
+		<rdfs:comment xml:lang="en">Regulatory sign</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;RegulatorySurfaceSign">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;RoadSurfaceMarking"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Restaurant">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Amenity"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;River">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;NaturalPlace"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Road">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;LongitudinalPartOfTrafficway"/>
+		<rdfs:label xml:lang="en">Road</rdfs:label>
+		<skos:definition xml:lang="en">A part of a trafficway which includes both the roadway and any shoulder alongside the roadway.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.33</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;RoadPart">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Infrastructure"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;RoadSegment">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;RoadPart"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;RoadSign">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;TrafficSign"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;RoadSurfaceMarking">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;TrafficSign"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;RoadType">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Infrastructure"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Roadside">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;LongitudinalPartOfTrafficway"/>
+		<rdfs:label xml:lang="en">Roadside</rdfs:label>
+		<skos:definition xml:lang="en">The outermost part of the trafficway from the property line or other boundary in to the edge of the first road.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.31</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Roadway">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;LongitudinalPartOfTrafficway"/>
+		<rdfs:label xml:lang="en">Roadway</rdfs:label>
+		<rdfs:comment xml:lang="en">Separate roadways may be provided for opposing directions of traffic or for trucks and automobiles.</rdfs:comment>
+		<skos:definition xml:lang="en">A part of a trafficway designed, improved and ordinarily used for motor vehicle travel or, where various classes of motor vehicles are segregated, that part of a trafficway used by a particular class.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.28</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Roundabout">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Junction"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;School">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;EducationalInstitute"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;SharedRoad">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Bikeway"/>
+		<rdfs:label xml:lang="en">Shared Road</rdfs:label>
+		<skos:definition xml:lang="en">Any bikeway which is part of a roadway, but not a bicycle lane.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.46</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Shop">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Amenity"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Shoulder">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;LongitudinalPartOfTrafficway"/>
+		<rdfs:label xml:lang="en">Shoulder</rdfs:label>
+		<skos:definition xml:lang="en">A part of a trafficway contiguous with the roadway for emergency use, for accommodation of stopped road vehicles, and for lateral support of the roadway structure.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.32</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;SpeedLimit">
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QualitativeValue"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;SpeedLimit100">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;SpeedLimit"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;SpeedLimit25">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;SpeedLimit"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;SpeedLimit30">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;SpeedLimit"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;SpeedLimit40">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;SpeedLimit"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;SpeedLimit50">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;SpeedLimit"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;SpeedLimit60">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;SpeedLimit"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;SpeedLimit70">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;SpeedLimit"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;SpeedLimit80">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;SpeedLimit"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;SportsCentre">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Leisure"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Station">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Infrastructure"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Supermarket">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Shop"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;TollGate">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Infrastructure"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;TrafficSign">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Infrastructure"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;TrafficSignal">
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Process"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Trafficway">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;TransportWay"/>
+		<rdfs:label xml:lang="en">Trafficway</rdfs:label>
+		<skos:definition xml:lang="en">Any land way open to the public as a matter of right or custom for moving persons or property from one place to another.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.1</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;TransportWay">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Infrastructure"/>
+		<rdfs:label xml:lang="en">Transport Way</rdfs:label>
+		<skos:definition xml:lang="en">Any way or place reserved or commonly used for the operation of transport vehicles.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.8</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Turn">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Junction"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;TwoWayLane">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Lane"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;University">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;EducationalInstitute"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;UrbanArea">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Infrastructure"/>
+		<rdfs:label xml:lang="en">Urban Area</rdfs:label>
+		<rdfs:comment xml:lang="en">Such boundaries are established in accordance with the provisions of Title 23 of the United States Code. Urban area boundary information is available from state highway or transportation departments. In the event that boundaries have not been fixed as above for any urban place designated by the Bureau of the Census having population of 5000 or more, the area within boundaries fixed by the Bureau of the Census shall be an urban area.</rdfs:comment>
+		<skos:definition xml:lang="en">An area whose boundaries shall be those fixed by responsible state and local officials in cooperation with each other and approved by the Federal Highway Administration, U.S. Department of Transportation.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.1</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;UtilityPole">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Infrastructure"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;WarningRoadSign">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;RoadSign"/>
+		<rdfs:comment xml:lang="en">Warning sign</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Waterway">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Infrastructure"/>
+		<rdfs:label xml:lang="en">Waterway</rdfs:label>
+		<skos:definition xml:lang="en">A transport way reserved primarily for use by watercraft.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.10</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;WorkZone">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Infrastructure"/>
+		<rdfs:label xml:lang="en">Work Zone</rdfs:label>
+		<rdfs:comment xml:lang="en">It extends from the first warning sign, signal or flashing lights to the END ROAD WORK sign or the last traffic control device pertinent for that work activity. Work zones also include roadway sections where there is ongoing, moving (mobile) work activity such as lane line painting or roadside mowing only if the beginning of the ongoing, moving (mobile) work activity is designated by warning signs or signals.</rdfs:comment>
+		<skos:definition xml:lang="en">An area of a trafficway where construction, maintenance or utility work activities are identified by warning signs/signals/indicators, including those on transport devices (e.g., signs, flashing lights, channelizing devices, barriers, pavement markings, flagmen, warning signs and arrow boards mounted on the vehicles in a mobile maintenance activity) that mark the beginning and end of a construction, maintenance or utility work activity.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.24</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;address">
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;adminArea">
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;allowLaneChange">
+		<rdfs:range rdf:resource="&xsd;boolean"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;allowedDir">
+		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+		<rdfs:domain rdf:resource="&auto-de-ev;Lane"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;alt">
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;angle">
+		<rdfs:domain rdf:resource="&auto-de-ev;TrafficSignal"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;boundCoordinate">
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;boundPos">
+		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;brand">
+	</owl:DatatypeProperty>
+	
+	<rdfs:Datatype rdf:about="&auto-de-ev;byte">
+	</rdfs:Datatype>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;curve_id">
+	</owl:DatatypeProperty>
+	
+	<rdfs:Datatype rdf:about="&auto-de-ev;deg">
+	</rdfs:Datatype>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;drivingDir">
+		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+		<rdfs:domain rdf:resource="&auto-de-ev;Lane"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;enterPos">
+		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+		<rdfs:domain rdf:resource="&auto-de-ev;Lane"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;exitPos">
+		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+		<rdfs:domain rdf:resource="&auto-de-ev;Lane"/>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-ev;goStraightTo">
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-ev;hasCar">
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-ev;hasIntersection">
+		<rdfs:subPropertyOf rdf:resource="&auto-de-ev;hasJunction"/>
+		<rdfs:domain rdf:resource="&auto-de-ev;RoadType"/>
+		<rdfs:range rdf:resource="&auto-de-ev;Intersection"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-ev;hasJunction">
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-ev;hasLane">
+		<rdfs:domain rdf:resource="&auto-de-ev;RoadSegment"/>
+		<rdfs:range rdf:resource="&auto-de-ev;Lane"/>
+		<owl:inverseOf rdf:resource="&auto-de-ev;isLaneOf"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-ev;hasRoadSegment">
+		<owl:inverseOf rdf:resource="&auto-de-ev;isRoadSegmentOf"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-ev;isConnectedTo">
+		<rdf:type rdf:resource="&owl;SymmetricProperty"/>
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;isEmpty">
+		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+		<rdfs:domain rdf:resource="&auto-de-ev;RoadPart"/>
+		<rdfs:range rdf:resource="&xsd;boolean"/>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-ev;isLaneOf">
+		<rdfs:domain rdf:resource="&auto-de-ev;Lane"/>
+		<rdfs:range rdf:resource="&auto-de-ev;RoadSegment"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-ev;isLeftOf">
+		<owl:inverseOf rdf:resource="&auto-de-ev;isRightOf"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-ev;isNextTo">
+		<rdfs:domain rdf:resource="&auto-de-ev;Lane"/>
+		<rdfs:range rdf:resource="&auto-de-ev;Lane"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-ev;isOn">
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-ev;isRightOf">
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-ev;isRoadSegmentOf">
+	</owl:ObjectProperty>
+	
+	<rdfs:Datatype rdf:about="&auto-de-ev;kHz">
+		<rdfs:label>kilohertz</rdfs:label>
+	</rdfs:Datatype>
+	
+	<rdfs:Datatype rdf:about="&auto-de-ev;kmh">
+		<rdfs:comment>kilometer per hour</rdfs:comment>
+	</rdfs:Datatype>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;lat">
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;loc_x">
+		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;loc_y">
+		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;loc_z">
+		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;lon">
+	</owl:DatatypeProperty>
+	
+	<rdfs:Datatype rdf:about="&auto-de-ev;mm">
+		<rdfs:label>millimeter</rdfs:label>
+	</rdfs:Datatype>
+	
+	<rdfs:Datatype rdf:about="&auto-de-ev;mm_pixel">
+	</rdfs:Datatype>
+	
+	<rdfs:Datatype rdf:about="&auto-de-ev;ms">
+		<rdfs:label>millisecond</rdfs:label>
+	</rdfs:Datatype>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;name">
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-ev;nearTo">
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;opening_hours">
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;operator">
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;orientation">
+		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;osm_node_id">
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;osm_ref">
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;osm_way_id">
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;phone">
+	</owl:DatatypeProperty>
+	
+	<rdfs:Datatype rdf:about="&auto-de-ev;pixel">
+	</rdfs:Datatype>
+	
+	<rdfs:Datatype rdf:about="&auto-de-ev;pixl">
+	</rdfs:Datatype>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;postcode">
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;pubFacAdmin">
+	</owl:DatatypeProperty>
+	
+	<rdfs:Datatype rdf:about="&auto-de-ev;rad">
+	</rdfs:Datatype>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-ev;relatedTrafficLight">
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;river_id">
+		<rdfs:domain rdf:resource="&auto-de-ev;River"/>
+	</owl:DatatypeProperty>
+	
+	<rdfs:Datatype rdf:about="&auto-de-ev;sec">
+		<rdfs:label>second</rdfs:label>
+	</rdfs:Datatype>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;speedMax">
+		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-ev;turnLeftTo">
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-de-ev;turnRightTo">
+	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-de-ev;website">
+	</owl:DatatypeProperty>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/Interchange">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;PartOfTrafficway"/>
+		<rdfs:label xml:lang="en">Interchange</rdfs:label>
+		<skos:definition xml:lang="en">A system of interconnecting roadways in conjunction with one or more grade separations, providing for the movement of traffic between two or more roadways on different levels.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.16</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/LongitudinalPartOfTrafficway">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;PartOfTrafficway"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/Median">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/LongitudinalPartOfTrafficway"/>
+		<rdfs:label xml:lang="en">Median</rdfs:label>
+		<rdfs:comment xml:lang="en">A flush or painted median should be 4 or more feet wide between inside roadway edge lines. Medians fewer than 4 feet wide shall have a barrier to be considered a median. Continuous left-turn lanes are not considered painted medians.</rdfs:comment>
+		<skos:definition xml:lang="en">An area of a trafficway between parallel roads separating travel in opposite directions.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.29</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/Road">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/LongitudinalPartOfTrafficway"/>
+		<rdfs:label xml:lang="en">Road</rdfs:label>
+		<skos:definition xml:lang="en">A part of a trafficway which includes both the roadway and any shoulder alongside the roadway.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.33</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/Roadside">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/LongitudinalPartOfTrafficway"/>
+		<rdfs:label xml:lang="en">Roadside</rdfs:label>
+		<skos:definition xml:lang="en">The outermost part of the trafficway from the property line or other boundary in to the edge of the first road.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.31</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/Roadway">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/LongitudinalPartOfTrafficway"/>
+		<rdfs:label xml:lang="en">Roadway</rdfs:label>
+		<rdfs:comment xml:lang="en">Separate roadways may be provided for opposing directions of traffic or for trucks and automobiles.</rdfs:comment>
+		<skos:definition xml:lang="en">A part of a trafficway designed, improved and ordinarily used for motor vehicle travel or, where various classes of motor vehicles are segregated, that part of a trafficway used by a particular class.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.28</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/Separator">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Trafficway"/>
+		<rdfs:label xml:lang="en">Separator</rdfs:label>
+		<skos:definition xml:lang="en">The area of a trafficway between parallel roads separating travel in the same direction or separating a frontage road (See 2.5.18) from other roads.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.30</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/Shoulder">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/LongitudinalPartOfTrafficway"/>
+		<rdfs:label xml:lang="en">Shoulder</rdfs:label>
+		<skos:definition xml:lang="en">A part of a trafficway contiguous with the roadway for emergency use, for accommodation of stopped road vehicles, and for lateral support of the roadway structure.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.32</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/TurnLane">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;TransportWay"/>
+		<rdfs:label xml:lang="en">Turn Lane</rdfs:label>
+		<skos:definition xml:lang="en">A lane exclusively designated for vehicles turning from one trafficway to another.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.23</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-mo-mo;Perdurant">
+	</owl:Class>
+
+</rdf:RDF>
