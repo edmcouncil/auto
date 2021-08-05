@@ -156,76 +156,35 @@ It contains many classes and properties extracted from:
 	
 	<owl:Class rdf:about="&auto-mo-mo;PropertyValue">
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-vc-vc;propertyID"/>
-						<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
-					</owl:Restriction>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-vc-vc;propertyID"/>
-						<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-vc-vc;propertyID"/>
+				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-vc-vc;propertyName"/>
-						<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
-					</owl:Restriction>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-vc-vc;propertyName"/>
-						<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-vc-vc;propertyName"/>
+				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-vc-vc;propertyValue"/>
-						<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
-					</owl:Restriction>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-vc-vc;propertyValue"/>
-						<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-vc-vc;propertyValue"/>
+				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-vc-vc;unitText"/>
-						<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
-					</owl:Restriction>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-vc-vc;unitText"/>
-						<owl:maxCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxCardinality>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-vc-vc;unitText"/>
+				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-vc-vc;unitCode"/>
-						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&xsd;string"/>
-					</owl:Restriction>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-vc-vc;unitCode"/>
-						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&xsd;string"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-vc-vc;unitCode"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+				<owl:onDataRange rdf:resource="&xsd;string"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 	</owl:Class>
 	
@@ -632,13 +591,6 @@ Examples: VW Golf, VW Polo, VW Passat</skos:definition>
 	
 	<owl:Class rdf:about="&auto-vc-vc;Bus">
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;LargeSpecialVehicle"/>
-		<rdfs:label xml:lang="en">Bus</rdfs:label>
-		<skos:definition xml:lang="en">A motor vehicle with seating for transporting nine or more persons, including the driver.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.10</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;BusOrCoach">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;LargeSpecialVehicle"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-vc-vc;roofLoad"/>
@@ -661,7 +613,9 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Bus"/>
 		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Bus"/>
 		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Coach_%28vehicle%29"/>
+		<skos:definition xml:lang="en">A motor vehicle with seating for transporting nine or more persons, including the driver.</skos:definition>
 		<skos:definition xml:lang="en">a road vehicle designed to carry passengers. Coaches are luxury busses, usually in service for long distance travel</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.10</fibo-fnd-utl-av:adaptedFrom>
 		<fibo-fnd-utl-av:synonym xml:lang="en">autobus</fibo-fnd-utl-av:synonym>
 		<fibo-fnd-utl-av:synonym xml:lang="en">coach</fibo-fnd-utl-av:synonym>
 		<fibo-fnd-utl-av:synonym xml:lang="en">omnibus</fibo-fnd-utl-av:synonym>
@@ -1606,13 +1560,6 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;productionDate"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-				<owl:onDataRange rdf:resource="&xsd;dateTime"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-vc-vc;emissionsCO2"/>
 				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 				<owl:onDataRange rdf:resource="&xsd;decimal"/>
@@ -1655,13 +1602,6 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;vehicleIdentificationNumber"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-				<owl:onDataRange rdf:resource="&xsd;string"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-vc-vc;vehicleInteriorType"/>
 				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 				<owl:onDataRange rdf:resource="&xsd;string"/>
@@ -1683,7 +1623,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;dateVehicleFirstRegistered"/>
+				<owl:onProperty rdf:resource="&auto-vc-vc;productionDate"/>
 				<owl:onDataRange rdf:resource="&xsd;dateTime"/>
 				<owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
 			</owl:Restriction>
@@ -1697,22 +1637,9 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;numberOfDoors"/>
-				<owl:onDataRange rdf:resource="&xsd;decimal"/>
-				<owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-vc-vc;vehicleIdentificationNumber"/>
 				<owl:onDataRange rdf:resource="&xsd;string"/>
 				<owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;fuelCapacity"/>
-				<owl:someValuesFrom rdf:resource="&auto-mo-mo;QuantitativeValue"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
@@ -1723,13 +1650,13 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;mileageFromOdometer"/>
-				<owl:someValuesFrom rdf:resource="&auto-mo-mo;QuantitativeValue"/>
+				<owl:onProperty rdf:resource="&auto-vc-vc;hasMSRegManufacturerName"/>
+				<owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;numberOfAxles"/>
+				<owl:onProperty rdf:resource="&auto-vc-vc;mileageFromOdometer"/>
 				<owl:someValuesFrom rdf:resource="&auto-mo-mo;QuantitativeValue"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -1737,12 +1664,6 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-vc-vc;numberOfForwardGears"/>
 				<owl:someValuesFrom rdf:resource="&auto-mo-mo;NumericalValue"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;productionDate"/>
-				<owl:someValuesFrom rdf:resource="&xsd;dateTime"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
@@ -3637,7 +3558,7 @@ Typical unit code(s): KGM for kilogram, LBR for pound&lt;br/&gt;&lt;br/&gt;
 		<rdfs:domain>
 			<owl:Class>
 				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&auto-vc-vc;BusOrCoach">
+					<rdf:Description rdf:about="&auto-vc-vc;Bus">
 					</rdf:Description>
 					<rdf:Description rdf:about="&auto-vc-vc;Car">
 					</rdf:Description>
