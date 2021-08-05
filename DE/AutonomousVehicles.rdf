@@ -47,7 +47,7 @@
 		<sm:fileAbbreviation>auto-de-av</sm:fileAbbreviation>
 		<sm:filename>AutonomousVehicles.rdf</sm:filename>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/"/>
-		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/master/latest/VC/VehicleCore/"/>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
 		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
 	</owl:Ontology>
 	
