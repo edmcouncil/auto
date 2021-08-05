@@ -29,7 +29,7 @@
 		<dct:issued rdf:datatype="&xsd;dateTime">2020-10-29T01:43:00</dct:issued>
 		<dct:license rdf:datatype="&xsd;anyURI">http://opensource.org/licenses/MIT</dct:license>
 		<sm:contentLanguage rdf:datatype="&xsd;anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
-		<sm:copyright>Copyright (c) 2020 EDM Council, Inc.</sm:copyright>
+		<sm:copyright>Copyright (c) 2021 EDM Council, Inc.</sm:copyright>
 		<sm:fileAbbreviation>auto-mo-mod</sm:fileAbbreviation>
 		<sm:filename>MetadataMO.rdf</sm:filename>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
@@ -46,11 +46,11 @@
 		<dct:creator rdf:datatype="&xsd;anyURI">https://www.w3.org/community/gao/</dct:creator>
 		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
 		<dct:license rdf:datatype="&xsd;anyURI">http://opensource.org/licenses/MIT</dct:license>
-		<dct:title>EDMC-AUTO middle ontology (MO)</dct:title>
+		<dct:title>Vehicle middle ontology (MO)</dct:title>
 		<sm:contributor>Hepp Research GmbH</sm:contributor>
 		<sm:contributor>Makolab SA</sm:contributor>
-		<sm:contributor>W3C Automotive Ontology Community Group</sm:contributor>
-		<sm:copyright>Copyright (c) 2020 EDM Council, Inc.</sm:copyright>
+		<sm:contributor>The John Paul II Catholic University of Lublin</sm:contributor>
+		<sm:copyright>Copyright (c) 2021 EDM Council, Inc.</sm:copyright>
 		<sm:dependsOn rdf:datatype="&xsd;anyURI">http://www.omg.org/techprocess/ab/SpecificationMetadata/</sm:dependsOn>
 		<sm:keyword>middle ontology</sm:keyword>
 		<sm:moduleAbbreviation>auto-mo</sm:moduleAbbreviation>

@@ -43,7 +43,7 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 	
 	<owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/EC/VehicleECommerce/">
-		<rdfs:label>Vehicle e-commerce ontology</rdfs:label>
+		<rdfs:label>Vehicle e-commerce ontology (EC)</rdfs:label>
 		<dct:abstract>The Vehicle E-Commerce module focuses predominantly on the vehicles from the retail market perspective.
 
 It contains many classes and properties extracted from:
