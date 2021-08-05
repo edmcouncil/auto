@@ -27,14 +27,14 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 	
 	<owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/">
-		<rdfs:label xml:lang="en">Car Control Ontology (CCO)</rdfs:label>
-		<rdfs:comment xml:lang="en">The Car Control Ontology (CCO) has been initially created by Lihua Zhao and Yutaka Sasaki at the Computational Intelligence Laboratory, Toyota Technological Institute, Nagoya, Japan (see https://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/) and published by the Toyota Technological Institute Smart Vehicle Research Project. CCO, as created by the Computational Intelligence Laboratory, is available under the Creative Commons - Attribution-NonCommercial-ShareAlike
+		<rdfs:label xml:lang="en">Car control ontology (CC)</rdfs:label>
+		<rdfs:comment xml:lang="en">The Car Control Ontology (CC) has been initially created by Lihua Zhao and Yutaka Sasaki at the Computational Intelligence Laboratory, Toyota Technological Institute, Nagoya, Japan (see https://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/) and published by the Toyota Technological Institute Smart Vehicle Research Project. CCO, as created by the Computational Intelligence Laboratory, is available under the Creative Commons - Attribution-NonCommercial-ShareAlike
 4.0 International (http://creativecommons.org/licenses/by-nc-sa/4.0/).</rdfs:comment>
-		<dct:abstract xml:lang="en">The Car Control Ontology (CCO) has been constructed to describe driving actions and paths of autonomous vehicles.</dct:abstract>
+		<dct:abstract xml:lang="en">The Car Control Ontology (CC) has been constructed to describe driving actions and paths of autonomous vehicles.</dct:abstract>
 		<dct:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
 		<sm:contentLanguage rdf:datatype="&xsd;anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
 		<sm:dependsOn rdf:datatype="&xsd;anyURI">https://spec.edmcouncil.org/auto/ontology/EC/</sm:dependsOn>
-		<sm:fileAbbreviation>auto-de-cco</sm:fileAbbreviation>
+		<sm:fileAbbreviation>auto-de-cc</sm:fileAbbreviation>
 		<sm:filename>CarControl.rdf</sm:filename>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
