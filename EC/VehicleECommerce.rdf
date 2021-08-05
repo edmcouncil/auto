@@ -136,7 +136,7 @@ It contains many classes and properties extracted from:
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="&auto-ec-ec;AuthorizedDealer">
-		<rdf:type rdf:resource="&auto-mo-mo;BusinessEntityType"/>
+		<rdf:type rdf:resource="&auto-ec-ec;BusinessEntityType"/>
 		<rdfs:label xml:lang="en">Authorized Dealer</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<skos:definition xml:lang="en">An authorized dealer of the manufacturer of the respective vehicle</skos:definition>
@@ -205,6 +205,24 @@ It contains many classes and properties extracted from:
 		<skos:definition xml:lang="en">The usage of a vehicle for general business purposes, i.e. excluding usages like as a taxi, rental car, or driving instructions.</skos:definition>
 	</owl:NamedIndividual>
 	
+	<owl:Class rdf:about="&auto-ec-ec;BusinessEntity">
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Object"/>
+		<owl:equivalentClass>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<rdf:Description rdf:about="&auto-mo-mo;Organization">
+					</rdf:Description>
+					<rdf:Description rdf:about="&auto-mo-mo;Person">
+					</rdf:Description>
+				</owl:unionOf>
+			</owl:Class>
+		</owl:equivalentClass>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-ec-ec;BusinessEntityType">
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QualitativeValue"/>
+	</owl:Class>
+	
 	<owl:NamedIndividual rdf:about="&auto-ec-ec;CarSharing">
 		<rdf:type rdf:resource="&auto-ec-ec;CarUsageType"/>
 		<rdfs:label xml:lang="en">car sharing</rdfs:label>
@@ -236,7 +254,7 @@ It contains many classes and properties extracted from:
 				<owl:onClass>
 					<owl:Class>
 						<owl:unionOf rdf:parseType="Collection">
-							<rdf:Description rdf:about="&auto-mo-mo;BusinessEntityType">
+							<rdf:Description rdf:about="&auto-ec-ec;BusinessEntityType">
 							</rdf:Description>
 							<rdf:Description rdf:about="&auto-mo-mo;Organization">
 							</rdf:Description>
@@ -267,9 +285,9 @@ It contains many classes and properties extracted from:
 				<owl:onClass>
 					<owl:Class>
 						<owl:unionOf rdf:parseType="Collection">
-							<rdf:Description rdf:about="&auto-mo-mo;BusinessEntity">
+							<rdf:Description rdf:about="&auto-ec-ec;BusinessEntity">
 							</rdf:Description>
-							<rdf:Description rdf:about="&auto-mo-mo;BusinessEntityType">
+							<rdf:Description rdf:about="&auto-ec-ec;BusinessEntityType">
 							</rdf:Description>
 						</owl:unionOf>
 					</owl:Class>
@@ -369,18 +387,18 @@ It contains many classes and properties extracted from:
 	</owl:NamedIndividual>
 	
 	<owl:Class rdf:about="&auto-ec-ec;Financing">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;PaymentMethod"/>
+		<rdfs:subClassOf rdf:resource="&auto-ec-ec;PaymentMethod"/>
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;advancedPayment"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;advancedPayment"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
 				</owl:intersectionOf>
@@ -391,12 +409,12 @@ It contains many classes and properties extracted from:
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;credit"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;credit"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
 				</owl:intersectionOf>
@@ -407,12 +425,12 @@ It contains many classes and properties extracted from:
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;customerCashPrice"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;customerCashPrice"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
 				</owl:intersectionOf>
@@ -423,12 +441,12 @@ It contains many classes and properties extracted from:
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;customerDeposit"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;customerDeposit"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
 				</owl:intersectionOf>
@@ -439,12 +457,12 @@ It contains many classes and properties extracted from:
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;depositContribution"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;depositContribution"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
 				</owl:intersectionOf>
@@ -455,12 +473,12 @@ It contains many classes and properties extracted from:
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;discount"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;discount"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
 				</owl:intersectionOf>
@@ -471,12 +489,12 @@ It contains many classes and properties extracted from:
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;excessMileage"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;excessMileage"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
 				</owl:intersectionOf>
@@ -487,12 +505,12 @@ It contains many classes and properties extracted from:
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;finalPaymentFee"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;finalPaymentFee"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
 				</owl:intersectionOf>
@@ -503,12 +521,12 @@ It contains many classes and properties extracted from:
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;firstMonthlyPaymentFee"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;firstMonthlyPaymentFee"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
 				</owl:intersectionOf>
@@ -519,12 +537,12 @@ It contains many classes and properties extracted from:
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;monthlyPayment"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;monthlyPayment"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
 				</owl:intersectionOf>
@@ -535,12 +553,12 @@ It contains many classes and properties extracted from:
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;otrRetailPrice"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;otrRetailPrice"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
 				</owl:intersectionOf>
@@ -551,12 +569,12 @@ It contains many classes and properties extracted from:
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;scrappageContribution"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;scrappageContribution"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
 				</owl:intersectionOf>
@@ -567,12 +585,12 @@ It contains many classes and properties extracted from:
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;totalPayable"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;totalPayable"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
 				</owl:intersectionOf>
@@ -742,7 +760,7 @@ It contains many classes and properties extracted from:
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="&auto-ec-ec;IndependentDealer">
-		<rdf:type rdf:resource="&auto-mo-mo;BusinessEntityType"/>
+		<rdf:type rdf:resource="&auto-ec-ec;BusinessEntityType"/>
 		<rdfs:label xml:lang="en">Independent Dealer</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<skos:definition xml:lang="en">An independent dealer</skos:definition>
@@ -779,9 +797,9 @@ It contains many classes and properties extracted from:
 				<owl:onClass>
 					<owl:Class>
 						<owl:unionOf rdf:parseType="Collection">
-							<rdf:Description rdf:about="&auto-mo-mo;BusinessEntity">
+							<rdf:Description rdf:about="&auto-ec-ec;BusinessEntity">
 							</rdf:Description>
-							<rdf:Description rdf:about="&auto-mo-mo;BusinessEntityType">
+							<rdf:Description rdf:about="&auto-ec-ec;BusinessEntityType">
 							</rdf:Description>
 						</owl:unionOf>
 					</owl:Class>
@@ -831,7 +849,6 @@ It contains many classes and properties extracted from:
 	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-ec-ec;MoneyBack">
-		<rdf:type rdf:resource="&auto-mo-mo;WarrantyScope"/>
 		<rdfs:label xml:lang="en">Money-back Guarantee</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<skos:definition xml:lang="en">The promise to take back the vehicle without any specific reason for a full refund within a certain amount of time</skos:definition>
@@ -1061,12 +1078,20 @@ It contains many classes and properties extracted from:
 		<skos:definition xml:lang="en">a type of parking for a vehicle, e.g. in a garage, on the street (open-sky), or in a carport</skos:definition>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-ec-ec;PaymentMethod">
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QualitativeValue"/>
+	</owl:Class>
+	
 	<owl:NamedIndividual rdf:about="&auto-ec-ec;Petrol">
 		<rdfs:label xml:lang="en">Petrol (vso:FuelTypeValue)</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">Petrol, VW ID: 1</skos:definition>
 		<auto-ec-ec:hasID>1</auto-ec-ec:hasID>
 	</owl:NamedIndividual>
+	
+	<owl:Class rdf:about="&auto-ec-ec;PriceSpecification">
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;ValueSpace"/>
+	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-ec-ec;Private">
 		<rdf:type rdf:resource="&auto-ec-ec;CarUsageType"/>
@@ -1080,6 +1105,10 @@ It contains many classes and properties extracted from:
 		<skos:definition xml:lang="en">Rear-wheel drive is a transmission layout where the engine drives the rear wheels.</skos:definition>
 		<fibo-fnd-utl-av:synonym xml:lang="en">RWD</fibo-fnd-utl-av:synonym>
 	</owl:NamedIndividual>
+	
+	<owl:Class rdf:about="&auto-ec-ec;RelativePriceSpecification">
+		<rdfs:subClassOf rdf:resource="&auto-ec-ec;PriceSpecification"/>
+	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-ec-ec;RentalVehicleUsage">
 		<rdf:type rdf:resource="&auto-ec-ec;CarUsageType"/>
@@ -1217,6 +1246,11 @@ It contains many classes and properties extracted from:
 		<skos:definition xml:lang="en">Urban usage as a traffic pattern</skos:definition>
 	</owl:NamedIndividual>
 	
+	<owl:Class rdf:about="&auto-ec-ec;WarrantyScope">
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;NonPhysicalObject"/>
+		<rdfs:label>warranty scope</rdfs:label>
+	</owl:Class>
+	
 	<owl:DatatypeProperty rdf:about="&auto-ec-ec;acrissCode">
 		<rdfs:label xml:lang="en">acriss code</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
@@ -1244,7 +1278,7 @@ It contains many classes and properties extracted from:
 		<rdfs:label xml:lang="en">advanced payment</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
+		<rdfs:range rdf:resource="&auto-ec-ec;PriceSpecification"/>
 		<skos:definition xml:lang="en">Indicates the advanced payment for the financing</skos:definition>
 	</owl:ObjectProperty>
 	
@@ -1291,9 +1325,9 @@ It contains many classes and properties extracted from:
 		<rdfs:range>
 			<owl:Class>
 				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&auto-mo-mo;BusinessEntity">
+					<rdf:Description rdf:about="&auto-ec-ec;BusinessEntity">
 					</rdf:Description>
-					<rdf:Description rdf:about="&auto-mo-mo;BusinessEntityType">
+					<rdf:Description rdf:about="&auto-ec-ec;BusinessEntityType">
 					</rdf:Description>
 				</owl:unionOf>
 			</owl:Class>
@@ -1321,7 +1355,7 @@ It contains many classes and properties extracted from:
 		<rdfs:label xml:lang="en">credit</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
+		<rdfs:range rdf:resource="&auto-ec-ec;PriceSpecification"/>
 		<skos:definition xml:lang="en">Indicates the credit for the financing</skos:definition>
 	</owl:ObjectProperty>
 	
@@ -1340,7 +1374,7 @@ It contains many classes and properties extracted from:
 		<rdfs:domain rdf:resource="&auto-ec-ec;OwnershipInfo"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-		<rdfs:range rdf:resource="&auto-mo-mo;BusinessEntity"/>
+		<rdfs:range rdf:resource="&auto-ec-ec;BusinessEntity"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;Organization"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;Person"/>
 		<skos:definition xml:lang="en">This property points to the current owner of the vehicle.</skos:definition>
@@ -1350,7 +1384,7 @@ It contains many classes and properties extracted from:
 		<rdfs:label xml:lang="en">customer cash price</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
+		<rdfs:range rdf:resource="&auto-ec-ec;PriceSpecification"/>
 		<skos:definition xml:lang="en">Indicates the customer cash price for the financing</skos:definition>
 	</owl:ObjectProperty>
 	
@@ -1358,7 +1392,7 @@ It contains many classes and properties extracted from:
 		<rdfs:label xml:lang="en">customer deposit</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
+		<rdfs:range rdf:resource="&auto-ec-ec;PriceSpecification"/>
 		<skos:definition xml:lang="en">Indicates the customer deposit for the financing</skos:definition>
 	</owl:ObjectProperty>
 	
@@ -1366,7 +1400,7 @@ It contains many classes and properties extracted from:
 		<rdfs:label xml:lang="en">deposit contribution</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
+		<rdfs:range rdf:resource="&auto-ec-ec;PriceSpecification"/>
 		<skos:definition xml:lang="en">Indicates the deposit contribution for the financing</skos:definition>
 	</owl:ObjectProperty>
 	
@@ -1374,7 +1408,7 @@ It contains many classes and properties extracted from:
 		<rdfs:label xml:lang="en">discount</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
+		<rdfs:range rdf:resource="&auto-ec-ec;PriceSpecification"/>
 		<skos:definition xml:lang="en">Indicates the discount for the financing</skos:definition>
 	</owl:ObjectProperty>
 	
@@ -1389,7 +1423,7 @@ It contains many classes and properties extracted from:
 		<rdfs:label xml:lang="en">excess mileage</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
+		<rdfs:range rdf:resource="&auto-ec-ec;PriceSpecification"/>
 		<skos:definition xml:lang="en">Indicates the rate for excess mileage</skos:definition>
 	</owl:ObjectProperty>
 	
@@ -1405,7 +1439,7 @@ It contains many classes and properties extracted from:
 		<rdfs:label xml:lang="en">final payment fee</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
+		<rdfs:range rdf:resource="&auto-ec-ec;PriceSpecification"/>
 		<skos:definition xml:lang="en">Indicates the final payment fee for the financing</skos:definition>
 	</owl:ObjectProperty>
 	
@@ -1413,7 +1447,7 @@ It contains many classes and properties extracted from:
 		<rdfs:label xml:lang="en">first monthly payment fee</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
+		<rdfs:range rdf:resource="&auto-ec-ec;PriceSpecification"/>
 		<skos:definition xml:lang="en">Indicates the first monthly payment fee for the financing</skos:definition>
 	</owl:ObjectProperty>
 	
@@ -1495,7 +1529,7 @@ Note: This property should be used with gr:ActualProductOrServiceInstance (when 
 		<rdfs:label xml:lang="en">list price</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
+		<rdfs:range rdf:resource="&auto-ec-ec;PriceSpecification"/>
 		<skos:definition xml:lang="en">The original list price of the new car at the time of production</skos:definition>
 	</owl:ObjectProperty>
 	
@@ -1532,7 +1566,7 @@ Typical unit code(s): KMT for kilometers, SMI for statute miles</skos:definition
 		<rdfs:label xml:lang="en">monthly payment</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
+		<rdfs:range rdf:resource="&auto-ec-ec;PriceSpecification"/>
 		<skos:definition xml:lang="en">Indicates the monthly payment for the financing</skos:definition>
 	</owl:ObjectProperty>
 	
@@ -1608,7 +1642,7 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
 		<rdfs:label xml:lang="en">otr retail price</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
+		<rdfs:range rdf:resource="&auto-ec-ec;PriceSpecification"/>
 		<skos:definition xml:lang="en">Indicates the OTR retail price for the financing</skos:definition>
 	</owl:ObjectProperty>
 	
@@ -1617,7 +1651,7 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
 		<rdfs:domain rdf:resource="&auto-ec-ec;OwnershipInfo"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-		<rdfs:range rdf:resource="&auto-mo-mo;BusinessEntity"/>
+		<rdfs:range rdf:resource="&auto-ec-ec;BusinessEntity"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;Organization"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;Person"/>
 		<skos:definition xml:lang="en">This property points to the owner of the vehicle for the respective period of time, as indicated by the uco:OwnershipInfo node.</skos:definition>
@@ -1670,7 +1704,7 @@ If possible, use DBPedia URIs, e.g. http://dbpedia.org/resource/Dog.</skos:defin
 	<owl:ObjectProperty rdf:about="&auto-ec-ec;priceModifier">
 		<rdfs:label xml:lang="en">price modiﬁer</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-		<rdfs:range rdf:resource="&auto-mo-mo;RelativePriceSpecification"/>
+		<rdfs:range rdf:resource="&auto-ec-ec;RelativePriceSpecification"/>
 		<skos:definition xml:lang="en">Links a coo:ConfigurationInfo node to information on a choice or component or the combination of multiple choices will affect the regular pricing of the resulting vehicle
 
 Note: The use of gr:addOn is in general a better way of modeling surcharges</skos:definition>
@@ -1724,7 +1758,7 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
 		<rdfs:label xml:lang="en">scrappage contribution</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
+		<rdfs:range rdf:resource="&auto-ec-ec;PriceSpecification"/>
 		<skos:definition xml:lang="en">Indicates the scrappage contribution for the financing</skos:definition>
 	</owl:ObjectProperty>
 	
@@ -1850,7 +1884,7 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
 		<rdfs:label xml:lang="en">total payable</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-ec-ec;Financing"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
+		<rdfs:range rdf:resource="&auto-ec-ec;PriceSpecification"/>
 		<skos:definition xml:lang="en">Indicates the total payable for the financing</skos:definition>
 	</owl:ObjectProperty>
 	
@@ -1867,7 +1901,7 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
 		<rdfs:label xml:lang="en">valuation</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-		<rdfs:range rdf:resource="&auto-mo-mo;PriceSpecification"/>
+		<rdfs:range rdf:resource="&auto-ec-ec;PriceSpecification"/>
 		<skos:definition xml:lang="en">The market price assessment gained by the respective valuation. Use gr:name to indicate the name of the valuation service.</skos:definition>
 	</owl:ObjectProperty>
 	
@@ -1881,13 +1915,6 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
 		<skos:definition xml:lang="en">The release date of a vehicle model (often used to differentiate versions of the same make and model)</skos:definition>
 		<skos:definition>The release date of a vehicle model (often used to differentiate versions of the same make and model).</skos:definition>
 	</owl:DatatypeProperty>
-	
-	<owl:Class rdf:about="&auto-mo-mo;BusinessEntity">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Object"/>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-mo-mo;BusinessEntityType">
-	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;Location">
 	</owl:Class>
@@ -1904,16 +1931,10 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
 	<owl:Class rdf:about="&auto-mo-mo;Organization">
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;PaymentMethod">
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-mo-mo;Person">
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;PostalAddress">
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-mo-mo;PriceSpecification">
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;Process">
@@ -1947,14 +1968,7 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
 	<owl:Class rdf:about="&auto-mo-mo;QuantitativeValueInteger">
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;RelativePriceSpecification">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;PriceSpecification"/>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-mo-mo;TextValue">
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-mo-mo;WarrantyScope">
 	</owl:Class>
 	
 	<owl:DatatypeProperty rdf:about="&auto-mo-mo;hasMaxValueFloat">
@@ -2024,12 +2038,12 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 				<owl:intersectionOf rdf:parseType="Collection">
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;priceModifier"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;RelativePriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;RelativePriceSpecification"/>
 						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 					</owl:Restriction>
 					<owl:Restriction>
 						<owl:onProperty rdf:resource="&auto-ec-ec;priceModifier"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;RelativePriceSpecification"/>
+						<owl:onClass rdf:resource="&auto-ec-ec;RelativePriceSpecification"/>
 						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
 					</owl:Restriction>
 				</owl:intersectionOf>
@@ -2161,22 +2175,22 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-ec-ec;pets"/>
-				<owl:onClass rdf:resource="&auto-ec-ec;Species"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-ec-ec;listPrice"/>
-				<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+				<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
 				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-ec-ec;valuation"/>
-				<owl:onClass rdf:resource="&auto-mo-mo;PriceSpecification"/>
+				<owl:onClass rdf:resource="&auto-ec-ec;PriceSpecification"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-ec-ec;pets"/>
+				<owl:onClass rdf:resource="&auto-ec-ec;Species"/>
 				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -2349,11 +2363,11 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 		<skos:definition xml:lang="en">a device that is designed or used to transport people or cargo over land, water, air, or through space</skos:definition>
 	</owl:Class>
 	
-	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/https://spec.edmcouncil.org/auto/ontology/EC/VehicleECommerce/marketingName">
+	<owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/https://spec.edmcouncil.org/auto/ontology/EC/VehicleECommerce/marketingName">
 		<rdfs:label xml:lang="en">marketing name</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">The name of the object for marketing purposes</skos:definition>
-	</rdf:Description>
+	</owl:DatatypeProperty>
 	
 	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;abbreviation">
 	</owl:AnnotationProperty>

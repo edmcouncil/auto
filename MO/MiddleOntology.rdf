@@ -80,24 +80,14 @@
 	<owl:AnnotationProperty rdf:about="&skos;definition">
 	</owl:AnnotationProperty>
 	
-	<owl:Class rdf:about="&auto-mo-mo;BusinessEntity">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Object"/>
-		<rdfs:label xml:lang="en">business entity</rdfs:label>
-		<owl:equivalentClass>
-			<owl:Class>
-				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&auto-mo-mo;Organization">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-mo-mo;Person">
-					</rdf:Description>
-				</owl:unionOf>
-			</owl:Class>
-		</owl:equivalentClass>
+	<owl:Class rdf:about="&auto-mo-mo;Action">
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Process"/>
+		<rdfs:label xml:lang="en">action</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;BusinessEntityType">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Quality"/>
-		<rdfs:label xml:lang="en">business entity type</rdfs:label>
+	<owl:Class rdf:about="&auto-mo-mo;Agent">
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;PhysicalObject"/>
+		<rdfs:label xml:lang="en">agent</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;Location">
@@ -129,14 +119,12 @@
 		<rdfs:label xml:lang="en">organization</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;PaymentMethod">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Quality"/>
-		<rdfs:label xml:lang="en">payment method</rdfs:label>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-mo-mo;Person">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;PhysicalObject"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Agent"/>
 		<rdfs:label xml:lang="en">person</rdfs:label>
+		<rdfs:comment xml:lang="en">Within the context of this manual, a fetus is considered part of a pregnant woman rather than a separate individual. After death, a human body is not considered to be a person.</rdfs:comment>
+		<skos:definition xml:lang="en">Any living human.</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.1</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;PhysicalObject">
@@ -150,13 +138,8 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;PostalAddress">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Quality"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Location"/>
 		<rdfs:label xml:lang="en">postal address</rdfs:label>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-mo-mo;PriceSpecification">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Quality"/>
-		<rdfs:label xml:lang="en">price speciﬁcation</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;Process">
@@ -169,7 +152,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;QualitativeValue">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Quality"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;ValueSpace"/>
 		<rdfs:label xml:lang="en">qualitative value</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
@@ -200,15 +183,6 @@
 		<rdfs:label xml:lang="en">quantitative value integer</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;RelativePriceSpecification">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;PriceSpecification"/>
-		<rdfs:label xml:lang="en">relative price speciﬁcation</rdfs:label>
-		<rdfs:comment xml:lang="en">A shortcut for indicating the effect of a choice or set of choices on the unit price. Use positive values for a surcharge and negative values for a deduction.
-
-Note: Price information should in general be attached to a gr:Offering node, not to a Base Model, Trim, Derivative, or Complete Car Model. Use this shortcut with care.</rdfs:comment>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-mo-mo;Role">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;NonPhysicalObject"/>
 		<rdfs:label xml:lang="en">role</rdfs:label>
@@ -221,11 +195,6 @@ Note: Price information should in general be attached to a gr:Offering node, not
 	<owl:Class rdf:about="&auto-mo-mo;ValueSpace">
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;WarrantyScope">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;NonPhysicalObject"/>
-		<rdfs:label xml:lang="en">warranty scope</rdfs:label>
-	</owl:Class>
-	
 	<owl:DatatypeProperty rdf:about="&auto-mo-mo;hasMaxValueFloat">
 		<rdfs:label xml:lang="en">has max value float</rdfs:label>
 	</owl:DatatypeProperty>
@@ -234,6 +203,10 @@ Note: Price information should in general be attached to a gr:Offering node, not
 		<rdfs:label xml:lang="en">has min value float</rdfs:label>
 	</owl:DatatypeProperty>
 	
+	<owl:ObjectProperty rdf:about="&auto-mo-mo;hasPart">
+		<owl:inverseOf rdf:resource="&auto-mo-mo;isPartOf"/>
+	</owl:ObjectProperty>
+	
 	<owl:DatatypeProperty rdf:about="&auto-mo-mo;hasUnitOfMeasurement">
 		<rdfs:label xml:lang="en">has unit of measurement</rdfs:label>
 	</owl:DatatypeProperty>
@@ -241,6 +214,9 @@ Note: Price information should in general be attached to a gr:Offering node, not
 	<owl:DatatypeProperty rdf:about="&auto-mo-mo;hasValueFloat">
 		<rdfs:label xml:lang="en">has value float</rdfs:label>
 	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-mo-mo;isPartOf">
+	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-mo-mo;qualitativeProductOrServiceProperty">
 		<rdfs:label xml:lang="en">qualitative product or service property</rdfs:label>
@@ -253,9 +229,12 @@ Note: Price information should in general be attached to a gr:Offering node, not
 	<owl:ObjectProperty rdf:about="&auto-mo-mo;valueReference">
 	</owl:ObjectProperty>
 	
-	<rdf:Description rdf:about="&fibo-fnd-utl-av;MaturityLevel">
+	<owl:Class rdf:about="&fibo-fnd-utl-av;MaturityLevel">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;ValueSpace"/>
-	</rdf:Description>
+	</owl:Class>
+	
+	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;adaptedFrom">
+	</owl:AnnotationProperty>
 	
 	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;hasMaturityLevel">
 	</owl:AnnotationProperty>

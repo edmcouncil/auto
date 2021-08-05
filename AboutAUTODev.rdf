@@ -14,23 +14,22 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:Analytics="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/"
+     xmlns:auto-ec-ec="https://spec.edmcouncil.org/auto/ontology/EC/VehicleECommerce/"
      xmlns:auto-mo-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
+     xmlns:auto-vc-vc="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"
      xmlns:auto-de-tio="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/"
      xmlns:auto-ec-vec="https://spec.edmcouncil.org/auto/ontology/EC/VechicleECommerce/"
-     xmlns:auto-vc-vc="https://spec.edmcouncil.org/auto/ontology/VC/VechicleCore/"
      xmlns:auto-mo-mod="https://spec.edmcouncil.org/auto/ontology/EC/MetadataMO/"
      xmlns:auto-vs-vsso="https://spec.edmcouncil.org/auto/ontology/VS/VehicleSignals/"
      xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/AboutAUTODev/">
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>    
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleECommerce/"/>            
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/AutonomousVehicles/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/Map/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleECommerce/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MetadataAUTO/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Analytics/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
         <terms:abstract>This ontology is provided for the convenience of AUTO users.  It loads the very latest version of every AUTO ontology (released, provisional, and informative) based on the contents of GitHub, for use in particular while working on revisions.  Note that metadata files are included.</terms:abstract>
         <terms:license rdf:resource="http://opensource.org/licenses/MIT"/>
@@ -42,6 +41,23 @@
         <rdfs:label>About AUTO Development</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://spec.edmcouncil.org/auto/</rdfs:seeAlso>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.omg.org/techprocess/ab/SpecificationMetadata/submitter -->
+
+    <owl:AnnotationProperty rdf:about="http://www.omg.org/techprocess/ab/SpecificationMetadata/submitter"/>
 </rdf:RDF>
 
 
