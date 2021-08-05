@@ -643,33 +643,6 @@ The upper three levels of driving automation (3-5) refer to cases in which the A
 		<fibo-fnd-utl-av:usageNote xml:lang="en">A vehicle in which a level 4 ADS is installed experiences a DDT performance-relevant system failure in its primary electrical power system. The ADS utilizes a backup power source in order to achieve a minimal risk condition.</fibo-fnd-utl-av:usageNote>
 	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="&auto-de-av;NoAutomation">
-		<rdf:type rdf:resource="&owl;Class"/>
-		<rdfs:subClassOf rdf:resource="&auto-de-av;HumanDrivingLevel"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo-mo;hasPart"/>
-				<owl:onClass>
-					<owl:Class>
-						<owl:intersectionOf rdf:parseType="Collection">
-							<rdf:Description rdf:about="&auto-de-av;DynamicDrivingTaskFallback">
-							</rdf:Description>
-							<owl:Restriction>
-								<owl:onProperty rdf:resource="&auto-de-cc;hasAgent"/>
-								<owl:allValuesFrom rdf:resource="&auto-mo-mo;Person"/>
-							</owl:Restriction>
-						</owl:intersectionOf>
-					</owl:Class>
-				</owl:onClass>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">No Automation</rdfs:label>
-		<skos:definition xml:lang="en">the performance by the driver of the entire DDT, even when enhanced by active safety systems</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 5.1</fibo-fnd-utl-av:adaptedFrom>
-		<fibo-fnd-utl-av:synonym xml:lang="en">Level 0</fibo-fnd-utl-av:synonym>
-	</owl:NamedIndividual>
-	
 	<owl:Class rdf:about="&auto-de-av;OperationalDesignDomain">
 		<rdfs:subClassOf rdf:resource="&auto-de-cc;RoadCondition"/>
 		<rdfs:label xml:lang="en">Operational Design Domain</rdfs:label>

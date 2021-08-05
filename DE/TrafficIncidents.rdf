@@ -267,18 +267,6 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">ANSI D.16-2017, section 2.9.1</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="&auto-de-tio;ConditionalDrivingAutomation">
-		<rdfs:label xml:lang="en">Conditional Driving Automation</rdfs:label>
-		<skos:definition xml:lang="en">The sustained and ODD-specific performance by an ADS of the entire DDT with the expectation that the DDT fallback-ready user is receptive to ADS-issued requests to intervene, as well as to DDT performance-relevant system failures in other vehicle systems, and will respond appropriately.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 5.4</fibo-fnd-utl-av:adaptedFrom>
-		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">A level 3 ADS’s DDT fallback-ready user is also expected to be receptive to evident DDT performance- relevant system failures in vehicle systems that do not necessarily trigger an ADS-issued request to intervene, such as a broken body or a suspension component.</fibo-fnd-utl-av:explanatoryNote>
-		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">An “appropriate” response by a DDT fallback-ready user to a request to intervene may entail bringing the vehicle to a minimal risk condition or continuing to operate the vehicle after the ADS has disengaged.</fibo-fnd-utl-av:explanatoryNote>
-		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">In the event of a DDT performance-relevant system failure in a level 3 ADS or in the event that the ADS will soon exit its ODD, the ADS will issue a request to intervene within sufficient time for a typical person to respond appropriately to the driving situation at hand.</fibo-fnd-utl-av:explanatoryNote>
-		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">The DDT fallback-ready user need not supervise a level 3 ADS while it is engaged but is expected to be prepared to either resume the DDT when the ADS issues a request to intervene or to perform the fallback and achieve a minimal risk condition if the failure condition precludes normal operation.</fibo-fnd-utl-av:explanatoryNote>
-		<fibo-fnd-utl-av:synonym xml:lang="en">Level 3</fibo-fnd-utl-av:synonym>
-		<fibo-fnd-utl-av:usageNote xml:lang="en">An ADS feature capable of performing the entire DDT in low-speed, stop-and-go freeway traffic.</fibo-fnd-utl-av:usageNote>
-	</owl:NamedIndividual>
-	
 	<owl:Class rdf:about="&auto-de-tio;ContactVehicle">
 		<rdfs:subClassOf rdf:resource="&auto-de-tio;RoleInAccident"/>
 		<rdfs:label xml:lang="en">Contact Vehicle</rdfs:label>
@@ -385,14 +373,6 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 		<skos:definition xml:lang="en">An occupant who is in actual physical control of a transport vehicle or, for an out-of control vehicle, an occupant who was in control until control was lost.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">ANSI D.16-2017, section 2.2.37</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
-	
-	<owl:NamedIndividual rdf:about="&auto-de-tio;DriverAssistance">
-		<rdfs:label xml:lang="en">Driver Assistance</rdfs:label>
-		<skos:definition xml:lang="en">The sustained and ODD-specific execution by a driving automation system of either the lateral or the longitudinal vehicle motion control subtask of the DDT (but not both simultaneously) with the expectation that the driver performs the remainder of the DDT.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 5.2</fibo-fnd-utl-av:adaptedFrom>
-		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">A level 1 feature performing either the lateral or the longitudinal vehicle motion control subtask of the DDT is capable of only limited OEDR within its dimension (lateral or longitudinal), meaning that there are some events that the driving automation system is not capable of recognizing or responding to. Therefore, the driver must supervise the driving automation system performance by completing the OEDR subtask of the DDT as well as performing the other dimension of vehicle motion control. See Figure 1 (discussing the three primary subtasks of the DDT).</fibo-fnd-utl-av:explanatoryNote>
-		<fibo-fnd-utl-av:synonym xml:lang="en">Level 1</fibo-fnd-utl-av:synonym>
-	</owl:NamedIndividual>
 	
 	<owl:Class rdf:about="&auto-de-tio;Driveway">
 		<rdfs:subClassOf rdf:resource="&auto-de-tio;Trafficway"/>
@@ -519,17 +499,6 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.18</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="&auto-de-tio;FullDrivingAutomation">
-		<rdfs:label xml:lang="en">Full Driving Automation</rdfs:label>
-		<skos:definition xml:lang="en">The sustained and unconditional (i.e., not ODD-specific) performance by an ADS of the entire DDT and DDT fallback without any expectation that a user will respond to a request to intervene.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 5.6</fibo-fnd-utl-av:adaptedFrom>
-		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">In the event of a DDT performance-relevant system failure (of an ADS or the vehicle), a level 5 ADS automatically performs the DDT fallback and achieves a minimal risk condition.</fibo-fnd-utl-av:explanatoryNote>
-		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">The user does not need to supervise a level 5 ADS, nor be receptive to a request to intervene while it is engaged.</fibo-fnd-utl-av:explanatoryNote>
-		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">“Unconditional/not ODD-specific” means that the ADS can operate the vehicle under all driver-manageable road conditions within its region of the world. This means, for example, that there are no design-based weather, time-of-day, or geographical restrictions on where and when the ADS can operate the vehicle. However, there may be conditions not manageable by a driver in which the ADS would also be unable to complete a given trip (e.g., white-out snow storm, flooded roads, glare ice, etc.) until or unless the adverse conditions clear. At the onset of such unmanageable conditions the ADS would perform the DDT fallback to achieve a minimal risk condition (e.g., by pulling over to the side of the road and waiting for the conditions to change).</fibo-fnd-utl-av:explanatoryNote>
-		<fibo-fnd-utl-av:synonym xml:lang="en">Level 5</fibo-fnd-utl-av:synonym>
-		<fibo-fnd-utl-av:usageNote xml:lang="en">A vehicle with an ADS that, once programmed with a destination, is capable of operating the vehicle throughout complete trips on public roadways, regardless of the starting and end points or intervening road, traffic, and weather conditions.</fibo-fnd-utl-av:usageNote>
-	</owl:NamedIndividual>
-	
 	<owl:Class rdf:about="&auto-de-tio;Fully-controlledAccessHighway">
 		<rdfs:subClassOf rdf:resource="&auto-de-tio;Trafficway"/>
 		<rdfs:label xml:lang="en">Fully-controlled Access Highway</rdfs:label>
@@ -581,18 +550,6 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 		<skos:definition xml:lang="en">A sign required to be affixed to any motor vehicle transporting quantities of hazardous materials in quantities above the thresholds established by the U.S. Department of Transportation, or other authorized entity.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.9.5.1</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
-	
-	<owl:NamedIndividual rdf:about="&auto-de-tio;HighDrivingAutomation">
-		<rdfs:label xml:lang="en">High Driving Automation</rdfs:label>
-		<skos:definition xml:lang="en">The sustained and ODD-specific performance by an ADS of the entire DDT and DDT fallback, without any expectation that a user will respond to a request to intervene.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 5.5</fibo-fnd-utl-av:adaptedFrom>
-		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Level 4 ADS features may be designed to operate the vehicle throughout complete trips (e.g., a closed campus shuttle feature), or they may be designed to operate the vehicle during only part of a given trip, after ODD requirements are met (e.g., a high-speed freeway cruising feature), For example, in order to complete a given trip, a user of a vehicle equipped with a level 4 ADS feature designed to operate the vehicle during high-speed freeway conditions will generally choose to perform the DDT when the freeway ends; otherwise the ADS will automatically perform DDT fallback and achieve a minimal risk condition as needed. However, unlike at level 3, this user is not a DDT fallback-ready user while the ADS is engaged (see Example 2, below).</fibo-fnd-utl-av:explanatoryNote>
-		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">The user does not need to supervise a level 4 ADS feature or be receptive to a request to intervene while the ADS is engaged. A level 4 ADS is capable of automatically performing DDT fallback, as well as achieving a minimal risk condition if a user does not resume performance of the DDT. This automated DDT fallback and minimal risk condition achievement capability is the primary difference between level 4 and level 3 ADS features. This means that the user of an engaged level 4 ADS feature is a passenger who need not respond to requests to intervene or to DDT performance-relevant system failures.</fibo-fnd-utl-av:explanatoryNote>
-		<fibo-fnd-utl-av:synonym xml:lang="en">Level 4</fibo-fnd-utl-av:synonym>
-		<fibo-fnd-utl-av:usageNote xml:lang="en">A driveless operation dispatcher may engage a level 4 ADS-DV capable of following a pre-defined route within a confined geographical area (e.g., residential community, military base, university campus).</fibo-fnd-utl-av:usageNote>
-		<fibo-fnd-utl-av:usageNote xml:lang="en">A level 4 ADS feature capable of performing the entire DDT during sustained operation on a motorway or freeway (i.e., within its ODD). (Note: The presence of a user in the driver’s seat who is capable of performing the DDT is envisioned in this example, as driver performance of the DDT would have been necessary before entering, and would again be necessary after leaving, the motorway or freeway. Thus, such a feature would alert the user that s/he should resume vehicle operation shortly before exiting the ODD, but if the user fails to respond to such an alert, the ADS will nevertheless perform the DDT fallback and achieve a minimal risk condition automatically.)</fibo-fnd-utl-av:usageNote>
-		<fibo-fnd-utl-av:usageNote xml:lang="en">A level 4 ADS feature capable of performing the entire DDT during valet parking (i.e., curb-to-door or vice versa) without any driver supervision.</fibo-fnd-utl-av:usageNote>
-	</owl:NamedIndividual>
 	
 	<owl:Class rdf:about="&auto-de-tio;In-transport">
 		<rdfs:subClassOf rdf:resource="&auto-de-tio;State"/>
@@ -800,13 +757,6 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.29</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="&auto-de-tio;NoAutomation">
-		<rdfs:label xml:lang="en">No Automation</rdfs:label>
-		<skos:definition xml:lang="en">The performance by the driver of the entire DDT, even when enhanced by active safety systems.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 5.1</fibo-fnd-utl-av:adaptedFrom>
-		<fibo-fnd-utl-av:synonym xml:lang="en">Level 0</fibo-fnd-utl-av:synonym>
-	</owl:NamedIndividual>
-	
 	<owl:Class rdf:about="&auto-de-tio;Non-contactVehicle">
 		<rdfs:subClassOf rdf:resource="&auto-de-tio;RoleInAccident"/>
 		<rdfs:label xml:lang="en">Non-contact Vehicle</rdfs:label>
@@ -963,14 +913,6 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	<owl:Class rdf:about="&auto-de-tio;PartOfTrafficway">
 		<rdfs:subClassOf rdf:resource="&auto-de-tio;TransportWay"/>
 	</owl:Class>
-	
-	<owl:NamedIndividual rdf:about="&auto-de-tio;PartialDrivingAutomation">
-		<rdfs:label xml:lang="en">Partial Driving Automation</rdfs:label>
-		<skos:definition xml:lang="en">The sustained and ODD-specific execution by a driving automation system of both the lateral and longitudinal vehicle motion control subtasks of the DDT with the expectation that the driver completes the OEDR subtask and supervises the driving automation system.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 5.3</fibo-fnd-utl-av:adaptedFrom>
-		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">A level 2 driving automation feature is capable of only limited OEDR, meaning that there are some events that the driving automation system is not capable of recognizing or responding to. Therefore, the driver supervises the driving automation system performance by completing the OEDR subtask of the DDT. See Figure 1 (discussing the three primary subtasks of the DDT).</fibo-fnd-utl-av:explanatoryNote>
-		<fibo-fnd-utl-av:synonym xml:lang="en">Level 2</fibo-fnd-utl-av:synonym>
-	</owl:NamedIndividual>
 	
 	<owl:Class rdf:about="&auto-de-tio;Passenger">
 		<rdfs:subClassOf rdf:resource="&auto-de-tio;RoleOfPersonInTraffic"/>
