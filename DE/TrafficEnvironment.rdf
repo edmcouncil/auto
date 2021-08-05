@@ -139,12 +139,6 @@
 		<rdfs:subClassOf rdf:resource="&auto-de-ev;EducationalInstitute"/>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-ev;Commerce">
-		<rdfs:label xml:lang="en">Commerce</rdfs:label>
-		<skos:definition xml:lang="en">Any trade, traffic or transportation of commodities or persons for financial consideration or exchange, or in the furtherance of a business enterprise.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">ANSI D.16-2017, section 2.9.1</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-de-ev;Convenience">
 		<rdfs:subClassOf rdf:resource="&auto-de-ev;Shop"/>
 	</owl:Class>
@@ -172,12 +166,6 @@
 		<rdfs:label xml:lang="en">Curb Return</rdfs:label>
 		<skos:definition xml:lang="en">The curved section of curb used at intersections in joining straight sections of curb.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.20</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-ev;DeliberateIntent">
-		<rdfs:label xml:lang="en">Deliberate Intent</rdfs:label>
-		<skos:definition xml:lang="en">The classification given to the cause of an event which occurs when a person acts deliberately to cause the event or deliberately refrains from prudent acts which would prevent occurrence of the event.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.2</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-ev;DirectionalRoadSign">
@@ -935,9 +923,6 @@
 		<rdfs:label xml:lang="en">Turn Lane</rdfs:label>
 		<skos:definition xml:lang="en">A lane exclusively designated for vehicles turning from one trafficway to another.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.23</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-mo-mo;Perdurant">
 	</owl:Class>
 
 </rdf:RDF>

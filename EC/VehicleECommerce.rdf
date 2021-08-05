@@ -1259,7 +1259,7 @@ It contains many classes and properties extracted from:
 		<rdfs:domain>
 			<owl:Class>
 				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&auto-vc-vc;BusOrCoach">
+					<rdf:Description rdf:about="&auto-vc-vc;Bus">
 					</rdf:Description>
 					<rdf:Description rdf:about="&auto-vc-vc;Car">
 					</rdf:Description>
@@ -1541,6 +1541,12 @@ Note: This property should be used with gr:ActualProductOrServiceInstance (when 
 		<rdfs:range rdf:resource="&auto-mo-mo;PostalAddress"/>
 		<skos:definition xml:lang="en">The main location(s) of the vehicle during the period of ownership</skos:definition>
 	</owl:ObjectProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-ec-ec;marketingName">
+		<rdfs:label xml:lang="en">marketing name</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<skos:definition xml:lang="en">The name of the object for marketing purposes</skos:definition>
+	</owl:DatatypeProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ec-ec;mileageEnd">
 		<rdfs:label xml:lang="en">mileage end</rdfs:label>
@@ -1992,7 +1998,7 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
 	<owl:ObjectProperty rdf:about="&auto-mo-mo;valueReference">
 	</owl:ObjectProperty>
 	
-	<owl:Class rdf:about="&auto-vc-vc;BusOrCoach">
+	<owl:Class rdf:about="&auto-vc-vc;Bus">
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-ec-ec;acrissCode"/>
@@ -2069,68 +2075,32 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 	
 	<owl:Class rdf:about="&auto-vc-vc;MotorizedRoadVehicle">
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-ec-ec;acrissCode"/>
-						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&xsd;string"/>
-					</owl:Restriction>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-ec-ec;acrissCode"/>
-						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&xsd;string"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-ec-ec;acrissCode"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+				<owl:onDataRange rdf:resource="&xsd;string"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-ec-ec;insuranceGroup"/>
-						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&xsd;string"/>
-					</owl:Restriction>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-ec-ec;insuranceGroup"/>
-						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&xsd;string"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-ec-ec;insuranceGroup"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+				<owl:onDataRange rdf:resource="&xsd;string"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-ec-ec;insuranceGroup50"/>
-						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&xsd;string"/>
-					</owl:Restriction>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-ec-ec;insuranceGroup50"/>
-						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&xsd;string"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-ec-ec;insuranceGroup50"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+				<owl:onDataRange rdf:resource="&xsd;string"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-ec-ec;productCode"/>
-						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&xsd;string"/>
-					</owl:Restriction>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-ec-ec;productCode"/>
-						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-						<owl:onDataRange rdf:resource="&xsd;string"/>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-ec-ec;productCode"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+				<owl:onDataRange rdf:resource="&xsd;string"/>
+			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">motorized road vehicle</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
@@ -2349,7 +2319,7 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/https://spec.edmcouncil.org/auto/ontology/EC/VehicleECommerce/marketingName"/>
+				<owl:onProperty rdf:resource="&auto-ec-ec;marketingName"/>
 				<owl:someValuesFrom rdf:resource="&xsd;string"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -2362,12 +2332,6 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Vehicle"/>
 		<skos:definition xml:lang="en">a device that is designed or used to transport people or cargo over land, water, air, or through space</skos:definition>
 	</owl:Class>
-	
-	<owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/https://spec.edmcouncil.org/auto/ontology/EC/VehicleECommerce/marketingName">
-		<rdfs:label xml:lang="en">marketing name</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<skos:definition xml:lang="en">The name of the object for marketing purposes</skos:definition>
-	</owl:DatatypeProperty>
 	
 	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;abbreviation">
 	</owl:AnnotationProperty>

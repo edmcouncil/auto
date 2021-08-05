@@ -93,7 +93,7 @@
 	<owl:Class rdf:about="&auto-mo-mo;Location">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Quality"/>
 		<rdfs:label xml:lang="en">location</rdfs:label>
-		<owl:equivalentClass rdf:resource="&auto-mo-mo;Place"/>
+		<rdfs:label xml:lang="en">place</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;Model">
@@ -132,11 +132,6 @@
 		<rdfs:label xml:lang="en">physical object</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;Place">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Quality"/>
-		<rdfs:label xml:lang="en">place</rdfs:label>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-mo-mo;PostalAddress">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Location"/>
 		<rdfs:label xml:lang="en">postal address</rdfs:label>
@@ -147,8 +142,9 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;PropertyValue">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;ValueSpace"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Quality"/>
 		<rdfs:label xml:lang="en">property value</rdfs:label>
+		<skos:definition xml:lang="en">A property-value pair, e.g. representing a feature of a product or place.</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;QualitativeValue">
@@ -193,6 +189,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;ValueSpace">
+		<rdfs:label xml:lang="en">value space</rdfs:label>
 	</owl:Class>
 	
 	<owl:DatatypeProperty rdf:about="&auto-mo-mo;hasMaxValueFloat">
