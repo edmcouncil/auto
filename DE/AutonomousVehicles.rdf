@@ -51,33 +51,6 @@
 		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
 	</owl:Ontology>
 	
-	<owl:AnnotationProperty rdf:about="&terms;abstract">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&terms;contributor">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&terms;license">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&sm;copyright">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&sm;fileAbbreviation">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&sm;filename">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&skos;definition">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&skos;historyNote">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&skos;scopeNote">
-	</owl:AnnotationProperty>
-	
 	<owl:Class rdf:about="&auto-de-av;ADSDedicatedVehicle">
 		<rdfs:subClassOf rdf:resource="&auto-de-av;ADSEquippedVehicle"/>
 		<rdfs:subClassOf>
@@ -928,47 +901,5 @@ The upper three levels of driving automation (3-5) refer to cases in which the A
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Although use of the term operate/operating implies the existence of a vehicle “operator,” this term is not defined or used in this document, which otherwise provides very specific terms and definitions for the various types of ADS-equipped vehicle users.</fibo-fnd-utl-av:explanatoryNote>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">The term “drive” is not used in this document, however, in many cases it could be used correctly in lieu of “operate.”</fibo-fnd-utl-av:explanatoryNote>
 	</owl:Class>
-	
-	<owl:ObjectProperty rdf:about="&auto-de-cc;hasAgent">
-		<rdfs:label xml:lang="en">has agent</rdfs:label>
-		<owl:inverseOf rdf:resource="&auto-de-cc;isAgentOf"/>
-	</owl:ObjectProperty>
-	
-	<owl:ObjectProperty rdf:about="&auto-de-cc;isAgentOf">
-		<rdfs:label xml:lang="en">is agent of</rdfs:label>
-	</owl:ObjectProperty>
-	
-	<owl:Class rdf:about="&auto-mo-mo;Agent">
-	</owl:Class>
-	
-	<owl:ObjectProperty rdf:about="&auto-mo-mo;hasPart">
-	</owl:ObjectProperty>
-	
-	<owl:ObjectProperty rdf:about="&auto-mo-mo;isPartOf">
-	</owl:ObjectProperty>
-	
-	<owl:Class rdf:about="&auto-vc-vc;Vehicle">
-	</owl:Class>
-	
-	<owl:ObjectProperty rdf:about="&auto-vc-vc;dependsOn">
-	</owl:ObjectProperty>
-	
-	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;abbreviation">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;adaptedFrom">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;explanatoryNote">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;hasMaturityLevel">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;synonym">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;usageNote">
-	</owl:AnnotationProperty>
 
 </rdf:RDF>

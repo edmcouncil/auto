@@ -64,74 +64,8 @@ It contains many classes and properties extracted from:
 		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
 	</owl:Ontology>
 	
-	<owl:AnnotationProperty rdf:about="&ns;license">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dc;contributor">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dc;creator">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dc;rights">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dc;subject">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dc;title">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;contributor">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;creator">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;description">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;isPartOf">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;issued">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;license">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;modified">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;publisher">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;rights">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;subject">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;title">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&vann;preferredNamespacePrefix">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&vann;preferredNamespaceUri">
-	</owl:AnnotationProperty>
-	
 	<rdfs:Datatype rdf:about="&xsd;dateTime">
 	</rdfs:Datatype>
-	
-	<owl:AnnotationProperty rdf:about="&foaf;primaryTopic">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&VechicleECommerce;gearboxTypeId">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&VechicleECommerce;hasID">
-	</owl:AnnotationProperty>
 	
 	<owl:Class rdf:about="&auto-mo-mo;Location">
 	</owl:Class>
@@ -2450,6 +2384,7 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
 				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
+		<rdfs:label xml:lang="pl">pojazd</rdfs:label>
 		<rdfs:label xml:lang="en">vehicle</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
@@ -2759,6 +2694,7 @@ Note: It is recommended to rely on this property only for data originating from 
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;emissionsPerPassenger">
+		<rdfs:label xml:lang="en">emissions per passenger</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 	</owl:DatatypeProperty>
@@ -2792,7 +2728,7 @@ Typical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ for cubic in
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;engineName">
 		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
-		<rdfs:label xml:lang="en">engineName</rdfs:label>
+		<rdfs:label xml:lang="en">engine name</rdfs:label>
 		<rdfs:domain>
 			<owl:Class>
 				<owl:unionOf rdf:parseType="Collection">
@@ -3078,24 +3014,28 @@ For two-stroke mixtures, use vso:TwoStrokeMixture.</skos:definition>
 	</owl:ObjectProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;hasElectricEnergyConsumtion">
+		<rdfs:label xml:lang="en">has electric energy consumtion</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents the electric energy consumption of a vehicle measured in Wh/km.</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;hasEmissionsReduction">
+		<rdfs:label xml:lang="en">has emissions reduction</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents emissions reduction measured in g/km that a vehicle has, through the implemented innovative technologies.</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;hasEngineCapacity">
+		<rdfs:label xml:lang="en">has engine capacity</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property shows the capacity of the engine of a vehicle measured in cm3</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;hasFuelMode">
+		<rdfs:label xml:lang="en">has fuel mode</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents the fuel mode of a vehicle</skos:definition>
@@ -3110,30 +3050,35 @@ For two-stroke mixtures, use vso:TwoStrokeMixture.</skos:definition>
 	</owl:AnnotationProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;hasInnovativeTechnology">
+		<rdfs:label xml:lang="en">has innovative technology</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents an innovation technology that a vehicle has implemented.</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;hasMSRegManufacturerName">
+		<rdfs:label xml:lang="en">has MSReg manufacturer name</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents a manufacturer name as in the registry of Member States of the European Environment Agency.</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;hasManufacturerHarmonisedName">
+		<rdfs:label xml:lang="en">has manufacturer harmonised name</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents a manufacturer harmonised name.</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;hasManufacturerPooling">
+		<rdfs:label xml:lang="en">has manufacturer pooling</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents a manufacturers pooling.</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;hasOtherAxleWidth">
+		<rdfs:label xml:lang="en">has other axle width</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents the width of the other steering axle of a vehicle measured in mm.</skos:definition>
@@ -3156,12 +3101,14 @@ For two-stroke mixtures, use vso:TwoStrokeMixture.</skos:definition>
 	</owl:ObjectProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;hasSteeringAxleWidth">
+		<rdfs:label xml:lang="en">has steering axle width</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents the width of the steering axle of a vehicle measured in mm.</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;hasTotalNewRegistrations">
+		<rdfs:label xml:lang="en">has total new registrations</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents the nubmer of total new registration of a vehicle.</skos:definition>
@@ -3176,6 +3123,7 @@ For two-stroke mixtures, use vso:TwoStrokeMixture.</skos:definition>
 	</owl:ObjectProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;hasTypeApprovalNumber">
+		<rdfs:label xml:lang="en">has type approval number</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents an internal type approval number.</skos:definition>
@@ -3453,6 +3401,7 @@ Typical unit code(s): C62</skos:definition>
 	</owl:ObjectProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;numberOfPassengers">
+		<rdfs:label xml:lang="en">has number of passengers</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:range rdf:resource="&xsd;int"/>
 	</owl:DatatypeProperty>

@@ -64,72 +64,6 @@ It contains many classes and properties extracted from:
 		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
 	</owl:Ontology>
 	
-	<owl:AnnotationProperty rdf:about="&ns;license">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dc;contributor">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dc;creator">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dc;rights">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dc;subject">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dc;title">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;contributor">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;creator">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;description">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;isPartOf">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;issued">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;license">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;modified">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;publisher">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;rights">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;subject">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;title">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&vann;preferredNamespacePrefix">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&vann;preferredNamespaceUri">
-	</owl:AnnotationProperty>
-	
-	<rdfs:Datatype rdf:about="&xsd;dateTime">
-	</rdfs:Datatype>
-	
-	<owl:ObjectProperty rdf:about="&foaf;depiction">
-	</owl:ObjectProperty>
-	
-	<owl:AnnotationProperty rdf:about="&foaf;primaryTopic">
-	</owl:AnnotationProperty>
-	
 	<owl:NamedIndividual rdf:about="&auto-ec-ec;AllWheelDriveConfiguration">
 		<rdfs:label xml:lang="en">all-wheel drive</rdfs:label>
 		<skos:definition xml:lang="en">All-wheel Drive is a transmission layout where the engine drives all four wheels.</skos:definition>
@@ -1091,6 +1025,7 @@ It contains many classes and properties extracted from:
 	
 	<owl:Class rdf:about="&auto-ec-ec;PriceSpecification">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;ValueSpace"/>
+		<rdfs:label xml:lang="en">price specification</rdfs:label>
 	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-ec-ec;Private">
@@ -1108,6 +1043,7 @@ It contains many classes and properties extracted from:
 	
 	<owl:Class rdf:about="&auto-ec-ec;RelativePriceSpecification">
 		<rdfs:subClassOf rdf:resource="&auto-ec-ec;PriceSpecification"/>
+		<rdfs:label xml:lang="en">relative price specification</rdfs:label>
 	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-ec-ec;RentalVehicleUsage">
@@ -1922,82 +1858,6 @@ Note 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasB
 		<skos:definition>The release date of a vehicle model (often used to differentiate versions of the same make and model).</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:Class rdf:about="&auto-mo-mo;Location">
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-mo-mo;Model">
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-mo-mo;NumericalValue">
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-mo-mo;Object">
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-mo-mo;Organization">
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-mo-mo;Person">
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-mo-mo;PostalAddress">
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-mo-mo;Process">
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-mo-mo;PropertyValue">
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-mo-mo;QualitativeValue">
-		<rdfs:label xml:lang="en">qualitative value</rdfs:label>
-		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
-		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-		<sm:directSource rdf:resource="https://schema.org/QualitativeValue"/>
-		<skos:definition xml:lang="en">a predefined value for a product characteristic, e.g. the power cord plug type &apos;US&apos; or the garment sizes &apos;S&apos;, &apos;M&apos;, &apos;L&apos;, and &apos;XL&apos;</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-mo-mo;Quality">
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-mo-mo;QuantitativeValue">
-		<rdfs:label xml:lang="en">quantitative value</rdfs:label>
-		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
-		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-		<sm:directSource rdf:resource="https://schema.org/QuantitativeValue"/>
-		<skos:definition xml:lang="en">a point value or interval for product characteristics and other purposes</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-mo-mo;QuantitativeValueFloat">
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-mo-mo;QuantitativeValueInteger">
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-mo-mo;TextValue">
-	</owl:Class>
-	
-	<owl:DatatypeProperty rdf:about="&auto-mo-mo;hasMaxValueFloat">
-	</owl:DatatypeProperty>
-	
-	<owl:DatatypeProperty rdf:about="&auto-mo-mo;hasMinValueFloat">
-	</owl:DatatypeProperty>
-	
-	<owl:DatatypeProperty rdf:about="&auto-mo-mo;hasUnitOfMeasurement">
-	</owl:DatatypeProperty>
-	
-	<owl:DatatypeProperty rdf:about="&auto-mo-mo;hasValueFloat">
-	</owl:DatatypeProperty>
-	
-	<owl:ObjectProperty rdf:about="&auto-mo-mo;qualitativeProductOrServiceProperty">
-	</owl:ObjectProperty>
-	
-	<owl:ObjectProperty rdf:about="&auto-mo-mo;quantitativeProductOrServiceProperty">
-	</owl:ObjectProperty>
-	
-	<owl:ObjectProperty rdf:about="&auto-mo-mo;valueReference">
-	</owl:ObjectProperty>
-	
 	<owl:Class rdf:about="&auto-vc-vc;Bus">
 		<rdfs:subClassOf>
 			<owl:Restriction>
@@ -2332,11 +2192,5 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Vehicle"/>
 		<skos:definition xml:lang="en">a device that is designed or used to transport people or cargo over land, water, air, or through space</skos:definition>
 	</owl:Class>
-	
-	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;abbreviation">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;synonym">
-	</owl:AnnotationProperty>
 
 </rdf:RDF>
