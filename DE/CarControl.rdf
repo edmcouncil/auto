@@ -41,15 +41,6 @@
 		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
 	</owl:Ontology>
 	
-	<owl:AnnotationProperty rdf:about="&dct;creator">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;license">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;publisher">
-	</owl:AnnotationProperty>
-	
 	<owl:Class rdf:about="&auto-de-cc;Acceleration">
 		<rdfs:subClassOf rdf:resource="&auto-de-cc;SpeedProfile"/>
 	</owl:Class>
@@ -65,7 +56,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-cc;ConstantSpeed">
-		<rdfs:subClassOf rdf:resource="&auto-de-cc;Trajectory"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Object"/>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-cc;CurrentLaneSafeDist">
@@ -78,7 +69,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-cc;DrivingAction">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Process"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Action"/>
 		<rdfs:label xml:lang="en">driving action</rdfs:label>
 	</owl:Class>
 	
@@ -211,7 +202,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-cc;LaneChange">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Process"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Action"/>
 		<rdfs:label xml:lang="en">lane change</rdfs:label>
 	</owl:Class>
 	
@@ -324,7 +315,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-cc;OperateMotorVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Process"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Action"/>
 		<rdfs:label xml:lang="en">Operate A Motor Vehicle</rdfs:label>
 		<skos:definition xml:lang="en">the activities performed by a (human) driver (with or without support from one or more level 1 or 2 driving automation features ) or by an ADS (level 3-5) to perform the entire DDT for a given vehicle during a trip</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.21</fibo-fnd-utl-av:adaptedFrom>
@@ -346,7 +337,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-cc;Path">
-		<rdfs:subClassOf rdf:resource="&auto-de-cc;Trajectory"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Object"/>
 		<rdfs:label xml:lang="en">path</rdfs:label>
 	</owl:Class>
 	
@@ -384,7 +375,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-cc;SpeedProfile">
-		<rdfs:subClassOf rdf:resource="&auto-de-cc;Trajectory"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Object"/>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-cc;StartLane">
@@ -437,11 +428,6 @@ are referred to collectively as object and event detection and response (OEDR).<
 	<owl:Class rdf:about="&auto-de-cc;TrafficSignalControl">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Object"/>
 		<rdfs:label xml:lang="en">traffic signal control</rdfs:label>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-cc;Trajectory">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;PhysicalObject"/>
-		<rdfs:label xml:lang="en">trajectory</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-cc;TurnLeft">
@@ -546,22 +532,6 @@ are referred to collectively as object and event detection and response (OEDR).<
 	
 	<owl:ObjectProperty rdf:about="&auto-mo-mo;isPartOf">
 	</owl:ObjectProperty>
-	
-	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/Acceleration/GPSTrack">
-		<rdfs:subClassOf rdf:resource="&auto-de-cc;Path"/>
-	</owl:Class>
-	
-	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;abbreviation">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;adaptedFrom">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;explanatoryNote">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;usageNote">
-	</owl:AnnotationProperty>
 	
 	<owl:AllDisjointClasses>
 		<owl:members rdf:parseType="Collection">

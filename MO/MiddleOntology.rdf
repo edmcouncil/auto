@@ -47,37 +47,7 @@
 		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
 	</owl:Ontology>
 	
-	<owl:AnnotationProperty rdf:about="&dct;abstract">
-	</owl:AnnotationProperty>
-	
 	<owl:AnnotationProperty rdf:about="&dct;isPartOf">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;license">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&dct;source">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&sm;contentLanguage">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&sm;copyright">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&sm;dependsOn">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&sm;directSource">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&sm;fileAbbreviation">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&sm;filename">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&skos;definition">
 	</owl:AnnotationProperty>
 	
 	<owl:Class rdf:about="&auto-mo-mo;Action">
@@ -108,6 +78,7 @@
 	
 	<owl:Class rdf:about="&auto-mo-mo;NumericalValue">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QuantitativeValue"/>
+		<rdfs:label xml:lang="en">numerical value</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;Object">
@@ -186,6 +157,7 @@
 	
 	<owl:Class rdf:about="&auto-mo-mo;TextValue">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QuantitativeValue"/>
+		<rdfs:label xml:lang="en">text value</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;ValueSpace">
@@ -201,6 +173,7 @@
 	</owl:DatatypeProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-mo-mo;hasPart">
+		<rdfs:label xml:lang="en">has part</rdfs:label>
 		<owl:inverseOf rdf:resource="&auto-mo-mo;isPartOf"/>
 	</owl:ObjectProperty>
 	
@@ -224,16 +197,7 @@
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-mo-mo;valueReference">
+		<rdfs:label xml:lang="en">value reference</rdfs:label>
 	</owl:ObjectProperty>
-	
-	<owl:Class rdf:about="&fibo-fnd-utl-av;MaturityLevel">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;ValueSpace"/>
-	</owl:Class>
-	
-	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;adaptedFrom">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;hasMaturityLevel">
-	</owl:AnnotationProperty>
 
 </rdf:RDF>

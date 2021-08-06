@@ -51,12 +51,6 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
 	</owl:Ontology>
 	
-	<owl:AnnotationProperty rdf:about="&skos;definition">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&skos;scopeNote">
-	</owl:AnnotationProperty>
-	
 	<owl:Class rdf:about="&auto-de-ti;Accident">
 		<rdfs:subClassOf rdf:resource="&auto-de-ti;TrafficIncident"/>
 		<rdfs:subClassOf>
@@ -138,15 +132,6 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 		<rdfs:label xml:lang="en">Bikeway</rdfs:label>
 		<skos:definition xml:lang="en">A trafficway specifically designated as being open for pedalcycle travel or, where various classes of pedalcycle are segregated, that part of a trafficway open for a particular class (See 2.2.28)</skos:definition>
 	</owl:Class>
-	
-	<owl:DatatypeProperty rdf:about="&auto-de-ti;CarHeight">
-	</owl:DatatypeProperty>
-	
-	<owl:DatatypeProperty rdf:about="&auto-de-ti;CarLenght">
-	</owl:DatatypeProperty>
-	
-	<owl:DatatypeProperty rdf:about="&auto-de-ti;CarMass">
-	</owl:DatatypeProperty>
 	
 	<owl:Class rdf:about="&auto-de-ti;Cataclysm">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Process"/>
@@ -1402,18 +1387,16 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.23</fibo-fnd-utl-av:adaptedFrom>
 	</owl:DatatypeProperty>
 	
-	<owl:ObjectProperty rdf:about="&auto-de-ti;hasAgent">
-	</owl:ObjectProperty>
-	
 	<owl:ObjectProperty rdf:about="&auto-de-ti;hasCause">
+		<rdfs:label xml:lang="en">has cause</rdfs:label>
 		<owl:inverseOf rdf:resource="&auto-de-ti;isCauseOf"/>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-ti;hasDangerousBehaviour">
-		<owl:inverseOf rdf:resource="&auto-de-ti;isDangerousBehaviourOf"/>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-ti;hasEffect">
+		<rdfs:label xml:lang="en">has effect</rdfs:label>
 		<owl:inverseOf rdf:resource="&auto-de-ti;isEffectOf"/>
 	</owl:ObjectProperty>
 	
@@ -1421,16 +1404,16 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-ti;hasTrafficUser">
+		<rdfs:label xml:lang="en">has traffic user</rdfs:label>
 		<owl:inverseOf rdf:resource="&auto-de-ti;isParticipantOf"/>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-ti;isCauseOf">
-	</owl:ObjectProperty>
-	
-	<owl:ObjectProperty rdf:about="&auto-de-ti;isDangerousBehaviourOf">
+		<rdfs:label xml:lang="en">is cause of</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-ti;isEffectOf">
+		<rdfs:label xml:lang="en">is effect of</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-ti;isOffenceOf">
@@ -1438,6 +1421,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:ObjectProperty rdf:about="&auto-de-ti;isParticipantOf">
 		<rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+		<rdfs:label xml:lang="en">is participant of</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-ti;isPatientOf">
@@ -1447,10 +1431,6 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<rdfs:label xml:lang="en">is capable of driving at</rdfs:label>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="&auto-de-ti;performsOnSustainedBasis">
-		<rdfs:label xml:lang="en">performs on a sustained basis</rdfs:label>
-	</owl:ObjectProperty>
-	
 	<owl:DatatypeProperty rdf:about="&auto-de-ti;totalLanesInRoadway">
 		<rdfs:label xml:lang="en">Total Lanes in Roadway</rdfs:label>
 		<rdfs:comment xml:lang="en">Original definition:
@@ -1458,31 +1438,5 @@ The total number of lanes in a roadway is collected for each vehicle, on the roa
 		<skos:definition xml:lang="en">A number of through lanes of the roadway.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.33.1</fibo-fnd-utl-av:adaptedFrom>
 	</owl:DatatypeProperty>
-	
-	<owl:Class rdf:about="&auto-mo-mo;Person">
-		<rdfs:label xml:lang="en">Person</rdfs:label>
-		<rdfs:comment xml:lang="en">Within the context of this manual, a fetus is considered part of a pregnant woman rather than a separate individual. After death, a human body is not considered to be a person.</rdfs:comment>
-		<skos:definition xml:lang="en">Any living human.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.1</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;Vehicle">
-		<rdfs:label xml:lang="pl">pojazd</rdfs:label>
-	</owl:Class>
-	
-	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;abbreviation">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;adaptedFrom">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;explanatoryNote">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;synonym">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;usageNote">
-	</owl:AnnotationProperty>
 
 </rdf:RDF>
