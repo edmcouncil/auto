@@ -192,6 +192,16 @@
 		<rdfs:subClassOf rdf:resource="&auto-de-ev;Building"/>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-de-ev;EndLane">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;LaneSegment"/>
+		<owl:disjointWith rdf:resource="&auto-de-ev;StartLane"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;EndNode">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Node"/>
+		<owl:disjointWith rdf:resource="&auto-de-ev;StartNode"/>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-de-ev;FastFood">
 		<rdfs:subClassOf rdf:resource="&auto-de-ev;Restaurant"/>
 	</owl:Class>
@@ -247,7 +257,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-ev;Infrastructure">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Object"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;PhysicalObject"/>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-ev;InstructionRoadSign">
@@ -266,6 +276,11 @@
 		<rdfs:comment xml:lang="en">Where the distance along a roadway between two areas meeting these criteria is less than 10 meters (33 feet), the two areas and the roadway connecting them are considered to be parts of a single intersection.</rdfs:comment>
 		<skos:definition xml:lang="en">An area which (1) contains a crossing or connection of two or more roadways not classified as driveway access and (2) is embraced within the prolongation of the lateral curb lines or, if none, the lateral boundary lines of the roadways.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.10</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;IntersectionSegment">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;PathSegment"/>
+		<owl:disjointWith rdf:resource="&auto-de-ev;LaneSegment"/>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-ev;InterstateHighway">
@@ -312,6 +327,10 @@
 		<rdfs:subClassOf rdf:resource="&auto-de-ev;Junction"/>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-de-ev;LaneSegment">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;PathSegment"/>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-de-ev;Leisure">
 		<rdfs:subClassOf rdf:resource="&auto-de-ev;Amenity"/>
 	</owl:Class>
@@ -338,7 +357,12 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-ev;NaturalPlace">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Object"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;PhysicalObject"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Node">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Path"/>
+		<owl:disjointWith rdf:resource="&auto-de-ev;PathSegment"/>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-ev;OneWayLane">
@@ -392,6 +416,15 @@
 	
 	<owl:Class rdf:about="&auto-de-ev;PartOfTrafficway">
 		<rdfs:subClassOf rdf:resource="&auto-de-ev;TransportWay"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;Path">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Infrastructure"/>
+		<rdfs:label xml:lang="en">path</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;PathSegment">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Path"/>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-ev;Pharmacy">
@@ -565,6 +598,14 @@
 	
 	<owl:Class rdf:about="&auto-de-ev;SportsCentre">
 		<rdfs:subClassOf rdf:resource="&auto-de-ev;Leisure"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;StartLane">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;LaneSegment"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-de-ev;StartNode">
+		<rdfs:subClassOf rdf:resource="&auto-de-ev;Node"/>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-ev;Station">
@@ -924,5 +965,47 @@
 		<skos:definition xml:lang="en">A lane exclusively designated for vehicles turning from one trafficway to another.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.23</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
-
+	
+	<owl:AllDisjointClasses>
+		<owl:members rdf:parseType="Collection">
+			<rdf:Description rdf:about="&auto-de-ev;Airport">
+			</rdf:Description>
+			<rdf:Description rdf:about="&auto-de-ev;Amenity">
+			</rdf:Description>
+			<rdf:Description rdf:about="&auto-de-ev;Building">
+			</rdf:Description>
+			<rdf:Description rdf:about="&auto-de-ev;GasStation">
+			</rdf:Description>
+			<rdf:Description rdf:about="&auto-de-ev;InterstateSystem">
+			</rdf:Description>
+			<rdf:Description rdf:about="&auto-de-ev;LongitudinalPartOfTrafficway">
+			</rdf:Description>
+			<rdf:Description rdf:about="&auto-de-ev;ParkingLot">
+			</rdf:Description>
+			<rdf:Description rdf:about="&auto-de-ev;Path">
+			</rdf:Description>
+			<rdf:Description rdf:about="&auto-de-ev;Railway">
+			</rdf:Description>
+			<rdf:Description rdf:about="&auto-de-ev;RoadPart">
+			</rdf:Description>
+			<rdf:Description rdf:about="&auto-de-ev;RoadType">
+			</rdf:Description>
+			<rdf:Description rdf:about="&auto-de-ev;Station">
+			</rdf:Description>
+			<rdf:Description rdf:about="&auto-de-ev;TollGate">
+			</rdf:Description>
+			<rdf:Description rdf:about="&auto-de-ev;TrafficSign">
+			</rdf:Description>
+			<rdf:Description rdf:about="&auto-de-ev;TransportWay">
+			</rdf:Description>
+			<rdf:Description rdf:about="&auto-de-ev;UrbanArea">
+			</rdf:Description>
+			<rdf:Description rdf:about="&auto-de-ev;UtilityPole">
+			</rdf:Description>
+			<rdf:Description rdf:about="&auto-de-ev;Waterway">
+			</rdf:Description>
+			<rdf:Description rdf:about="&auto-de-ev;WorkZone">
+			</rdf:Description>
+		</owl:members>
+	</owl:AllDisjointClasses>
 </rdf:RDF>

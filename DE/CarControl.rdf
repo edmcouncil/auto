@@ -56,7 +56,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-cc;ConstantSpeed">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Object"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Quality"/>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-cc;CurrentLaneSafeDist">
@@ -152,16 +152,6 @@ are referred to collectively as object and event detection and response (OEDR).<
 		<rdfs:label xml:lang="en">Dynamic Driving Task Subtask</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-cc;EndLane">
-		<rdfs:subClassOf rdf:resource="&auto-de-cc;LaneSegment"/>
-		<rdfs:label xml:lang="en">end lane</rdfs:label>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-cc;EndNode">
-		<rdfs:subClassOf rdf:resource="&auto-de-cc;Node"/>
-		<rdfs:label xml:lang="en">end node</rdfs:label>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-de-cc;EnhancingConspicuity">
 		<rdfs:subClassOf rdf:resource="&auto-de-cc;TacticalEffort"/>
 		<rdfs:label xml:lang="en">Enhancing conspicuity</rdfs:label>
@@ -196,11 +186,6 @@ are referred to collectively as object and event detection and response (OEDR).<
 		<rdfs:label xml:lang="en">green go</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-cc;IntersectionSegment">
-		<rdfs:subClassOf rdf:resource="&auto-de-cc;PathSegment"/>
-		<rdfs:label xml:lang="en">intersection segment</rdfs:label>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-de-cc;LaneChange">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Action"/>
 		<rdfs:label xml:lang="en">lane change</rdfs:label>
@@ -209,11 +194,6 @@ are referred to collectively as object and event detection and response (OEDR).<
 	<owl:Class rdf:about="&auto-de-cc;LaneDepartureWarning">
 		<rdfs:subClassOf rdf:resource="&auto-de-cc;Warning"/>
 		<rdfs:label xml:lang="en">lane departure warning</rdfs:label>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-cc;LaneSegment">
-		<rdfs:subClassOf rdf:resource="&auto-de-cc;PathSegment"/>
-		<rdfs:label xml:lang="en">lane segment</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-cc;LateralVehicleMotionControl">
@@ -294,11 +274,6 @@ are referred to collectively as object and event detection and response (OEDR).<
 		<fibo-fnd-utl-av:usageNote xml:lang="en">While a level 4 ADS is engaged in stop-and-go traffic, a malfunctioning brake caliper causes the vehicle to pull to the left when the brakes are applied.</fibo-fnd-utl-av:usageNote>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-cc;Node">
-		<rdfs:subClassOf rdf:resource="&auto-de-cc;Path"/>
-		<rdfs:label xml:lang="en">node</rdfs:label>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-de-cc;ObjectAndEventDetectionAndResponse">
 		<rdfs:subClassOf rdf:resource="&auto-de-cc;OperationalEffort"/>
 		<rdfs:subClassOf rdf:resource="&auto-de-cc;TacticalEffort"/>
@@ -336,16 +311,6 @@ are referred to collectively as object and event detection and response (OEDR).<
 		<rdfs:label xml:lang="en">overspeed warning</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-de-cc;Path">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Object"/>
-		<rdfs:label xml:lang="en">path</rdfs:label>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-cc;PathSegment">
-		<rdfs:subClassOf rdf:resource="&auto-de-cc;Path"/>
-		<rdfs:label xml:lang="en">path segment</rdfs:label>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-de-cc;RedStop">
 		<rdfs:subClassOf rdf:resource="&auto-de-cc;TrafficSignalControl"/>
 		<rdfs:label xml:lang="en">red stop</rdfs:label>
@@ -357,7 +322,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-cc;RoadCondition">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Object"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Quality"/>
 		<rdfs:label xml:lang="en">road condition</rdfs:label>
 	</owl:Class>
 	
@@ -375,17 +340,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-cc;SpeedProfile">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Object"/>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-cc;StartLane">
-		<rdfs:subClassOf rdf:resource="&auto-de-cc;LaneSegment"/>
-		<rdfs:label xml:lang="en">start lane</rdfs:label>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-de-cc;StartNode">
-		<rdfs:subClassOf rdf:resource="&auto-de-cc;Node"/>
-		<rdfs:label xml:lang="en">start node</rdfs:label>
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Process"/>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-cc;Stop">
@@ -426,7 +381,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-cc;TrafficSignalControl">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Object"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;PhysicalObject"/>
 		<rdfs:label xml:lang="en">traffic signal control</rdfs:label>
 	</owl:Class>
 	
