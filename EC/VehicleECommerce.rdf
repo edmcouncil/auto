@@ -1311,8 +1311,6 @@ It contains many classes and properties extracted from:
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<rdfs:range rdf:resource="&auto-ec-ec;BusinessEntity"/>
-		<rdfs:range rdf:resource="&auto-mo-mo;Organization"/>
-		<rdfs:range rdf:resource="&auto-mo-mo;Person"/>
 		<skos:definition xml:lang="en">This property points to the current owner of the vehicle.</skos:definition>
 	</owl:ObjectProperty>
 	
