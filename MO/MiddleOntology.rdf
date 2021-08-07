@@ -133,6 +133,19 @@
 	
 	<owl:Class rdf:about="&auto-mo-mo;QuantitativeValue">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;ValueSpace"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo-mo;hasValue"/>
+				<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo-mo;hasUnit"/>
+				<owl:onDataRange rdf:resource="&xsd;string"/>
+				<owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">quantitative value</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
@@ -156,7 +169,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo-mo;TextValue">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QuantitativeValue"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo-mo;ValueSpace"/>
 		<rdfs:label xml:lang="en">text value</rdfs:label>
 	</owl:Class>
 	
@@ -165,10 +178,12 @@
 	</owl:Class>
 	
 	<owl:DatatypeProperty rdf:about="&auto-mo-mo;hasMaxValueFloat">
+		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;hasValueFloat"/>
 		<rdfs:label xml:lang="en">has max value float</rdfs:label>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-mo-mo;hasMinValueFloat">
+		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;hasValueFloat"/>
 		<rdfs:label xml:lang="en">has min value float</rdfs:label>
 	</owl:DatatypeProperty>
 	
@@ -177,11 +192,18 @@
 		<owl:inverseOf rdf:resource="&auto-mo-mo;isPartOf"/>
 	</owl:ObjectProperty>
 	
-	<owl:DatatypeProperty rdf:about="&auto-mo-mo;hasUnitOfMeasurement">
-		<rdfs:label xml:lang="en">has unit of measurement</rdfs:label>
+	<owl:DatatypeProperty rdf:about="&auto-mo-mo;hasUnit">
+		<rdfs:label xml:lang="en">has unit</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-mo-mo;QuantitativeValue"/>
+	</owl:DatatypeProperty>
+	
+	<owl:DatatypeProperty rdf:about="&auto-mo-mo;hasValue">
+		<rdfs:label xml:lang="en">has value</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-mo-mo;QuantitativeValue"/>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-mo-mo;hasValueFloat">
+		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;hasValue"/>
 		<rdfs:label xml:lang="en">has value float</rdfs:label>
 	</owl:DatatypeProperty>
 	
