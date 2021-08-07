@@ -761,6 +761,7 @@ The upper three levels of driving automation (3-5) refer to cases in which the A
 	</owl:Class>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-av;achievedBy">
+		<rdfs:label xml:lang="en">achieved by</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-de-av;hasPatient">

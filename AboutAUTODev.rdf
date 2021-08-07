@@ -16,9 +16,8 @@
      xmlns:auto-de-ti="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/"
      xmlns:auto-ec-ec="https://spec.edmcouncil.org/auto/ontology/EC/VehicleECommerce/"
      xmlns:auto-mo-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
+     xmlns:auto-vc-tr="https://spec.edmcouncil.org/auto/ontology/VC/VehicleTypesAndRoles/"
      xmlns:auto-vc-vc="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"
-     xmlns:auto-ec-vec="https://spec.edmcouncil.org/auto/ontology/EC/VechicleECommerce/"
-     xmlns:auto-mo-mod="https://spec.edmcouncil.org/auto/ontology/EC/MetadataMO/"
      xmlns:auto-vs-vsso="https://spec.edmcouncil.org/auto/ontology/VS/VehicleSignals/"
      xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/AboutAUTODev/">
@@ -30,6 +29,7 @@
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MetadataAUTO/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleTypesAndRoles/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
         <terms:abstract>This ontology is provided for the convenience of AUTO users.  It loads the very latest version of every AUTO ontology (released, provisional, and informative) based on the contents of GitHub, for use in particular while working on revisions.  Note that metadata files are included.</terms:abstract>
         <terms:license rdf:resource="http://opensource.org/licenses/MIT"/>

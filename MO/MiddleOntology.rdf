@@ -186,14 +186,7 @@
 	</owl:DatatypeProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-mo-mo;isPartOf">
-	</owl:ObjectProperty>
-	
-	<owl:ObjectProperty rdf:about="&auto-mo-mo;qualitativeProductOrServiceProperty">
-		<rdfs:label xml:lang="en">qualitative product or service property</rdfs:label>
-	</owl:ObjectProperty>
-	
-	<owl:ObjectProperty rdf:about="&auto-mo-mo;quantitativeProductOrServiceProperty">
-		<rdfs:label xml:lang="en">quantitative product or service property</rdfs:label>
+		<rdfs:label xml:lang="en">is part of</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-mo-mo;valueReference">

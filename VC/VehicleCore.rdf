@@ -57,12 +57,16 @@ It contains many classes and properties extracted from:
 		<sm:copyright>Copyright (c) 2021 EDM Council, Inc.</sm:copyright>
 		<sm:dependsOn rdf:datatype="&xsd;anyURI">https://spec.edmcouncil.org/auto/ontology/VC/</sm:dependsOn>
 		<sm:fileAbbreviation>auto-vc-vc</sm:fileAbbreviation>
-		<sm:filename>VechicleECommerce.rdf</sm:filename>
+		<sm:filename>VehicleCore.rdf</sm:filename>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleTypesAndRoles/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
 		<owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
 		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
 	</owl:Ontology>
+	
+	<owl:AnnotationProperty rdf:about="&dc;contributor">
+	</owl:AnnotationProperty>
 	
 	<rdfs:Datatype rdf:about="&xsd;dateTime">
 	</rdfs:Datatype>
@@ -229,15 +233,6 @@ It contains many classes and properties extracted from:
 	<owl:DatatypeProperty rdf:about="&auto-mo-mo;hasValueFloat">
 	</owl:DatatypeProperty>
 	
-	<owl:ObjectProperty rdf:about="&auto-mo-mo;qualitativeProductOrServiceProperty">
-	</owl:ObjectProperty>
-	
-	<owl:ObjectProperty rdf:about="&auto-mo-mo;quantitativeProductOrServiceProperty">
-	</owl:ObjectProperty>
-	
-	<owl:ObjectProperty rdf:about="&auto-mo-mo;valueReference">
-	</owl:ObjectProperty>
-	
 	<owl:NamedIndividual rdf:about="&auto-vc-vc;0to100KMH">
 		<rdf:type rdf:resource="&auto-vc-vc;SpeedInterval"/>
 		<rdfs:label xml:lang="en">0to100KMH</rdfs:label>
@@ -285,39 +280,26 @@ It contains many classes and properties extracted from:
 		<auto-mo-mo:hasValueFloat rdf:datatype="&xsd;float">1.0</auto-mo-mo:hasValueFloat>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&auto-vc-vc;Aircraft">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Vehicle"/>
-		<rdfs:label xml:lang="en">aircraft</rdfs:label>
-		<skos:definition xml:lang="en">A transport vehicle designed primarily for, or in use for, moving persons or property through the air from one place to another.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.5</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
 	<owl:NamedIndividual rdf:about="&auto-vc-vc;AllWheelDriveConfiguration">
 		<rdf:type rdf:resource="&auto-vc-vc;DriveWheelConfigurationValue"/>
 		<rdfs:label xml:lang="en">all-wheel drive</rdfs:label>
 		<skos:definition xml:lang="en">All-wheel Drive is a transmission layout where the engine drives all four wheels.</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&auto-vc-vc;AudioAndNavigation">
+	<owl:NamedIndividual rdf:about="&auto-vc-vc;AudioAndNavigation">
+		<rdf:type rdf:resource="&owl;Class"/>
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;ChoiceOrComponent"/>
 		<rdfs:label xml:lang="en">audio and navigation choice or component</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">The class of audio and navigation choices or components (CD/DVD/SatNav, a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 1</skos:definition>
 		<auto-vc-vc:hasID>1</auto-vc-vc:hasID>
-	</owl:Class>
+	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="&auto-vc-vc;AuthorizedDealer">
 		<rdfs:label xml:lang="en">Authorized Dealer</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<skos:definition xml:lang="en">An authorized dealer of the manufacturer of the respective vehicle</skos:definition>
 	</owl:NamedIndividual>
-	
-	<owl:Class rdf:about="&auto-vc-vc;Autocycle">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Motorcycle"/>
-		<rdfs:label xml:lang="en">Autocycle</rdfs:label>
-		<skos:definition xml:lang="en">A large motorcycle with one rear wheel and two front wheels, with either a saddle and handlebars or seat (s) and a steering wheel, that can be fully enclosed, partially enclosed, or unenclosed.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.9.7</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc-vc;BaseModel">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Model"/>
@@ -342,174 +324,6 @@ It contains many classes and properties extracted from:
 Examples: VW Golf, VW Polo, VW Passat</skos:definition>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-vc-vc;Bicycle">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Pedalcycle"/>
-		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-vc-vc;numberOfForwardGears"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValueInteger"/>
-						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-					</owl:Restriction>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-vc-vc;numberOfForwardGears"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValueInteger"/>
-						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;engineName"/>
-				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;transmission"/>
-				<owl:onClass rdf:resource="&auto-vc-vc;TransmissionTypeValue"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">bicycle</rdfs:label>
-		<rdfs:label xml:lang="pl">rower</rdfs:label>
-		<rdfs:comment>QName: auto-vc-vc:Bicycle</rdfs:comment>
-		<rdfs:comment xml:lang="pl">pojazd o szerokości nieprzekraczającej 0,9 m poruszany siłą mięśni osoby jadącej tym pojazdem; rower może być wyposażony w uruchamiany naciskiem na pedały pomocniczy napęd elektryczny zasilany prądem o napięciu nie wyższym niż 48 V o znamionowej mocy ciągłej nie większej niż 250 W, którego moc wyjściowa zmniejsza się stopniowo i spada do zera po przekroczeniu prędkości 25 km/h</rdfs:comment>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
-		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Bicycle"/>
-		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Bicycle"/>
-		<skos:definition xml:lang="en">a pedal-driven, human-powered, single-track vehicle, having two wheels attached to a frame, one behind the other. Some bicycles have a small combustion or electric engine that assists with the pedaling.</skos:definition>
-		<fibo-fnd-utl-av:synonym xml:lang="en">bike</fibo-fnd-utl-av:synonym>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;Boat">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Watercraft"/>
-		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-vc-vc;fuelCapacity"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValueFloat"/>
-						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-					</owl:Restriction>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-vc-vc;fuelCapacity"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValueFloat"/>
-						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-vc-vc;numberOfForwardGears"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValueInteger"/>
-						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-					</owl:Restriction>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-vc-vc;numberOfForwardGears"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValueInteger"/>
-						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;engineName"/>
-				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;accelerationTime"/>
-				<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValueFloat"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;transmission"/>
-				<owl:onClass rdf:resource="&auto-vc-vc;TransmissionTypeValue"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">boat</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Boat"/>
-		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Boat"/>
-		<skos:definition xml:lang="en">a watercraft of modest size designed to float or plane, to provide passage across water</skos:definition>
-	</owl:Class>
-	
-	<owl:NamedIndividual rdf:about="&auto-vc-vc;BodyStyle4X4">
-		<rdf:type rdf:resource="&auto-vc-vc;BodyStyleValue"/>
-		<rdfs:label xml:lang="en">4 X 4 (vso:BodyStyleValue)</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<skos:definition xml:lang="en">Four-by-Four Vehicle, VW ID: 6</skos:definition>
-		<auto-vc-vc:hasID>6</auto-vc-vc:hasID>
-	</owl:NamedIndividual>
-	
-	<owl:NamedIndividual rdf:about="&auto-vc-vc;BodyStyleCabriolet">
-		<rdf:type rdf:resource="&auto-vc-vc;BodyStyleValue"/>
-		<rdfs:label xml:lang="en">Cabriolet (vso:BodyStyleValue)</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<skos:definition xml:lang="en">Cabriolet, VW ID: 4</skos:definition>
-		<auto-vc-vc:hasID>4</auto-vc-vc:hasID>
-	</owl:NamedIndividual>
-	
-	<owl:NamedIndividual rdf:about="&auto-vc-vc;BodyStyleCoupe">
-		<rdf:type rdf:resource="&auto-vc-vc;BodyStyleValue"/>
-		<rdfs:label xml:lang="en">Coupe (vso:BodyStyleValue)</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<skos:definition xml:lang="en">Coupe, VW ID: 7</skos:definition>
-		<auto-vc-vc:hasID>7</auto-vc-vc:hasID>
-	</owl:NamedIndividual>
-	
-	<owl:NamedIndividual rdf:about="&auto-vc-vc;BodyStyleEstate">
-		<rdf:type rdf:resource="&auto-vc-vc;BodyStyleValue"/>
-		<rdfs:label xml:lang="en">Estate (vso:BodyStyleValue)</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<skos:definition xml:lang="en">Estate, VW ID: 3</skos:definition>
-		<auto-vc-vc:hasID>3</auto-vc-vc:hasID>
-	</owl:NamedIndividual>
-	
-	<owl:NamedIndividual rdf:about="&auto-vc-vc;BodyStyleHatchback">
-		<rdf:type rdf:resource="&auto-vc-vc;BodyStyleValue"/>
-		<rdfs:label xml:lang="en">Hatchback (vso:BodyStyleValue)</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<skos:definition xml:lang="en">Hatchback, VW ID: 1</skos:definition>
-		<auto-vc-vc:hasID>1</auto-vc-vc:hasID>
-	</owl:NamedIndividual>
-	
-	<owl:NamedIndividual rdf:about="&auto-vc-vc;BodyStyleMPV">
-		<rdf:type rdf:resource="&auto-vc-vc;BodyStyleValue"/>
-		<rdfs:label xml:lang="en">MPV (vso:BodyStyleValue)</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<skos:definition xml:lang="en">Multi-purpose Vehicle, VW ID: 5</skos:definition>
-		<auto-vc-vc:hasID>5</auto-vc-vc:hasID>
-	</owl:NamedIndividual>
-	
-	<owl:NamedIndividual rdf:about="&auto-vc-vc;BodyStyleSaloon">
-		<rdf:type rdf:resource="&auto-vc-vc;BodyStyleValue"/>
-		<rdfs:label xml:lang="en">Saloon (vso:BodyStyleValue)</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<skos:definition xml:lang="en">Saloon, VW ID: 2</skos:definition>
-		<auto-vc-vc:hasID>2</auto-vc-vc:hasID>
-	</owl:NamedIndividual>
-	
-	<owl:NamedIndividual rdf:about="&auto-vc-vc;BodyStyleUnspecified">
-		<rdf:type rdf:resource="&auto-vc-vc;BodyStyleValue"/>
-		<rdfs:label xml:lang="en">Unspecified (vso:BodyStyleValue)</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<skos:definition xml:lang="en">Unspecified, VW ID: 0</skos:definition>
-		<auto-vc-vc:hasID>0</auto-vc-vc:hasID>
-	</owl:NamedIndividual>
-	
 	<owl:Class rdf:about="&auto-vc-vc;BodyStyleValue">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QualitativeValue"/>
 		<rdfs:label xml:lang="en">body style value</rdfs:label>
@@ -521,38 +335,6 @@ Examples: VW Golf, VW Polo, VW Passat</skos:definition>
   http://dbpedia.org/resource/Roadster</rdfs:comment>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
 		<skos:definition xml:lang="en">a value indicating the body style of a vehicle</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;Bus">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;LargeSpecialVehicle"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;roofLoad"/>
-				<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValue"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="pl">autobus</rdfs:label>
-		<rdfs:label xml:lang="en">bus</rdfs:label>
-		<rdfs:comment xml:lang="en">A bus (also omnibus or autobus) is a road vehicle designed to carry passengers. Buses have a capacity as high as 300 passengers and are widely used for public transportation. 
-Coaches are luxury busses, usually in service for long distance travel.</rdfs:comment>
-		<rdfs:comment>QName: auto-vc-vc:BusOrCoach</rdfs:comment>
-		<rdfs:comment xml:lang="pl">pojazd samochodowy przeznaczony konstrukcyjnie do przewozu więcej niż 9 osób łącznie z kierowcą</rdfs:comment>
-		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
-		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-		<sm:directSource rdf:resource="https://schema.org/BusOrCoach"/>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
-		<rdfs:seeAlso rdf:resource="http://dbpedia.org/page/Coach_%28vehicle%29"/>
-		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Bus"/>
-		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Bus"/>
-		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Coach_%28vehicle%29"/>
-		<skos:definition xml:lang="en">A motor vehicle with seating for transporting nine or more persons, including the driver.</skos:definition>
-		<skos:definition xml:lang="en">a road vehicle designed to carry passengers. Coaches are luxury busses, usually in service for long distance travel</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.10</fibo-fnd-utl-av:adaptedFrom>
-		<fibo-fnd-utl-av:synonym xml:lang="en">autobus</fibo-fnd-utl-av:synonym>
-		<fibo-fnd-utl-av:synonym xml:lang="en">coach</fibo-fnd-utl-av:synonym>
-		<fibo-fnd-utl-av:synonym xml:lang="en">omnibus</fibo-fnd-utl-av:synonym>
 	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-vc-vc;Business">
@@ -571,81 +353,17 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 		<rdfs:label xml:lang="en">camera</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-vc-vc;Canoe">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Boat"/>
-		<rdfs:label xml:lang="en">canoe</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Canoe"/>
-		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Canoe"/>
-		<skos:definition xml:lang="en">a small narrow boat, typically human-powered, though it may also be powered by sails or small electric or gas motors</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;Car">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;MotorizedRoadVehicle"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;heightOpenTailgate"/>
-				<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValue"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;roofLoad"/>
-				<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValue"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;bodyStyle"/>
-				<owl:onClass rdf:resource="&auto-vc-vc;BodyStyleValue"/>
-				<owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">automobile</rdfs:label>
-		<rdfs:label xml:lang="en">car</rdfs:label>
-		<rdfs:label xml:lang="pl">samochód</rdfs:label>
-		<rdfs:comment>Automobiles may be classified by size or weight, or both. Size classification is based on wheelbase. Weight classification is based on curb weight, the weight of an automobile with standard equipment and a full complement of fuel and other fluids, but with no load of persons or property. Before classification, wheelbase should be rounded to the nearest inch and curb weight should be rounded to the nearest 100 pounds.</rdfs:comment>
-		<rdfs:comment>QName: auto-vc-vc:Car</rdfs:comment>
-		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
-		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-		<sm:directSource rdf:resource="https://schema.org/Car"/>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
-		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Automobile"/>
-		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Automobile"/>
-		<skos:definition xml:lang="en">A motor vehicle other than a motorcycle, utility vehicle or low speed vehicle consisting of a transport device typically designed for carrying eight or fewer persons.</skos:definition>
-		<skos:definition xml:lang="en">a wheeled motor vehicle used for transporting passengers, which also carries its own engine or motor</skos:definition>
-		<skos:definition xml:lang="en">a wheeled, self-powered motor vehicle used for transportation</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.12</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
 	<owl:NamedIndividual rdf:about="&auto-vc-vc;CarSharing">
 		<rdfs:label xml:lang="en">car sharing</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<skos:definition xml:lang="en">The usage of a vehicle for car sharing networks</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&auto-vc-vc;CargoVan">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Van"/>
-		<rdfs:label xml:lang="en">Cargo Van</rdfs:label>
-		<skos:definition xml:lang="en">Any van where the area behind the driver or cab is designed for transporting cargo or operated for general commercial use.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.14.2</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
 	<owl:NamedIndividual rdf:about="&auto-vc-vc;Carport">
 		<rdfs:label xml:lang="en">carport</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<skos:definition xml:lang="en">The parking of a vehicle under a protective roof, e.g. in a carport</skos:definition>
 	</owl:NamedIndividual>
-	
-	<owl:Class rdf:about="&auto-vc-vc;CharterBus">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Bus"/>
-		<rdfs:label xml:lang="en">Charter Bus</rdfs:label>
-		<skos:definition xml:lang="en">A bus providing contract service for a group tour or outing, usually on a round-trip basis.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.10.5</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc-vc;ChoiceOrComponent">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Model"/>
@@ -721,13 +439,6 @@ Example: Engine 1.6 l TDI, color ocean blue, trailer hitch</skos:definition>
 		<skos:definition xml:lang="en">Combined usage as a traffic pattern</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&auto-vc-vc;CommercialMotorVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;TransportVehicle"/>
-		<rdfs:label xml:lang="en">Commercial Motor Vehicle</rdfs:label>
-		<skos:definition xml:lang="en">Any motor vehicle used for the transportation of goods, property or people in interstate (See 2.9.2) or intrastate (2.9.3) commerce.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.7.3</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-vc-vc;CompleteCarModel">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Model"/>
 		<rdfs:subClassOf>
@@ -788,13 +499,14 @@ If no such statement is found, the validity of a configuration is unknown.
 Note: The two properties coo:includes and coo:dependsOn, attached to coo:ChoiceOrComponent, may contain additional information on the validity of configuration.</skos:definition>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-vc-vc;DecorativeTrims">
+	<owl:NamedIndividual rdf:about="&auto-vc-vc;DecorativeTrims">
+		<rdf:type rdf:resource="&owl;Class"/>
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;ChoiceOrComponent"/>
 		<rdfs:label xml:lang="en">decorative trims choice or component</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">The class of decorative trim choices or components (a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 8</skos:definition>
 		<auto-vc-vc:hasID>8</auto-vc-vc:hasID>
-	</owl:Class>
+	</owl:NamedIndividual>
 	
 	<owl:Class rdf:about="&auto-vc-vc;Derivative">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Model"/>
@@ -1100,14 +812,6 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		<skos:definition xml:lang="en">a value indicating a type of fuel</skos:definition>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-vc-vc;FullTrailer">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Trailer"/>
-		<rdfs:label xml:lang="en">Full Trailer</rdfs:label>
-		<rdfs:comment xml:lang="en">An auxiliary undercarriage assembly, commonly known as a converter dolly and consisting of a chassis, fifth wheel and one or more tow bars, is sometimes used to convert a semitrailer to a full trailer. A semitrailer equipped with a converter dolly is considered to be a full trailer.</rdfs:comment>
-		<skos:definition xml:lang="en">A trailer, other than a pole trailer, designed for carrying property and so constructed that no part of its weight rests upon or is carried by the towing road vehicle.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.18</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-vc-vc;GPS">
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Sensor"/>
 		<rdfs:label xml:lang="en">GPS</rdfs:label>
@@ -1150,17 +854,6 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		<skos:definition xml:lang="en">A value indicating a gearbox type.</skos:definition>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-vc-vc;HeavyTruck">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Truck"/>
-		<rdfs:label xml:lang="en">Heavy Truck</rdfs:label>
-		<skos:definition xml:lang="en">A truck which has a gross vehicle weight rating (GVWR) of more than 26,000 pounds (11,793 kilograms).</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.26</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;HumanPoweredLandVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;RoadVehicle"/>
-	</owl:Class>
-	
 	<owl:NamedIndividual rdf:about="&auto-vc-vc;Hybrid">
 		<rdf:type rdf:resource="&auto-vc-vc;FuelTypeValue"/>
 		<rdfs:label xml:lang="en">Hybrid (vso:FuelTypeValue)</rdfs:label>
@@ -1175,53 +868,6 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		<skos:definition xml:lang="en">An independent dealer</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&auto-vc-vc;IntercityBus">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Bus"/>
-		<rdfs:label xml:lang="en">Intercity Bus</rdfs:label>
-		<skos:definition xml:lang="en">A bus used for long-distance passenger transportation between cities over fixed routes with regular schedules.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.10.4</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;Kayak">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Watercraft"/>
-		<rdfs:label xml:lang="en">kayak</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Kayak"/>
-		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Kayak"/>
-		<skos:definition xml:lang="en">a small human-powered watercraft that traditionally has a covered deck, and one or more cockpits, each seating one paddler who strokes a double-bladed paddle. In this ontology, kayaks are considered watercrafts of their own kind, not a subtype of boat</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;LandVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Vehicle"/>
-		<rdfs:label xml:lang="en">Land Vehicle</rdfs:label>
-		<rdfs:label xml:lang="en">land vehicle</rdfs:label>
-		<rdfs:comment>QName: auto-vc-vc:LandVehicle</rdfs:comment>
-		<rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
-		<skos:definition xml:lang="en">A transport vehicle which is neither an aircraft nor a watercraft.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.7</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;LargeBus">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Bus"/>
-		<rdfs:label xml:lang="en">Large Bus</rdfs:label>
-		<skos:definition xml:lang="en">A bus with seating for sixteen or more persons, including the driver.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.10.2</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;LargeMotorcycle">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Motorcycle"/>
-		<rdfs:label xml:lang="en">Large Motorcycle</rdfs:label>
-		<skos:definition xml:lang="en">Any motorcycle other than a motor-driven cycle.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.9.2</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;LargeSpecialVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;SpecialVehicle"/>
-		<rdfs:label xml:lang="pl">duży pojazd specjalny</rdfs:label>
-		<rdfs:label xml:lang="en">large special vehicle</rdfs:label>
-		<rdfs:seeAlso>source: https://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/TTICarOnto.owl</rdfs:seeAlso>
-	</owl:Class>
-	
 	<owl:NamedIndividual rdf:about="&auto-vc-vc;LeftHandDriving">
 		<rdf:type rdf:resource="&auto-vc-vc;SteeringPositionValue"/>
 		<rdfs:label xml:lang="en">left hand drive</rdfs:label>
@@ -1233,472 +879,23 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		<rdfs:label xml:lang="en">lidar</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-vc-vc;LightTruck">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Truck"/>
-		<rdfs:label xml:lang="en">Light Truck</rdfs:label>
-		<skos:definition xml:lang="en">A truck which has a gross vehicle weight rating (GVWR) of 10,000 pounds (4,536 kilograms) or less</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.24</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;LowSpeedVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Car"/>
-		<rdfs:label xml:lang="en">Low Speed Vehicle</rdfs:label>
-		<rdfs:comment xml:lang="en">LSVs are required to be equipped with basic items of safety equipment: headlamps, stop lamps, turn signal lamps, tail lamps, reflex reflectors, parking brake, windshields of either type AS-1 or AS-5 glazing, rearview mirrors, seat belts and vehicle identification numbers (VINs).</rdfs:comment>
-		<skos:definition xml:lang="en">A motor vehicle with four or more wheels whose top speed is greater than 20 miles per hour, but not greater than 25 miles per hour.</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;MediumTruck">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Truck"/>
-		<rdfs:label xml:lang="en">Medium Truck</rdfs:label>
-		<skos:definition xml:lang="en">A truck which has a gross vehicle weight rating (GVWR) of more than 10,000 pounds and less than or equal to 26,000 pounds (4,536 to 11,793 kilograms).</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.25</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;Moped">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Motorcycle"/>
-		<rdfs:label xml:lang="en">Moped</rdfs:label>
-		<skos:definition xml:lang="en">A speed-limited motor-driven cycle which may be propelled by pedaling.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.9.4</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;Motor-drivenCycle">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Motorcycle"/>
-		<rdfs:label xml:lang="en">Motor-driven Cycle</rdfs:label>
-		<skos:definition xml:lang="en">Any motorcycle having an engine with less than 150 cubic centimeters displacement or with 5-brake horsepower or less.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.9.1</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;MotorBoat">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Boat"/>
-		<rdfs:label xml:lang="en">motor boat</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Motorboat"/>
-		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Motorboat"/>
-		<skos:definition xml:lang="en">a boat which is powered by an engine</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;MotorVehicleIn-transport">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Role"/>
-		<rdfs:label xml:lang="en">Motor Vehicle In-transport</rdfs:label>
-		<rdfs:comment xml:lang="en">A motor vehicle that is In-transport state.</rdfs:comment>
-		<rdfs:comment xml:lang="en">See In-transport</rdfs:comment>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.34</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;Motorcycle">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;MotorizedRoadVehicle"/>
-		<rdfs:label xml:lang="en">Motorcycle</rdfs:label>
-		<rdfs:label xml:lang="pl">motocykl</rdfs:label>
-		<rdfs:label xml:lang="en">motorcycle</rdfs:label>
-		<rdfs:comment>QName: auto-vc-vc:Motorcycle</rdfs:comment>
-		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
-		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-		<sm:directSource rdf:resource="https://schema.org/Motorcycle"/>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
-		<rdfs:isDefinedBy xml:lang="pl">pojazd samochodowy zaopatrzony w silnik spalinowy, dwukołowy lub z bocznym wózkiem – wielośladowy</rdfs:isDefinedBy>
-		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Motorcycle"/>
-		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Motorcycle"/>
-		<skos:definition xml:lang="en">Any motor vehicle having a seat or saddle for the use of its operator and designed to travel on not more than three wheels in contact with the ground.</skos:definition>
-		<skos:definition xml:lang="en">a single-track, two-wheeled motor vehicle</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.9</fibo-fnd-utl-av:adaptedFrom>
-		<fibo-fnd-utl-av:synonym xml:lang="en">motorbike</fibo-fnd-utl-av:synonym>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;MotorizedBicycle">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;MotorizedRoadVehicle"/>
-		<rdfs:label xml:lang="en">motorized bicycle</rdfs:label>
-		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
-		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-		<sm:directSource rdf:resource="https://schema.org/MotorizedBicycle"/>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Motorized_bicycle"/>
-		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Motorized_bicycle"/>
-		<skos:definition xml:lang="en">a bicycle with an attached motor used to power the vehicle, or to assist with pedaling</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;MotorizedRoadVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;RoadVehicle"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;color"/>
-				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;engineName"/>
-				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;driver"/>
-				<owl:onClass rdf:resource="&auto-mo-mo;Person"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;meetsEmissionStandard"/>
-				<owl:onClass rdf:resource="&auto-mo-mo;QualitativeValue"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;vehicleTransmission"/>
-				<owl:onClass rdf:resource="&auto-mo-mo;QualitativeValue"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;luggageCapacitySeatsFolded"/>
-				<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValue"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;luggageCapacitySeatsUpright"/>
-				<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValue"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;payload"/>
-				<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValue"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;speed"/>
-				<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValue"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;torque"/>
-				<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValue"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;trailerWeight"/>
-				<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValue"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;weightTotal"/>
-				<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValue"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;wheelbase"/>
-				<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValue"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;widthExcludingDoorMirrors"/>
-				<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValue"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;widthWithDoorsOpen"/>
-				<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValue"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;fuelCapacity"/>
-				<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValueFloat"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;fuelConsumption"/>
-				<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValueFloat"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;numberOfAxles"/>
-				<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValueInteger"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;numberOfForwardGears"/>
-				<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValueInteger"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;driveWheelConfiguration"/>
-				<owl:onClass rdf:resource="&auto-vc-vc;DriveWheelConfigurationValue"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;feature"/>
-				<owl:onClass rdf:resource="&auto-vc-vc;FeatureValue"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;gearbox"/>
-				<owl:onClass rdf:resource="&auto-vc-vc;GearboxTypeValue"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;transmission"/>
-				<owl:onClass rdf:resource="&auto-vc-vc;TransmissionTypeValue"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;dateLaunched"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-				<owl:onDataRange rdf:resource="&xsd;dateTime"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;dateVehicleFirstRegistered"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-				<owl:onDataRange rdf:resource="&xsd;dateTime"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;emissionsCO2"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-				<owl:onDataRange rdf:resource="&xsd;decimal"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;countryOfOrigin"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-				<owl:onDataRange rdf:resource="&xsd;string"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;countryOfRegistration"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-				<owl:onDataRange rdf:resource="&xsd;string"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;cylinderTypeId"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-				<owl:onDataRange rdf:resource="&xsd;string"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;manufacturerCode"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-				<owl:onDataRange rdf:resource="&xsd;string"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;vehicleConfiguration"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-				<owl:onDataRange rdf:resource="&xsd;string"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;vehicleInteriorType"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-				<owl:onDataRange rdf:resource="&xsd;string"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;height"/>
-				<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValueFloat"/>
-				<owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;length"/>
-				<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValueFloat"/>
-				<owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;productionDate"/>
-				<owl:onDataRange rdf:resource="&xsd;dateTime"/>
-				<owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;numberOfAirbags"/>
-				<owl:onDataRange rdf:resource="&xsd;decimal"/>
-				<owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;vehicleIdentificationNumber"/>
-				<owl:onDataRange rdf:resource="&xsd;string"/>
-				<owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;fuelType"/>
-				<owl:someValuesFrom rdf:resource="&auto-mo-mo;QuantitativeValue"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;hasMSRegManufacturerName"/>
-				<owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;mileageFromOdometer"/>
-				<owl:someValuesFrom rdf:resource="&auto-mo-mo;QuantitativeValue"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;numberOfForwardGears"/>
-				<owl:someValuesFrom rdf:resource="&auto-mo-mo;NumericalValue"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;seatingCapacity"/>
-				<owl:someValuesFrom rdf:resource="&auto-mo-mo;NumericalValue"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;steeringPosition"/>
-				<owl:someValuesFrom rdf:resource="&auto-vc-vc;SteeringPositionValue"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;vehicleEngine"/>
-				<owl:someValuesFrom rdf:resource="&auto-vc-vc;EngineSpecification"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;vehicleInteriorColor"/>
-				<owl:someValuesFrom rdf:resource="&xsd;string"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;width"/>
-				<owl:someValuesFrom rdf:resource="&auto-mo-mo;QuantitativeValueFloat"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">Motor Vehicle</rdfs:label>
-		<rdfs:label xml:lang="en">motorized road vehicle</rdfs:label>
-		<rdfs:comment xml:lang="en">See 2.2.7.1, 2.2.7.2, 2.2.9 - 2.2.26</rdfs:comment>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Motor_vehicle"/>
-		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Motor_vehicle"/>
-		<skos:definition xml:lang="en">Any motorized (mechanically or electrically powered) road vehicle not operated on rails.</skos:definition>
-		<skos:definition xml:lang="en">a wheeled land vehicle whose main propulsion is provided by an engine or motor</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.7</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;MyCar">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;PassengerCar"/>
-		<rdfs:label xml:lang="en">my car</rdfs:label>
-		<rdfs:label xml:lang="pl">mój samochód</rdfs:label>
-		<rdfs:seeAlso xml:lang="en">source: https://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/TTICarOnto.owl</rdfs:seeAlso>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;OtherBus">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Bus"/>
-		<rdfs:label xml:lang="en">Other Bus</rdfs:label>
-		<skos:definition xml:lang="en">Any bus used for transportation purposes other than school bus, transit bus, intercity bus or charter bus.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.10.6</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;Paint">
+	<owl:NamedIndividual rdf:about="&auto-vc-vc;Paint">
+		<rdf:type rdf:resource="&owl;Class"/>
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;ChoiceOrComponent"/>
 		<rdfs:label xml:lang="en">paint choice or component</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">The class of paint choices or components (a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 3</skos:definition>
 		<auto-vc-vc:hasID>3</auto-vc-vc:hasID>
-	</owl:Class>
+	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&auto-vc-vc;ParkedMotorVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Role"/>
-		<rdfs:label xml:lang="en">Parked Motor Vehicle</rdfs:label>
-		<skos:definition xml:lang="en">A motor vehicle not in- transport, other than a working motor vehicle, that is not in motion and not located on the roadway.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.34.2</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;Parking">
+	<owl:NamedIndividual rdf:about="&auto-vc-vc;Parking">
+		<rdf:type rdf:resource="&owl;Class"/>
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;ChoiceOrComponent"/>
 		<rdfs:label xml:lang="en">parking choice or component</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">The class of parking-related choices or components (a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 7</skos:definition>
 		<auto-vc-vc:hasID>7</auto-vc-vc:hasID>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;PassengerCar">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;RegularVehicle"/>
-		<rdfs:label xml:lang="en">passenger car</rdfs:label>
-		<rdfs:label xml:lang="pl">samochód osobowy</rdfs:label>
-		<rdfs:isDefinedBy xml:lang="en">a road motor vehicle, other than a motor cycle, intended for the carriage of passengers and designed to seat no more than nine persons including the driver</rdfs:isDefinedBy>
-		<rdfs:isDefinedBy xml:lang="pl">pojazd samochodowy przeznaczony konstrukcyjnie do przewozu nie więcej niż 9 osób łącznie z kierowcą oraz ich bagażu;</rdfs:isDefinedBy>
-		<rdfs:seeAlso xml:lang="en">source: https://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/TTICarOnto.owl</rdfs:seeAlso>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;PassengerVan">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Van"/>
-		<rdfs:label xml:lang="en">Passenger Van</rdfs:label>
-		<skos:definition xml:lang="en">Any van where the area behind the driver or cab is designated for carrying passengers.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.14.1</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;Pedalcycle">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;HumanPoweredLandVehicle"/>
-		<rdfs:label xml:lang="en">pedalcycle</rdfs:label>
-		<skos:definition xml:lang="en">A non-motorized other road vehicle propelled by pedaling.</skos:definition>
-	</owl:Class>
+	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="&auto-vc-vc;Petrol">
 		<rdf:type rdf:resource="&auto-vc-vc;FuelTypeValue"/>
@@ -1707,12 +904,6 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		<skos:definition xml:lang="en">Petrol, VW ID: 1</skos:definition>
 		<auto-vc-vc:hasID>1</auto-vc-vc:hasID>
 	</owl:NamedIndividual>
-	
-	<owl:Class rdf:about="&auto-vc-vc;PoleTrailer">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Trailer"/>
-		<rdfs:label xml:lang="en">Pole Trailer</rdfs:label>
-		<skos:definition xml:lang="en">A trailer designed to be attached to the towing road vehicle by means of a reach or pole, or by being boomed or otherwise secured to the towing road vehicle, and ordinarily used for carrying property of a long or irregular shape such as poles, pipes or structural members that are generally capable of sustaining themselves as beams between the supporting connections.</skos:definition>
-	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-vc-vc;Private">
 		<rdfs:label xml:lang="en">private</rdfs:label>
@@ -1732,66 +923,12 @@ Example 1: Power steering and Air conditioning in combination reduce the availab
 Example 2: Choosing the color option &quot;blue&quot; changes the color of the car to &quot;blue&quot;.</skos:definition>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-vc-vc;Quadracycle">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Pedalcycle"/>
-		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-vc-vc;numberOfForwardGears"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValueInteger"/>
-						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-					</owl:Restriction>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-vc-vc;numberOfForwardGears"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValueInteger"/>
-						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;transmission"/>
-				<owl:onClass rdf:resource="&auto-vc-vc;TransmissionTypeValue"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">quadracycle</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Quadracycle"/>
-		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Quadracycle"/>
-		<skos:definition xml:lang="en">a four-wheeled human-powered vehicle. It is also referred to as a quadricycle, quadcycle pedal car or four-wheeled bicycle</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;RailwayTrain">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;RailwayVehicle"/>
-		<rdfs:label xml:lang="en">Railway Train</rdfs:label>
-		<rdfs:label xml:lang="en">train</rdfs:label>
-		<skos:definition xml:lang="en">Any motorized railway vehicle.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.5</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;RailwayVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;LandVehicle"/>
-		<rdfs:label xml:lang="en">Railway Vehicle</rdfs:label>
-		<skos:definition xml:lang="en">Any land vehicle that is (1) designed primarily for, or in use for, moving persons or property from one place to another on rails and (2) not in use on a land way other than a railway.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.4</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
 	<owl:NamedIndividual rdf:about="&auto-vc-vc;RearWheelDriveConfiguration">
 		<rdf:type rdf:resource="&auto-vc-vc;DriveWheelConfigurationValue"/>
 		<rdfs:label xml:lang="en">rear-wheel drive</rdfs:label>
 		<skos:definition xml:lang="en">Rear-wheel drive is a transmission layout where the engine drives the rear wheels.</skos:definition>
 		<fibo-fnd-utl-av:synonym xml:lang="en">RWD</fibo-fnd-utl-av:synonym>
 	</owl:NamedIndividual>
-	
-	<owl:Class rdf:about="&auto-vc-vc;RegularVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Car"/>
-		<rdfs:label xml:lang="en">regular vehicle</rdfs:label>
-		<rdfs:label xml:lang="pl">zwykły pojazd</rdfs:label>
-		<rdfs:seeAlso xml:lang="en">source: https://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/TTICarOnto.owl</rdfs:seeAlso>
-	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-vc-vc;RentalVehicleUsage">
 		<rdfs:label>rental vehicle usage</rdfs:label>
@@ -1800,154 +937,33 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
 		<skos:definition>Indicates the usage of the vehicle as a rental car.</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&auto-vc-vc;Rickshaw">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Pedalcycle"/>
-		<rdfs:label xml:lang="en">rickshaw</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Rickshaw"/>
-		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Rickshaw"/>
-		<skos:definition xml:lang="en">a two-wheeled cart which seats one or two persons and is being drawn by a runner</skos:definition>
-		<fibo-fnd-utl-av:synonym xml:lang="en">ricksha</fibo-fnd-utl-av:synonym>
-	</owl:Class>
-	
 	<owl:NamedIndividual rdf:about="&auto-vc-vc;RightHandDriving">
 		<rdf:type rdf:resource="&auto-vc-vc;SteeringPositionValue"/>
 		<rdfs:label xml:lang="en">right hand drive</rdfs:label>
 		<skos:definition xml:lang="en">The steering position is on the right side of the vehicle (viewed from the main direction of driving). For cars this means that you drive on the left side of the road.</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&auto-vc-vc;RoadVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;LandVehicle"/>
-		<rdfs:label xml:lang="en">Road Vehicle</rdfs:label>
-		<rdfs:comment xml:lang="en">A superclass of classes addopted from ANSI D.16-2017.</rdfs:comment>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;Roofs">
+	<owl:NamedIndividual rdf:about="&auto-vc-vc;Roofs">
+		<rdf:type rdf:resource="&owl;Class"/>
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;ChoiceOrComponent"/>
 		<rdfs:label xml:lang="en">roofs choice or component</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">The class of roof choices or components (a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 5</skos:definition>
 		<auto-vc-vc:hasID>5</auto-vc-vc:hasID>
-	</owl:Class>
+	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&auto-vc-vc;SailingBoat">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Boat"/>
-		<rdfs:label xml:lang="en">sailing boat</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Sailboat"/>
-		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Sailboat"/>
-		<skos:definition xml:lang="en">a boat propelled partly or entirely by sails</skos:definition>
-		<fibo-fnd-utl-av:synonym xml:lang="en">sailboat</fibo-fnd-utl-av:synonym>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;SchoolBus">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Bus"/>
-		<rdfs:label xml:lang="en">School Bus</rdfs:label>
-		<rdfs:comment xml:lang="en">A motor vehicle is not a school bus while on trips which involve the transportation exclusively of other passengers or exclusively for other purposes. A motor vehicle is a school bus only if it is externally identifiable by the following characteristics : 1.) Its color is yellow, 2.) The words “ school bus &apos;&apos; appear on the front and rear, 3.) Flashing red lights are located on the front and rear, 4.) Lettering on both sides identifies the school or school district served, or the company operating the bus.</rdfs:comment>
-		<skos:definition xml:lang="en">A motor vehicle used for the transportation of any school pupil at or below the 12th-grade level to or from a public or private school or school-related activity.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.8.1</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;Seats">
+	<owl:NamedIndividual rdf:about="&auto-vc-vc;Seats">
+		<rdf:type rdf:resource="&owl;Class"/>
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;ChoiceOrComponent"/>
 		<rdfs:label xml:lang="en">seats choice or component</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">The class of seat-related choices or components (a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 9</skos:definition>
 		<auto-vc-vc:hasID>9</auto-vc-vc:hasID>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;Semitrailer">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Trailer"/>
-		<rdfs:label xml:lang="en">Semitrailer</rdfs:label>
-		<skos:definition xml:lang="en">A trailer, other than a pole trailer, designed for carrying property and so constructed that part of its weight rests upon or is carried by the towing road vehicle.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.17</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
+	</owl:NamedIndividual>
 	
 	<owl:Class rdf:about="&auto-vc-vc;Sensor">
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;VehiclePart"/>
 		<rdfs:label xml:lang="en">sensor</rdfs:label>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;Ship">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Watercraft"/>
-		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-vc-vc;fuelCapacity"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValueFloat"/>
-						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-					</owl:Restriction>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-vc-vc;fuelCapacity"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValueFloat"/>
-						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Class>
-				<owl:intersectionOf rdf:parseType="Collection">
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-vc-vc;numberOfForwardGears"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValueInteger"/>
-						<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-					</owl:Restriction>
-					<owl:Restriction>
-						<owl:onProperty rdf:resource="&auto-vc-vc;numberOfForwardGears"/>
-						<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValueInteger"/>
-						<owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
-					</owl:Restriction>
-				</owl:intersectionOf>
-			</owl:Class>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;engineName"/>
-				<owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;accelerationTime"/>
-				<owl:onClass rdf:resource="&auto-mo-mo;QuantitativeValueFloat"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-vc-vc;transmission"/>
-				<owl:onClass rdf:resource="&auto-vc-vc;TransmissionTypeValue"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">ship</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Ship"/>
-		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Ship"/>
-		<skos:definition xml:lang="en">a large watercraft that floats on water</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;SingleUnitTruck">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Truck"/>
-		<rdfs:label xml:lang="en">Single Unit Truck</rdfs:label>
-		<rdfs:comment xml:lang="en">When connected to a trailer, such a device may be part of a truck combination.</rdfs:comment>
-		<skos:definition xml:lang="en">A truck consisting primarily of a single motorized transport device designed for carrying property.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.19</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;SmallBus">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Bus"/>
-		<rdfs:label xml:lang="en">Small bus</rdfs:label>
-		<skos:definition xml:lang="en">A bus with seating for nine to fifteen persons, including the driver.</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;SmallSpecialVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;SpecialVehicle"/>
-		<rdfs:label xml:lang="pl">mały pojazd specjalny</rdfs:label>
-		<rdfs:label xml:lang="en">small special vehicle</rdfs:label>
-		<rdfs:seeAlso>source: https://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/TTICarOnto.owl</rdfs:seeAlso>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc-vc;Sonar">
@@ -2034,22 +1050,6 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
 The default choice can be indicated using a coo:default link. All other choices are attached using coo:availableChoice. The number of coo:ChoiceOrComponent items that can / must be selected for a valid configuration are indicated via coo:min and coo:max.</skos:definition>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-vc-vc;SpecialVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Car"/>
-		<rdfs:label xml:lang="pl">pojazd specjalny</rdfs:label>
-		<rdfs:label xml:lang="en">special vehicle</rdfs:label>
-		<rdfs:isDefinedBy xml:lang="en">a vehicle or trailer intended to perform a special function requiring body adjustments or special equipment; this vehicle is capable of carrying persons and objects associated with the performance of this function</rdfs:isDefinedBy>
-		<rdfs:isDefinedBy xml:lang="pl">pojazd samochodowy lub przyczepa przeznaczone do wykonywania specjalnej funkcji, która powoduje konieczność dostosowania nadwozia lub posiadania specjalnego wyposażenia; w pojeździe tym mogą być przewożone osoby i rzeczy związane z wykonywaniem tej funkcji</rdfs:isDefinedBy>
-		<rdfs:seeAlso xml:lang="en">source: https://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/TTICarOnto.owl</rdfs:seeAlso>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;Speed-limitedMotor-drivenCycle">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Motorcycle"/>
-		<rdfs:label xml:lang="en">Speed-limited Motor-driven Cycle</rdfs:label>
-		<skos:definition xml:lang="en">Any motor- driven cycle which : 1.) will not attain a speed of more than 30 miles per hour (48 kilometers per hour) in one mile (1.609 kilometers) from a standing start, 2.) has an engine with not more than 50 cubic centimeters displacement or with 2-brake horsepower or less, and 3.) has a power drive system which does not require its operator to shift gears.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.9.3</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-vc-vc;SpeedInterval">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QuantitativeValueFloat"/>
 		<rdfs:label xml:lang="en">speed interval</rdfs:label>
@@ -2067,13 +1067,14 @@ The default choice can be indicated using a coo:default link. All other choices 
 		<skos:definition xml:lang="en">a value indicating a steering position</skos:definition>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-vc-vc;SteeringWheels">
+	<owl:NamedIndividual rdf:about="&auto-vc-vc;SteeringWheels">
+		<rdf:type rdf:resource="&owl;Class"/>
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;ChoiceOrComponent"/>
 		<rdfs:label xml:lang="en">steering wheels choice or component</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">The class of steering wheels choices or components (a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 6</skos:definition>
 		<auto-vc-vc:hasID>6</auto-vc-vc:hasID>
-	</owl:Class>
+	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="&auto-vc-vc;Street">
 		<rdfs:label xml:lang="en">street</rdfs:label>
@@ -2187,32 +1188,11 @@ The default choice can be indicated using a coo:default link. All other choices 
 		<skos:definition>Indicates the usage of the car as a taxi.</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&auto-vc-vc;Three-wheeledMotorcycle">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Motorcycle"/>
-		<rdfs:label xml:lang="en">Three-wheeled motorcycle</rdfs:label>
-		<skos:definition xml:lang="en">Any motor vehicle having a seat or saddle for the use of its operator, and having three wheels in contact with the ground.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.9.6</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-vc-vc;TrafficPattern">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QualitativeValue"/>
 		<rdfs:label xml:lang="en">traffic pattern value</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">A value indicating a traffic pattern, to be used as a reference for vso:fuelConsumption or vso:fuelEconomy</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;Trailer">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;RoadVehicle"/>
-		<rdfs:label xml:lang="en">Trailer</rdfs:label>
-		<skos:definition xml:lang="en">A road vehicle designed to be drawn by another road vehicle.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.15</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;TransitBus">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Bus"/>
-		<rdfs:label xml:lang="en">Transit Bus</rdfs:label>
-		<skos:definition xml:lang="en">A bus used for passenger transportation over fixed, scheduled routes within primarily urban geographical areas.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.10.3</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc-vc;TransmissionTypeValue">
@@ -2255,14 +1235,6 @@ The default choice can be indicated using a coo:default link. All other choices 
 		<skos:definition xml:lang="en">The class of all manual transmission types</skos:definition>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-vc-vc;TransportVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;SpecialVehicle"/>
-		<rdfs:label xml:lang="en">Transport Vehicle</rdfs:label>
-		<rdfs:comment xml:lang="en">Such devices or animals shall include at least one of the following : 1.) A transport device, or a unit, made up of connected transport devices, while idle or in use, for moving persons or property from one place to another, 2.) An animal or team of animals while in use for moving person or property other than the animal or team itself from one place to another, or 3.) A movable device such as construction, farm or industrial machinery outside the confines of a building and its premises while in use for moving persons, the device itself, or other property from one place to another.</rdfs:comment>
-		<skos:definition xml:lang="en">Consists of one or more devices or animals and their load.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.4</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-vc-vc;Trim">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Model"/>
 		<rdfs:subClassOf>
@@ -2280,38 +1252,6 @@ A Trim should be linked to its Base Model via gr:isVariantOf, if available.
 Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-vc-vc;Truck">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;LargeSpecialVehicle"/>
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;TransportVehicle"/>
-		<rdfs:label xml:lang="en">Truck</rdfs:label>
-		<rdfs:label xml:lang="pl">samochód ciężarowy</rdfs:label>
-		<rdfs:label xml:lang="en">truck</rdfs:label>
-		<rdfs:comment>QName: auto-vc-vc:Truck</rdfs:comment>
-		<rdfs:comment xml:lang="pl">pojazd samochodowy przeznaczony konstrukcyjnie do przewozu ładunków</rdfs:comment>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
-		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Truck"/>
-		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Truck"/>
-		<skos:definition xml:lang="en">A motor vehicle designed primarily for carrying property.</skos:definition>
-		<skos:definition xml:lang="en">a motor vehicle designed to transport cargo</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.13</fibo-fnd-utl-av:adaptedFrom>
-		<fibo-fnd-utl-av:synonym xml:lang="en">lorry</fibo-fnd-utl-av:synonym>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;TruckCombination">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Truck"/>
-		<rdfs:label xml:lang="en">Truck Combination</rdfs:label>
-		<skos:definition xml:lang="en">A truck consisting primarily of a transport device which is a single- unit truck or truck tractor together with one or more attached trailers.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.21</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;TruckTractor">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Truck"/>
-		<rdfs:label xml:lang="en">Truck Tractor</rdfs:label>
-		<skos:definition xml:lang="en">A motor vehicle consisting of a single motorized transport device designed primarily for drawing trailers.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.20</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
 	<owl:NamedIndividual rdf:about="&auto-vc-vc;TwoStrokeMixture">
 		<rdf:type rdf:resource="&auto-vc-vc;FuelTypeValue"/>
 		<rdfs:label xml:lang="en">two-stroke mixture</rdfs:label>
@@ -2319,13 +1259,14 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
 		<skos:definition xml:lang="en">A pre-mixed fuel-oil mixture</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:Class rdf:about="&auto-vc-vc;Upholstery">
+	<owl:NamedIndividual rdf:about="&auto-vc-vc;Upholstery">
+		<rdf:type rdf:resource="&owl;Class"/>
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;ChoiceOrComponent"/>
 		<rdfs:label xml:lang="en">upholstery choice or component</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">The class of upholstery choices or components (a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 4</skos:definition>
 		<auto-vc-vc:hasID>4</auto-vc-vc:hasID>
-	</owl:Class>
+	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="&auto-vc-vc;Urban">
 		<rdf:type rdf:resource="&auto-vc-vc;TrafficPattern"/>
@@ -2333,40 +1274,6 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">Urban usage as a traffic pattern</skos:definition>
 	</owl:NamedIndividual>
-	
-	<owl:Class rdf:about="&auto-vc-vc;UtilityVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;SpecialVehicle"/>
-		<rdfs:label xml:lang="en">Utility Vehicle</rdfs:label>
-		<rdfs:comment xml:lang="en">These vehicles are generally four wheel-drive (4 x 4) and have increased ground clearance. A utility vehicle typically has a gross vehicle weight rating (GVWR) of 10,000 pounds or less. Utility vehicles with wheelbases greater than 88 inches are classified by overall width. The wheelbase and overall width should be rounded to the nearest inch.</rdfs:comment>
-		<skos:definition xml:lang="en">A motor vehicle other than a motorcycle or large bus consisting primarily of a transport device designed for carrying persons, and generally considered a multi-purpose vehicle that is designed to have off-road capabilities.</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;Van">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;SmallSpecialVehicle"/>
-		<rdfs:label xml:lang="en">Van</rdfs:label>
-		<rdfs:label xml:lang="en">van</rdfs:label>
-		<rdfs:comment xml:lang="en">Vans are classified by size based on frame type and overall vehicle body width. Before classification, vehicle width should be rounded to the nearest inch.</rdfs:comment>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Van"/>
-		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Van"/>
-		<skos:definition xml:lang="en">A gross vehicle weight rating (GVWR) of 10,000 pounds or less and is basically a “ box on wheels ” that is identifiable by its enclosed passenger and/or cargo area, step-up floor, and relatively short (or nonexistent) hood.</skos:definition>
-		<skos:definition xml:lang="en">a kind of vehicle used for transporting  goods or groups of people. It is usually a box-shaped vehicle on four wheels, about the same width and length as a large automobile, but taller and usually higher off the ground, also referred to as a light commercial vehicle or LCV.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.14</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;Van-basedBus">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Van"/>
-		<rdfs:label xml:lang="en">Van-based Bus</rdfs:label>
-		<skos:definition xml:lang="en">Any passenger van designed for carrying nine or more persons, including the driver.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.14.4</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;Van-basedMotorhome">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Van"/>
-		<rdfs:label xml:lang="en">Van-based Motorhome</rdfs:label>
-		<skos:definition xml:lang="en">Any van where a frame-mounted recreational unit is added behind the driver or cab area.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.14.3</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc-vc;Vehicle">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;PhysicalObject"/>
@@ -2400,52 +1307,20 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
 		<rdfs:label xml:lang="en">vehicle part</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-vc-vc;Watercraft">
-		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Vehicle"/>
-		<rdfs:label xml:lang="en">watercraft</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Watercraft"/>
-		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Watercraft"/>
-		<skos:definition xml:lang="en">A transport vehicle designed primarily for, or in use for, moving persons or property on or through, and supported by, water from one place to another.</skos:definition>
-		<skos:definition xml:lang="en">a vehicle, vessel or craft designed to move across or through water</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.6</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;Wheels">
+	<owl:NamedIndividual rdf:about="&auto-vc-vc;Wheels">
+		<rdf:type rdf:resource="&owl;Class"/>
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;ChoiceOrComponent"/>
 		<rdfs:label xml:lang="en">wheels choice or component</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">The class of wheels-related choices or components (a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 2</skos:definition>
 		<auto-vc-vc:hasID>2</auto-vc-vc:hasID>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc-vc;WorkingMotorVehicle">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Role"/>
-		<rdfs:label xml:lang="en">Working Motor Vehicle</rdfs:label>
-		<rdfs:comment xml:lang="en">This &quot;work&quot; may be located within open or closed portions of the trafficway and motor vehicles performing these activities can be within or outside of the trafficway boundaries.</rdfs:comment>
-		<skos:definition xml:lang="en">A motor vehicle in the act of performing construction, maintenance or utility work related to the trafficway.</skos:definition>
-		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.7.2.</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Class>
+	</owl:NamedIndividual>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;accelerationTime">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;quantitativeProductOrServiceProperty"/>
 		<rdfs:label xml:lang="en">acceleration time</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
-		<rdfs:domain>
-			<owl:Class>
-				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&auto-vc-vc;Boat">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;MotorizedRoadVehicle">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;Ship">
-					</rdf:Description>
-				</owl:unionOf>
-			</owl:Class>
-		</rdfs:domain>
-		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValue"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValueFloat"/>
 		<skos:definition>The time needed to accelerate the vehicle from a given start velocity to a given target velocity.&lt;br/&gt;&lt;br/&gt;
 
@@ -2464,31 +1339,6 @@ Typical unit code(s): SEC for seconds&lt;br/&gt;&lt;br/&gt;
 		<skos:definition xml:lang="en">This property links available Choices or Components to a Spec Item.</skos:definition>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="&auto-vc-vc;bodyStyle">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;qualitativeProductOrServiceProperty"/>
-		<rdfs:label xml:lang="en">body style</rdfs:label>
-		<rdfs:label xml:lang="en">body type</rdfs:label>
-		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
-		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
-		<rdfs:range rdf:resource="&auto-vc-vc;BodyStyleValue"/>
-		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Car_body_styles"/>
-		<skos:definition>Indicates the design and body style of the vehicle (e.g. station wagon, hatchback, etc.).</skos:definition>
-		<skos:definition xml:lang="en">Indicates the design and body style of the vehicle. 
-
-Use DBPedia resources to indicate the features, if possible. Popular identifiers are
-  http://dbpedia.org/resource/Convertible
-  http://dbpedia.org/resource/Hatchback
-  http://dbpedia.org/resource/Station_wagon
-  http://dbpedia.org/resource/Sport_utility_vehicle
-  http://dbpedia.org/resource/Roadster
-
-See also http://en.wikipedia.org/wiki/Car_body_styles.
-
-If you cannot find a suitable identifier in DBPedia, define your own as an instance of vso:BodyStyleValue.</skos:definition>
-	</owl:ObjectProperty>
-	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;capCode">
 		<rdfs:label xml:lang="en">cap code</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Derivative"/>
@@ -2498,22 +1348,10 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 	</owl:DatatypeProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;cargoVolume">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;quantitativeProductOrServiceProperty"/>
 		<rdfs:label xml:lang="en">cargo volume</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
-		<rdfs:domain>
-			<owl:Class>
-				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&auto-vc-vc;MotorizedRoadVehicle">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;Watercraft">
-					</rdf:Description>
-				</owl:unionOf>
-			</owl:Class>
-		</rdfs:domain>
-		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValue"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValueFloat"/>
 		<skos:definition>The available volume for cargo or luggage. For automobiles, this is usually the trunk volume.
 
@@ -2566,27 +1404,8 @@ Note: This property is symmetric, i.e., if A is compatible with B, then B is als
 		<skos:definition xml:lang="en">The country or geo-political region in which the vehicle is currently registered, indicated as the two-character version of ISO 3166-1 (ISO 3166-1 alpha-2) for regions or ISO 3166-2, which breaks down the countries from ISO 3166-1 into administrative subdivisions.</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:ObjectProperty rdf:about="&auto-vc-vc;currentOwner">
-		<rdfs:label xml:lang="en">current owner</rdfs:label>
-		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
-		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-		<rdfs:range rdf:resource="&auto-mo-mo;Organization"/>
-		<rdfs:range rdf:resource="&auto-mo-mo;Person"/>
-		<skos:definition xml:lang="en">This property points to the current owner of the vehicle.</skos:definition>
-	</owl:ObjectProperty>
-	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;cylinderTypeId">
 		<rdfs:label xml:lang="en">cylinder type id</rdfs:label>
-		<rdfs:domain>
-			<owl:Class>
-				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&auto-vc-vc;Engine">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;MotorizedRoadVehicle">
-					</rdf:Description>
-				</owl:unionOf>
-			</owl:Class>
-		</rdfs:domain>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<rdfs:range rdf:resource="&xsd;string"/>
 		<skos:definition xml:lang="en">The Volkswagen-specific identifier for the cylinder type of a vehicle or engine</skos:definition>
@@ -2653,24 +1472,13 @@ Note: It is recommended to rely on this property only for data originating from 
 	</owl:DatatypeProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;driveWheelConfiguration">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;qualitativeProductOrServiceProperty"/>
+		<rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
 		<rdfs:label xml:lang="en">drive wheel configuration</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-		<rdfs:domain rdf:resource="&auto-vc-vc;MotorizedRoadVehicle"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
 		<rdfs:range rdf:resource="&auto-vc-vc;DriveWheelConfigurationValue"/>
-		<rdfs:range>
-			<owl:Class>
-				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&auto-mo-mo;TextValue">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;DriveWheelConfigurationValue">
-					</rdf:Description>
-				</owl:unionOf>
-			</owl:Class>
-		</rdfs:range>
 		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Drive_wheel"/>
 		<skos:definition xml:lang="en">The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle&apos;s engine via the drivetrain</skos:definition>
 		<skos:definition>The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle&apos;s engine via the drivetrain.</skos:definition>
@@ -2688,7 +1496,6 @@ Note: It is recommended to rely on this property only for data originating from 
 		<rdfs:label xml:lang="en">emissions CO2</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-		<rdfs:domain rdf:resource="&auto-vc-vc;MotorizedRoadVehicle"/>
 		<rdfs:range rdf:resource="&xsd;float"/>
 		<skos:definition>The CO2 emissions in g/km. When used in combination with a QuantitativeValue, put &quot;g/km&quot; into the unitText property of that value, since there is no UN/CEFACT Common Code for &quot;g/km&quot;.</skos:definition>
 	</owl:DatatypeProperty>
@@ -2700,24 +1507,10 @@ Note: It is recommended to rely on this property only for data originating from 
 	</owl:DatatypeProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;engineDisplacement">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;quantitativeProductOrServiceProperty"/>
 		<rdfs:label xml:lang="en">engine displacement</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;EngineSpecification"/>
-		<rdfs:domain>
-			<owl:Class>
-				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&auto-vc-vc;Boat">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;MotorizedRoadVehicle">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;Ship">
-					</rdf:Description>
-				</owl:unionOf>
-			</owl:Class>
-		</rdfs:domain>
-		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValue"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValueFloat"/>
 		<skos:definition>The volume swept by all of the pistons inside the cylinders of an internal combustion engine in a single movement. &lt;br/&gt;&lt;br/&gt;
 
@@ -2729,44 +1522,16 @@ Typical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ for cubic in
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;engineName">
 		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
 		<rdfs:label xml:lang="en">engine name</rdfs:label>
-		<rdfs:domain>
-			<owl:Class>
-				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&auto-vc-vc;Bicycle">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;Boat">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;MotorizedRoadVehicle">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;Ship">
-					</rdf:Description>
-				</owl:unionOf>
-			</owl:Class>
-		</rdfs:domain>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition xml:lang="en">A short text indicating the engine(s) of the vehicle</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;enginePower">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;quantitativeProductOrServiceProperty"/>
 		<rdfs:label xml:lang="en">engine power</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;EngineSpecification"/>
-		<rdfs:domain>
-			<owl:Class>
-				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&auto-vc-vc;Boat">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;MotorizedRoadVehicle">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;Ship">
-					</rdf:Description>
-				</owl:unionOf>
-			</owl:Class>
-		</rdfs:domain>
-		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValue"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValueFloat"/>
 		<skos:definition>The power of the vehicle&apos;s engine.
     Typical unit code(s): KWT for kilowatt, BHP for brake horsepower, N12 for metric horsepower (PS, with 1 PS = 735,49875 W)&lt;br/&gt;&lt;br/&gt;
@@ -2779,36 +1544,14 @@ Typical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ for cubic in
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;engineType">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;qualitativeProductOrServiceProperty"/>
+		<rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
 		<rdfs:label xml:lang="en">engine type</rdfs:label>
 		<rdfs:label>engine type</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;EngineSpecification"/>
-		<rdfs:domain>
-			<owl:Class>
-				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&auto-vc-vc;Boat">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;MotorizedRoadVehicle">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;Ship">
-					</rdf:Description>
-				</owl:unionOf>
-			</owl:Class>
-		</rdfs:domain>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
 		<rdfs:range rdf:resource="&auto-vc-vc;EngineTypeValue"/>
-		<rdfs:range>
-			<owl:Class>
-				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&auto-mo-mo;QualitativeValue">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-mo-mo;TextValue">
-					</rdf:Description>
-				</owl:unionOf>
-			</owl:Class>
-		</rdfs:range>
 		<skos:definition>The type of engine or engines powering the vehicle.</skos:definition>
 		<skos:definition xml:lang="en">The type of engine or engines powering the vehicle. If there are multiple engines, simply attach this property multiple times.
 
@@ -2822,13 +1565,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;feature">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;qualitativeProductOrServiceProperty"/>
+		<rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
 		<rdfs:label xml:lang="en">feature</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;PropertyValue"/>
-		<rdfs:range rdf:resource="&auto-vc-vc;FeatureValue"/>
 		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Category:Automotive_accessories"/>
 		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Category:Automotive_accessories"/>
 		<skos:definition xml:lang="en">Indicates a built-in feature, accessory, or component of the vehicle.
@@ -2871,24 +1613,10 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;fuelCapacity">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;quantitativeProductOrServiceProperty"/>
 		<rdfs:label xml:lang="en">fuel capacity</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
-		<rdfs:domain>
-			<owl:Class>
-				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&auto-vc-vc;Boat">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;MotorizedRoadVehicle">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;Ship">
-					</rdf:Description>
-				</owl:unionOf>
-			</owl:Class>
-		</rdfs:domain>
-		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValue"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValueFloat"/>
 		<skos:definition>The capacity of the fuel tank or in the case of electric cars, the battery. If there are multiple components for storage, this should indicate the total of all storage of the same type.&lt;br/&gt;&lt;br/&gt;
 
@@ -2896,26 +1624,11 @@ Typical unit code(s): LTR for liters, GLL of US gallons, GLI for UK / imperial g
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;fuelConsumption">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;quantitativeProductOrServiceProperty"/>
 		<rdfs:label xml:lang="en">fuel consumption</rdfs:label>
 		<rdfs:label xml:lang="en">fuel efficiency</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-		<rdfs:domain rdf:resource="&auto-vc-vc;MotorizedRoadVehicle"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
-		<rdfs:domain>
-			<owl:Class>
-				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&auto-vc-vc;Boat">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;MotorizedRoadVehicle">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;Ship">
-					</rdf:Description>
-				</owl:unionOf>
-			</owl:Class>
-		</rdfs:domain>
-		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValue"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValueFloat"/>
 		<skos:definition>The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km).
 
@@ -2931,23 +1644,13 @@ Note 3: Often, the absolute value is useful only when related to driving speed (
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;fuelInjectionTypeId">
 		<rdfs:label xml:lang="en">fuel injection type id</rdfs:label>
-		<rdfs:domain>
-			<owl:Class>
-				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&auto-vc-vc;Engine">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;MotorizedRoadVehicle">
-					</rdf:Description>
-				</owl:unionOf>
-			</owl:Class>
-		</rdfs:domain>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<rdfs:range rdf:resource="&xsd;string"/>
 		<skos:definition xml:lang="en">The Volkswagen-specific identifier for the fuel injection type of a vehicle or engine</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;fuelType">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;qualitativeProductOrServiceProperty"/>
+		<rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
 		<rdfs:label xml:lang="en">fuel type</rdfs:label>
 		<rdfs:label xml:lang="en">fuelType</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
@@ -2955,16 +1658,6 @@ Note 3: Often, the absolute value is useful only when related to driving speed (
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
 		<rdfs:range rdf:resource="&auto-vc-vc;FuelTypeValue"/>
-		<rdfs:range>
-			<owl:Class>
-				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&auto-mo-mo;QuantitativeValue">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-mo-mo;TextValue">
-					</rdf:Description>
-				</owl:unionOf>
-			</owl:Class>
-		</rdfs:range>
 		<skos:definition xml:lang="en">The type of fuel suitable for the engine or engines of the vehicle.
 
 Use DBPedia resources to indicate the fuel type. Popular identifiers are
@@ -2978,9 +1671,8 @@ For two-stroke mixtures, use vso:TwoStrokeMixture.</skos:definition>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;gearbox">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;qualitativeProductOrServiceProperty"/>
+		<rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
 		<rdfs:label xml:lang="en">gearbox</rdfs:label>
-		<rdfs:domain rdf:resource="&auto-vc-vc;MotorizedRoadVehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<rdfs:range rdf:resource="&auto-vc-vc;GearboxTypeValue"/>
 		<rdfs:seeAlso rdf:resource="http://dbpedia.org/page/Transmission_%28mechanics%29"/>
@@ -2989,7 +1681,6 @@ For two-stroke mixtures, use vso:TwoStrokeMixture.</skos:definition>
 	</owl:ObjectProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;gearboxTypeId">
-		<rdf:type rdf:resource="&owl;AnnotationProperty"/>
 		<rdfs:label xml:lang="en">gearbox type id</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;TransmissionTypeValue"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
@@ -3015,71 +1706,62 @@ For two-stroke mixtures, use vso:TwoStrokeMixture.</skos:definition>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;hasElectricEnergyConsumtion">
 		<rdfs:label xml:lang="en">has electric energy consumtion</rdfs:label>
-		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents the electric energy consumption of a vehicle measured in Wh/km.</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;hasEmissionsReduction">
 		<rdfs:label xml:lang="en">has emissions reduction</rdfs:label>
-		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents emissions reduction measured in g/km that a vehicle has, through the implemented innovative technologies.</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;hasEngineCapacity">
 		<rdfs:label xml:lang="en">has engine capacity</rdfs:label>
-		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property shows the capacity of the engine of a vehicle measured in cm3</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;hasFuelMode">
 		<rdfs:label xml:lang="en">has fuel mode</rdfs:label>
-		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents the fuel mode of a vehicle</skos:definition>
 	</owl:DatatypeProperty>
 	
-	<owl:AnnotationProperty rdf:about="&auto-vc-vc;hasID">
+	<owl:DatatypeProperty rdf:about="&auto-vc-vc;hasID">
 		<rdfs:label xml:lang="en">hasID</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">An annotation property that can be used to attach element identifiers from XML schemas for the corresponding XML data or schema</skos:definition>
 		<skos:definition xml:lang="en">An annotation property that can be used to attach element identifiers from XML schemas for the corresponding XML data or schema.</skos:definition>
-	</owl:AnnotationProperty>
+	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;hasInnovativeTechnology">
 		<rdfs:label xml:lang="en">has innovative technology</rdfs:label>
-		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents an innovation technology that a vehicle has implemented.</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;hasMSRegManufacturerName">
 		<rdfs:label xml:lang="en">has MSReg manufacturer name</rdfs:label>
-		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents a manufacturer name as in the registry of Member States of the European Environment Agency.</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;hasManufacturerHarmonisedName">
 		<rdfs:label xml:lang="en">has manufacturer harmonised name</rdfs:label>
-		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents a manufacturer harmonised name.</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;hasManufacturerPooling">
 		<rdfs:label xml:lang="en">has manufacturer pooling</rdfs:label>
-		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents a manufacturers pooling.</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;hasOtherAxleWidth">
 		<rdfs:label xml:lang="en">has other axle width</rdfs:label>
-		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents the width of the other steering axle of a vehicle measured in mm.</skos:definition>
 	</owl:DatatypeProperty>
@@ -3102,14 +1784,12 @@ For two-stroke mixtures, use vso:TwoStrokeMixture.</skos:definition>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;hasSteeringAxleWidth">
 		<rdfs:label xml:lang="en">has steering axle width</rdfs:label>
-		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents the width of the steering axle of a vehicle measured in mm.</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;hasTotalNewRegistrations">
 		<rdfs:label xml:lang="en">has total new registrations</rdfs:label>
-		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents the nubmer of total new registration of a vehicle.</skos:definition>
 	</owl:DatatypeProperty>
@@ -3124,13 +1804,11 @@ For two-stroke mixtures, use vso:TwoStrokeMixture.</skos:definition>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;hasTypeApprovalNumber">
 		<rdfs:label xml:lang="en">has type approval number</rdfs:label>
-		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents an internal type approval number.</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;height">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;quantitativeProductOrServiceProperty"/>
 		<rdfs:label xml:lang="en">height</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
@@ -3140,7 +1818,6 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;heightOpenTailgate">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;quantitativeProductOrServiceProperty"/>
 		<rdfs:label xml:lang="en">height open bonnet</rdfs:label>
 		<rdfs:label xml:lang="en">height open tailgate</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
@@ -3194,7 +1871,6 @@ Note: This property is symmetric, i.e., if A is incompatible with B, then B is a
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;length">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;quantitativeProductOrServiceProperty"/>
 		<rdfs:label xml:lang="en">length</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
@@ -3204,10 +1880,8 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;luggageCapacitySeatsFolded">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;quantitativeProductOrServiceProperty"/>
 		<rdfs:subPropertyOf rdf:resource="&auto-vc-vc;cargoVolume"/>
 		<rdfs:label xml:lang="en">luggage capacity seats folded</rdfs:label>
-		<rdfs:domain rdf:resource="&auto-vc-vc;MotorizedRoadVehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValue"/>
 		<skos:definition xml:lang="en">The available volume for cargo or luggage with the seats folded
@@ -3217,10 +1891,8 @@ Note: You can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;luggageCapacitySeatsUpright">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;quantitativeProductOrServiceProperty"/>
 		<rdfs:subPropertyOf rdf:resource="&auto-vc-vc;cargoVolume"/>
 		<rdfs:label xml:lang="en">luggage capacity seats upright</rdfs:label>
-		<rdfs:domain rdf:resource="&auto-vc-vc;MotorizedRoadVehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValue"/>
 		<skos:definition xml:lang="en">The available volume for cargo or luggage with the seats upright
@@ -3246,7 +1918,7 @@ Note: You can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges
 	</owl:DatatypeProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;meetsEmissionStandard">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;qualitativeProductOrServiceProperty"/>
+		<rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
 		<rdfs:label xml:lang="en">meets emission standard</rdfs:label>
 		<rdfs:label xml:lang="en">meetsEmissionStandard</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
@@ -3254,16 +1926,6 @@ Note: You can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
 		<rdfs:range rdf:resource="&auto-vc-vc;EmissionStandardValue"/>
-		<rdfs:range>
-			<owl:Class>
-				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&auto-mo-mo;QualitativeValue">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-mo-mo;TextValue">
-					</rdf:Description>
-				</owl:unionOf>
-			</owl:Class>
-		</rdfs:range>
 		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Emissions_standard"/>
 		<skos:definition>Indicates that the vehicle meets the respective emission standard.</skos:definition>
 		<skos:definition xml:lang="en">Indicates that the vehicle meets the respective emission standard. 
@@ -3288,13 +1950,10 @@ Typical unit code(s): KMT for kilometers, SMI for statute miles</skos:definition
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;mileageFromOdometer">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;quantitativeProductOrServiceProperty"/>
 		<rdfs:label xml:lang="en">mileage from odometer</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-		<rdfs:domain rdf:resource="&auto-vc-vc;MotorizedRoadVehicle"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
-		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValue"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValueFloat"/>
 		<skos:definition>The total distance travelled by the particular vehicle since its initial production, as read from its odometer.
 
@@ -3328,23 +1987,11 @@ Typical unit code(s): KMT for kilometers, SMI for statute miles</skos:definition
 	</owl:DatatypeProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;numberOfAxles">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;quantitativeProductOrServiceProperty"/>
 		<rdfs:label xml:lang="en">number of axles</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-		<rdfs:domain rdf:resource="&auto-vc-vc;MotorizedRoadVehicle"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValueInteger"/>
-		<rdfs:range>
-			<owl:Class>
-				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&auto-mo-mo;NumericalValue">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-mo-mo;QuantitativeValue">
-					</rdf:Description>
-				</owl:unionOf>
-			</owl:Class>
-		</rdfs:range>
 		<skos:definition>The number of axles.
 
 Typical unit code(s): C62</skos:definition>
@@ -3354,7 +2001,6 @@ Typical unit code(s): C62</skos:definition>
 		<rdfs:label xml:lang="en">number of doors</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-		<rdfs:domain rdf:resource="&auto-vc-vc;MotorizedRoadVehicle"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:range rdf:resource="&xsd;decimal"/>
 		<skos:definition>The number of doors.
@@ -3363,38 +2009,11 @@ Typical unit code(s): C62</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;numberOfForwardGears">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;quantitativeProductOrServiceProperty"/>
 		<rdfs:label xml:lang="en">number of forward gears</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
-		<rdfs:domain>
-			<owl:Class>
-				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&auto-vc-vc;Bicycle">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;Boat">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;MotorizedRoadVehicle">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;Quadracycle">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;Ship">
-					</rdf:Description>
-				</owl:unionOf>
-			</owl:Class>
-		</rdfs:domain>
 		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValueInteger"/>
-		<rdfs:range>
-			<owl:Class>
-				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&auto-mo-mo;NumericalValue">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-mo-mo;QuantitativeValue">
-					</rdf:Description>
-				</owl:unionOf>
-			</owl:Class>
-		</rdfs:range>
 		<skos:definition>The total number of forward gears available for the transmission system of the vehicle.
 
 Typical unit code(s): C62</skos:definition>
@@ -3407,12 +2026,10 @@ Typical unit code(s): C62</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;payload">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;quantitativeProductOrServiceProperty"/>
 		<rdfs:label xml:lang="en">payload</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
-		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValue"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValueFloat"/>
 		<skos:definition>The permitted weight of passengers and cargo, EXCLUDING the weight of the empty vehicle.&lt;br/&gt;&lt;br/&gt;
 
@@ -3427,7 +2044,6 @@ Typical unit code(s): KGM for kilogram, LBR for pound&lt;br/&gt;&lt;br/&gt;
 	</owl:ObjectProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;productionDate">
-		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
 		<rdfs:label xml:lang="en">production date</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
@@ -3499,22 +2115,9 @@ Typical unit code(s): KGM for kilogram, LBR for pound&lt;br/&gt;&lt;br/&gt;
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;roofLoad">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;quantitativeProductOrServiceProperty"/>
 		<rdfs:label xml:lang="en">roof load</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-		<rdfs:domain rdf:resource="&auto-vc-vc;MotorizedRoadVehicle"/>
-		<rdfs:domain>
-			<owl:Class>
-				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&auto-vc-vc;Bus">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;Car">
-					</rdf:Description>
-				</owl:unionOf>
-			</owl:Class>
-		</rdfs:domain>
-		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValue"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValueFloat"/>
 		<skos:definition>The permitted total weight of cargo and installations (e.g. a roof rack) on top of the vehicle.&lt;br/&gt;&lt;br/&gt;
 
@@ -3538,23 +2141,12 @@ Typical unit code(s): RPM for revolutions per minute or RPS for revolutions per 
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;seatingCapacity">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;quantitativeProductOrServiceProperty"/>
 		<rdfs:label xml:lang="en">seating capacity</rdfs:label>
 		<rdfs:label xml:lang="en">vehicle seating capacity</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValueInteger"/>
-		<rdfs:range>
-			<owl:Class>
-				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&auto-mo-mo;NumericalValue">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-mo-mo;QuantitativeValue">
-					</rdf:Description>
-				</owl:unionOf>
-			</owl:Class>
-		</rdfs:range>
 		<skos:definition>The number of passengers that can be seated in the vehicle, both in terms of the physical space available, and in terms of limitations set by law.
 
 Typical unit code(s): C62 for persons.</skos:definition>
@@ -3567,12 +2159,10 @@ Typical unit code(s): C62 for persons</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;speed">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;quantitativeProductOrServiceProperty"/>
 		<rdfs:label xml:lang="en">speed</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
-		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValue"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValueFloat"/>
 		<skos:definition>The speed range of the vehicle. If the vehicle is powered by an engine, the upper limit of the speed range (indicated by &lt;a class=&quot;localLink&quot; href=&quot;http://schema.org/maxValue&quot;&gt;maxValue&lt;/a&gt; should be the maximum speed achievable under regular conditions.&lt;br/&gt;&lt;br/&gt;
 
@@ -3583,12 +2173,11 @@ Typical unit code(s): KMH for km/h, HM for mile per hour (0.447 04 m/s), KNT for
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;steeringPosition">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;qualitativeProductOrServiceProperty"/>
+		<rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
 		<rdfs:label xml:lang="en">steering position</rdfs:label>
 		<rdfs:label xml:lang="en">steeringPosition</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-		<rdfs:domain rdf:resource="&auto-vc-vc;MotorizedRoadVehicle"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
 		<rdfs:range rdf:resource="&auto-vc-vc;SteeringPositionValue"/>
@@ -3597,12 +2186,10 @@ Typical unit code(s): KMH for km/h, HM for mile per hour (0.447 04 m/s), KNT for
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;torque">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;quantitativeProductOrServiceProperty"/>
 		<rdfs:label xml:lang="en">torque</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;EngineSpecification"/>
-		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValue"/>
 		<skos:definition xml:lang="en">The torque (turning force) of an engine
@@ -3618,14 +2205,11 @@ Typical unit code(s): NU for newton metre (N m), F17 for pound-force per foot, o
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;trailerWeight">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;quantitativeProductOrServiceProperty"/>
 		<rdfs:label xml:lang="en">tongue weight</rdfs:label>
 		<rdfs:label xml:lang="en">trailer weight</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-		<rdfs:domain rdf:resource="&auto-vc-vc;MotorizedRoadVehicle"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
-		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValue"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValueFloat"/>
 		<skos:definition>The permitted vertical load (TWR) of a trailer attached to the vehicle. Also referred to as Tongue Load Rating (TLR) or Vertical Load Rating (VLR)&lt;br/&gt;&lt;br/&gt;
 
@@ -3648,24 +2232,8 @@ Note 3: Note that you can use minValue and maxValue to indicate ranges.</skos:de
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;transmission">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;qualitativeProductOrServiceProperty"/>
+		<rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
 		<rdfs:label xml:lang="en">transmission</rdfs:label>
-		<rdfs:domain>
-			<owl:Class>
-				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&auto-vc-vc;Bicycle">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;Boat">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;MotorizedRoadVehicle">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;Quadracycle">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;Ship">
-					</rdf:Description>
-				</owl:unionOf>
-			</owl:Class>
-		</rdfs:domain>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
 		<rdfs:range rdf:resource="&auto-vc-vc;TransmissionTypeValue"/>
 		<rdfs:seeAlso rdf:resource="http://dbpedia.org/page/Transmission_%28mechanics%29"/>
@@ -3678,12 +2246,6 @@ Use DBPedia resources to indicate the transmission type, if possible. Popular id
 
 If you cannot find a suitable identifier in DBPedia, define your own as an instance of vso:TransmissionTypeValue.</skos:definition>
 	</owl:ObjectProperty>
-	
-	<owl:DatatypeProperty rdf:about="&auto-vc-vc;type">
-		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
-		<rdfs:range rdf:resource="&rdfs;Literal"/>
-		<skos:definition>This property represents an internal type of vehicle.</skos:definition>
-	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;unitCode">
 		<rdfs:label xml:lang="en">unit code</rdfs:label>
@@ -3724,7 +2286,6 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;variant">
-		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents an internal variant code.</skos:definition>
 	</owl:DatatypeProperty>
@@ -3753,7 +2314,6 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		<rdfs:label xml:lang="en">vehicle identification number</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
-		<rdfs:domain rdf:resource="&auto-vc-vc;MotorizedRoadVehicle"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
 		<rdfs:range rdf:resource="&xsd;string"/>
@@ -3810,24 +2370,20 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 	</owl:ObjectProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;vehicleTypeApprovedCategory">
-		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents a category of the approved vehicle type.</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc-vc;version">
-		<rdfs:domain rdf:resource="&auto-vc-vc;Car"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents an internal version code of a vehicle.</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;weightTotal">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;quantitativeProductOrServiceProperty"/>
 		<rdfs:label xml:lang="en">weight total</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
-		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValue"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValueFloat"/>
 		<skos:definition>The permitted total weight of the loaded vehicle, including passengers and cargo and the weight of the empty vehicle.&lt;br/&gt;&lt;br/&gt;
 
@@ -3841,24 +2397,10 @@ Typical unit code(s): KGM for kilogram, LBR for pound&lt;br/&gt;&lt;br/&gt;
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;wheelbase">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;quantitativeProductOrServiceProperty"/>
 		<rdfs:label xml:lang="en">wheelbase</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
-		<rdfs:domain>
-			<owl:Class>
-				<owl:unionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&auto-vc-vc;Bicycle">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;MotorizedRoadVehicle">
-					</rdf:Description>
-					<rdf:Description rdf:about="&auto-vc-vc;Quadracycle">
-					</rdf:Description>
-				</owl:unionOf>
-			</owl:Class>
-		</rdfs:domain>
-		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValue"/>
 		<rdfs:range rdf:resource="&auto-mo-mo;QuantitativeValueFloat"/>
 		<skos:definition>The distance between the centers of the front and rear wheels.&lt;br/&gt;&lt;br/&gt;
 
@@ -3866,7 +2408,6 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;width">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;quantitativeProductOrServiceProperty"/>
 		<rdfs:label xml:lang="en">width</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
