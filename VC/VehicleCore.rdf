@@ -52,7 +52,6 @@ It contains many classes and properties extracted from:
 4.0 International (http://creativecommons.org/licenses/by-nc-sa/4.0/).
 - the Used Cars Ontology (UCO) (created by Hepp Research GmbH and Makolab SA (see http://ontologies.makolab.com/uco/ns.html) and available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/)
 - the Vehicle Sales Ontology (VSO) (created by Martin Hepp (see https://lov.linkeddata.es/dataset/lov/vocabs/vso) and available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/).</dct:abstract>
-		<dct:license rdf:datatype="&xsd;anyURI">http://opensource.org/licenses/MIT</dct:license>
 		<sm:contentLanguage rdf:datatype="&xsd;anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
 		<sm:copyright>Copyright (c) 2021 EDM Council, Inc.</sm:copyright>
 		<sm:dependsOn rdf:datatype="&xsd;anyURI">https://spec.edmcouncil.org/auto/ontology/VC/</sm:dependsOn>
@@ -63,6 +62,9 @@ It contains many classes and properties extracted from:
 		<owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
 		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
 	</owl:Ontology>
+	
+	<owl:AnnotationProperty rdf:about="&dc;contributor">
+	</owl:AnnotationProperty>
 	
 	<owl:Class rdf:about="&auto-mo-mo;Location">
 	</owl:Class>
@@ -286,14 +288,12 @@ It contains many classes and properties extracted from:
 		<skos:definition xml:lang="en">All-wheel Drive is a transmission layout where the engine drives all four wheels.</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&auto-vc-vc;AudioAndNavigation">
-		<rdf:type rdf:resource="&owl;Class"/>
+	<owl:Class rdf:about="&auto-vc-vc;AudioAndNavigation">
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;ChoiceOrComponent"/>
 		<rdfs:label xml:lang="en">audio and navigation choice or component</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">The class of audio and navigation choices or components (CD/DVD/SatNav, a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 1</skos:definition>
-		<auto-vc-vc:hasID>1</auto-vc-vc:hasID>
-	</owl:NamedIndividual>
+	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-vc-vc;AuthorizedDealer">
 		<rdf:type rdf:resource="&auto-vc-vc;BusinessEntityType"/>
@@ -835,14 +835,12 @@ Note: The two properties coo:includes and coo:dependsOn, attached to coo:ChoiceO
 		<skos:definition xml:lang="en">an event in which the vehicle is being damaged</skos:definition>
 	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="&auto-vc-vc;DecorativeTrims">
-		<rdf:type rdf:resource="&owl;Class"/>
+	<owl:Class rdf:about="&auto-vc-vc;DecorativeTrims">
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;ChoiceOrComponent"/>
 		<rdfs:label xml:lang="en">decorative trims choice or component</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">The class of decorative trim choices or components (a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 8</skos:definition>
-		<auto-vc-vc:hasID>8</auto-vc-vc:hasID>
-	</owl:NamedIndividual>
+	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc-vc;Derivative">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Model"/>
@@ -2048,14 +2046,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		<skos:definition xml:lang="en">a structured value representing information about the period of ownership of a vehicle by a person or organisation</skos:definition>
 	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="&auto-vc-vc;Paint">
-		<rdf:type rdf:resource="&owl;Class"/>
+	<owl:Class rdf:about="&auto-vc-vc;Paint">
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;ChoiceOrComponent"/>
 		<rdfs:label xml:lang="en">paint choice or component</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">The class of paint choices or components (a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 3</skos:definition>
-		<auto-vc-vc:hasID>3</auto-vc-vc:hasID>
-	</owl:NamedIndividual>
+	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc-vc;ParkedMotorVehicle">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Role"/>
@@ -2064,14 +2060,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.34.2</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="&auto-vc-vc;Parking">
-		<rdf:type rdf:resource="&owl;Class"/>
+	<owl:Class rdf:about="&auto-vc-vc;Parking">
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;ChoiceOrComponent"/>
 		<rdfs:label xml:lang="en">parking choice or component</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">The class of parking-related choices or components (a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 7</skos:definition>
-		<auto-vc-vc:hasID>7</auto-vc-vc:hasID>
-	</owl:NamedIndividual>
+	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc-vc;ParkingType">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QualitativeValue"/>
@@ -2217,14 +2211,12 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
 		<rdfs:comment xml:lang="en">A superclass of classes addopted from ANSI D.16-2017.</rdfs:comment>
 	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="&auto-vc-vc;Roofs">
-		<rdf:type rdf:resource="&owl;Class"/>
+	<owl:Class rdf:about="&auto-vc-vc;Roofs">
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;ChoiceOrComponent"/>
 		<rdfs:label xml:lang="en">roofs choice or component</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">The class of roof choices or components (a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 5</skos:definition>
-		<auto-vc-vc:hasID>5</auto-vc-vc:hasID>
-	</owl:NamedIndividual>
+	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc-vc;SailingBoat">
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Boat"/>
@@ -2244,14 +2236,12 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.8.1</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="&auto-vc-vc;Seats">
-		<rdf:type rdf:resource="&owl;Class"/>
+	<owl:Class rdf:about="&auto-vc-vc;Seats">
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;ChoiceOrComponent"/>
 		<rdfs:label xml:lang="en">seats choice or component</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">The class of seat-related choices or components (a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 9</skos:definition>
-		<auto-vc-vc:hasID>9</auto-vc-vc:hasID>
-	</owl:NamedIndividual>
+	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc-vc;Semitrailer">
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;Trailer"/>
@@ -2420,14 +2410,12 @@ The default choice can be indicated using a coo:default link. All other choices 
 		<skos:definition xml:lang="en">a value indicating a steering position</skos:definition>
 	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="&auto-vc-vc;SteeringWheels">
-		<rdf:type rdf:resource="&owl;Class"/>
+	<owl:Class rdf:about="&auto-vc-vc;SteeringWheels">
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;ChoiceOrComponent"/>
 		<rdfs:label xml:lang="en">steering wheels choice or component</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">The class of steering wheels choices or components (a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 6</skos:definition>
-		<auto-vc-vc:hasID>6</auto-vc-vc:hasID>
-	</owl:NamedIndividual>
+	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-vc-vc;Street">
 		<rdf:type rdf:resource="&auto-vc-vc;ParkingType"/>
@@ -2675,14 +2663,12 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
 		<skos:definition xml:lang="en">A pre-mixed fuel-oil mixture</skos:definition>
 	</owl:NamedIndividual>
 	
-	<owl:NamedIndividual rdf:about="&auto-vc-vc;Upholstery">
-		<rdf:type rdf:resource="&owl;Class"/>
+	<owl:Class rdf:about="&auto-vc-vc;Upholstery">
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;ChoiceOrComponent"/>
 		<rdfs:label xml:lang="en">upholstery choice or component</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">The class of upholstery choices or components (a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 4</skos:definition>
-		<auto-vc-vc:hasID>4</auto-vc-vc:hasID>
-	</owl:NamedIndividual>
+	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-vc-vc;Urban">
 		<rdf:type rdf:resource="&auto-vc-vc;TrafficPattern"/>
@@ -2986,14 +2972,12 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.6</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="&auto-vc-vc;Wheels">
-		<rdf:type rdf:resource="&owl;Class"/>
+	<owl:Class rdf:about="&auto-vc-vc;Wheels">
 		<rdfs:subClassOf rdf:resource="&auto-vc-vc;ChoiceOrComponent"/>
 		<rdfs:label xml:lang="en">wheels choice or component</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<skos:definition xml:lang="en">The class of wheels-related choices or components (a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 2</skos:definition>
-		<auto-vc-vc:hasID>2</auto-vc-vc:hasID>
-	</owl:NamedIndividual>
+	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc-vc;WorkingMotorVehicle">
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Role"/>
@@ -3297,7 +3281,6 @@ Since it is defined a sub-property of coo:availableChoice, the default choice is
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc-vc;dependsOn">
-		<rdf:type rdf:resource="&owl;TransitiveProperty"/>
 		<rdfs:label xml:lang="en">depends on</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc-vc;ChoiceOrComponent"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>

@@ -253,21 +253,6 @@
 				<owl:someValuesFrom rdf:resource="&auto-de-av;ConventionalDriver"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-de-av;operatesAtADSLevel"/>
-				<owl:someValuesFrom>
-					<owl:Class>
-						<owl:oneOf rdf:parseType="Collection">
-							<rdf:Description rdf:about="&auto-de-av;DriverAssistance">
-							</rdf:Description>
-							<rdf:Description rdf:about="&auto-de-av;NoAutomation">
-							</rdf:Description>
-						</owl:oneOf>
-					</owl:Class>
-				</owl:someValuesFrom>
-			</owl:Restriction>
-		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">Conventional Vehicle</rdfs:label>
 		<skos:definition xml:lang="en">a vehicle designed to be operated by a conventional driver during part or all of every trip</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.5</fibo-fnd-utl-av:adaptedFrom>
@@ -321,8 +306,7 @@
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">The term “dispatch” as used outside of the context of ADS-equipped vehicles, is generally understood to mean sending a particular vehicle to a particular pick-up or drop-off location for purposes of providing a transportation service. In the context of ADS-equipped vehicles, and as used herein, this term includes software-enabled dispatch of multiple ADS-equipped vehicles in driverless operation that may complete multiple trips involving pick-up and drop-off of passengers or goods throughout a day or other pre-defined period of service, and which may involve multiple agents performing various tasks related to the dispatch function. In order to highlight this specialized use of the term dispatch, the term is modified and conditioned by the stipulation that it refers exclusively to dispatching vehicles in driverless operation. Consideration of whether a more appropriate term and definition should be specified for this concept will be taken up in the next revision of J3016, which will be developed jointly with ISO.</fibo-fnd-utl-av:explanatoryNote>
 	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="&auto-de-av;DriverAssistance">
-		<rdf:type rdf:resource="&owl;Class"/>
+	<owl:Class rdf:about="&auto-de-av;DriverAssistance">
 		<rdfs:subClassOf rdf:resource="&auto-de-av;HumanDrivingLevel"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
@@ -353,7 +337,7 @@
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 5.2</fibo-fnd-utl-av:adaptedFrom>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">A level 1 feature performing either the lateral or the longitudinal vehicle motion control subtask of the DDT is capable of only limited OEDR within its dimension (lateral or longitudinal), meaning that there are some events that the driving automation system is not capable of recognizing or responding to. Therefore, the driver must supervise the driving automation system performance by completing the OEDR subtask of the DDT as well as performing the other dimension of vehicle motion control. See Figure 1 (discussing the three primary subtasks of the DDT).</fibo-fnd-utl-av:explanatoryNote>
 		<fibo-fnd-utl-av:synonym xml:lang="en">Level 1</fibo-fnd-utl-av:synonym>
-	</owl:NamedIndividual>
+	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-de-av;DriverSupportDrivingAutomationSystemFeature">
 		<rdfs:subClassOf rdf:resource="&auto-de-av;DrivingAutomationSystemFeatureOrApplication"/>
@@ -615,9 +599,6 @@ The upper three levels of driving automation (3-5) refer to cases in which the A
 		<fibo-fnd-utl-av:usageNote xml:lang="en">A level 4 ADS feature designed to operate a vehicle at high speeds on freeways experiences a DDT performance-relevant system failure and automatically removes the vehicle from active lanes of traffic before coming to a stop.</fibo-fnd-utl-av:usageNote>
 		<fibo-fnd-utl-av:usageNote xml:lang="en">A vehicle in which a level 4 ADS is installed experiences a DDT performance-relevant system failure in its primary electrical power system. The ADS utilizes a backup power source in order to achieve a minimal risk condition.</fibo-fnd-utl-av:usageNote>
 	</owl:Class>
-	
-	<owl:NamedIndividual rdf:about="&auto-de-av;NoAutomation">
-	</owl:NamedIndividual>
 	
 	<owl:Class rdf:about="&auto-de-av;OperationalDesignDomain">
 		<rdfs:subClassOf rdf:resource="&auto-de-cc;RoadCondition"/>
