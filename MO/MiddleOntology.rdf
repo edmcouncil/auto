@@ -135,15 +135,15 @@
 		<rdfs:subClassOf rdf:resource="&auto-mo-mo;ValueSpace"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo-mo;hasValue"/>
-				<owl:cardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:cardinality>
+				<owl:onProperty rdf:resource="&auto-mo-mo;hasUnit"/>
+				<owl:onDataRange rdf:resource="&xsd;string"/>
+				<owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo-mo;hasUnit"/>
-				<owl:onDataRange rdf:resource="&xsd;string"/>
-				<owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+				<owl:onProperty rdf:resource="&auto-mo-mo;hasValue"/>
+				<owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">quantitative value</rdfs:label>
