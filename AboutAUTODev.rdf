@@ -25,11 +25,9 @@
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/EC/VehicleECommerce/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MetadataAUTO/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleTypesAndRoles/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
         <terms:abstract>This ontology is provided for the convenience of AUTO users.  It loads the very latest version of every AUTO ontology (released, provisional, and informative) based on the contents of GitHub, for use in particular while working on revisions.  Note that metadata files are included.</terms:abstract>
         <terms:license rdf:resource="http://opensource.org/licenses/MIT"/>
