@@ -10,9 +10,6 @@
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/" uri="./MO/MiddleOntology.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/VC/MetadataMO/" uri="./VC/MetadataVC.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/" uri="./VC/VehicleCore.rdf"/>
-    <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/VC/VehicleTypesAndRoles/" uri="./VC/VehicleTypesAndRoles.rdf"/>    
-    <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/EC/MetadataEC/" uri="./EC/MetadataEC.rdf"/>
-    <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/EC/VehicleECommerce/" uri="./EC/VehicleECommerce.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/DE/MetadataDE/" uri="./DE/MetadataDE.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/DE/AutonomousVehicles/" uri="./DE/AutonomousVehicles.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/" uri="./DE/TrafficIncidents.rdf"/>
