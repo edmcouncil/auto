@@ -13,12 +13,10 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:auto-de-ti="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/"
-     xmlns:auto-ec-ec="https://spec.edmcouncil.org/auto/ontology/EC/VehicleECommerce/"
-     xmlns:auto-mo-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
-     xmlns:auto-vc-tr="https://spec.edmcouncil.org/auto/ontology/VC/VehicleTypesAndRoles/"
-     xmlns:auto-vc-vc="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"
-     xmlns:auto-vs-vsso="https://spec.edmcouncil.org/auto/ontology/VS/VehicleSignals/"
+     xmlns:auto-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
+     xmlns:auto-ti="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/"
+     xmlns:auto-vc="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"
+     xmlns:auto-vs="https://spec.edmcouncil.org/auto/ontology/VS/VehicleSignals/"
      xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/AboutAUTODev/">
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/AutonomousVehicles/"/>
@@ -56,7 +54,6 @@
     <!-- http://www.omg.org/techprocess/ab/SpecificationMetadata/submitter -->
 
     <owl:AnnotationProperty rdf:about="http://www.omg.org/techprocess/ab/SpecificationMetadata/submitter"/>
-    
 </rdf:RDF>
 
 

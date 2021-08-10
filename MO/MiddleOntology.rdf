@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE rdf:RDF [
-	<!ENTITY auto-mo-mo "https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/">
+	<!ENTITY auto-mo "https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/">
 	<!ENTITY dc "http://purl.org/dc/elements/1.1/">
 	<!ENTITY dct "http://purl.org/dc/terms/">
 	<!ENTITY dctype "http://purl.org/dc/dcmitype/">
@@ -18,7 +18,7 @@
 ]>
 <rdf:RDF xml:base="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
 	xmlns="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
-	xmlns:auto-mo-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
+	xmlns:auto-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:dct="http://purl.org/dc/terms/"
 	xmlns:dctype="http://purl.org/dc/dcmitype/"
@@ -50,76 +50,76 @@
 	<owl:AnnotationProperty rdf:about="&dct;isPartOf">
 	</owl:AnnotationProperty>
 	
-	<owl:Class rdf:about="&auto-mo-mo;Action">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Process"/>
+	<owl:Class rdf:about="&auto-mo;Action">
+		<rdfs:subClassOf rdf:resource="&auto-mo;Process"/>
 		<rdfs:label xml:lang="en">action</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;Agent">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;PhysicalObject"/>
+	<owl:Class rdf:about="&auto-mo;Agent">
+		<rdfs:subClassOf rdf:resource="&auto-mo;PhysicalObject"/>
 		<rdfs:label xml:lang="en">agent</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;Location">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Quality"/>
+	<owl:Class rdf:about="&auto-mo;Location">
+		<rdfs:subClassOf rdf:resource="&auto-mo;Quality"/>
 		<rdfs:label xml:lang="en">location</rdfs:label>
 		<rdfs:label xml:lang="en">place</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;Model">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;NonPhysicalObject"/>
+	<owl:Class rdf:about="&auto-mo;Model">
+		<rdfs:subClassOf rdf:resource="&auto-mo;NonPhysicalObject"/>
 		<rdfs:label xml:lang="en">model</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;NonPhysicalObject">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Object"/>
+	<owl:Class rdf:about="&auto-mo;NonPhysicalObject">
+		<rdfs:subClassOf rdf:resource="&auto-mo;Object"/>
 		<rdfs:label xml:lang="en">non-physical object</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;NumericalValue">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;QuantitativeValue"/>
+	<owl:Class rdf:about="&auto-mo;NumericalValue">
+		<rdfs:subClassOf rdf:resource="&auto-mo;QuantitativeValue"/>
 		<rdfs:label xml:lang="en">numerical value</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;Object">
+	<owl:Class rdf:about="&auto-mo;Object">
 		<rdfs:label xml:lang="en">object</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;Organization">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;NonPhysicalObject"/>
+	<owl:Class rdf:about="&auto-mo;Organization">
+		<rdfs:subClassOf rdf:resource="&auto-mo;NonPhysicalObject"/>
 		<rdfs:label xml:lang="en">organization</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;Person">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Agent"/>
+	<owl:Class rdf:about="&auto-mo;Person">
+		<rdfs:subClassOf rdf:resource="&auto-mo;Agent"/>
 		<rdfs:label xml:lang="en">person</rdfs:label>
 		<rdfs:comment xml:lang="en">Within the context of this manual, a fetus is considered part of a pregnant woman rather than a separate individual. After death, a human body is not considered to be a person.</rdfs:comment>
 		<skos:definition xml:lang="en">Any living human.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.1</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;PhysicalObject">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Object"/>
+	<owl:Class rdf:about="&auto-mo;PhysicalObject">
+		<rdfs:subClassOf rdf:resource="&auto-mo;Object"/>
 		<rdfs:label xml:lang="en">physical object</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;PostalAddress">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Location"/>
+	<owl:Class rdf:about="&auto-mo;PostalAddress">
+		<rdfs:subClassOf rdf:resource="&auto-mo;Location"/>
 		<rdfs:label xml:lang="en">postal address</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;Process">
+	<owl:Class rdf:about="&auto-mo;Process">
 		<rdfs:label xml:lang="en">process</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;PropertyValue">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;Quality"/>
+	<owl:Class rdf:about="&auto-mo;PropertyValue">
+		<rdfs:subClassOf rdf:resource="&auto-mo;Quality"/>
 		<rdfs:label xml:lang="en">property value</rdfs:label>
 		<skos:definition xml:lang="en">A property-value pair, e.g. representing a feature of a product or place.</skos:definition>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;QualitativeValue">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;ValueSpace"/>
+	<owl:Class rdf:about="&auto-mo;QualitativeValue">
+		<rdfs:subClassOf rdf:resource="&auto-mo;ValueSpace"/>
 		<rdfs:label xml:lang="en">qualitative value</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
@@ -127,22 +127,22 @@
 		<skos:definition xml:lang="en">a predefined value for a product characteristic, e.g. the power cord plug type &apos;US&apos; or the garment sizes &apos;S&apos;, &apos;M&apos;, &apos;L&apos;, and &apos;XL&apos;</skos:definition>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;Quality">
+	<owl:Class rdf:about="&auto-mo;Quality">
 		<rdfs:label xml:lang="en">quality</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;QuantitativeValue">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;ValueSpace"/>
+	<owl:Class rdf:about="&auto-mo;QuantitativeValue">
+		<rdfs:subClassOf rdf:resource="&auto-mo;ValueSpace"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo-mo;hasUnit"/>
+				<owl:onProperty rdf:resource="&auto-mo;hasUnit"/>
 				<owl:onDataRange rdf:resource="&xsd;string"/>
 				<owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="&auto-mo-mo;hasValue"/>
+				<owl:onProperty rdf:resource="&auto-mo;hasValue"/>
 				<owl:someValuesFrom rdf:resource="&rdfs;Literal"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -153,65 +153,60 @@
 		<skos:definition xml:lang="en">a point value or interval for product characteristics and other purposes</skos:definition>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;QuantitativeValueFloat">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;NumericalValue"/>
+	<owl:Class rdf:about="&auto-mo;QuantitativeValueFloat">
+		<rdfs:subClassOf rdf:resource="&auto-mo;NumericalValue"/>
 		<rdfs:label xml:lang="en">quantitative value float</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;QuantitativeValueInteger">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;NumericalValue"/>
+	<owl:Class rdf:about="&auto-mo;QuantitativeValueInteger">
+		<rdfs:subClassOf rdf:resource="&auto-mo;NumericalValue"/>
 		<rdfs:label xml:lang="en">quantitative value integer</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;Role">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;NonPhysicalObject"/>
+	<owl:Class rdf:about="&auto-mo;Role">
+		<rdfs:subClassOf rdf:resource="&auto-mo;NonPhysicalObject"/>
 		<rdfs:label xml:lang="en">role</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;TextValue">
-		<rdfs:subClassOf rdf:resource="&auto-mo-mo;ValueSpace"/>
+	<owl:Class rdf:about="&auto-mo;TextValue">
+		<rdfs:subClassOf rdf:resource="&auto-mo;ValueSpace"/>
 		<rdfs:label xml:lang="en">text value</rdfs:label>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-mo-mo;ValueSpace">
+	<owl:Class rdf:about="&auto-mo;ValueSpace">
 		<rdfs:label xml:lang="en">value space</rdfs:label>
 	</owl:Class>
 	
-	<owl:DatatypeProperty rdf:about="&auto-mo-mo;hasMaxValueFloat">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;hasValueFloat"/>
-		<rdfs:label xml:lang="en">has max value float</rdfs:label>
+	<owl:DatatypeProperty rdf:about="&auto-mo;hasMaxValue">
+		<rdfs:subPropertyOf rdf:resource="&auto-mo;hasValue"/>
+		<rdfs:label xml:lang="en">has max value</rdfs:label>
 	</owl:DatatypeProperty>
 	
-	<owl:DatatypeProperty rdf:about="&auto-mo-mo;hasMinValueFloat">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;hasValueFloat"/>
-		<rdfs:label xml:lang="en">has min value float</rdfs:label>
+	<owl:DatatypeProperty rdf:about="&auto-mo;hasMinValue">
+		<rdfs:subPropertyOf rdf:resource="&auto-mo;hasValue"/>
+		<rdfs:label xml:lang="en">has min value</rdfs:label>
 	</owl:DatatypeProperty>
 	
-	<owl:ObjectProperty rdf:about="&auto-mo-mo;hasPart">
+	<owl:ObjectProperty rdf:about="&auto-mo;hasPart">
 		<rdfs:label xml:lang="en">has part</rdfs:label>
-		<owl:inverseOf rdf:resource="&auto-mo-mo;isPartOf"/>
+		<owl:inverseOf rdf:resource="&auto-mo;isPartOf"/>
 	</owl:ObjectProperty>
 	
-	<owl:DatatypeProperty rdf:about="&auto-mo-mo;hasUnit">
+	<owl:DatatypeProperty rdf:about="&auto-mo;hasUnit">
 		<rdfs:label xml:lang="en">has unit</rdfs:label>
-		<rdfs:domain rdf:resource="&auto-mo-mo;QuantitativeValue"/>
+		<rdfs:domain rdf:resource="&auto-mo;QuantitativeValue"/>
 	</owl:DatatypeProperty>
 	
-	<owl:DatatypeProperty rdf:about="&auto-mo-mo;hasValue">
+	<owl:DatatypeProperty rdf:about="&auto-mo;hasValue">
 		<rdfs:label xml:lang="en">has value</rdfs:label>
-		<rdfs:domain rdf:resource="&auto-mo-mo;QuantitativeValue"/>
+		<rdfs:domain rdf:resource="&auto-mo;QuantitativeValue"/>
 	</owl:DatatypeProperty>
 	
-	<owl:DatatypeProperty rdf:about="&auto-mo-mo;hasValueFloat">
-		<rdfs:subPropertyOf rdf:resource="&auto-mo-mo;hasValue"/>
-		<rdfs:label xml:lang="en">has value float</rdfs:label>
-	</owl:DatatypeProperty>
-	
-	<owl:ObjectProperty rdf:about="&auto-mo-mo;isPartOf">
+	<owl:ObjectProperty rdf:about="&auto-mo;isPartOf">
 		<rdfs:label xml:lang="en">is part of</rdfs:label>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="&auto-mo-mo;valueReference">
+	<owl:ObjectProperty rdf:about="&auto-mo;valueReference">
 		<rdfs:label xml:lang="en">value reference</rdfs:label>
 	</owl:ObjectProperty>
 
