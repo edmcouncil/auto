@@ -4,7 +4,6 @@
 	<!ENTITY dct "http://purl.org/dc/terms/">
 	<!ENTITY fibo-fnd-utl-av "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
 	<!ENTITY fibo-fnd-utl-mod "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/MetadataFNDUtilities/">
-	<!ENTITY fibo-fnd-utl-val "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/">
 	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
 	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
@@ -18,7 +17,6 @@
 	xmlns:dct="http://purl.org/dc/terms/"
 	xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
 	xmlns:fibo-fnd-utl-mod="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/MetadataFNDUtilities/"
-	xmlns:fibo-fnd-utl-val="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/Values/"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
