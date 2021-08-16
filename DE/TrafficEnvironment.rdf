@@ -33,9 +33,10 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 	
 	<owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/">
-		<rdfs:label xml:lang="en">Map Ontology (MAP)</rdfs:label>
-		<rdfs:comment xml:lang="en">The Map Ontology (MAP) has been initially created by Lihua Zhao and Yutaka Sasaki at the Computational Intelligence Laboratory, Toyota Technological Institute, Nagoya, Japan (see https://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/) and published by the Toyota Technological Institute Smart Vehicle Research Project. MAP, as created by the Computational Intelligence Laboratory, is available under the Creative Commons - Attribution-NonCommercial-ShareAlike
-4.0 International (http://creativecommons.org/licenses/by-nc-sa/4.0/).</rdfs:comment>
+		<rdfs:label xml:lang="en">Traffic environment ontology (TE)</rdfs:label>
+		<rdfs:comment xml:lang="en">The traffic environment ontology (TE) provides a model for traffic infrastructure. 
+
+			It contains many classes and properties extracted from: Map Ontology created by Lihua Zhao and Yutaka Sasaki at the Computational Intelligence Laboratory, Toyota Technological Institute, Nagoya, Japan (see https://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/) and published by the Toyota Technological Institute Smart Vehicle Research Project.</rdfs:comment>
 		<dct:abstract xml:lang="en">A sophisticated machine understandable map is required for autonomous vehicles to perceive driving environments. Therefore, we construct a map ontology.</dct:abstract>
 		<dct:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
 		<sm:contentLanguage rdf:datatype="&xsd;anyURI">http://www.w3.org/standards/techs/owl#w3c_all</sm:contentLanguage>
@@ -257,7 +258,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ev;Infrastructure">
-		<rdfs:subClassOf rdf:resource="&auto-mo;PhysicalObject"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo;MaterialEntity"/>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ev;InstructionRoadSign">
@@ -372,7 +373,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ev;NaturalPlace">
-		<rdfs:subClassOf rdf:resource="&auto-mo;PhysicalObject"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo;MaterialEntity"/>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ev;Node">

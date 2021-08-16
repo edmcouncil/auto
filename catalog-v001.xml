@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/VS/MetadataVS/" uri="VS/MetadataVS.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/VC/MetadataVC/" uri="VC/MetadataVC.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/FD/MetadataFD/" uri="FD/MetadataFD.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/master/latest/VC/VehicleCore/" uri="VC/VehicleCore.rdf"/>
@@ -10,11 +11,11 @@
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/" uri="./MO/MiddleOntology.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/VC/MetadataMO/" uri="./VC/MetadataVC.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/" uri="./VC/VehicleCore.rdf"/>
-    <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/" uri="./VC/VehicleParts.rdf"/>    
+    <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/" uri="./VC/VehicleParts.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/DE/MetadataDE/" uri="./DE/MetadataDE.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/DE/AutonomousVehicles/" uri="./DE/AutonomousVehicles.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/" uri="./DE/TrafficIncidents.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/" uri="./DE/TrafficEnvironment.rdf"/>
-    <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/VS/MetadataMO/" uri="./VS/MetadataVS.rdf"/>
-    <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/VS/VehicleSignals/" uri="./VS/VehicleSignals.rdf"/>    
+    <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/VS/MetadataVS/" uri="./VS/MetadataVS.rdf"/>
+    <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/VS/VehicleSignals/" uri="./VS/VehicleSignals.rdf"/>
 </catalog>

@@ -464,7 +464,7 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 	</owl:NamedIndividual>
 	
 	<owl:Class rdf:about="&auto-vc;BusinessEntity">
-		<rdfs:subClassOf rdf:resource="&auto-mo;Object"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo;IndependentContinuant"/>
 		<owl:equivalentClass>
 			<owl:Class>
 				<owl:unionOf rdf:parseType="Collection">
@@ -587,8 +587,8 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc;ChoiceOrComponent">
+		<rdfs:subClassOf rdf:resource="&auto-mo;GenericallyDependentContinuant"/>
 		<rdfs:subClassOf rdf:resource="&auto-mo;Model"/>
-		<rdfs:subClassOf rdf:resource="&auto-mo;NonPhysicalObject"/>
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
@@ -725,7 +725,7 @@ Note: A coo:CompleteCarModel is NOT an actual car, but a complete feature descri
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc;ConfigurationInfo">
-		<rdfs:subClassOf rdf:resource="&auto-mo;NonPhysicalObject"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo;GenericallyDependentContinuant"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-vc;featureOverride"/>
@@ -972,7 +972,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc;EngineSpecification">
-		<rdfs:subClassOf rdf:resource="&auto-mo;NonPhysicalObject"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo;GenericallyDependentContinuant"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-vc;engineType"/>
@@ -1796,7 +1796,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc;Offering">
-		<rdfs:subClassOf rdf:resource="&auto-mo;NonPhysicalObject"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo;GenericallyDependentContinuant"/>
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
@@ -2253,7 +2253,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc;SpecItemCollection">
-		<rdfs:subClassOf rdf:resource="&auto-mo;NonPhysicalObject"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo;GenericallyDependentContinuant"/>
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
@@ -2674,7 +2674,7 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc;Vehicle">
-		<rdfs:subClassOf rdf:resource="&auto-mo;PhysicalObject"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo;Object"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-vc;condition"/>
@@ -2914,7 +2914,7 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc;WarrantyScope">
-		<rdfs:subClassOf rdf:resource="&auto-mo;NonPhysicalObject"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo;GenericallyDependentContinuant"/>
 		<rdfs:label>warranty scope</rdfs:label>
 	</owl:Class>
 	

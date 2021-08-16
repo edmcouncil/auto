@@ -49,6 +49,15 @@
 		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
 	</owl:Ontology>
 	
+	<owl:AnnotationProperty rdf:about="&terms;contributor">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&owl;minQualifiedCardinality">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&skos;historyNote">
+	</owl:AnnotationProperty>
+	
 	<owl:Class rdf:about="&auto-av;ADSDedicatedVehicle">
 		<rdfs:subClassOf rdf:resource="&auto-av;ADSEquippedVehicle"/>
 		<rdfs:subClassOf>
@@ -427,7 +436,7 @@ The upper three levels of driving automation (3-5) refer to cases in which the A
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-av;DrivingAutomationSystemOrTechnology">
-		<rdfs:subClassOf rdf:resource="&auto-mo;PhysicalObject"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo;Object"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-av;performsOnSustainedBasis"/>
@@ -596,6 +605,15 @@ The upper three levels of driving automation (3-5) refer to cases in which the A
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">At levels 4 and 5, the ADS is capable of automatically achieving a minimal risk condition when necessary (i.e., due to ODD exit, if applicable, or due to a DDT performance-relevant system failure in the ADS or vehicle). The characteristics of automated achievement of a minimal risk condition at levels 4 and 5 will vary according to the type and extent of the system failure, the ODD (if any) for the ADS feature in question, and the particular operating conditions when the system failure or ODD exit occurs. It may entail automatically bringing the vehicle to a stop within its current travel path, or it may entail a more extensive maneuver designed to remove the vehicle from an active lane of traffic and/or to automatically return the vehicle to a dispatching facility.</fibo-fnd-utl-av:explanatoryNote>
 		<fibo-fnd-utl-av:usageNote xml:lang="en">A level 4 ADS feature designed to operate a vehicle at high speeds on freeways experiences a DDT performance-relevant system failure and automatically removes the vehicle from active lanes of traffic before coming to a stop.</fibo-fnd-utl-av:usageNote>
 		<fibo-fnd-utl-av:usageNote xml:lang="en">A vehicle in which a level 4 ADS is installed experiences a DDT performance-relevant system failure in its primary electrical power system. The ADS utilizes a backup power source in order to achieve a minimal risk condition.</fibo-fnd-utl-av:usageNote>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-av;NoAutomation">
+		<rdfs:subClassOf rdf:resource="&auto-av;HumanDrivingLevel"/>
+		<rdfs:label xml:lang="en">No Automation</rdfs:label>
+		<rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/AutonomousVehicles/"/>
+		<skos:definition xml:lang="en">the performance by the driver of the entire DDT, even when enhanced by active safety systems</skos:definition>
+		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 5.1</fibo-fnd-utl-av:adaptedFrom>
+		<fibo-fnd-utl-av:synonym xml:lang="en">Level 0</fibo-fnd-utl-av:synonym>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-av;OperationalDesignDomain">
@@ -884,5 +902,8 @@ The upper three levels of driving automation (3-5) refer to cases in which the A
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Although use of the term operate/operating implies the existence of a vehicle “operator,” this term is not defined or used in this document, which otherwise provides very specific terms and definitions for the various types of ADS-equipped vehicle users.</fibo-fnd-utl-av:explanatoryNote>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">The term “drive” is not used in this document, however, in many cases it could be used correctly in lieu of “operate.”</fibo-fnd-utl-av:explanatoryNote>
 	</owl:Class>
-
+	
+	<rdf:Description>
+		<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+	</rdf:Description>
 </rdf:RDF>
