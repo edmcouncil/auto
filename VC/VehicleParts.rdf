@@ -871,7 +871,7 @@ It contains many classes and properties extracted from:
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;VehiclePart">
-		<rdfs:subClassOf rdf:resource="&auto-mo;PhysicalObject"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo;MaterialEntity"/>
 		<rdfs:label xml:lang="en">vehicle part</rdfs:label>
 	</owl:Class>
 	

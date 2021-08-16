@@ -41,7 +41,6 @@
 		<terms:abstract xml:lang="en">The Traffic Incident Ontology (TI) is an ontology for traffic incidents.
 
 In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AMERICAN NATIONAL STANDARD, ANSI D.16-2017).</terms:abstract>
-		<terms:contributor>Robert Trypuz</terms:contributor>
 		<terms:creator>Piotr Kulicki</terms:creator>
 		<terms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
 		<sm:fileAbbreviation>auto-de-ti</sm:fileAbbreviation>
@@ -50,6 +49,9 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
 		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
 	</owl:Ontology>
+	
+	<owl:AnnotationProperty rdf:about="&terms;creator">
+	</owl:AnnotationProperty>
 	
 	<owl:Class rdf:about="&auto-ti;Accident">
 		<rdfs:subClassOf rdf:resource="&auto-ti;TrafficIncident"/>
@@ -408,7 +410,7 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;HazardousMaterial">
-		<rdfs:subClassOf rdf:resource="&auto-mo;PhysicalObject"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo;MaterialEntity"/>
 		<rdfs:label xml:lang="en">Hazardous Material</rdfs:label>
 		<rdfs:comment xml:lang="en">Any motor vehicle transporting quantities of hazardous materials in quantities above the thresholds established by the U.S. Department of Transportation, or other authorized entity, is required to display a hazardous materials placard.</rdfs:comment>
 		<skos:definition xml:lang="en">A substance or material which has been designated by the U.S. Department of Transportation, or other authorizing entity, as capable of posing an unreasonable risk to health, safety and property when transported in commerce.</skos:definition>
@@ -416,7 +418,7 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;HazardousMaterialsPlacard">
-		<rdfs:subClassOf rdf:resource="&auto-mo;PhysicalObject"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo;MaterialEntity"/>
 		<rdfs:label xml:lang="en">Hazardous Materials Placard</rdfs:label>
 		<rdfs:comment xml:lang="en">This placard identifies the hazard class division number, 4-digit hazardous material identification number, or name of the hazardous material being transported.</rdfs:comment>
 		<skos:definition xml:lang="en">A sign required to be affixed to any motor vehicle transporting quantities of hazardous materials in quantities above the thresholds established by the U.S. Department of Transportation, or other authorized entity.</skos:definition>
@@ -479,7 +481,7 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;InterstateSystem">
-		<rdfs:subClassOf rdf:resource="&auto-mo;PhysicalObject"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo;MaterialEntity"/>
 		<rdfs:label xml:lang="en">Interstate System</rdfs:label>
 		<skos:definition xml:lang="en">The National System of Interstate and Defense Highways as defined in Section 101, Title 23, United States Code.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.3</fibo-fnd-utl-av:adaptedFrom>
@@ -693,7 +695,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;OtherObjectsWithWhichCarCanCollide">
-		<rdfs:subClassOf rdf:resource="&auto-mo;PhysicalObject"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo;MaterialEntity"/>
 		<rdfs:label xml:lang="pl">inne przedmioty z którymi samochód może się zderzyć</rdfs:label>
 		<rdfs:label xml:lang="en">other objects with which car can colide</rdfs:label>
 	</owl:Class>
@@ -767,7 +769,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<owl:equivalentClass>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
-					<rdf:Description rdf:about="&auto-mo;PhysicalObject">
+					<rdf:Description rdf:about="&auto-mo;MaterialEntity">
 					</rdf:Description>
 					<owl:Class>
 						<owl:complementOf rdf:resource="&auto-mo;Person"/>
