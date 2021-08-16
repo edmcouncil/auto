@@ -1,0 +1,107 @@
+{
+  "@context":{
+    "@vocab":"https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/",
+    "auto-mo":"https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
+  },
+  "@type":"Car",
+  "marketingName":"Exemplary Car Model Name",
+  "hasMSRegManufacturerName":"Exemplary Car Manufacturer",   
+  "vehicleConfiguration":"limited edition",
+  "vehicleIdentificationNumber":"1HTLCZWN0JH503089",
+  "productionDate":"2017", 
+  "vehicleModelDate":"2016",
+  "bodyType":"hatchback",
+  "steeringPosition":"LeftHandDriving",    
+  "driveWheelConfiguration":"RearWheelDriveConfiguration",
+  "color":"White",   
+  "vehicleInteriorType":"leather",
+  "vehicleInteriorColor":"beige",  
+  "numberOfAirbags" : "6",   
+  "numberOfAxles":"2",
+  "numberOfDoors": "5",
+  "seatingCapacity": "5", 
+  "cargoVolume":{
+    "@type":"auto-mo:QuantitativeValueFloat",
+        "hasValue":"19.4",
+        "hasUnit":"FTQ"},        
+  "weightTotal":{
+        "@type":"auto-mo:QuantitativeValueFloat",
+        "hasMaxValue":"1425",
+        "hasUnit":"KGM"},         
+
+  "wheelbase":{
+        "@type":"auto-mo:QuantitativeValueFloat",
+        "hasValue":"106.3",
+        "hasUnit":"INH"},    
+
+  "vehicleTransmission": "automatic gearbox",   
+  "numberOfForwardGears" : "6",   
+
+  "vehicleEngine":[
+      {
+     "@type":"EngineSpecification",
+     "engineType":"internal combustion engine",
+     "fuelType":"petrol",
+     "engineDisplacement":{
+        "@type":"auto-mo:QuantitativeValueFloat",
+        "hasValue":"1580",
+        "hasUnit":"CMQ"},
+     "torque":{
+        "@type":"auto-mo:QuantitativeValue",
+        "hasValue":"109",
+        "hasUnit":"F17"},   
+     "enginePower":{
+        "@type":"auto-mo:QuantitativeValueFloat",
+        "hasValue":"104",
+        "hasUnit":"BHP"}},
+     {
+     "@type":"EngineSpecification",
+     "engineType":"electric motor",
+     "torque":{
+        "@type":"auto-mo:QuantitativeValue",
+        "hasValue":"125",
+        "hasUnit":"F17"},       
+     "enginePower":{
+        "@type":"auto-mo:QuantitativeValue",
+        "hasValue":"43",
+        "hasUnit":"BHP"}}
+  ], 
+
+  "accelerationTime":{
+     "@type":"auto-mo:QuantitativeValueFloat",
+     "hasValue":"11.5",
+     "hasUnit":"SEC",
+     "valueReference":{
+        "@type":"auto-mo:QuantitativeValue",
+       "unitText":"0..100 km/h"
+     }}, 
+
+   "speed":{
+        "@type":"auto-mo:QuantitativeValue",
+        "maxValue":"210",
+        "hasUnit":"KMH"},   
+
+  "fuelCapacity":[{
+        "@type":"auto-mo:QuantitativeValueFloat",
+        "hasValue":"11.9",
+        "hasUnit":"GLL"},
+        {
+        "@type":"auto-mo:QuantitativeValueFloat",
+        "hasValue":"6.5",
+        "hasUnit":"AMH",
+        "description":"Battery Energy 1.56 kWh"}
+        ],
+
+  "fuelConsumption":{
+        "@type":"auto-mo:QuantitativeValueFloat",
+        "hasValue":"3.5",
+        "hasUnit":"L/100km"},
+
+  "mileageFromOdometer":{
+     "@type":"auto-mo:QuantitativeValueFloat",
+     "hasValue":"1",
+     "hasUnit":"KMT"
+  },
+
+  "emissionsCO2": "88"
+}

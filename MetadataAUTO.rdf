@@ -35,6 +35,7 @@
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/FD/MetadataFD/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MetadataMO/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/MetadataVC/"/>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VS/MetadataVS/"/>
 		<owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/MetadataAUTO/"/>
 	</owl:Ontology>
 	
@@ -56,6 +57,7 @@
 		<sm:specificationURL rdf:datatype="&xsd;anyURI">https://spec.edmcouncil.org/auto/</sm:specificationURL>
 		<sm:technologyArea>formal semantics</sm:technologyArea>
 		<rdfs:seeAlso rdf:datatype="&xsd;anyURI">https://spec.edmcouncil.org/auto/</rdfs:seeAlso>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/MetadataVC/"/>
 	</owl:NamedIndividual>
 
 </rdf:RDF>
