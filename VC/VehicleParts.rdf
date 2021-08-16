@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE rdf:RDF [
 	<!ENTITY auto-mo "https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/">
-	<!ENTITY auto-vp "https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/">
+	<!ENTITY auto-vp "https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/">
 	<!ENTITY cdt "http://w3id.org/lindt/custom_datatypes#">
 	<!ENTITY dc "http://purl.org/dc/elements/1.1/">
 	<!ENTITY dct "http://purl.org/dc/terms/">
@@ -18,10 +18,10 @@
 	<!ENTITY vann "http://purl.org/vocab/vann/">
 	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
 ]>
-<rdf:RDF xml:base="https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/"
-	xmlns="https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/"
+<rdf:RDF xml:base="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/"
+	xmlns="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/"
 	xmlns:auto-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
-	xmlns:auto-vp="https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/"
+	xmlns:auto-vp="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/"
 	xmlns:cdt="http://w3id.org/lindt/custom_datatypes#"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:dct="http://purl.org/dc/terms/"
@@ -38,7 +38,7 @@
 	xmlns:vann="http://purl.org/vocab/vann/"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 	
-	<owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/">
+	<owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/">
 		<rdfs:label>Vehicle Parts Ontology (VP)</rdfs:label>
 		<dct:abstract xml:lang="en">This Vehicle Parts Ontology (VP) describes the car&apos;s parts.
 

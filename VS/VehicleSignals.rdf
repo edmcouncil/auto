@@ -44,7 +44,7 @@
 		<dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
 		<sm:fileAbbreviation>auto-ec-vsso</sm:fileAbbreviation>
 		<sm:filename>VehicleSignals.rdf</sm:filename>
-		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/"/>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/"/>
 		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
 	</owl:Ontology>
 	
@@ -137,7 +137,7 @@
 	<owl:ObjectProperty rdf:about="&sosa;isObservedBy">
 	</owl:ObjectProperty>
 	
-	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/AcceleratorPedal">
+	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/AcceleratorPedal">
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-vs;hasSignal"/>
@@ -146,7 +146,7 @@
 		</rdfs:subClassOf>
 	</rdf:Description>
 	
-	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/Airbag">
+	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Airbag">
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-vs;hasSignal"/>
@@ -155,7 +155,7 @@
 		</rdfs:subClassOf>
 	</rdf:Description>
 	
-	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/BrakePedal">
+	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/BrakePedal">
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-vs;hasSignal"/>
@@ -164,7 +164,7 @@
 		</rdfs:subClassOf>
 	</rdf:Description>
 	
-	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/DistanceToObject">
+	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/DistanceToObject">
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-vs;hasSignal"/>
@@ -173,7 +173,7 @@
 		</rdfs:subClassOf>
 	</rdf:Description>
 	
-	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/HeadRestraint">
+	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/HeadRestraint">
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-vs;hasSignal"/>
@@ -182,7 +182,7 @@
 		</rdfs:subClassOf>
 	</rdf:Description>
 	
-	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/Hood">
+	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Hood">
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-vs;hasSignal"/>
@@ -191,7 +191,7 @@
 		</rdfs:subClassOf>
 	</rdf:Description>
 	
-	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/Horn">
+	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Horn">
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-vs;hasSignal"/>
@@ -200,7 +200,7 @@
 		</rdfs:subClassOf>
 	</rdf:Description>
 	
-	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/MirrorHeating">
+	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/MirrorHeating">
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-vs;hasSignal"/>
@@ -209,7 +209,7 @@
 		</rdfs:subClassOf>
 	</rdf:Description>
 	
-	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/ParkingBrake">
+	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/ParkingBrake">
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-vs;hasSignal"/>
@@ -218,7 +218,7 @@
 		</rdfs:subClassOf>
 	</rdf:Description>
 	
-	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/Raindetection">
+	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Raindetection">
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-vs;hasSignal"/>
@@ -227,7 +227,7 @@
 		</rdfs:subClassOf>
 	</rdf:Description>
 	
-	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/RearviewMirror">
+	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/RearviewMirror">
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-vs;hasSignal"/>
@@ -236,7 +236,7 @@
 		</rdfs:subClassOf>
 	</rdf:Description>
 	
-	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/SideBolster">
+	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/SideBolster">
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-vs;hasSignal"/>
@@ -245,11 +245,11 @@
 		</rdfs:subClassOf>
 	</rdf:Description>
 	
-	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/VehiclePart">
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart">
 		<rdfs:label xml:lang="en">vehicle part</rdfs:label>
 	</owl:Class>
 	
-	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/WindshieldHeating">
+	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/WindshieldHeating">
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-vs;hasSignal"/>
@@ -258,7 +258,7 @@
 		</rdfs:subClassOf>
 	</rdf:Description>
 	
-	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/Wiping">
+	<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/Wiping">
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-vs;hasSignal"/>
@@ -5012,7 +5012,7 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;VehicleSensor">
-		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/VehiclePart"/>
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
 		<rdfs:label xml:lang="en">vehicle sensor</rdfs:label>
 	</owl:Class>
 	
@@ -5279,7 +5279,7 @@
 	
 	<owl:ObjectProperty rdf:about="&auto-vs;hasSignal">
 		<rdfs:label xml:lang="en">has signal</rdfs:label>
-		<rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/VehiclePart"/>
+		<rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
 		<skos:definition xml:lang="en">Property of having signals in a branch</skos:definition>
 	</owl:ObjectProperty>
 
