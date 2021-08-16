@@ -207,5 +207,9 @@
 	<owl:ObjectProperty rdf:about="&auto-mo;valueReference">
 		<rdfs:label xml:lang="en">value reference</rdfs:label>
 	</owl:ObjectProperty>
+	
+	<rdf:Description rdf:about="&fibo-fnd-utl-av;MaturityLevel">
+		<rdfs:subClassOf rdf:resource="&auto-mo;QualitativeValue"/>
+	</rdf:Description>
 
 </rdf:RDF>

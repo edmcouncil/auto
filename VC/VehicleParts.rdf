@@ -39,7 +39,7 @@
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 	
 	<owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/">
-		<rdfs:label>Vehicle Parts Ontology (VP)</rdfs:label>
+		<rdfs:label>Vehicle parts ontology (VP)</rdfs:label>
 		<dct:abstract xml:lang="en">This Vehicle Parts Ontology (VP) describes the car&apos;s parts.
 
 It contains many classes and properties extracted from:
@@ -78,12 +78,6 @@ It contains many classes and properties extracted from:
 	
 	<owl:AnnotationProperty rdf:about="&skos;definition">
 	</owl:AnnotationProperty>
-	
-	<owl:ObjectProperty rdf:about="&auto-mo;isPartOf">
-		<rdf:type rdf:resource="&owl;TransitiveProperty"/>
-		<rdfs:label xml:lang="en">part of</rdfs:label>
-		<rdfs:comment xml:lang="en">Relationship between 2 branches where one is a component of the second</rdfs:comment>
-	</owl:ObjectProperty>
 	
 	<owl:Class rdf:about="&auto-vp;ABS">
 		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
