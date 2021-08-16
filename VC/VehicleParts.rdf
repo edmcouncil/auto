@@ -1,0 +1,974 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY auto-mo "https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/">
+	<!ENTITY auto-vp "https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/">
+	<!ENTITY cdt "http://w3id.org/lindt/custom_datatypes#">
+	<!ENTITY dc "http://purl.org/dc/elements/1.1/">
+	<!ENTITY dct "http://purl.org/dc/terms/">
+	<!ENTITY fibo-fnd-utl-av "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
+	<!ENTITY foaf "http://xmlns.com/foaf/0.1/">
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY qudt "http://qudt.org/schema/qudt/">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY schema "http://schema.org/">
+	<!ENTITY skos "http://www.w3.org/2004/02/skos/core#">
+	<!ENTITY sm "http://www.omg.org/techprocess/ab/SpecificationMetadata/">
+	<!ENTITY sosa "http://www.w3.org/ns/sosa/">
+	<!ENTITY vann "http://purl.org/vocab/vann/">
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+<rdf:RDF xml:base="https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/"
+	xmlns="https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/"
+	xmlns:auto-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
+	xmlns:auto-vp="https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/"
+	xmlns:cdt="http://w3id.org/lindt/custom_datatypes#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:qudt="http://qudt.org/schema/qudt/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:schema="http://schema.org/"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+	xmlns:sosa="http://www.w3.org/ns/sosa/"
+	xmlns:vann="http://purl.org/vocab/vann/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	
+	<owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/VS/VehicleParts/">
+		<rdfs:label>Vehicle Parts Ontology (VP)</rdfs:label>
+		<dct:abstract xml:lang="en">This Vehicle Parts Ontology (VP) describes the car&apos;s parts.
+
+It contains many classes and properties extracted from:
+- the GENIVI VSS Ontology (VSSO) has been initially created by Benjamin Klotz, Daniel Wilms, and Raphael Troncy (see http://automotive.eurecom.fr/vsso). VSSO, as created by Benjamin Klotz, Daniel Wilms, and Raphael Troncy, is available under the Creative Commons Attribution 4.0 International license; see http://creativecommons.org/licenses/by/4.0/.</dct:abstract>
+		<dct:created rdf:datatype="&xsd;dateTime">2021-08-16T13:55:00</dct:created>
+		<dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+		<sm:fileAbbreviation>auto-vp</sm:fileAbbreviation>
+		<sm:filename>VehicleParts.rdf</sm:filename>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
+		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
+	</owl:Ontology>
+	
+	<owl:AnnotationProperty rdf:about="&dc;description">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&dct;abstract">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&dct;created">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&dct;issued">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&dct;license">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&dct;modified">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&sm;fileAbbreviation">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&sm;filename">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&skos;definition">
+	</owl:AnnotationProperty>
+	
+	<owl:ObjectProperty rdf:about="&auto-mo;isPartOf">
+		<rdf:type rdf:resource="&owl;TransitiveProperty"/>
+		<rdfs:label xml:lang="en">part of</rdfs:label>
+		<rdfs:comment xml:lang="en">Relationship between 2 branches where one is a component of the second</rdfs:comment>
+	</owl:ObjectProperty>
+	
+	<owl:Class rdf:about="&auto-vp;ABS">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;ADAS"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">ABS</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.ADAS.ABS : Antilock Braking System signals</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;ADAS">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:label xml:lang="en">ADAS</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.ADAS : All Advanced Driver Assist Systems attributes</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Acceleration">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:label xml:lang="en">Acceleration</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Vehicle.Acceleration : Spacial acceleration</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;AcceleratorPedal">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Chassis"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Accelerator</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Accelerator : Accelerator signals</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Airbag">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Seat"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Airbag</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Airbag : Airbag signals</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;AltenateO2Sensor">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;OBD"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Sensor1</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.OBD.O2Alt.BankX.SensorX : Alternate oxygen sensor</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;AngularVelocity">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:label xml:lang="en">Gyro</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Vehicle.AngularVelocity : Spacial rotation</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Axle">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Chassis"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Axle</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Axle : Axle configuration attributes</rdfs:comment>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Axle : Axle signals</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;BatteryManagement">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Drivetrain"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">BatteryManagement</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain.BatteryManagement : Battery Management attributes</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Body">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:label xml:lang="en">Body</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Body : All body components</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Brake">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Wheel"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Brake</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Axle.RowX.Wheel.Left/Right.Brake : Brake signals for wheel</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;BrakePedal">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Chassis"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Brake</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Brake : Brake system signals</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Cabin">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:label xml:lang="en">Cabin</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin : All in-cabin components</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Catalyst">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;OBD"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Catalyst</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.OBD.Catalyst : Catalyst signals</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Chassis">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:label xml:lang="en">Chassis</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis : All attributes concerning steering</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;CruiseControl">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;ADAS"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">CruiseControl</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.ADAS.CruiseControl : Signals from Cruise Control system</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;CurrentDriveCycleStatus">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;OBD"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">DriveCycleStatus</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.OBD.DriveCycleStatus : PID 41 - OBD status for the current drive cycle</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;CurrentLocation">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Navigation"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">CurrentLocation</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Infotainment.Navigation.CurrentLocation : The current latitude and longitude of the vehicle.</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Cushion">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Seat"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Cushion</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Cushion : Cushion signals.</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;CushionSwitch">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;SeatSwitch"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Cushion</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.Cushion : Cushion switches</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;DestinatonSet">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Navigation"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">DestinatonSet</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Infotainment.Navigation.DestinatonSet : A navigation has been selected.</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;DistanceToObject">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;ObstacleDetection"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">DistanceToObject</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.ADAS.ObstacleDetection.DistanceToObject : Distance signals form Obstacle Sensor System</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Door">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Cabin"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Door</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Door : All doors</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Drivetrain">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:label xml:lang="en">Drivetrain</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain : Drivetrain attributes internal combustion engines</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;ESC">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;ADAS"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">ESC</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.ADAS.ESC : Electronic Stability Control System signals</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;ElectricMotor">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Drivetrain"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">ElectricMotor</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain.ElectricMotor : Electric Motor specific signals.</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Engine">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Drivetrain"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">InternalCombustionEngine</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain.InternalCombustionEngine : Engine-specific attributes</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;ExternalLights">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Body"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Lights</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Lights : All lights</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;FuelCell">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Drivetrain"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">FuelCell</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain.FuelCell : Fuel Cell attributes</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;FuelSystem">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Drivetrain"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">FuelSystem</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain.FuelSystem : Fuel System attributes</rdfs:comment>
+	</owl:Class>
+	
+	<owl:NamedIndividual rdf:about="&auto-vp;GPS">
+	</owl:NamedIndividual>
+	
+	<owl:Class rdf:about="&auto-vp;HVAC">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Cabin"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">HVAC</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.HVAC : Climate control</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;HeadRestraint">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Seat"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">HeadRestraint</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.HeadRestraint : Head restraint settings</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;HeadRestraintSwitch">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;SeatSwitch"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">HeadRestraint</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.HeadRestraint : Head restraint switches</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Hood">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Body"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Hood</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Hood : Hood status</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Horn">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Body"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Horn</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Horn : Horn signals</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Infotainment">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Cabin"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Infotainment</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Infotainment : Infotainment system</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;InternalCombustionEngine">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;InternalLights">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Cabin"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Lights</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Lights : Interior lights signals and sensors</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;LaneDepartureDetection">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;ADAS"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">LaneDepartureDetection</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.ADAS.LaneDepartureDetection : Signals from Land Departure Detection System</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;LocalHVAC">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;HVAC"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">HVAC</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.HVAC.RowX.Left/Right : Climate control</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;LocalLights">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;InternalLights"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Lights</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Lights.RowX.Left/Right : Interior lights signals and sensors</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Lumbar">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Seat"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Lumbar</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Lumbar : Lumbar signals</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;LumbarSwitch">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;SeatSwitch"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Lumbar</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.Lumbar : Lumbar switches</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;MassageSwitch">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;SeatSwitch"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Massage</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.Massage : Massage switches</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Media">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Infotainment"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Media</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Infotainment.Media : All Media actions</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;MirrorHeating">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Mirrors"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Heating</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Mirrors.Left/Right.Heating : Mirror heater signals</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Mirrors">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Body"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Mirrors</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Mirrors : All mirrors</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Navigation">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Infotainment"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Navigation</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Infotainment.Navigation : All navigation actions</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;O2Sensor">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;OBD"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">O2 Sensor</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.OBD.O2WR.SensorX : Wide range/band oxygen senor 8</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;O2SensorOther">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:label xml:lang="en">Sensor1</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.OBD.O2.Bank2.Sensor1 : Oxygen sensor</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;OBD">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:label xml:lang="en">OBD</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.OBD : OBD data.</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;OBDStatus">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;OBD"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Status</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.OBD.Status : PID 01 - OBD status</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;ObstacleDetection">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;ADAS"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">ObstacleDetection</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.ADAS.ObstacleDetection : Signals form Obstacle Sensor System</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;ParkingBrake">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Chassis"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">ParkingBrake</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.ParkingBrake : Parking brake signals</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Played">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Media"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Played</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Infotainment.Media.Played : Collection of signals updated in concert when a new media is played</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Raindetection">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Body"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Raindetection</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Raindetection : Rainsensor signals</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;RearShade">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Cabin"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">RearShade</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.RearShade : Rear window shade.</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;RearviewMirror">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Cabin"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">RearviewMirror</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.RearviewMirror : Rearview mirror</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;ReclineSwitch">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;SeatSwitch"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Recline</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.Recline : Recline switches</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Seat">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Cabin"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Seat</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat : All seats.</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;SeatSwitch">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Seat"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Switch</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch : Seat switch signals</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;SideBolster">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Seat"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">SideBolster</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.SideBolster : Side bolster settings</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;SideBolsterSwitch">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;SeatSwitch"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">SideBolster</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.SideBolster : Side bolster switches</rdfs:comment>
+	</owl:Class>
+	
+	<owl:NamedIndividual rdf:about="&auto-vp;Speedometer">
+	</owl:NamedIndividual>
+	
+	<owl:Class rdf:about="&auto-vp;SteeringWheel">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Chassis"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">SteeringWheel</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.SteeringWheel : Steering wheel signals</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;SunRoofShade">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Sunroof"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Shade</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Sunroof.Shade : Sun roof shade status</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Sunroof">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Cabin"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Sunroof</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Sunroof : Sun roof status.</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;TCS">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;ADAS"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">TCS</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.ADAS.TCS : Traction Control System signals</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Tire">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Wheel"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Tire</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Axle.RowX.Wheel.Left/Right.Tire : Tire signals for wheel</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Transmission">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Drivetrain"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Transmission</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain.Transmission : Transmission-specific attributes</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Trunk">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Body"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Trunk</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Trunk : Trunk status</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;VehicleIdentification">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:label xml:lang="en">VehicleIdentification</rdfs:label>
+		<rdfs:comment xml:lang="en">Attribute.Vehicle.VehicleIdentification : Attributes that identify a vehicle</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;VehiclePart">
+		<rdfs:subClassOf rdf:resource="&auto-mo;PhysicalObject"/>
+		<rdfs:label xml:lang="en">vehicle part</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;WasherFluid">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Windshield"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">WasherFluid</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Windshield.Front/Rear.WasherFluid : Front/Rear windshield washer fluid signals</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Wheel">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Axle"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Wheel</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Axle.RowX.Wheel : wheel signals</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Window">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Door"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Window</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Door.RowX.Left/Right.Window : Door window status</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;WindowShade">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Door"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Shade</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Door.RowX.Left/Right.Shade : Side window shade</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Windshield">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Body"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Windshield</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Windshield : Windshield signals</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;WindshieldHeating">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Windshield"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Heating</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Windshield.Front/Rear.Heating : Front/Rear windshield heater signals</rdfs:comment>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Wiping">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&auto-mo;isPartOf"/>
+				<owl:allValuesFrom rdf:resource="&auto-vp;Windshield"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">Wiping</rdfs:label>
+		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Windshield.Front/Rear.Wiping : Front/Rear windshield wiper signals</rdfs:comment>
+	</owl:Class>
+	
+	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;hasMaturityLevel">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;synonym">
+	</owl:AnnotationProperty>
+
+</rdf:RDF>

@@ -481,16 +481,6 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 		<rdfs:subClassOf rdf:resource="&auto-mo;QualitativeValue"/>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-vc;CAN">
-		<rdfs:subClassOf rdf:resource="&auto-vc;Sensor"/>
-		<rdfs:label xml:lang="en">CAN</rdfs:label>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc;Camera">
-		<rdfs:subClassOf rdf:resource="&auto-vc;Sensor"/>
-		<rdfs:label xml:lang="en">camera</rdfs:label>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-vc;Canoe">
 		<rdfs:subClassOf rdf:resource="&auto-vc;Boat"/>
 		<rdfs:label xml:lang="en">canoe</rdfs:label>
@@ -598,7 +588,7 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 	
 	<owl:Class rdf:about="&auto-vc;ChoiceOrComponent">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Model"/>
-		<rdfs:subClassOf rdf:resource="&auto-vc;VehiclePart"/>
+		<rdfs:subClassOf rdf:resource="&auto-mo;NonPhysicalObject"/>
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
@@ -1474,11 +1464,6 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.18</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-vc;GPS">
-		<rdfs:subClassOf rdf:resource="&auto-vc;Sensor"/>
-		<rdfs:label xml:lang="en">GPS</rdfs:label>
-	</owl:Class>
-	
 	<owl:NamedIndividual rdf:about="&auto-vc;Garage">
 		<rdf:type rdf:resource="&auto-vc;ParkingType"/>
 		<rdfs:label xml:lang="en">garage</rdfs:label>
@@ -1596,11 +1581,6 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		<rdfs:label xml:lang="en">left hand drive</rdfs:label>
 		<skos:definition xml:lang="en">The steering position is on the left side of the vehicle (viewed from the main direction of driving). For cars this means that you drive on the right side of the road.</skos:definition>
 	</owl:NamedIndividual>
-	
-	<owl:Class rdf:about="&auto-vc;Lidar">
-		<rdfs:subClassOf rdf:resource="&auto-vc;Sensor"/>
-		<rdfs:label xml:lang="en">lidar</rdfs:label>
-	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc;LightTruck">
 		<rdfs:subClassOf rdf:resource="&auto-vc;Truck"/>
@@ -2242,11 +2222,6 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.17</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
-	<owl:Class rdf:about="&auto-vc;Sensor">
-		<rdfs:subClassOf rdf:resource="&auto-vc;VehiclePart"/>
-		<rdfs:label xml:lang="en">sensor</rdfs:label>
-	</owl:Class>
-	
 	<owl:Class rdf:about="&auto-vc;Ship">
 		<rdfs:subClassOf rdf:resource="&auto-vc;Watercraft"/>
 		<rdfs:label xml:lang="en">ship</rdfs:label>
@@ -2275,11 +2250,6 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
 		<rdfs:label xml:lang="pl">mały pojazd specjalny</rdfs:label>
 		<rdfs:label xml:lang="en">small special vehicle</rdfs:label>
 		<rdfs:seeAlso>source: https://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/TTICarOnto.owl</rdfs:seeAlso>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc;Sonar">
-		<rdfs:subClassOf rdf:resource="&auto-vc;Sensor"/>
-		<rdfs:label xml:lang="en">sonar</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc;SpecItemCollection">
@@ -2941,11 +2911,6 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
 		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Vehicle"/>
 		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Vehicle"/>
 		<skos:definition xml:lang="en">a device that is designed or used to transport people or cargo over land, water, air, or through space</skos:definition>
-	</owl:Class>
-	
-	<owl:Class rdf:about="&auto-vc;VehiclePart">
-		<rdfs:subClassOf rdf:resource="&auto-mo;PhysicalObject"/>
-		<rdfs:label xml:lang="en">vehicle part</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc;WarrantyScope">
