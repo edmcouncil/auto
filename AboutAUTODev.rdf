@@ -20,7 +20,6 @@
      xmlns:auto-vs="https://spec.edmcouncil.org/auto/ontology/VS/VehicleSignals/"
      xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/AboutAUTODev/">
-        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/AutonomousVehicles/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/"/>
         <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/"/>
