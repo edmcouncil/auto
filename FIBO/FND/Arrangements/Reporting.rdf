@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY dct "http://purl.org/dc/terms/">
+	<!ENTITY fibo-fnd-arr-arr "https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Arrangements/">
+	<!ENTITY fibo-fnd-arr-doc "https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Documents/">
+	<!ENTITY fibo-fnd-arr-rep "https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Reporting/">
+	<!ENTITY fibo-fnd-dt-fd "https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/">
+	<!ENTITY fibo-fnd-dt-oc "https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/Occurrences/">
+	<!ENTITY fibo-fnd-pty-pty "https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/">
+	<!ENTITY fibo-fnd-rel-rel "https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/">
+	<!ENTITY fibo-fnd-utl-av "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY skos "http://www.w3.org/2004/02/skos/core#">
+	<!ENTITY sm "http://www.omg.org/techprocess/ab/SpecificationMetadata/">
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+<rdf:RDF xml:base="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Reporting/"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:fibo-fnd-arr-arr="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Arrangements/"
+	xmlns:fibo-fnd-arr-doc="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Documents/"
+	xmlns:fibo-fnd-arr-rep="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Reporting/"
+	xmlns:fibo-fnd-dt-fd="https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/"
+	xmlns:fibo-fnd-dt-oc="https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/Occurrences/"
+	xmlns:fibo-fnd-pty-pty="https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/"
+	xmlns:fibo-fnd-rel-rel="https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/"
+	xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+	
+	<owl:Ontology rdf:about="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Reporting/">
+		<rdfs:label>Reporting Ontology</rdfs:label>
+		<dct:abstract>This ontology defines the notion of a Report and related party concepts.</dct:abstract>
+		<dct:license rdf:datatype="&xsd;anyURI">http://opensource.org/licenses/MIT</dct:license>
+		<sm:contentLanguage rdf:datatype="&xsd;anyURI">https://www.w3.org/TR/owl2-quick-reference/</sm:contentLanguage>
+		<sm:copyright>Copyright (c) 2018-2021 EDM Council, Inc.</sm:copyright>
+		<sm:copyright>Copyright (c) 2018-2021 Object Management Group, Inc.</sm:copyright>
+		<sm:dependsOn rdf:datatype="&xsd;anyURI">https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Arrangements/</sm:dependsOn>
+		<sm:dependsOn rdf:datatype="&xsd;anyURI">https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Documents/</sm:dependsOn>
+		<sm:dependsOn rdf:datatype="&xsd;anyURI">https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/</sm:dependsOn>
+		<sm:dependsOn rdf:datatype="&xsd;anyURI">https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/Occurrences/</sm:dependsOn>
+		<sm:dependsOn rdf:datatype="&xsd;anyURI">https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/</sm:dependsOn>
+		<sm:dependsOn rdf:datatype="&xsd;anyURI">https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/</sm:dependsOn>
+		<sm:dependsOn rdf:datatype="&xsd;anyURI">https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/</sm:dependsOn>
+		<sm:fileAbbreviation>fibo-fnd-arr-rep</sm:fileAbbreviation>
+		<sm:filename>Reporting.rdf</sm:filename>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Arrangements/"/>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Documents/"/>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/FinancialDates/"/>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/DatesAndTimes/Occurrences/"/>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Parties/Parties/"/>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Relations/Relations/"/>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
+		<owl:versionIRI rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/20210301/Arrangements/Reporting/"/>
+		<skos:changeNote>The https://spec.edmcouncil.org/fibo/ontology/FND/20180801/Arrangements/Reporting.rdf version of this ontology was modified to incorporate evaluates and isEvaluatedBy.</skos:changeNote>
+		<skos:changeNote>The https://spec.edmcouncil.org/fibo/ontology/FND/20190901/Arrangements/Reporting.rdf version of this ontology was modified to eliminate references to deprecated elements and to external dictionary sites that no longer resolve, and to integrate concepts related to making a request for something.</skos:changeNote>
+		<fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Release"/>
+	</owl:Ontology>
+	
+	<owl:Class rdf:about="&fibo-fnd-arr-rep;Report">
+		<rdfs:subClassOf rdf:resource="&fibo-fnd-arr-doc;Document"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&fibo-fnd-arr-rep;isSubmittedBy"/>
+				<owl:onClass rdf:resource="&fibo-fnd-arr-rep;Submitter"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&fibo-fnd-arr-doc;hasReportingPeriod"/>
+				<owl:onClass rdf:resource="&fibo-fnd-dt-fd;DatePeriod"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&fibo-fnd-arr-rep;hasReportDateTime"/>
+				<owl:onClass rdf:resource="&fibo-fnd-dt-fd;DateTime"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&fibo-fnd-arr-rep;hasReportDate"/>
+				<owl:onClass rdf:resource="&fibo-fnd-dt-fd;ExplicitDate"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&fibo-fnd-arr-rep;isSubmittedTo"/>
+				<owl:onClass rdf:resource="&fibo-fnd-pty-pty;PartyInRole"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&fibo-fnd-arr-rep;isReportedTo"/>
+				<owl:someValuesFrom rdf:resource="&fibo-fnd-pty-pty;PartyInRole"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&fibo-fnd-rel-rel;isProvidedBy"/>
+				<owl:someValuesFrom rdf:resource="&fibo-fnd-arr-rep;ReportingParty"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label>report</rdfs:label>
+		<skos:definition>document that provides a structured description of something, prepared on ad hoc, periodic, recurring, regular, or as required basis</skos:definition>
+		<fibo-fnd-utl-av:explanatoryNote>Reports may refer to specific periods, events, occurrences, or subjects, and may be communicated or presented in oral, electronic, or written form.</fibo-fnd-utl-av:explanatoryNote>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&fibo-fnd-arr-rep;ReportingParty">
+		<rdfs:subClassOf rdf:resource="&fibo-fnd-pty-pty;PartyInRole"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&fibo-fnd-rel-rel;provides"/>
+				<owl:someValuesFrom rdf:resource="&fibo-fnd-arr-rep;Report"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label>reporting party</rdfs:label>
+		<skos:definition>party providing a report, typically in response to some contractual, legal, regulatory or other business requirement</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&fibo-fnd-arr-rep;Request">
+		<rdfs:subClassOf rdf:resource="&fibo-fnd-dt-oc;Occurrence"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&fibo-fnd-arr-rep;hasRequestDateTime"/>
+				<owl:onClass rdf:resource="&fibo-fnd-dt-fd;DateTime"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&fibo-fnd-arr-rep;hasRequestDate"/>
+				<owl:onClass rdf:resource="&fibo-fnd-dt-fd;ExplicitDate"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&fibo-fnd-arr-rep;isRequestedBy"/>
+				<owl:someValuesFrom rdf:resource="&fibo-fnd-arr-rep;Requester"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&fibo-fnd-arr-rep;isRequestedOf"/>
+				<owl:someValuesFrom rdf:resource="&fibo-fnd-pty-pty;PartyInRole"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&fibo-fnd-dt-oc;exemplifies"/>
+				<owl:someValuesFrom rdf:resource="&fibo-fnd-arr-rep;RequestActivity"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label>request</rdfs:label>
+		<skos:definition>event in which some party asks another party for something at some point in time</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&fibo-fnd-arr-rep;RequestActivity">
+		<rdfs:subClassOf rdf:resource="&fibo-fnd-dt-oc;OccurrenceKind"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&fibo-fnd-arr-rep;requests"/>
+				<owl:someValuesFrom rdf:resource="&owl;Thing"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label>request activity</rdfs:label>
+		<skos:definition>activity in which some party asks another party for something or to do something</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&fibo-fnd-arr-rep;Requester">
+		<rdfs:subClassOf rdf:resource="&fibo-fnd-pty-pty;PartyInRole"/>
+		<rdfs:label xml:lang="en">requester</rdfs:label>
+		<skos:definition xml:lang="en">party that asks for something</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&fibo-fnd-arr-rep;Submitter">
+		<rdfs:subClassOf rdf:resource="&fibo-fnd-pty-pty;PartyInRole"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="&fibo-fnd-arr-rep;submits"/>
+				<owl:someValuesFrom rdf:resource="&fibo-fnd-arr-rep;Report"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label>submitter</rdfs:label>
+		<skos:definition>party presenting something, such as a regulatory report</skos:definition>
+	</owl:Class>
+	
+	<owl:ObjectProperty rdf:about="&fibo-fnd-arr-rep;hasReportDate">
+		<rdfs:subPropertyOf rdf:resource="&fibo-fnd-arr-doc;hasDateOfIssuance"/>
+		<rdfs:subPropertyOf rdf:resource="&fibo-fnd-dt-fd;hasExplicitDate"/>
+		<rdfs:label xml:lang="en">has report date</rdfs:label>
+		<rdfs:range rdf:resource="&fibo-fnd-dt-fd;ExplicitDate"/>
+		<skos:definition xml:lang="en">date on which a report was issued</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&fibo-fnd-arr-rep;hasReportDateTime">
+		<rdfs:subPropertyOf rdf:resource="&fibo-fnd-dt-fd;hasDateTime"/>
+		<rdfs:label xml:lang="en">has report date time</rdfs:label>
+		<rdfs:range rdf:resource="&fibo-fnd-dt-fd;DateTime"/>
+		<skos:definition xml:lang="en">date and time at which a report was issued</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&fibo-fnd-arr-rep;hasRequestDate">
+		<rdfs:subPropertyOf rdf:resource="&fibo-fnd-dt-fd;hasExplicitDate"/>
+		<rdfs:label xml:lang="en">has request date</rdfs:label>
+		<rdfs:range rdf:resource="&fibo-fnd-dt-fd;ExplicitDate"/>
+		<skos:definition xml:lang="en">date on which a request was made</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&fibo-fnd-arr-rep;hasRequestDateTime">
+		<rdfs:subPropertyOf rdf:resource="&fibo-fnd-dt-fd;hasDateTime"/>
+		<rdfs:label xml:lang="en">has request date time</rdfs:label>
+		<rdfs:range rdf:resource="&fibo-fnd-dt-fd;DateTime"/>
+		<skos:definition xml:lang="en">date and time at which a request was made</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&fibo-fnd-arr-rep;isReportedTo">
+		<rdfs:subPropertyOf rdf:resource="&fibo-fnd-pty-pty;hasPartyInRole"/>
+		<rdfs:label>is reported to</rdfs:label>
+		<rdfs:range rdf:resource="&fibo-fnd-pty-pty;PartyInRole"/>
+		<skos:definition>indicates the party to which something is reported</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&fibo-fnd-arr-rep;isRequestedBy">
+		<rdfs:subPropertyOf rdf:resource="&fibo-fnd-pty-pty;hasPartyInRole"/>
+		<rdfs:label>is requested by</rdfs:label>
+		<rdfs:range rdf:resource="&fibo-fnd-arr-rep;Requester"/>
+		<skos:definition>indicates the party that asks for something</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&fibo-fnd-arr-rep;isRequestedOf">
+		<rdfs:subPropertyOf rdf:resource="&fibo-fnd-pty-pty;hasPartyInRole"/>
+		<rdfs:label>is requested of</rdfs:label>
+		<rdfs:range rdf:resource="&fibo-fnd-pty-pty;PartyInRole"/>
+		<skos:definition>indicates the party that is asked for something</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&fibo-fnd-arr-rep;isSubmittedBy">
+		<rdfs:subPropertyOf rdf:resource="&fibo-fnd-rel-rel;isProvidedBy"/>
+		<rdfs:label>is submitted by</rdfs:label>
+		<rdfs:range rdf:resource="&fibo-fnd-arr-rep;Submitter"/>
+		<owl:inverseOf rdf:resource="&fibo-fnd-arr-rep;submits"/>
+		<skos:definition>indicates the party that submits something</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&fibo-fnd-arr-rep;isSubmittedTo">
+		<rdfs:subPropertyOf rdf:resource="&fibo-fnd-pty-pty;hasPartyInRole"/>
+		<rdfs:label>is submitted to</rdfs:label>
+		<rdfs:range rdf:resource="&fibo-fnd-pty-pty;PartyInRole"/>
+		<skos:definition>indicates the party to which something is submitted</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&fibo-fnd-arr-rep;reportsOn">
+		<rdfs:subPropertyOf rdf:resource="&fibo-fnd-arr-doc;isAbout"/>
+		<rdfs:label>reports on</rdfs:label>
+		<rdfs:domain rdf:resource="&fibo-fnd-arr-rep;Report"/>
+		<skos:definition>indicates a subject matter, observation(s), assessment(s), focus or other topic of a report</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&fibo-fnd-arr-rep;requests">
+		<rdfs:subPropertyOf rdf:resource="&fibo-fnd-arr-doc;isAbout"/>
+		<rdfs:label>requests</rdfs:label>
+		<skos:definition>asks for something</skos:definition>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&fibo-fnd-arr-rep;submits">
+		<rdfs:subPropertyOf rdf:resource="&fibo-fnd-rel-rel;provides"/>
+		<rdfs:label>submits</rdfs:label>
+		<rdfs:domain rdf:resource="&fibo-fnd-arr-rep;Submitter"/>
+		<skos:definition>presents something (a proposal, application, report, or other document) for consideration or review</skos:definition>
+	</owl:ObjectProperty>
+
+</rdf:RDF>
