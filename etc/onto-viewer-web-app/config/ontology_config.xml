@@ -5,15 +5,13 @@
   <!-- To load an ontology from a folder, enter the path address with application between <ontologyPath> tags or enter the file name  -->
   <!-- If no URL or path is provided, the program will load the ontology from the default folder -->
   <ontology>
- 
+    <ontologyURL>https://spec.edmcouncil.org/auto/ontology/MetadataAUTO/</ontologyURL>
     <ontologyURL>https://spec.edmcouncil.org/auto/ontology/AboutAUTODev/</ontologyURL>
-    <ontologyDir>ontologies</ontologyDir>
     <ontologyDir>staticOntologies</ontologyDir>
-    <ontologyMapper>fiboMapper</ontologyMapper>
   </ontology>
   
   <scopeIri>
-    <!--<uriNamespace>https://spec.edmcouncil.org/fibo/ontology/AboutFIBODev/</uriNamespace>
+    <!--<uriNamespace>https://spec.edmcouncil.org/auto/ontology/AboutAUTODev/</uriNamespace>
     <uriNamespace>http://schema.org/</uriNamespace>
     <uriNamespace>https://spec.edmcouncil.org/auto/ontology/</uriNamespace> 
     <uriNamespace>https://www.omg.org/spec/</uriNamespace> 

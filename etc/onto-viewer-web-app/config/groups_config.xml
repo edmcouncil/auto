@@ -49,10 +49,6 @@
     
     <group>
       <groupName>Ontological characteristic</groupName>
-      <groupItem>@viewer.function.usage_classes</groupItem>
-      <groupItem>@viewer.function.direct_sub_data_property</groupItem>
-      <groupItem>@viewer.function.direct_sub_object_property</groupItem>
-      <groupItem>@viewer.function.direct_sub_annotation_property</groupItem>
       <groupItem>@viewer.function.direct_subclasses</groupItem>
       <groupItem>@viewer.function.instances</groupItem>
       <groupItem>@viewer.axiom.EquivalentClasses</groupItem>
@@ -76,6 +72,7 @@
       <groupItem>@viewer.axiom.AnnotationPropertyDomain</groupItem>
       <groupItem>@viewer.axiom.AnnotationPropertyRangeOf</groupItem>
       <groupItem>@viewer.axiom.InverseObjectProperties</groupItem>
+      <groupItem>@viewer.function.usage_classes</groupItem>
       <groupItem>http://purl.org/dc/terms/hasPart</groupItem>
       <groupItem>http://www.omg.org/techprocess/ab/SpecificationMetadata/dependsOn</groupItem>
     </group>
