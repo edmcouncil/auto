@@ -11,7 +11,6 @@
 	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
 ]>
 <rdf:RDF xml:base="https://spec.edmcouncil.org/auto/ontology/MetadataAUTO/"
-	xmlns="https://spec.edmcouncil.org/auto/ontology/FD/MetadataFD/"
 	xmlns:dct="http://purl.org/dc/terms/"
 	xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
 	xmlns:fibo-fnd-utl-mod="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/MetadataFNDUtilities/"
@@ -32,7 +31,6 @@
 		<sm:fileAbbreviation>auto-spec</sm:fileAbbreviation>
 		<sm:filename>MetadataAUTO.rdf</sm:filename>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/MetadataDE/"/>
-		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/FD/MetadataFD/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MetadataMO/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/MetadataVC/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VS/MetadataVS/"/>
@@ -44,8 +42,8 @@
 		<rdfs:label>Automotive Ontology</rdfs:label>
 		<dct:abstract>The Automotive Ontology (AUTO) is a collaborative effort among industry practitioners, semantic technology experts and information scientists to standardize the language used to precisely define the terms, conditions, and characteristics of automotive domain.  The definitions and relationships that comprise the AUTO specification have been modularized into a number of domains, which in turn include a number constituent ontologies.</dct:abstract>
 		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/MetadataDE/"/>
-		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/FD/MetadataFD/"/>
 		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MetadataMO/"/>
+		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/VS/MetadataVC/"/>
 		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/VS/MetadataVS/"/>
 		<dct:issued rdf:datatype="&xsd;dateTime">2020-03-18T01:43:00</dct:issued>
 		<dct:license rdf:datatype="&xsd;anyURI">http://opensource.org/licenses/MIT</dct:license>
