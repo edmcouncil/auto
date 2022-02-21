@@ -15,7 +15,7 @@ WHERE
 			?s  rdfs:label  ?label .
 			{?s a owl:Class} UNION {?s a owl:ObjectProperty} UNION {?s a owl:DatatypeProperty}.
 			FILTER NOT EXISTS {?s owl:deprecated "true"^^xsd:boolean} .
-			FILTER regex(str(?s), "edmcouncil")
+			FILTER regex(str(?s), <HYGIENE_TESTS_FILTER_PARAMETER>)
         }
 		GROUP BY ?label
 		HAVING ( COUNT(?label) > 1 )
