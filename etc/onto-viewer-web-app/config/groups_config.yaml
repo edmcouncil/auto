@@ -62,7 +62,6 @@ groups_config:
         - '@viewer.axiom.AnnotationPropertyDomain'
         - '@viewer.axiom.AnnotationPropertyRangeOf'
         - '@viewer.axiom.InverseObjectProperties'
-        - '@viewer.function.usage_classes'
         - 'http://purl.org/dc/terms/hasPart'
         - 'http://www.omg.org/techprocess/ab/SpecificationMetadata/dependsOn'
     - name: Meta-information
@@ -85,3 +84,6 @@ groups_config:
         - 'http://www.w3.org/2004/02/skos/core#historyNote'
         - 'http://www.omg.org/techprocess/ab/SpecificationMetadata/relatedSpecification'
         - 'http://purl.org/dc/terms/hasVersion'
+    - name: Usage:
+      items:
+        - '@viewer.function.usage_classes'
