@@ -46,6 +46,7 @@
 	
 	<owl:Class rdf:about="&auto-cc;Acceleration">
 		<rdfs:subClassOf rdf:resource="&auto-cc;SpeedProfile"/>
+		<rdfs:label xml:lang="en">acceleration</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;BackwardCollisionWarning">
@@ -60,6 +61,7 @@
 	
 	<owl:Class rdf:about="&auto-cc;ConstantSpeed">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Quality"/>
+		<rdfs:label xml:lang="en">constant speed</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;CurrentLaneSafeDist">
@@ -69,10 +71,12 @@
 	
 	<owl:Class rdf:about="&auto-cc;Deceleration">
 		<rdfs:subClassOf rdf:resource="&auto-cc;SpeedProfile"/>
+		<rdfs:label xml:lang="en">deceleration</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;DestinationSelection">
 		<rdfs:subClassOf rdf:resource="&auto-cc;StrategicFunction"/>
+		<rdfs:label xml:lang="en">destination selection</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;DrivingAction">
@@ -125,7 +129,7 @@
 				<owl:someValuesFrom rdf:resource="&auto-cc;ObjectAndEventDetectionAndResponse"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">Dynamic Driving Task</rdfs:label>
+		<rdfs:label xml:lang="en">dynamic driving task</rdfs:label>
 		<skos:definition xml:lang="en">all of the real-time operational and tactical functions required to operate a vehicle in on-road traffic, excluding the strategic functions</skos:definition>
 		<fibo-fnd-utl-av:abbreviation>DDT</fibo-fnd-utl-av:abbreviation>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.13</fibo-fnd-utl-av:adaptedFrom>
@@ -150,12 +154,12 @@ are referred to collectively as object and event detection and response (OEDR).<
 				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">Dynamic Driving Task Subtask</rdfs:label>
+		<rdfs:label xml:lang="en">dynamic driving task subtask</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;EnhancingConspicuity">
 		<rdfs:subClassOf rdf:resource="&auto-cc;TacticalFunction"/>
-		<rdfs:label xml:lang="en">Enhancing conspicuity</rdfs:label>
+		<rdfs:label xml:lang="en">enhancing conspicuity</rdfs:label>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Enhancing conspicuity via lighting, signaling and gesturing, etc.</fibo-fnd-utl-av:explanatoryNote>
 	</owl:Class>
 	
@@ -199,7 +203,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	
 	<owl:Class rdf:about="&auto-cc;LateralVehicleMotionControl">
 		<rdfs:subClassOf rdf:resource="&auto-cc;OperationalFunction"/>
-		<rdfs:label xml:lang="en">Lateral Vehicle Motion Control</rdfs:label>
+		<rdfs:label xml:lang="en">lateral vehicle motion control</rdfs:label>
 		<skos:definition xml:lang="en">the DDT subtask comprising the activities necessary for the real-time, sustained regulation of the y-axis component of vehicle motion</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.15</fibo-fnd-utl-av:adaptedFrom>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Lateral vehicle motion control includes the detection of the vehicle positioning relative to lane boundaries and application of steering and/or differential braking inputs to maintain appropriate lateral positioning.</fibo-fnd-utl-av:explanatoryNote>
@@ -212,7 +216,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	
 	<owl:Class rdf:about="&auto-cc;LongitudinalVehicleMotionControl">
 		<rdfs:subClassOf rdf:resource="&auto-cc;OperationalFunction"/>
-		<rdfs:label xml:lang="en">Longitudinal Vehicle Motion Control</rdfs:label>
+		<rdfs:label xml:lang="en">longitudinal vehicle motion control</rdfs:label>
 		<skos:definition xml:lang="en">the DDT subtask comprising the activities necessary for the real-time, sustained regulation of the x-axis component of vehicle motion</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.16</fibo-fnd-utl-av:adaptedFrom>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Longitudinal vehicle motion control includes maintaining set speed as well as detecting a preceding vehicle in the path of the subject vehicle, maintaining an appropriate gap to the preceding vehicle and applying propulsion or braking inputs to cause the vehicle to maintain that speed or gap.</fibo-fnd-utl-av:explanatoryNote>
@@ -220,13 +224,13 @@ are referred to collectively as object and event detection and response (OEDR).<
 	
 	<owl:Class rdf:about="&auto-cc;ManeuverPlanning">
 		<rdfs:subClassOf rdf:resource="&auto-cc;TacticalFunction"/>
-		<rdfs:label xml:lang="en">Maneuver Planning</rdfs:label>
+		<rdfs:label xml:lang="en">maneuver planning</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;Monitor">
 		<rdfs:subClassOf rdf:resource="&auto-cc;OperationalFunction"/>
 		<rdfs:subClassOf rdf:resource="&auto-cc;TacticalFunction"/>
-		<rdfs:label xml:lang="en">Monitor</rdfs:label>
+		<rdfs:label xml:lang="en">monitor</rdfs:label>
 		<skos:definition xml:lang="en">a range of functions involving real-time human or machine sensing and processing of data used to operate a vehicle, or to support its operation</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.19</fibo-fnd-utl-av:adaptedFrom>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">The driver state or condition of being receptive to alerts or other indicators of a DDT performance-relevant system failure, as assumed in level 3, is not a form of monitoring. The difference between receptivity and monitoring is best illustrated by example: A person who becomes aware of a fire alarm or a telephone ringing may not necessarily have been monitoring the fire alarm or the telephone. Likewise, a user who becomes aware of a trailer hitch falling off may not necessarily have been monitoring the trailer hitch. By contrast, a driver in a vehicle with an active level 1 adaptive cruise control (ACC) system is expected to monitor both the driving environment and the ACC performance and otherwise not to wait for an alert to draw his/her attention to a situation requiring a response (see 3.23).</fibo-fnd-utl-av:explanatoryNote>
@@ -236,7 +240,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	
 	<owl:Class rdf:about="&auto-cc;MonitorDrivingAutomationSystemPerformance">
 		<rdfs:subClassOf rdf:resource="&auto-cc;Monitor"/>
-		<rdfs:label xml:lang="en">Monitor Driving Automation System Performance</rdfs:label>
+		<rdfs:label xml:lang="en">monitor driving automation system performance</rdfs:label>
 		<skos:definition xml:lang="en">the activities automated routines for evaluating whether the driving automation system is performing part or all of the DDT appropriately</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.19.4</fibo-fnd-utl-av:adaptedFrom>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">At higher levels of driving automation (levels 3-5), the ADS monitors its own performance of the complete DDT.</fibo-fnd-utl-av:explanatoryNote>
@@ -249,7 +253,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	
 	<owl:Class rdf:about="&auto-cc;MonitorDrivingEnvironment">
 		<rdfs:subClassOf rdf:resource="&auto-cc;Monitor"/>
-		<rdfs:label xml:lang="en">Monitor The Driving Environment</rdfs:label>
+		<rdfs:label xml:lang="en">monitor the driving environment</rdfs:label>
 		<skos:definition xml:lang="en">the activities automated routines that accomplish real-time roadway environmental object and event detection, recognition, classification, and response preparation (excluding actual response), as needed to operate a vehicle</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.19.2</fibo-fnd-utl-av:adaptedFrom>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Monitoring the driving environment via object and event detection, recognition, classification, and response preparation</fibo-fnd-utl-av:explanatoryNote>
@@ -258,7 +262,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	
 	<owl:Class rdf:about="&auto-cc;MonitorUser">
 		<rdfs:subClassOf rdf:resource="&auto-cc;Monitor"/>
-		<rdfs:label xml:lang="en">Monitor The User</rdfs:label>
+		<rdfs:label xml:lang="en">monitor the user</rdfs:label>
 		<skos:definition xml:lang="en">the activities and/or automated routines designed to assess whether and to what degree the user is performing the role specified for him/her</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.19.1</fibo-fnd-utl-av:adaptedFrom>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">User monitoring in the context of driving automation is most likely to be deployed as a countermeasure for misuse or abuse (including over-reliance due to complacency) of a driving automation system but may also serve other purposes.</fibo-fnd-utl-av:explanatoryNote>
@@ -267,7 +271,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	
 	<owl:Class rdf:about="&auto-cc;MonitorVehiclePerformanceForDDTPerformanceRelevantSystemFailures">
 		<rdfs:subClassOf rdf:resource="&auto-cc;Monitor"/>
-		<rdfs:label xml:lang="en">Monitor Vehicle Performance For DDT Performance-Relevant System Failures</rdfs:label>
+		<rdfs:label xml:lang="en">monitor vehicle performance for DDT performance-relevant system failures</rdfs:label>
 		<skos:definition xml:lang="en">the activities and/or automated routines that accomplish real-time evaluation of the vehicle performance, and response preparation, as needed to operate a vehicle</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.19.3</fibo-fnd-utl-av:adaptedFrom>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">While performing the DDT, level 4 and 5 ADSs monitor vehicle performance. However, for level 3 ADSs, as well as for level 1 and 2 driving automation systems, the human driver is assumed to be receptive to vehicle conditions that adversely affect performance of the DDT (see definition of receptivity at 3.23).</fibo-fnd-utl-av:explanatoryNote>
@@ -278,7 +282,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	<owl:Class rdf:about="&auto-cc;ObjectAndEventDetectionAndResponse">
 		<rdfs:subClassOf rdf:resource="&auto-cc;OperationalFunction"/>
 		<rdfs:subClassOf rdf:resource="&auto-cc;TacticalFunction"/>
-		<rdfs:label xml:lang="en">Object And Event Detection And Response</rdfs:label>
+		<rdfs:label xml:lang="en">object and event detection and response</rdfs:label>
 		<skos:altLabel xml:lang="en">Object and event response execution</skos:altLabel>
 		<skos:definition xml:lang="en">the subtasks of the DDT that include monitoring the driving environment (detecting, recognizing, and classifying objects and events and preparing to respond as needed) and executing an appropriate response to such objects and events (i.e., as needed to complete the DDT and/or DDT fallback)</skos:definition>
 		<fibo-fnd-utl-av:abbreviation>OEDR</fibo-fnd-utl-av:abbreviation>
@@ -287,7 +291,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	
 	<owl:Class rdf:about="&auto-cc;OperateMotorVehicle">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Action"/>
-		<rdfs:label xml:lang="en">Operate A Motor Vehicle</rdfs:label>
+		<rdfs:label xml:lang="en">operate a motor vehicle</rdfs:label>
 		<skos:definition xml:lang="en">the activities performed by a (human) driver (with or without support from one or more level 1 or 2 driving automation features ) or by an ADS (level 3-5) to perform the entire DDT for a given vehicle during a trip</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 3.21</fibo-fnd-utl-av:adaptedFrom>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Although use of the term operate/operating implies the existence of a vehicle “operator,” this term is not defined or used in this document, which otherwise provides very specific terms and definitions for the various types of ADS-equipped vehicle users.</fibo-fnd-utl-av:explanatoryNote>
@@ -296,7 +300,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	
 	<owl:Class rdf:about="&auto-cc;OperationalFunction">
 		<rdfs:subClassOf rdf:resource="&auto-cc;DynamicDrivingTaskSubtask"/>
-		<rdfs:label xml:lang="en">Operational effort</rdfs:label>
+		<rdfs:label xml:lang="en">operational effort</rdfs:label>
 		<skos:definition xml:lang="en">a function that involves split-second reactions that can be considered pre-cognitive or innate, such as making micro-corrections to steering, braking and accelerating to maintain lane position in traffic or to avoid a sudden obstacle or hazardous event in the vehicle’s pathway</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 8.11</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -328,14 +332,17 @@ are referred to collectively as object and event detection and response (OEDR).<
 	
 	<owl:Class rdf:about="&auto-cc;SmoothAcceleration">
 		<rdfs:subClassOf rdf:resource="&auto-cc;Acceleration"/>
+		<rdfs:label xml:lang="en">smooth acceleration</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;SmoothDeceleration">
 		<rdfs:subClassOf rdf:resource="&auto-cc;Deceleration"/>
+		<rdfs:label xml:lang="en">smooth deceleration</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;SpeedProfile">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Process"/>
+		<rdfs:label xml:lang="en">speed profile</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;Stop">
@@ -346,27 +353,30 @@ are referred to collectively as object and event detection and response (OEDR).<
 	
 	<owl:Class rdf:about="&auto-cc;StrategicFunction">
 		<rdfs:subClassOf rdf:resource="&auto-cc;Task"/>
-		<rdfs:label xml:lang="en">Strategic function</rdfs:label>
+		<rdfs:label xml:lang="en">strategic function</rdfs:label>
 		<rdfs:comment xml:lang="en">destiantion and waypoints planning</rdfs:comment>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;SuddenAcceleration">
 		<rdfs:subClassOf rdf:resource="&auto-cc;Acceleration"/>
+		<rdfs:label xml:lang="en">sudden acceleration</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;SuddenDeceleration">
 		<rdfs:subClassOf rdf:resource="&auto-cc;Deceleration"/>
+		<rdfs:label xml:lang="en">sudden deceleration</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;TacticalFunction">
 		<rdfs:subClassOf rdf:resource="&auto-cc;DynamicDrivingTaskSubtask"/>
-		<rdfs:label xml:lang="en">Tactical effort</rdfs:label>
+		<rdfs:label xml:lang="en">tactical effort</rdfs:label>
 		<skos:definition xml:lang="en">a function that involves maneuvering the vehicle in traffic during a trip, including deciding whether and when to overtake another vehicle or change lanes, selecting an appropriate speed, checking mirrors, etc</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">J3016 JUN2018, section 8.11</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;Task">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Disposition"/>
+		<rdfs:label xml:lang="en">task</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;ToLeft">
@@ -388,6 +398,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	
 	<owl:Class rdf:about="&auto-cc;TripScheduling">
 		<rdfs:subClassOf rdf:resource="&auto-cc;StrategicFunction"/>
+		<rdfs:label xml:lang="en">trip scheduling</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;TurnLeft">
@@ -415,6 +426,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	
 	<owl:Class rdf:about="&auto-cc;WaypointSelection">
 		<rdfs:subClassOf rdf:resource="&auto-cc;StrategicFunction"/>
+		<rdfs:label xml:lang="en">waypoint selection</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;Yellow">
@@ -434,10 +446,12 @@ are referred to collectively as object and event detection and response (OEDR).<
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;enterOf">
 		<rdfs:subPropertyOf rdf:resource="&auto-cc;isNodeOf"/>
+		<rdfs:label>enter of</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;exitOf">
 		<rdfs:subPropertyOf rdf:resource="&auto-cc;isNodeOf"/>
+		<rdfs:label>exit of</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;giveWay">
@@ -452,6 +466,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;hasPathSegment">
+		<rdfs:label>has path segment</rdfs:label>
 		<owl:inverseOf rdf:resource="&auto-cc;isPathSegmentOf"/>
 	</owl:ObjectProperty>
 	
@@ -466,26 +481,33 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;isPathSegmentOf">
+		<rdfs:label>is path segment of</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;nextNode">
+		<rdfs:label>next node</rdfs:label>
 		<owl:inverseOf rdf:resource="&auto-cc;prevNode"/>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;nextPathSegment">
+		<rdfs:label>next path segment</rdfs:label>
 		<owl:inverseOf rdf:resource="&auto-cc;prevPathSegment"/>
 	</owl:ObjectProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-cc;nodePos">
+		<rdfs:label>node position</rdfs:label>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-cc;pathSegmentID">
+		<rdfs:label>path segment ID</rdfs:label>
 	</owl:DatatypeProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;prevNode">
+		<rdfs:label>previous node</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;prevPathSegment">
+		<rdfs:label>previous path segment</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;startLane">
