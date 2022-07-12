@@ -83,14 +83,14 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 	
 	<owl:Class rdf:about="&auto-ti;AircraftAccident">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Aircraft Accident</rdfs:label>
+		<rdfs:label xml:lang="en">aircraft accident</rdfs:label>
 		<skos:definition xml:lang="en">A transport accident that involves an aircraft in-transport.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.10</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;At-IntersectionCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">At-Intersection Crash</rdfs:label>
+		<rdfs:label xml:lang="en">at-intersection crash</rdfs:label>
 		<skos:definition xml:lang="en">A traffic crash in which the first harmful event occurs within the limits of an intersection.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.7.3</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -105,7 +105,7 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 	
 	<owl:Class rdf:about="&auto-ti;Cataclysm">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Process"/>
-		<rdfs:label xml:lang="en">Cataclysm</rdfs:label>
+		<rdfs:label xml:lang="en">cataclysm</rdfs:label>
 		<skos:definition xml:lang="en">An avalanche, landslide/mudslide, hurricane, cyclone, downburst, flood, torrential rain, cloudburst, lightning, tornado, tidal wave, earthquake or volcanic eruption (See 2.4.9 transport crash).</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.5</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -126,34 +126,34 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 	
 	<owl:Class rdf:about="&auto-ti;CollisionCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Collision Crash</rdfs:label>
+		<rdfs:label xml:lang="en">collision crash</rdfs:label>
 		<skos:definition xml:lang="en">A road vehicle crash other than an overturning crash in which the first harmful event is a collision of a road vehicle in-transport with another road vehicle, other property or pedestrians.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.2</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;CollisionInvolvingMotorVehicleInTransport">
 		<rdfs:subClassOf rdf:resource="&auto-ti;CollisionCrash"/>
-		<rdfs:label xml:lang="en">Collision Involving Motor Vehicle in-Transport</rdfs:label>
+		<rdfs:label xml:lang="en">collision involving motor vehicle in-transport</rdfs:label>
 		<skos:definition xml:lang="en">A crash that is both a motor vehicle crash and a collision crash in which the first harmful event is the collision of two or more motor vehicles in-transport.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.6</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;CollisionInvolvingOtherRoadVehicleInTransport">
 		<rdfs:subClassOf rdf:resource="&auto-ti;CollisionCrash"/>
-		<rdfs:label xml:lang="en">Collision Involving Other Road Vehicle In Transport</rdfs:label>
+		<rdfs:label xml:lang="en">collision involving other road vehicle in transport</rdfs:label>
 		<skos:definition xml:lang="en">A crash that is both an other-road vehicle crash and a collision crash in which the first harmful event is the collision of two or more other road vehicles in-transport.</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;CollisioninvolvingAnimal">
 		<rdfs:subClassOf rdf:resource="&auto-ti;CollisionCrash"/>
-		<rdfs:label xml:lang="en">Collision involving Animal</rdfs:label>
+		<rdfs:label xml:lang="en">collision involving animal</rdfs:label>
 		<skos:definition xml:lang="en">A collision crash in which the first harmful event is the collision of an animal, other than an animal powering an other road vehicle, and a road vehicle in-transport.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.11</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;CollisioninvolvingFixedObject">
 		<rdfs:subClassOf rdf:resource="&auto-ti;CollisionCrash"/>
-		<rdfs:label xml:lang="en">Collision involving Fixed Object</rdfs:label>
+		<rdfs:label xml:lang="en">collision involving fixed object</rdfs:label>
 		<rdfs:comment xml:lang="en">Fixed objects include such objects as guardrails, bridge railings or abutments, construction barricades, impact attenuators, trees, embedded rocks, utility poles, ditches, steep earth or rock slopes, culverts, fences and buildings.</rdfs:comment>
 		<skos:definition xml:lang="en">A collision crash in which the first harmful event is the striking of a fixed object by a road vehicle in- transport.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.12</fibo-fnd-utl-av:adaptedFrom>
@@ -161,49 +161,49 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 	
 	<owl:Class rdf:about="&auto-ti;CollisioninvolvingOtherObject">
 		<rdfs:subClassOf rdf:resource="&auto-ti;CollisionCrash"/>
-		<rdfs:label xml:lang="en">Collision involving Other Object</rdfs:label>
+		<rdfs:label xml:lang="en">collision involving other object</rdfs:label>
 		<skos:definition xml:lang="en">Any collision crash other than a (1) collision involving pedestrian, (2) collision involving motor vehicle in-transport, (3) collision involving other road vehicle in-transport, (4) collision involving parked motor vehicle, (5) collision involving railway vehicle, (6) collision involving pedalcycle, (7) collision involving animal, or (8) collision involving fixed object.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.13</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;CollisioninvolvingOtherRoadVehicle">
 		<rdfs:subClassOf rdf:resource="&auto-ti;CollisionCrash"/>
-		<rdfs:label xml:lang="en">Collision involving Other Road Vehicle</rdfs:label>
+		<rdfs:label xml:lang="en">collision involving other road vehicle</rdfs:label>
 		<skos:definition xml:lang="en">A collision involving other road vehicle in- in Transport transport is a crash that is both an other-road- vehicle crash and a collision crash in which the first harmful event is the collision of two or more other road vehicles in-transport.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.7</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;CollisioninvolvingParkedMotor">
 		<rdfs:subClassOf rdf:resource="&auto-ti;CollisionCrash"/>
-		<rdfs:label xml:lang="en">Collision involving Parked Motor</rdfs:label>
+		<rdfs:label xml:lang="en">collision involving parked motor</rdfs:label>
 		<skos:definition xml:lang="en">A crash in which the first harmful event is the striking of a motor vehicle not in- transport (See 2.2.34.1) by a road vehicle in- transport (See 2.2.34).</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.8</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;CollisioninvolvingPedalcycle">
 		<rdfs:subClassOf rdf:resource="&auto-ti;CollisionCrash"/>
-		<rdfs:label xml:lang="en">Collision involving Pedalcycle</rdfs:label>
+		<rdfs:label xml:lang="en">collision involving pedalcycle</rdfs:label>
 		<skos:definition xml:lang="en">A crash that is both a motor vehicle crash and a collision crash in which the first harmful event is the collision of a pedalcycle in-transport and a motor vehicle in- transport.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.10</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;CollisioninvolvingPedestrianCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;CollisionCrash"/>
-		<rdfs:label xml:lang="en">Collision involving Pedestrian Crash</rdfs:label>
+		<rdfs:label xml:lang="en">collision involving pedestrian crash</rdfs:label>
 		<skos:definition xml:lang="en">A collision crash in which the first harmful event is the collision of a pedestrian and a road vehicle in- transport.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.5</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;CollisioninvolvingRailwayVehicle">
 		<rdfs:subClassOf rdf:resource="&auto-ti;CollisionCrash"/>
-		<rdfs:label xml:lang="en">Collision involving Railway Vehicle</rdfs:label>
+		<rdfs:label xml:lang="en">collision involving railway vehicle</rdfs:label>
 		<skos:definition xml:lang="en">A collision crash in which the first harmful event is the collision of a road vehicle in-transport and a railway vehicle.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.9</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;Commerce">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Process"/>
-		<rdfs:label xml:lang="en">Commerce</rdfs:label>
+		<rdfs:label xml:lang="en">commerce</rdfs:label>
 		<skos:definition xml:lang="en">Any trade, traffic or transportation of commodities or persons for financial consideration or exchange, or in the furtherance of a business enterprise.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">ANSI D.16-2017, section 2.9.1</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -218,14 +218,14 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 	
 	<owl:Class rdf:about="&auto-ti;Crash">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Process"/>
-		<rdfs:label xml:lang="en">Crash</rdfs:label>
+		<rdfs:label xml:lang="en">crash</rdfs:label>
 		<skos:definition xml:lang="en">An unstabilized situation which includes at least one harmful event.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.6</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;Damage">
 		<rdfs:subClassOf rdf:resource="&auto-ti;HarmfulEvent"/>
-		<rdfs:label xml:lang="en">Damage</rdfs:label>
+		<rdfs:label xml:lang="en">damage</rdfs:label>
 		<skos:definition xml:lang="en">A harm to property that reduces the monetary value of that property.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.3.7</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -260,7 +260,7 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 	
 	<owl:Class rdf:about="&auto-ti;DeliberateIntent">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Process"/>
-		<rdfs:label xml:lang="en">Deliberate Intent</rdfs:label>
+		<rdfs:label xml:lang="en">deliberate intent</rdfs:label>
 		<skos:definition xml:lang="en">The classification given to the cause of an event which occurs when a person acts deliberately to cause the event or deliberately refrains from prudent acts which would prevent occurrence of the event.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.2</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -276,7 +276,7 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 	
 	<owl:Class rdf:about="&auto-ti;DisablingDamage">
 		<rdfs:subClassOf rdf:resource="&auto-ti;RoadVehicleDamage"/>
-		<rdfs:label xml:lang="en">Disabling damage</rdfs:label>
+		<rdfs:label xml:lang="en">disabling damage</rdfs:label>
 		<skos:definition xml:lang="en">A road vehicle damage which precludes departure of the vehicle from the scene of the crash in its usual operating manner by daylight after simple repairs.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.3.11</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -296,14 +296,14 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 	
 	<owl:Class rdf:about="&auto-ti;DrivewayAccess-RelatedCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Driveway Access-Related Crash</rdfs:label>
+		<rdfs:label xml:lang="en">driveway access-related crash</rdfs:label>
 		<skos:definition xml:lang="en">A traffic crash that (1) occurs adjacent to a driveway, (2) is not a driveway access crash and (3) results from an activity, behavior or control related to the movement of traffic units onto or out of a driveway.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.7.4.1</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;DrivewayaccessCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Driveway access Crash</rdfs:label>
+		<rdfs:label xml:lang="en">driveway access crash</rdfs:label>
 		<rdfs:comment xml:lang="en">This requires at least one traffic unit (vehicle, pedalcyclist or pedestrian) to be physically on the driveway access within the trafficway.</rdfs:comment>
 		<skos:definition xml:lang="en">A traffic crash in which the first harmful event occurs on a driveway access (See 2.5.9) or involves a road vehicle entering or leaving another roadway by way of a driveway access (See Figure 4).</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.7.4</fibo-fnd-utl-av:adaptedFrom>
@@ -325,7 +325,7 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 	
 	<owl:Class rdf:about="&auto-ti;Entrance-ExitRamp-relatedCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Entrance/Exit Ramp-related Crash</rdfs:label>
+		<rdfs:label xml:lang="en">entrance/exit ramp-related crash</rdfs:label>
 		<rdfs:comment xml:lang="en">If the first harmful event occurs in the intersection of a ramp and a surface roadway, then it would be classified under 2.7.3 – at-intersection crash.</rdfs:comment>
 		<skos:definition xml:lang="en">A traffic crash in which the first harmful event occurs off the entrance/exit ramp roadway, but is related to the use of or entry onto the ramp.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.7.9.1</fibo-fnd-utl-av:adaptedFrom>
@@ -333,7 +333,7 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 	
 	<owl:Class rdf:about="&auto-ti;Entrance-ExitRampCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Entrance/Exit Ramp Crash</rdfs:label>
+		<rdfs:label xml:lang="en">entrance/exit ramp crash</rdfs:label>
 		<rdfs:comment xml:lang="en">This would include all the areas between the gore and termination of the entrance/exit ramp.</rdfs:comment>
 		<skos:definition xml:lang="en">A traffic crash in which the first harmful event occurs on an entrance or exit ramp roadway and is not the result of an activity, behavior or control related to the movement of traffic units through an intersection.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.7.9</fibo-fnd-utl-av:adaptedFrom>
@@ -361,14 +361,14 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 	
 	<owl:Class rdf:about="&auto-ti;FatalCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;InjuryCrash"/>
-		<rdfs:label xml:lang="en">Fatal Crash</rdfs:label>
+		<rdfs:label xml:lang="en">fatal crash</rdfs:label>
 		<skos:definition xml:lang="en">Any injury crash that results in one or more fatal injuries.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.27</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;FatalInjury">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Injury"/>
-		<rdfs:label xml:lang="en">Fatal Injury</rdfs:label>
+		<rdfs:label xml:lang="en">fatal injury</rdfs:label>
 		<rdfs:comment xml:lang="en">If the person did not die at the scene but died within 30 days of the motor vehicle crash in which the injury occurred, the injury classification should be changed from the attribute previously assigned to the attribute &quot;Fatal injury&quot; 2.3.3 Fatality A fatality is any death resulting from a fatal injury (See 3.1.3).</rdfs:comment>
 		<skos:definition xml:lang="en">Any injury that results in death within 30 days after the motor vehicle crash in which the injury occurred.</skos:definition>
 		<fibo-fnd-utl-av:abbreviation xml:lang="en">K</fibo-fnd-utl-av:abbreviation>
@@ -377,7 +377,7 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 	
 	<owl:Class rdf:about="&auto-ti;Fatality">
 		<rdfs:subClassOf rdf:resource="&auto-ti;HarmfulEvent"/>
-		<rdfs:label xml:lang="en">Fatality</rdfs:label>
+		<rdfs:label xml:lang="en">fatality</rdfs:label>
 		<skos:definition xml:lang="en">Any death resulting from a fatal injury.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 3.1.3.</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -398,21 +398,21 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 	
 	<owl:Class rdf:about="&auto-ti;FunctionalDamage">
 		<rdfs:subClassOf rdf:resource="&auto-ti;RoadVehicleDamage"/>
-		<rdfs:label xml:lang="en">Functional Damage</rdfs:label>
+		<rdfs:label xml:lang="en">functional damage</rdfs:label>
 		<skos:definition xml:lang="en">Any road vehicle damage, other than disabling damage, which affects operation of the road vehicle or its parts.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.3.12</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;HarmfulEvent">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Process"/>
-		<rdfs:label xml:lang="en">Harmful Event</rdfs:label>
+		<rdfs:label xml:lang="en">harmful event</rdfs:label>
 		<skos:definition xml:lang="en">An occurrence of injury or damage.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.1</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;HazardousMaterial">
 		<rdfs:subClassOf rdf:resource="&auto-mo;MaterialEntity"/>
-		<rdfs:label xml:lang="en">Hazardous Material</rdfs:label>
+		<rdfs:label xml:lang="en">hazardous material</rdfs:label>
 		<rdfs:comment xml:lang="en">Any motor vehicle transporting quantities of hazardous materials in quantities above the thresholds established by the U.S. Department of Transportation, or other authorized entity, is required to display a hazardous materials placard.</rdfs:comment>
 		<skos:definition xml:lang="en">A substance or material which has been designated by the U.S. Department of Transportation, or other authorizing entity, as capable of posing an unreasonable risk to health, safety and property when transported in commerce.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.9.5</fibo-fnd-utl-av:adaptedFrom>
@@ -420,7 +420,7 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 	
 	<owl:Class rdf:about="&auto-ti;HazardousMaterialsPlacard">
 		<rdfs:subClassOf rdf:resource="&auto-mo;MaterialEntity"/>
-		<rdfs:label xml:lang="en">Hazardous Materials Placard</rdfs:label>
+		<rdfs:label xml:lang="en">hazardous materials placard</rdfs:label>
 		<rdfs:comment xml:lang="en">This placard identifies the hazard class division number, 4-digit hazardous material identification number, or name of the hazardous material being transported.</rdfs:comment>
 		<skos:definition xml:lang="en">A sign required to be affixed to any motor vehicle transporting quantities of hazardous materials in quantities above the thresholds established by the U.S. Department of Transportation, or other authorized entity.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.9.5.1</fibo-fnd-utl-av:adaptedFrom>
@@ -428,7 +428,7 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 	
 	<owl:Class rdf:about="&auto-ti;In-transport">
 		<rdfs:subClassOf rdf:resource="&auto-ti;State"/>
-		<rdfs:label xml:lang="en">In-transport</rdfs:label>
+		<rdfs:label xml:lang="en">in-transport</rdfs:label>
 		<rdfs:comment xml:lang="en">When applied to motor vehicles, “ in-transport &apos;&apos; means on a roadway or in motion within or outside the trafficway. A transport vehicle which is also a working motor vehicle at the time of the unstabilized situation is not `` in-transport. &apos;&apos; In roadway lanes used for travel during some periods and for parking during other periods, a parked motor vehicle should be considered to be in-transport during periods when parking is forbidden.</rdfs:comment>
 		<skos:definition xml:lang="en">The state or condition of a transport vehicle which is in motion or within the portion of a transport way ordinarily used by similar transport vehicles.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.34</fibo-fnd-utl-av:adaptedFrom>
@@ -436,14 +436,14 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 	
 	<owl:Class rdf:about="&auto-ti;Injury">
 		<rdfs:subClassOf rdf:resource="&auto-ti;HarmfulEvent"/>
-		<rdfs:label xml:lang="en">Injury</rdfs:label>
+		<rdfs:label xml:lang="en">injury</rdfs:label>
 		<skos:definition xml:lang="en">A bodily harm to a person.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.3.1</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;InjuryCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Injury Crash</rdfs:label>
+		<rdfs:label xml:lang="en">injury crash</rdfs:label>
 		<skos:definition xml:lang="en">Any road vehicle crash that results in one or more injuries.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.26</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -462,49 +462,49 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 	
 	<owl:Class rdf:about="&auto-ti;InterchangeCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Interchange Crash</rdfs:label>
+		<rdfs:label xml:lang="en">interchange crash</rdfs:label>
 		<skos:definition xml:lang="en">A traffic crash in which the first harmful event occurs within boundaries which include all ramps of auxiliary roadways and include each roadway entering or leaving the interchange to a point 30 meters (100 feet) beyond the gore or curb return at the outermost ramp connection. Interchange crashes may include at-intersection crashes, intersection- related crashes, driveway access crashes or nonjunction crashes.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.7.7</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;Intersection-relatedCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Intersection-related Crash</rdfs:label>
+		<rdfs:label xml:lang="en">intersection-related crash</rdfs:label>
 		<skos:definition xml:lang="en">A traffic crash in which the first harmful event (1) occurs on an approach to or exit from an intersection and (2) results from an activity, behavior or control related to the movement of traffic units through the intersection.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.7.5</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;InterstateCommerce">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Commerce"/>
-		<rdfs:label xml:lang="en">Interstate Commerce</rdfs:label>
+		<rdfs:label xml:lang="en">interstate commerce</rdfs:label>
 		<skos:definition xml:lang="en">A commerce in the United States where the transit between the points of origin and termination does not occur entirely within the borders of the state of origin.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.9.2</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;InterstateSystem">
 		<rdfs:subClassOf rdf:resource="&auto-mo;MaterialEntity"/>
-		<rdfs:label xml:lang="en">Interstate System</rdfs:label>
+		<rdfs:label xml:lang="en">interstate system</rdfs:label>
 		<skos:definition xml:lang="en">The National System of Interstate and Defense Highways as defined in Section 101, Title 23, United States Code.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.3</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;IntrastateCommerce">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Commerce"/>
-		<rdfs:label xml:lang="en">Intrastate Commerce</rdfs:label>
+		<rdfs:label xml:lang="en">intrastate commerce</rdfs:label>
 		<skos:definition xml:lang="en">A commerce in any state where the transit between the points of origin and termination occurs entirely within the borders of the state of origin.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.9.3</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;JackknifeCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Jackknife Crash</rdfs:label>
+		<rdfs:label xml:lang="en">jackknife crash</rdfs:label>
 		<skos:definition xml:lang="en">A noncollision crash in which the first harmful event results from unintended contact between any two units of a multi-unit road vehicle such as a truck combination.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.4</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;LegalIntervention">
 		<rdfs:subClassOf rdf:resource="&auto-ti;DeliberateIntent"/>
-		<rdfs:label xml:lang="en">Legal Intervention</rdfs:label>
+		<rdfs:label xml:lang="en">legal intervention</rdfs:label>
 		<skos:definition xml:lang="en">A category of deliberate intent in which the person who acts or refrains from acting is a law-enforcing agent or other official.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.3</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -518,33 +518,33 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 	
 	<owl:Class rdf:about="&auto-ti;MotorVehicleCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Motor Vehicle Crash</rdfs:label>
+		<rdfs:label xml:lang="en">motor vehicle crash</rdfs:label>
 		<skos:definition xml:lang="en">A transport crash that (1) involves a motor vehicle in-transport, (2) is not an aircraft accident or watercraft accident, and (3) does not include any harmful event involving a railway train in-transport prior to involvement of a motor vehicle in-transport.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.12</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;MotorVehicleDamage">
 		<rdfs:subClassOf rdf:resource="&auto-ti;RoadVehicleDamage"/>
-		<rdfs:label xml:lang="en">Motor Vehicle Damage</rdfs:label>
+		<rdfs:label xml:lang="en">motor vehicle damage</rdfs:label>
 		<skos:definition xml:lang="en">A road vehicle damage to a motor vehicle.</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;MotorVehicleNontrafficCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Motor Vehicle Nontraffic Crash</rdfs:label>
+		<rdfs:label xml:lang="en">motor vehicle nontraffic crash</rdfs:label>
 		<skos:definition xml:lang="en">A motor vehicle crash which is a nontraffic crash.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.23</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;MotorVehicleTrafficCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Motor Vehicle Traffic Crash</rdfs:label>
+		<rdfs:label xml:lang="en">motor vehicle traffic crash</rdfs:label>
 		<skos:definition xml:lang="en">A motor vehicle cash which is a traffic crash.</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;MotorcycleConversionKit">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Property"/>
-		<rdfs:label xml:lang="en">Motorcycle Conversion Kit</rdfs:label>
+		<rdfs:label xml:lang="en">motorcycle conversion kit</rdfs:label>
 		<rdfs:comment xml:lang="en">An original definition from ANSI D.16-2017:
 A motorcycle conversion assembly makes it possible to convert a conventional two-wheel motorcycle into a motorcycle having the look and the stability of a tricycle-type vehicle, which improves stability and increases ease of operation.</rdfs:comment>
 		<skos:definition xml:lang="en">A device that makes it possible to convert a conventional two-wheel motorcycle into a motorcycle having the look and the stability of a tricycle-type vehicle, which improves stability and increases ease of operation.</skos:definition>
@@ -570,7 +570,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:Class rdf:about="&auto-ti;NoApparentInjury">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Injury"/>
-		<rdfs:label xml:lang="en">No Apparent Injury (O)</rdfs:label>
+		<rdfs:label xml:lang="en">no apparent injury (O)</rdfs:label>
 		<skos:definition xml:lang="en">A situation where there is no reason to believe that the person received any bodily harm from the motor vehicle crash. There is no physical evidence of injury and the person does not report any change in normal function.</skos:definition>
 		<fibo-fnd-utl-av:abbreviation xml:lang="en">O</fibo-fnd-utl-av:abbreviation>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.3.6.1</fibo-fnd-utl-av:adaptedFrom>
@@ -578,7 +578,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:Class rdf:about="&auto-ti;NoApparentInjuryCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Injury"/>
-		<rdfs:label xml:lang="en">No Apparent Injury Crash</rdfs:label>
+		<rdfs:label xml:lang="en">no apparent injury crash</rdfs:label>
 		<rdfs:comment xml:lang="en">A no apparent injury crash is also called a property damage only crash.</rdfs:comment>
 		<skos:definition xml:lang="en">Any road vehicle crash other than an injury crash.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.29</fibo-fnd-utl-av:adaptedFrom>
@@ -594,14 +594,14 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:Class rdf:about="&auto-ti;Non-fatalInjuryCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;InjuryCrash"/>
-		<rdfs:label xml:lang="en">Non-fatal Injury Crash</rdfs:label>
+		<rdfs:label xml:lang="en">non-fatal injury crash</rdfs:label>
 		<skos:definition xml:lang="en">Any injury crash other than a fatal crash.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">ANSI D.16-2017, section 2.4.28</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;Non-junctionCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Non-junction Crash</rdfs:label>
+		<rdfs:label xml:lang="en">non-junction crash</rdfs:label>
 		<skos:definition xml:lang="en">A road vehicle crash that is not an at-intersection crash, a driveway access crash or an intersection-related crash.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.7.6</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -615,14 +615,14 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:Class rdf:about="&auto-ti;Non-trafficCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Non-traffic Crash</rdfs:label>
+		<rdfs:label xml:lang="en">non-traffic crash</rdfs:label>
 		<skos:definition xml:lang="en">A road vehicle crash which is not a traffic crash.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.19</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;NoncollisionCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Noncollision Crash</rdfs:label>
+		<rdfs:label xml:lang="en">noncollision crash</rdfs:label>
 		<skos:definition xml:lang="en">Any road vehicle crash other than a collision crash.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.3</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -635,7 +635,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:Class rdf:about="&auto-ti;NotIn-transport">
 		<rdfs:subClassOf rdf:resource="&auto-ti;State"/>
-		<rdfs:label xml:lang="en">Not In-transport</rdfs:label>
+		<rdfs:label xml:lang="en">not in-transport</rdfs:label>
 		<rdfs:comment>ANSI D.16-2017, section 2.2.34.1</rdfs:comment>
 		<rdfs:comment>Original definition from ANSI D.16-2017: any transport vehicle which is not &quot;in-transport.&quot;</rdfs:comment>
 		<skos:definition xml:lang="en">The state or condition of a transport vehicle which is not &quot;in-transport.&quot;</skos:definition>
@@ -656,41 +656,41 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:Class rdf:about="&auto-ti;Off-roadwayCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Off-roadway Crash</rdfs:label>
+		<rdfs:label xml:lang="en">off-roadway crash</rdfs:label>
 		<skos:definition xml:lang="en">Any road vehicle crash other than an on-roadway crash.</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;On-roadwayCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">On-roadway Crash</rdfs:label>
+		<rdfs:label xml:lang="en">on-roadway crash</rdfs:label>
 		<skos:definition xml:lang="en">(1) a collision crash in which the initial point of contact between colliding units in the first harmful event is within a roadway or (2) a non-collision crash in which the road vehicle involved was partly or entirely on the roadway at the time of the first harmful event.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.7.1</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;Other-road-vehicleCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Other-road-vehicle Crash</rdfs:label>
+		<rdfs:label xml:lang="en">other-road-vehicle crash</rdfs:label>
 		<skos:definition xml:lang="en">A transport crash that (1) involves an other road vehicle in- transport and (2) is not an aircraft accident, watercraft accident, motor vehicle crash or railway accident.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.14</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;Other-road-vehicleDamage">
 		<rdfs:subClassOf rdf:resource="&auto-ti;RoadVehicleDamage"/>
-		<rdfs:label xml:lang="en">Other-road-vehicle Damage</rdfs:label>
+		<rdfs:label xml:lang="en">other-road-vehicle damage</rdfs:label>
 		<skos:definition xml:lang="en">A road vehicle damage to an other road vehicle.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.3.10</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;Other-road-vehicleNontrafficCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Other-road-vehicle Nontraffic Crash</rdfs:label>
+		<rdfs:label xml:lang="en">other-road-vehicle nontraffic crash</rdfs:label>
 		<skos:definition xml:lang="en">An other-road-vehicle crash which is a nontraffic crash.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.25</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;Other-road-vehicleTrafficCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Other-road-vehicle Traffic Crash</rdfs:label>
+		<rdfs:label xml:lang="en">other-road-vehicle traffic crash</rdfs:label>
 		<skos:definition xml:lang="en">An other- road-vehicle crash which is a traffic crash.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.24</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -703,7 +703,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:Class rdf:about="&auto-ti;OverturningCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Overturning Crash</rdfs:label>
+		<rdfs:label xml:lang="en">overturning crash</rdfs:label>
 		<skos:definition xml:lang="en">A road vehicle crash in which the first harmful event is the overturning of a road vehicle.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.6.1</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -717,7 +717,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:Class rdf:about="&auto-ti;PedalcycleCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">PedalcycleCrash</rdfs:label>
+		<rdfs:label xml:lang="en">pedalcycle crash</rdfs:label>
 		<skos:definition xml:lang="en">An other-road-vehicle crash that (1) involves a pedalcycle in-transport and (2) is not a streetcar crash.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.16</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -743,14 +743,14 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:Class rdf:about="&auto-ti;PersonalConveyance">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Property"/>
-		<rdfs:label xml:lang="en">Personal Conveyance</rdfs:label>
+		<rdfs:label xml:lang="en">personal conveyance</rdfs:label>
 		<skos:definition xml:lang="en">A device, other than a transport device, used by a pedestrian (See 2.2.36) for personal mobility assistance or recreation. These devices can be motorized or human powered, but not propelled by pedaling.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.6.1</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;PolicePursuit">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Process"/>
-		<rdfs:label xml:lang="en">Police Pursuit</rdfs:label>
+		<rdfs:label xml:lang="en">police pursuit</rdfs:label>
 		<rdfs:comment xml:lang="en">This notice needs to be either through the use of visual or audible emergency signals, including alternating flashing headlights, or a combination of emergency devices. A pursuit is terminated when the motorist stops, or when the attempt to apprehend is discontinued.</rdfs:comment>
 		<skos:definition xml:lang="en">An event that is initiated when a law enforcement officer, operating an authorized emergency vehicle, gives notice to stop to a motorist the officer is attempting to contact, and that motorist fails to comply with the signal by either maintaining his/her speed, increasing speed, or taking other evasive action to elude the officer &apos;s continued attempts to stop the motorist.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.3.1</fibo-fnd-utl-av:adaptedFrom>
@@ -758,7 +758,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:Class rdf:about="&auto-ti;PossibleInjury">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Injury"/>
-		<rdfs:label xml:lang="en">PossibleInjury</rdfs:label>
+		<rdfs:label xml:lang="en">possible injury</rdfs:label>
 		<rdfs:comment xml:lang="en">Possible injuries are those that are reported by the person or are indicated by his/her behavior, but no wounds or injuries are readily evident, and includes : Momentary loss of consciousness or claim of injury, limping, or complaint of pain or nausea.</rdfs:comment>
 		<skos:definition xml:lang="en">Any injury reported or claimed which is not a fatal, suspected serious, or suspected minor injury.</skos:definition>
 		<fibo-fnd-utl-av:abbreviation xml:lang="en">C</fibo-fnd-utl-av:abbreviation>
@@ -766,7 +766,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;Property">
-		<rdfs:label xml:lang="en">Property</rdfs:label>
+		<rdfs:label xml:lang="en">property</rdfs:label>
 		<owl:equivalentClass>
 			<owl:Class>
 				<owl:intersectionOf rdf:parseType="Collection">
@@ -784,41 +784,41 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:Class rdf:about="&auto-ti;PropertyDamageOnlyCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;CollisionCrash"/>
-		<rdfs:label xml:lang="en">Property Damage Only Crash</rdfs:label>
+		<rdfs:label xml:lang="en">property damage only crash</rdfs:label>
 		<skos:definition xml:lang="en">A no apparent injury crash.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.30</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;RailwayAccident">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Process"/>
-		<rdfs:label xml:lang="en">Railway Accident</rdfs:label>
+		<rdfs:label xml:lang="en">railway accident</rdfs:label>
 		<skos:definition xml:lang="en">A transport accident that (1) involves a railway train in-transport and (2) is not an aircraft accident, watercraft accident or motor vehicle crash.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.13</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;RoadVehicleCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Road Vehicle Crash</rdfs:label>
+		<rdfs:label xml:lang="en">road vehicle crash</rdfs:label>
 		<skos:definition xml:lang="en">A transport crash that is either a motor vehicle crash or an other-road vehicle crash.</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;RoadVehicleDamage">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Damage"/>
-		<rdfs:label xml:lang="en">Road Vehicle Damage</rdfs:label>
+		<rdfs:label xml:lang="en">road vehicle damage</rdfs:label>
 		<skos:definition xml:lang="en">A damage to a road vehicle.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.3.8</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;RoadVehicleNontrafficCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Road Vehicle Nontraffic Crash</rdfs:label>
+		<rdfs:label xml:lang="en">road vehicle nontraffic crash</rdfs:label>
 		<skos:definition xml:lang="en">A nontraffic crash.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.21</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;RoadVehicleTrafficCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Road Vehicle Traffic Crash</rdfs:label>
+		<rdfs:label xml:lang="en">road vehicle traffic crash</rdfs:label>
 		<skos:definition xml:lang="en">A traffic crash.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.20</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -833,7 +833,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:Class rdf:about="&auto-ti;SchoolBusCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">School Bus Crash</rdfs:label>
+		<rdfs:label xml:lang="en">school bus crash</rdfs:label>
 		<skos:definition xml:lang="en">(1) a motor vehicle crash in which a school bus, with or without a pupil on board, is involved directly as a contact vehicle, or (2) a motor vehicle crash or an other-road- vehicle crash in which a school bus, with or without a pupil on board, is involved indirectly as a noncontact vehicle.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.8.2</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -852,6 +852,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:Class rdf:about="&auto-ti;State">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Process"/>
+		<rdfs:label xml:lang="en">state</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;StaticObject">
@@ -862,14 +863,14 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:Class rdf:about="&auto-ti;StreetcarCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Streetcar Crash</rdfs:label>
+		<rdfs:label xml:lang="en">streetcar crash</rdfs:label>
 		<skos:definition xml:lang="en">An other-road-vehicle crash that involves a streetcar in-transport.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.15</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;SuspectedMinorInjury">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Injury"/>
-		<rdfs:label xml:lang="en">Suspected Minor Injury</rdfs:label>
+		<rdfs:label xml:lang="en">suspected minor injury</rdfs:label>
 		<skos:definition xml:lang="en">Any injury that is evident at the scene of the crash, other than fatal or serious injuries, including lump on the head, abrasions, bruises, minor lacerations (cuts on the skin surface with minimal bleeding and no exposure of deeper tissue /muscles).</skos:definition>
 		<fibo-fnd-utl-av:abbreviation xml:lang="en">B</fibo-fnd-utl-av:abbreviation>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.3.5</fibo-fnd-utl-av:adaptedFrom>
@@ -877,7 +878,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:Class rdf:about="&auto-ti;SuspectedSeriousInjury">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Injury"/>
-		<rdfs:label xml:lang="en">Suspected Serious Injury</rdfs:label>
+		<rdfs:label xml:lang="en">suspected serious injury</rdfs:label>
 		<skos:definition xml:lang="en">Any injury other than fatal which results in one or more of the following : Severe laceration resulting in exposure of underlying tissues /muscle /organs or resulting in significant loss of blood; broken or distorted extremity (arm or leg); crush injuries; suspected skull, chest, or abdominal injury other than bruises or minor lacerations; significant burns (second and third degree burns over 10 % or more of the body); unconsciousness when taken from the crash scene, or paralysis.</skos:definition>
 		<fibo-fnd-utl-av:abbreviation xml:lang="en">A</fibo-fnd-utl-av:abbreviation>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.3.4</fibo-fnd-utl-av:adaptedFrom>
@@ -903,7 +904,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:Class rdf:about="&auto-ti;TrafficCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Traffic Crash</rdfs:label>
+		<rdfs:label xml:lang="en">traffic crash</rdfs:label>
 		<skos:definition xml:lang="en">A road vehicle crash in which (1) the unstabilized situation originates on a trafficway or (2) a harmful event occurs on a trafficway.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.18</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -995,21 +996,21 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:Class rdf:about="&auto-ti;TransportCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Transport Crash</rdfs:label>
+		<rdfs:label xml:lang="en">transport crash</rdfs:label>
 		<skos:definition xml:lang="en">A crash (1) that involves a transport vehicle in-transport, (2) in which the first harmful event is not produced by the discharge of a firearm or explosive device, and (3) that does not directly result from a cataclysm where the timing is such that the cataclysm is occurring at the time of the accident or crash.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.9</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;TransportDevice">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Property"/>
-		<rdfs:label xml:lang="en">Transport Device</rdfs:label>
+		<rdfs:label xml:lang="en">transport device</rdfs:label>
 		<skos:definition xml:lang="en">Any device designed primarily for moving persons or property along with the device itself from one place to another, except (1) a weapon, (2) a device used primarily within the confines of a building and its premises, or (3) a personal conveyance.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.1.3</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;UnstabilizedSituation">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Process"/>
-		<rdfs:label xml:lang="en">Unstabilized Situation</rdfs:label>
+		<rdfs:label xml:lang="en">unstabilized situation</rdfs:label>
 		<rdfs:comment xml:lang="en">It originates when control is lost and terminates when control is regained or, in the absence of persons who are able to regain control, when all persons and propertyare at rest.</rdfs:comment>
 		<skos:definition xml:lang="en">A set of events not under human control.</skos:definition>
 	</owl:Class>
@@ -1036,7 +1037,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:Class rdf:about="&auto-ti;WatercraftAccident">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Process"/>
-		<rdfs:label xml:lang="en">Watercraft Accident</rdfs:label>
+		<rdfs:label xml:lang="en">watercraft accident</rdfs:label>
 		<skos:definition xml:lang="en">A transport accident if it (1) involves a watercraft in-transport and (2) is not an aircraft accident.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.11</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -1049,7 +1050,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:Class rdf:about="&auto-ti;WorkZoneCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
-		<rdfs:label xml:lang="en">Work Zone Crash</rdfs:label>
+		<rdfs:label xml:lang="en">work zone crash</rdfs:label>
 		<skos:definition xml:lang="en">A motor vehicle traffic crash in which the first harmful event occurs within the boundaries of a work zone or on an approach to or exit from a work zone, resulting from an activity, behavior or control related to the movement of the traffic units through the work zone.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.7.8</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -1058,7 +1059,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:ObjectProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ti;grossCombinationWeightRating">
-		<rdfs:label xml:lang="en">Gross Combination Weight Rating</rdfs:label>
+		<rdfs:label xml:lang="en">gross combination weight rating</rdfs:label>
 		<rdfs:comment xml:lang="en">This is for truck tractors and single-unit trucks pulling a trailer (s). GCWR is the sum of the gross vehicle weight ratings (GVWR) of all units; power unit and its trailer (s).</rdfs:comment>
 		<skos:definition xml:lang="en">The value specified by the manufacturer as the recommended maximum loaded weight of a combination (articulated) motor vehicle.</skos:definition>
 		<fibo-fnd-utl-av:abbreviation xml:lang="en">GCWR</fibo-fnd-utl-av:abbreviation>
@@ -1066,14 +1067,14 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ti;grossVehicleWeight">
-		<rdfs:label xml:lang="en">Gross Vehicle Weight</rdfs:label>
+		<rdfs:label xml:lang="en">gross vehicle weight</rdfs:label>
 		<skos:definition xml:lang="en">The actual weight of a road vehicle including the weight of the road vehicle, its load of persons and property, and all added equipment.</skos:definition>
 		<fibo-fnd-utl-av:abbreviation xml:lang="en">GVW</fibo-fnd-utl-av:abbreviation>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.22</fibo-fnd-utl-av:adaptedFrom>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ti;grossVehicleWeightRating">
-		<rdfs:label xml:lang="en">Gross Vehicle Weight Rating</rdfs:label>
+		<rdfs:label xml:lang="en">gross vehicle weight rating</rdfs:label>
 		<rdfs:comment xml:lang="en">This rating includes the maximum rated capacity of a vehicle, including the base vehicle, mounted equipment and any cargo and passengers. Most of the time, GVWR is the sum of the maximum rated capacity of the axles of the vehicle.</rdfs:comment>
 		<skos:definition xml:lang="en">The value specified by the manufacturer as the recommended maximum loaded weight of a single motor vehicle.</skos:definition>
 		<fibo-fnd-utl-av:abbreviation xml:lang="en">GVWR</fibo-fnd-utl-av:abbreviation>
@@ -1125,7 +1126,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:ObjectProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ti;totalLanesInRoadway">
-		<rdfs:label xml:lang="en">Total Lanes in Roadway</rdfs:label>
+		<rdfs:label xml:lang="en">total lanes in roadway</rdfs:label>
 		<rdfs:comment xml:lang="en">Original definition:
 The total number of lanes in a roadway is collected for each vehicle, on the roadway on which that vehicle was traveling. Through lanes also includes shared through/turn lanes but excludes, turn-only lanes, auxiliary lanes, such as collector-distributor lanes, weaving lanes, frontage road lanes, parking lanes, acceleration/deceleration lanes, toll collection lanes and truck climbing lanes. Total lanes are collected in two parts as total through lanes and total auxiliary lanes.</rdfs:comment>
 		<skos:definition xml:lang="en">A number of through lanes of the roadway.</skos:definition>
