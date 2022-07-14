@@ -257,7 +257,6 @@ It contains many classes and properties extracted from:
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo;QuantitativeValueInteger">
-		<rdfs:label xml:lang="en">quantitative value tineger</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-mo;Role">
@@ -286,6 +285,7 @@ It contains many classes and properties extracted from:
 	
 	<owl:DatatypeProperty rdf:about="&auto-mo;hasUnitOfMeasurement">
 		<rdfs:label>has unit of measurement</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-mo;QuantitativeValue"/>
 	</owl:DatatypeProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-mo;valueReference">
@@ -3271,10 +3271,7 @@ Note: This property is symmetric, i.e., if A is compatible with B, then B is als
 	<owl:ObjectProperty rdf:about="&auto-vc;currentOwner">
 		<rdfs:subPropertyOf rdf:resource="&auto-vc;owner"/>
 		<rdfs:label xml:lang="en">current owner</rdfs:label>
-		<rdfs:domain rdf:resource="&auto-vc;OwnershipInfo"/>
-		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-		<rdfs:range rdf:resource="&auto-vc;BusinessEntity"/>
 		<skos:definition xml:lang="en">This property points to the current owner of the vehicle.</skos:definition>
 	</owl:ObjectProperty>
 	
@@ -3325,9 +3322,7 @@ Note: This property is symmetric, i.e., if A is compatible with B, then B is als
 	<owl:ObjectProperty rdf:about="&auto-vc;default">
 		<rdfs:subPropertyOf rdf:resource="&auto-vc;availableChoice"/>
 		<rdfs:label xml:lang="en">default</rdfs:label>
-		<rdfs:domain rdf:resource="&auto-vc;SpecItemCollection"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
-		<rdfs:range rdf:resource="&auto-vc;ChoiceOrComponent"/>
 		<skos:definition xml:lang="en">This property links the default Choice or Component to a Spec Item. 
 Since it is defined a sub-property of coo:availableChoice, the default choice is automatically part of the available choices.</skos:definition>
 	</owl:ObjectProperty>
@@ -3427,6 +3422,7 @@ Typical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ for cubic in
 	<owl:DatatypeProperty rdf:about="&auto-vc;engineName">
 		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
 		<rdfs:label xml:lang="en">engine name</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-mo;Object"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition xml:lang="en">A short text indicating the engine(s) of the vehicle</skos:definition>
@@ -3624,6 +3620,7 @@ For two-stroke mixtures, use vso:TwoStrokeMixture.</skos:definition>
 	<owl:ObjectProperty rdf:about="&auto-vc;gearbox">
 		<rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
 		<rdfs:label xml:lang="en">gearbox</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<rdfs:range rdf:resource="&auto-vc;GearboxTypeValue"/>
 		<rdfs:seeAlso rdf:resource="http://dbpedia.org/page/Transmission_%28mechanics%29"/>
@@ -3634,6 +3631,7 @@ For two-stroke mixtures, use vso:TwoStrokeMixture.</skos:definition>
 	<owl:DatatypeProperty rdf:about="&auto-vc;gearboxTypeId">
 		<rdfs:label xml:lang="en">gearbox type id</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&xsd;string"/>
 		<skos:definition xml:lang="en">The Volkswagen-specific gearbox type ID</skos:definition>
 	</owl:DatatypeProperty>
 	
@@ -3681,6 +3679,7 @@ For two-stroke mixtures, use vso:TwoStrokeMixture.</skos:definition>
 		<rdfs:label xml:lang="en">has ID</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/coo/ns#"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&xsd;string"/>
 		<skos:definition xml:lang="en">An annotation property that can be used to attach element identifiers from XML schemas for the corresponding XML data or schema</skos:definition>
 		<skos:definition xml:lang="en">An annotation property that can be used to attach element identifiers from XML schemas for the corresponding XML data or schema.</skos:definition>
 	</owl:DatatypeProperty>
@@ -3711,6 +3710,7 @@ For two-stroke mixtures, use vso:TwoStrokeMixture.</skos:definition>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc;hasOtherAxleWidth">
 		<rdfs:label xml:lang="en">has other axle width</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents the width of the other steering axle of a vehicle measured in mm.</skos:definition>
 	</owl:DatatypeProperty>
@@ -3741,13 +3741,15 @@ For two-stroke mixtures, use vso:TwoStrokeMixture.</skos:definition>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc;hasSteeringAxleWidth">
 		<rdfs:label xml:lang="en">has steering axle width</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents the width of the steering axle of a vehicle measured in mm.</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc;hasTotalNewRegistrations">
 		<rdfs:label xml:lang="en">has total new registrations</rdfs:label>
-		<rdfs:range rdf:resource="&rdfs;Literal"/>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
+		<rdfs:range rdf:resource="&xsd;int"/>
 		<skos:definition>This property represents the nubmer of total new registration of a vehicle.</skos:definition>
 	</owl:DatatypeProperty>
 	
@@ -3892,7 +3894,6 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 		<rdfs:subPropertyOf rdf:resource="&auto-vc;cargoVolume"/>
 		<rdfs:label xml:lang="en">luggage capacity seats folded</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<rdfs:range rdf:resource="&auto-mo;QuantitativeValue"/>
 		<skos:definition xml:lang="en">The available volume for cargo or luggage with the seats folded
 Typical unit code(s): LTR for liters, FTQ for cubic foot/feet
   
@@ -3903,7 +3904,6 @@ Note: You can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges
 		<rdfs:subPropertyOf rdf:resource="&auto-vc;cargoVolume"/>
 		<rdfs:label xml:lang="en">luggage capacity seats upright</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<rdfs:range rdf:resource="&auto-mo;QuantitativeValue"/>
 		<skos:definition xml:lang="en">The available volume for cargo or luggage with the seats upright
 Typical unit code(s): LTR for liters, FTQ for cubic foot/feet
   
@@ -3930,6 +3930,7 @@ Note: You can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges
 	<owl:DatatypeProperty rdf:about="&auto-vc;marketingName">
 		<rdfs:label xml:lang="en">marketing name</rdfs:label>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
+		<rdfs:range rdf:resource="&xsd;string"/>
 		<skos:definition xml:lang="en">The name of the object for marketing purposes</skos:definition>
 	</owl:DatatypeProperty>
 	
@@ -4157,8 +4158,6 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
 		<rdfs:domain rdf:resource="&auto-vc;OwnershipInfo"/>
 		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
-		<rdfs:range rdf:resource="&auto-mo;Organization"/>
-		<rdfs:range rdf:resource="&auto-mo;Person"/>
 		<rdfs:range rdf:resource="&auto-vc;BusinessEntity"/>
 		<skos:definition xml:lang="en">This property points to the owner of the vehicle for the respective period of time, as indicated by the uco:OwnershipInfo node.</skos:definition>
 	</owl:ObjectProperty>
@@ -4658,6 +4657,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc;validFrom">
 		<rdfs:label xml:lang="en">valid from</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Check"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<rdfs:range rdf:resource="&xsd;dateTime"/>
 		<skos:definition xml:lang="en">This property indicates the beginning of the validity of the inspection represented by the uco:Check node. This is typically the day of the inspection.</skos:definition>
@@ -4665,6 +4665,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc;validThrough">
 		<rdfs:label xml:lang="en">valid to</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Check"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/uco/ns#"/>
 		<rdfs:range rdf:resource="&xsd;dateTime"/>
 		<skos:definition xml:lang="en">This property indicates the end of the validity of the inspection represented by the uco:Check node. This is typically the day of the inspection plus one (UK MOT) or two years (e.g. German TÜV).</skos:definition>
@@ -4782,6 +4783,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc;version">
 		<rdfs:label>version</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
 		<skos:definition>This property represents an internal version code of a vehicle.</skos:definition>
 	</owl:DatatypeProperty>
@@ -4826,9 +4828,7 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 	<owl:ObjectProperty rdf:about="&auto-vc;widthExcludingDoorMirrors">
 		<rdfs:subPropertyOf rdf:resource="&auto-vc;width"/>
 		<rdfs:label xml:lang="en">width excluding door mirrors</rdfs:label>
-		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<rdfs:range rdf:resource="&auto-mo;QuantitativeValue"/>
 		<skos:definition xml:lang="en">The outer width of the vehicle, excluding door mirrors. Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.
 Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT for foot/feet</skos:definition>
 	</owl:ObjectProperty>
@@ -4836,9 +4836,7 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 	<owl:ObjectProperty rdf:about="&auto-vc;widthWithDoorsOpen">
 		<rdfs:subPropertyOf rdf:resource="&auto-vc;width"/>
 		<rdfs:label xml:lang="en">width with doors open</rdfs:label>
-		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
-		<rdfs:range rdf:resource="&auto-mo;QuantitativeValue"/>
 		<skos:definition xml:lang="en">The outer width of the vehicle with the doors open. Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.
 Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT for foot/feet</skos:definition>
 	</owl:ObjectProperty>

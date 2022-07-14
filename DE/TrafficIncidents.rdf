@@ -1061,6 +1061,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	<owl:DatatypeProperty rdf:about="&auto-ti;grossCombinationWeightRating">
 		<rdfs:label xml:lang="en">gross combination weight rating</rdfs:label>
 		<rdfs:comment xml:lang="en">This is for truck tractors and single-unit trucks pulling a trailer (s). GCWR is the sum of the gross vehicle weight ratings (GVWR) of all units; power unit and its trailer (s).</rdfs:comment>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
 		<skos:definition xml:lang="en">The value specified by the manufacturer as the recommended maximum loaded weight of a combination (articulated) motor vehicle.</skos:definition>
 		<fibo-fnd-utl-av:abbreviation xml:lang="en">GCWR</fibo-fnd-utl-av:abbreviation>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.23.1</fibo-fnd-utl-av:adaptedFrom>
@@ -1068,6 +1069,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:DatatypeProperty rdf:about="&auto-ti;grossVehicleWeight">
 		<rdfs:label xml:lang="en">gross vehicle weight</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-vc;RoadVehicle"/>
 		<skos:definition xml:lang="en">The actual weight of a road vehicle including the weight of the road vehicle, its load of persons and property, and all added equipment.</skos:definition>
 		<fibo-fnd-utl-av:abbreviation xml:lang="en">GVW</fibo-fnd-utl-av:abbreviation>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.22</fibo-fnd-utl-av:adaptedFrom>
@@ -1076,12 +1078,14 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	<owl:DatatypeProperty rdf:about="&auto-ti;grossVehicleWeightRating">
 		<rdfs:label xml:lang="en">gross vehicle weight rating</rdfs:label>
 		<rdfs:comment xml:lang="en">This rating includes the maximum rated capacity of a vehicle, including the base vehicle, mounted equipment and any cargo and passengers. Most of the time, GVWR is the sum of the maximum rated capacity of the axles of the vehicle.</rdfs:comment>
+		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
 		<skos:definition xml:lang="en">The value specified by the manufacturer as the recommended maximum loaded weight of a single motor vehicle.</skos:definition>
 		<fibo-fnd-utl-av:abbreviation xml:lang="en">GVWR</fibo-fnd-utl-av:abbreviation>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.23</fibo-fnd-utl-av:adaptedFrom>
 	</owl:DatatypeProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;hasCause">
+		<rdf:type rdf:resource="&owl;AsymmetricProperty"/>
 		<rdfs:label xml:lang="en">has cause</rdfs:label>
 		<owl:inverseOf rdf:resource="&auto-ti;isCauseOf"/>
 	</owl:ObjectProperty>
@@ -1090,6 +1094,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;hasEffect">
+		<rdf:type rdf:resource="&owl;AsymmetricProperty"/>
 		<rdfs:label xml:lang="en">has effect</rdfs:label>
 		<owl:inverseOf rdf:resource="&auto-ti;isEffectOf"/>
 	</owl:ObjectProperty>
@@ -1103,10 +1108,12 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;isCauseOf">
+		<rdf:type rdf:resource="&owl;AsymmetricProperty"/>
 		<rdfs:label xml:lang="en">is cause of</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;isEffectOf">
+		<rdf:type rdf:resource="&owl;AsymmetricProperty"/>
 		<rdfs:label xml:lang="en">is effect of</rdfs:label>
 	</owl:ObjectProperty>
 	
@@ -1129,6 +1136,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<rdfs:label xml:lang="en">total lanes in roadway</rdfs:label>
 		<rdfs:comment xml:lang="en">Original definition:
 The total number of lanes in a roadway is collected for each vehicle, on the roadway on which that vehicle was traveling. Through lanes also includes shared through/turn lanes but excludes, turn-only lanes, auxiliary lanes, such as collector-distributor lanes, weaving lanes, frontage road lanes, parking lanes, acceleration/deceleration lanes, toll collection lanes and truck climbing lanes. Total lanes are collected in two parts as total through lanes and total auxiliary lanes.</rdfs:comment>
+		<rdfs:range rdf:resource="&xsd;int"/>
 		<skos:definition xml:lang="en">A number of through lanes of the roadway.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.33.1</fibo-fnd-utl-av:adaptedFrom>
 	</owl:DatatypeProperty>

@@ -795,6 +795,8 @@
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;address">
 		<rdfs:label>address</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-ev;Infrastructure"/>
+		<rdfs:range rdf:resource="&xsd;string"/>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;adminArea">
@@ -814,10 +816,12 @@
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;alt">
 		<rdfs:label>altitude</rdfs:label>
+		<rdfs:range rdf:resource="&xsd;decimal"/>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;angle">
 		<rdfs:domain rdf:resource="&auto-ev;TrafficSignal"/>
+		<rdfs:range rdf:resource="&xsd;decimal"/>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;boundCoordinate">
@@ -831,10 +835,12 @@
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;brand">
 		<rdfs:label>brand</rdfs:label>
+		<rdfs:range rdf:resource="&xsd;string"/>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;curve_id">
 		<rdfs:label>curve ID</rdfs:label>
+		<rdfs:range rdf:resource="&xsd;string"/>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;drivingDir">
@@ -882,6 +888,7 @@
 	
 	<owl:ObjectProperty rdf:about="&auto-ev;hasRoadSegment">
 		<rdfs:label xml:lang="en">has road segment</rdfs:label>
+		<rdfs:range rdf:resource="&auto-ev;RoadSegment"/>
 		<owl:inverseOf rdf:resource="&auto-ev;isRoadSegmentOf"/>
 	</owl:ObjectProperty>
 	
@@ -909,6 +916,7 @@
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ev;isNextTo">
+		<rdf:type rdf:resource="&owl;SymmetricProperty"/>
 		<rdfs:label xml:lang="en">is next to</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-ev;Lane"/>
 		<rdfs:range rdf:resource="&auto-ev;Lane"/>
@@ -924,36 +932,44 @@
 	
 	<owl:ObjectProperty rdf:about="&auto-ev;isRoadSegmentOf">
 		<rdfs:label xml:lang="en">is road segment of</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-ev;RoadSegment"/>
 	</owl:ObjectProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;lat">
 		<rdfs:label>latitude</rdfs:label>
+		<rdfs:range rdf:resource="&xsd;decimal"/>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;loc_x">
 		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
 		<rdfs:label>location x</rdfs:label>
+		<rdfs:range rdf:resource="&xsd;decimal"/>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;loc_y">
 		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
 		<rdfs:label>location y</rdfs:label>
+		<rdfs:range rdf:resource="&xsd;decimal"/>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;loc_z">
 		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
 		<rdfs:label>location z</rdfs:label>
+		<rdfs:range rdf:resource="&xsd;decimal"/>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;lon">
 		<rdfs:label>longitude</rdfs:label>
+		<rdfs:range rdf:resource="&xsd;decimal"/>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;name">
 		<rdfs:label>name</rdfs:label>
+		<rdfs:range rdf:resource="&xsd;string"/>
 	</owl:DatatypeProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ev;nearTo">
+		<rdf:type rdf:resource="&owl;SymmetricProperty"/>
 		<rdfs:label xml:lang="en">near to</rdfs:label>
 	</owl:ObjectProperty>
 	
@@ -963,6 +979,8 @@
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;operator">
 		<rdfs:label>operator</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-ev;Infrastructure"/>
+		<rdfs:range rdf:resource="&xsd;string"/>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;orientation">
@@ -972,22 +990,28 @@
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;osm_node_id">
 		<rdfs:label>osm node ID</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-ev;Node"/>
+		<rdfs:range rdf:resource="&xsd;integer"/>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;osm_ref">
 		<rdfs:label>osm ref</rdfs:label>
+		<rdfs:range rdf:resource="&xsd;string"/>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;osm_way_id">
 		<rdfs:label>osm way ID</rdfs:label>
+		<rdfs:range rdf:resource="&xsd;integer"/>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;phone">
 		<rdfs:label>phone</rdfs:label>
+		<rdfs:range rdf:resource="&xsd;string"/>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;postcode">
 		<rdfs:label>postcode</rdfs:label>
+		<rdfs:range rdf:resource="&xsd;string"/>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;pubFacAdmin">
@@ -1001,11 +1025,13 @@
 	<owl:DatatypeProperty rdf:about="&auto-ev;river_id">
 		<rdfs:label>river ID</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-ev;River"/>
+		<rdfs:range rdf:resource="&xsd;string"/>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;speedMax">
 		<rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
 		<rdfs:label>speed max</rdfs:label>
+		<rdfs:range rdf:resource="&xsd;string"/>
 	</owl:DatatypeProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ev;turnLeftTo">
@@ -1018,6 +1044,7 @@
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;website">
 		<rdfs:label>website</rdfs:label>
+		<rdfs:range rdf:resource="&xsd;anyURI"/>
 	</owl:DatatypeProperty>
 
 </rdf:RDF>

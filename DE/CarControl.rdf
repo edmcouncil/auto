@@ -459,6 +459,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;hasAgent">
 		<rdfs:label xml:lang="en">has agent</rdfs:label>
+		<rdfs:range rdf:resource="&auto-mo;Agent"/>
 		<owl:inverseOf rdf:resource="&auto-cc;isAgentOf"/>
 	</owl:ObjectProperty>
 	
@@ -475,6 +476,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;isAgentOf">
 		<rdfs:label xml:lang="en">is agent of</rdfs:label>
+		<rdfs:domain rdf:resource="&auto-mo;Agent"/>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;isNodeOf">
@@ -500,6 +502,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	
 	<owl:DatatypeProperty rdf:about="&auto-cc;pathSegmentID">
 		<rdfs:label>path segment ID</rdfs:label>
+		<rdfs:range rdf:resource="&xsd;string"/>
 	</owl:DatatypeProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;prevNode">
