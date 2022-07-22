@@ -439,9 +439,11 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;collisionWarningWith">
+		<rdfs:label xml:lang="en">collision warning with</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;endLane">
+		<rdfs:label xml:lang="en">end lane</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;enterOf">
@@ -455,6 +457,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;giveWay">
+		<rdfs:label xml:lang="en">give way</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;hasAgent">
@@ -464,6 +467,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;hasNode">
+		<rdfs:label xml:lang="en">has node</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;hasPathSegment">
@@ -472,6 +476,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;hasRealizationIn">
+		<rdfs:label xml:lang="en">has realization in</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;isAgentOf">
@@ -480,6 +485,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;isNodeOf">
+		<rdfs:label xml:lang="en">is node of</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;isPathSegmentOf">
@@ -514,6 +520,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;startLane">
+		<rdfs:label xml:lang="en">start lane</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-mo;hasPart">
