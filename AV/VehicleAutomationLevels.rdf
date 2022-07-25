@@ -522,7 +522,7 @@
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isPartOf"/>
 				<owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DynamicDrivingTask"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">dynamic driving subtask</rdfs:label>
@@ -751,7 +751,7 @@
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasPart"/>
 				<owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">motor vehicle</rdfs:label>
@@ -995,6 +995,10 @@
 		<rdfs:label xml:lang="en">achieves</rdfs:label>
 	</owl:ObjectProperty>
 	
+	<owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOnboardUser">
+		<rdfs:label xml:lang="en">has on-board user</rdfs:label>
+	</owl:ObjectProperty>
+	
 	<owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperationalDesignDomain">
 		<rdfs:label xml:lang="en">has operational design domain</rdfs:label>
 		<rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DrivingAutomation"/>
@@ -1047,10 +1051,6 @@
 		<AnnotationVocabulary:explanatoryNote xml:lang="en">In level 0-2 driving automation, the driver is expected to be receptive to evident vehicle system failures, such as a broken tie rod.</AnnotationVocabulary:explanatoryNote>
 		<AnnotationVocabulary:explanatoryNote xml:lang="en">In level 3 driving automation, a DDT fallback-ready user is considered to be receptive to a request to intervene and/or to an evident vehicle system failure, whether or not the ADS issues a request to intervene as a result of such a vehicle system failure.</AnnotationVocabulary:explanatoryNote>
 		<AnnotationVocabulary:explanatoryNote xml:lang="en">Monitoring includes receptivity.</AnnotationVocabulary:explanatoryNote>
-	</owl:ObjectProperty>
-	
-	<owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/onBoardUser">
-		<rdfs:label xml:lang="en">on-board user</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/operatedBy">
