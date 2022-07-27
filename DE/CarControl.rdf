@@ -47,6 +47,7 @@
 	<owl:Class rdf:about="&auto-cc;Acceleration">
 		<rdfs:subClassOf rdf:resource="&auto-cc;SpeedProfile"/>
 		<rdfs:label xml:lang="en">acceleration</rdfs:label>
+		<rdfs:isDefinedBy>increase in the speed of something</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;BackwardCollisionWarning">
@@ -537,5 +538,11 @@ are referred to collectively as object and event detection and response (OEDR).<
 	
 	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;usageNote">
 	</owl:AnnotationProperty>
-
+	
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-cc;Acceleration"/>
+		<owl:annotatedTarget>increase in the speed of something</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://dictionary.cambridge.org/dictionary/english/acceleration</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
 </rdf:RDF>
