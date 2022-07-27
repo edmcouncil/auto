@@ -240,12 +240,14 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">dangerous behaviour</rdfs:label>
 		<rdfs:label xml:lang="pl">niebezpieczne zachowanie</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">action by a traffic user which results in a traffic incident</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;DangerousOvertaking">
 		<rdfs:subClassOf rdf:resource="&auto-ti;DangerousBehaviour"/>
 		<rdfs:label xml:lang="en">dangerous overtaking</rdfs:label>
 		<rdfs:label xml:lang="pl">niebezpiecznie wyprzedzanie</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">action in which a traffic user overtakes another vehicle in a way that leads to an incident</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;Death">
@@ -351,6 +353,7 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">entry on red light</rdfs:label>
 		<rdfs:label xml:lang="pl">wejście na czerwonym świetle</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">action of crossing the pedestrian crossing while the traffic light is red</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;Fainting">
@@ -460,6 +463,7 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">inoperative vehicle</rdfs:label>
 		<rdfs:label xml:lang="pl">niesprawny pojazd</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">state of a vehicle in which some or all of its functions do not work</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;InterchangeCrash">
@@ -561,12 +565,15 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:Class>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ti;MovementSpeed">
+		<rdfs:label xml:lang="en">movement speed</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a vehicle to its movement speed</rdfs:isDefinedBy>
 	</owl:DatatypeProperty>
 	
 	<owl:Class rdf:about="&auto-ti;MovingObject">
 		<rdfs:subClassOf rdf:resource="&auto-ti;OtherObjectsWithWhichCarCanCollide"/>
 		<rdfs:label xml:lang="en">moving object</rdfs:label>
 		<rdfs:label xml:lang="pl">obiekt ruchomy</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">object which is in motion and changes location</rdfs:isDefinedBy>
 		<owl:disjointWith rdf:resource="&auto-ti;StaticObject"/>
 	</owl:Class>
 	
@@ -633,6 +640,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<rdfs:subClassOf rdf:resource="&auto-ti;DangerousBehaviour"/>
 		<rdfs:label xml:lang="pl">niedostosowanie prędkości do warunków atmosferycznych</rdfs:label>
 		<rdfs:label xml:lang="en">not adapting speed to weather conditions</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">action of driving at a speed that is inadequate to weather conditions</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;NotIn-transport">
@@ -645,10 +653,12 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:DatatypeProperty rdf:about="&auto-ti;ObjectMass">
 		<rdfs:label xml:lang="en">object mass</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates an object to its mass</rdfs:isDefinedBy>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ti;ObjectValue">
 		<rdfs:label xml:lang="en">object value</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates an object to its value</rdfs:isDefinedBy>
 	</owl:DatatypeProperty>
 	
 	<owl:Class rdf:about="&auto-ti;Occupant">
@@ -703,6 +713,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<rdfs:subClassOf rdf:resource="&auto-mo;MaterialEntity"/>
 		<rdfs:label xml:lang="pl">inne przedmioty z którymi samochód może się zderzyć</rdfs:label>
 		<rdfs:label xml:lang="en">other objects with which car can colide</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">objects other than infrastructure, agents, vehicles, property, natural places, hazardous material, hazardous material placard, with which vehicles can collide</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;OverturningCrash">
@@ -829,11 +840,13 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	<owl:Class rdf:about="&auto-ti;RoleInAccident">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Role"/>
 		<rdfs:label xml:lang="en">role in accident</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">role a vehicle takes in an accident</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;RoleOfPersonInTraffic">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Role"/>
 		<rdfs:label xml:lang="en">role of person in traffic</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">role a person can take while being in traffic</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;SchoolBusCrash">
@@ -853,17 +866,20 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="pl">niedopasowanie prędkości</rdfs:label>
 		<rdfs:label xml:lang="en">speed mismatching</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">action of having inadequate speed</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;State">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Process"/>
 		<rdfs:label xml:lang="en">state</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">state or condition of a transport vehicle</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;StaticObject">
 		<rdfs:subClassOf rdf:resource="&auto-ti;OtherObjectsWithWhichCarCanCollide"/>
 		<rdfs:label xml:lang="pl">obiekt statyczny</rdfs:label>
 		<rdfs:label xml:lang="en">static object</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">object that does not move</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;StreetcarCrash">
@@ -893,18 +909,21 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<rdfs:subClassOf rdf:resource="&auto-ti;SpeedMismatching"/>
 		<rdfs:label xml:lang="en">too high</rdfs:label>
 		<rdfs:label xml:lang="pl">zbyt duża prędkość</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">action of having too high speed</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;TooLow">
 		<rdfs:subClassOf rdf:resource="&auto-ti;SpeedMismatching"/>
 		<rdfs:label xml:lang="en">too low</rdfs:label>
 		<rdfs:label xml:lang="pl">zbyt mała prędkość</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">action of having too low speed</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;TooSmallDistanceBetweenVehicles">
 		<rdfs:subClassOf rdf:resource="&auto-ti;DangerousBehaviour"/>
 		<rdfs:label xml:lang="en">too small distance between vehicles</rdfs:label>
 		<rdfs:label xml:lang="pl">zachowanie zbyt małej odległości między pojazdami</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">action of maintaining too small a distance between two vehicles</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;TrafficCrash">
@@ -924,7 +943,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">traffic incident</rdfs:label>
 		<rdfs:label xml:lang="pl">zdarzenie drogowe</rdfs:label>
-		<rdfs:comment xml:lang="en">all road accidents - irrespective of whether there is an accident or serious material damage</rdfs:comment>
+		<rdfs:isDefinedBy xml:lang="en">all road accidents - irrespective of whether there is an accident or serious material damage</rdfs:isDefinedBy>
 		<rdfs:isDefinedBy xml:lang="pl">wszystkie wydarzenia na drodze – niezależnie od tego, czy są jakieś ofiary lub poważne straty materialne</rdfs:isDefinedBy>
 		<owl:equivalentClass>
 			<owl:Restriction>
@@ -950,6 +969,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="pl">przyczyna zdarzeń drogowych</rdfs:label>
 		<rdfs:label xml:lang="en">traffic incident causes</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">possible causes of a traffic incident</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;TrafficIncidentEffect">
@@ -962,6 +982,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="pl">skutek zdarzeń drogowych</rdfs:label>
 		<rdfs:label xml:lang="en">traffic incident effect</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">possible effect of a traffic incident</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;TrafficParticipant">
@@ -1030,6 +1051,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="pl">korzystanie z telefonu komórkowego podczas prowadzenia samochodu</rdfs:label>
 		<rdfs:label xml:lang="en">using mobile phone during driving</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">action of using a mobile phone by a driver while operating a vehicle</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;Victim">
@@ -1051,6 +1073,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<rdfs:subClassOf rdf:resource="&auto-mo;Process"/>
 		<rdfs:label xml:lang="pl">pogoda</rdfs:label>
 		<rdfs:label xml:lang="en">weather</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">current atmospheric conditions</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;WorkZoneCrash">
@@ -1061,6 +1084,8 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:Class>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;does">
+		<rdfs:label xml:lang="en">does</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a traffic user or a vehicle to an action</rdfs:isDefinedBy>
 	</owl:ObjectProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ti;grossCombinationWeightRating">
@@ -1092,36 +1117,43 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	<owl:ObjectProperty rdf:about="&auto-ti;hasCause">
 		<rdf:type rdf:resource="&owl;AsymmetricProperty"/>
 		<rdfs:label xml:lang="en">has cause</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a process to another process that causes it</rdfs:isDefinedBy>
 		<owl:inverseOf rdf:resource="&auto-ti;isCauseOf"/>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;hasDangerousBehaviour">
 		<rdfs:label xml:lang="en">has dangerous behaviour</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a traffic user to a dangerous behaviour he is exhibiting</rdfs:isDefinedBy>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;hasEffect">
 		<rdf:type rdf:resource="&owl;AsymmetricProperty"/>
 		<rdfs:label xml:lang="en">has effect</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a process to another process that is its effect</rdfs:isDefinedBy>
 		<owl:inverseOf rdf:resource="&auto-ti;isEffectOf"/>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;hasPatient">
 		<rdfs:label xml:lang="en">has patient</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a hospital to a patient present there</rdfs:isDefinedBy>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;hasTrafficUser">
 		<rdfs:label xml:lang="en">has traffic user</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a crash to a traffic user who participates in it</rdfs:isDefinedBy>
 		<owl:inverseOf rdf:resource="&auto-ti;isParticipantOf"/>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;isCauseOf">
 		<rdf:type rdf:resource="&owl;AsymmetricProperty"/>
 		<rdfs:label xml:lang="en">is cause of</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a process to another one that is caused by it</rdfs:isDefinedBy>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;isEffectOf">
 		<rdf:type rdf:resource="&owl;AsymmetricProperty"/>
 		<rdfs:label xml:lang="en">is effect of</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a process to another process of which it is an effect</rdfs:isDefinedBy>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;isOffenceOf">
@@ -1131,14 +1163,17 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	<owl:ObjectProperty rdf:about="&auto-ti;isParticipantOf">
 		<rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
 		<rdfs:label xml:lang="en">is participant of</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a traffic user to a crash in which he participates</rdfs:isDefinedBy>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;isPatientOf">
 		<rdfs:label xml:lang="en">is patient of</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a traffic user to a hospital in which he is being treated</rdfs:isDefinedBy>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;operatesAtADSLevel">
 		<rdfs:label xml:lang="en">is capable of driving at</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a vehicle to the ADS level at which it operates</rdfs:isDefinedBy>
 	</owl:ObjectProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ti;totalLanesInRoadway">

@@ -53,16 +53,19 @@
 	<owl:Class rdf:about="&auto-cc;BackwardCollisionWarning">
 		<rdfs:subClassOf rdf:resource="&auto-cc;CollisionWarning"/>
 		<rdfs:label xml:lang="en">backward collision warning</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">notice of a possible collision with an object behind the vehicle</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;CollisionWarning">
 		<rdfs:subClassOf rdf:resource="&auto-cc;Warning"/>
 		<rdfs:label xml:lang="en">collision warning</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">notice of a possible collision</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;ConstantSpeed">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Quality"/>
 		<rdfs:label xml:lang="en">constant speed</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">value representing the speed of a vehicle and indicating that the speed is constant</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;CurrentLaneSafeDist">
@@ -73,16 +76,19 @@
 	<owl:Class rdf:about="&auto-cc;Deceleration">
 		<rdfs:subClassOf rdf:resource="&auto-cc;SpeedProfile"/>
 		<rdfs:label xml:lang="en">deceleration</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">decrease in the speed of something</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;DestinationSelection">
 		<rdfs:subClassOf rdf:resource="&auto-cc;StrategicFunction"/>
 		<rdfs:label xml:lang="en">destination selection</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">decision where to go</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;DrivingAction">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Action"/>
 		<rdfs:label xml:lang="en">driving action</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">action which consists of the driver controlling and guiding the movement of a vehicle</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;DynamicDrivingTask">
@@ -156,50 +162,59 @@ are referred to collectively as object and event detection and response (OEDR).<
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">dynamic driving task subtask</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">specific real-time tactical or operational function required to operate a vehicle in on-road traffic</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;EnhancingConspicuity">
 		<rdfs:subClassOf rdf:resource="&auto-cc;TacticalFunction"/>
 		<rdfs:label xml:lang="en">enhancing conspicuity</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">DDT subtask compromising activities which make the vehicle more visible and distinguishable from its surroundings, such as by lightning, sounding the horn, gesturing etc.</rdfs:isDefinedBy>
 		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Enhancing conspicuity via lighting, signaling and gesturing, etc.</fibo-fnd-utl-av:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;ForwardCollisionWarning">
 		<rdfs:subClassOf rdf:resource="&auto-cc;CollisionWarning"/>
 		<rdfs:label xml:lang="en">forward collision warning</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">notice of a possible collision with an object in front of the vehicle</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;Go">
 		<rdfs:subClassOf rdf:resource="&auto-cc;DrivingAction"/>
 		<rdfs:label xml:lang="en">go</rdfs:label>
 		<rdfs:comment>1</rdfs:comment>
+		<rdfs:isDefinedBy xml:lang="en">action resulting in the vehicle changing its position</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;GoBackward">
 		<rdfs:subClassOf rdf:resource="&auto-cc;DrivingAction"/>
 		<rdfs:label xml:lang="en">go backward</rdfs:label>
 		<rdfs:comment>5</rdfs:comment>
+		<rdfs:isDefinedBy xml:lang="en">action resulting in the vehicle moving backwards</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;GoForward">
 		<rdfs:subClassOf rdf:resource="&auto-cc;DrivingAction"/>
 		<rdfs:label xml:lang="en">go forward</rdfs:label>
 		<rdfs:comment>4</rdfs:comment>
+		<rdfs:isDefinedBy xml:lang="en">action resulting in the vehicle moving forward</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;GreenGo">
 		<rdfs:subClassOf rdf:resource="&auto-cc;TrafficSignalControl"/>
 		<rdfs:label xml:lang="en">green go</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">color of the traffic signal, evoked by light with a dominant wavelength of roughly 495-570 nm that signalizes that vehicle is allowed to and should go forward</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;LaneChange">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Action"/>
 		<rdfs:label xml:lang="en">lane change</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">action during which the vehicle changes lanes</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;LaneDepartureWarning">
 		<rdfs:subClassOf rdf:resource="&auto-cc;Warning"/>
 		<rdfs:label xml:lang="en">lane departure warning</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">notice of the department from the lane</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;LateralVehicleMotionControl">
@@ -213,6 +228,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	<owl:Class rdf:about="&auto-cc;LeftLaneChange">
 		<rdfs:subClassOf rdf:resource="&auto-cc;LaneChange"/>
 		<rdfs:label xml:lang="en">left lane change</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">action during which a vehicle changes lanes, moving to the one on the left</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;LongitudinalVehicleMotionControl">
@@ -226,6 +242,7 @@ are referred to collectively as object and event detection and response (OEDR).<
 	<owl:Class rdf:about="&auto-cc;ManeuverPlanning">
 		<rdfs:subClassOf rdf:resource="&auto-cc;TacticalFunction"/>
 		<rdfs:label xml:lang="en">maneuver planning</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">function that includes deciding whether and when to overtake another vehicle or change lanes</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;Monitor">
@@ -309,63 +326,75 @@ are referred to collectively as object and event detection and response (OEDR).<
 	<owl:Class rdf:about="&auto-cc;OverSpeedWarning">
 		<rdfs:subClassOf rdf:resource="&auto-cc;Warning"/>
 		<rdfs:label xml:lang="en">overspeed warning</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">notice that the speed of a vehicle is above the legally determined value</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;RedStop">
 		<rdfs:subClassOf rdf:resource="&auto-cc;TrafficSignalControl"/>
 		<rdfs:label xml:lang="en">red stop</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">color of a traffic signal, evoked by light with a dominant wavelength of roughly 625-740 nm, which indicates that the vehicle is not allowed to go forward and should stop</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;RightLaneChange">
 		<rdfs:subClassOf rdf:resource="&auto-cc;LaneChange"/>
 		<rdfs:label xml:lang="en">right lane change</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">action during which a vehicle changes lanes, moving to the one on the right</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;RoadCondition">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Quality"/>
 		<rdfs:label xml:lang="en">road condition</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">structured value representing the current condition of a road</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;SideCollisionWarning">
 		<rdfs:subClassOf rdf:resource="&auto-cc;CollisionWarning"/>
 		<rdfs:label xml:lang="en">side collision warning</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">notice of a possible collision with an object located at the side of the vehicle</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;SmoothAcceleration">
 		<rdfs:subClassOf rdf:resource="&auto-cc;Acceleration"/>
 		<rdfs:label xml:lang="en">smooth acceleration</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">gradual increase in the speed of a vehicle</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;SmoothDeceleration">
 		<rdfs:subClassOf rdf:resource="&auto-cc;Deceleration"/>
 		<rdfs:label xml:lang="en">smooth deceleration</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">gradual decrease in the speed of a vehicle</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;SpeedProfile">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Process"/>
 		<rdfs:label xml:lang="en">speed profile</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">juxtaposition of all changes in the speed of a vehicle</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;Stop">
 		<rdfs:subClassOf rdf:resource="&auto-cc;DrivingAction"/>
 		<rdfs:label xml:lang="en">stop</rdfs:label>
 		<rdfs:comment>0</rdfs:comment>
+		<rdfs:isDefinedBy xml:lang="en">action resulting in the vehicle stopping any movement</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;StrategicFunction">
 		<rdfs:subClassOf rdf:resource="&auto-cc;Task"/>
 		<rdfs:label xml:lang="en">strategic function</rdfs:label>
 		<rdfs:comment xml:lang="en">destiantion and waypoints planning</rdfs:comment>
+		<rdfs:isDefinedBy xml:lang="en">function that involves deciding whether, where and when to go, how to travel, which best routes to take, etc.</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;SuddenAcceleration">
 		<rdfs:subClassOf rdf:resource="&auto-cc;Acceleration"/>
 		<rdfs:label xml:lang="en">sudden acceleration</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">sudden increase in the speed of a vehicle</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;SuddenDeceleration">
 		<rdfs:subClassOf rdf:resource="&auto-cc;Deceleration"/>
 		<rdfs:label xml:lang="en">sudden deceleration</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">sudden decrease in the speed of a vehicle</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;TacticalFunction">
@@ -378,73 +407,87 @@ are referred to collectively as object and event detection and response (OEDR).<
 	<owl:Class rdf:about="&auto-cc;Task">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Disposition"/>
 		<rdfs:label xml:lang="en">task</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">function that a human or an automated driver can perform</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;ToLeft">
 		<rdfs:subClassOf rdf:resource="&auto-cc;DrivingAction"/>
 		<rdfs:label xml:lang="en">to left</rdfs:label>
 		<rdfs:comment>2</rdfs:comment>
+		<rdfs:isDefinedBy xml:lang="en">action resulting in the vehicle making a below 90 degrees turn to the left</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;ToRight">
 		<rdfs:subClassOf rdf:resource="&auto-cc;DrivingAction"/>
 		<rdfs:label xml:lang="en">to right</rdfs:label>
 		<rdfs:comment>3</rdfs:comment>
+		<rdfs:isDefinedBy xml:lang="en">action resulting in the vehicle making a below 90 degrees turn to the right</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;TrafficSignalControl">
 		<rdfs:subClassOf rdf:resource="&auto-mo;GenericallyDependentContinuant"/>
 		<rdfs:label xml:lang="en">traffic signal control</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">highway traffic signal by which traffic is alternately directed to stop and permitted to proceed</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;TripScheduling">
 		<rdfs:subClassOf rdf:resource="&auto-cc;StrategicFunction"/>
 		<rdfs:label xml:lang="en">trip scheduling</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">decision when to go</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;TurnLeft">
 		<rdfs:subClassOf rdf:resource="&auto-cc;DrivingAction"/>
 		<rdfs:label xml:lang="en">turn left</rdfs:label>
 		<rdfs:comment>6</rdfs:comment>
+		<rdfs:isDefinedBy xml:lang="en">action resulting in the vehicle making an above, or equal to 90 degrees turn to the left</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;TurnRight">
 		<rdfs:subClassOf rdf:resource="&auto-cc;DrivingAction"/>
 		<rdfs:label xml:lang="en">turn right</rdfs:label>
 		<rdfs:comment>7</rdfs:comment>
+		<rdfs:isDefinedBy xml:lang="en">action resulting in the vehicle making an above, or equal to 90 degrees turn to the right</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;WaitThenGo">
 		<rdfs:subClassOf rdf:resource="&auto-cc;DrivingAction"/>
 		<rdfs:label xml:lang="en">wait then go</rdfs:label>
 		<rdfs:comment>8</rdfs:comment>
+		<rdfs:isDefinedBy xml:lang="en">action that consists of the vehicle firstly not moving, and then moving</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;Warning">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Process"/>
 		<rdfs:label xml:lang="en">warning</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">notice of possible danger or a problem</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;WaypointSelection">
 		<rdfs:subClassOf rdf:resource="&auto-cc;StrategicFunction"/>
 		<rdfs:label xml:lang="en">waypoint selection</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">selection of a waypoint</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-cc;Yellow">
 		<rdfs:subClassOf rdf:resource="&auto-cc;TrafficSignalControl"/>
 		<rdfs:label xml:lang="en">yellow</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">color of a traffic signal, evoked by light with a dominant wavelength of roughly 575-585 nm which is an intermediate between red and green</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;approachTo">
 		<rdfs:label xml:lang="en">approach to</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a vehicle to an intersection it is approaching</rdfs:isDefinedBy>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;collisionWarningWith">
 		<rdfs:label xml:lang="en">collision warning with</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">indicates incoming collisions between our vehicle and other vehicles</rdfs:isDefinedBy>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;endLane">
 		<rdfs:label xml:lang="en">end lane</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a path to its end lane</rdfs:isDefinedBy>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;enterOf">
@@ -463,16 +506,19 @@ are referred to collectively as object and event detection and response (OEDR).<
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;hasAgent">
 		<rdfs:label xml:lang="en">has agent</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates something to an agent</rdfs:isDefinedBy>
 		<rdfs:range rdf:resource="&auto-mo;Agent"/>
 		<owl:inverseOf rdf:resource="&auto-cc;isAgentOf"/>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;hasNode">
 		<rdfs:label xml:lang="en">has node</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a way, a path or a road to a given node</rdfs:isDefinedBy>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;hasPathSegment">
 		<rdfs:label>has path segment</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a way, a path or a road to a given path segment</rdfs:isDefinedBy>
 		<owl:inverseOf rdf:resource="&auto-cc;isPathSegmentOf"/>
 	</owl:ObjectProperty>
 	
@@ -487,41 +533,50 @@ are referred to collectively as object and event detection and response (OEDR).<
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;isNodeOf">
 		<rdfs:label xml:lang="en">is node of</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a node to a given way, path or road</rdfs:isDefinedBy>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;isPathSegmentOf">
 		<rdfs:label>is path segment of</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a path segment to a given way, path or road</rdfs:isDefinedBy>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;nextNode">
 		<rdfs:label>next node</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a node to a subsequent one</rdfs:isDefinedBy>
 		<owl:inverseOf rdf:resource="&auto-cc;prevNode"/>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;nextPathSegment">
 		<rdfs:label>next path segment</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a path segment to a subsequent one</rdfs:isDefinedBy>
 		<owl:inverseOf rdf:resource="&auto-cc;prevPathSegment"/>
 	</owl:ObjectProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-cc;nodePos">
 		<rdfs:label>node position</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a node to its position expressed in longitude, latitude and optionally altitude</rdfs:isDefinedBy>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-cc;pathSegmentID">
 		<rdfs:label>path segment ID</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a path segment to its ID</rdfs:isDefinedBy>
 		<rdfs:range rdf:resource="&xsd;string"/>
 	</owl:DatatypeProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;prevNode">
 		<rdfs:label>previous node</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a node to a previous one</rdfs:isDefinedBy>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;prevPathSegment">
 		<rdfs:label>previous path segment</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a path segment to a previous one</rdfs:isDefinedBy>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-cc;startLane">
 		<rdfs:label xml:lang="en">start lane</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a path to its starting lane</rdfs:isDefinedBy>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-mo;hasPart">
@@ -544,5 +599,53 @@ are referred to collectively as object and event detection and response (OEDR).<
 		<owl:annotatedSource rdf:resource="&auto-cc;Acceleration"/>
 		<owl:annotatedTarget>increase in the speed of something</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>https://dictionary.cambridge.org/dictionary/english/acceleration</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-cc;DestinationSelection"/>
+		<owl:annotatedTarget xml:lang="en">decision where to go</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>J3016 JUN2018, section 8.11</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-cc;DynamicDrivingTaskSubtask"/>
+		<owl:annotatedTarget xml:lang="en">specific real-time tactical or operational function required to operate a vehicle in on-road traffic</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>J3016 JUN2018, section 3.10</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-cc;EnhancingConspicuity"/>
+		<owl:annotatedTarget xml:lang="en">DDT subtask compromising activities which make the vehicle more visible and distinguishable from its surroundings, such as by lightning, sounding the horn, gesturing etc.</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>J3016 JUN2018, section 3.10</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-cc;ManeuverPlanning"/>
+		<owl:annotatedTarget xml:lang="en">function that includes deciding whether and when to overtake another vehicle or change lanes</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>J3016 JUN2018, section 8.11</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-cc;StrategicFunction"/>
+		<owl:annotatedTarget xml:lang="en">function that involves deciding whether, where and when to go, how to travel, which best routes to take, etc.</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>J3016 JUN2018, section 8.11</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-cc;TrafficSignalControl"/>
+		<owl:annotatedTarget xml:lang="en">highway traffic signal by which traffic is alternately directed to stop and permitted to proceed</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://mutcd.fhwa.dot.gov/htm/2003r1/part4/part4b.htm</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-cc;TripScheduling"/>
+		<owl:annotatedTarget xml:lang="en">decision when to go</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>J3016 JUN2018, section 8.11</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-cc;Warning"/>
+		<owl:annotatedTarget xml:lang="en">notice of possible danger or a problem</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://dictionary.cambridge.org/dictionary/english/warning</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 </rdf:RDF>
