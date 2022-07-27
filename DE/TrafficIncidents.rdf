@@ -97,7 +97,7 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 	
 	<owl:Class rdf:about="&auto-ti;AtWork">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Role"/>
-		<rdfs:label xml:lang="en">At Work</rdfs:label>
+		<rdfs:label xml:lang="en">at work</rdfs:label>
 		<rdfs:comment xml:lang="en">This definition is adapted from the definition used in the Census of Fatal Occupational Injuries program at the Bureau of Labor Statistics.</rdfs:comment>
 		<skos:definition xml:lang="en">Engaged in duties, activities or tasks that produce a product or service; that are done in exchange for money, goods, services, profit or benefit; and that are legal activities in the United States.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">ANSI D.16-2017, section 2.9.6</fibo-fnd-utl-av:adaptedFrom>
@@ -210,7 +210,7 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 	
 	<owl:Class rdf:about="&auto-ti;ContactVehicle">
 		<rdfs:subClassOf rdf:resource="&auto-ti;RoleInAccident"/>
-		<rdfs:label xml:lang="en">Contact Vehicle</rdfs:label>
+		<rdfs:label xml:lang="en">contact vehicle</rdfs:label>
 		<rdfs:comment xml:lang="en">A contact vehicle is directly involved in a crash. (See 2.6.2 Collision crash and 2.6.3 Noncollision crash.)</rdfs:comment>
 		<skos:definition xml:lang="en">Any road vehicle which comes in contact with one or more road vehicles, non-motorists or property in a collision crash, or has a noncollision crash.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.7</fibo-fnd-utl-av:adaptedFrom>
@@ -282,14 +282,16 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 	</owl:Class>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ti;DistanceBack">
+		<rdfs:label xml:lang="en">distance back</rdfs:label>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ti;DistanceFront">
+		<rdfs:label xml:lang="en">distance front</rdfs:label>
 	</owl:DatatypeProperty>
 	
 	<owl:Class rdf:about="&auto-ti;Driver">
 		<rdfs:subClassOf rdf:resource="&auto-ti;RoleOfPersonInTraffic"/>
-		<rdfs:label xml:lang="en">Driver</rdfs:label>
+		<rdfs:label xml:lang="en">driver</rdfs:label>
 		<skos:definition xml:lang="en">An occupant who is in actual physical control of a transport vehicle or, for an out-of control vehicle, an occupant who was in control until control was lost.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">ANSI D.16-2017, section 2.2.37</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -511,7 +513,7 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 	
 	<owl:Class rdf:about="&auto-ti;MotorCarrier">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Role"/>
-		<rdfs:label xml:lang="en">Motor Carrier</rdfs:label>
+		<rdfs:label xml:lang="en">motor carrier</rdfs:label>
 		<skos:definition xml:lang="en">The legal business entity, individual, partnership, corporation or organization that directs, controls and is responsible for the transportation of goods, property or people.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.9.4</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -553,7 +555,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:Class rdf:about="&auto-ti;Motorist">
 		<rdfs:subClassOf rdf:resource="&auto-ti;RoleOfPersonInTraffic"/>
-		<rdfs:label xml:lang="en">Motorist</rdfs:label>
+		<rdfs:label xml:lang="en">motorist</rdfs:label>
 		<skos:definition xml:lang="en">Any occupant of a motor vehicle in-transport.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.40</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -586,7 +588,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:Class rdf:about="&auto-ti;Non-contactVehicle">
 		<rdfs:subClassOf rdf:resource="&auto-ti;RoleInAccident"/>
-		<rdfs:label xml:lang="en">Non-contact Vehicle</rdfs:label>
+		<rdfs:label xml:lang="en">non-contact vehicle</rdfs:label>
 		<rdfs:comment xml:lang="en">A noncontact vehicle is indirectly involved in a crash.</rdfs:comment>
 		<skos:definition xml:lang="en">Any vehicle other than a contact vehicle.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.8</fibo-fnd-utl-av:adaptedFrom>
@@ -608,7 +610,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:Class rdf:about="&auto-ti;Non-motorist">
 		<rdfs:subClassOf rdf:resource="&auto-ti;RoleOfPersonInTraffic"/>
-		<rdfs:label xml:lang="en">Non-motorist</rdfs:label>
+		<rdfs:label xml:lang="en">non-motorist</rdfs:label>
 		<skos:definition xml:lang="en">Any person other than a motorist</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">ANSI D.16-2017, section 2.2.41</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -642,14 +644,16 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:Class>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ti;ObjectMass">
+		<rdfs:label xml:lang="en">object mass</rdfs:label>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ti;ObjectValue">
+		<rdfs:label xml:lang="en">object value</rdfs:label>
 	</owl:DatatypeProperty>
 	
 	<owl:Class rdf:about="&auto-ti;Occupant">
 		<rdfs:subClassOf rdf:resource="&auto-ti;RoleOfPersonInTraffic"/>
-		<rdfs:label xml:lang="en">Occupant</rdfs:label>
+		<rdfs:label xml:lang="en">occupant</rdfs:label>
 		<skos:definition xml:lang="en">Any person who is part of a transport vehicle.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom xml:lang="en">ANSI D.16-2017, section 2.2.35</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -710,7 +714,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:Class rdf:about="&auto-ti;Passenger">
 		<rdfs:subClassOf rdf:resource="&auto-ti;RoleOfPersonInTraffic"/>
-		<rdfs:label xml:lang="en">Passenger</rdfs:label>
+		<rdfs:label xml:lang="en">passenger</rdfs:label>
 		<skos:definition xml:lang="en">Any occupant of a road vehicle other than its driver.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.38</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -724,14 +728,13 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:Class rdf:about="&auto-ti;Pedalcyclist">
 		<rdfs:subClassOf rdf:resource="&auto-ti;RoleOfPersonInTraffic"/>
-		<rdfs:label xml:lang="en">Pedalcyclist</rdfs:label>
+		<rdfs:label xml:lang="en">pedalcyclist</rdfs:label>
 		<skos:definition xml:lang="en">Any occupant of a pedalcycle in-transport.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.39</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;Pedestrian">
 		<rdfs:subClassOf rdf:resource="&auto-ti;RoleOfPersonInTraffic"/>
-		<rdfs:label xml:lang="en">Pedestrian</rdfs:label>
 		<rdfs:label xml:lang="en">pedestrian</rdfs:label>
 		<rdfs:label xml:lang="pl">pieszy</rdfs:label>
 		<rdfs:isDefinedBy xml:lang="en">a person walking rather than travelling in a vehicle</rdfs:isDefinedBy>
@@ -825,10 +828,12 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:Class rdf:about="&auto-ti;RoleInAccident">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Role"/>
+		<rdfs:label xml:lang="en">role in accident</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;RoleOfPersonInTraffic">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Role"/>
+		<rdfs:label xml:lang="en">role of person in traffic</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;SchoolBusCrash">
@@ -975,7 +980,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:Class rdf:about="&auto-ti;TrafficUnit">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Role"/>
-		<rdfs:label xml:lang="en">Traffic Unit</rdfs:label>
+		<rdfs:label xml:lang="en">traffic unit</rdfs:label>
 		<skos:definition xml:lang="en">A land vehicle or a pedestrian.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.42</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
@@ -1091,6 +1096,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;hasDangerousBehaviour">
+		<rdfs:label xml:lang="en">has dangerous behaviour</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;hasEffect">
@@ -1100,6 +1106,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;hasPatient">
+		<rdfs:label xml:lang="en">has patient</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;hasTrafficUser">
@@ -1118,6 +1125,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;isOffenceOf">
+		<rdfs:label xml:lang="en">is offence of</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;isParticipantOf">
@@ -1126,6 +1134,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;isPatientOf">
+		<rdfs:label xml:lang="en">is patient of</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;operatesAtADSLevel">

@@ -877,6 +877,7 @@
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ev;hasJunction">
+		<rdfs:label>has junction</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ev;hasLane">
@@ -989,18 +990,18 @@
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;osm_node_id">
-		<rdfs:label>osm node ID</rdfs:label>
+		<rdfs:label>OSM node ID</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-ev;Node"/>
 		<rdfs:range rdf:resource="&xsd;integer"/>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;osm_ref">
-		<rdfs:label>osm ref</rdfs:label>
+		<rdfs:label>OSM refrence</rdfs:label>
 		<rdfs:range rdf:resource="&xsd;string"/>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;osm_way_id">
-		<rdfs:label>osm way ID</rdfs:label>
+		<rdfs:label>OSM way ID</rdfs:label>
 		<rdfs:range rdf:resource="&xsd;integer"/>
 	</owl:DatatypeProperty>
 	
