@@ -521,8 +521,7 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isPartOf"/>
-				<owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DynamicDrivingTask"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DynamicDrivingTask"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">dynamic driving subtask</rdfs:label>
@@ -750,8 +749,7 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasPart"/>
-				<owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">motor vehicle</rdfs:label>
