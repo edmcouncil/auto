@@ -1596,7 +1596,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 	<owl:Class rdf:about="&auto-vc;HumanPoweredLandVehicle">
 		<rdfs:subClassOf rdf:resource="&auto-vc;RoadVehicle"/>
 		<rdfs:label xml:lang="en">human powered land vehicle</rdfs:label>
-		<rdfs:isDefinedBy xml:lang="en">relates a vehicle to the amount of emissions it emits per passenger present in it during driving</rdfs:isDefinedBy>
+		<rdfs:isDefinedBy xml:lang="en">land vehicle propelled over ground by human power</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-vc;Hybrid">

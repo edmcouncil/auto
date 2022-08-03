@@ -618,7 +618,7 @@
 		<rdfs:subClassOf rdf:resource="&auto-ev;Infrastructure"/>
 		<rdfs:subClassOf rdf:resource="&auto-ev;TransportWay"/>
 		<rdfs:label xml:lang="en">road part</rdfs:label>
-		<rdfs:isDefinedBy xml:lang="en">segment of the road</rdfs:isDefinedBy>
+		<rdfs:isDefinedBy xml:lang="en">part of the road</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ev;RoadSegment">
@@ -851,7 +851,7 @@
 	<owl:Class rdf:about="&auto-ev;UtilityPole">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Infrastructure"/>
 		<rdfs:label xml:lang="en">utility pole</rdfs:label>
-		<rdfs:isDefinedBy xml:lang="en">tall wooden pole that is used to support telephone wires, electrical wires, etc</rdfs:isDefinedBy>
+		<rdfs:isDefinedBy xml:lang="en">tall pole that is used to support telephone wires, electrical wires, etc</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ev;WarningRoadSign">
@@ -1317,12 +1317,6 @@
 		<owl:annotatedTarget xml:lang="en">institution of higher learning providing facilities for teaching and research and authorized to grant academic degrees</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
-		<sm:directSource>https://www.merriam-webster.com/dictionary/utility%20pole</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
-		<owl:annotatedSource rdf:resource="&auto-ev;UtilityPole"/>
-		<owl:annotatedTarget xml:lang="en">tall wooden pole that is used to support telephone wires, electrical wires, etc</owl:annotatedTarget>
-	</owl:Axiom>
-	<owl:Axiom>
 		<sm:directSource>https://www.oregon.gov/ODOT/Forms/DMV/1.pdf</sm:directSource>
 		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;Roundabout"/>
@@ -1423,5 +1417,11 @@
 		<owl:annotatedSource rdf:resource="&auto-ev;TrafficSignal"/>
 		<owl:annotatedTarget xml:lang="en">device manually, electrically or mechanically operated for the regulation of traffic</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>https://www.lawinsider.com/dictionary/traffic-signal</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-ev;UtilityPole"/>
+		<owl:annotatedTarget xml:lang="en">tall pole that is used to support telephone wires, electrical wires, etc</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://www.merriam-webster.com/dictionary/utility%20pole</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 </rdf:RDF>

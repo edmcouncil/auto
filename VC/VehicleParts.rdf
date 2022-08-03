@@ -86,7 +86,6 @@ It contains many classes and properties extracted from:
 	
 	<rdf:Description rdf:about="&auto-mo;SpecificallyDependentContinuant">
 		<rdfs:label xml:lang="en">specifically dependent continuant</rdfs:label>
-		<rdfs:isDefinedBy xml:lang="en">device that wipes the windows and windshields</rdfs:isDefinedBy>
 	</rdf:Description>
 	
 	<owl:Class rdf:about="&auto-vp;ABS">
@@ -392,7 +391,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">engine</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain.InternalCombustionEngine : Engine-specific attributes</rdfs:comment>
-		<rdfs:isDefinedBy xml:lang="en">engine, fuel system, induction system, aftertreatment system, and everything that makes up the system for which an engine manufacturer has received a certificate of conformity</rdfs:isDefinedBy>
+		<rdfs:isDefinedBy xml:lang="en">machine for converting any of various forms of energy into mechanical force and motion</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;ExternalLights">
@@ -1041,6 +1040,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">wiping</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Windshield.Front/Rear.Wiping : Front/Rear windshield wiper signals</rdfs:comment>
+		<rdfs:comment>device that wipes the windows and windshields</rdfs:comment>
 	</owl:Class>
 	
 	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;hasMaturityLevel">
@@ -1078,12 +1078,6 @@ It contains many classes and properties extracted from:
 		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
 		<owl:annotatedSource rdf:resource="&auto-vp;FuelSystem"/>
 		<owl:annotatedTarget xml:lang="en">combination of fuel tank, fuel pump, fuel lines, oil injection metering system, and carburetor or fuel injection components, and includes all fuel system vents</owl:annotatedTarget>
-	</owl:Axiom>
-	<owl:Axiom>
-		<sm:directSource>40 C.F.R. § 86.010-2</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
-		<owl:annotatedSource rdf:resource="&auto-vp;Engine"/>
-		<owl:annotatedTarget xml:lang="en">engine, fuel system, induction system, aftertreatment system, and everything that makes up the system for which an engine manufacturer has received a certificate of conformity</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
 		<sm:directSource>49 C.F.R § 393.5</sm:directSource>
@@ -1186,6 +1180,12 @@ It contains many classes and properties extracted from:
 		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
 		<owl:annotatedSource rdf:resource="&auto-vp;Axle"/>
 		<owl:annotatedTarget xml:lang="en">pin or shaft on or with which a wheel or pair of wheels revolves</owl:annotatedTarget>
+	</owl:Axiom>
+	<owl:Axiom>
+		<sm:directSource>https://www.merriam-webster.com/dictionary/engine</sm:directSource>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;Engine"/>
+		<owl:annotatedTarget xml:lang="en">machine for converting any of various forms of energy into mechanical force and motion</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
 		<sm:directSource>https://www.merriam-webster.com/dictionary/rearview%20mirror</sm:directSource>
