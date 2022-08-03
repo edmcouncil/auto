@@ -76,9 +76,9 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">accident</rdfs:label>
 		<rdfs:label xml:lang="pl">wypadek</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">something bad that happens that is not expected or intended and that often damages something or injures someone</rdfs:isDefinedBy>
+		<rdfs:isDefinedBy xml:lang="pl">zdarzenie w ruchu drogowym, gdzie jeden lub więcej uczestników ruchu drogowego bierze udział w zdarzeniu, w wyniku którego uczestnik ruchu drogowego został ranny lub doszło do jego śmierci.</rdfs:isDefinedBy>
 		<owl:disjointWith rdf:resource="&auto-ti;Collision"/>
-		<skos:definition xml:lang="en">something bad that happens that is not expected or intended and that often damages something or injures someone</skos:definition>
-		<skos:definition xml:lang="pl">zdarzenie w ruchu drogowym, gdzie jeden lub więcej uczestników ruchu drogowego bierze udział w zdarzeniu, w wyniku którego uczestnik ruchu drogowego został ranny lub doszło do jego śmierci.</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;AircraftAccident">
@@ -120,8 +120,8 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">collision</rdfs:label>
 		<rdfs:label xml:lang="pl">kolizja</rdfs:label>
-		<skos:definition xml:lang="en">occurs when a vehicle that is moving along a roadway collides with another vehicle or object</skos:definition>
-		<skos:definition xml:lang="pl">występuje, gdy pojazd poruszający się po jezdni zderza się z innym pojazdem lub przedmiotem</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">occurs when a vehicle that is moving along a roadway collides with another vehicle or object</rdfs:isDefinedBy>
+		<rdfs:isDefinedBy xml:lang="pl">występuje, gdy pojazd poruszający się po jezdni zderza się z innym pojazdem lub przedmiotem</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;CollisionCrash">
@@ -240,24 +240,24 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">dangerous behaviour</rdfs:label>
 		<rdfs:label xml:lang="pl">niebezpieczne zachowanie</rdfs:label>
-		<skos:definition xml:lang="en">action by a traffic user which results in a traffic incident</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">action by a traffic user which results in a traffic incident</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;DangerousOvertaking">
 		<rdfs:subClassOf rdf:resource="&auto-ti;DangerousBehaviour"/>
 		<rdfs:label xml:lang="en">dangerous overtaking</rdfs:label>
 		<rdfs:label xml:lang="pl">niebezpiecznie wyprzedzanie</rdfs:label>
-		<skos:definition xml:lang="en">action in which a traffic user overtakes another vehicle in a way that leads to an incident</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">action in which a traffic user overtakes another vehicle in a way that leads to an incident</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;Death">
 		<rdfs:subClassOf rdf:resource="&auto-ti;TrafficIncidentEffect"/>
 		<rdfs:label xml:lang="en">death</rdfs:label>
 		<rdfs:label xml:lang="pl">śmierć</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">a process leading to the cessation of all vital functions of the body as a result of irreversible inhibition of biological reactions in its cells</rdfs:isDefinedBy>
+		<rdfs:isDefinedBy xml:lang="pl">proces prowadzący do ustania wszelkich funkcji życiowych organizmu w wyniku nieodwracalnego zahamowania reakcji biologicznych w jego komórkach.</rdfs:isDefinedBy>
 		<owl:disjointWith rdf:resource="&auto-ti;DestructionOfProperty"/>
 		<owl:disjointWith rdf:resource="&auto-ti;Victim"/>
-		<skos:definition xml:lang="en">a process leading to the cessation of all vital functions of the body as a result of irreversible inhibition of biological reactions in its cells</skos:definition>
-		<skos:definition xml:lang="pl">proces prowadzący do ustania wszelkich funkcji życiowych organizmu w wyniku nieodwracalnego zahamowania reakcji biologicznych w jego komórkach.</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;DeliberateIntent">
@@ -271,9 +271,9 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 		<rdfs:subClassOf rdf:resource="&auto-ti;TrafficIncidentEffect"/>
 		<rdfs:label xml:lang="en">destruction of property</rdfs:label>
 		<rdfs:label xml:lang="pl">zniszczenie mienia</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">damage to or the destruction of public or private property, caused either by a person who is not its owner or by natural phenomena</rdfs:isDefinedBy>
+		<rdfs:isDefinedBy xml:lang="pl">uszkodzenie lub zniszczenie własności publicznej lub prywatnej, spowodowane przez osobę niebędącą jej właścicielem lub przez zjawiska naturalne.</rdfs:isDefinedBy>
 		<owl:disjointWith rdf:resource="&auto-ti;Victim"/>
-		<skos:definition xml:lang="en">damage to or the destruction of public or private property, caused either by a person who is not its owner or by natural phenomena</skos:definition>
-		<skos:definition xml:lang="pl">uszkodzenie lub zniszczenie własności publicznej lub prywatnej, spowodowane przez osobę niebędącą jej właścicielem lub przez zjawiska naturalne.</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;DisablingDamage">
@@ -323,8 +323,8 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">driving under the influence</rdfs:label>
 		<rdfs:label xml:lang="pl">prowadzenie pojazdu w stanie nietrzeźwości</rdfs:label>
-		<skos:definition xml:lang="en">driving motor or non-mechanical vehicles during or after consuming alcohol or psychoactive substances</skos:definition>
-		<skos:definition xml:lang="pl">prowadzenie pojazdów mechanicznych albo innych niż mechaniczne w okresie spożywania lub po spożyciu alkoholu lub substancji psychoaktywnych</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">driving motor or non-mechanical vehicles during or after consuming alcohol or psychoactive substances</rdfs:isDefinedBy>
+		<rdfs:isDefinedBy xml:lang="pl">prowadzenie pojazdów mechanicznych albo innych niż mechaniczne w okresie spożywania lub po spożyciu alkoholu lub substancji psychoaktywnych</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;Entrance-ExitRamp-relatedCrash">
@@ -353,15 +353,15 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">entry on red light</rdfs:label>
 		<rdfs:label xml:lang="pl">wejście na czerwonym świetle</rdfs:label>
-		<skos:definition xml:lang="en">action of crossing the pedestrian crossing while the traffic light is red</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">action of crossing the pedestrian crossing while the traffic light is red</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;Fainting">
 		<rdfs:subClassOf rdf:resource="&auto-ti;TrafficIncidentCauses"/>
 		<rdfs:label xml:lang="en">fainting</rdfs:label>
 		<rdfs:label xml:lang="pl">omdlenie</rdfs:label>
-		<skos:definition>krótkotrwała utrata przytomności wywołana przejściowym globalnym zmniejszeniem perfuzji mózgowej. Charakteryzuje się szybkim rozwojem objawów aż do zupełnej utraty przytomności, krótkim czasem trwania oraz samoistnym i pełnym odzyskaniem przytomności.</skos:definition>
-		<skos:definition xml:lang="en">short-term loss of consciousness due to transient global decrease in cerebral perfusion. It is characterized by rapid development of symptoms up to complete loss of consciousness, short duration, and spontaneous and full recovery.</skos:definition>
+		<rdfs:isDefinedBy>krótkotrwała utrata przytomności wywołana przejściowym globalnym zmniejszeniem perfuzji mózgowej. Charakteryzuje się szybkim rozwojem objawów aż do zupełnej utraty przytomności, krótkim czasem trwania oraz samoistnym i pełnym odzyskaniem przytomności.</rdfs:isDefinedBy>
+		<rdfs:isDefinedBy xml:lang="en">short-term loss of consciousness due to transient global decrease in cerebral perfusion. It is characterized by rapid development of symptoms up to complete loss of consciousness, short duration, and spontaneous and full recovery.</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;FatalCrash">
@@ -397,8 +397,8 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">forcing the right of way</rdfs:label>
 		<rdfs:label xml:lang="pl">wymuszenie pierwszeństwa</rdfs:label>
-		<skos:definition xml:lang="pl">niepowstrzymanie się od ruchu, jeżeli ruch mógłby zmusić innego kierującego do zmiany kierunku lub pasa ruchu albo istotnej zmiany prędkości, a pieszego - do zatrzymania się, zwolnienia lub przyspieszenia kroku</skos:definition>
-		<skos:definition xml:lang="en">refraining from traffic if this traffic may force another driver to change direction or lane or change the speed significantly and to stop, slow down or accelerate by pedestrians</skos:definition>
+		<rdfs:isDefinedBy xml:lang="pl">niepowstrzymanie się od ruchu, jeżeli ruch mógłby zmusić innego kierującego do zmiany kierunku lub pasa ruchu albo istotnej zmiany prędkości, a pieszego - do zatrzymania się, zwolnienia lub przyspieszenia kroku</rdfs:isDefinedBy>
+		<rdfs:isDefinedBy xml:lang="en">refraining from traffic if this traffic may force another driver to change direction or lane or change the speed significantly and to stop, slow down or accelerate by pedestrians</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;FunctionalDamage">
@@ -463,7 +463,7 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">inoperative vehicle</rdfs:label>
 		<rdfs:label xml:lang="pl">niesprawny pojazd</rdfs:label>
-		<skos:definition xml:lang="en">state of a vehicle in which some or all of its functions do not work</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">state of a vehicle in which some or all of its functions do not work</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;InterchangeCrash">
@@ -566,15 +566,15 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:DatatypeProperty rdf:about="&auto-ti;MovementSpeed">
 		<rdfs:label xml:lang="en">movement speed</rdfs:label>
-		<skos:definition xml:lang="en">relates a vehicle to its movement speed</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">relates a vehicle to its movement speed</rdfs:isDefinedBy>
 	</owl:DatatypeProperty>
 	
 	<owl:Class rdf:about="&auto-ti;MovingObject">
 		<rdfs:subClassOf rdf:resource="&auto-ti;OtherObjectsWithWhichCarCanCollide"/>
 		<rdfs:label xml:lang="en">moving object</rdfs:label>
 		<rdfs:label xml:lang="pl">obiekt ruchomy</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">object which is in motion and changes location</rdfs:isDefinedBy>
 		<owl:disjointWith rdf:resource="&auto-ti;StaticObject"/>
-		<skos:definition xml:lang="en">object which is in motion and changes location</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;NoApparentInjury">
@@ -640,7 +640,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<rdfs:subClassOf rdf:resource="&auto-ti;DangerousBehaviour"/>
 		<rdfs:label xml:lang="pl">niedostosowanie prędkości do warunków atmosferycznych</rdfs:label>
 		<rdfs:label xml:lang="en">not adapting speed to weather conditions</rdfs:label>
-		<skos:definition xml:lang="en">action of driving at a speed that is inadequate to weather conditions</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">action of driving at a speed that is inadequate to weather conditions</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;NotIn-transport">
@@ -653,12 +653,12 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:DatatypeProperty rdf:about="&auto-ti;ObjectMass">
 		<rdfs:label xml:lang="en">object mass</rdfs:label>
-		<skos:definition xml:lang="en">relates an object to its mass</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">relates an object to its mass</rdfs:isDefinedBy>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ti;ObjectValue">
 		<rdfs:label xml:lang="en">object value</rdfs:label>
-		<skos:definition xml:lang="en">relates an object to its value</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">relates an object to its value</rdfs:isDefinedBy>
 	</owl:DatatypeProperty>
 	
 	<owl:Class rdf:about="&auto-ti;Occupant">
@@ -713,7 +713,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<rdfs:subClassOf rdf:resource="&auto-mo;MaterialEntity"/>
 		<rdfs:label xml:lang="pl">inne przedmioty z którymi samochód może się zderzyć</rdfs:label>
 		<rdfs:label xml:lang="en">other objects with which car can colide</rdfs:label>
-		<skos:definition xml:lang="en">objects other than infrastructure, agents, vehicles, property, natural places, hazardous material, hazardous material placard, with which vehicles can collide</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">objects other than infrastructure, agents, vehicles, property, natural places, hazardous material, hazardous material placard, with which vehicles can collide</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;OverturningCrash">
@@ -748,10 +748,10 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<rdfs:subClassOf rdf:resource="&auto-ti;RoleOfPersonInTraffic"/>
 		<rdfs:label xml:lang="en">pedestrian</rdfs:label>
 		<rdfs:label xml:lang="pl">pieszy</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">a person walking rather than travelling in a vehicle</rdfs:isDefinedBy>
+		<rdfs:isDefinedBy xml:lang="pl">osobę znajdującą się poza pojazdem na drodze i niewykonującą na niej robót lub czynności przewidzianych odrębnymi przepisami</rdfs:isDefinedBy>
 		<owl:disjointWith rdf:resource="&auto-vc;Vehicle"/>
 		<skos:definition xml:lang="en">Any person who is not an occupant.</skos:definition>
-		<skos:definition xml:lang="en">a person walking rather than travelling in a vehicle</skos:definition>
-		<skos:definition xml:lang="pl">osobę znajdującą się poza pojazdem na drodze i niewykonującą na niej robót lub czynności przewidzianych odrębnymi przepisami</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.36</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
@@ -840,13 +840,13 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	<owl:Class rdf:about="&auto-ti;RoleInAccident">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Role"/>
 		<rdfs:label xml:lang="en">role in accident</rdfs:label>
-		<skos:definition xml:lang="en">role a vehicle takes in an accident</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">role a vehicle takes in an accident</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;RoleOfPersonInTraffic">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Role"/>
 		<rdfs:label xml:lang="en">role of person in traffic</rdfs:label>
-		<skos:definition xml:lang="en">role a person can take while being in traffic</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">role a person can take while being in traffic</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;SchoolBusCrash">
@@ -866,20 +866,20 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="pl">niedopasowanie prędkości</rdfs:label>
 		<rdfs:label xml:lang="en">speed mismatching</rdfs:label>
-		<skos:definition xml:lang="en">action of having inadequate speed</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">action of having inadequate speed</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;State">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Process"/>
 		<rdfs:label xml:lang="en">state</rdfs:label>
-		<skos:definition xml:lang="en">state or condition of a transport vehicle</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">state or condition of a transport vehicle</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;StaticObject">
 		<rdfs:subClassOf rdf:resource="&auto-ti;OtherObjectsWithWhichCarCanCollide"/>
 		<rdfs:label xml:lang="pl">obiekt statyczny</rdfs:label>
 		<rdfs:label xml:lang="en">static object</rdfs:label>
-		<skos:definition xml:lang="en">object that does not move</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">object that does not move</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;StreetcarCrash">
@@ -909,21 +909,21 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<rdfs:subClassOf rdf:resource="&auto-ti;SpeedMismatching"/>
 		<rdfs:label xml:lang="en">too high</rdfs:label>
 		<rdfs:label xml:lang="pl">zbyt duża prędkość</rdfs:label>
-		<skos:definition xml:lang="en">action of having too high speed</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">action of having too high speed</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;TooLow">
 		<rdfs:subClassOf rdf:resource="&auto-ti;SpeedMismatching"/>
 		<rdfs:label xml:lang="en">too low</rdfs:label>
 		<rdfs:label xml:lang="pl">zbyt mała prędkość</rdfs:label>
-		<skos:definition xml:lang="en">action of having too low speed</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">action of having too low speed</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;TooSmallDistanceBetweenVehicles">
 		<rdfs:subClassOf rdf:resource="&auto-ti;DangerousBehaviour"/>
 		<rdfs:label xml:lang="en">too small distance between vehicles</rdfs:label>
 		<rdfs:label xml:lang="pl">zachowanie zbyt małej odległości między pojazdami</rdfs:label>
-		<skos:definition xml:lang="en">action of maintaining too small a distance between two vehicles</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">action of maintaining too small a distance between two vehicles</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;TrafficCrash">
@@ -943,6 +943,8 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">traffic incident</rdfs:label>
 		<rdfs:label xml:lang="pl">zdarzenie drogowe</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">all road accidents - irrespective of whether there is an accident or serious material damage</rdfs:isDefinedBy>
+		<rdfs:isDefinedBy xml:lang="pl">wszystkie wydarzenia na drodze – niezależnie od tego, czy są jakieś ofiary lub poważne straty materialne</rdfs:isDefinedBy>
 		<owl:equivalentClass>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="&auto-ti;hasCause"/>
@@ -955,8 +957,6 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 				<owl:someValuesFrom rdf:resource="&auto-ti;TrafficIncidentEffect"/>
 			</owl:Restriction>
 		</owl:equivalentClass>
-		<skos:definition xml:lang="en">all road accidents - irrespective of whether there is an accident or serious material damage</skos:definition>
-		<skos:definition xml:lang="pl">wszystkie wydarzenia na drodze – niezależnie od tego, czy są jakieś ofiary lub poważne straty materialne</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;TrafficIncidentCauses">
@@ -969,7 +969,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="pl">przyczyna zdarzeń drogowych</rdfs:label>
 		<rdfs:label xml:lang="en">traffic incident causes</rdfs:label>
-		<skos:definition xml:lang="en">possible causes of a traffic incident</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">possible causes of a traffic incident</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;TrafficIncidentEffect">
@@ -982,7 +982,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="pl">skutek zdarzeń drogowych</rdfs:label>
 		<rdfs:label xml:lang="en">traffic incident effect</rdfs:label>
-		<skos:definition xml:lang="en">possible effect of a traffic incident</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">possible effect of a traffic incident</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;TrafficParticipant">
@@ -995,8 +995,8 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">traffic participant</rdfs:label>
 		<rdfs:label xml:lang="pl">uczestnik ruchu</rdfs:label>
-		<skos:definition xml:lang="en">pedestrians, drivers, and other people in the vehicle or on a vehicle on the road</skos:definition>
-		<skos:definition>pieszy, kierujący, a także inne osoby przebywające w pojeździe lub na pojeździe znajdującym się na drodze</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">pedestrians, drivers, and other people in the vehicle or on a vehicle on the road</rdfs:isDefinedBy>
+		<rdfs:isDefinedBy>pieszy, kierujący, a także inne osoby przebywające w pojeździe lub na pojeździe znajdującym się na drodze</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;TrafficUnit">
@@ -1016,8 +1016,8 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">traffic violation</rdfs:label>
 		<rdfs:label xml:lang="pl">wykroczenie drogowe</rdfs:label>
-		<skos:definition xml:lang="pl">czyn społecznie szkodliwy (nawet w stopniu znikomym), zabroniony przez ustawę obowiązującą w czasie jego popełnienia pod groźbą kary aresztu, ograniczenia wolności, grzywny do 5000 złotych lub nagany</skos:definition>
-		<skos:definition xml:lang="en">socially harmful act (even to a slight extent), prohibited by the law in force at the time of its commission, under pain of imprisonment, restriction of liberty, fine up to PLN 5,000 or reprimand</skos:definition>
+		<rdfs:isDefinedBy xml:lang="pl">czyn społecznie szkodliwy (nawet w stopniu znikomym), zabroniony przez ustawę obowiązującą w czasie jego popełnienia pod groźbą kary aresztu, ograniczenia wolności, grzywny do 5000 złotych lub nagany</rdfs:isDefinedBy>
+		<rdfs:isDefinedBy xml:lang="en">socially harmful act (even to a slight extent), prohibited by the law in force at the time of its commission, under pain of imprisonment, restriction of liberty, fine up to PLN 5,000 or reprimand</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;TransportCrash">
@@ -1051,15 +1051,15 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="pl">korzystanie z telefonu komórkowego podczas prowadzenia samochodu</rdfs:label>
 		<rdfs:label xml:lang="en">using mobile phone during driving</rdfs:label>
-		<skos:definition xml:lang="en">action of using a mobile phone by a driver while operating a vehicle</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">action of using a mobile phone by a driver while operating a vehicle</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;Victim">
 		<rdfs:subClassOf rdf:resource="&auto-ti;TrafficIncidentEffect"/>
 		<rdfs:label xml:lang="pl">poszkodowanie</rdfs:label>
 		<rdfs:label xml:lang="en">victim</rdfs:label>
-		<skos:definition xml:lang="pl">to be hurt or damaged because of something or someone</skos:definition>
-		<skos:definition xml:lang="pl">zostać zranionym lub uszkodzonym z powodu czegoś lub kogoś</skos:definition>
+		<rdfs:isDefinedBy xml:lang="pl">to be hurt or damaged because of something or someone</rdfs:isDefinedBy>
+		<rdfs:isDefinedBy xml:lang="pl">zostać zranionym lub uszkodzonym z powodu czegoś lub kogoś</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;WatercraftAccident">
@@ -1073,7 +1073,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<rdfs:subClassOf rdf:resource="&auto-mo;Process"/>
 		<rdfs:label xml:lang="pl">pogoda</rdfs:label>
 		<rdfs:label xml:lang="en">weather</rdfs:label>
-		<skos:definition xml:lang="en">current atmospheric conditions</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">current atmospheric conditions</rdfs:isDefinedBy>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;WorkZoneCrash">
@@ -1085,7 +1085,7 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;does">
 		<rdfs:label xml:lang="en">does</rdfs:label>
-		<skos:definition xml:lang="en">relates a traffic user or a vehicle to an action</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">relates a traffic user or a vehicle to an action</rdfs:isDefinedBy>
 	</owl:ObjectProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ti;grossCombinationWeightRating">
@@ -1117,43 +1117,43 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	<owl:ObjectProperty rdf:about="&auto-ti;hasCause">
 		<rdf:type rdf:resource="&owl;AsymmetricProperty"/>
 		<rdfs:label xml:lang="en">has cause</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a process to another process that causes it</rdfs:isDefinedBy>
 		<owl:inverseOf rdf:resource="&auto-ti;isCauseOf"/>
-		<skos:definition xml:lang="en">relates a process to another process that causes it</skos:definition>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;hasDangerousBehaviour">
 		<rdfs:label xml:lang="en">has dangerous behaviour</rdfs:label>
-		<skos:definition xml:lang="en">relates a traffic user to a dangerous behaviour he is exhibiting</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">relates a traffic user to a dangerous behaviour he is exhibiting</rdfs:isDefinedBy>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;hasEffect">
 		<rdf:type rdf:resource="&owl;AsymmetricProperty"/>
 		<rdfs:label xml:lang="en">has effect</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a process to another process that is its effect</rdfs:isDefinedBy>
 		<owl:inverseOf rdf:resource="&auto-ti;isEffectOf"/>
-		<skos:definition xml:lang="en">relates a process to another process that is its effect</skos:definition>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;hasPatient">
 		<rdfs:label xml:lang="en">has patient</rdfs:label>
-		<skos:definition xml:lang="en">relates a hospital to a patient present there</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">relates a hospital to a patient present there</rdfs:isDefinedBy>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;hasTrafficUser">
 		<rdfs:label xml:lang="en">has traffic user</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">relates a crash to a traffic user who participates in it</rdfs:isDefinedBy>
 		<owl:inverseOf rdf:resource="&auto-ti;isParticipantOf"/>
-		<skos:definition xml:lang="en">relates a crash to a traffic user who participates in it</skos:definition>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;isCauseOf">
 		<rdf:type rdf:resource="&owl;AsymmetricProperty"/>
 		<rdfs:label xml:lang="en">is cause of</rdfs:label>
-		<skos:definition xml:lang="en">relates a process to another one that is caused by it</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">relates a process to another one that is caused by it</rdfs:isDefinedBy>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;isEffectOf">
 		<rdf:type rdf:resource="&owl;AsymmetricProperty"/>
 		<rdfs:label xml:lang="en">is effect of</rdfs:label>
-		<skos:definition xml:lang="en">relates a process to another process of which it is an effect</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">relates a process to another process of which it is an effect</rdfs:isDefinedBy>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;isOffenceOf">
@@ -1163,17 +1163,17 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 	<owl:ObjectProperty rdf:about="&auto-ti;isParticipantOf">
 		<rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
 		<rdfs:label xml:lang="en">is participant of</rdfs:label>
-		<skos:definition xml:lang="en">relates a traffic user to a crash in which he participates</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">relates a traffic user to a crash in which he participates</rdfs:isDefinedBy>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;isPatientOf">
 		<rdfs:label xml:lang="en">is patient of</rdfs:label>
-		<skos:definition xml:lang="en">relates a traffic user to a hospital in which he is being treated</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">relates a traffic user to a hospital in which he is being treated</rdfs:isDefinedBy>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-ti;operatesAtADSLevel">
 		<rdfs:label xml:lang="en">is capable of driving at</rdfs:label>
-		<skos:definition xml:lang="en">relates a vehicle to the ADS level at which it operates</skos:definition>
+		<rdfs:isDefinedBy xml:lang="en">relates a vehicle to the ADS level at which it operates</rdfs:isDefinedBy>
 	</owl:ObjectProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ti;totalLanesInRoadway">
