@@ -98,12 +98,14 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">ABS</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.ADAS.ABS : Antilock Braking System signals</rdfs:comment>
+		<skos:definition xml:lang="en">portion of a service brake system that automatically controls the degree of rotational wheel slip</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;ADAS">
 		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
 		<rdfs:label xml:lang="en">ADAS</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.ADAS : All Advanced Driver Assist Systems attributes</rdfs:comment>
+		<skos:definition xml:lang="en">broad range of features, including those that provide warnings and/or momentary intervention, such as forward collision warning (FCW) systems, lane keeping assistance (LKA) systems, and automatic emergency braking (AEB) systems, as well as some convenience features that involve Level 1 driver support features, such as ACC and certain parking assistance features</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Acceleration">
@@ -122,6 +124,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">accelerator</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Accelerator : Accelerator signals</rdfs:comment>
+		<skos:definition xml:lang="en">pedal that controls the amount of gas being fed into the engine and thereby controls the speed of the vehicle</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Airbag">
@@ -134,6 +137,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">airbag</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Airbag : Airbag signals</rdfs:comment>
+		<skos:definition xml:lang="en">inflatable occupant restraint device that is designed to deploy in a side impact crash to help mitigate occupant injury and/or ejection</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;AltenateO2Sensor">
@@ -165,6 +169,7 @@ It contains many classes and properties extracted from:
 		<rdfs:label xml:lang="en">axle</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Axle : Axle configuration attributes</rdfs:comment>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Axle : Axle signals</rdfs:comment>
+		<skos:definition xml:lang="en">pin or shaft on or with which a wheel or pair of wheels revolves</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;BatteryManagement">
@@ -177,12 +182,14 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">battery management</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain.BatteryManagement : Battery Management attributes</rdfs:comment>
+		<skos:definition xml:lang="en">device or solution that manages battery performance, including controlling the charging and discharging of batteries, electrochemical cells, and fuel cells</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Body">
 		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
 		<rdfs:label xml:lang="en">body</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Body : All body components</rdfs:comment>
+		<skos:definition xml:lang="en">outer panels that shroud a vehicle&apos;s mechanical and electrical workings</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Brake">
@@ -195,6 +202,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">brake</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Axle.RowX.Wheel.Left/Right.Brake : Brake signals for wheel</rdfs:comment>
+		<skos:definition xml:lang="en">energy conversion mechanism used to stop, or hold a vehicle stationary</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;BrakePedal">
@@ -207,12 +215,14 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">brake pedal</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Brake : Brake system signals</rdfs:comment>
+		<skos:definition xml:lang="en">device used to control the brakes of a vehicle</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Cabin">
 		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
 		<rdfs:label xml:lang="en">cabin</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin : All in-cabin components</rdfs:comment>
+		<skos:definition xml:lang="en">interior space of a vehicle</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Catalyst">
@@ -225,12 +235,14 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">catalyst</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.OBD.Catalyst : Catalyst signals</rdfs:comment>
+		<skos:definition xml:lang="en">canister in the exhaust system, usually situated before the muffler, containing a substance that reacts chemically with the exhaust in order to reduce harmful emissions</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Chassis">
 		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
 		<rdfs:label xml:lang="en">chassis</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis : All attributes concerning steering</rdfs:comment>
+		<skos:definition xml:lang="en">load-supporting frame of a commercial motor vehicle, exclusive of any appurtenances which might be added to accommodate cargo</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;CruiseControl">
@@ -243,6 +255,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">cruise control</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.ADAS.CruiseControl : Signals from Cruise Control system</rdfs:comment>
+		<skos:definition xml:lang="en">device that automatically controls the vehicle&apos;s speed when engaged by the driver</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;CurrentDriveCycleStatus">
@@ -255,6 +268,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">drive cycle status</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.OBD.DriveCycleStatus : PID 41 - OBD status for the current drive cycle</rdfs:comment>
+		<skos:definition xml:lang="en">current status of a drive cycle of a vehicle</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;CurrentLocation">
@@ -267,6 +281,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">current location</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Infotainment.Navigation.CurrentLocation : The current latitude and longitude of the vehicle.</rdfs:comment>
+		<skos:definition xml:lang="en">current location of a vehicle</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Cushion">
@@ -279,6 +294,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">cushion</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Cushion : Cushion signals.</rdfs:comment>
+		<skos:definition xml:lang="en">anything that is used to soften an impact or absorb shocks</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;CushionSwitch">
@@ -303,6 +319,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">destination set</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Infotainment.Navigation.DestinatonSet : A navigation has been selected.</rdfs:comment>
+		<skos:definition xml:lang="en">device that sets the destination of a vehicle</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;DistanceToObject">
@@ -315,6 +332,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">distance to object</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.ADAS.ObstacleDetection.DistanceToObject : Distance signals form Obstacle Sensor System</rdfs:comment>
+		<skos:definition xml:lang="en">device that tells the driver the distance from the vehicle to a given object</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Door">
@@ -327,12 +345,14 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">door</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Door : All doors</rdfs:comment>
+		<skos:definition xml:lang="en">assembly that is installed in an interior or exterior wall; that is movable in a sliding, pivoting, hinged, or revolving manner of movement; and that is used by consumers to produce or close off an opening for use as a means of human passage</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Drivetrain">
 		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
 		<rdfs:label xml:lang="en">drivetrain</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain : Drivetrain attributes internal combustion engines</rdfs:comment>
+		<skos:definition xml:lang="en">system of components that generates power and transmits it to the wheels of a vehicle</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;ESC">
@@ -345,6 +365,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">ESC</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.ADAS.ESC : Electronic Stability Control System signals</rdfs:comment>
+		<skos:definition xml:lang="en">system that augments vehicle directional stability by applying and adjusting the vehicle brake torques individually to induce a correcting yaw moment to a vehicle, is computer-controlled with the computer using a closed-loop algorithm to limit vehicle oversteer and to limit vehicle understeer and has a means to monitor driver steering inputs</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;ElectricMotor">
@@ -357,6 +378,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">electric motor</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain.ElectricMotor : Electric Motor specific signals.</rdfs:comment>
+		<skos:definition xml:lang="en">electro-mechanical machine which converts electrical energy into mechanical energy</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Engine">
@@ -369,6 +391,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">engine</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain.InternalCombustionEngine : Engine-specific attributes</rdfs:comment>
+		<skos:definition xml:lang="en">machine for converting any of various forms of energy into mechanical force and motion</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;ExternalLights">
@@ -381,6 +404,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">external lights</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Lights : All lights</rdfs:comment>
+		<skos:definition xml:lang="en">head lights, tail lights, stop lights, back-up lights, turn signals and hazard warning lights</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;FuelCell">
@@ -393,6 +417,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">fuel cell</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain.FuelCell : Fuel Cell attributes</rdfs:comment>
+		<skos:definition xml:lang="en">electrochemical cell that produces electricity via the non-combustion reaction of a consumable fuel, typically hydrogen</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;FuelSystem">
@@ -405,6 +430,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">fuel system</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain.FuelSystem : Fuel System attributes</rdfs:comment>
+		<skos:definition xml:lang="en">combination of fuel tank, fuel pump, fuel lines, oil injection metering system, and carburetor or fuel injection components, and includes all fuel system vents</skos:definition>
 	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-vp;GPS">
@@ -421,6 +447,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">HVAC</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.HVAC : Climate control</rdfs:comment>
+		<skos:definition xml:lang="en">system used for moving air between indoor and outdoor areas along with heating and cooling</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;HeadRestraint">
@@ -433,6 +460,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">head restraint</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.HeadRestraint : Head restraint settings</rdfs:comment>
+		<skos:definition xml:lang="en">device that limits the rearward displacement of a seated occupant&apos;s head relative to the occupant&apos;s torso</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;HeadRestraintSwitch">
@@ -445,6 +473,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">head restraint switch</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.HeadRestraint : Head restraint switches</rdfs:comment>
+		<skos:definition xml:lang="en">device that allows for modification of the level of height or angle of a head restraint</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Hood">
@@ -457,6 +486,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">hood</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Hood : Hood status</rdfs:comment>
+		<skos:definition xml:lang="en">exterior movable body panel forward of the windshield that is used to cover an engine, luggage, storage, or battery compartment</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Horn">
@@ -469,6 +499,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">horn</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Horn : Horn signals</rdfs:comment>
+		<skos:definition xml:lang="en">device able to give an adequate and reliable warning sign</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Infotainment">
@@ -481,11 +512,13 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">infotainment</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Infotainment : Infotainment system</rdfs:comment>
+		<skos:definition xml:lang="en">vehicle system that combines entertainment and information delivery to drivers and passengers</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;InternalCombustionEngine">
 		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
 		<rdfs:label xml:lang="en">internal combustion engine</rdfs:label>
+		<skos:definition xml:lang="en">heat engine in which the combustion that generates the heat takes place inside the engine proper instead of in a furnace</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;InternalLights">
@@ -498,6 +531,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">internal lights</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Lights : Interior lights signals and sensors</rdfs:comment>
+		<skos:definition xml:lang="en">halogen lamps or light-emitting diodes (LEDs) used to illuminate a vehicle&apos;s interior space</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;LaneDepartureDetection">
@@ -510,6 +544,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">lane departure detection</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.ADAS.LaneDepartureDetection : Signals from Land Departure Detection System</rdfs:comment>
+		<skos:definition xml:lang="en">system of electronic components designed to warn a driver when a vehicle strays out of its lane</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;LocalHVAC">
@@ -546,6 +581,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">lumbar</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Lumbar : Lumbar signals</rdfs:comment>
+		<skos:definition xml:lang="en">mechanical or pneumatic device that matches a vehicle&apos;s seat back to the contours of the driver or passenger</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;LumbarSwitch">
@@ -558,6 +594,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">lumbar switch</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.Lumbar : Lumbar switches</rdfs:comment>
+		<skos:definition xml:lang="en">device that allows for the adjustment of lumbar support</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;MassageSwitch">
@@ -570,6 +607,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">massage</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.Massage : Massage switches</rdfs:comment>
+		<skos:definition xml:lang="en">device that allows for the adjustment of moving elements in the seats</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Media">
@@ -582,6 +620,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">media</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Infotainment.Media : All Media actions</rdfs:comment>
+		<skos:definition xml:lang="en">system that allows the driver and passengers to access the media in the vehicle</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;MirrorHeating">
@@ -594,6 +633,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">mirror heating</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Mirrors.Left/Right.Heating : Mirror heater signals</rdfs:comment>
+		<skos:definition xml:lang="en">system that provides heat to the windows</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Mirrors">
@@ -606,6 +646,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">mirrors</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Mirrors : All mirrors</rdfs:comment>
+		<skos:definition xml:lang="en">polished or smooth surfaces (as of glass) that form images by reflection</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Navigation">
@@ -618,6 +659,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">navigation</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Infotainment.Navigation : All navigation actions</rdfs:comment>
+		<skos:definition xml:lang="en">device that communicates with global positioning satellites to determine a vehicle&apos;s physical location and plot a course using stored map information</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;O2Sensor">
@@ -630,6 +672,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">O2 sensor</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.OBD.O2WR.SensorX : Wide range/band oxygen senor 8</rdfs:comment>
+		<skos:definition xml:lang="en">sensor mounted in the exhaust stream that relays air/fuel ratio information to the fuel control computer that allows the computer to make adjustments</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;O2SensorOther">
@@ -642,6 +685,7 @@ It contains many classes and properties extracted from:
 		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
 		<rdfs:label xml:lang="en">OBD</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.OBD : OBD data.</rdfs:comment>
+		<skos:definition xml:lang="en">computer-controlled system that identifies malfunctioning or out-of-adjustment components under its control through the display of trouble codes</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;OBDStatus">
@@ -654,6 +698,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">status</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.OBD.Status : PID 01 - OBD status</rdfs:comment>
+		<skos:definition xml:lang="en">current OBD status of a vehicle</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;ObstacleDetection">
@@ -666,6 +711,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">obstacle detection</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.ADAS.ObstacleDetection : Signals form Obstacle Sensor System</rdfs:comment>
+		<skos:definition xml:lang="en">system that detects obstacles in close proximity to the vehicle</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;ParkingBrake">
@@ -678,6 +724,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">parking brake</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.ParkingBrake : Parking brake signals</rdfs:comment>
+		<skos:definition xml:lang="en">mechanism designed to prevent the movement of a stationary motor vehicle</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Played">
@@ -690,6 +737,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">played</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Infotainment.Media.Played : Collection of signals updated in concert when a new media is played</rdfs:comment>
+		<skos:definition xml:lang="en">current media played in the vehicle</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Raindetection">
@@ -702,6 +750,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">rain detection</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Raindetection : Rainsensor signals</rdfs:comment>
+		<skos:definition xml:lang="en">feature that detects rain</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;RearShade">
@@ -714,6 +763,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">rear shade</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.RearShade : Rear window shade.</rdfs:comment>
+		<skos:definition xml:lang="en">shade of a rear window</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;RearviewMirror">
@@ -726,6 +776,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">rearview mirror</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.RearviewMirror : Rearview mirror</rdfs:comment>
+		<skos:definition xml:lang="en">mirror (as in an automobile) that gives a view of the area behind a vehicle</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;ReclineSwitch">
@@ -738,6 +789,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">recline</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.Recline : Recline switches</rdfs:comment>
+		<skos:definition xml:lang="en">device that allows for reclining a seat</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Seat">
@@ -750,6 +802,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">seat</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat : All seats.</rdfs:comment>
+		<skos:definition xml:lang="en">part of a vehicle that has been designed for someone to sit on</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;SeatSwitch">
@@ -762,6 +815,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">switch</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch : Seat switch signals</rdfs:comment>
+		<skos:definition xml:lang="en">device that allows for the adjustment of a seat&apos;s position</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;SideBolster">
@@ -774,6 +828,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">side bolster</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.SideBolster : Side bolster settings</rdfs:comment>
+		<skos:definition xml:lang="en">set of adjustable seat elements on the sides of the seat cushion and/or on the seat back that allow lateral retention of the occupant</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;SideBolsterSwitch">
@@ -786,6 +841,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">side bolster switch</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Seat.RowX.PosX.Switch.SideBolster : Side bolster switches</rdfs:comment>
+		<skos:definition xml:lang="en">device that allows for adjustment of the side bolster</skos:definition>
 	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-vp;Speedometer">
@@ -802,6 +858,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">steering wheel</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.SteeringWheel : Steering wheel signals</rdfs:comment>
+		<skos:definition xml:lang="en">handwheel by means of which one steers a vehicle</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;SunRoofShade">
@@ -814,6 +871,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">sunroof shade</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Sunroof.Shade : Sun roof shade status</rdfs:comment>
+		<skos:definition xml:lang="en">shade of a sunroof window</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Sunroof">
@@ -826,6 +884,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">sunroof</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Sunroof : Sun roof status.</rdfs:comment>
+		<skos:definition xml:lang="en">fixed or operable opening in the roof of a vehicle that is covered with a metal or glass plug</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;TCS">
@@ -838,6 +897,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">TCS</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.ADAS.TCS : Traction Control System signals</rdfs:comment>
+		<skos:definition xml:lang="en">safety feature that regulates wheel spin and prevents loss of control under acceleration by ensuring maximum traction and contact between the tires and the road (by adjusting brake pressure to one or more wheels, closing the throttle, or reducing the fuel supply to at least one or more cylinders)</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Tire">
@@ -850,6 +910,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">tire</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Axle.RowX.Wheel.Left/Right.Tire : Tire signals for wheel</rdfs:comment>
+		<skos:definition xml:lang="en">rubber casing, hoop, and strip or band of all kinds designed and shaped or built to form the tread of or to fit a vehicle wheel</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Transmission">
@@ -862,6 +923,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">transmission</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain.Transmission : Transmission-specific attributes</rdfs:comment>
+		<skos:definition xml:lang="en">system in a vehicle that changes gears at different speeds</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Trunk">
@@ -874,17 +936,20 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">trunk</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Trunk : Trunk status</rdfs:comment>
+		<skos:definition xml:lang="en">space that is intended to be used for carrying luggage or cargo</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;VehicleIdentification">
 		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
 		<rdfs:label xml:lang="en">vehicle identification</rdfs:label>
 		<rdfs:comment xml:lang="en">Attribute.Vehicle.VehicleIdentification : Attributes that identify a vehicle</rdfs:comment>
+		<skos:definition xml:lang="en">series of Arabic numbers and Roman letters that is assigned to a motor vehicle for identification purposes.</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;VehiclePart">
 		<rdfs:subClassOf rdf:resource="&auto-mo;MaterialEntity"/>
 		<rdfs:label xml:lang="en">vehicle part</rdfs:label>
+		<skos:definition xml:lang="en">article the primary use of which is to improve, repair, replace, or serve as a component part of a vehicle</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;WasherFluid">
@@ -897,6 +962,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">washer fluid</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Windshield.Front/Rear.WasherFluid : Front/Rear windshield washer fluid signals</rdfs:comment>
+		<skos:definition xml:lang="en">fluid used to wash the car windows and windshields</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Wheel">
@@ -909,6 +975,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">wheel</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.Axle.RowX.Wheel : wheel signals</rdfs:comment>
+		<skos:definition xml:lang="en">circular object that revolves on an axle and is fixed below a vehicle or other object to enable it to move easily over the ground</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Window">
@@ -921,6 +988,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">window</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Door.RowX.Left/Right.Window : Door window status</rdfs:comment>
+		<skos:definition xml:lang="en">opening in the wall or roof of a vehicle, that lets air and light in, as well as increases the visibility of the surroundings</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;WindowShade">
@@ -933,6 +1001,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">window shade</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Cabin.Door.RowX.Left/Right.Shade : Side window shade</rdfs:comment>
+		<skos:definition xml:lang="en">piece of stiff cloth or heavy paper that you can pull down over a window as a covering</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Windshield">
@@ -945,6 +1014,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">windshield</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Windshield : Windshield signals</rdfs:comment>
+		<skos:definition xml:lang="en">principal forward facing glazed surface provided for forward vision in operating a motor vehicle</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;WindshieldHeating">
@@ -957,6 +1027,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">windshield heating</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Windshield.Front/Rear.Heating : Front/Rear windshield heater signals</rdfs:comment>
+		<skos:definition xml:lang="en">device that heats the windshield</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Wiping">
@@ -969,6 +1040,7 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">wiping</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Windshield.Front/Rear.Wiping : Front/Rear windshield wiper signals</rdfs:comment>
+		<rdfs:comment>device that wipes the windows and windshields</rdfs:comment>
 	</owl:Class>
 	
 	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;hasMaturityLevel">
@@ -976,5 +1048,245 @@ It contains many classes and properties extracted from:
 	
 	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;synonym">
 	</owl:AnnotationProperty>
-
+	
+	<owl:Axiom>
+		<dct:source>26 C.F.R. § 48.4061(b)-2</dct:source>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;VehiclePart"/>
+		<owl:annotatedTarget xml:lang="en">article the primary use of which is to improve, repair, replace, or serve as a component part of a vehicle</owl:annotatedTarget>
+	</owl:Axiom>
+	<owl:Axiom>
+		<dct:source>https://www.edmunds.com/glossary/</dct:source>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;TCS"/>
+		<owl:annotatedTarget xml:lang="en">safety feature that regulates wheel spin and prevents loss of control under acceleration by ensuring maximum traction and contact between the tires and the road (by adjusting brake pressure to one or more wheels, closing the throttle, or reducing the fuel supply to at least one or more cylinders)</owl:annotatedTarget>
+	</owl:Axiom>
+	<owl:Axiom>
+		<sm:directSource>16 C.F.R. § 1201.2</sm:directSource>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;Door"/>
+		<owl:annotatedTarget xml:lang="en">assembly that is installed in an interior or exterior wall; that is movable in a sliding, pivoting, hinged, or revolving manner of movement; and that is used by consumers to produce or close off an opening for use as a means of human passage</owl:annotatedTarget>
+	</owl:Axiom>
+	<owl:Axiom>
+		<sm:directSource>20 C.F.R § 500.104</sm:directSource>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;ExternalLights"/>
+		<owl:annotatedTarget xml:lang="en">head lights, tail lights, stop lights, back-up lights, turn signals and hazard warning lights</owl:annotatedTarget>
+	</owl:Axiom>
+	<owl:Axiom>
+		<sm:directSource>40 C.F.R § 86.402-78</sm:directSource>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;FuelSystem"/>
+		<owl:annotatedTarget xml:lang="en">combination of fuel tank, fuel pump, fuel lines, oil injection metering system, and carburetor or fuel injection components, and includes all fuel system vents</owl:annotatedTarget>
+	</owl:Axiom>
+	<owl:Axiom>
+		<sm:directSource>49 C.F.R § 393.5</sm:directSource>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;Brake"/>
+		<owl:annotatedTarget xml:lang="en">energy conversion mechanism used to stop, or hold a vehicle stationary</owl:annotatedTarget>
+	</owl:Axiom>
+	<owl:Axiom>
+		<sm:directSource>49 C.F.R § 393.5</sm:directSource>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;Chassis"/>
+		<owl:annotatedTarget xml:lang="en">load-supporting frame of a commercial motor vehicle, exclusive of any appurtenances which might be added to accommodate cargo</owl:annotatedTarget>
+	</owl:Axiom>
+	<owl:Axiom>
+		<sm:directSource>49 C.F.R. § 393.5</sm:directSource>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;ABS"/>
+		<owl:annotatedTarget xml:lang="en">portion of a service brake system that automatically controls the degree of rotational wheel slip</owl:annotatedTarget>
+	</owl:Axiom>
+	<owl:Axiom>
+		<sm:directSource>49 C.F.R. § 393.5</sm:directSource>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;Windshield"/>
+		<owl:annotatedTarget xml:lang="en">principal forward facing glazed surface provided for forward vision in operating a motor vehicle</owl:annotatedTarget>
+	</owl:Axiom>
+	<owl:Axiom>
+		<sm:directSource>49 C.F.R. § 393.81</sm:directSource>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;Horn"/>
+		<owl:annotatedTarget xml:lang="en">device able to give an adequate and reliable warning sign</owl:annotatedTarget>
+	</owl:Axiom>
+	<owl:Axiom>
+		<sm:directSource>49 C.F.R. § 571.202a</sm:directSource>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;HeadRestraint"/>
+		<owl:annotatedTarget xml:lang="en">device that limits the rearward displacement of a seated occupant&apos;s head relative to the occupant&apos;s torso</owl:annotatedTarget>
+	</owl:Axiom>
+	<owl:Axiom>
+		<sm:directSource>49 F.C.R. § 565.22</sm:directSource>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;VehicleIdentification"/>
+		<owl:annotatedTarget xml:lang="en">series of Arabic numbers and Roman letters that is assigned to a motor vehicle for identification purposes.</owl:annotatedTarget>
+	</owl:Axiom>
+	<owl:Axiom>
+		<sm:directSource>https://www.collinsdictionary.com/dictionary/english/window-shade</sm:directSource>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;WindowShade"/>
+		<owl:annotatedTarget xml:lang="en">piece of stiff cloth or heavy paper that you can pull down over a window as a covering</owl:annotatedTarget>
+	</owl:Axiom>
+	<owl:Axiom>
+		<sm:directSource>https://www.edmunds.com/glossary/</sm:directSource>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;Body"/>
+		<owl:annotatedTarget xml:lang="en">outer panels that shroud a vehicle&apos;s mechanical and electrical workings</owl:annotatedTarget>
+	</owl:Axiom>
+	<owl:Axiom>
+		<sm:directSource>https://www.edmunds.com/glossary/</sm:directSource>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;BrakePedal"/>
+		<owl:annotatedTarget xml:lang="en">device used to control the brakes of a vehicle</owl:annotatedTarget>
+	</owl:Axiom>
+	<owl:Axiom>
+		<sm:directSource>https://www.edmunds.com/glossary/</sm:directSource>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;Drivetrain"/>
+		<owl:annotatedTarget xml:lang="en">system of components that generates power and transmits it to the wheels of a vehicle</owl:annotatedTarget>
+	</owl:Axiom>
+	<owl:Axiom>
+		<sm:directSource>https://www.edmunds.com/glossary/</sm:directSource>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;InternalLights"/>
+		<owl:annotatedTarget xml:lang="en">halogen lamps or light-emitting diodes (LEDs) used to illuminate a vehicle&apos;s interior space</owl:annotatedTarget>
+	</owl:Axiom>
+	<owl:Axiom>
+		<sm:directSource>https://www.edmunds.com/glossary/</sm:directSource>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;LaneDepartureDetection"/>
+		<owl:annotatedTarget xml:lang="en">system of electronic components designed to warn a driver when a vehicle strays out of its lane</owl:annotatedTarget>
+	</owl:Axiom>
+	<owl:Axiom>
+		<sm:directSource>https://www.edmunds.com/glossary/</sm:directSource>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;Navigation"/>
+		<owl:annotatedTarget xml:lang="en">device that communicates with global positioning satellites to determine a vehicle&apos;s physical location and plot a course using stored map information</owl:annotatedTarget>
+	</owl:Axiom>
+	<owl:Axiom>
+		<sm:directSource>https://www.edmunds.com/glossary/</sm:directSource>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;O2Sensor"/>
+		<owl:annotatedTarget xml:lang="en">sensor mounted in the exhaust stream that relays air/fuel ratio information to the fuel control computer that allows the computer to make adjustments</owl:annotatedTarget>
+	</owl:Axiom>
+	<owl:Axiom>
+		<sm:directSource>https://www.edmunds.com/glossary/</sm:directSource>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;Sunroof"/>
+		<owl:annotatedTarget xml:lang="en">fixed or operable opening in the roof of a vehicle that is covered with a metal or glass plug</owl:annotatedTarget>
+	</owl:Axiom>
+	<owl:Axiom>
+		<sm:directSource>https://www.merriam-webster.com/dictionary/axle</sm:directSource>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;Axle"/>
+		<owl:annotatedTarget xml:lang="en">pin or shaft on or with which a wheel or pair of wheels revolves</owl:annotatedTarget>
+	</owl:Axiom>
+	<owl:Axiom>
+		<sm:directSource>https://www.merriam-webster.com/dictionary/engine</sm:directSource>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;Engine"/>
+		<owl:annotatedTarget xml:lang="en">machine for converting any of various forms of energy into mechanical force and motion</owl:annotatedTarget>
+	</owl:Axiom>
+	<owl:Axiom>
+		<sm:directSource>https://www.merriam-webster.com/dictionary/rearview%20mirror</sm:directSource>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;RearviewMirror"/>
+		<owl:annotatedTarget xml:lang="en">mirror (as in an automobile) that gives a view of the area behind a vehicle</owl:annotatedTarget>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;ADAS"/>
+		<owl:annotatedTarget xml:lang="en">broad range of features, including those that provide warnings and/or momentary intervention, such as forward collision warning (FCW) systems, lane keeping assistance (LKA) systems, and automatic emergency braking (AEB) systems, as well as some convenience features that involve Level 1 driver support features, such as ACC and certain parking assistance features</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>J3016 JUN2018, section. 5.2</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;AcceleratorPedal"/>
+		<owl:annotatedTarget xml:lang="en">pedal that controls the amount of gas being fed into the engine and thereby controls the speed of the vehicle</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://driversed.com/driving-information/the-vehicle/accelerator/</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;Airbag"/>
+		<owl:annotatedTarget xml:lang="en">inflatable occupant restraint device that is designed to deploy in a side impact crash to help mitigate occupant injury and/or ejection</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R § 563.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;BatteryManagement"/>
+		<owl:annotatedTarget xml:lang="en">device or solution that manages battery performance, including controlling the charging and discharging of batteries, electrochemical cells, and fuel cells</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>device or solution that manages battery performance, including controlling the charging and discharging of batteries, electrochemical cells, and fuel cells</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;Catalyst"/>
+		<owl:annotatedTarget xml:lang="en">canister in the exhaust system, usually situated before the muffler, containing a substance that reacts chemically with the exhaust in order to reduce harmful emissions</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://www.edmunds.com/glossary/</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;ESC"/>
+		<owl:annotatedTarget xml:lang="en">system that augments vehicle directional stability by applying and adjusting the vehicle brake torques individually to induce a correcting yaw moment to a vehicle, is computer-controlled with the computer using a closed-loop algorithm to limit vehicle oversteer and to limit vehicle understeer and has a means to monitor driver steering inputs</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 571.126</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;ElectricMotor"/>
+		<owl:annotatedTarget xml:lang="en">electro-mechanical machine which converts electrical energy into mechanical energy</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://circuitglobe.com/electric-motor.html</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;FuelCell"/>
+		<owl:annotatedTarget xml:lang="en">electrochemical cell that produces electricity via the non-combustion reaction of a consumable fuel, typically hydrogen</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>40 C.F.R § 86.1803-01</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;HVAC"/>
+		<owl:annotatedTarget xml:lang="en">system used for moving air between indoor and outdoor areas along with heating and cooling</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://www.petro.com/resource-center/what-is-hvac</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;Hood"/>
+		<owl:annotatedTarget xml:lang="en">exterior movable body panel forward of the windshield that is used to cover an engine, luggage, storage, or battery compartment</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 571.113</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;Infotainment"/>
+		<owl:annotatedTarget xml:lang="en">vehicle system that combines entertainment and information delivery to drivers and passengers</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://www.techopedia.com/definition/27778/in-vehicle-infotainment-ivi</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;InternalCombustionEngine"/>
+		<owl:annotatedTarget xml:lang="en">heat engine in which the combustion that generates the heat takes place inside the engine proper instead of in a furnace</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://www.merriam-webster.com/dictionary/internal%20combustion%20engine</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;Lumbar"/>
+		<owl:annotatedTarget xml:lang="en">mechanical or pneumatic device that matches a vehicle&apos;s seat back to the contours of the driver or passenger</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://www.edmunds.com/glossary/</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;Mirrors"/>
+		<owl:annotatedTarget xml:lang="en">polished or smooth surfaces (as of glass) that form images by reflection</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://www.merriam-webster.com/dictionary/mirror</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;ParkingBrake"/>
+		<owl:annotatedTarget xml:lang="en">mechanism designed to prevent the movement of a stationary motor vehicle</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 571.3</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;Tire"/>
+		<owl:annotatedTarget xml:lang="en">rubber casing, hoop, and strip or band of all kinds designed and shaped or built to form the tread of or to fit a vehicle wheel</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>26 C.F.R. § 48.4072-1</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
 </rdf:RDF>

@@ -553,11 +553,13 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 				</owl:unionOf>
 			</owl:Class>
 		</owl:equivalentClass>
+		<skos:definition xml:lang="en">entity that is formed and administered as per commercial law in order to engage in business activities</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc;BusinessEntityType">
 		<rdfs:subClassOf rdf:resource="&auto-mo;QualitativeValue"/>
 		<rdfs:label xml:lang="en">business entity type</rdfs:label>
+		<skos:definition xml:lang="en">type of a business entity</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc;Canoe">
@@ -1594,6 +1596,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 	<owl:Class rdf:about="&auto-vc;HumanPoweredLandVehicle">
 		<rdfs:subClassOf rdf:resource="&auto-vc;RoadVehicle"/>
 		<rdfs:label xml:lang="en">human powered land vehicle</rdfs:label>
+		<skos:definition xml:lang="en">land vehicle propelled over ground by human power</skos:definition>
 	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-vc;Hybrid">
@@ -1656,6 +1659,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		<rdfs:label xml:lang="pl">duży pojazd specjalny</rdfs:label>
 		<rdfs:label xml:lang="en">large special vehicle</rdfs:label>
 		<rdfs:seeAlso>source: https://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/TTICarOnto.owl</rdfs:seeAlso>
+		<skos:definition xml:lang="en">special vehicle which is considered large</skos:definition>
 	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-vc;LeftHandDriving">
@@ -1796,6 +1800,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		<rdfs:label xml:lang="en">motor vehicle in-transport</rdfs:label>
 		<rdfs:comment xml:lang="en">A motor vehicle that is In-transport state.</rdfs:comment>
 		<rdfs:comment xml:lang="en">See In-transport</rdfs:comment>
+		<skos:definition xml:lang="en">motor vehicle on a roadway or in motion within or outside the trafficway</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.34</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
@@ -1809,11 +1814,11 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		<sm:directSource rdf:resource="https://schema.org/Motorcycle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vso/ns"/>
 		<rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
-		<rdfs:isDefinedBy xml:lang="pl">pojazd samochodowy zaopatrzony w silnik spalinowy, dwukołowy lub z bocznym wózkiem – wielośladowy</rdfs:isDefinedBy>
 		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Motorcycle"/>
 		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Motorcycle"/>
 		<skos:definition xml:lang="en">Any motor vehicle having a seat or saddle for the use of its operator and designed to travel on not more than three wheels in contact with the ground.</skos:definition>
 		<skos:definition xml:lang="en">a single-track, two-wheeled motor vehicle</skos:definition>
+		<skos:definition xml:lang="pl">pojazd samochodowy zaopatrzony w silnik spalinowy, dwukołowy lub z bocznym wózkiem – wielośladowy</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.9</fibo-fnd-utl-av:adaptedFrom>
 		<fibo-fnd-utl-av:synonym xml:lang="en">motorbike</fibo-fnd-utl-av:synonym>
 	</owl:Class>
@@ -1875,6 +1880,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		<rdfs:label xml:lang="en">my car</rdfs:label>
 		<rdfs:label xml:lang="pl">mój samochód</rdfs:label>
 		<rdfs:seeAlso xml:lang="en">source: https://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/TTICarOnto.owl</rdfs:seeAlso>
+		<skos:definition xml:lang="en">vehicle that legally belongs to the subject</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc;Offering">
@@ -1960,6 +1966,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 			</owl:Class>
 		</rdfs:subClassOf>
 		<rdfs:label>offering</rdfs:label>
+		<skos:definition xml:lang="en">thing offered especially as a gift or contribution</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc;OtherBus">
@@ -2134,9 +2141,9 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		<rdfs:subClassOf rdf:resource="&auto-vc;RegularVehicle"/>
 		<rdfs:label xml:lang="en">passenger car</rdfs:label>
 		<rdfs:label xml:lang="pl">samochód osobowy</rdfs:label>
-		<rdfs:isDefinedBy xml:lang="en">a road motor vehicle, other than a motor cycle, intended for the carriage of passengers and designed to seat no more than nine persons including the driver</rdfs:isDefinedBy>
-		<rdfs:isDefinedBy xml:lang="pl">pojazd samochodowy przeznaczony konstrukcyjnie do przewozu nie więcej niż 9 osób łącznie z kierowcą oraz ich bagażu;</rdfs:isDefinedBy>
 		<rdfs:seeAlso xml:lang="en">source: https://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/TTICarOnto.owl</rdfs:seeAlso>
+		<skos:definition xml:lang="en">a road motor vehicle, other than a motor cycle, intended for the carriage of passengers and designed to seat no more than nine persons including the driver</skos:definition>
+		<skos:definition xml:lang="pl">pojazd samochodowy przeznaczony konstrukcyjnie do przewozu nie więcej niż 9 osób łącznie z kierowcą oraz ich bagażu;</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc;PassengerVan">
@@ -2149,6 +2156,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 	<owl:Class rdf:about="&auto-vc;PaymentMethod">
 		<rdfs:subClassOf rdf:resource="&auto-mo;QualitativeValue"/>
 		<rdfs:label xml:lang="en">payment method</rdfs:label>
+		<skos:definition xml:lang="en">value indicating the payment method of a payment</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc;Pedalcycle">
@@ -2175,6 +2183,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 	<owl:Class rdf:about="&auto-vc;PriceSpecification">
 		<rdfs:subClassOf rdf:resource="&auto-mo;ValueSpace"/>
 		<rdfs:label xml:lang="en">price specification</rdfs:label>
+		<skos:definition xml:lang="en">indication of the unit price and delivery or payment charges</skos:definition>
 	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-vc;Private">
@@ -2231,11 +2240,13 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
 		<rdfs:label xml:lang="en">regular vehicle</rdfs:label>
 		<rdfs:label xml:lang="pl">zwykły pojazd</rdfs:label>
 		<rdfs:seeAlso xml:lang="en">source: https://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/TTICarOnto.owl</rdfs:seeAlso>
+		<skos:definition xml:lang="en">normal vehicle used for daily commuting</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc;RelativePriceSpecification">
 		<rdfs:subClassOf rdf:resource="&auto-vc;PriceSpecification"/>
 		<rdfs:label xml:lang="en">relative price specification</rdfs:label>
+		<skos:definition xml:lang="en">relative indication of the unit price and delivery or payment charges</skos:definition>
 	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-vc;RentalVehicleUsage">
@@ -2266,6 +2277,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
 		<rdfs:subClassOf rdf:resource="&auto-vc;LandVehicle"/>
 		<rdfs:label xml:lang="en">road vehicle</rdfs:label>
 		<rdfs:comment xml:lang="en">A superclass of classes addopted from ANSI D.16-2017.</rdfs:comment>
+		<skos:definition xml:lang="en">land vehicle other than a railway vehicle</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc;Roofs">
@@ -2335,6 +2347,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
 		<rdfs:label xml:lang="pl">mały pojazd specjalny</rdfs:label>
 		<rdfs:label xml:lang="en">small special vehicle</rdfs:label>
 		<rdfs:seeAlso>source: https://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/TTICarOnto.owl</rdfs:seeAlso>
+		<skos:definition xml:lang="en">special vehicle which is considered small</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc;SpecItemCollection">
@@ -2420,9 +2433,9 @@ The default choice can be indicated using a coo:default link. All other choices 
 		<rdfs:subClassOf rdf:resource="&auto-vc;Car"/>
 		<rdfs:label xml:lang="pl">pojazd specjalny</rdfs:label>
 		<rdfs:label xml:lang="en">special vehicle</rdfs:label>
-		<rdfs:isDefinedBy xml:lang="en">a vehicle or trailer intended to perform a special function requiring body adjustments or special equipment; this vehicle is capable of carrying persons and objects associated with the performance of this function</rdfs:isDefinedBy>
-		<rdfs:isDefinedBy xml:lang="pl">pojazd samochodowy lub przyczepa przeznaczone do wykonywania specjalnej funkcji, która powoduje konieczność dostosowania nadwozia lub posiadania specjalnego wyposażenia; w pojeździe tym mogą być przewożone osoby i rzeczy związane z wykonywaniem tej funkcji</rdfs:isDefinedBy>
 		<rdfs:seeAlso xml:lang="en">source: https://www.toyota-ti.ac.jp/Lab/Denshi/COIN/Ontology/TTICore-0.03/TTICarOnto.owl</rdfs:seeAlso>
+		<skos:definition xml:lang="en">a vehicle or trailer intended to perform a special function requiring body adjustments or special equipment; this vehicle is capable of carrying persons and objects associated with the performance of this function</skos:definition>
+		<skos:definition xml:lang="pl">pojazd samochodowy lub przyczepa przeznaczone do wykonywania specjalnej funkcji, która powoduje konieczność dostosowania nadwozia lub posiadania specjalnego wyposażenia; w pojeździe tym mogą być przewożone osoby i rzeczy związane z wykonywaniem tej funkcji</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc;Species">
@@ -3011,6 +3024,7 @@ Examples: VW Golf S, VW Polo Match, VW Passat SE</skos:definition>
 	<owl:Class rdf:about="&auto-vc;WarrantyScope">
 		<rdfs:subClassOf rdf:resource="&auto-mo;GenericallyDependentContinuant"/>
 		<rdfs:label>warranty scope</rdfs:label>
+		<skos:definition xml:lang="en">period of time during which the warranty is valid</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc;Watercraft">
@@ -3404,6 +3418,7 @@ Note: It is recommended to rely on this property only for data originating from 
 		<rdfs:label xml:lang="en">emissions per passenger</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
 		<rdfs:range rdf:resource="&rdfs;Literal"/>
+		<skos:definition xml:lang="en">relates a vehicle to the amount of emissions it emits per passenger present in it during driving</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc;engineDisplacement">
@@ -4118,6 +4133,7 @@ Note that this value can be higher (but not lower) than the number of uco:Owners
 		<rdfs:label xml:lang="en">has number of passengers</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
 		<rdfs:range rdf:resource="&xsd;int"/>
+		<skos:definition xml:lang="en">relates a vehicle to the number of passengers it contains</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc;offerPromoCode">
@@ -4399,6 +4415,7 @@ Typical unit code(s): C62 for persons</skos:definition>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc;serialNumber">
 		<rdfs:label>serial number</rdfs:label>
+		<skos:definition xml:lang="en">relates a vehicle to its serial number</skos:definition>
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc;shortSubtitle">
@@ -4852,5 +4869,17 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 	
 	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;synonym">
 	</owl:AnnotationProperty>
-
+	
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vc;PriceSpecification"/>
+		<owl:annotatedTarget xml:lang="en">indication of the unit price and delivery or payment charges</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://schema.org/priceSpecification</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedSource rdf:resource="&auto-vc;RoadVehicle"/>
+		<owl:annotatedTarget xml:lang="en">land vehicle other than a railway vehicle</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.6</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
 </rdf:RDF>
