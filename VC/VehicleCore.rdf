@@ -2225,7 +2225,6 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 	<owl:Class rdf:about="&auto-vc;PriceSpecification">
 		<rdfs:subClassOf rdf:resource="&auto-mo;ValueSpace"/>
 		<rdfs:label xml:lang="en">price specification</rdfs:label>
-		<rdfs:isDefinedBy xml:lang="en">indication of the unit price and delivery or payment charges</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">indication of the unit price and delivery or payment charges</skos:definition>
 	</owl:Class>
 	
@@ -2326,7 +2325,6 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
 		<rdfs:subClassOf rdf:resource="&auto-vc;LandVehicle"/>
 		<rdfs:label xml:lang="en">road vehicle</rdfs:label>
 		<rdfs:comment xml:lang="en">A superclass of classes addopted from ANSI D.16-2017.</rdfs:comment>
-		<rdfs:isDefinedBy xml:lang="en">land vehicle other than a railway vehicle</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">land vehicle other than a railway vehicle</skos:definition>
 	</owl:Class>
 	
@@ -5003,13 +5001,13 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-vc;PriceSpecification"/>
 		<owl:annotatedTarget xml:lang="en">indication of the unit price and delivery or payment charges</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>https://schema.org/priceSpecification</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-vc;RoadVehicle"/>
 		<owl:annotatedTarget xml:lang="en">land vehicle other than a railway vehicle</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.6</fibo-fnd-utl-av:adaptedFrom>
