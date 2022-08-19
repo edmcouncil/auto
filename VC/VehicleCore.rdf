@@ -336,6 +336,12 @@ It contains many classes and properties extracted from:
 		<auto-mo:hasUnitOfMeasurement>LTR</auto-mo:hasUnitOfMeasurement>
 	</owl:NamedIndividual>
 	
+	<owl:Class rdf:about="&auto-vc;AgriculturalCommodityTrailer">
+		<rdfs:subClassOf rdf:resource="&auto-vc;FullTrailer"/>
+		<rdfs:label xml:lang="en">agricultural commodity trailer</rdfs:label>
+		<skos:definition xml:lang="en">trailer that is designed to transport bulk agricultural commodities in off-road harvesting sites and to a processing plant or storage location, as evidenced by skeletal construction that accommodates harvest containers, a maximum length of 28 feet, and an arrangement of air control lines and reservoirs that minimizes damage in field operations</skos:definition>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-vc;Aircraft">
 		<rdfs:subClassOf rdf:resource="&auto-vc;Vehicle"/>
 		<rdfs:label xml:lang="en">aircraft</rdfs:label>
@@ -414,6 +420,12 @@ Examples: VW Golf, VW Polo, VW Passat</skos:definition>
 		<rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Boat"/>
 		<rdfs:seeAlso rdf:resource="http://en.wikipedia.org/wiki/Boat"/>
 		<skos:definition xml:lang="en">a watercraft of modest size designed to float or plane, to provide passage across water</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vc;BoatTrailer">
+		<rdfs:subClassOf rdf:resource="&auto-vc;FullTrailer"/>
+		<rdfs:label xml:lang="en">boat trailer</rdfs:label>
+		<skos:definition xml:lang="en">trailer designed with cradle-type mountings to transport a boat and configured to permit the launching of the boat from the rear of the trailer</skos:definition>
 	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-vc;BodyStyle4X4">
@@ -839,6 +851,24 @@ Using coo:compatible, it is possible to indicate either compatibility (true) and
 If no such statement is found, the validity of a configuration is unknown.
 
 Note: The two properties coo:includes and coo:dependsOn, attached to coo:ChoiceOrComponent, may contain additional information on the validity of configuration.</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vc;ContainerChassisTrailer">
+		<rdfs:subClassOf rdf:resource="&auto-vc;Semitrailer"/>
+		<rdfs:label xml:lang="en">container chassis trailer</rdfs:label>
+		<skos:definition xml:lang="en">semitrailer of skeleton construction limited to a bottom frame, one or more axles, specially built and fitted with locking devices for the transport of intermodal cargo containers so that when the chassis and container are assembled, the units serve the same function as an over the road trailer</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vc;CoveredFarmVehicle">
+		<rdfs:subClassOf rdf:resource="&auto-vc;SpecialVehicle"/>
+		<rdfs:label xml:lang="en">covered farm vehicle</rdfs:label>
+		<skos:definition xml:lang="en">straight truck or articulated vehicle that is registered in a State with a license plate or other designation issued by the State of registration that allows law enforcement officials to identify it as a farm vehicle and used to transport agricultural commodities, livestock, machinery or supplies to or from a farm or ranch</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vc;CribTypeLogTrailer">
+		<rdfs:subClassOf rdf:resource="&auto-vc;FullTrailer"/>
+		<rdfs:label xml:lang="en">crib-type log trailer</rdfs:label>
+		<skos:definition xml:lang="en">trailer equipped with stakes, bunks, a front-end structure, and a rear structure to restrain logs</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc;DamageOrAccident">
@@ -1586,11 +1616,23 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		<skos:definition xml:lang="en">A value indicating a gearbox type.</skos:definition>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-vc;HeavyHaulerTrailer">
+		<rdfs:subClassOf rdf:resource="&auto-vc;FullTrailer"/>
+		<rdfs:label xml:lang="en">heavy hauler trailer</rdfs:label>
+		<skos:definition xml:lang="en">trailer whose brakes lines are designed to adapt to separation or extension of the vehicle frame and/or which body consists only of a platform whose primary cargo-carrying surface is not more than 1,016 mm (40 inches) above the ground in an unloaded condition, except that it may include sides that are designed to be easily removable and a permanent “front-end structure”, but that is not a container chassis trailer</skos:definition>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-vc;HeavyTruck">
 		<rdfs:subClassOf rdf:resource="&auto-vc;Truck"/>
 		<rdfs:label xml:lang="en">heavy truck</rdfs:label>
 		<skos:definition xml:lang="en">A truck which has a gross vehicle weight rating (GVWR) of more than 26,000 pounds (11,793 kilograms).</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.26</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vc;HorizontalDischargeTrailer">
+		<rdfs:subClassOf rdf:resource="&auto-vc;FullTrailer"/>
+		<rdfs:label xml:lang="en">road construction controlled horizontal discharge trailer</rdfs:label>
+		<skos:definition xml:lang="en">trailer or semitrailer that is equipped with a mechanical drive and a conveyor to deliver asphalt and other road building materials, in a controlled horizontal manner, into a lay down machine or paving equipment for road construction and paving operations</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc;HumanPoweredLandVehicle">
@@ -2183,6 +2225,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 	<owl:Class rdf:about="&auto-vc;PriceSpecification">
 		<rdfs:subClassOf rdf:resource="&auto-mo;ValueSpace"/>
 		<rdfs:label xml:lang="en">price specification</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">indication of the unit price and delivery or payment charges</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">indication of the unit price and delivery or payment charges</skos:definition>
 	</owl:Class>
 	
@@ -2203,6 +2246,12 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 
 Example 1: Power steering and Air conditioning in combination reduce the available engine power from 90 kW to 89 kW.
 Example 2: Choosing the color option &quot;blue&quot; changes the color of the car to &quot;blue&quot;.</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vc;PulpwoodTrailer">
+		<rdfs:subClassOf rdf:resource="&auto-vc;FullTrailer"/>
+		<rdfs:label xml:lang="en">pulpwood trailer</rdfs:label>
+		<skos:definition xml:lang="en">trailer or semitrailer that is designed exclusively for harvesting logs or pulpwood and constructed with a skeletal frame with no means for attachment of a solid bed, body, or container</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc;Quadracycle">
@@ -2277,6 +2326,7 @@ Example 2: Choosing the color option &quot;blue&quot; changes the color of the c
 		<rdfs:subClassOf rdf:resource="&auto-vc;LandVehicle"/>
 		<rdfs:label xml:lang="en">road vehicle</rdfs:label>
 		<rdfs:comment xml:lang="en">A superclass of classes addopted from ANSI D.16-2017.</rdfs:comment>
+		<rdfs:isDefinedBy xml:lang="en">land vehicle other than a railway vehicle</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">land vehicle other than a railway vehicle</skos:definition>
 	</owl:Class>
 	
@@ -2477,6 +2527,12 @@ The default choice can be indicated using a coo:default link. All other choices 
 		<skos:definition xml:lang="en">The class of steering wheels choices or components (a &quot;MonoSelectGroup&quot; in automotive terminology), VW ID: 6</skos:definition>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-vc;StraddleTrailer">
+		<rdfs:subClassOf rdf:resource="&auto-vc;FullTrailer"/>
+		<rdfs:label xml:lang="en">straddle trailer</rdfs:label>
+		<skos:definition xml:lang="en">trailer that is designed to transport bulk agricultural commodities from the harvesting location, as evidenced by a framework that is driven over the cargo and lifting arms that suspend the cargo for transit</skos:definition>
+	</owl:Class>
+	
 	<owl:NamedIndividual rdf:about="&auto-vc;Street">
 		<rdf:type rdf:resource="&auto-vc;ParkingType"/>
 		<rdfs:label xml:lang="en">street</rdfs:label>
@@ -2607,6 +2663,12 @@ The default choice can be indicated using a coo:default link. All other choices 
 		<rdfs:label xml:lang="en">three-wheeled motorcycle</rdfs:label>
 		<skos:definition xml:lang="en">Any motor vehicle having a seat or saddle for the use of its operator, and having three wheels in contact with the ground.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.9.6</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vc;TractorPoleTrailer">
+		<rdfs:subClassOf rdf:resource="&auto-vc;PoleTrailer"/>
+		<rdfs:label xml:lang="en">tractor pole trailer</rdfs:label>
+		<skos:definition xml:lang="en">combination vehicle that carries logs lengthwise so that they form the body of the vehicle</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vc;TrafficPattern">
@@ -4870,6 +4932,76 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 	<owl:AnnotationProperty rdf:about="&fibo-fnd-utl-av;synonym">
 	</owl:AnnotationProperty>
 	
+	<owl:Axiom>
+		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vc;AgriculturalCommodityTrailer"/>
+		<owl:annotatedTarget xml:lang="en">trailer that is designed to transport bulk agricultural commodities in off-road harvesting sites and to a processing plant or storage location, as evidenced by skeletal construction that accommodates harvest containers, a maximum length of 28 feet, and an arrangement of air control lines and reservoirs that minimizes damage in field operations</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vc;BoatTrailer"/>
+		<owl:annotatedTarget xml:lang="en">trailer designed with cradle-type mountings to transport a boat and configured to permit the launching of the boat from the rear of the trailer</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<rdfs:seeAlso rdf:resource="https://www.law.cornell.edu/cfr/text/49/393.5"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vc;ContainerChassisTrailer"/>
+		<owl:annotatedTarget xml:lang="en">semitrailer of skeleton construction limited to a bottom frame, one or more axles, specially built and fitted with locking devices for the transport of intermodal cargo containers so that when the chassis and container are assembled, the units serve the same function as an over the road trailer</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vc;CoveredFarmVehicle"/>
+		<owl:annotatedTarget xml:lang="en">straight truck or articulated vehicle that is registered in a State with a license plate or other designation issued by the State of registration that allows law enforcement officials to identify it as a farm vehicle and used to transport agricultural commodities, livestock, machinery or supplies to or from a farm or ranch</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<rdfs:seeAlso rdf:resource="https://www.law.cornell.edu/cfr/text/49/393.5"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vc;CribTypeLogTrailer"/>
+		<owl:annotatedTarget xml:lang="en">trailer equipped with stakes, bunks, a front-end structure, and a rear structure to restrain logs</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<rdfs:seeAlso rdf:resource="https://www.law.cornell.edu/cfr/text/49/393.5"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vc;HeavyHaulerTrailer"/>
+		<owl:annotatedTarget xml:lang="en">trailer whose brakes lines are designed to adapt to separation or extension of the vehicle frame and/or which body consists only of a platform whose primary cargo-carrying surface is not more than 1,016 mm (40 inches) above the ground in an unloaded condition, except that it may include sides that are designed to be easily removable and a permanent “front-end structure”, but that is not a container chassis trailer</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vc;HorizontalDischargeTrailer"/>
+		<owl:annotatedTarget xml:lang="en">trailer or semitrailer that is equipped with a mechanical drive and a conveyor to deliver asphalt and other road building materials, in a controlled horizontal manner, into a lay down machine or paving equipment for road construction and paving operations</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vc;PulpwoodTrailer"/>
+		<owl:annotatedTarget xml:lang="en">trailer or semitrailer that is designed exclusively for harvesting logs or pulpwood and constructed with a skeletal frame with no means for attachment of a solid bed, body, or container</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vc;StraddleTrailer"/>
+		<owl:annotatedTarget xml:lang="en">trailer that is designed to transport bulk agricultural commodities from the harvesting location, as evidenced by a framework that is driven over the cargo and lifting arms that suspend the cargo for transit</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vc;TractorPoleTrailer"/>
+		<owl:annotatedTarget xml:lang="en">combination vehicle that carries logs lengthwise so that they form the body of the vehicle</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
 	<owl:Axiom>
 		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
 		<owl:annotatedSource rdf:resource="&auto-vc;PriceSpecification"/>

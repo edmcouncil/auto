@@ -305,6 +305,12 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.7.4.1</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-ti;DrivewayTowawayOperation">
+		<rdfs:subClassOf rdf:resource="&auto-mo;Action"/>
+		<rdfs:label xml:lang="en">driveway-towaway operation</rdfs:label>
+		<skos:definition xml:lang="en">operation in which an empty or unladen motor vehicle with one or more sets of wheels on the surface of the roadway is being transported by means of a saddle-mount or tow-bar between vehicle manufacturer&apos;s facilities, a vehicle manufacturer and a dealership or purchaser or to a repair facility</skos:definition>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-ti;DrivewayaccessCrash">
 		<rdfs:subClassOf rdf:resource="&auto-ti;Crash"/>
 		<rdfs:label xml:lang="en">driveway access crash</rdfs:label>
@@ -362,6 +368,12 @@ In part, it is based on the Classification of Motor Vehicle Traffic Crashes (AME
 		<rdfs:label xml:lang="pl">omdlenie</rdfs:label>
 		<skos:definition>krótkotrwała utrata przytomności wywołana przejściowym globalnym zmniejszeniem perfuzji mózgowej. Charakteryzuje się szybkim rozwojem objawów aż do zupełnej utraty przytomności, krótkim czasem trwania oraz samoistnym i pełnym odzyskaniem przytomności.</skos:definition>
 		<skos:definition xml:lang="en">short-term loss of consciousness due to transient global decrease in cerebral perfusion. It is characterized by rapid development of symptoms up to complete loss of consciousness, short duration, and spontaneous and full recovery.</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-ti;FarmVehicleDriver">
+		<rdfs:subClassOf rdf:resource="&auto-ti;Driver"/>
+		<rdfs:label xml:lang="en">farm vehicle driver</rdfs:label>
+		<skos:definition xml:lang="en">farmer who drives a commercial motor vehicle that is used within 150 air-miles of their farm to transport agricultural products, farm machinery, farm supplies, or both, to or from a farm</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;FatalCrash">
@@ -779,6 +791,12 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.3.6</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-ti;PrivateMotorCarrier">
+		<rdfs:subClassOf rdf:resource="&auto-ti;MotorCarrier"/>
+		<rdfs:label xml:lang="en">private motor carrier</rdfs:label>
+		<skos:definition xml:lang="en">person who provides transportation of property or passengers, by commercial motor vehicle, and is not a for-hire motor carrier</skos:definition>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-ti;Property">
 		<rdfs:label xml:lang="en">property</rdfs:label>
 		<owl:equivalentClass>
@@ -803,11 +821,29 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.30</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-ti;QualifiedVAExaminer">
+		<rdfs:subClassOf rdf:resource="&auto-mo;Role"/>
+		<rdfs:label xml:lang="en">qualified VA examiner</rdfs:label>
+		<skos:definition xml:lang="en">advanced practice nurse, doctor of chiropractic, doctor of medicine, doctor of osteopathy, physician assistant, or other medical professional who is employed in the Department of Veterans Affairs</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-ti;RadarDetector">
+		<rdfs:subClassOf rdf:resource="&auto-mo;Object"/>
+		<rdfs:label xml:lang="en">radar detector</rdfs:label>
+		<skos:definition xml:lang="en">device or mechanism designed to detect the emission of radio microwaves, laser beams or any other future speed measurement technology employed by enforcement personnel to measure the speed of commercial motor vehicles upon public roads and highways for enforcement purposes</skos:definition>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-ti;RailwayAccident">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Process"/>
 		<rdfs:label xml:lang="en">railway accident</rdfs:label>
 		<skos:definition xml:lang="en">A transport accident that (1) involves a railway train in-transport and (2) is not an aircraft accident, watercraft accident or motor vehicle crash.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.4.13</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-ti;Receiver">
+		<rdfs:subClassOf rdf:resource="&auto-mo;Role"/>
+		<rdfs:label xml:lang="en">receiver</rdfs:label>
+		<skos:definition xml:lang="en">person who takes delivery from a motor carrier or driver of a commercial motor vehicle of property transported in interstate commerce or hazardous materials transported in interstate or intrastate commerce</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ti;RoadVehicleCrash">
@@ -1054,6 +1090,12 @@ A motorcycle conversion assembly makes it possible to convert a conventional two
 		<skos:definition xml:lang="en">action of using a mobile phone by a driver while operating a vehicle</skos:definition>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-ti;VeteranOperator">
+		<rdfs:subClassOf rdf:resource="&auto-ti;Motorist"/>
+		<rdfs:label xml:lang="en">veteran operator</rdfs:label>
+		<skos:definition xml:lang="en">operator of a commercial motor vehicle who is a veteran enrolled in the health care system</skos:definition>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-ti;Victim">
 		<rdfs:subClassOf rdf:resource="&auto-ti;TrafficIncidentEffect"/>
 		<rdfs:label xml:lang="pl">poszkodowanie</rdfs:label>
@@ -1184,5 +1226,54 @@ The total number of lanes in a roadway is collected for each vehicle, on the roa
 		<skos:definition xml:lang="en">A number of through lanes of the roadway.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.33.1</fibo-fnd-utl-av:adaptedFrom>
 	</owl:DatatypeProperty>
-
+	
+	<owl:Axiom>
+		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/390.5</rdfs:seeAlso>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-ti;DrivewayTowawayOperation"/>
+		<owl:annotatedTarget xml:lang="en">operation in which an empty or unladen motor vehicle with one or more sets of wheels on the surface of the roadway is being transported by means of a saddle-mount or tow-bar between vehicle manufacturer&apos;s facilities, a vehicle manufacturer and a dealership or purchaser or to a repair facility</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 390.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/390.5</rdfs:seeAlso>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-ti;FarmVehicleDriver"/>
+		<owl:annotatedTarget xml:lang="en">farmer who drives a commercial motor vehicle that is used within 150 air-miles of their farm to transport agricultural products, farm machinery, farm supplies, or both, to or from a farm</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 390.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/390.5</rdfs:seeAlso>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-ti;PrivateMotorCarrier"/>
+		<owl:annotatedTarget xml:lang="en">person who provides transportation of property or passengers, by commercial motor vehicle, and is not a for-hire motor carrier</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 390.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/390.5</rdfs:seeAlso>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-ti;QualifiedVAExaminer"/>
+		<owl:annotatedTarget xml:lang="en">advanced practice nurse, doctor of chiropractic, doctor of medicine, doctor of osteopathy, physician assistant, or other medical professional who is employed in the Department of Veterans Affairs</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 390.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/390.5</rdfs:seeAlso>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-ti;RadarDetector"/>
+		<owl:annotatedTarget xml:lang="en">device or mechanism designed to detect the emission of radio microwaves, laser beams or any other future speed measurement technology employed by enforcement personnel to measure the speed of commercial motor vehicles upon public roads and highways for enforcement purposes</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 390.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/390.5</rdfs:seeAlso>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-ti;Receiver"/>
+		<owl:annotatedTarget xml:lang="en">person who takes delivery from a motor carrier or driver of a commercial motor vehicle of property transported in interstate commerce or hazardous materials transported in interstate or intrastate commerce</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 390.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/390.5</rdfs:seeAlso>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-ti;VeteranOperator"/>
+		<owl:annotatedTarget xml:lang="en">operator of a commercial motor vehicle who is a veteran enrolled in the health care system</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 390.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
 </rdf:RDF>

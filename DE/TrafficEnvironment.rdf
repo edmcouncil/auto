@@ -60,6 +60,7 @@
 	<owl:Class rdf:about="&auto-ev;Airport">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Infrastructure"/>
 		<rdfs:label xml:lang="en">airport</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">place from which aircraft operate that usually has paved runways and maintenance facilities and often serves as a terminal</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">place from which aircraft operate that usually has paved runways and maintenance facilities and often serves as a terminal</skos:definition>
 	</owl:Class>
 	
@@ -73,6 +74,7 @@
 	<owl:Class rdf:about="&auto-ev;Amenity">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Infrastructure"/>
 		<rdfs:label xml:lang="en">amenity</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">something that helps to provide comfort, convenience, or enjoyment</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">something that helps to provide comfort, convenience, or enjoyment</skos:definition>
 	</owl:Class>
 	
@@ -86,12 +88,14 @@
 	<owl:Class rdf:about="&auto-ev;AuxiliaryRoadSign">
 		<rdfs:subClassOf rdf:resource="&auto-ev;RoadSign"/>
 		<rdfs:label xml:lang="en">auxiliary road sign</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">sign that provides information such as direction, time and temperature displays, hours of operation, or warning; auxiliary signs are intended for the convenience of the public. An auxiliary sign may include the business name and/or logo, but may not include its product or services</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">sign that provides information such as direction, time and temperature displays, hours of operation, or warning; auxiliary signs are intended for the convenience of the public. An auxiliary sign may include the business name and/or logo, but may not include its product or services</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ev;Bank">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Building"/>
 		<rdfs:label xml:lang="en">bank</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">establishment for the custody, loan, exchange, or issue of money, for the extension of credit, and for facilitating the transmission of funds</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">establishment for the custody, loan, exchange, or issue of money, for the extension of credit, and for facilitating the transmission of funds</skos:definition>
 	</owl:Class>
 	
@@ -117,25 +121,36 @@
 	<owl:Class rdf:about="&auto-ev;Building">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Infrastructure"/>
 		<rdfs:label xml:lang="en">building</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">usually roofed and walled structure built for permanent use</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">usually roofed and walled structure built for permanent use</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ev;BusLane">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Lane"/>
 		<rdfs:label xml:lang="en">bus lane</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">part of the road which is intended to be used only by buses</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">part of the road which is intended to be used only by buses</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ev;BusStation">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Station"/>
 		<rdfs:label xml:lang="en">bus station</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">place incorporating waiting areas, stands for buses, and ticket offices from which buses or coaches depart</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">place incorporating waiting areas, stands for buses, and ticket offices from which buses or coaches depart</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ev;BusStop">
 		<rdfs:subClassOf rdf:resource="&auto-ev;BusStation"/>
 		<rdfs:label xml:lang="en">bus stop</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">place on a road where buses stop to let passengers on and off</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">place on a road where buses stop to let passengers on and off</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-ev;BusinessDistrict">
+		<rdfs:subClassOf rdf:resource="&auto-ev;UrbanDistrict"/>
+		<rdfs:label xml:lang="en">business district</rdfs:label>
+		<owl:disjointWith rdf:resource="&auto-ev;ResidentialDistrict"/>
+		<skos:definition xml:lang="en">territory contiguous to and including a highway when within any 600 feet along such highway there are buildings in use for business or industrial purposes, including but not limited to hotels, banks, office buildings, railroad stations and public buildings which occupy at least 300 feet of frontage on one side or 300 feet collectively on both sides of the highway</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ev;ChannelizedIntersection">
@@ -155,12 +170,14 @@
 	<owl:Class rdf:about="&auto-ev;College">
 		<rdfs:subClassOf rdf:resource="&auto-ev;EducationalInstitute"/>
 		<rdfs:label xml:lang="en">college</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">institution offering instruction, usually in a professional, vocational, or technical field</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">institution offering instruction, usually in a professional, vocational, or technical field</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ev;Convenience">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Shop"/>
 		<rdfs:label xml:lang="en">convenience</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">small, often franchised market that is open long hours</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">small, often franchised market that is open long hours</skos:definition>
 	</owl:Class>
 	
@@ -194,6 +211,7 @@
 	<owl:Class rdf:about="&auto-ev;DirectionalRoadSign">
 		<rdfs:subClassOf rdf:resource="&auto-ev;RoadSign"/>
 		<rdfs:label xml:lang="en">directional road sign</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">sign installed on public land that advertises the direction to be taken to a service, tourist attraction or a townsite/locality</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">sign installed on public land that advertises the direction to be taken to a service, tourist attraction or a townsite/locality</skos:definition>
 	</owl:Class>
 	
@@ -235,18 +253,21 @@
 	<owl:Class rdf:about="&auto-ev;FastFood">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Restaurant"/>
 		<rdfs:label xml:lang="en">fast food</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">restaurant specializing in food that can be prepared and served quickly</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">restaurant specializing in food that can be prepared and served quickly</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ev;FireStation">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Building"/>
 		<rdfs:label xml:lang="en">fire station</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">building housing fire apparatus and usually firefighters</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">building housing fire apparatus and usually firefighters</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ev;Forest">
 		<rdfs:subClassOf rdf:resource="&auto-ev;NaturalPlace"/>
 		<rdfs:label xml:lang="en">forest</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">dense growth of trees and underbrush covering a large tract</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">dense growth of trees and underbrush covering a large tract</skos:definition>
 	</owl:Class>
 	
@@ -268,6 +289,7 @@
 	<owl:Class rdf:about="&auto-ev;GasStation">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Infrastructure"/>
 		<rdfs:label xml:lang="en">gas station</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">retail station for servicing motor vehicles, especially with gasoline and oil</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">retail station for servicing motor vehicles, especially with gasoline and oil</skos:definition>
 	</owl:Class>
 	
@@ -295,18 +317,21 @@
 	<owl:Class rdf:about="&auto-ev;Hospital">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Building"/>
 		<rdfs:label xml:lang="en">hospital</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">institution where the sick or injured are given medical or surgical care</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">institution where the sick or injured are given medical or surgical care</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ev;Infrastructure">
 		<rdfs:subClassOf rdf:resource="&auto-mo;MaterialEntity"/>
 		<rdfs:label xml:lang="en">infrastructure</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">basic installations and facilities on which the continuance and growth of a community, state, etc. depend, such as roads, schools, power plants, transportation and communication systems, etc.</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">basic installations and facilities on which the continuance and growth of a community, state, etc. depend, such as roads, schools, power plants, transportation and communication systems, etc.</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ev;InstructionRoadSign">
 		<rdfs:subClassOf rdf:resource="&auto-ev;RoadSign"/>
 		<rdfs:label xml:lang="en">instruction road sign</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">sign which does not contain advertising or promotional matter but relates solely to traffic or pedestrian control, warnings or hours of operation</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">sign which does not contain advertising or promotional matter but relates solely to traffic or pedestrian control, warnings or hours of operation</skos:definition>
 	</owl:Class>
 	
@@ -363,12 +388,14 @@
 	<owl:Class rdf:about="&auto-ev;Kindergarten">
 		<rdfs:subClassOf rdf:resource="&auto-ev;EducationalInstitute"/>
 		<rdfs:label xml:lang="en">kindergarten</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">school or class for children usually from four to six years old</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">school or class for children usually from four to six years old</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ev;Lake">
 		<rdfs:subClassOf rdf:resource="&auto-ev;NaturalPlace"/>
 		<rdfs:label xml:lang="en">lake</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">considerable inland body of standing water</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">considerable inland body of standing water</skos:definition>
 	</owl:Class>
 	
@@ -381,6 +408,7 @@
 	<owl:Class rdf:about="&auto-ev;Lane">
 		<rdfs:subClassOf rdf:resource="&auto-ev;RoadPart"/>
 		<rdfs:label xml:lang="en">lane</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">one of the longitudinal strips into which the carriageway is divisible, whether or not defined by longitudinal road markings, which is wide enough for one moving line of motor vehicles other than motorcycles</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">one of the longitudinal strips into which the carriageway is divisible, whether or not defined by longitudinal road markings, which is wide enough for one moving line of motor vehicles other than motorcycles</skos:definition>
 	</owl:Class>
 	
@@ -398,6 +426,7 @@
 	<owl:Class rdf:about="&auto-ev;Leisure">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Amenity"/>
 		<rdfs:label xml:lang="en">leisure</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">large public building containing different facilities for leisure activities</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">large public building containing different facilities for leisure activities</skos:definition>
 	</owl:Class>
 	
@@ -448,6 +477,7 @@
 	<owl:Class rdf:about="&auto-ev;Node">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Path"/>
 		<rdfs:label xml:lang="en">node</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">single point in space defined by its latitude, longitude and node ID</rdfs:isDefinedBy>
 		<owl:disjointWith rdf:resource="&auto-ev;PathSegment"/>
 		<skos:definition xml:lang="en">single point in space defined by its latitude, longitude and node ID</skos:definition>
 	</owl:Class>
@@ -487,6 +517,7 @@
 	<owl:Class rdf:about="&auto-ev;Park">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Leisure"/>
 		<rdfs:label xml:lang="en">park</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">piece of ground in or near a city or town kept for ornament and recreation</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">piece of ground in or near a city or town kept for ornament and recreation</skos:definition>
 	</owl:Class>
 	
@@ -508,6 +539,7 @@
 	<owl:Class rdf:about="&auto-ev;ParkingPlace">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Amenity"/>
 		<rdfs:label xml:lang="en">parking place</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">place to park a car, truck, etc</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">place to park a car, truck, etc</skos:definition>
 	</owl:Class>
 	
@@ -526,18 +558,21 @@
 	<owl:Class rdf:about="&auto-ev;Pharmacy">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Shop"/>
 		<rdfs:label xml:lang="en">pharmacy</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">place where medicines are compounded or dispensed</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">place where medicines are compounded or dispensed</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ev;PoliceStation">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Building"/>
 		<rdfs:label xml:lang="en">police station</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">headquarters of the police for a locality</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">headquarters of the police for a locality</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ev;PostOffice">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Building"/>
 		<rdfs:label xml:lang="en">post office</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">local branch of a national post office handling the mail for a particular place or area</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">local branch of a national post office handling the mail for a particular place or area</skos:definition>
 	</owl:Class>
 	
@@ -571,6 +606,7 @@
 	<owl:Class rdf:about="&auto-ev;RailwayStation">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Station"/>
 		<rdfs:label xml:lang="en">railway station</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">building containing accommodations for railroad passengers or freight</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">building containing accommodations for railroad passengers or freight</skos:definition>
 	</owl:Class>
 	
@@ -586,6 +622,7 @@
 		<rdfs:subClassOf rdf:resource="&auto-ev;RoadSign"/>
 		<rdfs:label xml:lang="en">regulatory road sign</rdfs:label>
 		<rdfs:comment xml:lang="en">Regulatory sign</rdfs:comment>
+		<rdfs:isDefinedBy xml:lang="en">sign used to inform road users of selected traffic laws or regulations and indicate the applicability of the legal requirements</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">sign used to inform road users of selected traffic laws or regulations and indicate the applicability of the legal requirements</skos:definition>
 	</owl:Class>
 	
@@ -595,15 +632,23 @@
 		<skos:definition xml:lang="en">sign used to inform road users of selected traffic laws or regulations and indicate the applicability of the legal requirements located on the road surface</skos:definition>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-ev;ResidentialDistrict">
+		<rdfs:subClassOf rdf:resource="&auto-ev;UrbanDistrict"/>
+		<rdfs:label xml:lang="en">residential district</rdfs:label>
+		<skos:definition xml:lang="en">territory contiguous to and including a highway not comprising a business district when the property on such highway for a distance of 300 feet or more is in the main improved with residences or residences and buildings in use for business</skos:definition>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-ev;Restaurant">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Amenity"/>
 		<rdfs:label xml:lang="en">restaurant</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">business establishment where meals or refreshments may be purchased</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">business establishment where meals or refreshments may be purchased</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ev;River">
 		<rdfs:subClassOf rdf:resource="&auto-ev;NaturalPlace"/>
 		<rdfs:label xml:lang="en">river</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">natural stream of water of usually considerable volume</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">natural stream of water of usually considerable volume</skos:definition>
 	</owl:Class>
 	
@@ -663,12 +708,14 @@
 	<owl:Class rdf:about="&auto-ev;Roundabout">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Junction"/>
 		<rdfs:label xml:lang="en">roundabout</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">circular intersection with yield control at entry, which permits a vehicle on the circulatory roadway to proceed, and with deflection of the approaching vehicle counter-clockwise around a central island</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">circular intersection with yield control at entry, which permits a vehicle on the circulatory roadway to proceed, and with deflection of the approaching vehicle counter-clockwise around a central island</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ev;School">
 		<rdfs:subClassOf rdf:resource="&auto-ev;EducationalInstitute"/>
 		<rdfs:label xml:lang="en">school</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">institution for the teaching of children</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">institution for the teaching of children</skos:definition>
 	</owl:Class>
 	
@@ -689,6 +736,7 @@
 	<owl:Class rdf:about="&auto-ev;Shop">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Amenity"/>
 		<rdfs:label xml:lang="en">shop</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">small retail establishment or a department in a large one offering a specified line of goods or services</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">small retail establishment or a department in a large one offering a specified line of goods or services</skos:definition>
 	</owl:Class>
 	
@@ -702,6 +750,7 @@
 	<owl:Class rdf:about="&auto-ev;SpeedLimit">
 		<rdfs:subClassOf rdf:resource="&auto-mo;QualitativeValue"/>
 		<rdfs:label xml:lang="en">speed limit</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">maximum (or minimum) speed applicable to a section of highway as established by law or regulation</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">maximum (or minimum) speed applicable to a section of highway as established by law or regulation</skos:definition>
 	</owl:Class>
 	
@@ -756,6 +805,7 @@
 	<owl:Class rdf:about="&auto-ev;SportsCentre">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Leisure"/>
 		<rdfs:label xml:lang="en">sports centre</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">place where people take part in sports</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">place where people take part in sports</skos:definition>
 	</owl:Class>
 	
@@ -774,18 +824,21 @@
 	<owl:Class rdf:about="&auto-ev;Station">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Infrastructure"/>
 		<rdfs:label xml:lang="en">station</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">regular stopping place on a transportation route</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">regular stopping place on a transportation route</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ev;Supermarket">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Shop"/>
 		<rdfs:label xml:lang="en">supermarket</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">self-service retail market selling especially foods and household merchandise</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">self-service retail market selling especially foods and household merchandise</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ev;TollGate">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Infrastructure"/>
 		<rdfs:label xml:lang="en">toll gate</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">point where the driver of a vehicle must pay a toll</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">point where the driver of a vehicle must pay a toll</skos:definition>
 	</owl:Class>
 	
@@ -798,6 +851,7 @@
 	<owl:Class rdf:about="&auto-ev;TrafficSignal">
 		<rdfs:subClassOf rdf:resource="&auto-mo;Process"/>
 		<rdfs:label xml:lang="en">traffic signal</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">device manually, electrically or mechanically operated for the regulation of traffic</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">device manually, electrically or mechanically operated for the regulation of traffic</skos:definition>
 	</owl:Class>
 	
@@ -837,6 +891,7 @@
 	<owl:Class rdf:about="&auto-ev;University">
 		<rdfs:subClassOf rdf:resource="&auto-ev;EducationalInstitute"/>
 		<rdfs:label xml:lang="en">university</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">institution of higher learning providing facilities for teaching and research and authorized to grant academic degrees</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">institution of higher learning providing facilities for teaching and research and authorized to grant academic degrees</skos:definition>
 	</owl:Class>
 	
@@ -848,9 +903,16 @@
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.1</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-ev;UrbanDistrict">
+		<rdfs:subClassOf rdf:resource="&auto-ev;Infrastructure"/>
+		<rdfs:label xml:lang="en">urban district</rdfs:label>
+		<skos:definition xml:lang="en">territory contiguous to and including any street built up with structures devoted to business, industry or dwelling houses situated at intervals of less than 100 feet for a distance of a quarter of a mile or more</skos:definition>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-ev;UtilityPole">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Infrastructure"/>
 		<rdfs:label xml:lang="en">utility pole</rdfs:label>
+		<rdfs:isDefinedBy xml:lang="en">tall pole that is used to support telephone wires, electrical wires, etc</rdfs:isDefinedBy>
 		<skos:definition xml:lang="en">tall pole that is used to support telephone wires, electrical wires, etc</skos:definition>
 	</owl:Class>
 	
@@ -1423,5 +1485,23 @@
 		<owl:annotatedSource rdf:resource="&auto-ev;UtilityPole"/>
 		<owl:annotatedTarget xml:lang="en">tall pole that is used to support telephone wires, electrical wires, etc</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>https://www.merriam-webster.com/dictionary/utility%20pole</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-ev;BusinessDistrict"/>
+		<owl:annotatedTarget xml:lang="en">territory contiguous to and including a highway when within any 600 feet along such highway there are buildings in use for business or industrial purposes, including but not limited to hotels, banks, office buildings, railroad stations and public buildings which occupy at least 300 feet of frontage on one side or 300 feet collectively on both sides of the highway</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://iamtraffic.org/wp-content/uploads/2013/01/UVC2000.pdf</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-ev;ResidentialDistrict"/>
+		<owl:annotatedTarget xml:lang="en">territory contiguous to and including a highway not comprising a business district when the property on such highway for a distance of 300 feet or more is in the main improved with residences or residences and buildings in use for business</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://iamtraffic.org/wp-content/uploads/2013/01/UVC2000.pdf</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-ev;UrbanDistrict"/>
+		<owl:annotatedTarget xml:lang="en">territory contiguous to and including any street built up with structures devoted to business, industry or dwelling houses situated at intervals of less than 100 feet for a distance of a quarter of a mile or more</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://iamtraffic.org/wp-content/uploads/2013/01/UVC2000.pdf</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 </rdf:RDF>
