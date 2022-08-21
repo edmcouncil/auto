@@ -195,19 +195,19 @@
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Campus">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConfinedGeographicLocation"/>
 		<rdfs:label xml:lang="en">campus</rdfs:label>
-		<skos:definition xml:lang="en">A collection of buildings and grounds that belong to a given institution, either academic or non-academic.</skos:definition>
+		<skos:definition xml:lang="en">collection of buildings and grounds that belong to a given institution, either academic or non-academic</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/CentralBusinessDistrict">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConfinedGeographicLocation"/>
 		<rdfs:label xml:lang="en">central business district</rdfs:label>
-		<skos:definition xml:lang="en">A commercial and business center of a city.</skos:definition>
+		<skos:definition xml:lang="en">commercial and business center of a city</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/CityCentre">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConfinedGeographicLocation"/>
 		<rdfs:label xml:lang="en">city centre</rdfs:label>
-		<skos:definition xml:lang="en">A commercial, cultural and often geographic heart of a city.</skos:definition>
+		<skos:definition xml:lang="en">commercial, cultural and often geographic heart of a city</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Condition">
@@ -242,13 +242,13 @@
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConfinedGeographicLocation">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperatingCondition"/>
 		<rdfs:label xml:lang="en">confined geographic location</rdfs:label>
-		<skos:definition xml:lang="en">A region (point, line, or area) on Earth&apos;s surface or elsewhere.</skos:definition>
+		<skos:definition xml:lang="en">region (point, line, or area) on Earth&apos;s surface or elsewhere</skos:definition>
 	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/CongestedTraffic">
 		<rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/TrafficType"/>
 		<rdfs:label xml:lang="en">congested traffic</rdfs:label>
-		<skos:definition xml:lang="en">Traffic that is characterized by slower speeds, longer trip times, and increased vehicular queueing.</skos:definition>
+		<skos:definition xml:lang="en">traffic that is characterized by slower speeds, longer trip times, and increased vehicular queueing</skos:definition>
 	</owl:NamedIndividual>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConventionalDriver">
@@ -280,7 +280,7 @@
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/CorporateCampus">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Campus"/>
 		<rdfs:label xml:lang="en">corporate campus</rdfs:label>
-		<skos:definition xml:lang="en">A collection of buildings and grounds that belong to a given corporation.</skos:definition>
+		<skos:definition xml:lang="en">collection of buildings and grounds that belong to a given corporation</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/CorporateCampusSpecificRoute">
@@ -318,7 +318,7 @@
 	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Daylight">
 		<rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/TimeOfDay"/>
 		<rdfs:label xml:lang="en">daylight</rdfs:label>
-		<skos:definition xml:lang="en">The period when there is natural light from the sun.</skos:definition>
+		<skos:definition xml:lang="en">period when there is natural light from the sun</skos:definition>
 	</owl:NamedIndividual>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DesignatedFreewaysHighVolumeTraffic">
@@ -671,13 +671,13 @@
 	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FairWeather">
 		<rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/WeatherType"/>
 		<rdfs:label xml:lang="en">fair weather</rdfs:label>
-		<skos:definition xml:lang="en">Weather conditions conducive to driving such as good visibility and dry road surface.</skos:definition>
+		<skos:definition xml:lang="en">weather conditions conducive to driving such as good visibility and dry road surface</skos:definition>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FallingWeather">
 		<rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/WeatherType"/>
 		<rdfs:label xml:lang="en">falling weather</rdfs:label>
-		<skos:definition xml:lang="en">Weather characterized by heavy rain, snow or hail that makes driving difficult.</skos:definition>
+		<skos:definition xml:lang="en">weather characterized by heavy rain, snow or hail that makes driving difficult</skos:definition>
 	</owl:NamedIndividual>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Feature">
@@ -688,13 +688,13 @@
 	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FoggyWeather">
 		<rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/WeatherType"/>
 		<rdfs:label xml:lang="en">foggy weather</rdfs:label>
-		<skos:definition xml:lang="en">Weather characterized by fog that reduces visibility on the road.</skos:definition>
+		<skos:definition xml:lang="en">weather characterized by fog that reduces visibility on the road</skos:definition>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Freeway">
 		<rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RoadType"/>
 		<rdfs:label xml:lang="en">freeway</rdfs:label>
-		<skos:definition xml:lang="en">A wide road for fast-moving traffic, especially in the US, with a limited number of places at which drivers can enter and leave it.</skos:definition>
+		<skos:definition xml:lang="en">wide road for fast-moving traffic, especially in the US, with a limited number of places at which drivers can enter and leave it</skos:definition>
 	</owl:NamedIndividual>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FreewaysLowSpeedOptimalRoadMaintenanceFairWeather">
@@ -772,7 +772,7 @@
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/GeofencedArea">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConfinedGeographicLocation"/>
 		<rdfs:label xml:lang="en">geofenced area</rdfs:label>
-		<skos:definition xml:lang="en">A geographic area with a virtual boundary, defined by GPS or RFID technology, that enables software to trigger a response when a mobile device enters or leaves a particular area.</skos:definition>
+		<skos:definition xml:lang="en">geographic area with a virtual boundary, defined by GPS or RFID technology, that enables software to trigger a response when a mobile device enters or leaves a particular area</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HighDrivingAutomation">
@@ -807,19 +807,19 @@
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HighSpeedLimit">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SpeedLimit"/>
 		<rdfs:label xml:lang="en">high-speed limit</rdfs:label>
-		<skos:definition xml:lang="en">A speed that is no greater than ? miles per hour.</skos:definition>
+		<skos:definition xml:lang="en">speed that is no greater than ? miles per hour</skos:definition>
 	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HighVolumeTraffic">
 		<rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/TrafficType"/>
 		<rdfs:label xml:lang="en">high-volume traffic</rdfs:label>
-		<skos:definition xml:lang="en">Traffic exceeding 50000 AADT (Annual Average Daily Traffic).</skos:definition>
+		<skos:definition xml:lang="en">traffic with a volume of more than 50,000 AADT (Annual Average Daily Traffic)</skos:definition>
 	</owl:NamedIndividual>
 	
 	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Highway">
 		<rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RoadType"/>
 		<rdfs:label xml:lang="en">highway</rdfs:label>
-		<skos:definition xml:lang="en">A main road, especially one that connects towns or cities.</skos:definition>
+		<skos:definition xml:lang="en">a main road, especially one that connects towns or cities</skos:definition>
 	</owl:NamedIndividual>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HumanDriver">
@@ -858,19 +858,19 @@
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/LowSpeedLimit">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SpeedLimit"/>
 		<rdfs:label xml:lang="en">low-speed limit</rdfs:label>
-		<skos:definition xml:lang="en">A speed that is no greater than 25 miles per hour.</skos:definition>
+		<skos:definition xml:lang="en">speed that is no greater than 25 miles per hour</skos:definition>
 	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/LowVolumeTraffic">
 		<rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/TrafficType"/>
 		<rdfs:label xml:lang="en">low-volume traffic</rdfs:label>
-		<skos:definition xml:lang="en">Traffic exceeding 400 AADT (Annual Average Daily Traffic).</skos:definition>
+		<skos:definition xml:lang="en">traffic with a volume of less than 400 AADT (Annual Average Daily Traffic)</skos:definition>
 	</owl:NamedIndividual>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/MilitaryBase">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConfinedGeographicLocation"/>
 		<rdfs:label xml:lang="en">military base</rdfs:label>
-		<skos:definition xml:lang="en">A facility for the storage of military equipment and the training of soldiers.</skos:definition>
+		<skos:definition xml:lang="en">facility for the storage of military equipment and the training of soldiers</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/MilitaryBaseSpeedLimit25Daylight">
@@ -1028,7 +1028,7 @@
 	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Nighttime">
 		<rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/TimeOfDay"/>
 		<rdfs:label xml:lang="en">nighttime</rdfs:label>
-		<skos:definition xml:lang="en">The period when there is no natural light from the sun.</skos:definition>
+		<skos:definition xml:lang="en">period when there is no natural light from the sun</skos:definition>
 	</owl:NamedIndividual>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/NoDrivingAutomation">
@@ -1068,7 +1068,7 @@
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperatingCondition">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Condition"/>
 		<rdfs:label xml:lang="en">operating condition</rdfs:label>
-		<skos:definition xml:lang="en">A condition defining an operational design domain (ODD).</skos:definition>
+		<skos:definition xml:lang="en">condition defining an operational design domain (ODD)</skos:definition>
 		<AnnotationVocabulary:adaptedFrom xml:lang="en">SAE-J3016 (2018), sec. 3.22</AnnotationVocabulary:adaptedFrom>
 	</owl:Class>
 	
@@ -1135,13 +1135,13 @@
 	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OptimalRoadMaintenance">
 		<rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RoadMaintenance"/>
 		<rdfs:label xml:lang="en">optimal road maintenance</rdfs:label>
-		<skos:definition xml:lang="en">A high degree of user comfort and convenience. These roads are normally double lane, paved facilities with good lane markings and not under construction.</skos:definition>
+		<skos:definition xml:lang="en">high degree of user comfort and convenience. These roads are normally double lane, paved facilities with good lane markings and not under construction</skos:definition>
 	</owl:NamedIndividual>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ParkingSpace">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConfinedGeographicLocation"/>
 		<rdfs:label xml:lang="en">parking space</rdfs:label>
-		<skos:definition xml:lang="en">A location that is designated for parking, either paved or unpaved. It can be in a parking garage, in a parking lot or on a city street. The space may be delineated by road surface markings. The vehicle fits inside the space, either by parallel parking, perpendicular parking or angled parking.</skos:definition>
+		<skos:definition xml:lang="en">area where vehicles can be left</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/PartialDrivingAutomation">
@@ -1181,13 +1181,13 @@
 	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/PoorRoadMaintenance">
 		<rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RoadMaintenance"/>
 		<rdfs:label xml:lang="en">poor road maintenance</rdfs:label>
-		<skos:definition xml:lang="en">A low degree of user comfort and convenience. These roads may have bad lane markings and may be under construction.</skos:definition>
+		<skos:definition xml:lang="en">low degree of user comfort and convenience. These roads may have bad lane markings and may be under construction</skos:definition>
 	</owl:NamedIndividual>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/PredefinedRoute">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConfinedGeographicLocation"/>
 		<rdfs:label xml:lang="en">predefined route</rdfs:label>
-		<skos:definition xml:lang="en">A precisely defined route within a confined geographical area.</skos:definition>
+		<skos:definition xml:lang="en">precisely defined route within a confined geographical area</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RemoteDriver">
@@ -1213,31 +1213,31 @@
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ResidentalCommunityArea">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConfinedGeographicLocation"/>
 		<rdfs:label xml:lang="en">residental community area</rdfs:label>
-		<skos:definition xml:lang="en">An area belonging to a residential community.</skos:definition>
+		<skos:definition xml:lang="en">area belonging to a residential community</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RoadMaintenance">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperatingCondition"/>
 		<rdfs:label xml:lang="en">road maintenance</rdfs:label>
-		<skos:definition xml:lang="en">Preserving and keeping each type of roadway, roadside, structures as nearly as possible in its original condition as constructed or as subsequently improved and the operation of roadway facilities and services to provide satisfactory and safe transportation.</skos:definition>
+		<skos:definition xml:lang="en">preserving and keeping each type of roadway, roadside, structures as nearly as possible in its original condition as constructed or as subsequently improved and the operation of roadway facilities and services to provide satisfactory and safe transportation</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RoadType">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperatingCondition"/>
 		<rdfs:label xml:lang="en">road type</rdfs:label>
-		<skos:definition xml:lang="en">A particular kind of road.</skos:definition>
+		<skos:definition xml:lang="en">particular kind of road</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SpeedLimit">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperatingCondition"/>
 		<rdfs:label xml:lang="en">speed limit</rdfs:label>
-		<skos:definition xml:lang="en">Speed limit at which an ADS feature is designed to operate.</skos:definition>
+		<skos:definition xml:lang="en">speed limit at which an ADS feature is designed to operate</skos:definition>
 	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/StopAndGoTraffic">
 		<rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/TrafficType"/>
 		<rdfs:label xml:lang="en">stop-and-go traffic</rdfs:label>
-		<skos:definition xml:lang="en">Phenomenon that highway vehicles, instead of maintaining a steady speed, are often forced to be engaged in repeated deceleration–acceleration cycles.</skos:definition>
+		<skos:definition xml:lang="en">phenomenon that highway vehicles, instead of maintaining a steady speed, are often forced to be engaged in repeated deceleration–acceleration cycles</skos:definition>
 	</owl:NamedIndividual>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SuperviseDrivingAutomationSystemPerformance">
@@ -1308,13 +1308,13 @@
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/TimeOfDay">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperatingCondition"/>
 		<rdfs:label xml:lang="en">time of day</rdfs:label>
-		<skos:definition xml:lang="en">A particular time of day.</skos:definition>
+		<skos:definition xml:lang="en">particular time of day</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/TrafficType">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperatingCondition"/>
 		<rdfs:label xml:lang="en">traffic type</rdfs:label>
-		<skos:definition xml:lang="en">A type of road traffic.</skos:definition>
+		<skos:definition xml:lang="en">type of road traffic</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Trip">
@@ -1328,13 +1328,13 @@
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/UniversityCampus">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Campus"/>
 		<rdfs:label xml:lang="en">university campus</rdfs:label>
-		<skos:definition xml:lang="en">The land on which a college or university and related institutional buildings are situated.</skos:definition>
+		<skos:definition xml:lang="en">land on which a college or university and related institutional buildings are situated</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/WeatherType">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperatingCondition"/>
 		<rdfs:label xml:lang="en">weather type</rdfs:label>
-		<skos:definition xml:lang="en">A type of weather.</skos:definition>
+		<skos:definition xml:lang="en">type of weather</skos:definition>
 	</owl:Class>
 	
 	<owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/achieves">
@@ -1350,7 +1350,7 @@
 		<rdfs:label xml:lang="en">has operating condition</rdfs:label>
 		<rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperationalDesignDomain"/>
 		<rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperatingCondition"/>
-		<skos:definition xml:lang="en">Relates an operational design domain (ODD) with an operating condition.</skos:definition>
+		<skos:definition xml:lang="en">relates an operational design domain (ODD) with an operating condition</skos:definition>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasPart">
@@ -1366,7 +1366,7 @@
 		<rdfs:label xml:lang="en">has usage specification</rdfs:label>
 		<rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DrivingAutomation"/>
 		<rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperationalDesignDomain"/>
-		<skos:definition xml:lang="en">Relates particular level of driving automation with a corresponding operational design domain (ODD).</skos:definition>
+		<skos:definition xml:lang="en">relates particular level of driving automation with a corresponding operational design domain (ODD).</skos:definition>
 		<skos:example xml:lang="en">Level 3 driving automation in high-volume traffic on designated fully access-controlled freeways.</skos:example>
 		<skos:example xml:lang="en">Level 4 driving automation in designated urban centers.</skos:example>
 		<AnnotationVocabulary:adaptedFrom xml:lang="en">SAE-J3016 (2018), sec. 3.28</AnnotationVocabulary:adaptedFrom>
