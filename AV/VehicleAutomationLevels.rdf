@@ -245,11 +245,11 @@
 		<skos:definition xml:lang="en">region (point, line, or area) on Earth&apos;s surface or elsewhere</skos:definition>
 	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/CongestedTraffic">
-		<rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/TrafficType"/>
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/CongestedTraffic">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/TrafficType"/>
 		<rdfs:label xml:lang="en">congested traffic</rdfs:label>
 		<skos:definition xml:lang="en">traffic that is characterized by slower speeds, longer trip times, and increased vehicular queueing</skos:definition>
-	</owl:NamedIndividual>
+	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConventionalDriver">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HumanDriver"/>
@@ -298,7 +298,7 @@
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">corporate campus, specific route</rdfs:label>
-		<skos:definition xml:lang="en">Operating conditions: specific route in a corporate campus.</skos:definition>
+		<skos:definition xml:lang="en">specific route in a corporate campus</skos:definition>
 		<AnnotationVocabulary:adaptedFrom xml:lang="en">SAE-J3016 (2018), sec. 3.3, Example 1</AnnotationVocabulary:adaptedFrom>
 	</owl:Class>
 	
@@ -315,24 +315,24 @@
 		<AnnotationVocabulary:explanatoryNote xml:lang="en">This term does not apply to transient lapses in performance by a level 1 or 2 driving automation system that are due to inherent design limitations and that do not otherwise prevent the system from performing its part of the DDT on a sustained basis.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Daylight">
-		<rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/TimeOfDay"/>
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Daylight">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/TimeOfDay"/>
 		<rdfs:label xml:lang="en">daylight</rdfs:label>
 		<skos:definition xml:lang="en">period when there is natural light from the sun</skos:definition>
-	</owl:NamedIndividual>
+	</owl:Class>
 	
-	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DesignatedFreewaysHighVolumeTraffic">
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DesignatedFreewayHighVolumeTraffic">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperationalDesignDomain"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:hasValue rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Freeway"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Freeway"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:hasValue rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HighVolumeTraffic"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HighVolumeTraffic"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
@@ -341,8 +341,8 @@
 				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/PredefinedRoute"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">designated freeways, high-volume traffic</rdfs:label>
-		<skos:definition xml:lang="en">Operating conditions: high-volume traffic on designated fully access-controlled freeways.</skos:definition>
+		<rdfs:label xml:lang="en">designated freeway, high-volume traffic</rdfs:label>
+		<skos:definition xml:lang="en">high-volume traffic on a designated freeway</skos:definition>
 		<AnnotationVocabulary:adaptedFrom xml:lang="en">SAE-J3016 (2018), sec. 3.9, Example 1</AnnotationVocabulary:adaptedFrom>
 	</owl:Class>
 	
@@ -668,74 +668,84 @@
 		<rdfs:label xml:lang="en">entity</rdfs:label>
 	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FairWeather">
-		<rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/WeatherType"/>
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FairWeather">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/WeatherType"/>
 		<rdfs:label xml:lang="en">fair weather</rdfs:label>
 		<skos:definition xml:lang="en">weather conditions conducive to driving such as good visibility and dry road surface</skos:definition>
-	</owl:NamedIndividual>
+	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FallingWeather">
-		<rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/WeatherType"/>
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FallingWeather">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/WeatherType"/>
 		<rdfs:label xml:lang="en">falling weather</rdfs:label>
 		<skos:definition xml:lang="en">weather characterized by heavy rain, snow or hail that makes driving difficult</skos:definition>
-	</owl:NamedIndividual>
+	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Feature">
 		<rdfs:label xml:lang="en">feature</rdfs:label>
 		<skos:definition xml:lang="en">Indicates a built-in feature, accessory, or component of the vehicle.</skos:definition>
 	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FoggyWeather">
-		<rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/WeatherType"/>
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FoggyWeather">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/WeatherType"/>
 		<rdfs:label xml:lang="en">foggy weather</rdfs:label>
 		<skos:definition xml:lang="en">weather characterized by fog that reduces visibility on the road</skos:definition>
-	</owl:NamedIndividual>
+	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Freeway">
-		<rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RoadType"/>
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Freeway">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RoadType"/>
 		<rdfs:label xml:lang="en">freeway</rdfs:label>
 		<skos:definition xml:lang="en">wide road for fast-moving traffic, especially in the US, with a limited number of places at which drivers can enter and leave it</skos:definition>
-	</owl:NamedIndividual>
+	</owl:Class>
 	
-	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FreewaysLowSpeedOptimalRoadMaintenanceFairWeather">
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FreewayLowSpeedOptimalRoadMaintenanceFairWeather">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperationalDesignDomain"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:hasValue rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FairWeather"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FairWeather"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:hasValue rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Freeway"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Freeway"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:hasValue rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OptimalRoadMaintenance"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OptimalRoadMaintenance"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/LowSpeedLimit"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SpeedLimit25"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">freeways, low speed, optimal road maintenance, fair weather</rdfs:label>
-		<skos:definition xml:lang="en">Operating conditions: fully access-controlled freeways in low-speed traffic under fair weather conditions and optimal road maintenance.</skos:definition>
+		<rdfs:label xml:lang="en">freeway, low speed, optimal road maintenance, fair weather</rdfs:label>
+		<skos:definition xml:lang="en">fully access-controlled freeway in low-speed traffic under fair weather conditions and optimal road maintenance</skos:definition>
 		<AnnotationVocabulary:adaptedFrom xml:lang="en">SAE-J3016 (2018), sec. 3.22, Example 1</AnnotationVocabulary:adaptedFrom>
 	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FreewaysTrafficJams">
-		<rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperationalDesignDomain"/>
-		<rdfs:label xml:lang="en">freeways, traffic jams</rdfs:label>
-		<skos:definition xml:lang="en">Operating conditions: traffic jams on fully access-controlled freeways.</skos:definition>
-		<hasOperatingCondition rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/CongestedTraffic"/>
-		<hasOperatingCondition rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Freeway"/>
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FreewayTrafficJam">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperationalDesignDomain"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/CongestedTraffic"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Freeway"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">freeway, traffic jam</rdfs:label>
+		<skos:definition xml:lang="en">traffic jam on a freeway</skos:definition>
 		<AnnotationVocabulary:adaptedFrom xml:lang="en">SAE-J3016 (2018), sec. 3.5, Example 2</AnnotationVocabulary:adaptedFrom>
-	</owl:NamedIndividual>
+	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FullDrivingAutomation">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/AutomatedDriving"/>
@@ -804,23 +814,17 @@
 		<AnnotationVocabulary:explanatoryNote xml:lang="en">The user does not need to supervise a level 4 ADS feature or be receptive to a request to intervene while the ADS is engaged. A level 4 ADS is capable of automatically performing DDT fallback, as well as achieving a minimal risk condition if a user does not resume performance of the DDT. This automated DDT fallback and minimal risk condition achievement capability is the primary difference between level 4 and level 3 ADS features. This means that the user of an engaged level 4 ADS feature is a passenger who need not respond to requests to intervene or to DDT performance-relevant system failures.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
-	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HighSpeedLimit">
-		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SpeedLimit"/>
-		<rdfs:label xml:lang="en">high-speed limit</rdfs:label>
-		<skos:definition xml:lang="en">speed that is no greater than ? miles per hour</skos:definition>
-	</owl:Class>
-	
-	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HighVolumeTraffic">
-		<rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/TrafficType"/>
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HighVolumeTraffic">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/TrafficType"/>
 		<rdfs:label xml:lang="en">high-volume traffic</rdfs:label>
 		<skos:definition xml:lang="en">traffic with a volume of more than 50,000 AADT (Annual Average Daily Traffic)</skos:definition>
-	</owl:NamedIndividual>
+	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Highway">
-		<rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RoadType"/>
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Highway">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RoadType"/>
 		<rdfs:label xml:lang="en">highway</rdfs:label>
-		<skos:definition xml:lang="en">a main road, especially one that connects towns or cities</skos:definition>
-	</owl:NamedIndividual>
+		<skos:definition xml:lang="en">main road, especially one that connects towns or cities</skos:definition>
+	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HumanDriver">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HumanUser"/>
@@ -855,17 +859,11 @@
 		<AnnotationVocabulary:explanatoryNote xml:lang="en">Longitudinal vehicle motion control includes maintaining set speed as well as detecting a preceding vehicle in the path of the subject vehicle, maintaining an appropriate gap to the preceding vehicle and applying propulsion or braking inputs to cause the vehicle to maintain that speed or gap.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
-	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/LowSpeedLimit">
-		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SpeedLimit"/>
-		<rdfs:label xml:lang="en">low-speed limit</rdfs:label>
-		<skos:definition xml:lang="en">speed that is no greater than 25 miles per hour</skos:definition>
-	</owl:Class>
-	
-	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/LowVolumeTraffic">
-		<rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/TrafficType"/>
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/LowVolumeTraffic">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/TrafficType"/>
 		<rdfs:label xml:lang="en">low-volume traffic</rdfs:label>
 		<skos:definition xml:lang="en">traffic with a volume of less than 400 AADT (Annual Average Daily Traffic)</skos:definition>
-	</owl:NamedIndividual>
+	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/MilitaryBase">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConfinedGeographicLocation"/>
@@ -878,13 +876,7 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:hasValue rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Daylight"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/LowSpeedLimit"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Daylight"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
@@ -893,8 +885,14 @@
 				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/MilitaryBase"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SpeedLimit25"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">military base, speed limit 25 kph, daylight</rdfs:label>
-		<skos:definition xml:lang="en">Operating conditions: a geographically-defined military base, and only during daylight at speeds not to exceed 25 mph.</skos:definition>
+		<skos:definition xml:lang="en">geographically-defined military base, only during daylight at speeds not to exceed 25 mph</skos:definition>
 		<AnnotationVocabulary:adaptedFrom xml:lang="en">SAE-J3016 (2018), sec. 3.22, Example 2</AnnotationVocabulary:adaptedFrom>
 	</owl:Class>
 	
@@ -1025,11 +1023,11 @@
 		<AnnotationVocabulary:explanatoryNote xml:lang="en">The term “drive” is not used in this document, however, in many cases it could be used correctly in lieu of “operate.”</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Nighttime">
-		<rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/TimeOfDay"/>
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Nighttime">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/TimeOfDay"/>
 		<rdfs:label xml:lang="en">nighttime</rdfs:label>
 		<skos:definition xml:lang="en">period when there is no natural light from the sun</skos:definition>
-	</owl:NamedIndividual>
+	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/NoDrivingAutomation">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SustainedOperationOfVehicle"/>
@@ -1132,11 +1130,11 @@
 		<AnnotationVocabulary:explanatoryNote xml:lang="en">Section 6 discusses the significance of ODDs in the context of the levels of driving automation.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OptimalRoadMaintenance">
-		<rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RoadMaintenance"/>
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OptimalRoadMaintenance">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RoadMaintenance"/>
 		<rdfs:label xml:lang="en">optimal road maintenance</rdfs:label>
-		<skos:definition xml:lang="en">high degree of user comfort and convenience. These roads are normally double lane, paved facilities with good lane markings and not under construction</skos:definition>
-	</owl:NamedIndividual>
+		<skos:definition xml:lang="en">road maintenance that guarantees a high level of comfort and convenience for users, which usually means roads that are two-lane, paved, with good lane markings and are not under construction</skos:definition>
+	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ParkingSpace">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConfinedGeographicLocation"/>
@@ -1178,11 +1176,11 @@
 		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.29.2</AnnotationVocabulary:adaptedFrom>
 	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/PoorRoadMaintenance">
-		<rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RoadMaintenance"/>
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/PoorRoadMaintenance">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RoadMaintenance"/>
 		<rdfs:label xml:lang="en">poor road maintenance</rdfs:label>
-		<skos:definition xml:lang="en">low degree of user comfort and convenience. These roads may have bad lane markings and may be under construction</skos:definition>
-	</owl:NamedIndividual>
+		<rdfs:label xml:lang="en">road maintenance that offers a low degree of comfort and convenience for users, often meaning poor lane markings and construction or repair work</rdfs:label>
+	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/PredefinedRoute">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConfinedGeographicLocation"/>
@@ -1234,11 +1232,53 @@
 		<skos:definition xml:lang="en">speed limit at which an ADS feature is designed to operate</skos:definition>
 	</owl:Class>
 	
-	<owl:NamedIndividual rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/StopAndGoTraffic">
-		<rdf:type rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/TrafficType"/>
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SpeedLimit25">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SpeedLimit"/>
+		<rdfs:label xml:lang="en">speed limit 25</rdfs:label>
+		<skos:definition xml:lang="en">speed limit of 25 km per hour</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SpeedLimit30">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SpeedLimit"/>
+		<rdfs:label xml:lang="en">speed limit 30</rdfs:label>
+		<skos:definition xml:lang="en">speed limit of 30 km per hour</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SpeedLimit40">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SpeedLimit"/>
+		<rdfs:label xml:lang="en">speed limit 40</rdfs:label>
+		<skos:definition xml:lang="en">speed limit of 40 km per hour</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SpeedLimit50">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SpeedLimit"/>
+		<rdfs:label xml:lang="en">speed limit 50</rdfs:label>
+		<skos:definition xml:lang="en">speed limit of 50 km per hour</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SpeedLimit60">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SpeedLimit"/>
+		<rdfs:label xml:lang="en">speed limit 60</rdfs:label>
+		<skos:definition xml:lang="en">speed limit of 60 km per hour</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SpeedLimit70">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SpeedLimit"/>
+		<rdfs:label xml:lang="en">speed limit 70</rdfs:label>
+		<skos:definition xml:lang="en">speed limit of 70 km per hour</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SpeedLimit80">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SpeedLimit"/>
+		<rdfs:label xml:lang="en">speed limit 80</rdfs:label>
+		<skos:definition xml:lang="en">speed limit of 80 km per hour</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/StopAndGoTraffic">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/TrafficType"/>
 		<rdfs:label xml:lang="en">stop-and-go traffic</rdfs:label>
 		<skos:definition xml:lang="en">phenomenon that highway vehicles, instead of maintaining a steady speed, are often forced to be engaged in repeated deceleration–acceleration cycles</skos:definition>
-	</owl:NamedIndividual>
+	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SuperviseDrivingAutomationSystemPerformance">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Process"/>
@@ -1366,7 +1406,7 @@
 		<rdfs:label xml:lang="en">has usage specification</rdfs:label>
 		<rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DrivingAutomation"/>
 		<rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperationalDesignDomain"/>
-		<skos:definition xml:lang="en">relates particular level of driving automation with a corresponding operational design domain (ODD).</skos:definition>
+		<skos:definition xml:lang="en">relates particular level of driving automation with a corresponding operational design domain (ODD)</skos:definition>
 		<skos:example xml:lang="en">Level 3 driving automation in high-volume traffic on designated fully access-controlled freeways.</skos:example>
 		<skos:example xml:lang="en">Level 4 driving automation in designated urban centers.</skos:example>
 		<AnnotationVocabulary:adaptedFrom xml:lang="en">SAE-J3016 (2018), sec. 3.28</AnnotationVocabulary:adaptedFrom>
