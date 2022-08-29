@@ -4931,6 +4931,13 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 	</owl:AnnotationProperty>
 	
 	<owl:Axiom>
+		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/390.5</rdfs:seeAlso>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vc;CoveredFarmVehicle"/>
+		<owl:annotatedTarget xml:lang="en">straight truck or articulated vehicle that is registered in a State with a license plate or other designation issued by the State of registration that allows law enforcement officials to identify it as a farm vehicle and used to transport agricultural commodities, livestock, machinery or supplies to or from a farm or ranch</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 390.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
 		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
 		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-vc;AgriculturalCommodityTrailer"/>
@@ -4949,13 +4956,6 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-vc;ContainerChassisTrailer"/>
 		<owl:annotatedTarget xml:lang="en">semitrailer of skeleton construction limited to a bottom frame, one or more axles, specially built and fitted with locking devices for the transport of intermodal cargo containers so that when the chassis and container are assembled, the units serve the same function as an over the road trailer</owl:annotatedTarget>
-		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Axiom>
-	<owl:Axiom>
-		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
-		<owl:annotatedProperty rdf:resource="&skos;definition"/>
-		<owl:annotatedSource rdf:resource="&auto-vc;CoveredFarmVehicle"/>
-		<owl:annotatedTarget xml:lang="en">straight truck or articulated vehicle that is registered in a State with a license plate or other designation issued by the State of registration that allows law enforcement officials to identify it as a farm vehicle and used to transport agricultural commodities, livestock, machinery or supplies to or from a farm or ranch</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>

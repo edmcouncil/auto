@@ -1694,13 +1694,6 @@ It contains many classes and properties extracted from:
 	</owl:AnnotationProperty>
 	
 	<owl:Axiom>
-		<dct:source>26 C.F.R. § 48.4061(b)-2</dct:source>
-		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/26/48.4061(b)-2</rdfs:seeAlso>
-		<owl:annotatedProperty rdf:resource="&skos;definition"/>
-		<owl:annotatedSource rdf:resource="&auto-vp;VehiclePart"/>
-		<owl:annotatedTarget xml:lang="en">article the primary use of which is to improve, repair, replace, or serve as a component part of a vehicle</owl:annotatedTarget>
-	</owl:Axiom>
-	<owl:Axiom>
 		<dct:source>https://www.edmunds.com/glossary/</dct:source>
 		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-vp;TCS"/>
@@ -1775,12 +1768,6 @@ It contains many classes and properties extracted from:
 		<owl:annotatedTarget xml:lang="en">series of Arabic numbers and Roman letters that is assigned to a motor vehicle for identification purposes.</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
-		<sm:directSource>https://en.wikipedia.org/wiki/Automobile_roof</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&skos;definition"/>
-		<owl:annotatedSource rdf:resource="&auto-vp;Roof"/>
-		<owl:annotatedTarget>portion of an automobile that sits above the passenger compartment, protecting the vehicle occupants from sun, wind and other external elements</owl:annotatedTarget>
-	</owl:Axiom>
-	<owl:Axiom>
 		<sm:directSource>https://www.collinsdictionary.com/dictionary/english/window-shade</sm:directSource>
 		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-vp;WindowShade"/>
@@ -1853,18 +1840,18 @@ It contains many classes and properties extracted from:
 		<owl:annotatedTarget xml:lang="en">mirror (as in an automobile) that gives a view of the area behind a vehicle</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
-		<rdfs:label>https://www.law.cornell.edu/cfr/text/49/571.108</rdfs:label>
-		<owl:annotatedProperty rdf:resource="&skos;definition"/>
-		<owl:annotatedSource rdf:resource="&auto-vp;ParkingLamp"/>
-		<owl:annotatedTarget xml:lang="en">lamp on both the left and right of the vehicle which shows to the front and is intended to mark the vehicle when parked or serve as a reserve front position indicating system in the event of headlamp failure</owl:annotatedTarget>
-		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 571.108</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Axiom>
-	<owl:Axiom>
 		<rdfs:seeAlso>\https://www.law.cornell.edu/cfr/text/49/571.109</rdfs:seeAlso>
 		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-vp;Carcass"/>
 		<owl:annotatedTarget xml:lang="en">tire structure, except for tread and sidewall rubber</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 571.109</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/26/48.4061(b)-2</rdfs:seeAlso>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;VehiclePart"/>
+		<owl:annotatedTarget xml:lang="en">article the primary use of which is to improve, repair, replace, or serve as a component part of a vehicle</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>26 C.F.R. § 48.4061(b)-2</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
 		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/26/48.4072-1</rdfs:seeAlso>
@@ -2207,6 +2194,13 @@ It contains many classes and properties extracted from:
 		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-vp;MechanicallyAimableHeadlamp"/>
 		<owl:annotatedTarget xml:lang="en">headlamp having three pads on the lens, forming an aiming plane used for laboratory photometric testing and for adjusting and inspecting the aim of the headlamp when installed on the vehicle</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 571.108</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/571.108</rdfs:seeAlso>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;ParkingLamp"/>
+		<owl:annotatedTarget xml:lang="en">lamp on both the left and right of the vehicle which shows to the front and is intended to mark the vehicle when parked or serve as a reserve front position indicating system in the event of headlamp failure</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 571.108</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
@@ -2664,5 +2658,11 @@ It contains many classes and properties extracted from:
 		<owl:annotatedSource rdf:resource="&auto-vp;ParkingBrake"/>
 		<owl:annotatedTarget xml:lang="en">mechanism designed to prevent the movement of a stationary motor vehicle</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 571.3</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;Roof"/>
+		<owl:annotatedTarget>portion of an automobile that sits above the passenger compartment, protecting the vehicle occupants from sun, wind and other external elements</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://en.wikipedia.org/wiki/Automobile_roof</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 </rdf:RDF>
