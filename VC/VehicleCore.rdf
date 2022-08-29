@@ -4952,21 +4952,21 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
-		<rdfs:seeAlso rdf:resource="https://www.law.cornell.edu/cfr/text/49/393.5"/>
+		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
 		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-vc;ContainerChassisTrailer"/>
 		<owl:annotatedTarget xml:lang="en">semitrailer of skeleton construction limited to a bottom frame, one or more axles, specially built and fitted with locking devices for the transport of intermodal cargo containers so that when the chassis and container are assembled, the units serve the same function as an over the road trailer</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
-		<rdfs:seeAlso rdf:resource="https://www.law.cornell.edu/cfr/text/49/393.5"/>
+		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
 		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-vc;CribTypeLogTrailer"/>
 		<owl:annotatedTarget xml:lang="en">trailer equipped with stakes, bunks, a front-end structure, and a rear structure to restrain logs</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
-		<rdfs:seeAlso rdf:resource="https://www.law.cornell.edu/cfr/text/49/393.5"/>
+		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
 		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-vc;HeavyHaulerTrailer"/>
 		<owl:annotatedTarget xml:lang="en">trailer whose brakes lines are designed to adapt to separation or extension of the vehicle frame and/or which body consists only of a platform whose primary cargo-carrying surface is not more than 1,016 mm (40 inches) above the ground in an unloaded condition, except that it may include sides that are designed to be easily removable and a permanent “front-end structure”, but that is not a container chassis trailer</owl:annotatedTarget>
