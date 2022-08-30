@@ -138,6 +138,13 @@
 		<skos:definition xml:lang="en">place on a road where buses stop to let passengers on and off</skos:definition>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-ev;BusinessDistrict">
+		<rdfs:subClassOf rdf:resource="&auto-ev;UrbanDistrict"/>
+		<rdfs:label xml:lang="en">business district</rdfs:label>
+		<owl:disjointWith rdf:resource="&auto-ev;ResidentialDistrict"/>
+		<skos:definition xml:lang="en">territory contiguous to and including a highway when within any 600 feet along such highway there are buildings in use for business or industrial purposes, including but not limited to hotels, banks, office buildings, railroad stations and public buildings which occupy at least 300 feet of frontage on one side or 300 feet collectively on both sides of the highway</skos:definition>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-ev;ChannelizedIntersection">
 		<rdfs:subClassOf rdf:resource="&auto-ev;AtGradeIntersection"/>
 		<rdfs:label xml:lang="en">channelized intersection</rdfs:label>
@@ -595,6 +602,12 @@
 		<skos:definition xml:lang="en">sign used to inform road users of selected traffic laws or regulations and indicate the applicability of the legal requirements located on the road surface</skos:definition>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-ev;ResidentialDistrict">
+		<rdfs:subClassOf rdf:resource="&auto-ev;UrbanDistrict"/>
+		<rdfs:label xml:lang="en">residential district</rdfs:label>
+		<skos:definition xml:lang="en">territory contiguous to and including a highway not comprising a business district when the property on such highway for a distance of 300 feet or more is in the main improved with residences or residences and buildings in use for business</skos:definition>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-ev;Restaurant">
 		<rdfs:subClassOf rdf:resource="&auto-ev;Amenity"/>
 		<rdfs:label xml:lang="en">restaurant</rdfs:label>
@@ -846,6 +859,12 @@
 		<rdfs:comment xml:lang="en">Such boundaries are established in accordance with the provisions of Title 23 of the United States Code. Urban area boundary information is available from state highway or transportation departments. In the event that boundaries have not been fixed as above for any urban place designated by the Bureau of the Census having population of 5000 or more, the area within boundaries fixed by the Bureau of the Census shall be an urban area.</rdfs:comment>
 		<skos:definition xml:lang="en">An area whose boundaries shall be those fixed by responsible state and local officials in cooperation with each other and approved by the Federal Highway Administration, U.S. Department of Transportation.</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.5.1</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-ev;UrbanDistrict">
+		<rdfs:subClassOf rdf:resource="&auto-ev;Infrastructure"/>
+		<rdfs:label xml:lang="en">urban district</rdfs:label>
+		<skos:definition xml:lang="en">territory contiguous to and including any street built up with structures devoted to business, industry or dwelling houses situated at intervals of less than 100 feet for a distance of a quarter of a mile or more</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-ev;UtilityPole">
@@ -1168,258 +1187,276 @@
 	
 	<owl:Axiom>
 		<dct:source>https://www.merriam-webster.com/dictionary/restaurant</dct:source>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;Restaurant"/>
 		<owl:annotatedTarget xml:lang="en">business establishment where meals or refreshments may be purchased</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
 		<sm:directSource>https://mutcd.fhwa.dot.gov/pdfs/2009r1r2/mutcd2009r1r2edition.pdf</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;SpeedLimit"/>
 		<owl:annotatedTarget xml:lang="en">maximum (or minimum) speed applicable to a section of highway as established by law or regulation</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
 		<sm:directSource>https://www.collinsdictionary.com/dictionary/english/bus-lane</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;BusLane"/>
 		<owl:annotatedTarget xml:lang="en">part of the road which is intended to be used only by buses</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
 		<sm:directSource>https://www.collinsdictionary.com/dictionary/english/bus-stop</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;BusStop"/>
 		<owl:annotatedTarget xml:lang="en">place on a road where buses stop to let passengers on and off</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
 		<sm:directSource>https://www.collinsdictionary.com/dictionary/english/sports-centre</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;SportsCentre"/>
 		<owl:annotatedTarget xml:lang="en">place where people take part in sports</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
 		<sm:directSource>https://www.merriam-webster.com/dictionary/college</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;College"/>
 		<owl:annotatedTarget xml:lang="en">institution offering instruction, usually in a professional, vocational, or technical field</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
 		<sm:directSource>https://www.merriam-webster.com/dictionary/convenience%20store</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;Convenience"/>
 		<owl:annotatedTarget xml:lang="en">small, often franchised market that is open long hours</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
 		<sm:directSource>https://www.merriam-webster.com/dictionary/fire%20station</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;FireStation"/>
 		<owl:annotatedTarget xml:lang="en">building housing fire apparatus and usually firefighters</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
 		<sm:directSource>https://www.merriam-webster.com/dictionary/forest</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;Forest"/>
 		<owl:annotatedTarget xml:lang="en">dense growth of trees and underbrush covering a large tract</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
 		<sm:directSource>https://www.merriam-webster.com/dictionary/gas%20station</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;GasStation"/>
 		<owl:annotatedTarget xml:lang="en">retail station for servicing motor vehicles, especially with gasoline and oil</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
 		<sm:directSource>https://www.merriam-webster.com/dictionary/hospital</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;Hospital"/>
 		<owl:annotatedTarget xml:lang="en">institution where the sick or injured are given medical or surgical care</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
 		<sm:directSource>https://www.merriam-webster.com/dictionary/kindergarten</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;Kindergarten"/>
 		<owl:annotatedTarget xml:lang="en">school or class for children usually from four to six years old</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
 		<sm:directSource>https://www.merriam-webster.com/dictionary/lake</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;Lake"/>
 		<owl:annotatedTarget xml:lang="en">considerable inland body of standing water</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
 		<sm:directSource>https://www.merriam-webster.com/dictionary/park</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;Park"/>
 		<owl:annotatedTarget xml:lang="en">piece of ground in or near a city or town kept for ornament and recreation</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
 		<sm:directSource>https://www.merriam-webster.com/dictionary/parking%20place%2Fspace%2Fspot</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;ParkingPlace"/>
 		<owl:annotatedTarget xml:lang="en">place to park a car, truck, etc</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
 		<sm:directSource>https://www.merriam-webster.com/dictionary/pharmacy</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;Pharmacy"/>
 		<owl:annotatedTarget xml:lang="en">place where medicines are compounded or dispensed</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
 		<sm:directSource>https://www.merriam-webster.com/dictionary/police%20station</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;PoliceStation"/>
 		<owl:annotatedTarget xml:lang="en">headquarters of the police for a locality</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
 		<sm:directSource>https://www.merriam-webster.com/dictionary/post%20office</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;PostOffice"/>
 		<owl:annotatedTarget xml:lang="en">local branch of a national post office handling the mail for a particular place or area</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
 		<sm:directSource>https://www.merriam-webster.com/dictionary/railroad%20station</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;RailwayStation"/>
 		<owl:annotatedTarget xml:lang="en">building containing accommodations for railroad passengers or freight</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
 		<sm:directSource>https://www.merriam-webster.com/dictionary/river</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;River"/>
 		<owl:annotatedTarget xml:lang="en">natural stream of water of usually considerable volume</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
 		<sm:directSource>https://www.merriam-webster.com/dictionary/school</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;School"/>
 		<owl:annotatedTarget xml:lang="en">institution for the teaching of children</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
 		<sm:directSource>https://www.merriam-webster.com/dictionary/shop</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;Shop"/>
 		<owl:annotatedTarget xml:lang="en">small retail establishment or a department in a large one offering a specified line of goods or services</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
 		<sm:directSource>https://www.merriam-webster.com/dictionary/station</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;Station"/>
 		<owl:annotatedTarget xml:lang="en">regular stopping place on a transportation route</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
 		<sm:directSource>https://www.merriam-webster.com/dictionary/tollgate</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;TollGate"/>
 		<owl:annotatedTarget xml:lang="en">point where the driver of a vehicle must pay a toll</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
 		<sm:directSource>https://www.merriam-webster.com/dictionary/university</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;University"/>
 		<owl:annotatedTarget xml:lang="en">institution of higher learning providing facilities for teaching and research and authorized to grant academic degrees</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
 		<sm:directSource>https://www.oregon.gov/ODOT/Forms/DMV/1.pdf</sm:directSource>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;Roundabout"/>
 		<owl:annotatedTarget xml:lang="en">circular intersection with yield control at entry, which permits a vehicle on the circulatory roadway to proceed, and with deflection of the approaching vehicle counter-clockwise around a central island</owl:annotatedTarget>
 	</owl:Axiom>
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;Airport"/>
 		<owl:annotatedTarget xml:lang="en">place from which aircraft operate that usually has paved runways and maintenance facilities and often serves as a terminal</owl:annotatedTarget>
 		<fibo-fnd-utl-av:definitionOrigin>https://www.merriam-webster.com/dictionary/airport</fibo-fnd-utl-av:definitionOrigin>
 	</owl:Axiom>
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;Amenity"/>
 		<owl:annotatedTarget xml:lang="en">something that helps to provide comfort, convenience, or enjoyment</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>https://www.merriam-webster.com/dictionary/amenity</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;AuxiliaryRoadSign"/>
 		<owl:annotatedTarget xml:lang="en">sign that provides information such as direction, time and temperature displays, hours of operation, or warning; auxiliary signs are intended for the convenience of the public. An auxiliary sign may include the business name and/or logo, but may not include its product or services</owl:annotatedTarget>
 		<fibo-fnd-utl-av:definitionOrigin>https://www.lawinsider.com/dictionary/auxiliary-sign</fibo-fnd-utl-av:definitionOrigin>
 	</owl:Axiom>
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;Bank"/>
 		<owl:annotatedTarget xml:lang="en">establishment for the custody, loan, exchange, or issue of money, for the extension of credit, and for facilitating the transmission of funds</owl:annotatedTarget>
 		<fibo-fnd-utl-av:definitionOrigin>https://www.merriam-webster.com/dictionary/bank</fibo-fnd-utl-av:definitionOrigin>
 	</owl:Axiom>
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;Building"/>
 		<owl:annotatedTarget xml:lang="en">usually roofed and walled structure built for permanent use</owl:annotatedTarget>
 		<fibo-fnd-utl-av:definitionOrigin>https://www.merriam-webster.com/dictionary/building</fibo-fnd-utl-av:definitionOrigin>
 	</owl:Axiom>
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;BusStation"/>
 		<owl:annotatedTarget xml:lang="en">place incorporating waiting areas, stands for buses, and ticket offices from which buses or coaches depart</owl:annotatedTarget>
 		<fibo-fnd-utl-av:definitionOrigin>https://www.collinsdictionary.com/dictionary/english/bus-station</fibo-fnd-utl-av:definitionOrigin>
 	</owl:Axiom>
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-ev;BusinessDistrict"/>
+		<owl:annotatedTarget xml:lang="en">territory contiguous to and including a highway when within any 600 feet along such highway there are buildings in use for business or industrial purposes, including but not limited to hotels, banks, office buildings, railroad stations and public buildings which occupy at least 300 feet of frontage on one side or 300 feet collectively on both sides of the highway</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://iamtraffic.org/wp-content/uploads/2013/01/UVC2000.pdf</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;DirectionalRoadSign"/>
 		<owl:annotatedTarget xml:lang="en">sign installed on public land that advertises the direction to be taken to a service, tourist attraction or a townsite/locality</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>https://www.lawinsider.com/dictionary/directional-signage</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;FastFood"/>
 		<owl:annotatedTarget xml:lang="en">restaurant specializing in food that can be prepared and served quickly</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>https://www.merriam-webster.com/dictionary/fast-food</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;Infrastructure"/>
 		<owl:annotatedTarget xml:lang="en">basic installations and facilities on which the continuance and growth of a community, state, etc. depend, such as roads, schools, power plants, transportation and communication systems, etc.</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>https://www.collinsdictionary.com/dictionary/english/infrastructure</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;InstructionRoadSign"/>
 		<owl:annotatedTarget xml:lang="en">sign which does not contain advertising or promotional matter but relates solely to traffic or pedestrian control, warnings or hours of operation</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>https://www.lawinsider.com/dictionary/instructional-sign</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;Lane"/>
 		<owl:annotatedTarget xml:lang="en">one of the longitudinal strips into which the carriageway is divisible, whether or not defined by longitudinal road markings, which is wide enough for one moving line of motor vehicles other than motorcycles</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>https://unece.org/DAM/trans/conventn/Conv_road_signs_2006v_EN.pdf</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;Leisure"/>
 		<owl:annotatedTarget xml:lang="en">large public building containing different facilities for leisure activities</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>https://www.collinsdictionary.com/dictionary/english/leisure-centre</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;Node"/>
 		<owl:annotatedTarget xml:lang="en">single point in space defined by its latitude, longitude and node ID</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>https://wiki.openstreetmap.org/wiki/Node</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;RegulatoryRoadSign"/>
 		<owl:annotatedTarget xml:lang="en">sign used to inform road users of selected traffic laws or regulations and indicate the applicability of the legal requirements</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>https://mutcd.fhwa.dot.gov/htm/2003/part2/part2b1.htm</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-ev;ResidentialDistrict"/>
+		<owl:annotatedTarget xml:lang="en">territory contiguous to and including a highway not comprising a business district when the property on such highway for a distance of 300 feet or more is in the main improved with residences or residences and buildings in use for business</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://iamtraffic.org/wp-content/uploads/2013/01/UVC2000.pdf</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;Supermarket"/>
 		<owl:annotatedTarget xml:lang="en">self-service retail market selling especially foods and household merchandise</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>https://www.merriam-webster.com/dictionary/supermarket</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;TrafficSignal"/>
 		<owl:annotatedTarget xml:lang="en">device manually, electrically or mechanically operated for the regulation of traffic</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>https://www.lawinsider.com/dictionary/traffic-signal</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-ev;UrbanDistrict"/>
+		<owl:annotatedTarget xml:lang="en">territory contiguous to and including any street built up with structures devoted to business, industry or dwelling houses situated at intervals of less than 100 feet for a distance of a quarter of a mile or more</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://iamtraffic.org/wp-content/uploads/2013/01/UVC2000.pdf</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-ev;UtilityPole"/>
 		<owl:annotatedTarget xml:lang="en">tall pole that is used to support telephone wires, electrical wires, etc</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>https://www.merriam-webster.com/dictionary/utility%20pole</fibo-fnd-utl-av:adaptedFrom>

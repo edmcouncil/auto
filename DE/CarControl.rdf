@@ -595,55 +595,55 @@ are referred to collectively as object and event detection and response (OEDR).<
 	</owl:AnnotationProperty>
 	
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-cc;Acceleration"/>
 		<owl:annotatedTarget>increase in the speed of something</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>https://dictionary.cambridge.org/dictionary/english/acceleration</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-cc;DestinationSelection"/>
 		<owl:annotatedTarget xml:lang="en">decision where to go</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>J3016 JUN2018, section 8.11</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-cc;DynamicDrivingTaskSubtask"/>
 		<owl:annotatedTarget xml:lang="en">specific real-time tactical or operational function required to operate a vehicle in on-road traffic</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>J3016 JUN2018, section 3.10</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-cc;EnhancingConspicuity"/>
 		<owl:annotatedTarget xml:lang="en">DDT subtask comprising activities which make the vehicle more visible and distinguishable from its surroundings, such as by lightning, sounding the horn, gesturing etc.</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>J3016 JUN2018, section 3.10</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-cc;ManeuverPlanning"/>
 		<owl:annotatedTarget xml:lang="en">function that includes deciding whether and when to overtake another vehicle or change lanes</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>J3016 JUN2018, section 8.11</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-cc;StrategicFunction"/>
 		<owl:annotatedTarget xml:lang="en">function that involves deciding whether, where and when to go, how to travel, which best routes to take, etc.</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>J3016 JUN2018, section 8.11</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-cc;TrafficSignalControl"/>
 		<owl:annotatedTarget xml:lang="en">highway traffic signal by which traffic is alternately directed to stop and permitted to proceed</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>https://mutcd.fhwa.dot.gov/htm/2003r1/part4/part4b.htm</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-cc;TripScheduling"/>
 		<owl:annotatedTarget xml:lang="en">decision when to go</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>J3016 JUN2018, section 8.11</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
-		<owl:annotatedProperty rdf:resource="&rdfs;isDefinedBy"/>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-cc;Warning"/>
 		<owl:annotatedTarget xml:lang="en">notice of possible danger or a problem</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>https://dictionary.cambridge.org/dictionary/english/warning</fibo-fnd-utl-av:adaptedFrom>
