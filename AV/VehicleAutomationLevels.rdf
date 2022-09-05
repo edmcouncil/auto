@@ -1651,6 +1651,7 @@
 	<owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/operatesManually">
 		<rdfs:subPropertyOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/operates"/>
 		<rdfs:label xml:lang="en">operates manually</rdfs:label>
+		<owl:propertyDisjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/operatesRemotely"/>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/operatesRemotely">
@@ -1678,7 +1679,9 @@
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person">
 		<rdfs:label xml:lang="en">person</rdfs:label>
-		<skos:definition xml:lang="en">any living human</skos:definition>
+		<rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
+		<skos:definition xml:lang="en">Any living human.</skos:definition>
+		<AnnotationVocabulary:adaptedFrom>ANSI D.16-2017, section 2.1.1</AnnotationVocabulary:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Process">
@@ -1687,7 +1690,9 @@
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/LandVehicle">
 		<rdfs:label xml:lang="en">land vehicle</rdfs:label>
-		<skos:definition xml:lang="en">transport vehicle which is neither an aircraft nor a watercraft</skos:definition>
+		<rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
+		<skos:definition xml:lang="en">A transport vehicle which is neither an aircraft nor a watercraft.</skos:definition>
+		<AnnotationVocabulary:adaptedFrom>ANSI D.16-2017, section 2.1.7</AnnotationVocabulary:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart">
