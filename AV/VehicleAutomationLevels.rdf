@@ -1668,38 +1668,4 @@
 		<rdfs:label xml:lang="en">realizes</rdfs:label>
 	</owl:ObjectProperty>
 	
-	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/Task">
-		<rdfs:label xml:lang="en">task</rdfs:label>
-	</owl:Class>
-	
-	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Action">
-		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Process"/>
-		<rdfs:label xml:lang="en">action</rdfs:label>
-	</owl:Class>
-	
-	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person">
-		<rdfs:label xml:lang="en">person</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
-		<skos:definition xml:lang="en">Any living human.</skos:definition>
-		<AnnotationVocabulary:adaptedFrom>ANSI D.16-2017, section 2.1.1</AnnotationVocabulary:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Process">
-		<rdfs:label xml:lang="en">process</rdfs:label>
-	</owl:Class>
-	
-	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/LandVehicle">
-		<rdfs:label xml:lang="en">land vehicle</rdfs:label>
-		<rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
-		<skos:definition xml:lang="en">A transport vehicle which is neither an aircraft nor a watercraft.</skos:definition>
-		<AnnotationVocabulary:adaptedFrom>ANSI D.16-2017, section 2.1.7</AnnotationVocabulary:adaptedFrom>
-	</owl:Class>
-	
-	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart">
-		<rdfs:label xml:lang="en">vehicle part</rdfs:label>
-	</owl:Class>
-	
-	<owl:AnnotationProperty rdf:about="&AnnotationVocabulary;adaptedFrom">
-	</owl:AnnotationProperty>
-
 </rdf:RDF>
