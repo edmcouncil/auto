@@ -1669,23 +1669,5 @@
 	<owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/realizes">
 		<rdfs:label xml:lang="en">realizes</rdfs:label>
 	</owl:ObjectProperty>
-	
-	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/Task">
-	</owl:Class>
-	
-	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Action">
-	</owl:Class>
-	
-	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Person">
-	</owl:Class>
-	
-	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Process">
-	</owl:Class>
-	
-	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/LandVehicle">
-	</owl:Class>
-	
-	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart">
-	</owl:Class>
 
 </rdf:RDF>
