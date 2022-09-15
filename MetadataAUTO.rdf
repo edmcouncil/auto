@@ -30,10 +30,10 @@
 		<sm:copyright>Copyright (c) 2022 EDM Council, Inc.</sm:copyright>
 		<sm:fileAbbreviation>auto-spec</sm:fileAbbreviation>
 		<sm:filename>MetadataAUTO.rdf</sm:filename>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/MetadataAV/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/MetadataDE/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MetadataMO/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/MetadataVC/"/>
-		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VS/MetadataAV/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VS/MetadataVS/"/>
 		<owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/MetadataAUTO/"/>
 	</owl:Ontology>
