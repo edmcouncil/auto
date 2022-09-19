@@ -30,6 +30,7 @@
 		<sm:copyright>Copyright (c) 2022 EDM Council, Inc.</sm:copyright>
 		<sm:fileAbbreviation>auto-spec</sm:fileAbbreviation>
 		<sm:filename>MetadataAUTO.rdf</sm:filename>
+		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/MetadataAV/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/MetadataDE/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MetadataMO/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/MetadataVC/"/>
@@ -41,9 +42,9 @@
 		<rdf:type rdf:resource="&sm;Specification"/>
 		<rdfs:label>Automotive Ontology</rdfs:label>
 		<dct:abstract>The Automotive Ontology (AUTO) is a collaborative effort among industry practitioners, semantic technology experts and information scientists to standardize the language used to precisely define the terms, conditions, and characteristics of automotive domain.  The definitions and relationships that comprise the AUTO specification have been modularized into a number of domains, which in turn include a number constituent ontologies.</dct:abstract>
+		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/MetadataAV/"/>
 		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/MetadataDE/"/>
 		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MetadataMO/"/>
-		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/VA/MetadataVA/"/>
 		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/VS/MetadataVC/"/>
 		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/VS/MetadataVS/"/>
 		<dct:issued rdf:datatype="&xsd;dateTime">2022-09-11T00:00:00</dct:issued>
