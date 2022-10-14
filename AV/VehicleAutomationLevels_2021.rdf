@@ -26,7 +26,6 @@
 		<rdfs:label xml:lang="en">Vehicle Automation Levels Ontology</rdfs:label>
 		<rdfs:comment xml:lang="en">This product contains SAE International copyrighted intellectual property, which has been and is licensed with permission for use by Licensee and its Sublicensee. The true authority of any SAE standard is the PDF version, which can be found at saemobilus.sae.org.</rdfs:comment>
 		<terms:license rdf:resource="http://opensource.org/licenses/MIT"/>
-		<terms:rights xml:lang="en">&quot;J&quot; standards are a trademark of SAE International.</terms:rights>
 		<terms:rights>SAE J3016™</terms:rights>
 		<terms:source xml:lang="en">J3016 “Levels of Driving Automation” standard, revision 2021-04</terms:source>
 		<SpecificationMetadata:copyright xml:lang="en">© SAE International, All rights reserved.</SpecificationMetadata:copyright>
@@ -38,7 +37,13 @@
 		<AnnotationVocabulary:hasMaturityLevel rdf:resource="&AnnotationVocabulary;Provisional"/>
 	</owl:Ontology>
 	
+	<owl:AnnotationProperty rdf:about="&terms;rights">
+	</owl:AnnotationProperty>
+	
 	<owl:AnnotationProperty rdf:about="&skos;comment">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&skos;example">
 	</owl:AnnotationProperty>
 	
 	<owl:AnnotationProperty rdf:about="&skos;explanatoryNote">
@@ -1010,6 +1015,12 @@
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HumanDriver"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/occupiesSeatOfDriver"/>
+				<owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/operatesManually"/>
 				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConventionalVehicle"/>
 			</owl:Restriction>
@@ -1025,10 +1036,22 @@
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/InVehicleDynamicDriverTaskFallbackReadyUser">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DynamicDriverTaskFallbackReadyUser"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/occupiesSeatOfDriver"/>
+				<owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">in-vehicle DDT fallback-ready user</rdfs:label>
 		<skos:definition xml:lang="en">fallback-ready user of a conventional vehicle with an engaged Level 3 ADS feature who is seated in the driver’s seat</skos:definition>
 		<skos:example xml:lang="en">A Level 3 ADS sub-trip feature designed to perform the DDT in congested traffic on certain freeways encounters emergency responders who are rerouting traffic to the exit due to a serious crash; the ADS issues a request to intervene. The in-vehicle fallback-ready user becomes a driver and performs the fallback by manually operating the vehicle.</skos:example>
 		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.31.3.1</AnnotationVocabulary:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/InVehicleUser">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HumanUser"/>
+		<rdfs:label xml:lang="en">in-vehicle user</rdfs:label>
+		<skos:definition xml:lang="en">user occupying a seat in the vehicle</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/LateralVehicleMotionControl">
@@ -1401,6 +1424,7 @@
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Passenger">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HumanUser"/>
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/InVehicleUser"/>
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:complementOf>
@@ -1414,16 +1438,7 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isRealizedInAtSomeTime"/>
-				<owl:someValuesFrom>
-					<owl:Class>
-						<owl:unionOf rdf:parseType="Collection">
-							<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FullDrivingAutomation">
-							</rdf:Description>
-							<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HighDrivingAutomation">
-							</rdf:Description>
-						</owl:unionOf>
-					</owl:Class>
-				</owl:someValuesFrom>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SustainedOperationOfVehicle"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">passenger</rdfs:label>
@@ -1470,6 +1485,12 @@
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HumanDriver"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/occupiesSeatOfDriver"/>
+				<owl:hasValue rdf:datatype="&xsd;boolean">false</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/operatesRemotely"/>
 				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConventionalVehicle"/>
 			</owl:Restriction>
@@ -1498,6 +1519,12 @@
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RemoteDynamicDriverTaskFallbackReadyUser">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DynamicDriverTaskFallbackReadyUser"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/occupiesSeatOfDriver"/>
+				<owl:hasValue rdf:datatype="&xsd;boolean">false</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">remote DDT fallback-ready user</rdfs:label>
 		<skos:definition xml:lang="en">fallback-ready user of a Level 3 ADS-equipped vehicle in driverless operation who is not in the driver’s seat</skos:definition>
 		<skos:example xml:lang="en">A Level 3 ADS-DV encounters a crash scene for which emergency personnel are re-routing traffic; the ADS issues a request to intervene. The remote fallback-ready user becomes a remote driver and performs the fallback by remotely operating the vehicle.</skos:example>
@@ -1843,6 +1870,12 @@
 		<skos:definition xml:lang="en">links process with its result</skos:definition>
 	</owl:ObjectProperty>
 	
+	<owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/occupiesSeatOfDriver">
+		<rdfs:label xml:lang="en">occupies the seat of driver</rdfs:label>
+		<rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HumanUser"/>
+		<rdfs:range rdf:resource="&xsd;boolean"/>
+	</owl:DatatypeProperty>
+	
 	<owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/operatedBy">
 		<rdfs:label xml:lang="en">operated by</rdfs:label>
 		<skos:definition xml:lang="en">Collectively, the activities performed by a (human) driver (with or without support from one or more Level 1 or 2 driving automation features) or by an ADS (Level 3 to 5) to perform the entire DDT for a given vehicle.</skos:definition>
@@ -1884,5 +1917,24 @@
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart">
 	</owl:Class>
-
+	
+	<owl:AllDisjointClasses>
+		<owl:members rdf:parseType="Collection">
+			<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DriverlessOperationDispatcher">
+			</rdf:Description>
+			<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DynamicDriverTaskFallbackReadyUser">
+			</rdf:Description>
+			<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HumanDriver">
+			</rdf:Description>
+			<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Passenger">
+			</rdf:Description>
+			<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RemoteAssistant">
+			</rdf:Description>
+		</owl:members>
+	</owl:AllDisjointClasses>
+	<owl:Restriction>
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/InVehicleUser"/>
+		<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/occupiesSeatOfDriver"/>
+		<owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+	</owl:Restriction>
 </rdf:RDF>
