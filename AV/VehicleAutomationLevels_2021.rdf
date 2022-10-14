@@ -26,6 +26,7 @@
 		<rdfs:label xml:lang="en">Vehicle Automation Levels Ontology</rdfs:label>
 		<rdfs:comment xml:lang="en">This product contains SAE International copyrighted intellectual property, which has been and is licensed with permission for use by Licensee and its Sublicensee. The true authority of any SAE standard is the PDF version, which can be found at saemobilus.sae.org.</rdfs:comment>
 		<terms:license rdf:resource="http://opensource.org/licenses/MIT"/>
+		<terms:rights xml:lang="en">&quot;J&quot; standards are a trademark of SAE International.</terms:rights>
 		<terms:rights>SAE J3016™</terms:rights>
 		<terms:source xml:lang="en">J3016 “Levels of Driving Automation” standard, revision 2021-04</terms:source>
 		<SpecificationMetadata:copyright xml:lang="en">© SAE International, All rights reserved.</SpecificationMetadata:copyright>
