@@ -38,18 +38,6 @@
 		<AnnotationVocabulary:hasMaturityLevel rdf:resource="&AnnotationVocabulary;Provisional"/>
 	</owl:Ontology>
 	
-	<owl:AnnotationProperty rdf:about="&terms;rights">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&skos;comment">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&skos;example">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&skos;explanatoryNote">
-	</owl:AnnotationProperty>
-	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ActiveSafetySystem">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
 		<rdfs:subClassOf>
