@@ -29,5 +29,5 @@
         <sm:submitter>The John Paul II Catholic University of Lublin</sm:submitter>
         <rdfs:label>About AUTO Production</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://spec.edmcouncil.org/auto/</rdfs:seeAlso>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/"/>
     </owl:Ontology>
-</rdf:RDF>

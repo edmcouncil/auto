@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri id="Imports Wizard Entry" name="https://spec.edmcouncil.org/fibo/ontology/master/latest/FND/Utilities/AnnotationVocabulary/" uri="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary"/>
-    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1663252067635" name="https://spec.edmcouncil.org/auto/ontology/AV/MetadataAV/" uri="MetadataAV.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1663252067635" name="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/" uri="VehicleAutomationLevels.rdf"/>
-    </group>
+    <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/" uri="../../DE/CarControl.rdf"/>
+    <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/" uri="../../VC/VehicleParts.rdf"/>
+    <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/" uri="V../../VC/VehicleCore.rdf"/>
 </catalog>
