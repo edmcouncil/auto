@@ -18,5 +18,5 @@
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/" uri="./DE/TrafficEnvironment.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/VS/MetadataVS/" uri="./VS/MetadataVS.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/VS/VehicleSignals/" uri="./VS/VehicleSignals.rdf"/>
-    <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/" uri="./AV/VehicleAutomationLevels_2021.rdf"/>
+    <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/" uri="./AV/VehicleAutomationLevels.rdf"/>
 </catalog>

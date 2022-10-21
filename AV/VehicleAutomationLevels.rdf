@@ -28,21 +28,16 @@
 		<terms:license rdf:resource="http://opensource.org/licenses/MIT"/>
 		<terms:rights xml:lang="en">&quot;J&quot; standards are a trademark of SAE International.</terms:rights>
 		<terms:rights>SAE J3016™</terms:rights>
-		<terms:source xml:lang="en">J3016 “Levels of Driving Automation” standard</terms:source>
+		<terms:source xml:lang="en">J3016 “Levels of Driving Automation” standard, revision 2021-04</terms:source>
 		<SpecificationMetadata:copyright xml:lang="en">© SAE International, All rights reserved.</SpecificationMetadata:copyright>
 		<SpecificationMetadata:fileAbbreviation xml:lang="en">auto-av-val</SpecificationMetadata:fileAbbreviation>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
+		<owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/202210020/VehicleAutomationLevels/"/>
 		<AnnotationVocabulary:hasMaturityLevel rdf:resource="&AnnotationVocabulary;Provisional"/>
 	</owl:Ontology>
-	
-	<owl:AnnotationProperty rdf:about="&skos;comment">
-	</owl:AnnotationProperty>
-	
-	<owl:AnnotationProperty rdf:about="&skos;explanatoryNote">
-	</owl:AnnotationProperty>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ActiveSafetySystem">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
@@ -53,9 +48,9 @@
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">active safety system</rdfs:label>
-		<skos:definition xml:lang="en">Active safety systems are vehicle systems that sense and monitor conditions inside and outside the vehicle for the purpose of identifying perceived present and potential dangers to the vehicle, occupants, and/or other road users, and automatically intervene to help avoid or mitigate potential collisions via various methods, including alerts to the driver, vehicle system adjustments, and/or active control of the vehicle subsystems (brakes, throttle, suspension, etc.)</skos:definition>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.1</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">For purposes of this report, systems that meet the definition of active safety systems are considered to have a design purpose that is primarily focused on improving safety rather than comfort, convenience or general driver assistance. Active safety systems warn or intervene during a high-risk event or maneuver.</AnnotationVocabulary:explanatoryNote>
+		<skos:definition xml:lang="en">Active safety systems are vehicle systems that sense and monitor conditions inside and outside the vehicle for the purpose of identifying perceived present and potential dangers to the vehicle, occupants, and/or other road users, and automatically intervene to help avoid or mitigate potential collisions via various methods, including alerts to the driver, vehicle system adjustments, and/or active control of the vehicle subsystems (brakes, throttle, suspension, etc.).</skos:definition>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.1</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">For purposes of this report, systems that meet the definition of active safety systems are considered to have a design purpose that is primarily focused on improving safety rather than comfort, convenience, or general driver assistance. Active safety systems warn or intervene during a high-risk event or maneuver.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/AutomatedDriving">
@@ -105,10 +100,10 @@
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">automated driving system</rdfs:label>
-		<skos:definition xml:lang="en">The hardware and software that are collectively capable of performing the entire DDT on a sustained basis, regardless of whether it is limited to a specific operational design domain (ODD); this term is used specifically to describe a level 3, 4, or 5 driving automation system</skos:definition>
+		<skos:definition xml:lang="en">The hardware and software that are collectively capable of performing the entire DDT on a sustained basis, regardless of whether it is limited to a specific operational design domain (ODD); this term is used specifically to describe a Level 3, 4, or 5 driving automation system.</skos:definition>
 		<AnnotationVocabulary:abbreviation>ADS</AnnotationVocabulary:abbreviation>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.2</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">In contrast to ADS, the generic term “driving automation system” (see 3.8) refers to any level 1-5 system or feature that performs part or all of the DDT on a sustained basis. Given the similarity between the generic term, “driving automation system,” and the level 3-5-specific term, “Automated Driving System,” the latter term should be capitalized when spelled out and reduced to its acronym, ADS, as much as possible, while the former term should not be.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.2</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">In contrast to ADS, the generic term “driving automation system” (see 3.6) refers to any Level 1 to 5 system or feature that performs part or all of the DDT on a sustained basis. Given the similarity between the generic term, “driving automation system,” and the Level 3 to 5 specific term, “automated driving system,” the latter term should be capitalized when spelled out and reduced to its abbreviation, ADS, as much as possible, while the former term should not be.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/AutomatedDrivingSystemDedicatedVehicle">
@@ -158,16 +153,15 @@
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">ADS dedicated vehicle</rdfs:label>
-		<skos:definition xml:lang="en">vehicle designed to be operated exclusively by a level 4 or level 5 ADS for all trips within its given ODD limitations (if any)</skos:definition>
-		<skos:example xml:lang="en">A level 4 ADS-DV designed to operate exclusively within a corporate campus where it picks up and discharges passengers along a specific route specified by the ADS-DV dispatcher.</skos:example>
-		<skos:example xml:lang="en">A level 4 ADS-DV designed to operate exclusively within a geographically prescribed central business district where it delivers supplies using roads (but not necessarily routes) specified by the ADS-DV dispatcher.</skos:example>
-		<skos:example xml:lang="en">A level 5 ADS-DV capable of operating on all mapped roads in the US that are navigable by a human driver. The user simply inputs a destination, and the ADS-DV automatically navigates to that destination.</skos:example>
+		<skos:definition xml:lang="en">ADS-equipped vehicle designed for driverless operation under routine/normal operating conditions during all trips within its given ODD (if any)</skos:definition>
+		<skos:example xml:lang="en">A Level 4 ADS-DV designed to operate exclusively within a corporate campus where it picks up and discharges passengers along a specific route specified by the ADS-DV dispatcher.</skos:example>
+		<skos:example xml:lang="en">A Level 4 ADS-DV designed to operate exclusively within a geographically prescribed central business district where it delivers supplies using roads (but not necessarily routes) specified by the ADS-DV dispatcher.</skos:example>
+		<skos:example xml:lang="en">A Level 5 ADS-DV capable of operating on all mapped roads in the US that are navigable by a human driver. The user simply inputs a destination, and the ADS-DV automatically navigates to that destination.</skos:example>
 		<AnnotationVocabulary:abbreviation>ADS-DV</AnnotationVocabulary:abbreviation>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.3</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">ADS-DVs might be operated temporarily by a conventional or remote driver: (1) to manage transient deviations from the ODD, (2) to address a system failure, or (3) while in a marshalling yard before or after being dispatched.</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">After considerable debate, the restriction of ADS-DV to driving automation levels 4 and 5, only, remains unchanged in this version of J3016. Further discussion of possibly including level 3 with a remote fallback-ready user into this definition will be addressed in the next revision of J3016 which will be done jointly with ISO.</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">An ADS-DV is a truly “driverless” vehicle. However, the term “driverless vehicle” is not used herein because it has been, and continues to be, widely misused to refer to any vehicle equipped with a driving automation system, even if that system is not capable of always performing the entire DDT (within given ODD limitations, if any) and thus requires a (human) driver for all or part of a given trip (see Section 7). Instead, this document defines the term “driverless operation,” which encourages specificity in usage to avoid imprecision and misunderstanding.</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">An ADS-DV might be designed without user interfaces designed to be operable by a conventional human driver, such as braking, accelerating, steering, and transmission gear selection input devices.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.32.3</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">ADS-DVs might be operated temporarily by a human driver: (1) to manage transient deviations from the ODD, (2) to address a system failure, or (3) while in a marshalling yard before or after being repaired/serviced or dispatched.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">An ADS-DV might be designed without user interfaces designed to be operable by an in-vehicle driver, such as braking, accelerating, steering, and transmission gear selection input devices, or it might be designed so that these devices are inoperative under routine/normal operating conditions.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">In contrast to previous versions of this document, which specified that an ADS-DV was limited to Levels 4 and 5, this revised definition of an ADS-DV also allows for the possibility of a Level 3 ADS-DV if the remote fallback-ready user can be receptive to both ADS-issued requests to intervene and to evident DDT performance-relevant system failures in the vehicle. Once either of these conditions occurs, the remote fallback-ready user begins to perform the DDT fallback in (virtually) real time using wireless means. (See also 3.24 and 3.22.)</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/AutomatedDrivingSystemDualModeVehicle">
@@ -180,7 +174,7 @@
 						<owl:unionOf rdf:parseType="Collection">
 							<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/AutomatedDrivingSystem">
 							</rdf:Description>
-							<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConventionalDriver">
+							<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/InVehicleDriver">
 							</rdf:Description>
 						</owl:unionOf>
 					</owl:Class>
@@ -188,10 +182,11 @@
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">ADS dual-mode vehicle</rdfs:label>
-		<skos:definition xml:lang="en">ADS-equipped vehicle designed for both driverless operation and operation by a conventional driver for complete trips</skos:definition>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.12</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">An ADS feature that is usable during only part of a trip, such as a feature designed to perform the complete DDT during traffic jams on freeways, would not be sufficient to classify its host vehicle as a dual-mode vehicle because it would not be capable of driverless operation for a complete trip.</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">An ADS-equipped dual-mode vehicle may be designed such that it can be dispatched in driverless operation.</AnnotationVocabulary:explanatoryNote>
+		<skos:definition xml:lang="en">ADS-equipped vehicle designed to enable either driverless operation under routine/normal operating conditions within its given ODD (if any), or operation by an in-vehicle driver, for complete trips</skos:definition>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.32.2</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">A vehicle equipped with a Level 5 feature in which at any time the driver can choose to engage the feature, or can choose to operate the vehicle manually, would be classified as a dual-mode vehicle.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">An ADS sub-trip feature that is usable during only part of a trip, such as a feature designed to perform the complete DDT during traffic jams on freeways, would not be sufficient to classify its host vehicle as a dual-mode vehicle because it would not be capable of driverless operation for a complete trip.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">When operated by the ADS, dual-mode vehicles enable driverless operation, although a human driver could also be present in the driver’s seat.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/AutomatedDrivingSystemEquippedVehicle">
@@ -249,14 +244,16 @@
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">conditional driving automation</rdfs:label>
-		<skos:definition xml:lang="en">The sustained and ODD-specific performance by an ADS of the entire DDT with the expectation that the DDT fallback-ready user is receptive to ADS-issued requests to intervene, as well as to DDT performance-relevant system failures in other vehicle systems, and will respond appropriately.</skos:definition>
+		<skos:definition xml:lang="en">The sustained and ODD-specific performance by an ADS of the entire DDT under routine/normal operation (see 3.27) with the expectation that the DDT fallback-ready user is receptive to ADS-issued requests to intervene, as well as to DDT performance-relevant system failures in other vehicle systems, and will respond appropriately.</skos:definition>
 		<skos:example xml:lang="en">An ADS feature capable of performing the entire DDT in low-speed, stop-and-go freeway traffic.</skos:example>
 		<AnnotationVocabulary:abbreviation xml:lang="en">Level 3</AnnotationVocabulary:abbreviation>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 5.4</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">A level 3 ADS’s DDT fallback-ready user is also expected to be receptive to evident DDT performance-relevant system failures in vehicle systems that do not necessarily trigger an ADS-issued request to intervene, such as a broken body or a suspension component.</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">An “appropriate” response by a DDT fallback-ready user to a request to intervene may entail bringing the vehicle to a minimal risk condition or continuing to operate the vehicle after the ADS has disengaged.</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">In the event of a DDT performance-relevant system failure in a level 3 ADS or in the event that the ADS will soon exit its ODD, the ADS will issue a request to intervene within sufficient time for a typical person to respond appropriately to the driving situation at hand.</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">The DDT fallback-ready user need not supervise a level 3 ADS while it is engaged but is expected to be prepared to either resume the DDT when the ADS issues a request to intervene or to perform the fallback and achieve a minimal risk condition if the failure condition precludes normal operation.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 5.4</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">A Level 3 ADS’s DDT fallback-ready user is also expected to be receptive to evident DDT performance-relevant system failures in vehicle systems that do not necessarily trigger an ADS-issued request to intervene, such as a broken body or suspension component.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">Although automated DDT fallback performance is not expected of Level 3 ADS features, a Level 3 feature may be capable of performing the DDT fallback and achieving a minimal risk condition under certain, limited conditions.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">An “appropriate” response by a DDT fallback-ready user to a request to intervene may entail either bringing the vehicle to a minimal risk condition or continuing to operate the vehicle after the ADS has disengaged.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">In the event of a DDT performance-relevant system failure in a Level 3 ADS, or in the event that the ADS exits its ODD, the ADS will issue a request to intervene within sufficient time for the fallback-ready user (whether in-vehicle or remote) to respond appropriately.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">The DDT fallback-ready user need not supervise a Level 3 ADS while it is engaged but is expected to be prepared to either resume DDT performance when the ADS issues a request to intervene or to perform the fallback and achieve a minimal risk condition if the failure condition precludes continued vehicle operation.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">Unlike Level 1 and 2 driver support features, all Level 3 and 4 ADS features are designed to monitor and enforce their ODD limitations while engaged, and to prevent engagement or operation outside of their prescribed ODD.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConfinedGeographicLocation">
@@ -271,20 +268,6 @@
 		<skos:definition xml:lang="en">traffic that is characterized by slower speeds, longer trip times, and increased vehicular queueing</skos:definition>
 	</owl:Class>
 	
-	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConventionalDriver">
-		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HumanDriver"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/operatesManually"/>
-				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConventionalVehicle"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">conventional driver</rdfs:label>
-		<skos:definition xml:lang="en">driver who manually exercises in-vehicle braking, accelerating, steering, and transmission gear selection input devices in order to operate a vehicle</skos:definition>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.29.1.1</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">A conventional driver is assumed to be seated in what is normally referred to as “the driver’s seat” in automotive contexts, which is a unique seating position that makes in-vehicle input devices (steering wheel, brake and accelerator pedals, gear shift) accessible to a (human) driver.</AnnotationVocabulary:explanatoryNote>
-	</owl:Class>
-	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConventionalVehicle">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/MotorVehicle"/>
 		<rdfs:subClassOf>
@@ -296,17 +279,17 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/operatedBy"/>
-				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConventionalDriver"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/InVehicleDriver"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">conventional vehicle</rdfs:label>
-		<skos:definition xml:lang="en">vehicle designed to be operated by a conventional driver during part or all of every trip</skos:definition>
-		<skos:example xml:lang="en">A vehicle equipped with a level 4 parking valet feature designed to allow the user to exit the vehicle near a parking lot and then dispatch it to a parking space.</skos:example>
-		<skos:example xml:lang="en">A vehicle equipped with level 1 adaptive cruise control, level 1 lane centering, and a level 3 ADS feature designed to perform the complete DDT during traffic jams on fully access-controlled freeways. The level 3 ADS traffic jam feature requires the user to drive the vehicle to the freeway before engaging the feature, as well as again driving the vehicle upon exiting the freeway in order to complete the trip.</skos:example>
-		<skos:example xml:lang="en">A vehicle with no driving automation system features that is designed to be operated by a conventional driver throughout all trips.</skos:example>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.5</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">A conventional vehicle may be equipped with one or more level 1 or 2 driving automation system features that support the driver in performing the DDT, but do not perform the complete DDT, as well as level 3 and 4 ADS features that require a conventional driver to operate the vehicle during portions of each trip.</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">While it may be counterintuitive to call a vehicle equipped with an ADS “conventional,” it is appropriate in this context because a conventional driver is required for at least part of every trip. As emphasized below, J3016 classifies the driving automation level of features rather than of vehicles (although, in the special case of an ADS-DV, the classification of the ADS and the vehicle are effectively the same).</AnnotationVocabulary:explanatoryNote>
+		<skos:definition xml:lang="en">vehicle designed to be operated by an in-vehicle driver during part or all of every trip</skos:definition>
+		<skos:example xml:lang="en">A vehicle equipped with Level 1 adaptive cruise control, Level 1 lane centering, and a Level 3 ADS feature designed to perform the complete DDT during traffic jams on fully access-controlled freeways. The Level 3 ADS traffic jam feature requires the user to operate the vehicle on the way to the freeway before engaging the feature, as well as again operating the vehicle upon exiting the freeway in order to complete the trip.</skos:example>
+		<skos:example xml:lang="en">A vehicle equipped with a Level 4 valet parking feature designed to allow the user to exit the vehicle near a parking lot and then dispatch it to a parking space.</skos:example>
+		<skos:example xml:lang="en">A vehicle with no driving automation system features that is designed to be operated by an in-vehicle driver throughout all trips.</skos:example>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.32.1</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">A conventional vehicle may be equipped with one or more Level 1 or 2 driving automation system features that support the driver in performing the DDT, but do not perform the complete DDT. A conventional vehicle may also be equipped with a Level 3 and/or Level 4 ADS sub-trip feature(s) that requires an in-vehicle driver to operate the vehicle during portions of each trip (see 3.7.2).</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">While it may be counterintuitive to call a vehicle equipped with an ADS “conventional,” it is appropriate in this context because an in-vehicle driver is required for at least part of every trip. As emphasized below, this taxonomy classifies the driving automation level of features rather than of vehicles (although, in the special case of an ADS-DV, the classification of the ADS feature and the vehicle are effectively the same).</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/CorporateCampus">
@@ -317,34 +300,22 @@
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/CorporateCampusSpecificRoute">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperationalDesignDomain"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/CorporateCampus"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/PredefinedRoute"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">corporate campus, specific route</rdfs:label>
 		<skos:definition xml:lang="en">specific route in a corporate campus</skos:definition>
-		<AnnotationVocabulary:adaptedFrom xml:lang="en">SAE-J3016 (2018), sec. 3.3, Example 1</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.32.3, Example 1</AnnotationVocabulary:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DDTPerformanceRelevantSystemFailure">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Operation"/>
 		<rdfs:label xml:lang="en">DDT performance-relevant system failure</rdfs:label>
-		<skos:definition xml:lang="en">A malfunction in a driving automation system and/or other vehicle system that prevents the driving automation system from reliably performing the portion of the DDT on a sustained basis, including the complete DDT, that it would otherwise perform.</skos:definition>
-		<skos:example xml:lang="en">A level 1 driving automation system that performs the lateral vehicle motion control subtask of the DDT experiences a DDT performance-relevant system failure in one of its cameras, which prevents it from reliably detecting lane markings. The feature causes a malfunction indication message to be displayed in the center console at the same time that the feature automatically disengages, requiring the driver to immediately resume performing the lateral vehicle motion control subtask of the DDT.</skos:example>
-		<skos:example xml:lang="en">A level 3 ADS experiences a DDT performance-relevant system failure in one of its radar sensors, which prevents it from reliably detecting objects in the vehicle’s pathway. The ADS responds by issuing a request to intervene to the DDT fallback-ready user. The ADS continues to perform the DDT, while reducing vehicle speed, for several seconds to allow time for the DDT fallback-ready user to resume operation of the vehicle in an orderly manner.</skos:example>
-		<skos:example xml:lang="en">A level 4 ADS experiences a DDT performance-relevant system failure in one of its computing modules. The ADS transitions to DDT fallback by engaging a redundant computing module(s) to achieve a minimal risk condition.</skos:example>
-		<skos:example xml:lang="en">A vehicle with an engaged level 3 ADS experiences a broken tie rod, which causes the vehicle to handle very poorly, giving the fallback-ready user ample kinesthetic feedback indicating a vehicle malfunction necessitating intervention. The fallback-ready user responds by resuming the DDT, turning on the hazard lamps, and pulling the vehicle onto the closest road shoulder, thereby achieving a minimal risk condition.</skos:example>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.18</AnnotationVocabulary:adaptedFrom>
+		<skos:definition xml:lang="en">A malfunction in a driving automation system and/or other vehicle system that prevents the driving automation system from reliably performing its portion of the DDT on a sustained basis, including the complete DDT, that it would otherwise perform.</skos:definition>
+		<skos:example xml:lang="en">A Level 1 driver support feature that performs the lateral vehicle motion control subtask of the DDT experiences a DDT performance-relevant system failure in one of its cameras, which prevents it from reliably detecting lane markings. The feature causes a malfunction indication message to be displayed in the center console at the same time that the feature automatically disengages, requiring the driver to immediately resume performing the lateral vehicle motion control subtask of the DDT.</skos:example>
+		<skos:example xml:lang="en">A Level 3 ADS experiences a DDT performance-relevant system failure in one of its radar sensors, which prevents it from reliably detecting objects in the vehicle’s pathway. The ADS responds by issuing a request to intervene to the DDT fallback-ready user. The ADS continues to perform the DDT, while reducing vehicle speed, for several seconds to allow time for the DDT fallback-ready user to resume operation of the vehicle in an orderly manner.</skos:example>
+		<skos:example xml:lang="en">A Level 4 ADS experiences a DDT performance-relevant system failure in one of its computing modules. The ADS transitions to DDT fallback by engaging a redundant computing module(s) to achieve a minimal risk condition.</skos:example>
+		<skos:example xml:lang="en">A vehicle with an engaged Level 3 ADS experiences a sudden tire blow-out, which causes the vehicle to handle very poorly, giving the fallback-ready user ample kinesthetic feedback indicating a vehicle malfunction necessitating intervention. The fallback-ready user responds by resuming the DDT, turning on the hazard lamps, and pulling the vehicle onto the closest road shoulder, thereby achieving a minimal risk condition.</skos:example>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.17</AnnotationVocabulary:adaptedFrom>
 		<AnnotationVocabulary:explanatoryNote xml:lang="en">This definition applies to vehicle fault conditions and driving automation system failures that prevent a driving automation system from performing at full capability according to design intention.</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">This term does not apply to transient lapses in performance by a level 1 or 2 driving automation system that are due to inherent design limitations and that do not otherwise prevent the system from performing its part of the DDT on a sustained basis.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">This term does not apply to transient lapses in performance by a Level 1 or 2 driver support feature that are due to inherent design limitations and that do not otherwise prevent the system from performing its part of the DDT on a sustained basis.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Daylight">
@@ -355,27 +326,9 @@
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DesignatedFreewayHighVolumeTraffic">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperationalDesignDomain"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Freeway"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HighVolumeTraffic"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/PredefinedRoute"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">designated freeway, high-volume traffic</rdfs:label>
 		<skos:definition xml:lang="en">high-volume traffic on a designated freeway</skos:definition>
-		<AnnotationVocabulary:adaptedFrom xml:lang="en">SAE-J3016 (2018), sec. 3.9, Example 1</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.7, Example 1</AnnotationVocabulary:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DispatchInDriverlessOperation">
@@ -394,9 +347,9 @@
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">dispatch in driveless operation</rdfs:label>
 		<skos:definition xml:lang="en">To place an ADS-equipped vehicle into service in driverless operation by engaging the ADS</skos:definition>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.6</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.4</AnnotationVocabulary:adaptedFrom>
 		<AnnotationVocabulary:explanatoryNote xml:lang="en">Only ADS-equipped vehicles capable of driverless operation (namely, an ADS-DV or a dual-mode vehicle) are potentially subject to being dispatched.</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">The term “dispatch” as used outside of the context of ADS-equipped vehicles, is generally understood to mean sending a particular vehicle to a particular pick-up or drop-off location for purposes of providing a transportation service. In the context of ADS-equipped vehicles, and as used herein, this term includes software-enabled dispatch of multiple ADS-equipped vehicles in driverless operation that may complete multiple trips involving pick-up and drop-off of passengers or goods throughout a day or other pre-defined period of service, and which may involve multiple agents performing various tasks related to the dispatch function. In order to highlight this specialized use of the term dispatch, the term is modified and conditioned by the stipulation that it refers exclusively to dispatching vehicles in driverless operation. Consideration of whether a more appropriate term and definition should be specified for this concept will be taken up in the next revision of J3016, which will be developed jointly with ISO.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">The term “dispatch,” as used outside of the context of ADS-equipped vehicles, is generally understood to mean sending a particular vehicle to a particular pick-up or drop-off location for purposes of providing a transportation service. In the context of ADS-equipped vehicles, and as used herein, this term includes software-enabled dispatch of multiple ADS-equipped vehicles in driverless operation that may complete multiple trips involving pick-up and drop-off of passengers or goods throughout a day or other pre-defined period of service, and which may involve multiple agents performing various tasks related to the dispatch function. In order to highlight this specialized use of the term dispatch, the term is modified and conditioned by the stipulation that it refers exclusively to dispatching vehicles in driverless operation.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DriverAssistance">
@@ -424,8 +377,10 @@
 		<owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/PartialDrivingAutomation"/>
 		<skos:definition xml:lang="en">The sustained and ODD-specific execution by a driving automation system of either the lateral or the longitudinal vehicle motion control subtask of the DDT (but not both simultaneously) with the expectation that the driver performs the remainder of the DDT.</skos:definition>
 		<AnnotationVocabulary:abbreviation xml:lang="en">Level 1</AnnotationVocabulary:abbreviation>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 5.2</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">A level 1 feature performing either the lateral or the longitudinal vehicle motion control subtask of the DDT is capable of only limited OEDR within its dimension (lateral or longitudinal), meaning that there are some events that the driving automation system is not capable of recognizing or responding to. Therefore, the driver must supervise the driving automation system performance by completing the OEDR subtask of the DDT as well as performing the other dimension of vehicle motion control. See Figure 1 (discussing the three primary subtasks of the DDT).</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 5.2</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">A Level 1 driver support feature performing either the lateral or the longitudinal vehicle motion control subtask of the DDT is capable of only limited OEDR within its dimension (lateral or longitudinal), meaning that there are some events that the driving automation system is not capable of recognizing or responding to. Therefore, the driver must supervise the driving automation system performance by completing the OEDR subtask of the DDT as well as performing the other dimension of vehicle motion control. See Figure 2 (discussing the three primary subtasks of the DDT).</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">The term “Advanced Driver Assistance Systems” (ADAS) is commonly used to describe a broad range of features, including those that provide warnings and/or momentary intervention, such as forward collision warning (FCW) systems, lane keeping assistance (LKA) systems, and automatic emergency braking (AEB) systems, as well as some convenience features that involve Level 1 driver support features, such as ACC and certain parking assistance features. As such, the term ADAS is too broad and imprecise for use in a technical definitions document.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">The term “driver assistance” as a modifier is also commonly used to describe automotive features that are not considered to be driving automation system features, because they do not provide sustained performance of part or all of the DDT.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DriverSupport">
@@ -503,13 +458,13 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isResultOf"/>
-				<owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DriverSupport"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DriverSupport"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">driver support DAS feature</rdfs:label>
-		<skos:definition xml:lang="en">A general term for level 1 and level 2 driving automation system features.</skos:definition>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.10</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">Level 1 (driver assistance) and level 2 (partial automation) features are capable of performing only part of the DDT, and thus require a driver to perform the remainder of the DDT, as well as to supervise the feature’s performance while engaged. As such, these features, when engaged, support, but do not replace, a driver in performing the DDT.</AnnotationVocabulary:explanatoryNote>
+		<skos:definition xml:lang="en">A general term for Level 1 and Level 2 driving automation system features.</skos:definition>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.8</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">Level 1 (driver assistance) and Level 2 (partial automation) features are capable of performing only part of the DDT, and thus require a driver to perform the remainder of the DDT, as well as to supervise the feature’s performance while engaged. As such, these features, when engaged, support - but do not replace - a driver in performing the DDT.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DriverlessOperation">
@@ -534,9 +489,9 @@
 						<owl:complementOf>
 							<owl:Class>
 								<owl:unionOf rdf:parseType="Collection">
-									<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConventionalDriver">
-									</rdf:Description>
 									<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DynamicDriverTaskFallbackReadyUser">
+									</rdf:Description>
+									<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/InVehicleDriver">
 									</rdf:Description>
 								</owl:unionOf>
 							</owl:Class>
@@ -547,16 +502,24 @@
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">driverless operation</rdfs:label>
 		<owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperationWithDriver"/>
-		<skos:definition xml:lang="en">operation of an ADS-equipped vehicle in which either no on-board user is present, or in which on-board users are not drivers or fallback-ready users</skos:definition>
-		<skos:example xml:lang="en">A level 4 ADS-DV is dispatched in driverless operation for purposes of providing transportation service. On-board passengers are neither drivers nor fallback-ready users.</skos:example>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.11</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">ADS-DVs are always dispatched in driverless operation (subject to NOTE 4 in 3.3).</AnnotationVocabulary:explanatoryNote>
+		<skos:definition xml:lang="en">on-road operation of an ADS-equipped vehicle that is unoccupied, or in which on-board users are not drivers or in-vehicle fallback-ready users</skos:definition>
+		<skos:example xml:lang="en">A Level 4 ADS-DV is dispatched in driverless operation for purposes of providing transportation service.</skos:example>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.9</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">ADS-DVs are always dispatched in driverless operation (subject to NOTE 3 in 3.33.3).</AnnotationVocabulary:explanatoryNote>
 		<AnnotationVocabulary:explanatoryNote xml:lang="en">ADS-equipped dual-mode vehicles may be dispatched in driverless operation.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">On-board passengers are neither drivers nor fallback-ready users.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DriverlessOperationDispatcher">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DriverlessOperationDispatchingEntity"/>
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HumanUser"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/performs"/>
+				<owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FleetOperation"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isRealizedInAtSomeTime"/>
@@ -574,7 +537,8 @@
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">driverless operation dispatcher</rdfs:label>
 		<skos:definition xml:lang="en">user(s) who dispatches an ADS-equipped vehicle(s) in driverless operation</skos:definition>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.29.4</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.31.4</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">A dispacher(s) may also perform other fleet operations functions.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DriverlessOperationDispatchingEntity">
@@ -587,8 +551,8 @@
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">driverless operation dispatching entity</rdfs:label>
 		<skos:definition xml:lang="en">An entity that dispatches an ADS-equipped vehicle(s) in driverless operation.</skos:definition>
-		<skos:example xml:lang="en">A fleet of level 4 closed campus ADS-dedicated vehicles is placed into service by a driverless operation dispatching entity, which engages the ADS for each vehicle after verifying its operational readiness and disengages the ADS when each vehicle is taken out of service.</skos:example>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.4</AnnotationVocabulary:adaptedFrom>
+		<skos:example xml:lang="en">A fleet of Level 4 closed campus ADS-dedicated vehicles is placed into service by a driverless operation dispatching entity, which engages the ADS for each vehicle after verifying its operational readiness and disengages the ADS when each vehicle is taken out of service.</skos:example>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.3</AnnotationVocabulary:adaptedFrom>
 		<AnnotationVocabulary:explanatoryNote xml:lang="en">The functions carried out by a dispatching entity may be divided among one or several agents, depending on the usage specification for the ADS-equipped vehicle(s) in question.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
@@ -603,7 +567,7 @@
 		<rdfs:label xml:lang="en">driving automation</rdfs:label>
 		<owl:disjointWith rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/NoDrivingAutomation"/>
 		<skos:definition xml:lang="en">The performance by hardware/software systems of part or all of the DDT on a sustained basis.</skos:definition>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.7</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.5</AnnotationVocabulary:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DrivingAutomationSystem">
@@ -630,9 +594,9 @@
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">driving automation system</rdfs:label>
-		<skos:definition xml:lang="en">The hardware and software that are collectively capable of performing part or all of the DDT on a sustained basis; this term is used generically to describe any system capable of level 1-5 driving automation.</skos:definition>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.8</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">In contrast to this generic term for any level 1-5 system, the specific term for a level 3-5 system is “Automated Driving System (ADS).” Given the similarity between the generic term, “driving automation system,” and the level 3-5-specific term, “Automated Driving System,” the latter term should be capitalized when spelled out and reduced to its acronym, ADS, as much as possible, while the former term should not be (see 3.2).</AnnotationVocabulary:explanatoryNote>
+		<skos:definition xml:lang="en">The hardware and software that are collectively capable of performing part or all of the DDT on a sustained basis; this term is used generically to describe any system capable of Level 1 to 5 driving automation.</skos:definition>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.6</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">In contrast to this generic term for any Level 1 to 5 system, the specific term for a Level 3 to 5 system is “automated driving system (ADS).” Given the similarity between the generic term, “driving automation system,” and the Level 3 to 5 specific term, “Automated Driving System,” the latter term should be capitalized when spelled out and reduced to its abbreviation, ADS, as much as possible, while the former term should not be (see 3.2).</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DrivingAutomationSystemFeature">
@@ -650,11 +614,12 @@
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">DAS feature</rdfs:label>
-		<skos:definition xml:lang="en">A level 1-5 driving automation system’s design-specific functionality at a given level of driving automation within a particular ODD, if applicable.</skos:definition>
-		<skos:example xml:lang="en">A level 3 ADS feature that performs the DDT, excluding DDT fallback, in high-volume traffic on fully access-controlled freeways.</skos:example>
-		<skos:example xml:lang="en">A level 4 ADS feature that performs the DDT, including DDT fallback, in a specified geo-fenced urban center.</skos:example>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.9</AnnotationVocabulary:adaptedFrom>
+		<skos:definition xml:lang="en">A Level 1-5 driving automation system’s design-specific functionality at a given level of driving automation within a particular ODD, if applicable.</skos:definition>
+		<skos:example xml:lang="en">A Level 3 ADS feature that performs the DDT, excluding DDT fallback, in high-volume traffic on fully access-controlled freeways.</skos:example>
+		<skos:example xml:lang="en">A Level 4 ADS feature that performs the DDT, including DDT fallback, in a specified geo-fenced urban center.</skos:example>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.7</AnnotationVocabulary:adaptedFrom>
 		<AnnotationVocabulary:explanatoryNote xml:lang="en">A given driving automation system may have multiple features, each associated with a particular level of driving automation and ODD.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">Because the term “driving automation system” subsumes both driver support features and ADS features, it is also acceptable to refer to them as such.</AnnotationVocabulary:explanatoryNote>
 		<AnnotationVocabulary:explanatoryNote xml:lang="en">Each feature satisfies a usage specification.</AnnotationVocabulary:explanatoryNote>
 		<AnnotationVocabulary:explanatoryNote xml:lang="en">Features may be referred to by generic names (e.g., automated parking) or by proprietary names.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
@@ -692,11 +657,10 @@
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">DDT fallback-ready user</rdfs:label>
-		<skos:definition xml:lang="en">user of a vehicle equipped with an engaged level 3 ADS feature who is able to operate the vehicle and is receptive to ADS-issued requests to intervene and to evident DDT performance-relevant system failures in the vehicle compelling him or her to perform the DDT fallback</skos:definition>
-		<skos:example xml:lang="en">A level 3 ADS that is performing the DDT in congested traffic on a freeway encounters emergency responders who are rerouting traffic to the exit due to a serious crash; the ADS issues a request to intervene to the DDT fallback-ready user instructing him or her to resume performing the DDT (i.e., to become a driver).</skos:example>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.29.3</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">A DDT fallback-ready user who transitions to performing part or all of the DDT becomes a driver.</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">DDT performance by a level 3 ADS assumes that a DDT fallback-ready user is available to perform the DDT as required. There is no such assumption at levels 4 and 5.</AnnotationVocabulary:explanatoryNote>
+		<skos:definition xml:lang="en">user of a vehicle equipped with an engaged Level 3 ADS feature who is properly qualified and able to operate the vehicle and is receptive to ADS-issued requests to intervene and to evident DDT performance-relevant system failures in the vehicle compelling him or her to perform the DDT fallback</skos:definition>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.31.3</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">A DDT fallback-ready user who transitions to performing part or all of the DDT becomes a driver (in-vehicle or remote).</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">DDT performance by a Level 3 ADS assumes that a fallback-ready user is available to perform the DDT as required. There is no such assumption at Levels 4 and 5.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DynamicDrivingSubtask">
@@ -709,7 +673,7 @@
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">dynamic driving subtask</rdfs:label>
 		<skos:definition xml:lang="en">A real-time operational or tactical function required to operate a vehicle in on-road traffic.</skos:definition>
-		<AnnotationVocabulary:adaptedFrom xml:lang="en">SAE-J3016 (2018), sec. 3.13</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.10</AnnotationVocabulary:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DynamicDrivingTask">
@@ -739,11 +703,13 @@
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">dynamic driving task</rdfs:label>
-		<skos:definition xml:lang="en">All of the real-time operational and tactical functions required to operate a vehicle in on-road traffic, excluding the strategic functions such as trip scheduling and selection of destinations and waypoints, and including without limitation: Lateral vehicle motion control via steering (operational); Longitudinal vehicle motion control via acceleration and deceleration (operational); Monitoring the driving environment via object and event detection, recognition, classification, and response preparation (operational and tactical); Object and event response execution (operational and tactical); Maneuver planning (tactical); and Enhancing conspicuity via lighting, signaling and gesturing, etc. (tactical).</skos:definition>
+		<skos:definition xml:lang="en">All of the real-time operational and tactical functions required to operate a vehicle in on-road traffic, excluding the strategic functions such as trip scheduling and selection of destinations and waypoints, and including, without limitation, the following subtasks: Lateral vehicle motion control via steering (operational); Longitudinal vehicle motion control via acceleration and deceleration (operational); Monitoring the driving environment via object and event detection, recognition, classification, and response preparation (operational and tactical); Object and event response execution (operational and tactical); Maneuver planning (tactical); Enhancing conspicuity via lighting, sounding the horn, signaling, gesturing, etc. (tactical).</skos:definition>
 		<AnnotationVocabulary:abbreviation>DDT</AnnotationVocabulary:abbreviation>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.13</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">Figure 1 displays a schematic view of the driving task. For more information on the differences between operational, tactical, and strategic functions of driving, see 8.11.</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">For simplification and to provide a useful shorthand term, subtasks (3) and (4) are referred to collectively as object and event detection and response (OEDR) (see 3.20).</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.10</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">Figure 2 displays a schematic view of the driving task. For more information on the differences between operational, tactical, and strategic functions of driving, see 8.11.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">For simplification and to provide a useful shorthand term, subtasks (3) and (4) are referred to collectively as object and event detection and response (OEDR) (see 3.19).</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">In this document, reference is made to “complete(ing) the DDT.” This means fully performing all of the subtasks of the DDT, whether that role is fulfilled by the (human) driver, by the driving automation system, or by a combination of both.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">Some driving automation systems (or the vehicles equipped with them) may have a means to change longitudinal vehicle motion control between forward and reverse.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DynamicDrivingTaskFallback">
@@ -797,20 +763,28 @@
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">DDT fallback</rdfs:label>
-		<skos:definition xml:lang="en">The response by the user to either perform the DDT or achieve a minimal risk condition after occurrence of a DDT performance-relevant system failure(s) or upon operational design domain (ODD) exit, or the response by an ADS to achieve minimal risk condition, given the same circumstances.</skos:definition>
-		<skos:example xml:lang="en">A level 1 adaptive cruise control (ACC) feature experiences a system failure that causes the feature to stop performing its intended function. The human driver performs the DDT fallback by resuming performance of the complete DDT.</skos:example>
-		<skos:example xml:lang="en">A level 3 ADS feature that performs the entire DDT during traffic jams on freeways is not able to do so when it encounters a crash scene and therefore issues a request to intervene to the DDT fallback-ready user. S/he responds by taking over performance of the entire DDT in order to maneuver around the crash scene.</skos:example>
-		<skos:example xml:lang="en">A level 4 ADS-dedicated vehicle (ADS-DV) that performs the entire DDT within a geo-fenced city center experiences a DDT performance-relevant system failure. In response, the ADS-DV performs the DDT fallback by turning on the hazard flashers, maneuvering the vehicle to the road shoulder and parking it, before automatically summoning emergency assistance.</skos:example>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.14</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">At level 3, an ADS is capable of continuing to perform the DDT for at least several seconds after providing the fallback-ready user with a request to intervene. The DDT fallback-ready user is then expected to achieve a minimal risk condition if s/he determines it to be necessary.</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">At levels 4 and 5, the ADS must be capable of performing the DDT fallback and achieving a minimal risk condition. Level 4 and 5 ADS-equipped vehicles that are designed to also accommodate operation by a driver (whether conventional or remote) may allow a user to perform the DDT fallback if s/he chooses to do so. However, a level 4 or 5 ADS need not be designed to allow a user to perform DDT fallback and, indeed, may be designed to disallow it in order to reduce crash risk (see 8.9).</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">Some level 3 features may be designed to automatically perform the fallback and achieve a minimal risk condition in some circumstances, such as when an obstacle-free, adjacent shoulder is present, but not in others, such as when no such road shoulder is available. The assignment of level 3 therefore does not restrict the ADS from automatically achieving the MRC, but it cannot guarantee automated achievement of MRC in all cases within its ODD. Moreover, automated MRC achievement in some, but not all, circumstances that demand it does not constitute level 4 functionality.</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">The DDT and the DDT fallback are distinct functions, and the capability to perform one does not necessarily entail the ability to perform the other. Thus, a level 3 ADS, which is capable of performing the entire DDT within its ODD, may not be capable of performing the DDT fallback in all situations that require it and thus will issue a request to intervene to the DDT fallback-ready user when necessary.</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">While a level 4 or 5 ADS is performing the DDT fallback, it may be limited by design in speed and/or range of lateral and/or longitudinal vehicle motion control (i.e., it may enter so-called “limp-home mode”).</AnnotationVocabulary:explanatoryNote>
+		<skos:definition xml:lang="en">The response by the user to either perform the DDT or achieve a minimal risk condition (1) after occurrence of a DDT performance-relevant system failure(s), or (2) upon operational design domain (ODD) exit, or the response by an ADS to achieve minimal risk condition, given the same circumstances.</skos:definition>
+		<skos:example xml:lang="en">A Level 1 adaptive cruise control (ACC) feature experiences a system failure that causes the feature to stop performing its intended function. The human driver performs the DDT fallback by resuming performance of the complete DDT.</skos:example>
+		<skos:example xml:lang="en">A Level 3 ADS feature that performs the entire DDT during traffic jams on freeways is not able to do so when it encounters a crash scene and therefore issues a request to intervene to the DDT fallback-ready user. S/he responds by taking over performance of the entire DDT in order to maneuver around the crash scene (see Figure 4). (Note that in this example, a minimal risk condition is not needed or achieved.)</skos:example>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.12</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">At Level 3, an ADS is capable of continuing to perform the DDT for at least several seconds after providing the fallback-ready user with a request to intervene. The DDT fallback-ready user is then expected to resume manual vehicle operation, or to achieve a minimal risk condition if s/he determines it to be necessary.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">At Levels 4 and 5, the ADS must be capable of performing the DDT fallback and achieving a minimal risk condition. Level 4 and 5 ADS-equipped vehicles that are designed to also accommodate operation by a driver (whether in-vehicle or remote) may allow a user to perform the DDT fallback, when circumstances allow this to be done safely, if s/he chooses to do so (see Figures 7 and 8). However, a Level 4 or 5 ADS need not be designed to allow a user to perform DDT fallback and, indeed, may be designed to disallow it in order to reduce crash risk (see 8.9).</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">Some Level 3 features may be designed to automatically perform the fallback and achieve a minimal risk condition in some circumstances, such as when an obstacle-free, adjacent shoulder is present, but not in others, such as when no such road shoulder is available. The assignment of Level 3 therefore does not restrict the ADS from automatically achieving the minimal risk condition, but it cannot guarantee automated achievement of minimal risk condition in all cases within its ODD. Moreover, automated minimal risk condition achievement in some, but not all, circumstances that demand it does not constitute Level 4 functionality.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">The DDT and the DDT fallback are distinct functions, and the capability to perform one does not necessarily entail the ability to perform the other. Thus, a Level 3 ADS, which is capable of performing the entire DDT within its ODD, may not be capable of performing the DDT fallback in all situations that require it and thus will issue a request to intervene to the DDT fallback-ready user when necessary (see Figures 3 to 6).</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">While a Level 4 or 5 ADS is performing the DDT fallback, it may be limited by design in speed and/or range of lateral and/or longitudinal vehicle motion control (i.e., it may enter so-called “limp-home mode”).</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">While performing DDT fallback, an ADS may operate temporarily outside of its ODD (see 3.21 NOTE 1).</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Entity">
 		<rdfs:label xml:lang="en">entity</rdfs:label>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FailureMigrationStrategy">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Feature"/>
+		<rdfs:label xml:lang="en">failure migration strategy</rdfs:label>
+		<skos:definition xml:lang="en">vehicle function (not an ADS function) designed to automatically bring an ADS-equipped vehicle to a controlled stop in path following either: (1) prolonged failure of the fallback-ready user of a Level 3 ADS feature to perform the fallback after the ADS has issued a request to intervene, or (2) occurrence of a system failure or external event so catastrophic that it incapacitates the ADS, which can no longer perform vehicle motion control in order to perform the fallback and achieve a minimal risk condition. (See 8.6.)</skos:definition>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.11</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">Some vehicles equipped with Level 2 driver support features may be designed to brake a vehicle to a full stop if the driver fails to indicate his/her continued supervision of feature performance during engagement. Although that is similar in function to a failure mitigation strategy as defined above, the term “failure mitigation strategy” is reserved for ADS features that do not require driver supervision.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FairWeather">
@@ -830,6 +804,13 @@
 		<skos:definition xml:lang="en">Indicates a built-in feature, accessory, or component of the vehicle.</skos:definition>
 	</owl:Class>
 	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FleetOperation">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Operation"/>
+		<rdfs:label xml:lang="en">fleet operation</rdfs:label>
+		<skos:definition xml:lang="en">The activities that support the management of a fleet of ADS-equipped vehicles in driverless operation, which may include, without limitation: Ensuring operational readiness; Dispatching ADS-equipped vehicles in driverless operation (i.e., engaging the ADSs prior to placing the vehicles in service on public roads); Authorizing each trip (e.g., payment, trip route selection); Providing fleet asset management services to vehicles while in-use (e.g., managing emergencies, summoning or providing remote assistance as needed, responding to customer requests and break-downs); Serving as the responsible agent vis-a-vis law enforcement, emergency responders and other authorities for vehicles while in use; Disengaging the ADS at the end of service; Performing vehicle repair and maintenance as needed.</skos:definition>
+		<AnnotationVocabulary:adaptedFrom xml:lang="en">SAE-J3016 APR2021, sec. 3.13</AnnotationVocabulary:adaptedFrom>
+	</owl:Class>
+	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FoggyWeather">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/WeatherType"/>
 		<rdfs:label xml:lang="en">foggy weather</rdfs:label>
@@ -844,52 +825,16 @@
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FreewayLowSpeedOptimalRoadMaintenanceFairWeather">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperationalDesignDomain"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FairWeather"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Freeway"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OptimalRoadMaintenance"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SpeedLimit25"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">freeway, low speed, optimal road maintenance, fair weather</rdfs:label>
 		<skos:definition xml:lang="en">fully access-controlled freeway in low-speed traffic under fair weather conditions and optimal road maintenance</skos:definition>
-		<AnnotationVocabulary:adaptedFrom xml:lang="en">SAE-J3016 (2018), sec. 3.22, Example 1</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.21, Example 2</AnnotationVocabulary:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FreewayTrafficJam">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperationalDesignDomain"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/CongestedTraffic"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Freeway"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">freeway, traffic jam</rdfs:label>
 		<skos:definition xml:lang="en">traffic jam on a freeway</skos:definition>
-		<AnnotationVocabulary:adaptedFrom xml:lang="en">SAE-J3016 (2018), sec. 3.5, Example 2</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.32.1, Example 2</AnnotationVocabulary:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FullDrivingAutomation">
@@ -920,13 +865,37 @@
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">full driving automation</rdfs:label>
-		<skos:definition xml:lang="en">The sustained and unconditional (i.e., not ODD-specific) performance by an ADS of the entire DDT and DDT fallback without any expectation that a user will respond to a request to intervene.</skos:definition>
+		<skos:definition xml:lang="en">The sustained and unconditional (i.e., not ODD-specific) performance by an ADS of the entire DDT and DDT fallback.</skos:definition>
 		<skos:example xml:lang="en">A vehicle with an ADS that, once programmed with a destination, is capable of operating the vehicle throughout complete trips on public roadways, regardless of the starting and end points or intervening road, traffic, and weather conditions.</skos:example>
 		<AnnotationVocabulary:abbreviation xml:lang="en">Level 5</AnnotationVocabulary:abbreviation>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 5.6</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">In the event of a DDT performance-relevant system failure (of an ADS or the vehicle), a level 5 ADS automatically performs the DDT fallback and achieves a minimal risk condition.</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">The user does not need to supervise a level 5 ADS, nor be receptive to a request to intervene while it is engaged.</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">“Unconditional/not ODD-specific” means that the ADS can operate the vehicle under all driver-manageable road conditions within its region of the world. This means, for example, that there are no design-based weather, time-of-day, or geographical restrictions on where and when the ADS can operate the vehicle. However, there may be conditions not manageable by a driver in which the ADS would also be unable to complete a given trip (e.g., white-out snow storm, flooded roads, glare ice, etc.) until or unless the adverse conditions clear. At the onset of such unmanageable conditions the ADS would perform the DDT fallback to achieve a minimal risk condition (e.g., by pulling over to the side of the road and waiting for the conditions to change).</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 5.6</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">In the event of a DDT performance-relevant system failure (of an ADS or the vehicle), a Level 5 ADS automatically performs the DDT fallback and achieves a minimal risk condition.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">The user does not need to supervise a Level 5 ADS.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">“Unconditional/not ODD-specific” means that the ADS can operate the vehicle on-road anywhere within its region of the world and under all road conditions in which a conventional vehicle can be reasonably operated by a typically skilled human driver. This means, for example, that there are no design-based weather, time-of-day, or geographical restrictions on where and when the ADS can operate the vehicle. However, there may be conditions not manageable by a driver in which the ADS would also be unable to complete a given trip (e.g., white-out snow storm, flooded roads, glare ice, etc.) until or unless the adverse conditions clear. At the onset of such unmanageable conditions the ADS would perform the DDT fallback to achieve a minimal risk condition (e.g., by pulling over to the side of the road and waiting for the conditions to change).</AnnotationVocabulary:explanatoryNote>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FullTripFeature">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DrivingAutomationSystemFeature"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isResultOf"/>
+				<owl:allValuesFrom>
+					<owl:Class>
+						<owl:unionOf rdf:parseType="Collection">
+							<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FullDrivingAutomation">
+							</rdf:Description>
+							<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HighDrivingAutomation">
+							</rdf:Description>
+						</owl:unionOf>
+					</owl:Class>
+				</owl:allValuesFrom>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">full-trip feature</rdfs:label>
+		<skos:definition xml:lang="en">ADS features that operate a vehicle throughout complete trips</skos:definition>
+		<skos:example xml:lang="en">A Level 4 ADS-DV is dispatched in driverless operation for purposes of providing ride-hailing services to customers located within its geo-fenced area of operation.</skos:example>
+		<skos:example xml:lang="en">A Level 5 dual-mode vehicle is dispatched in driverless operation by its owner to go to a designated airport, pick up several family members, and bring them home. All vehicle occupants remain passengers throughout the return trip.</skos:example>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.7.3</AnnotationVocabulary:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/GeofencedArea">
@@ -959,14 +928,14 @@
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">high driving automation</rdfs:label>
-		<skos:definition xml:lang="en">The sustained and ODD-specific performance by an ADS of the entire DDT and DDT fallback, without any expectation that a user will respond to a request to intervene.</skos:definition>
-		<skos:example xml:lang="en">A driverless operation dispatcher may engage a level 4 ADS-DV capable of following a pre-defined route within a confined geographical area (e.g., residential community, military base, university campus).</skos:example>
-		<skos:example xml:lang="en">A level 4 ADS feature capable of performing the entire DDT during sustained operation on a motorway or freeway (i.e., within its ODD). (Note: The presence of a user in the driver’s seat who is capable of performing the DDT is envisioned in this example, as driver performance of the DDT would have been necessary before entering, and would again be necessary after leaving, the motorway or freeway. Thus, such a feature would alert the user that s/he should resume vehicle operation shortly before exiting the ODD, but if the user fails to respond to such an alert, the ADS will nevertheless perform the DDT fallback and achieve a minimal risk condition automatically.)</skos:example>
-		<skos:example xml:lang="en">A level 4 ADS feature capable of performing the entire DDT during valet parking (i.e., curb-to-door or vice versa) without any driver supervision.</skos:example>
+		<skos:definition xml:lang="en">The sustained and ODD-specific performance by an ADS of the entire DDT and DDT fallback’.</skos:definition>
+		<skos:example xml:lang="en">A Level 4 ADS feature capable of performing the entire DDT during sustained operation on a motorway or freeway (i.e., within its ODD). (Note: The presence of a user in the driver’s seat who is capable of performing the DDT is envisioned in this example, as driver performance of the DDT would have been necessary before entering, and would again be necessary after leaving, the motorway or freeway. Thus, such a feature would alert the user that s/he should resume vehicle operation shortly before exiting the ODD, but if the user fails to respond to such an alert, the ADS will nevertheless perform the DDT fallback and achieve a minimal risk condition automatically.)</skos:example>
+		<skos:example xml:lang="en">A Level 4 ADS feature capable of performing the entire DDT during valet parking (i.e., curb-to-door or vice versa) without any driver supervision.</skos:example>
+		<skos:example xml:lang="en">A driverless operation dispatcher may engage a Level 4 ADS-DV capable of following a pre-defined route within a confined geographical area (e.g., residential community, military base, university campus).</skos:example>
 		<AnnotationVocabulary:abbreviation xml:lang="en">Level 4</AnnotationVocabulary:abbreviation>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 5.5</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">Level 4 ADS features may be designed to operate the vehicle throughout complete trips (e.g., a closed campus shuttle feature), or they may be designed to operate the vehicle during only part of a given trip, after ODD requirements are met (e.g., a high-speed freeway cruising feature), For example, in order to complete a given trip, a user of a vehicle equipped with a level 4 ADS feature designed to operate the vehicle during high-speed freeway conditions will generally choose to perform the DDT when the freeway ends; otherwise the ADS will automatically perform DDT fallback and achieve a minimal risk condition as needed. However, unlike at level 3, this user is not a DDT fallback-ready user while the ADS is engaged (see Example 2, below).</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">The user does not need to supervise a level 4 ADS feature or be receptive to a request to intervene while the ADS is engaged. A level 4 ADS is capable of automatically performing DDT fallback, as well as achieving a minimal risk condition if a user does not resume performance of the DDT. This automated DDT fallback and minimal risk condition achievement capability is the primary difference between level 4 and level 3 ADS features. This means that the user of an engaged level 4 ADS feature is a passenger who need not respond to requests to intervene or to DDT performance-relevant system failures.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 5.5</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">Level 4 ADS features may be designed to operate the vehicle throughout complete trips (see 3.7.3), or they may be designed to operate the vehicle during only part of a given trip (see 3.7.2), For example, in order to complete a given trip, a user of a vehicle equipped with a Level 4 ADS feature designed to operate the vehicle during high-speed freeway conditions will need to perform the DDT when the freeway ends in order to complete his or her intended trip; the ADS, however, will automatically perform the DDT fallback and achieve a minimal risk condition if the user fails to take over when the freeway ends (e.g., because s/he is sleeping). Unlike at Level 3, the Level 4 feature user is not a DDT fallback-ready user while the ADS is engaged (see Example 2 below), and thus is not expected to respond to a request to intervene in order to perform the fallback. Nevertheless, in the case that a Level 4 sub-trip feature reaches its ODD limit, the ADS may issue an alert to the passenger that s/he should resume driving in order to complete their trip. (Note that in this latter case, the alert in question is not a request to intervene, because it does not signal the need for fallback performance.)</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">The user does not need to supervise a Level 4 ADS feature or be receptive to a request to intervene while the ADS is engaged. A Level 4 ADS is capable of automatically performing DDT fallback, as well as achieving a minimal risk condition if a user does not resume performance of the DDT. This automated DDT fallback and minimal risk condition achievement capability is the primary difference between Level 4 and Level 3 ADS features. This means that an in-vehicle user of an engaged Level 4 ADS feature is a passenger who need not respond to DDT performance-relevant system failures.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HighVolumeTraffic">
@@ -1019,39 +988,117 @@
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">human driver</rdfs:label>
-		<skos:definition xml:lang="en">user who performs in real-time part or all of the DDT and/or DDT fallback for a particular vehicle</skos:definition>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.29.1</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">In a vehicle equipped with a driving automation system, a driver may assume or resume performance of part or all of the DDT from the driving automation system during a given trip.</AnnotationVocabulary:explanatoryNote>
+		<skos:definition xml:lang="en">user who performs in real time part or all of the DDT and/or DDT fallback for a particular vehicle</skos:definition>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.31.1</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">This definition of “driver” does not include a robotic test device designed to exercise steering, braking, and acceleration during certain dynamic test maneuvers.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HumanUser">
 		<rdfs:label xml:lang="en">human user</rdfs:label>
 		<skos:definition xml:lang="en">general term referencing the human role in driving automation</skos:definition>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.29</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote>The following four terms (1 – driver, 2 – passenger, 3 – DDT fallback-ready user, and 4 – driverless operation dispatcher) describe categories of (human) users</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.31</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">The following five terms (1 - driver, 2 - passenger, 3 - DDT fallback-ready user, 4 - driverless operation dispatcher, and 5 - remote assistant) describe categories of (human) users.</AnnotationVocabulary:explanatoryNote>
 		<AnnotationVocabulary:explanatoryNote>These human categories define roles that do not overlap and may be performed in varying sequences during a given trip</AnnotationVocabulary:explanatoryNote>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/InVehicleDriver">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HumanDriver"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/occupiesSeatOfDriver"/>
+				<owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/operatesManually"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConventionalVehicle"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">in-vehicle driver</rdfs:label>
+		<skos:definition xml:lang="en">driver who manually exercises in-vehicle braking, accelerating, steering, and transmission gear selection input devices in order to operate a vehicle</skos:definition>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.31.1.1</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">An in-vehicle driver is seated in what is normally referred to as “the driver’s seat” in automotive contexts, which is a unique seating position that makes in-vehicle input devices (steering wheel, brake and accelerator pedals, gear shift) accessible to a (human) driver.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">In a conventional or dual-mode vehicle equipped with a driving automation system, an in-vehicle driver, who may be a passenger or a fallback-ready user during ADS engagement, may assume or resume performance of part or all of the DDT from the driving automation system during a given trip.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">“Conventional driver” is an acceptable synonym for in-vehicle driver.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:synonym xml:lang="en">conventional driver</AnnotationVocabulary:synonym>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/InVehicleDynamicDriverTaskFallbackReadyUser">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DynamicDriverTaskFallbackReadyUser"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/occupiesSeatOfDriver"/>
+				<owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">in-vehicle DDT fallback-ready user</rdfs:label>
+		<skos:definition xml:lang="en">fallback-ready user of a conventional vehicle with an engaged Level 3 ADS feature who is seated in the driver’s seat</skos:definition>
+		<skos:example xml:lang="en">A Level 3 ADS sub-trip feature designed to perform the DDT in congested traffic on certain freeways encounters emergency responders who are rerouting traffic to the exit due to a serious crash; the ADS issues a request to intervene. The in-vehicle fallback-ready user becomes a driver and performs the fallback by manually operating the vehicle.</skos:example>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.31.3.1</AnnotationVocabulary:adaptedFrom>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/InVehicleUser">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HumanUser"/>
+		<rdfs:label xml:lang="en">in-vehicle user</rdfs:label>
+		<skos:definition xml:lang="en">user occupying a seat in the vehicle</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/LateralVehicleMotionControl">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DynamicDrivingSubtask"/>
 		<rdfs:label xml:lang="en">lateral vehicle motion control</rdfs:label>
-		<skos:definition xml:lang="en">The DDT subtask comprising the activities necessary for the real-time, sustained regulation of the y-axis component of vehicle motion (see Figure 8).</skos:definition>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.15</AnnotationVocabulary:adaptedFrom>
+		<skos:definition xml:lang="en">The DDT subtask comprising the activities necessary for the real-time, sustained regulation of the y-axis component of vehicle motion (see Figure 9).</skos:definition>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.14</AnnotationVocabulary:adaptedFrom>
 		<AnnotationVocabulary:explanatoryNote xml:lang="en">Lateral vehicle motion control includes the detection of the vehicle positioning relative to lane boundaries and application of steering and/or differential braking inputs to maintain appropriate lateral positioning.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/LongitudinalVehicleMotionControl">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DynamicDrivingSubtask"/>
 		<rdfs:label xml:lang="en">longitudinal vehicle motion control</rdfs:label>
-		<skos:definition xml:lang="en">The DDT subtask comprising the activities necessary for the real-time, sustained regulation of the x-axis component of vehicle motion (see Figure 8).</skos:definition>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.16</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">Longitudinal vehicle motion control includes maintaining set speed as well as detecting a preceding vehicle in the path of the subject vehicle, maintaining an appropriate gap to the preceding vehicle and applying propulsion or braking inputs to cause the vehicle to maintain that speed or gap.</AnnotationVocabulary:explanatoryNote>
+		<skos:definition xml:lang="en">The DDT subtask comprising the activities necessary for the real-time, sustained regulation of the x-axis component of vehicle motion (see Figure 9).</skos:definition>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.15</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">Longitudinal vehicle motion control may include forward and reverse directionality depending on the usage specification.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/LowVolumeTraffic">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/TrafficType"/>
 		<rdfs:label xml:lang="en">low-volume traffic</rdfs:label>
 		<skos:definition xml:lang="en">traffic with a volume of less than 400 AADT (Annual Average Daily Traffic)</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ManeuverBasedFeature">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DrivingAutomationSystemFeature"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isResultOf"/>
+				<owl:allValuesFrom>
+					<owl:Class>
+						<owl:intersectionOf rdf:parseType="Collection">
+							<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DrivingAutomation">
+							</rdf:Description>
+							<owl:Class>
+								<owl:complementOf>
+									<owl:Class>
+										<owl:unionOf rdf:parseType="Collection">
+											<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FullDrivingAutomation">
+											</rdf:Description>
+											<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HighDrivingAutomation">
+											</rdf:Description>
+										</owl:unionOf>
+									</owl:Class>
+								</owl:complementOf>
+							</owl:Class>
+						</owl:intersectionOf>
+					</owl:Class>
+				</owl:allValuesFrom>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">maneuver-based feature</rdfs:label>
+		<skos:definition xml:lang="en">driving automation system feature equipped on a conventional vehicle that executes a limited set of lateral and/or longitudinal vehicle motion control actions (levels 1-4) as well as associated object and event detection and response (OEDR) and all other elements of the complete DDT (level 3 or 4) in order to fulfil a specific, narrowly defined use case (e.g., parking maneuver)</skos:definition>
+		<skos:example xml:lang="en">A Level 1 parking assistance feature automatically performs the lateral vehicle motion control actions necessary to parallel park a vehicle, while the driver performs the longitudinal vehicle motion control actions and supervises the feature.</skos:example>
+		<skos:example xml:lang="en">A Level 2 parking assistance feature automatically performs the lateral and longitudinal vehicle motion control actions necessary to parallel park a vehicle under the supervision of the driver.</skos:example>
+		<skos:example xml:lang="en">A Level 3 highway overtaking assistance feature automatically performs the lateral and longitudinal vehicle motion control actions, as well as associated OEDR, necessary to pass a slower-moving vehicle on a multi-lane highway when activated by the driver or fallback-ready user.</skos:example>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.7.1</AnnotationVocabulary:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/MilitaryBase">
@@ -1062,27 +1109,9 @@
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/MilitaryBaseSpeedLimit25Daylight">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperationalDesignDomain"/>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Daylight"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/MilitaryBase"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SpeedLimit25"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">military base, speed limit 25 kph, daylight</rdfs:label>
 		<skos:definition xml:lang="en">geographically-defined military base, only during daylight at speeds not to exceed 25 mph</skos:definition>
-		<AnnotationVocabulary:adaptedFrom xml:lang="en">SAE-J3016 (2018), sec. 3.22, Example 2</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.21, Example 3</AnnotationVocabulary:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/MinimalRiskCondition">
@@ -1100,14 +1129,14 @@
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">minimal risk condition</rdfs:label>
-		<skos:definition xml:lang="en">A condition to which a user or an ADS may bring a vehicle after performing the DDT fallback in order to reduce the risk of a crash when a given trip cannot or should not be completed.</skos:definition>
-		<skos:example xml:lang="en">A level 4 ADS feature designed to operate a vehicle at high speeds on freeways experiences a DDT performance-relevant system failure and automatically removes the vehicle from active lanes of traffic before coming to a stop.</skos:example>
-		<skos:example xml:lang="en">A vehicle in which a level 4 ADS is installed experiences a DDT performance-relevant system failure in its primary electrical power system. The ADS utilizes a backup power source in order to achieve a minimal risk condition.</skos:example>
+		<skos:definition xml:lang="en">A stable, stopped condition to which a user or an ADS may bring a vehicle after performing the DDT fallback in order to reduce the risk of a crash when a given trip cannot or should not be continued.</skos:definition>
+		<skos:example xml:lang="en">A Level 4 ADS feature designed to operate a vehicle at high speeds on freeways experiences a DDT performance-relevant system failure and automatically removes the vehicle from active lanes of traffic before coming to a stop.</skos:example>
+		<skos:example xml:lang="en">A vehicle in which a Level 4 ADS is installed experiences a DDT performance-relevant system failure in its primary electrical power system. The ADS utilizes a backup power source in order to achieve a minimal risk condition.</skos:example>
 		<AnnotationVocabulary:abbreviation>MRC</AnnotationVocabulary:abbreviation>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.17</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">At level 3, given a DDT performance-relevant system failure in the ADS or vehicle, the DDT fallback-ready user is expected to achieve a minimal risk condition when s/he determines that it is necessary, or to otherwise perform the DDT if the vehicle is drivable.</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">At levels 1 and 2, the conventional driver is expected to achieve a minimal risk condition as needed.</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">At levels 4 and 5, the ADS is capable of automatically achieving a minimal risk condition when necessary (i.e., due to ODD exit, if applicable, or due to a DDT performance-relevant system failure in the ADS or vehicle). The characteristics of automated achievement of a minimal risk condition at levels 4 and 5 will vary according to the type and extent of the system failure, the ODD (if any) for the ADS feature in question, and the particular operating conditions when the system failure or ODD exit occurs. It may entail automatically bringing the vehicle to a stop within its current travel path, or it may entail a more extensive maneuver designed to remove the vehicle from an active lane of traffic and/or to automatically return the vehicle to a dispatching facility.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.16</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">At Level 3, given a DDT performance-relevant system failure in the ADS or vehicle, the DDT fallback-ready user is expected to achieve a minimal risk condition when s/he determines that it is necessary, or to otherwise perform the DDT if the vehicle is operable.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">At Levels 1 and 2, the in-vehicle driver is expected to achieve a minimal risk condition as needed.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">At Levels 4 and 5, the ADS is capable of automatically achieving a minimal risk condition when necessary (i.e., due to ODD exit, if applicable, or due to a DDT performance-relevant system failure in the ADS or vehicle). The characteristics of automated achievement of a minimal risk condition at Levels 4 and 5 will vary according to the type and extent of the system failure, the ODD (if any) for the ADS feature in question, and the particular operating conditions when the system failure or ODD exit occurs. It may entail automatically bringing the vehicle to a stop within its current travel path, or it may entail a more extensive maneuver designed to remove the vehicle from an active lane of traffic and/or to automatically return the vehicle to a dispatching facility.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/MinimalRiskConditionAchievement">
@@ -1139,10 +1168,10 @@
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Monitor">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DynamicDrivingSubtask"/>
 		<rdfs:label xml:lang="en">monitor</rdfs:label>
-		<skos:definition xml:lang="en">A general term referencing a range of functions involving real-time human or machine sensing and processing of data used to operate a vehicle, or to support its operation.</skos:definition>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.19</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">The driver state or condition of being receptive to alerts or other indicators of a DDT performance-relevant system failure, as assumed in level 3, is not a form of monitoring. The difference between receptivity and monitoring is best illustrated by example: A person who becomes aware of a fire alarm or a telephone ringing may not necessarily have been monitoring the fire alarm or the telephone. Likewise, a user who becomes aware of a trailer hitch falling off may not necessarily have been monitoring the trailer hitch. By contrast, a driver in a vehicle with an active level 1 adaptive cruise control (ACC) system is expected to monitor both the driving environment and the ACC performance and otherwise not to wait for an alert to draw his/her attention to a situation requiring a response (see 3.23).</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">The following four terms (1 – monitor the user, 2 – monitor the driving environment, 3 – monitor vehicle performance, and 4 – monitor driving automation system performance) describe categories of monitoring (see Scope regarding primary actors).</AnnotationVocabulary:explanatoryNote>
+		<skos:definition xml:lang="en">A general term describing a range of functions involving real-time human or machine sensing and processing of data used to operate a vehicle, or to support its operation.</skos:definition>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.18</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">The driver state or condition of being receptive to alerts or other indicators of a DDT performance-relevant system failure, as assumed in Level 3, is not a form of monitoring. The difference between receptivity and monitoring is best illustrated by example: A person who becomes aware of a fire alarm or a telephone ringing may not necessarily have been monitoring the fire alarm or the telephone. Likewise, a user who becomes aware of a trailer hitch falling off may not necessarily have been monitoring the trailer hitch. By contrast, a driver in a vehicle with an active Level 1 adaptive cruise control (ACC) system is expected to monitor both the driving environment and the ACC performance and otherwise not to wait for an alert to draw his/her attention to a situation requiring a response (see 3.22).</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">The following four terms (1 - monitor the user, 2 - monitor the driving environment, 3 - monitor vehicle performance, and 4 - monitor driving automation system performance) describe categories of monitoring (see scope regarding primary actors).</AnnotationVocabulary:explanatoryNote>
 		<AnnotationVocabulary:explanatoryNote xml:lang="en">The terms below describing types of monitoring should be used when the general term “monitor” and its derivatives are insufficiently precise.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
@@ -1150,11 +1179,11 @@
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Monitor"/>
 		<rdfs:label xml:lang="en">monitor driving automation system performance</rdfs:label>
 		<skos:definition xml:lang="en">The activities and/or automated routines for evaluating whether the driving automation system is performing part or all of the DDT appropriately.</skos:definition>
-		<skos:example xml:lang="en">A conventional driver verifies that an engaged ACC system is maintaining an appropriate gap while following a preceding vehicle in a curve.</skos:example>
-		<skos:example xml:lang="en">A remote driver engaging a level 2 automated parking feature monitors the pathway of the vehicle to ensure that the feature is responsive to pedestrians and obstacles.</skos:example>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.19.4</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">At higher levels of driving automation (levels 3-5), the ADS monitors its own performance of the complete DDT.</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">At levels 1-2, the driver monitors the driving automation system’s performance.</AnnotationVocabulary:explanatoryNote>
+		<skos:example xml:lang="en">A remote driver engaging a Level 2 automated parking feature monitors the pathway of the vehicle to verify that the feature is responsive to pedestrians and obstacles.</skos:example>
+		<skos:example xml:lang="en">An in-vehicle driver monitors an engaged ACC feature to verify that it is maintaining an appropriate gap while following a preceding vehicle in a curve.</skos:example>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.18.4</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">At Levels 1 and 2, the driver monitors the driver support feature’s performance as part of supervising.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">At higher levels of driving automation (Levels 3 to 5), the ADS monitors its own performance of the complete DDT.</AnnotationVocabulary:explanatoryNote>
 		<AnnotationVocabulary:explanatoryNote xml:lang="en">Recognizing requests to intervene issued by a driving automation system is not a form of monitoring driving automation system performance, but rather a form of receptivity.</AnnotationVocabulary:explanatoryNote>
 		<AnnotationVocabulary:explanatoryNote xml:lang="en">The term monitor driving automation system performance should not be used in lieu of supervise, which includes both monitoring and responding as needed to perform the DDT and is therefore more comprehensive.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
@@ -1163,26 +1192,26 @@
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Monitor"/>
 		<rdfs:label xml:lang="en">monitor the user</rdfs:label>
 		<skos:definition xml:lang="en">The activities and/or automated routines designed to assess whether and to what degree the user is performing the role specified for him/her.</skos:definition>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.19.1</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">User monitoring in the context of driving automation is most likely to be deployed as a countermeasure for misuse or abuse (including over-reliance due to complacency) of a driving automation system but may also serve other purposes.</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">User monitoring is primarily useful for levels 2 and 3, as evidence from the field on the use of level 1 features has not identified significant incidence of misuse or abuse of driving automation technology, and above these levels the ADS is by definition capable of achieving a minimal risk condition automatically.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.18.1</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">User monitoring in the context of driving automation is most likely to be deployed as a countermeasure for misuse or abuse (including over-reliance due to complacency) of a driving automation system, but may also be used for other purposes.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">User monitoring is primarily useful for Levels 2 and 3, as evidence from the field on the use of Level 1 features has not identified significant incidence of misuse or abuse of driving automation technology, and above these levels, the ADS is by definition capable of achieving a minimal risk condition automatically.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/MonitorVehiclePerformance">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Monitor"/>
 		<rdfs:label xml:lang="en">monitor vehicle performance</rdfs:label>
 		<skos:definition xml:lang="en">The activities and/or automated routines that accomplish real-time evaluation of the vehicle performance, and response preparation, as needed to operate a vehicle.</skos:definition>
-		<skos:example xml:lang="en">While a level 2 driving automation system is engaged in stop-and-go traffic, a malfunctioning brake caliper causes the vehicle to pull slightly to the left when the brakes are applied. The human driver observes that the vehicle is deviating from its lane and either corrects the vehicle’s lateral position or disengages the driving automation system entirely.</skos:example>
-		<skos:example xml:lang="en">While a level 4 ADS is engaged in stop-and-go traffic, a malfunctioning brake caliper causes the vehicle to pull to the left when the brakes are applied. The ADS recognizes this deviation, corrects the vehicle’s lateral position and transitions to a limp-home mode until it achieves a minimal risk condition.</skos:example>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.19.3</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">While performing the DDT, level 4 and 5 ADSs monitor vehicle performance. However, for level 3 ADSs, as well as for level 1 and 2 driving automation systems, the human driver is assumed to be receptive to vehicle conditions that adversely affect performance of the DDT (see definition of receptivity at 3.23).</AnnotationVocabulary:explanatoryNote>
+		<skos:example xml:lang="en">While a Level 2 driver support feature is engaged in stop-and-go traffic, a malfunctioning brake caliper causes the vehicle to pull slightly to the left when the brakes are applied. The human driver observes that the vehicle is deviating from its lane and either corrects the vehicle’s lateral position or disengages the feature entirely.</skos:example>
+		<skos:example xml:lang="en">While a Level 4 ADS is engaged in stop-and-go traffic, a malfunctioning brake caliper causes the vehicle to pull to the left when the brakes are applied. The ADS recognizes this deviation, corrects the vehicle’s lateral position and transitions to a limp-home mode until it achieves a minimal risk condition.</skos:example>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.18.3</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">While performing the DDT, Level 4 and 5 ADSs monitor vehicle performance. However, for Level 3 ADSs, as well as for Level 1 and 2 driving automation systems, the human driver is assumed to be receptive to vehicle conditions that adversely affect performance of the DDT (see 3.22).</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/MonitoringDrivingEnvironment">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Monitor"/>
 		<rdfs:label xml:lang="en">monitor the driving environment</rdfs:label>
 		<skos:definition xml:lang="en">The activities and/or automated routines that accomplish real-time roadway environmental object and event detection, recognition, classification, and response preparation (excluding actual response), as needed to operate a vehicle.</skos:definition>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.19.2</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.18.2</AnnotationVocabulary:adaptedFrom>
 		<AnnotationVocabulary:explanatoryNote xml:lang="en">When operating conventional vehicles that are not equipped with an engaged ADS, drivers visually sample the road scene sufficiently to competently perform the DDT while also performing secondary tasks that require short periods of eyes-off-road time (e.g., adjusting cabin comfort settings, scanning road signs, tuning a radio, etc.). Thus, monitoring the driving environment does not necessarily entail continuous eyes-on-road time by the driver.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
@@ -1196,9 +1225,9 @@
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">motor vehicle</rdfs:label>
 		<skos:definition xml:lang="en">machine designed to provide conveyance on public streets, roads, and highways</skos:definition>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.30</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">As used in this document, vehicle refers to motorized vehicles and excludes those operated only on rail lines. For reference, 49 U.S.C. $ 30102(a)(6) defines motor vehicle as follows: “motor vehicle means a vehicle driven or drawn by mechanical power and manufactured primarily for use on public streets, roads, and highways, but does not include a vehicle operated only on a rail line.”</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">Types of vehicles discussed in this Recommended Practice include ADS-equipped vehicles, ADS-dedicated vehicles, dual-mode vehicles, and conventional vehicles. ADS-dedicated vehicles and dual-mode vehicles are always ADS-equipped vehicles. Conventional vehicles may or may not be ADS-equipped vehicles.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.32</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">As used in this document, [motor] vehicle refers to motorized vehicles and excludes those operated only on rail lines. For reference, 49 U.S.C. § 30102(a)(6) defines [motor] vehicle as follows: “[motor] vehicle means a vehicle driven or drawn by mechanical power and manufactured primarily for use on public streets, roads, and highways, but does not include a vehicle operated only on a rail line.”</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">Types of [motor] vehicles discussed in this Recommended Practice include ADS-equipped vehicles, ADS-dedicated vehicles, dual-mode vehicles, and conventional vehicles. ADS-dedicated vehicles and dual-mode vehicles are always ADS-equipped vehicles. Conventional vehicles may or may not be ADS-equipped vehicles.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/MotorVehicleOperation">
@@ -1206,7 +1235,7 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOnboardUser"/>
-				<owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConventionalDriver"/>
+				<owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/InVehicleDriver"/>
 				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -1244,9 +1273,10 @@
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">motor vehicle operation</rdfs:label>
-		<skos:definition xml:lang="en">Collectively, the activities performed by a (human) driver (with or without support from one or more level 1 or 2 driving automation features) or by an ADS (level 3-5) to perform the entire DDT for a given vehicle during a trip.</skos:definition>
-		<AnnotationVocabulary:adaptedFrom xml:lang="en">SAE-J3016 (2018), sec. 3.21</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">Although use of the term operate/operating implies the existence of a vehicle “operator,” this term is not defined or used in this document, which otherwise provides very specific terms and definitions for the various types of ADS-equipped vehicle users (see 3.29).</AnnotationVocabulary:explanatoryNote>
+		<skos:definition xml:lang="en">Collectively, the activities performed by a (human) driver (with or without support from one or more Level 1 or 2 driving automation features) or by an ADS (Level 3 to 5) to perform the entire DDT for a given vehicle.</skos:definition>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.20</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">Although use of the term operate/operating/operation implies the existence of a vehicle “operator,” this term is not defined or used in this document, which otherwise provides very specific terms and definitions for the various types of ADS-equipped vehicle users (see 3.32).</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">Terms such as “drive,” “operate,” “driver,” and “operator” may have legal meanings that are different from their technical meanings, as contained in this document.</AnnotationVocabulary:explanatoryNote>
 		<AnnotationVocabulary:explanatoryNote xml:lang="en">The term “drive” is not used in this document, however, in many cases it could be used correctly in lieu of “operate.”</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
@@ -1285,7 +1315,7 @@
 		<rdfs:label xml:lang="en">no driving automation</rdfs:label>
 		<skos:definition xml:lang="en">The performance by the driver of the entire DDT, even when enhanced by active safety systems.</skos:definition>
 		<AnnotationVocabulary:abbreviation xml:lang="en">Level 0</AnnotationVocabulary:abbreviation>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 5.1</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 5.1</AnnotationVocabulary:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ObjectAndEventDetectionAndResponse">
@@ -1299,18 +1329,18 @@
 		<rdfs:label xml:lang="en">object and event detection and response</rdfs:label>
 		<skos:definition xml:lang="en">The subtasks of the DDT that include monitoring the driving environment (detecting, recognizing, and classifying objects and events and preparing to respond as needed) and executing an appropriate response to such objects and events (i.e., as needed to complete the DDT and/or DDT fallback).</skos:definition>
 		<AnnotationVocabulary:abbreviation>OEDR</AnnotationVocabulary:abbreviation>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.20</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.19</AnnotationVocabulary:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperatingCondition">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Condition"/>
 		<rdfs:label xml:lang="en">operating condition</rdfs:label>
 		<skos:definition xml:lang="en">condition defining an operational design domain (ODD)</skos:definition>
-		<AnnotationVocabulary:adaptedFrom xml:lang="en">SAE-J3016 (2018), sec. 3.22</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.21</AnnotationVocabulary:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Operation">
-		<rdfs:label xml:lang="en">operation</rdfs:label>
+		<rdfs:label>operation</rdfs:label>
 		<skos:definition xml:lang="en">act, process, or manner of operating</skos:definition>
 	</owl:Class>
 	
@@ -1327,63 +1357,17 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperationalDesignDomain">
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConfinedGeographicLocation"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RoadMaintenance"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RoadType"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SpeedLimit"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/TimeOfDay"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/TrafficType"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
-				<owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/WeatherType"/>
-				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-			</owl:Restriction>
-		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">operational design domain</rdfs:label>
 		<skos:definition xml:lang="en">Operating conditions under which a given driving automation system or feature thereof is specifically designed to function, including, but not limited to, environmental, geographical, and time-of-day restrictions, and/or the requisite presence or absence of certain traffic or roadway characteristics.</skos:definition>
+		<skos:example xml:lang="en">A Level 1 ACC driver support feature is designed to provide longitudinal vehicle motion control support to the driver on fully access-controlled freeways under fair weather conditions.</skos:example>
+		<skos:example xml:lang="en">A level 3 ADS highway feature with an ODD requirement of clearly visible lane lines encounters a short stretch of roadway with obscured lane lines. The ADS feature is able to compensate for brief periods of faded or missing lane markings through other means (e.g., sensor fusion, digital map, lead vehicle following) and continues to operate the vehicle for a brief period before the lane lines again become clearly visible. A short while later, the lane lines again become obscured and remain so for longer duration, causing the ADS feature to issue a request to intervene to the fallback-ready user.</skos:example>
 		<skos:example xml:lang="en">An ADS feature is designed to operate a vehicle only on fully access-controlled freeways in low-speed traffic, under fair weather conditions and optimal road maintenance conditions (e.g., good lane markings and not under construction).</skos:example>
-		<skos:example xml:lang="en">An ADS-dedicated commercial truck is designed to pick up parts from a geofenced sea port and deliver them via a specific route to a distribution center located 30 miles away. The vehicle’s ODD is limited to day-time operation within the specified sea port and the specific roads that constitute the prescribed route between the sea port and the distribution center.</skos:example>
-		<skos:example xml:lang="en">An ADS-dedicated vehicle is designed to operate only within a geographically-defined military base, and only during daylight at speeds not to exceed 25 mph.</skos:example>
+		<skos:example xml:lang="en">An ADS-dedicated commercial truck is designed to pick up parts from a geo-fenced sea port and deliver them via a specific route to a distribution center located 30 miles away. The vehicle’s ODD is limited to day- time operation within the specified sea port and the specific roads that constitute the prescribed route between the sea port and the distribution center.</skos:example>
+		<skos:example xml:lang="en">An ADS-dedicated vehicle is designed to operate only within a geographically defined military base, and only during daylight at speeds not to exceed 25 mph.</skos:example>
 		<AnnotationVocabulary:abbreviation>ODD</AnnotationVocabulary:abbreviation>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.22</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.21</AnnotationVocabulary:adaptedFrom>
 		<AnnotationVocabulary:explanatoryNote xml:lang="en">Section 6 discusses the significance of ODDs in the context of the levels of driving automation.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">While Level 3 and 4 ADS features/vehicles are designed to operate exclusively within their respective ODDs, some ODD conditions are subject to rapid change during on-road operation (e.g., inclement weather, obscured lane lines). Such transient changes in the operating environment do not necessarily represent an “ODD exit,” as the ADS determines when such a change in conditions requires fallback performance (whether by the fallback-ready user or ADS).</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperationalDesignDomainExit">
@@ -1424,12 +1408,13 @@
 		<rdfs:label xml:lang="en">partial driving automation</rdfs:label>
 		<skos:definition xml:lang="en">The sustained and ODD-specific execution by a driving automation system of both the lateral and longitudinal vehicle motion control subtasks of the DDT with the expectation that the driver completes the OEDR subtask and supervises the driving automation system.</skos:definition>
 		<AnnotationVocabulary:abbreviation xml:lang="en">Level 2</AnnotationVocabulary:abbreviation>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 5.3</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">A level 2 driving automation feature is capable of only limited OEDR, meaning that there are some events that the driving automation system is not capable of recognizing or responding to. Therefore, the driver supervises the driving automation system performance by completing the OEDR subtask of the DDT. See Figure 1 (discussing the three primary subtasks of the DDT).</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 5.3</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">A Level 2 driver support feature is capable of only limited OEDR, meaning that there are some events that it is not capable of recognizing or responding to. Therefore, the driver supervises the feature’s performance by completing the OEDR subtask of the DDT. See Figure 2 (discussing the three primary subtasks of the DDT).</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Passenger">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HumanUser"/>
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/InVehicleUser"/>
 		<rdfs:subClassOf>
 			<owl:Class>
 				<owl:complementOf>
@@ -1443,24 +1428,15 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isRealizedInAtSomeTime"/>
-				<owl:someValuesFrom>
-					<owl:Class>
-						<owl:unionOf rdf:parseType="Collection">
-							<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FullDrivingAutomation">
-							</rdf:Description>
-							<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HighDrivingAutomation">
-							</rdf:Description>
-						</owl:unionOf>
-					</owl:Class>
-				</owl:someValuesFrom>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SustainedOperationOfVehicle"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">passenger</rdfs:label>
 		<skos:definition xml:lang="en">user in a vehicle who has no role in the operation of that vehicle</skos:definition>
-		<skos:example xml:lang="en">The in-vehicle users of a level 5 ADS-equipped dual-mode vehicle are passengers whenever the level 5 ADS is engaged.</skos:example>
-		<skos:example xml:lang="en">The in-vehicle users of an ADS-DV on a university campus are passengers.</skos:example>
-		<skos:example xml:lang="en">The person seated in the driver’s seat of a vehicle equipped with a level 4 ADS feature designed to automate high-speed vehicle operation on controlled-access freeways is a passenger while this level 4 feature is engaged. This same person, however, is a driver before engaging this level 4 ADS feature and again after disengaging the feature in order to exit the controlled access freeway.</skos:example>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.29.2</AnnotationVocabulary:adaptedFrom>
+		<skos:example xml:lang="en">The in-vehicle users of a Level 5 ADS-equipped dual-mode vehicle are passengers whenever the Level 5 ADS is engaged.</skos:example>
+		<skos:example xml:lang="en">The in-vehicle users of an ADS-DV shuttle on a university campus are passengers.</skos:example>
+		<skos:example xml:lang="en">The person seated in the driver’s seat of a vehicle equipped with a Level 4 ADS feature designed to automate high-speed vehicle operation on access-controlled freeways is a passenger while this Level 4 feature is engaged. This same person, however, is a driver before engaging this Level 4 ADS feature and again after disengaging the feature in order to exit the controlled access freeway.</skos:example>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.31.2</AnnotationVocabulary:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/PoorRoadMaintenance">
@@ -1475,8 +1451,34 @@
 		<skos:definition xml:lang="en">precisely defined route within a confined geographical area</skos:definition>
 	</owl:Class>
 	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RemoteAssistance">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Operation"/>
+		<rdfs:label xml:lang="en">remote assistance</rdfs:label>
+		<skos:definition xml:lang="en">event-driven provision, by a remotely located human (see 3.31.5), of information or advice to an ADS-equipped vehicle in driverless operation in order to facilitate trip continuation when the ADS encounters a situation it cannot manage</skos:definition>
+		<skos:example xml:lang="en">A Level 4 ADS-DV detects an object in its lane that appears to be too large to drive over and stops. A remote assistant uses the vehicle’s cameras to identify that the object is an empty bag that can be safely driven through/over, and provides the instruction to the ADS-DV to proceed.</skos:example>
+		<skos:example xml:lang="en">A Level 4 ADS-DV encounters an unannounced area of road construction within its ODD. The ADS-DV communicates to a remotely located human that it is unable to proceed around the construction. The remotely located human provides a new pathway for the vehicle to follow around the construction zone that allows the ADS-DV to automatically proceed and complete its trip.</skos:example>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.23</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">Remote assistance does not include real-time DDT or fallback performance by a remote driver. Rather, the ADS performs the complete DDT and/or fallback, even when assisted by a remotely located human.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">Remote assistance may include providing an ADS with revised goals and/or tasks.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">The remote assistance function does not include providing strategic instruction regarding selection of destinations or trip initiation timing (i.e., dispatch functions), even if the same person performs both remote assistance and dispatching functions.</AnnotationVocabulary:explanatoryNote>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RemoteAssistant">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HumanUser"/>
+		<rdfs:label xml:lang="en">remote assistant</rdfs:label>
+		<skos:definition xml:lang="en">human(s) who provides remote assistance to an ADS-equipped vehicle in driverless operation</skos:definition>
+		<AnnotationVocabulary:adaptedFrom xml:lang="en">SAE-J3016 APR2021, sec. 3.31.5</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">A remote assistant(s) may also perform other fleet operations functions.</AnnotationVocabulary:explanatoryNote>
+	</owl:Class>
+	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RemoteDriver">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HumanDriver"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/occupiesSeatOfDriver"/>
+				<owl:hasValue rdf:datatype="&xsd;boolean">false</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/operatesRemotely"/>
@@ -1484,14 +1486,39 @@
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">remote driver</rdfs:label>
-		<skos:definition xml:lang="en">driver who is not seated in a position to manually exercise in-vehicle braking, accelerating, steering, and transmission gear selection input devices (if any) but is able to operate the vehicle</skos:definition>
-		<skos:example xml:lang="en">A level 2 automated parking feature allows the remote driver to exit the vehicle near an intended parking space and to cause the vehicle to move into the parking space automatically by pressing and holding a special button on the key fob, while s/he is monitoring the driving environment to ensure that no one and nothing enters the vehicle pathway during the parking maneuver. If, during the maneuver, a dog enters the pathway of the vehicle, the remote driver releases the button on the key fob in order to cause the vehicle to stop automatically. (Note that the remote driver in this level 2 example completes the OEDR subtask of the DDT during the parking maneuver).</skos:example>
-		<skos:example xml:lang="en">A level 4 closed campus delivery vehicle that has experienced a DDT performance-relevant system failure, which forced it to resort to a minimal risk condition by parking on the side of a campus roadway, is returned to its designated marshalling yard by a remote driver who is able to operate the vehicle using wireless means.</skos:example>
+		<skos:definition xml:lang="en">driver who is not seated in a position to manually exercise in-vehicle braking, accelerating, steering, and transmission gear selection input devices (if any), but is able to operate the vehicle</skos:definition>
+		<skos:example xml:lang="en">A Level 2 automated parking feature allows the remote driver to exit the vehicle near an intended parking space and to cause the vehicle to move into the parking space automatically by pressing and holding a special button on the key fob, while s/he is monitoring the driving environment to ensure that no one and nothing enters the vehicle pathway during the parking maneuver. If, during the maneuver, a dog enters the pathway of the vehicle, the remote driver releases the button on the key fob in order to cause the vehicle to stop automatically. (Note that the remote driver in this Level 2 example completes the OEDR subtask of the DDT during the parking maneuver.)</skos:example>
+		<skos:example xml:lang="en">A Level 4 closed campus delivery vehicle that has experienced a DDT performance-relevant system failure, which forced it to resort to a minimal risk condition by parking on the side of a campus roadway, is returned to its designated marshalling yard by a remote driver who is able to operate the vehicle using wireless means.</skos:example>
 		<skos:example xml:lang="en">Identical situation to Example 1, except that the remote driver is sitting in the back seat, rather than standing outside the vehicle.</skos:example>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.29.1.2</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">A remote driver can include a user who is within the vehicle, within line of sight of the vehicle, or beyond line of sight of the vehicle.</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">A remote driver does not include a person who merely creates driving-relevant conditions that are sensed by, or communicated to, the ADS (e.g., a police officer who announces over a loudspeaker that a particular stop sign should be ignored; another driver who flashes her head lamps to encourage overtaking, or a pedestrian using a dedicated short range communication (DSRC) system to announce her presence).</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">A remote driver is not the same as a driverless operation dispatcher (see 3.29.4), although a driverless operation dispatcher may become a remote driver if s/he has the means to operate the vehicle remotely.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.31.1.2</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">A remote driver does not include a person who merely creates driving-relevant conditions that are sensed by, or communicated to, the ADS (e.g., a police officer who announces over a loudspeaker that a particular stop sign should be ignored; another driver who flashes his/her head lamps to encourage overtaking, or a pedestrian using a dedicated short range communication (DSRC) system to announce his/her presence).</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">A remote driver is not the same as a driverless operation dispatcher (see 3.32.4), although a driverless operation dispatcher may become a remote driver if s/he has the means to operate the vehicle remotely.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">A remote driver may include a user who is within the vehicle, within line-of-sight of the vehicle, or beyond line-of-sight of the vehicle.</AnnotationVocabulary:explanatoryNote>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RemoteDriving">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Operation"/>
+		<rdfs:label xml:lang="en">remote driving</rdfs:label>
+		<skos:definition xml:lang="en">real-time performance of part or all of the DDT and/or DDT fallback (including, real-time braking, steering, acceleration, and transmission shifting), by a remote driver</skos:definition>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.24</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">A receptive remote fallback-ready user becomes a remote driver when s/he performs the fallback.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">Remote driving is not driving automation.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">Remote driving of a vehicle by a human is sometimes referred to as “teleoperation.” However, “teleoperation” is not defined consistently in the literature, and thus, to avoid confusion, is not used herein.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">The remote driver performs or completes the OEDR and has the authority to overrule the ADS for purposes of lateral and longitudinal vehicle motion control.</AnnotationVocabulary:explanatoryNote>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RemoteDynamicDriverTaskFallbackReadyUser">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DynamicDriverTaskFallbackReadyUser"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/occupiesSeatOfDriver"/>
+				<owl:hasValue rdf:datatype="&xsd;boolean">false</owl:hasValue>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">remote DDT fallback-ready user</rdfs:label>
+		<skos:definition xml:lang="en">fallback-ready user of a Level 3 ADS-equipped vehicle in driverless operation who is not in the driver’s seat</skos:definition>
+		<skos:example xml:lang="en">A Level 3 ADS-DV encounters a crash scene for which emergency personnel are re-routing traffic; the ADS issues a request to intervene. The remote fallback-ready user becomes a remote driver and performs the fallback by remotely operating the vehicle.</skos:example>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.31.3.2</AnnotationVocabulary:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RequestToIntervene">
@@ -1509,8 +1536,9 @@
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">request to intervene</rdfs:label>
-		<skos:definition xml:lang="en">Notification by an ADS to a fallback-ready user indicating that s/he should promptly perform the DDT fallback, which may entail resuming manual operation of the vehicle (i.e., becoming a driver again), or achieving a minimal risk condition if the vehicle is not drivable.</skos:definition>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.24</AnnotationVocabulary:adaptedFrom>
+		<skos:definition xml:lang="en">An alert provided by a Level 3 ADS to a fallback-ready user indicating that s/he should promptly perform the DDT fallback, which may entail resuming manual operation of the vehicle (i.e., becoming a driver again), or achieving a minimal risk condition if the vehicle is not operable.</skos:definition>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.25</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">As previously noted in this document, it may be possible for a passenger in a Level 4 or 5 ADS-operated vehicle to also resume manual operation of the vehicle under certain conditions, provided that the vehicle and feature are designed for this (e.g., a dual-mode vehicle or a conventional vehicle with a Level 4 sub-trip feature). However, even when alerted by the ADS to take over vehicle operation, a passenger of such a vehicle is not required to do so to ensure competent operation, as Level 4 and 5 ADS features/vehicles are capable of automatically achieving a minimal risk condition when necessary. Thus, such an alert to a passenger of a Level 4 or 5 ADS-operated vehicle is not a “request to intervene” as defined herein for Level 3 ADS-equipped vehicles.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ResidentalCommunityArea">
@@ -1529,6 +1557,15 @@
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperatingCondition"/>
 		<rdfs:label xml:lang="en">road type</rdfs:label>
 		<skos:definition xml:lang="en">particular kind of road</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RoutineAutomatedDrivingSystemOperation">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/MotorVehicleOperation"/>
+		<rdfs:label xml:lang="en">routine ADS operation</rdfs:label>
+		<skos:definition xml:lang="en">operation of a vehicle by an ADS within its prescribed ODD, if any, while no DDT performance-relevant system failure is occurring</skos:definition>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.26</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">Routine/normal ADS operation includes vehicle responses to objects and events that are safety- and time-critical, as well as vehicle responses to the same that are not safety- and time-critical.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:synonym xml:lang="en">normal ADS operation</AnnotationVocabulary:synonym>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SpeedLimit">
@@ -1585,6 +1622,34 @@
 		<skos:definition xml:lang="en">phenomenon that highway vehicles, instead of maintaining a steady speed, are often forced to be engaged in repeated deceleration–acceleration cycles</skos:definition>
 	</owl:Class>
 	
+	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SubTripFeature">
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DrivingAutomationSystemFeature"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isResultOf"/>
+				<owl:allValuesFrom>
+					<owl:Class>
+						<owl:intersectionOf rdf:parseType="Collection">
+							<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DrivingAutomation">
+							</rdf:Description>
+							<owl:Class>
+								<owl:complementOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FullDrivingAutomation"/>
+							</owl:Class>
+						</owl:intersectionOf>
+					</owl:Class>
+				</owl:allValuesFrom>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:label xml:lang="en">sub-trip feature</rdfs:label>
+		<skos:definition xml:lang="en">driving automation system feature equipped on a conventional vehicle that requires a human driver to perform the complete DDT for at least part of every trip</skos:definition>
+		<skos:example xml:lang="en">A Level 1 adaptive cruise control (ACC) feature performs longitudinal vehicle motion control functions to support the driver in maintaining consistent headway to a lead vehicle in its lane when travelling at higher speeds.</skos:example>
+		<skos:example xml:lang="en">A Level 2 highway feature performs lateral and longitudinal vehicle motion control functions to support the driver in maintaining position within its lane of travel, as well as consistent headway to a lead vehicle in its lane when travelling at higher speeds.</skos:example>
+		<skos:example xml:lang="en">A Level 3 traffic jam feature performs the complete DDT on a fully access-controlled freeway in dense traffic, but requires a human driver to operate the vehicle upon ODD exit (e.g., when traffic clears, as well as before entering the congested freeway, and again upon exiting it).</skos:example>
+		<skos:example xml:lang="en">During a given vehicle trip, a user with a Level 4 automated parking feature dispatches the vehicle in driverless operation for the purpose of finding a parking space in a nearby designated parking facility. Following a period of shopping, the user retrieves the vehicle via dispatch in order to begin his/her trip home.</skos:example>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.7.2</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">Sub-trip features require a human driver to operate the vehicle between the point-of-origin and the boundary of the feature’s ODD and/or after leaving the feature’s ODD until the destination is reached (i.e., trip completion).</AnnotationVocabulary:explanatoryNote>
+	</owl:Class>
+	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SuperviseDrivingAutomationSystemPerformance">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Operation"/>
 		<rdfs:subClassOf>
@@ -1594,9 +1659,9 @@
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">supervise DAS performance</rdfs:label>
-		<skos:definition xml:lang="en">The driver activities, performed while operating a vehicle with an engaged level 1 or 2 driving automation system feature, to monitor that feature’s performance, respond to inappropriate actions taken by the feature, and to otherwise complete the DDT.</skos:definition>
+		<skos:definition xml:lang="en">The driver activities, performed while operating a vehicle with an engaged Level 1 or 2 driver support feature, to monitor that feature’s performance, respond to inappropriate actions taken by the feature, and to otherwise complete the DDT.</skos:definition>
 		<skos:example xml:lang="en">A driver notices that an engaged adaptive cruise control (ACC) feature is not maintaining headway to a preceding vehicle in a curve and brakes accordingly.</skos:example>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.25</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.27</AnnotationVocabulary:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SustainedOperationOfVehicle">
@@ -1639,11 +1704,10 @@
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">sustained operation of a vehicle</rdfs:label>
 		<skos:definition xml:lang="en">Performance of part or all of the DDT both between and across external events, including responding to external events and continuing performance of part or all of the DDT in the absence of external events.</skos:definition>
-		<skos:example xml:lang="en">A system that provides momentary intervention in lateral and/or longitudinal vehicle motion control but does not perform any part of the DDT on a sustained basis.</skos:example>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.26</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">Conventional cruise control does not provide sustained operation because it does not respond to external events. It is therefore also not classifiable (other than at level 0) under the SAE J3016 taxonomy.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.28</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote>Conventional cruise control does not provide sustained operation because it does not respond to external events. It is therefore also not classifiable (other than at Level 0) under the taxonomy.</AnnotationVocabulary:explanatoryNote>
 		<AnnotationVocabulary:explanatoryNote xml:lang="en">External events are situations in the driving environment that necessitate a response by a driver or driving automation system (e.g., other vehicles, lane markings, traffic signs).</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">Sustained performance of part or all of the DDT by a driving automation system changes the user’s role. (See Scope for discussion of roles.) By contrast, an automated intervention that is not sustained according to this definition does not qualify as driving automation. Hence, systems that provide momentary intervention in lateral and/or longitudinal vehicle motion control but do not perform any part of the DDT on a sustained basis (e.g., anti-lock brake systems, electronic stability control, automated emergency braking) are not classifiable (other than at level 0) under the SAE J3016 taxonomy.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">Sustained performance of part or all of the DDT by a driving automation system changes the user’s role. (See scope for discussion of roles.) By contrast, an automated intervention that is not sustained according to this definition does not qualify as driving automation. Hence, systems that provide momentary intervention in lateral and/or longitudinal vehicle motion control but do not perform any part of the DDT on a sustained basis (e.g., anti-lock brake systems, electronic stability control, automatic emergency braking) are not classifiable (other than at Level 0) under the taxonomy.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/TimeOfDay">
@@ -1662,7 +1726,7 @@
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Operation"/>
 		<rdfs:label xml:lang="en">trip</rdfs:label>
 		<skos:definition xml:lang="en">The traversal of an entire travel pathway by a vehicle from the point of origin to a destination.</skos:definition>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.27</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.29</AnnotationVocabulary:adaptedFrom>
 		<AnnotationVocabulary:explanatoryNote xml:lang="en">Performance of the DDT during a given trip may be accomplished in whole or in part by a driver, driving automation system, or both.</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
@@ -1709,9 +1773,10 @@
 		<rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DrivingAutomation"/>
 		<rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperationalDesignDomain"/>
 		<skos:definition xml:lang="en">relates particular level of driving automation with a corresponding operational design domain (ODD)</skos:definition>
-		<skos:example xml:lang="en">Level 3 driving automation in high-volume traffic on designated fully access-controlled freeways.</skos:example>
-		<skos:example xml:lang="en">Level 4 driving automation in designated urban centers.</skos:example>
-		<AnnotationVocabulary:adaptedFrom xml:lang="en">SAE-J3016 (2018), sec. 3.28</AnnotationVocabulary:adaptedFrom>
+		<skos:example xml:lang="en">A Level 2 feature provides lateral and longitudinal vehicle motion control support to the driver on fully access-controlled freeways.</skos:example>
+		<skos:example xml:lang="en">A Level 3 feature operates the vehicle in high-volume traffic on designated fully access-controlled freeways.</skos:example>
+		<skos:example xml:lang="en">A Level 4 ADS-DV operates at low speeds in designated urban centers.</skos:example>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.30</AnnotationVocabulary:adaptedFrom>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasUserAtAllTimes">
@@ -1748,6 +1813,7 @@
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isFeatureOf">
+		<rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
 		<rdfs:label xml:lang="en">is feature of</rdfs:label>
 		<skos:definition xml:lang="en">links a DAS feature with DAS</skos:definition>
 	</owl:ObjectProperty>
@@ -1782,12 +1848,11 @@
 			</owl:Class>
 		</rdfs:range>
 		<skos:definition xml:lang="en">An aspect of consciousness characterized by a person’s ability to reliably and appropriately focus his/her attention in response to a stimulus.</skos:definition>
-		<skos:example xml:lang="en">While a level 3 ADS is performing the DDT in stop-and-go traffic, the left-front tie rod breaks. The DDT fallback-ready user feels that the vehicle has pulled dramatically to the left and intervenes in order to move the vehicle onto the road shoulder.</skos:example>
-		<skos:example xml:lang="en">While a level 3 ADS is performing the DDT on a free-flowing highway, the left side mirror glass falls out of the housing. The DDT fallback-ready user, while receptive, does not and is not expected to notice this failure, because it is not apparent.</skos:example>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.23</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">In level 0-2 driving automation, the driver is expected to be receptive to evident vehicle system failures, such as a broken tie rod.</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">In level 3 driving automation, a DDT fallback-ready user is considered to be receptive to a request to intervene and/or to an evident vehicle system failure, whether or not the ADS issues a request to intervene as a result of such a vehicle system failure.</AnnotationVocabulary:explanatoryNote>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">Monitoring includes receptivity.</AnnotationVocabulary:explanatoryNote>
+		<skos:example xml:lang="en">While a Level 3 ADS is performing the DDT in stop-and-go traffic, the left-front tire experiences a sudden blow-out. The DDT fallback-ready user is receptive to the kinesthetic cue of the vehicle pulling significantly to the left and intervenes in order to move the vehicle onto the road shoulder.</skos:example>
+		<skos:example xml:lang="en">While a Level 3 ADS is performing the DDT on a free-flowing highway, the left side mirror glass falls out of the housing. The DDT fallback-ready user, while receptive, does not and is not expected to notice this failure, because it is not apparent, and does not adversely affect DDT performance by the ADS.</skos:example>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.22</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">In Level 0 to 2 driving automation, the driver is expected to be receptive to evident vehicle system failures, such as a broken tie rod.</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">In Level 3 driving automation, a DDT fallback-ready user is considered to be receptive to a request to intervene and/or to an evident vehicle system failure, whether or not the ADS issues a request to intervene as a result of such a vehicle system failure.</AnnotationVocabulary:explanatoryNote>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isResultOf">
@@ -1795,11 +1860,18 @@
 		<skos:definition xml:lang="en">links process with its result</skos:definition>
 	</owl:ObjectProperty>
 	
+	<owl:DatatypeProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/occupiesSeatOfDriver">
+		<rdfs:label xml:lang="en">occupies the seat of driver</rdfs:label>
+		<rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HumanUser"/>
+		<rdfs:range rdf:resource="&xsd;boolean"/>
+	</owl:DatatypeProperty>
+	
 	<owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/operatedBy">
 		<rdfs:label xml:lang="en">operated by</rdfs:label>
-		<skos:definition xml:lang="en">Collectively, the activities performed by a (human) driver (with or without support from one or more level 1 or 2 driving automation features) or by an ADS (level 3-5) to perform the entire DDT for a given vehicle during a trip.</skos:definition>
-		<AnnotationVocabulary:adaptedFrom>SAE-J3016 (2018), sec. 3.21</AnnotationVocabulary:adaptedFrom>
-		<AnnotationVocabulary:explanatoryNote xml:lang="en">Although use of the term operate/operating implies the existence of a vehicle “operator,” this term is not defined or used in this document, which otherwise provides very specific terms and definitions for the various types of ADS-equipped vehicle users (see 3.29).</AnnotationVocabulary:explanatoryNote>
+		<skos:definition xml:lang="en">Collectively, the activities performed by a (human) driver (with or without support from one or more Level 1 or 2 driving automation features) or by an ADS (Level 3 to 5) to perform the entire DDT for a given vehicle.</skos:definition>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.20</AnnotationVocabulary:adaptedFrom>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">Although use of the term operate/operating/operation implies the existence of a vehicle “operator,” this term is not defined or used in this document, which otherwise provides very specific terms and definitions for the various types of ADS-equipped vehicle users (see 3.32).</AnnotationVocabulary:explanatoryNote>
+		<AnnotationVocabulary:explanatoryNote xml:lang="en">Terms such as “drive,” “operate,” “driver,” and “operator” may have legal meanings that are different from their technical meanings, as contained in this document.</AnnotationVocabulary:explanatoryNote>
 		<AnnotationVocabulary:explanatoryNote xml:lang="en">The term “drive” is not used in this document, however, in many cases it could be used correctly in lieu of “operate.”</AnnotationVocabulary:explanatoryNote>
 	</owl:ObjectProperty>
 	
@@ -1835,5 +1907,24 @@
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart">
 	</owl:Class>
-
+	
+	<owl:AllDisjointClasses>
+		<owl:members rdf:parseType="Collection">
+			<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DriverlessOperationDispatcher">
+			</rdf:Description>
+			<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DynamicDriverTaskFallbackReadyUser">
+			</rdf:Description>
+			<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HumanDriver">
+			</rdf:Description>
+			<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Passenger">
+			</rdf:Description>
+			<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RemoteAssistant">
+			</rdf:Description>
+		</owl:members>
+	</owl:AllDisjointClasses>
+	<owl:Restriction>
+		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/InVehicleUser"/>
+		<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/occupiesSeatOfDriver"/>
+		<owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+	</owl:Restriction>
 </rdf:RDF>
