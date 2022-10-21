@@ -35,7 +35,7 @@
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
-		<owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/202210020/VehicleAutomationLevels/"/>
+		<owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/202210020/AV/VehicleAutomationLevels/"/>
 		<AnnotationVocabulary:hasMaturityLevel rdf:resource="&AnnotationVocabulary;Provisional"/>
 	</owl:Ontology>
 	
