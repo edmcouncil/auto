@@ -3,7 +3,7 @@
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/VS/MetadataVS/" uri="VS/MetadataVS.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/VC/MetadataVC/" uri="VC/MetadataVC.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/FD/MetadataFD/" uri="FD/MetadataFD.rdf"/>
-    <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/master/latest/VC/VehicleCore/" uri="VC/VehicleCore.rdf"/>
+    <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/" uri="VC/VehicleCore.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/" uri="DE/CarControl.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/MetadataAUTO/" uri="./MetadataAUTO.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/MO/MetadataMO/" uri="./MO/MetadataMO.rdf"/>
@@ -18,5 +18,5 @@
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/DE/TrafficEnvironment/" uri="./DE/TrafficEnvironment.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/VS/MetadataVS/" uri="./VS/MetadataVS.rdf"/>
     <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/VS/VehicleSignals/" uri="./VS/VehicleSignals.rdf"/>
-    <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/" uri="./AV/VehicleAutomationLevels.rdf"/>
+    <uri id="User Entered Import Resolution" name="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/" uri="./AV/VehicleAutomationLevels_2021.rdf"/>
 </catalog>
