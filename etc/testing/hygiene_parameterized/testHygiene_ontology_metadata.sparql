@@ -20,5 +20,5 @@ WHERE {
 	cmns-av:copyright|sm:copyright ?cr ;
 	dct:license ?lic ;
 	dct:abstract ?abs .}
-BIND (concat ("PRODERROR: Ontology ", xsd:string(?ont), " has to have appropriate metadata.") AS ?error)
+BIND (concat ("PRODPRODERROR: Ontology ", xsd:string(?ont), " has to have appropriate metadata.") AS ?error)
 }

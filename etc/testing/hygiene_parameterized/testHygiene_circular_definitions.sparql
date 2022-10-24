@@ -18,7 +18,7 @@ WHERE {
 
 
   BIND (
-    concat ("ERROR: Definition of ", str(?subject), " is immediately circular ")
+    concat ("PRODERROR: Definition of ", str(?subject), " is immediately circular ")
       AS ?error
     )
 }
