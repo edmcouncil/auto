@@ -26,7 +26,6 @@
 		<rdfs:label xml:lang="en">Vehicle Automation Levels Ontology</rdfs:label>
 		<rdfs:comment xml:lang="en">This product contains SAE International copyrighted intellectual property, which has been and is licensed with permission for use by Licensee and its Sublicensee. The true authority of any SAE standard is the PDF version, which can be found at saemobilus.sae.org.</rdfs:comment>
 		<terms:license rdf:resource="http://opensource.org/licenses/MIT"/>
-		<terms:rights xml:lang="en">&quot;J&quot; standards are a trademark of SAE International.</terms:rights>
 		<terms:rights>SAE J3016™</terms:rights>
 		<terms:source xml:lang="en">J3016 “Levels of Driving Automation” standard, revision 2021-04</terms:source>
 		<SpecificationMetadata:copyright xml:lang="en">© SAE International, All rights reserved.</SpecificationMetadata:copyright>
@@ -38,6 +37,12 @@
 		<owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/202210020/AV/VehicleAutomationLevels/"/>
 		<AnnotationVocabulary:hasMaturityLevel rdf:resource="&AnnotationVocabulary;Provisional"/>
 	</owl:Ontology>
+	
+	<owl:AnnotationProperty rdf:about="&terms;rights">
+	</owl:AnnotationProperty>
+	
+	<owl:AnnotationProperty rdf:about="&skos;example">
+	</owl:AnnotationProperty>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ActiveSafetySystem">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/VehiclePart"/>
@@ -241,6 +246,12 @@
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasUserWhileDASisEnagaged"/>
 				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DynamicDriverTaskFallbackReadyUser"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/resultsIn"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SubTripFeature"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">conditional driving automation</rdfs:label>
@@ -522,7 +533,7 @@
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isRealizedInAtSomeTime"/>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isRealizedIn"/>
 				<owl:someValuesFrom>
 					<owl:Class>
 						<owl:unionOf rdf:parseType="Collection">
@@ -542,7 +553,6 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DriverlessOperationDispatchingEntity">
-		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Entity"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/performs"/>
@@ -603,14 +613,14 @@
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Feature"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isFeatureOf"/>
-				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DrivingAutomationSystem"/>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isResultOf"/>
+				<owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DrivingAutomation"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isResultOf"/>
-				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DrivingAutomation"/>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isFeatureOf"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DrivingAutomationSystem"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">DAS feature</rdfs:label>
@@ -628,7 +638,21 @@
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HumanUser"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isRealizedInAtSomeTime"/>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/performs"/>
+				<owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DynamicDrivingTaskFallback"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/performs"/>
+				<owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/MinimalRiskConditionAchievement"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isRealizedIn"/>
 				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConditionalDrivingAutomation"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -642,18 +666,6 @@
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isReceptiveTo"/>
 				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RequestToIntervene"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/performs"/>
-				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DynamicDrivingTaskFallback"/>
-			</owl:Restriction>
-		</rdfs:subClassOf>
-		<rdfs:subClassOf>
-			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/performs"/>
-				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/MinimalRiskConditionAchievement"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">DDT fallback-ready user</rdfs:label>
@@ -775,12 +787,24 @@
 		<AnnotationVocabulary:explanatoryNote xml:lang="en">While performing DDT fallback, an ADS may operate temporarily outside of its ODD (see 3.21 NOTE 1).</AnnotationVocabulary:explanatoryNote>
 	</owl:Class>
 	
-	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Entity">
-		<rdfs:label xml:lang="en">entity</rdfs:label>
-	</owl:Class>
-	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FailureMigrationStrategy">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Feature"/>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:complementOf>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isFeatureOf"/>
+						<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/AutomatedDrivingSystem"/>
+					</owl:Restriction>
+				</owl:complementOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isFeatureOf"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/AutomatedDrivingSystemEquippedVehicle"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">failure migration strategy</rdfs:label>
 		<skos:definition xml:lang="en">vehicle function (not an ADS function) designed to automatically bring an ADS-equipped vehicle to a controlled stop in path following either: (1) prolonged failure of the fallback-ready user of a Level 3 ADS feature to perform the fallback after the ADS has issued a request to intervene, or (2) occurrence of a system failure or external event so catastrophic that it incapacitates the ADS, which can no longer perform vehicle motion control in order to perform the fallback and achieve a minimal risk condition. (See 8.6.)</skos:definition>
 		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.11</AnnotationVocabulary:adaptedFrom>
@@ -806,6 +830,18 @@
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FleetOperation">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Operation"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasPart"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DispatchInDriverlessOperation"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasParticipant"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/AutomatedDrivingSystemEquippedVehicle"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">fleet operation</rdfs:label>
 		<skos:definition xml:lang="en">The activities that support the management of a fleet of ADS-equipped vehicles in driverless operation, which may include, without limitation: Ensuring operational readiness; Dispatching ADS-equipped vehicles in driverless operation (i.e., engaging the ADSs prior to placing the vehicles in service on public roads); Authorizing each trip (e.g., payment, trip route selection); Providing fleet asset management services to vehicles while in-use (e.g., managing emergencies, summoning or providing remote assistance as needed, responding to customer requests and break-downs); Serving as the responsible agent vis-a-vis law enforcement, emergency responders and other authorities for vehicles while in use; Disengaging the ADS at the end of service; Performing vehicle repair and maintenance as needed.</skos:definition>
 		<AnnotationVocabulary:adaptedFrom xml:lang="en">SAE-J3016 APR2021, sec. 3.13</AnnotationVocabulary:adaptedFrom>
@@ -864,6 +900,12 @@
 				</owl:someValuesFrom>
 			</owl:Restriction>
 		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/resultsIn"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FullTripFeature"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">full driving automation</rdfs:label>
 		<skos:definition xml:lang="en">The sustained and unconditional (i.e., not ODD-specific) performance by an ADS of the entire DDT and DDT fallback.</skos:definition>
 		<skos:example xml:lang="en">A vehicle with an ADS that, once programmed with a destination, is capable of operating the vehicle throughout complete trips on public roadways, regardless of the starting and end points or intervening road, traffic, and weather conditions.</skos:example>
@@ -878,8 +920,14 @@
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DrivingAutomationSystemFeature"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/performs"/>
+				<owl:allValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/MotorVehicleOperation"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isResultOf"/>
-				<owl:allValuesFrom>
+				<owl:someValuesFrom>
 					<owl:Class>
 						<owl:unionOf rdf:parseType="Collection">
 							<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/FullDrivingAutomation">
@@ -888,7 +936,7 @@
 							</rdf:Description>
 						</owl:unionOf>
 					</owl:Class>
-				</owl:allValuesFrom>
+				</owl:someValuesFrom>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">full-trip feature</rdfs:label>
@@ -925,6 +973,12 @@
 						</owl:unionOf>
 					</owl:Class>
 				</owl:someValuesFrom>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/resultsIn"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SubTripFeature"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">high driving automation</rdfs:label>
@@ -977,7 +1031,7 @@
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isRealizedInAtSomeTime"/>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isRealizedIn"/>
 				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SustainedOperationOfVehicle"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -1042,6 +1096,7 @@
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HumanUser"/>
 		<rdfs:label xml:lang="en">in-vehicle user</rdfs:label>
 		<skos:definition xml:lang="en">user occupying a seat in the vehicle</skos:definition>
+		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, page 29</AnnotationVocabulary:adaptedFrom>
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/LateralVehicleMotionControl">
@@ -1071,7 +1126,7 @@
 		<rdfs:subClassOf>
 			<owl:Restriction>
 				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isResultOf"/>
-				<owl:allValuesFrom>
+				<owl:someValuesFrom>
 					<owl:Class>
 						<owl:intersectionOf rdf:parseType="Collection">
 							<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DrivingAutomation">
@@ -1090,7 +1145,7 @@
 							</owl:Class>
 						</owl:intersectionOf>
 					</owl:Class>
-				</owl:allValuesFrom>
+				</owl:someValuesFrom>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">maneuver-based feature</rdfs:label>
@@ -1357,6 +1412,55 @@
 	</owl:Class>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperationalDesignDomain">
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
+				<owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/ConfinedGeographicLocation"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
+				<owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RoadMaintenance"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
+				<owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RoadType"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
+				<owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SpeedLimit"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
+				<owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/TimeOfDay"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
+				<owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/TrafficType"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasOperatingCondition"/>
+				<owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/WeatherType"/>
+				<owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">operational design domain</rdfs:label>
 		<skos:definition xml:lang="en">Operating conditions under which a given driving automation system or feature thereof is specifically designed to function, including, but not limited to, environmental, geographical, and time-of-day restrictions, and/or the requisite presence or absence of certain traffic or roadway characteristics.</skos:definition>
 		<skos:example xml:lang="en">A Level 1 ACC driver support feature is designed to provide longitudinal vehicle motion control support to the driver on fully access-controlled freeways under fair weather conditions.</skos:example>
@@ -1427,7 +1531,7 @@
 		</rdfs:subClassOf>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isRealizedInAtSomeTime"/>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isRealizedIn"/>
 				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SustainedOperationOfVehicle"/>
 			</owl:Restriction>
 		</rdfs:subClassOf>
@@ -1453,6 +1557,18 @@
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RemoteAssistance">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Operation"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasParticipant"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/AutomatedDrivingSystemEquippedVehicle"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isPerformedBy"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RemoteAssistant"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">remote assistance</rdfs:label>
 		<skos:definition xml:lang="en">event-driven provision, by a remotely located human (see 3.31.5), of information or advice to an ADS-equipped vehicle in driverless operation in order to facilitate trip continuation when the ADS encounters a situation it cannot manage</skos:definition>
 		<skos:example xml:lang="en">A Level 4 ADS-DV detects an object in its lane that appears to be too large to drive over and stops. A remote assistant uses the vehicle’s cameras to identify that the object is an empty bag that can be safely driven through/over, and provides the instruction to the ADS-DV to proceed.</skos:example>
@@ -1465,6 +1581,18 @@
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RemoteAssistant">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HumanUser"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isRealizedIn"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DriverlessOperation"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/performs"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RemoteAssistance"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">remote assistant</rdfs:label>
 		<skos:definition xml:lang="en">human(s) who provides remote assistance to an ADS-equipped vehicle in driverless operation</skos:definition>
 		<AnnotationVocabulary:adaptedFrom xml:lang="en">SAE-J3016 APR2021, sec. 3.31.5</AnnotationVocabulary:adaptedFrom>
@@ -1498,6 +1626,18 @@
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RemoteDriving">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Operation"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasParticipant"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/MotorVehicle"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isPerformedBy"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RemoteDriver"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">remote driving</rdfs:label>
 		<skos:definition xml:lang="en">real-time performance of part or all of the DDT and/or DDT fallback (including, real-time braking, steering, acceleration, and transmission shifting), by a remote driver</skos:definition>
 		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.24</AnnotationVocabulary:adaptedFrom>
@@ -1561,6 +1701,22 @@
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/RoutineAutomatedDrivingSystemOperation">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/MotorVehicleOperation"/>
+		<rdfs:subClassOf>
+			<owl:Class>
+				<owl:complementOf>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/performs"/>
+						<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/OperationalDesignDomainExit"/>
+					</owl:Restriction>
+				</owl:complementOf>
+			</owl:Class>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasParticipant"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/AutomatedDrivingSystemEquippedVehicle"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">routine ADS operation</rdfs:label>
 		<skos:definition xml:lang="en">operation of a vehicle by an ADS within its prescribed ODD, if any, while no DDT performance-relevant system failure is occurring</skos:definition>
 		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.26</AnnotationVocabulary:adaptedFrom>
@@ -1626,8 +1782,19 @@
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DrivingAutomationSystemFeature"/>
 		<rdfs:subClassOf>
 			<owl:Restriction>
-				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isResultOf"/>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/performs"/>
 				<owl:allValuesFrom>
+					<owl:Restriction>
+						<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isPartOf"/>
+						<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/MotorVehicleOperation"/>
+					</owl:Restriction>
+				</owl:allValuesFrom>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isResultOf"/>
+				<owl:someValuesFrom>
 					<owl:Class>
 						<owl:intersectionOf rdf:parseType="Collection">
 							<rdf:Description rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/DrivingAutomation">
@@ -1637,7 +1804,7 @@
 							</owl:Class>
 						</owl:intersectionOf>
 					</owl:Class>
-				</owl:allValuesFrom>
+				</owl:someValuesFrom>
 			</owl:Restriction>
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">sub-trip feature</rdfs:label>
@@ -1724,6 +1891,19 @@
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Trip">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/Operation"/>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isResultOf"/>
+				<owl:onClass rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/MotorVehicleOperation"/>
+				<owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction>
+				<owl:onProperty rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/hasParticipant"/>
+				<owl:someValuesFrom rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/MotorVehicle"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">trip</rdfs:label>
 		<skos:definition xml:lang="en">The traversal of an entire travel pathway by a vehicle from the point of origin to a destination.</skos:definition>
 		<AnnotationVocabulary:adaptedFrom>SAE-J3016 APR2021, sec. 3.29</AnnotationVocabulary:adaptedFrom>
@@ -1813,7 +1993,6 @@
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isFeatureOf">
-		<rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
 		<rdfs:label xml:lang="en">is feature of</rdfs:label>
 		<skos:definition xml:lang="en">links a DAS feature with DAS</skos:definition>
 	</owl:ObjectProperty>
@@ -1827,8 +2006,8 @@
 		<owl:inverseOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/performs"/>
 	</owl:ObjectProperty>
 	
-	<owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isRealizedInAtSomeTime">
-		<rdfs:label xml:lang="en">is realized in at some time</rdfs:label>
+	<owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isRealizedIn">
+		<rdfs:label xml:lang="en">is realized in</rdfs:label>
 		<rdfs:domain rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/HumanUser"/>
 		<rdfs:range rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/SustainedOperationOfVehicle"/>
 		<skos:definition xml:lang="en">relates a human user role with a sustained operation in which this role occurs</skos:definition>
@@ -1857,6 +2036,7 @@
 	
 	<owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/isResultOf">
 		<rdfs:label xml:lang="en">is result of</rdfs:label>
+		<owl:inverseOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/resultsIn"/>
 		<skos:definition xml:lang="en">links process with its result</skos:definition>
 	</owl:ObjectProperty>
 	
@@ -1891,12 +2071,15 @@
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/performs">
-		<rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
 		<rdfs:label xml:lang="en">performs</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/realizes">
 		<rdfs:label xml:lang="en">realizes</rdfs:label>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/resultsIn">
+		<rdfs:label xml:lang="en">results in</rdfs:label>
 	</owl:ObjectProperty>
 	
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/Task">
