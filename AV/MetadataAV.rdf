@@ -41,18 +41,18 @@
 		<rdf:type rdf:resource="&sm;Module"/>
 		<rdfs:label>Autonomous Vehicles</rdfs:label>
 		<dct:abstract>This ontology provides metadata for the autonomous vehicle ontologies</dct:abstract>
-		<dct:creator>Piotr Kulicki</dct:creator>
+		<dct:creator>Marcin Skulimowski</dct:creator>
 		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/"/>
 		<dct:license rdf:datatype="&xsd;anyURI">http://opensource.org/licenses/MIT</dct:license>
 		<dct:title>EDMC Automotive Ontology (AUTO) Autonomous Vehicles Domain</dct:title>
 		<sm:contributor>AUTO Community</sm:contributor>
-		<sm:contributor>Marcin Skulimowski</sm:contributor>
 		<sm:contributor>Paweł Garbacz</sm:contributor>
 		<sm:copyright>Copyright (c) 2022 EDM Council, Inc.</sm:copyright>
 		<sm:dependsOn rdf:datatype="&xsd;anyURI">http://www.omg.org/techprocess/ab/SpecificationMetadata/</sm:dependsOn>
 		<sm:keyword>Autonomous Vehicles</sm:keyword>
 		<sm:moduleAbbreviation>auto-av</sm:moduleAbbreviation>
 		<rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/MetadataAV/"/>
+		<rdfs:seeAlso rdf:resource="https://onto.kul.pl/av/"/>
 	</owl:NamedIndividual>
 
 </rdf:RDF>
