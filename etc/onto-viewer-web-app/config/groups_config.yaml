@@ -66,6 +66,8 @@ groups_config:
         - 'http://www.omg.org/techprocess/ab/SpecificationMetadata/dependsOn'
     - name: Meta-information
       items:
+        - 'http://purl.org/dc/terms/rights'
+        - 'http://purl.org/dc/terms/source'
         - 'http://purl.org/dc/terms/creator'
         - 'http://purl.org/dc/terms/license'
         - 'http://www.omg.org/techprocess/ab/SpecificationMetadata/copyright'
