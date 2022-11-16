@@ -53,7 +53,6 @@
 		<sm:keyword>Autonomous Vehicles</sm:keyword>
 		<sm:moduleAbbreviation>auto-av</sm:moduleAbbreviation>
 		<rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/MetadataAV/"/>
-		<rdfs:seeAlso rdf:resource="https://onto.kul.pl/av/"/>
 	</owl:NamedIndividual>
 
 </rdf:RDF>

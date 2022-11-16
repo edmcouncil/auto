@@ -38,6 +38,7 @@
 		<terms:source xml:lang="en">J3016 “Levels of Driving Automation” standard, revision 2021-04</terms:source>
 		<SpecificationMetadata:copyright xml:lang="en">© SAE International, All rights reserved.</SpecificationMetadata:copyright>
 		<SpecificationMetadata:fileAbbreviation xml:lang="en">auto-av-val</SpecificationMetadata:fileAbbreviation>
+		<rdfs:seeAlso rdf:resource="https://onto.kul.pl/av/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/"/>
