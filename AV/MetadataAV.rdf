@@ -41,7 +41,8 @@
 		<rdf:type rdf:resource="&sm;Module"/>
 		<rdfs:label>Autonomous Vehicles</rdfs:label>
 		<dct:abstract>This ontology provides metadata for the autonomous vehicle ontologies</dct:abstract>
-		<dct:creator>Marcin Skulimowski</dct:creator>
+		<dct:creator>Pawel Garbacz</dct:creator>
+		<dct:creator>Robert Trypuz</dct:creator>
 		<dct:hasPart rdf:resource="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/"/>
 		<dct:license rdf:datatype="&xsd;anyURI">http://opensource.org/licenses/MIT</dct:license>
 		<dct:title>EDMC Automotive Ontology (AUTO) Autonomous Vehicles Domain</dct:title>
