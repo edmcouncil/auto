@@ -3,6 +3,7 @@
 	<!ENTITY AnnotationVocabulary "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
 	<!ENTITY SpecificationMetadata "http://www.omg.org/techprocess/ab/SpecificationMetadata/">
 	<!ENTITY dc "http://purl.org/dc/elements/1.1/">
+	<!ENTITY dct "http://purl.org/dc/terms/">
 	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
 	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
@@ -16,6 +17,7 @@
 	xmlns:AnnotationVocabulary="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
 	xmlns:SpecificationMetadata="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dct="http://purl.org/dc/terms/"
 	xmlns:owl="http://www.w3.org/2002/07/owl#"
 	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -27,12 +29,16 @@
 	<owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/AV/VehicleAutomationLevels/">
 		<rdfs:label xml:lang="en">Vehicle Automation Levels Ontology</rdfs:label>
 		<rdfs:comment xml:lang="en">This product contains SAE International copyrighted intellectual property, which has been and is licensed with permission for use by Licensee and its Sublicensee. The true authority of any SAE standard is the PDF version, which can be found at saemobilus.sae.org.</rdfs:comment>
+		<terms:creator>Marcin Skulimowski</terms:creator>
+		<terms:creator>Piotr Kulicki</terms:creator>
+		<terms:creator>Robert Trypuz</terms:creator>
 		<terms:license rdf:resource="http://opensource.org/licenses/MIT"/>
 		<terms:rights xml:lang="en">&quot;J&quot; standards are a trademark of SAE International.</terms:rights>
 		<terms:rights>SAE J3016™</terms:rights>
 		<terms:source xml:lang="en">J3016 “Levels of Driving Automation” standard, revision 2021-04</terms:source>
 		<SpecificationMetadata:copyright xml:lang="en">© SAE International, All rights reserved.</SpecificationMetadata:copyright>
 		<SpecificationMetadata:fileAbbreviation xml:lang="en">auto-av-val</SpecificationMetadata:fileAbbreviation>
+		<rdfs:seeAlso rdf:resource="https://onto.kul.pl/av/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/DE/CarControl/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"/>
 		<owl:imports rdf:resource="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/"/>
