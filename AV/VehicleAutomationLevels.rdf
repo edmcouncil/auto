@@ -31,7 +31,6 @@
 		<rdfs:comment xml:lang="en">This product contains SAE International copyrighted intellectual property, which has been and is licensed with permission for use by Licensee and its Sublicensee. The true authority of any SAE standard is the PDF version, which can be found at saemobilus.sae.org.</rdfs:comment>
 		<terms:creator>Marcin Skulimowski</terms:creator>
 		<terms:creator>Piotr Kulicki</terms:creator>
-		<terms:creator>Robert Trypuz</terms:creator>
 		<terms:license rdf:resource="http://opensource.org/licenses/MIT"/>
 		<terms:rights xml:lang="en">&quot;J&quot; standards are a trademark of SAE International.</terms:rights>
 		<terms:rights>SAE J3016™</terms:rights>
