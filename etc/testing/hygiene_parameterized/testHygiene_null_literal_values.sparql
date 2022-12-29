@@ -4,6 +4,7 @@ PREFIX owl:   <http://www.w3.org/2002/07/owl#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 
+
 ##
 # banner A resource should not have a null value for any property.
 
