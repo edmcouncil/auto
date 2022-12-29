@@ -1,4 +1,13 @@
 <?xml version="1.0"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY dct "http://purl.org/dc/terms/">
+	<!ENTITY cmns-av "https://www.omg.org/spec/Commons/AnnotationVocabulary/">
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY skos "http://www.w3.org/2004/02/skos/core#">
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">	
+]>	
 <rdf:RDF xmlns="https://spec.edmcouncil.org/auto/ontology/AboutAUTOProd/"
      xml:base="https://spec.edmcouncil.org/auto/ontology/AboutAUTOProd/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
