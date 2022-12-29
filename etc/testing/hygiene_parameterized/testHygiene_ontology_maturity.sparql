@@ -3,7 +3,7 @@ PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> 
 PREFIX dct: <http://purl.org/dc/terms/>
 
-PREFIX cmns-av: <https://www.omg.org/spec/Commons/AnnotationVocabulary/>
+PREFIX fibo-fnd-utl-av: <https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/>
 
 ##
 # banner An ontology must have a maturity level.
@@ -13,7 +13,7 @@ SELECT DISTINCT ?warning ?resource
 WHERE 
 {
   ?resource a owl:Ontology .
-  FILTER NOT EXISTS {?resource cmns-av:hasMaturityLevel ?maturityLevel.}
+  FILTER NOT EXISTS {?resource fibo-fnd-utl-av:hasMaturityLevel ?maturityLevel.}
 
   FILTER regex(str(?resource), <HYGIENE_TESTS_FILTER_PARAMETER>)	
 
