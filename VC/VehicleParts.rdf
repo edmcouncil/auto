@@ -127,6 +127,31 @@ It contains many classes and properties extracted from:
 		<skos:definition xml:lang="en">pedal that controls the amount of gas being fed into the engine and thereby controls the speed of the vehicle</skos:definition>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-vp;ActiveDrivingAssistance">
+		<rdfs:subClassOf rdf:resource="&auto-vp;DrivingControlAssistance"/>
+		<rdfs:label xml:lang="en">active driving assistance</rdfs:label>
+		<skos:definition xml:lang="en">simultaneous use of Lane Centering Assistance and Adaptive Cruise Control features</skos:definition>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Classified as Level 2 Driving Automation by SAE J3016.</fibo-fnd-utl-av:explanatoryNote>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">The driver must constantly supervise this support feature and maintain responsibility for driving.</fibo-fnd-utl-av:explanatoryNote>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;ActiveParkingAssistance">
+		<rdfs:subClassOf rdf:resource="&auto-vp;ParkingAssistance"/>
+		<rdfs:label xml:lang="en">active parking assistance</rdfs:label>
+		<skos:definition xml:lang="en">feature that assists with steering and potentially other functions during parking maneuvers</skos:definition>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Driver may be required to accelerate, brake, and/or select gear position. Some systems are capable of parallel and/or perpendicular parking. The driver must constantly supervise this support feature and maintain responsibility for parking.</fibo-fnd-utl-av:explanatoryNote>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;AdaptiveCruiseControl">
+		<rdfs:subClassOf rdf:resource="&auto-vp;CruiseControl"/>
+		<rdfs:subClassOf rdf:resource="&auto-vp;DrivingControlAssistance"/>
+		<rdfs:label xml:lang="en">adaptive cruise control</rdfs:label>
+		<skos:definition xml:lang="en">cruise control that also assists with acceleration and/or braking to maintain a driver-selected gap to the vehicle in front</skos:definition>
+		<fibo-fnd-utl-av:abbreviation xml:lang="en">ACC</fibo-fnd-utl-av:abbreviation>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Classified as Level 1 Driving Automation by SAE J3016.</fibo-fnd-utl-av:explanatoryNote>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Some systems can come to a stop and continue while others cannot.</fibo-fnd-utl-av:explanatoryNote>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-vp;AirBrakeSystem">
 		<rdfs:subClassOf rdf:resource="&auto-vp;BrakeSystem"/>
 		<rdfs:label xml:lang="en">air brake system</rdfs:label>
@@ -182,6 +207,27 @@ It contains many classes and properties extracted from:
 		<skos:definition xml:lang="en">device, that when triggered, conductively separates a high voltage source from the electric power train or the rest of the electric power train</skos:definition>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-vp;AutomaticEmergencyBraking">
+		<rdfs:subClassOf rdf:resource="&auto-vp;CollisionIntervention"/>
+		<rdfs:label xml:lang="en">automatic emergency braking</rdfs:label>
+		<skos:definition xml:lang="en">feature that detects potential collisions with a vehicle ahead, provides forward collision warning, and automatically brakes to avoid a collision or lessen the severity of impact</skos:definition>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Some systems also detect pedestrians or other objects.</fibo-fnd-utl-av:explanatoryNote>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;AutomaticEmergencySteering">
+		<rdfs:subClassOf rdf:resource="&auto-vp;CollisionIntervention"/>
+		<rdfs:label xml:lang="en">automatic emergency steering</rdfs:label>
+		<skos:definition xml:lang="en">feature that detects potential collisions with a vehicle ahead and automatically steers to avoid or lessen the severity of impact</skos:definition>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Some systems also detect pedestrians or other objects.</fibo-fnd-utl-av:explanatoryNote>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;AutomaticHighBeams">
+		<rdfs:subClassOf rdf:resource="&auto-vp;ADAS"/>
+		<rdfs:label xml:lang="en">automatic high beams</rdfs:label>
+		<skos:definition xml:lang="en">feature that switches between high and low beam headlamps automatically based on lighting and traffic</skos:definition>
+		<fibo-fnd-utl-av:abbreviation xml:lang="en">AHB</fibo-fnd-utl-av:abbreviation>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-vp;AuxiliaryDrivingLamp">
 		<rdfs:subClassOf rdf:resource="&auto-vp;ExternalLights"/>
 		<rdfs:label xml:lang="en">auxiliary driving lamp</rdfs:label>
@@ -206,6 +252,12 @@ It contains many classes and properties extracted from:
 		<rdfs:subClassOf rdf:resource="&auto-vp;Door"/>
 		<rdfs:label xml:lang="en">back door</rdfs:label>
 		<skos:definition xml:lang="en">door or door system on the back end of a motor vehicle through which passengers can enter or depart the vehicle or cargo can be loaded or unloaded</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;BackupCamera">
+		<rdfs:subClassOf rdf:resource="&auto-vp;ParkingAssistance"/>
+		<rdfs:label xml:lang="en">backup camera</rdfs:label>
+		<skos:definition xml:lang="en">feature that displays the area behind the vehicle when in reverse gear</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;BackupLamp">
@@ -243,6 +295,13 @@ It contains many classes and properties extracted from:
 		<rdfs:subClassOf rdf:resource="&auto-vp;PneumaticTire"/>
 		<rdfs:label xml:lang="en">bias ply tire</rdfs:label>
 		<skos:definition xml:lang="en">pneumatic tire in which the ply cords that extend to the beads are laid at alternate angles substantially less than 90° to the centerline of the tread</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;BlindSpotWarning">
+		<rdfs:subClassOf rdf:resource="&auto-vp;CollisionWarning"/>
+		<rdfs:label xml:lang="en">blind spot warning</rdfs:label>
+		<skos:definition xml:lang="en">feature that detects vehicles in the blind spot while driving and notifies the driver to their presence</skos:definition>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Some systems provide an additional warning if the driver activates the turn signal.</fibo-fnd-utl-av:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Blocking">
@@ -455,6 +514,18 @@ It contains many classes and properties extracted from:
 		<rdfs:label xml:lang="en">lamp that provides light to the front or rear, mounted on the permanent structure of the vehicle, such that it indicates the overall width of the vehicle</rdfs:label>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-vp;CollisionIntervention">
+		<rdfs:subClassOf rdf:resource="&auto-vp;ADAS"/>
+		<rdfs:label xml:lang="en">collision intervention</rdfs:label>
+		<skos:definition xml:lang="en">feature that assists the driver in avoiding collisions with approaching vehicles and obstacles</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;CollisionWarning">
+		<rdfs:subClassOf rdf:resource="&auto-vp;ADAS"/>
+		<rdfs:label xml:lang="en">collision warning</rdfs:label>
+		<skos:definition xml:lang="en">feature that prevent or reduce the severity of a collision</skos:definition>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-vp;CombinationHeadlamp">
 		<rdfs:subClassOf rdf:resource="&auto-vp;Headlamp"/>
 		<rdfs:label xml:lang="en">combination headlamp</rdfs:label>
@@ -568,6 +639,13 @@ It contains many classes and properties extracted from:
 		<skos:definition xml:lang="en">device that sets the destination of a vehicle</skos:definition>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-vp;DirectDriverMonitoringSystem">
+		<rdfs:subClassOf rdf:resource="&auto-vp;DriverMonitoring"/>
+		<rdfs:label xml:lang="en">direct driver monitoring system</rdfs:label>
+		<skos:definition xml:lang="en">feature that detects the driver’s eye and/or head movement to estimate where the driver is looking</skos:definition>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Some systems may provide a warning to the driver and/or limit the use of other features.</fibo-fnd-utl-av:explanatoryNote>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-vp;DistanceToObject">
 		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
 		<rdfs:subClassOf>
@@ -612,11 +690,30 @@ It contains many classes and properties extracted from:
 		<skos:definition xml:lang="en">system of two doors where the front door or wing door opens first and connects to the rear door or bolted door, which opens second</skos:definition>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-vp;DriverMonitoring">
+		<rdfs:subClassOf rdf:resource="&auto-vp;ADAS"/>
+		<rdfs:label xml:lang="en">driver monitoring</rdfs:label>
+		<skos:definition xml:lang="en">feature that tracks driver alertness</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;DriverReengagementSystem">
+		<rdfs:subClassOf rdf:resource="&auto-vp;DriverMonitoring"/>
+		<rdfs:label xml:lang="en">driver re-engagement system</rdfs:label>
+		<skos:definition xml:lang="en">feature that generates a series of escalating warnings and interventions attempting to engage an unresponsive driver</skos:definition>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">If the driver does not respond, the system brings the vehicle to a full stop while maintaining steering control. Some systems may steer the vehicle to the side of the road and/or make an emergency call if the driver fails to respond.</fibo-fnd-utl-av:explanatoryNote>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-vp;Drivetrain">
 		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
 		<rdfs:label xml:lang="en">drivetrain</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Drivetrain : Drivetrain attributes internal combustion engines</rdfs:comment>
 		<skos:definition xml:lang="en">system of components that generates power and transmits it to the wheels of a vehicle</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;DrivingControlAssistance">
+		<rdfs:subClassOf rdf:resource="&auto-vp;ADAS"/>
+		<rdfs:label xml:lang="en">driving control assistance</rdfs:label>
+		<skos:definition xml:lang="en">feature that makes motor vehicle travel safer by automating, improving or adapting some or all of the tasks involved in operating a vehicle</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Dunnage">
@@ -731,6 +828,13 @@ It contains many classes and properties extracted from:
 		<skos:definition xml:lang="en">movable barrier, which will close off an entranceway to a bus, multipurpose passenger vehicle or truck, consisting of two or more hinge panels that swing, slide, or rotate and does not have a striker and latch assembly</skos:definition>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-vp;ForwardCollisionWarning">
+		<rdfs:subClassOf rdf:resource="&auto-vp;CollisionWarning"/>
+		<rdfs:label xml:lang="en">forward collision warning</rdfs:label>
+		<skos:definition xml:lang="en">feature that detects a potential collision with a vehicle ahead and alerts the driver</skos:definition>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Some systems also provide alerts for pedestrians or other objects.</fibo-fnd-utl-av:explanatoryNote>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-vp;FrictionMat">
 		<rdfs:subClassOf rdf:resource="&auto-vp;CargoEquipment"/>
 		<rdfs:label xml:lang="en">friction mat</rdfs:label>
@@ -824,6 +928,12 @@ It contains many classes and properties extracted from:
 		<skos:definition xml:lang="en">device that allows for modification of the level of height or angle of a head restraint</skos:definition>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-vp;HeadUpDisplay">
+		<rdfs:subClassOf rdf:resource="&auto-vp;ADAS"/>
+		<rdfs:label xml:lang="en">head-up display</rdfs:label>
+		<skos:definition xml:lang="en">feature that projects information relevant to driving into the driver’s forward line of sight</skos:definition>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-vp;Headlamp">
 		<rdfs:subClassOf rdf:resource="&auto-vp;ExternalLights"/>
 		<rdfs:label xml:lang="en">headlamp</rdfs:label>
@@ -904,6 +1014,12 @@ It contains many classes and properties extracted from:
 		<skos:definition xml:lang="en">lamp used to identify certain types of commercial motor vehicles</skos:definition>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-vp;IndirectDriverMonitoringSystem">
+		<rdfs:subClassOf rdf:resource="&auto-vp;DriverMonitoring"/>
+		<rdfs:label xml:lang="en">indirect driver monitoring system</rdfs:label>
+		<skos:definition xml:lang="en">feature that observes vehicle states, motions and/or driver performance indicators to estimate driver distraction, inattention, or misuse</skos:definition>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-vp;Infotainment">
 		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
 		<rdfs:subClassOf>
@@ -966,6 +1082,13 @@ It contains many classes and properties extracted from:
 		<skos:definition xml:lang="en">device used to produce artificial light</skos:definition>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-vp;LaneCenteringAssistance">
+		<rdfs:subClassOf rdf:resource="&auto-vp;DrivingControlAssistance"/>
+		<rdfs:label xml:lang="en">lane centering assistance</rdfs:label>
+		<skos:definition xml:lang="en">feature that provides steering support to assist the driver in continuously maintaining the vehicle at or near the center of the lane</skos:definition>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Classified as Level 1 Driving Automation by SAE J3016.</fibo-fnd-utl-av:explanatoryNote>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-vp;LaneDepartureDetection">
 		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
 		<rdfs:subClassOf>
@@ -977,6 +1100,19 @@ It contains many classes and properties extracted from:
 		<rdfs:label xml:lang="en">lane departure detection</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.ADAS.LaneDepartureDetection : Signals from Land Departure Detection System</rdfs:comment>
 		<skos:definition xml:lang="en">system of electronic components designed to warn a driver when a vehicle strays out of its lane</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;LaneDepartureWarning">
+		<rdfs:subClassOf rdf:resource="&auto-vp;CollisionWarning"/>
+		<rdfs:label xml:lang="en">lane departure warning</rdfs:label>
+		<skos:definition xml:lang="en">feature that monitors vehicle’s position within the driving lane and alerts driver as the vehicle approaches or crosses lane markers</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;LaneKeepingAssistance">
+		<rdfs:subClassOf rdf:resource="&auto-vp;CollisionIntervention"/>
+		<rdfs:label xml:lang="en">lane keeping assistance</rdfs:label>
+		<skos:definition xml:lang="en">feature that provides steering support to assist the driver in keeping the vehicle in the lane</skos:definition>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">The system reacts only when the vehicle approaches or crosses a lane line or road edge.</fibo-fnd-utl-av:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Latch">
@@ -1154,6 +1290,12 @@ It contains many classes and properties extracted from:
 		<skos:definition xml:lang="en">device that communicates with global positioning satellites to determine a vehicle&apos;s physical location and plot a course using stored map information</skos:definition>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-vp;NightVision">
+		<rdfs:subClassOf rdf:resource="&auto-vp;ADAS"/>
+		<rdfs:label xml:lang="en">night vision</rdfs:label>
+		<skos:definition xml:lang="en">feature that improves forward visibility at night by projecting enhanced images on instrument cluster or head-up display</skos:definition>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-vp;NonPneumaticTire">
 		<rdfs:subClassOf rdf:resource="&auto-vp;Tire"/>
 		<rdfs:label xml:lang="en">non-pneumatic tire</rdfs:label>
@@ -1212,6 +1354,12 @@ It contains many classes and properties extracted from:
 		<skos:definition xml:lang="en">system that detects obstacles in close proximity to the vehicle</skos:definition>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-vp;ParkingAssistance">
+		<rdfs:subClassOf rdf:resource="&auto-vp;ADAS"/>
+		<rdfs:label xml:lang="en">parking assistance</rdfs:label>
+		<skos:definition xml:lang="en">feature that helps drivers park with greater precision</skos:definition>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-vp;ParkingBrake">
 		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
 		<rdfs:subClassOf>
@@ -1223,6 +1371,12 @@ It contains many classes and properties extracted from:
 		<rdfs:label xml:lang="en">parking brake</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Chassis.ParkingBrake : Parking brake signals</rdfs:comment>
 		<skos:definition xml:lang="en">mechanism designed to prevent the movement of a stationary motor vehicle</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;ParkingCollisionWarning">
+		<rdfs:subClassOf rdf:resource="&auto-vp;CollisionWarning"/>
+		<rdfs:label xml:lang="en">parking collision warning</rdfs:label>
+		<skos:definition xml:lang="en">feature that detects objects close to the vehicle during parking maneuvers and notifies the driver</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;ParkingLamp">
@@ -1285,6 +1439,13 @@ It contains many classes and properties extracted from:
 		<rdfs:label xml:lang="en">rain detection</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.Body.Raindetection : Rainsensor signals</rdfs:comment>
 		<skos:definition xml:lang="en">feature that detects rain</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;RearCrossTrafficWarning">
+		<rdfs:subClassOf rdf:resource="&auto-vp;CollisionWarning"/>
+		<rdfs:label xml:lang="en">rear cross traffic warning</rdfs:label>
+		<skos:definition xml:lang="en">feature that detects vehicles approaching from the side at the rear of the vehicle while in reverse gear and alerts the driver</skos:definition>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Some systems also warn for pedestrians or other objects.</fibo-fnd-utl-av:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;RearHeadRestraint">
@@ -1350,10 +1511,25 @@ It contains many classes and properties extracted from:
 		<skos:definition>device which is used on a vehicle to give an indication to an approaching driver by the reflected light from the lamps on the approaching vehicle</skos:definition>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-vp;RemoteParkingAssistance">
+		<rdfs:subClassOf rdf:resource="&auto-vp;ParkingAssistance"/>
+		<rdfs:label xml:lang="en">remote parking assistance</rdfs:label>
+		<skos:definition xml:lang="en">feature that without the driver being physically present inside the vehicle, provides steering, braking, accelerating and/or gear selection while moving a vehicle into or out of a parking space</skos:definition>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Classified as Level 2 Driving Automation by SAE J3016.</fibo-fnd-utl-av:explanatoryNote>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">The driver must constantly supervise this support feature and maintain responsibility for parking.</fibo-fnd-utl-av:explanatoryNote>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-vp;ReplaceableBulbHeadlamp">
 		<rdfs:subClassOf rdf:resource="&auto-vp;Headlamp"/>
 		<rdfs:label xml:lang="en">replaceable bulb headlamp</rdfs:label>
 		<skos:definition xml:lang="en">headlamp comprising a bonded lens and reflector assembly and one or two replaceable light sources</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;ReverseAutomaticEmergencyBraking">
+		<rdfs:subClassOf rdf:resource="&auto-vp;CollisionIntervention"/>
+		<rdfs:label xml:lang="en">reverse automatic emergency braking</rdfs:label>
+		<skos:definition xml:lang="en">feature that detects potential collisions while in reverse gear and automatically brakes to avoid or lessen the severity of impact</skos:definition>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Some systems also detect pedestrians or other objects.</fibo-fnd-utl-av:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Rim">
@@ -1601,6 +1777,12 @@ It contains many classes and properties extracted from:
 		<skos:definition xml:lang="en">self-contained, permanently closed hydraulic brake system for trailers that relies on inertial forces, developed in response to the braking action of the towing vehicle, applied to a hydraulic device mounted on or connected to the tongue of the trailer, to slow down or stop the towed vehicle</skos:definition>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-vp;SurroundViewCamera">
+		<rdfs:subClassOf rdf:resource="&auto-vp;ParkingAssistance"/>
+		<rdfs:label xml:lang="en">surround view camera</rdfs:label>
+		<skos:definition xml:lang="en">feature that displays the immediate surroundings of some or all sides of the vehicle while stopped or during low speed maneuvers</skos:definition>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-vp;TCS">
 		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
 		<rdfs:subClassOf>
@@ -1655,6 +1837,13 @@ It contains many classes and properties extracted from:
 		</rdfs:subClassOf>
 		<rdfs:label xml:lang="en">tow bar</rdfs:label>
 		<skos:definition xml:lang="en">strut or column-like device temporarily attached between the rear of a towing vehicle and the front of the vehicle being towed</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;TrailerAssistance">
+		<rdfs:subClassOf rdf:resource="&auto-vp;ParkingAssistance"/>
+		<rdfs:label xml:lang="en">trailer assistance</rdfs:label>
+		<skos:definition xml:lang="en">feature that assists the driver with visual guidance while backing towards a trailer or during backing maneuvers with a trailer attached</skos:definition>
+		<fibo-fnd-utl-av:explanatoryNote xml:lang="en">Some systems may provide additional images while driving or backing with a trailer. Some systems may provide steering assistance during backing maneuvers.</fibo-fnd-utl-av:explanatoryNote>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;Transmission">
@@ -2659,9 +2848,51 @@ It contains many classes and properties extracted from:
 	</owl:Axiom>
 	<owl:Axiom>
 		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;ActiveDrivingAssistance"/>
+		<owl:annotatedTarget xml:lang="en">simultaneous use of Lane Centering Assistance and Adaptive Cruise Control features</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://newsroom.aaa.com/wp-content/uploads/2022/07/Clearing-the-Confusion-One-Pager-New-Version-7-25-22.pdf</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;ActiveParkingAssistance"/>
+		<owl:annotatedTarget xml:lang="en">feature that assists with steering and potentially other functions during parking maneuvers</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://newsroom.aaa.com/wp-content/uploads/2022/07/Clearing-the-Confusion-One-Pager-New-Version-7-25-22.pdf</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;AdaptiveCruiseControl"/>
+		<owl:annotatedTarget xml:lang="en">cruise control that also assists with acceleration and/or braking to maintain a driver-selected gap to the vehicle in front</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://newsroom.aaa.com/wp-content/uploads/2022/07/Clearing-the-Confusion-One-Pager-New-Version-7-25-22.pdf</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-vp;Airbag"/>
 		<owl:annotatedTarget xml:lang="en">inflatable occupant restraint device that is designed to deploy in a side impact crash to help mitigate occupant injury and/or ejection</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R § 563.5</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;AutomaticEmergencyBraking"/>
+		<owl:annotatedTarget xml:lang="en">feature that detects potential collisions with a vehicle ahead, provides forward collision warning, and automatically brakes to avoid a collision or lessen the severity of impact</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://newsroom.aaa.com/wp-content/uploads/2022/07/Clearing-the-Confusion-One-Pager-New-Version-7-25-22.pdf</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;AutomaticEmergencySteering"/>
+		<owl:annotatedTarget xml:lang="en">feature that detects potential collisions with a vehicle ahead and automatically steers to avoid or lessen the severity of impact</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://newsroom.aaa.com/wp-content/uploads/2022/07/Clearing-the-Confusion-One-Pager-New-Version-7-25-22.pdf</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;AutomaticHighBeams"/>
+		<owl:annotatedTarget xml:lang="en">feature that switches between high and low beam headlamps automatically based on lighting and traffic</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://newsroom.aaa.com/wp-content/uploads/2022/07/Clearing-the-Confusion-One-Pager-New-Version-7-25-22.pdf</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;BackupCamera"/>
+		<owl:annotatedTarget xml:lang="en">feature that displays the area behind the vehicle when in reverse gear</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://newsroom.aaa.com/wp-content/uploads/2022/07/Clearing-the-Confusion-One-Pager-New-Version-7-25-22.pdf</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
 		<owl:annotatedProperty rdf:resource="&skos;definition"/>
@@ -2671,9 +2902,27 @@ It contains many classes and properties extracted from:
 	</owl:Axiom>
 	<owl:Axiom>
 		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;BlindSpotWarning"/>
+		<owl:annotatedTarget xml:lang="en">feature that detects vehicles in the blind spot while driving and notifies the driver to their presence</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://newsroom.aaa.com/wp-content/uploads/2022/07/Clearing-the-Confusion-One-Pager-New-Version-7-25-22.pdf</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-vp;Catalyst"/>
 		<owl:annotatedTarget xml:lang="en">canister in the exhaust system, usually situated before the muffler, containing a substance that reacts chemically with the exhaust in order to reduce harmful emissions</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>https://www.edmunds.com/glossary/</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;DirectDriverMonitoringSystem"/>
+		<owl:annotatedTarget xml:lang="en">feature that detects the driver’s eye and/or head movement to estimate where the driver is looking</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://newsroom.aaa.com/wp-content/uploads/2022/07/Clearing-the-Confusion-One-Pager-New-Version-7-25-22.pdf</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;DriverReengagementSystem"/>
+		<owl:annotatedTarget xml:lang="en">feature that generates a series of escalating warnings and interventions attempting to engage an unresponsive driver</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://newsroom.aaa.com/wp-content/uploads/2022/07/Clearing-the-Confusion-One-Pager-New-Version-7-25-22.pdf</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
 		<owl:annotatedProperty rdf:resource="&skos;definition"/>
@@ -2683,15 +2932,33 @@ It contains many classes and properties extracted from:
 	</owl:Axiom>
 	<owl:Axiom>
 		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;ForwardCollisionWarning"/>
+		<owl:annotatedTarget xml:lang="en">feature that detects a potential collision with a vehicle ahead and alerts the driver</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://newsroom.aaa.com/wp-content/uploads/2022/07/Clearing-the-Confusion-One-Pager-New-Version-7-25-22.pdf</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-vp;HVAC"/>
 		<owl:annotatedTarget xml:lang="en">system used for moving air between indoor and outdoor areas along with heating and cooling</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>https://www.petro.com/resource-center/what-is-hvac</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
 		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;HeadUpDisplay"/>
+		<owl:annotatedTarget xml:lang="en">feature that projects information relevant to driving into the driver’s forward line of sight</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://newsroom.aaa.com/wp-content/uploads/2022/07/Clearing-the-Confusion-One-Pager-New-Version-7-25-22.pdf</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-vp;Hood"/>
 		<owl:annotatedTarget xml:lang="en">exterior movable body panel forward of the windshield that is used to cover an engine, luggage, storage, or battery compartment</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 571.113</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;IndirectDriverMonitoringSystem"/>
+		<owl:annotatedTarget xml:lang="en">feature that observes vehicle states, motions and/or driver performance indicators to estimate driver distraction, inattention, or misuse</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://newsroom.aaa.com/wp-content/uploads/2022/07/Clearing-the-Confusion-One-Pager-New-Version-7-25-22.pdf</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
 		<owl:annotatedProperty rdf:resource="&skos;definition"/>
@@ -2707,6 +2974,24 @@ It contains many classes and properties extracted from:
 	</owl:Axiom>
 	<owl:Axiom>
 		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;LaneCenteringAssistance"/>
+		<owl:annotatedTarget xml:lang="en">feature that provides steering support to assist the driver in continuously maintaining the vehicle at or near the center of the lane</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://newsroom.aaa.com/wp-content/uploads/2022/07/Clearing-the-Confusion-One-Pager-New-Version-7-25-22.pdf</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;LaneDepartureWarning"/>
+		<owl:annotatedTarget xml:lang="en">feature that monitors vehicle’s position within the driving lane and alerts driver as the vehicle approaches or crosses lane markers</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://newsroom.aaa.com/wp-content/uploads/2022/07/Clearing-the-Confusion-One-Pager-New-Version-7-25-22.pdf</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;LaneKeepingAssistance"/>
+		<owl:annotatedTarget xml:lang="en">feature that provides steering support to assist the driver in keeping the vehicle in the lane</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://newsroom.aaa.com/wp-content/uploads/2022/07/Clearing-the-Confusion-One-Pager-New-Version-7-25-22.pdf</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-vp;Lumbar"/>
 		<owl:annotatedTarget xml:lang="en">mechanical or pneumatic device that matches a vehicle&apos;s seat back to the contours of the driver or passenger</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>https://www.edmunds.com/glossary/</fibo-fnd-utl-av:adaptedFrom>
@@ -2719,14 +3004,56 @@ It contains many classes and properties extracted from:
 	</owl:Axiom>
 	<owl:Axiom>
 		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;NightVision"/>
+		<owl:annotatedTarget xml:lang="en">feature that improves forward visibility at night by projecting enhanced images on instrument cluster or head-up display</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://newsroom.aaa.com/wp-content/uploads/2022/07/Clearing-the-Confusion-One-Pager-New-Version-7-25-22.pdf</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-vp;ParkingBrake"/>
 		<owl:annotatedTarget xml:lang="en">mechanism designed to prevent the movement of a stationary motor vehicle</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 571.3</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
 		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;ParkingCollisionWarning"/>
+		<owl:annotatedTarget xml:lang="en">feature that detects objects close to the vehicle during parking maneuvers and notifies the driver</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://newsroom.aaa.com/wp-content/uploads/2022/07/Clearing-the-Confusion-One-Pager-New-Version-7-25-22.pdf</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;RearCrossTrafficWarning"/>
+		<owl:annotatedTarget xml:lang="en">feature that detects vehicles approaching from the side at the rear of the vehicle while in reverse gear and alerts the driver</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://newsroom.aaa.com/wp-content/uploads/2022/07/Clearing-the-Confusion-One-Pager-New-Version-7-25-22.pdf</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;RemoteParkingAssistance"/>
+		<owl:annotatedTarget xml:lang="en">feature that without the driver being physically present inside the vehicle, provides steering, braking, accelerating and/or gear selection while moving a vehicle into or out of a parking space</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://newsroom.aaa.com/wp-content/uploads/2022/07/Clearing-the-Confusion-One-Pager-New-Version-7-25-22.pdf</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;ReverseAutomaticEmergencyBraking"/>
+		<owl:annotatedTarget xml:lang="en">feature that detects potential collisions while in reverse gear and automatically brakes to avoid or lessen the severity of impact</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://newsroom.aaa.com/wp-content/uploads/2022/07/Clearing-the-Confusion-One-Pager-New-Version-7-25-22.pdf</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-vp;Roof"/>
 		<owl:annotatedTarget>portion of an automobile that sits above the passenger compartment, protecting the vehicle occupants from sun, wind and other external elements</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>https://en.wikipedia.org/wiki/Automobile_roof</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;SurroundViewCamera"/>
+		<owl:annotatedTarget xml:lang="en">feature that displays the immediate surroundings of some or all sides of the vehicle while stopped or during low speed maneuvers</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://newsroom.aaa.com/wp-content/uploads/2022/07/Clearing-the-Confusion-One-Pager-New-Version-7-25-22.pdf</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;TrailerAssistance"/>
+		<owl:annotatedTarget xml:lang="en">feature that assists the driver with visual guidance while backing towards a trailer or during backing maneuvers with a trailer attached</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://newsroom.aaa.com/wp-content/uploads/2022/07/Clearing-the-Confusion-One-Pager-New-Version-7-25-22.pdf</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 </rdf:RDF>
