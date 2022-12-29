@@ -37,6 +37,7 @@
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://spec.edmcouncil.org/auto/</rdfs:seeAlso>
         <fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
         <owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/20221229/AboutAUTOProd/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
     </owl:Ontology>
     </rdf:RDF>
 
