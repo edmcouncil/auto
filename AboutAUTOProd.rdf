@@ -22,7 +22,7 @@
         <fibo-fnd-utl-av:copyright>Copyright (c) 2021 EDM Council, Inc.</fibo-fnd-utl-av:copyright>
         <fibo-fnd-utl-av:fileAbbreviation>auto-prod</fibo-fnd-utl-av:fileAbbreviation>
         <fibo-fnd-utl-av:filename>AboutAutoProd.rdf</fibo-fnd-utl-av:filename>
-        <fibo-fnd-utl-av:title>ontology for automotive domain</fibo-fnd-utl-av:filename>
+        <fibo-fnd-utl-av:title>ontology for automotive domain</fibo-fnd-utl-av:title>
         <fibo-fnd-utl-av:submitter>The John Paul II Catholic University of Lublin</fibo-fnd-utl-av:submitter>
         <rdfs:label>About AUTO Production</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://spec.edmcouncil.org/auto/</rdfs:seeAlso>
