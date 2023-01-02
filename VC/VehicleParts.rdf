@@ -102,7 +102,7 @@ It contains many classes and properties extracted from:
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;ADAS">
-		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehicleSystem"/>
 		<rdfs:label xml:lang="en">ADAS</rdfs:label>
 		<rdfs:comment xml:lang="en">Signal/Attribute.ADAS : All Advanced Driver Assist Systems attributes</rdfs:comment>
 		<skos:definition xml:lang="en">broad range of features, including those that provide warnings and/or momentary intervention, such as forward collision warning (FCW) systems, lane keeping assistance (LKA) systems, and automatic emergency braking (AEB) systems, as well as some convenience features that involve Level 1 driver support features, such as ACC and certain parking assistance features</skos:definition>
@@ -226,6 +226,12 @@ It contains many classes and properties extracted from:
 		<rdfs:label xml:lang="en">automatic high beams</rdfs:label>
 		<skos:definition xml:lang="en">feature that switches between high and low beam headlamps automatically based on lighting and traffic</skos:definition>
 		<fibo-fnd-utl-av:abbreviation xml:lang="en">AHB</fibo-fnd-utl-av:abbreviation>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;AutonomousDrivingChip">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:label xml:lang="en">autonomous driving chip</rdfs:label>
+		<skos:definition xml:lang="en">special system-on-a-chip designed specifically to interpret and recognize, in real-time, traffic-control devices in order to either assist a driver with control of the vehicle or in order to partially or fully automate all aspects of the dynamic driving task</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;AuxiliaryDrivingLamp">
@@ -1133,6 +1139,12 @@ It contains many classes and properties extracted from:
 		<skos:definition xml:lang="en">lamp used to illuminate the license plate on the rear of a motor vehicle</skos:definition>
 	</owl:Class>
 	
+	<owl:Class rdf:about="&auto-vp;Lidar">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:label xml:lang="en">lidar</rdfs:label>
+		<skos:definition xml:lang="en">device or system that emits pulsed laser light and processes their reflections for display and is used especially for detecting and locating objects</skos:definition>
+	</owl:Class>
+	
 	<owl:Class rdf:about="&auto-vp;LocalHVAC">
 		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
 		<rdfs:subClassOf>
@@ -1420,6 +1432,12 @@ It contains many classes and properties extracted from:
 		<rdfs:subClassOf rdf:resource="&auto-vp;Window"/>
 		<rdfs:label xml:lang="en">push-out window</rdfs:label>
 		<skos:definition xml:lang="en">vehicle window designed to open outward</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;Radar">
+		<rdfs:subClassOf rdf:resource="&auto-vp;VehiclePart"/>
+		<rdfs:label xml:lang="en">radar</rdfs:label>
+		<skos:definition xml:lang="en">device or system that emits radio waves and processes their reflections for display and is used especially for detecting and locating objects</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;RadialPlyTire">
@@ -1945,6 +1963,12 @@ It contains many classes and properties extracted from:
 		<rdfs:subClassOf rdf:resource="&auto-mo;MaterialEntity"/>
 		<rdfs:label xml:lang="en">vehicle part</rdfs:label>
 		<skos:definition xml:lang="en">article the primary use of which is to improve, repair, replace, or serve as a component part of a vehicle</skos:definition>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&auto-vp;VehicleSystem">
+		<rdfs:subClassOf rdf:resource="&auto-mo;MaterialEntity"/>
+		<rdfs:label xml:lang="en">vehicle system</rdfs:label>
+		<skos:definition xml:lang="en">assembly of devices combined to perform one or more specific functions in a vehicle</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;WasherFluid">
@@ -2992,6 +3016,12 @@ It contains many classes and properties extracted from:
 	</owl:Axiom>
 	<owl:Axiom>
 		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;Lidar"/>
+		<owl:annotatedTarget xml:lang="en">device or system that emits pulsed laser light and processes their reflections for display and is used especially for detecting and locating objects</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://www.merriam-webster.com/dictionary/lidar</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-vp;Lumbar"/>
 		<owl:annotatedTarget xml:lang="en">mechanical or pneumatic device that matches a vehicle&apos;s seat back to the contours of the driver or passenger</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>https://www.edmunds.com/glossary/</fibo-fnd-utl-av:adaptedFrom>
@@ -3019,6 +3049,12 @@ It contains many classes and properties extracted from:
 		<owl:annotatedSource rdf:resource="&auto-vp;ParkingCollisionWarning"/>
 		<owl:annotatedTarget xml:lang="en">feature that detects objects close to the vehicle during parking maneuvers and notifies the driver</owl:annotatedTarget>
 		<fibo-fnd-utl-av:adaptedFrom>https://newsroom.aaa.com/wp-content/uploads/2022/07/Clearing-the-Confusion-One-Pager-New-Version-7-25-22.pdf</fibo-fnd-utl-av:adaptedFrom>
+	</owl:Axiom>
+	<owl:Axiom>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;Radar"/>
+		<owl:annotatedTarget xml:lang="en">device or system that emits radio waves and processes their reflections for display and is used especially for detecting and locating objects</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>https://www.merriam-webster.com/dictionary/radar</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
 		<owl:annotatedProperty rdf:resource="&skos;definition"/>
