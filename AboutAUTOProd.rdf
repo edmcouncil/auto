@@ -1,24 +1,31 @@
 <?xml version="1.0"?>
+<!DOCTYPE rdf:RDF [
+	<!ENTITY dct "http://purl.org/dc/terms/">
+	<!ENTITY fibo-fnd-utl-av "https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
+	<!ENTITY owl "http://www.w3.org/2002/07/owl#">
+	<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+	<!ENTITY skos "http://www.w3.org/2004/02/skos/core#">
+	<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">	
+    <!ENTITY sm "http://www.omg.org/techprocess/ab/SpecificationMetadata/">
+]>	
 <rdf:RDF xmlns="https://spec.edmcouncil.org/auto/ontology/AboutAUTOProd/"
      xml:base="https://spec.edmcouncil.org/auto/ontology/AboutAUTOProd/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:ns="http://creativecommons.org/ns#"
-     xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/"
+     xmlns:dct="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:auto-mo="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"
      xmlns:auto-ti="https://spec.edmcouncil.org/auto/ontology/DE/TrafficIncidents/"
      xmlns:auto-vc="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/"
      xmlns:auto-vp="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/"     
      xmlns:auto-vs="https://spec.edmcouncil.org/auto/ontology/VS/VehicleSignals/"
-     xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/">
+     xmlns:fibo-fnd-utl-av="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"
+     xmlns:sm="http://www.omg.org/techprocess/ab/SpecificationMetadata/">
     <owl:Ontology rdf:about="https://spec.edmcouncil.org/auto/ontology/AboutAUTOProd/">
         <terms:abstract>This ontology is provided for the convenience of AUTO users. It loads the very latest version of every AUTO ontology (released, provisional, and informative) based on the contents of GitHub, for use in particular while working on revisions. Note that metadata files are included.</terms:abstract>
         <terms:license rdf:resource="http://opensource.org/licenses/MIT"/>
@@ -26,8 +33,14 @@
         <sm:copyright>Copyright (c) 2021 EDM Council, Inc.</sm:copyright>
         <sm:fileAbbreviation>auto-prod</sm:fileAbbreviation>
         <sm:filename>AboutAutoProd.rdf</sm:filename>
+        <dct:title>ontology for automotive domain</dct:title>
         <sm:submitter>The John Paul II Catholic University of Lublin</sm:submitter>
         <rdfs:label>About AUTO Production</rdfs:label>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://spec.edmcouncil.org/auto/</rdfs:seeAlso>
+        <fibo-fnd-utl-av:hasMaturityLevel rdf:resource="&fibo-fnd-utl-av;Provisional"/>
+        <owl:versionIRI rdf:resource="https://spec.edmcouncil.org/auto/ontology/20221229/AboutAUTOProd/"/>
+        <owl:imports rdf:resource="https://spec.edmcouncil.org/fibo/ontology/FND/Utilities/AnnotationVocabulary/"/>
     </owl:Ontology>
     </rdf:RDF>
+
+
