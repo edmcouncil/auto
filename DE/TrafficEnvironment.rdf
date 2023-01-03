@@ -926,6 +926,7 @@
 	</owl:DatatypeProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-ev;angle">
+		<rdfs:label>Angle</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-ev;TrafficSignal"/>
 		<rdfs:range rdf:resource="&xsd;decimal"/>
 	</owl:DatatypeProperty>
