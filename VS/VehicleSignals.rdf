@@ -850,6 +850,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;Camera">
 		<rdfs:subClassOf rdf:resource="&sosa;Sensor"/>
+		<rdfs:label xml:lang="en">camera</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;CatalystTemperature">
