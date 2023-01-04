@@ -678,10 +678,12 @@
 	
 	<owl:Class rdf:about="&auto-vs;Bank2">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
+		<rdfs:label xml:lang="en">bank2</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;Barometer">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
+		<rdfs:label xml:lang="en">barometer</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;BarometricPressure">
@@ -728,6 +730,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;BatterySensor">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
+		<rdfs:label xml:lang="en">battery sensor</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;BatteryTemperature">
