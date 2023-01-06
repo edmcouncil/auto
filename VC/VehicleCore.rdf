@@ -599,7 +599,6 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 				<owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">automobile</rdfs:label>
 		<rdfs:label xml:lang="en">car</rdfs:label>
 		<rdfs:label xml:lang="pl">samochód</rdfs:label>
 		<rdfs:comment>Automobiles may be classified by size or weight, or both. Size classification is based on wheelbase. Weight classification is based on curb weight, the weight of an automobile with standard equipment and a full complement of fuel and other fluids, but with no load of persons or property. Before classification, wheelbase should be rounded to the nearest inch and curb weight should be rounded to the nearest 100 pounds.</rdfs:comment>
@@ -3648,7 +3647,6 @@ Typical unit code(s): LTR for liters, GLL of US gallons, GLI for UK / imperial g
 	
 	<owl:ObjectProperty rdf:about="&auto-vc;fuelConsumption">
 		<rdfs:label xml:lang="en">fuel consumption</rdfs:label>
-		<rdfs:label xml:lang="en">fuel efficiency</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
 		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
@@ -3852,7 +3850,6 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc;heightOpenTailgate">
-		<rdfs:label xml:lang="en">height open bonnet</rdfs:label>
 		<rdfs:label xml:lang="en">height open tailgate</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
@@ -4459,7 +4456,6 @@ Typical unit code(s): RPM for revolutions per minute or RPS for revolutions per 
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc;seatingCapacity">
-		<rdfs:label xml:lang="en">seating capacity</rdfs:label>
 		<rdfs:label xml:lang="en">vehicle seating capacity</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
@@ -4651,7 +4647,6 @@ Typical unit code(s): NU for newton metre (N m), F17 for pound-force per foot, o
 	
 	<owl:ObjectProperty rdf:about="&auto-vc;trailerWeight">
 		<rdfs:label xml:lang="en">tongue weight</rdfs:label>
-		<rdfs:label xml:lang="en">trailer weight</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
 		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
@@ -4782,7 +4777,6 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc;vehicleIdentificationNumber">
 		<rdfs:subPropertyOf rdf:resource="&auto-vc;serialNumber"/>
-		<rdfs:label xml:lang="en">VIN</rdfs:label>
 		<rdfs:label xml:lang="en">vehicle identification number</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
