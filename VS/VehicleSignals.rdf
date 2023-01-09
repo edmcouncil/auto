@@ -874,7 +874,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;CatalystTemperatureSensor">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
-		<rdfs:label xml:lang="en">Catalyst Temperature Sensor</rdfs:label>
+		<rdfs:label xml:lang="en">catalyst temperature sensor</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;ChildLock">
@@ -1025,7 +1025,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;CoolantTemperatureSensor">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
-		<rdfs:label xml:lang="en">Coolant Temperature Sensor</rdfs:label>
+		<rdfs:label xml:lang="en">coolant temperature sensor</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;CoolantThermometer">
@@ -1036,7 +1036,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;CrankshaftPositionSensor">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
-		<rdfs:label xml:lang="en">Crankshaft Position Sensor</rdfs:label>
+		<rdfs:label xml:lang="en">crankshaft position sensor</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;CruiseControlError">
@@ -1230,7 +1230,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;CushionPositionSensor">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
-		<rdfs:label xml:lang="en">Cushion Position Sensor</rdfs:label>
+		<rdfs:label xml:lang="en">cushion position sensor</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;CushionUp">
