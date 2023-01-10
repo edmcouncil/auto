@@ -3194,7 +3194,7 @@ Typical unit code(s): SEC for seconds&lt;br/&gt;&lt;br/&gt;
 	
 	<owl:ObjectProperty rdf:about="&auto-vc;bodyStyle">
 		<rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
-		<rdfs:label xml:lang="en">body style</rdfs:label>
+		<rdfs:comment xml:lang="en">body style</rdfs:comment>
 		<rdfs:label xml:lang="en">body type</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>

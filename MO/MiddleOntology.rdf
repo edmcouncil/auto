@@ -79,7 +79,6 @@
 	<owl:Class rdf:about="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/Location">
 		<rdfs:subClassOf rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/ImmaterialEntity"/>
 		<rdfs:label xml:lang="en">location</rdfs:label>
-		<rdfs:label xml:lang="en">place</rdfs:label>
 		<rdfs:comment>QName: auto-mo-mo:Location</rdfs:comment>
 		<rdfs:isDefinedBy rdf:resource="https://spec.edmcouncil.org/auto/ontology/MO/MiddleOntology/"/>
 	</owl:Class>
