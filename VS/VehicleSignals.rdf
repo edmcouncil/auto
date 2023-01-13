@@ -1364,6 +1364,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;DiagnosticSystem">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
+		<rdfs:label xml:lang="en">diagnostic system</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;DimmingSystem">
@@ -1548,6 +1549,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;EGRSystemMonitor">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
+		<rdfs:label xml:lang="en">EGR system monitor</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;EOP">
@@ -1631,6 +1633,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;EVAPSystem">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
+		<rdfs:label xml:lang="en">EVAP system</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;EVAPVaporPressure">
@@ -1793,6 +1796,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;FluidSensor">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
+		<rdfs:label xml:lang="en">fluid sensor</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;FreezeDTC">
@@ -1863,6 +1867,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;FuelPressureSensor">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
+		<rdfs:label xml:lang="en">fuel pressure sensor</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;FuelRailPressureAbsolute">
@@ -1903,6 +1908,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;FuelRailPressureSensor">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
+		<rdfs:label xml:lang="en">fuel rail pressure sensor</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;FuelRailPressureVac">
