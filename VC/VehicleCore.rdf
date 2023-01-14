@@ -599,7 +599,6 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 				<owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
 			</owl:Restriction>
 		</rdfs:subClassOf>
-		<rdfs:label xml:lang="en">automobile</rdfs:label>
 		<rdfs:label xml:lang="en">car</rdfs:label>
 		<rdfs:label xml:lang="pl">samochód</rdfs:label>
 		<rdfs:comment>Automobiles may be classified by size or weight, or both. Size classification is based on wheelbase. Weight classification is based on curb weight, the weight of an automobile with standard equipment and a full complement of fuel and other fluids, but with no load of persons or property. Before classification, wheelbase should be rounded to the nearest inch and curb weight should be rounded to the nearest 100 pounds.</rdfs:comment>
@@ -615,6 +614,7 @@ Coaches are luxury busses, usually in service for long distance travel.</rdfs:co
 		<skos:definition xml:lang="en">a wheeled motor vehicle used for transporting passengers, which also carries its own engine or motor</skos:definition>
 		<skos:definition xml:lang="en">a wheeled, self-powered motor vehicle used for transportation</skos:definition>
 		<fibo-fnd-utl-av:adaptedFrom>ANSI D.16-2017, section 2.2.12</fibo-fnd-utl-av:adaptedFrom>
+		<fibo-fnd-utl-av:synonym xml:lang="en">automobile</fibo-fnd-utl-av:synonym>
 	</owl:Class>
 	
 	<owl:NamedIndividual rdf:about="&auto-vc;CarSharing">
@@ -3648,7 +3648,6 @@ Typical unit code(s): LTR for liters, GLL of US gallons, GLI for UK / imperial g
 	
 	<owl:ObjectProperty rdf:about="&auto-vc;fuelConsumption">
 		<rdfs:label xml:lang="en">fuel consumption</rdfs:label>
-		<rdfs:label xml:lang="en">fuel efficiency</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
 		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
@@ -3663,6 +3662,7 @@ Note 3: Often, the absolute value is useful only when related to driving speed (
 Note 1: There are unfortunately no standard unit codes for miles per gallon or kilometers per liter. Use unitText to indicate the unit of measurement, e.g. mpg or km/L.
 Note 2: There are two ways of indicating the fuel consumption, fuelConsumption (e.g. 8 liters per 100 km) and fuelEfficiency (e.g. 30 miles per gallon). They are reciprocal.
 Note 3: Often, the absolute value is useful only when related to driving speed (&quot;at 80 km/h&quot;) or usage pattern (&quot;city traffic&quot;). You can use valueReference to link the value for the fuel economy to another value.</skos:definition>
+		<fibo-fnd-utl-av:synonym xml:lang="en">fuel efficiency</fibo-fnd-utl-av:synonym>
 	</owl:ObjectProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc;fuelInjectionTypeId">
@@ -3852,13 +3852,13 @@ Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT f
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc;heightOpenTailgate">
-		<rdfs:label xml:lang="en">height open bonnet</rdfs:label>
 		<rdfs:label xml:lang="en">height open tailgate</rdfs:label>
 		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
 		<rdfs:isDefinedBy rdf:resource="http://purl.org/vvo/ns#"/>
 		<rdfs:range rdf:resource="&auto-mo;QuantitativeValue"/>
 		<skos:definition xml:lang="en">The outer height of the vehicle with the tailgate open. Note that you can use gr:hasMinValueFloat and gr:hasMaxValueFloat to indicate ranges.
 Typical unit code(s): CMT for centimeters, MTR for meters, INH for inches, FOT for foot/feet</skos:definition>
+		<fibo-fnd-utl-av:synonym xml:lang="en">height open bonnet</fibo-fnd-utl-av:synonym>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc;includes">
@@ -4460,7 +4460,6 @@ Typical unit code(s): RPM for revolutions per minute or RPS for revolutions per 
 	
 	<owl:ObjectProperty rdf:about="&auto-vc;seatingCapacity">
 		<rdfs:label xml:lang="en">seating capacity</rdfs:label>
-		<rdfs:label xml:lang="en">vehicle seating capacity</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
 		<rdfs:domain rdf:resource="&auto-vc;Vehicle"/>
@@ -4471,6 +4470,7 @@ Typical unit code(s): C62 for persons.</skos:definition>
 		<skos:definition>The number of persons that can be seated (e.g. in a vehicle), both in terms of the physical space available, and in terms of limitations set by law.&lt;br/&gt;&lt;br/&gt;
 
 Typical unit code(s): C62 for persons</skos:definition>
+		<fibo-fnd-utl-av:synonym xml:lang="en">vehicle seating capacity</fibo-fnd-utl-av:synonym>
 	</owl:ObjectProperty>
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc;serialNumber">
@@ -4650,7 +4650,6 @@ Typical unit code(s): NU for newton metre (N m), F17 for pound-force per foot, o
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc;trailerWeight">
-		<rdfs:label xml:lang="en">tongue weight</rdfs:label>
 		<rdfs:label xml:lang="en">trailer weight</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
@@ -4674,6 +4673,7 @@ Note 1: You can indicate additional information in the name of the QuantitativeV
 Note 2: You may also link to a QualitativeValue node that provides additional information using valueReference. 
 
 Note 3: Note that you can use minValue and maxValue to indicate ranges.</skos:definition>
+		<fibo-fnd-utl-av:synonym xml:lang="en">tongue weight</fibo-fnd-utl-av:synonym>
 	</owl:ObjectProperty>
 	
 	<owl:ObjectProperty rdf:about="&auto-vc;transmission">
@@ -4782,7 +4782,6 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 	
 	<owl:DatatypeProperty rdf:about="&auto-vc;vehicleIdentificationNumber">
 		<rdfs:subPropertyOf rdf:resource="&auto-vc;serialNumber"/>
-		<rdfs:label xml:lang="en">VIN</rdfs:label>
 		<rdfs:label xml:lang="en">vehicle identification number</rdfs:label>
 		<dct:isPartOf rdf:resource="http://auto.schema.org"/>
 		<dct:source rdf:resource="http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group"/>
@@ -4794,6 +4793,7 @@ If you cannot find a suitable identifier in DBPedia, define your own as an insta
 		<skos:definition xml:lang="en">A unique serial number used by the automotive industry to identify individual motor vehicles</skos:definition>
 		<skos:definition>The Vehicle Identification Number (VIN) is a unique serial number used by the automotive industry to identify individual motor vehicles.</skos:definition>
 		<fibo-fnd-utl-av:abbreviation>VIN</fibo-fnd-utl-av:abbreviation>
+		<fibo-fnd-utl-av:synonym xml:lang="en">VIN</fibo-fnd-utl-av:synonym>
 		<fibo-fnd-utl-av:synonym xml:lang="en">Vehicle Identification Number</fibo-fnd-utl-av:synonym>
 	</owl:DatatypeProperty>
 	
