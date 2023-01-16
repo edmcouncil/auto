@@ -678,7 +678,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;Bank2">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
-		<rdfs:label xml:lang="en">bank2</rdfs:label>
+		<rdfs:label xml:lang="en">bank 2</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;Barometer">
