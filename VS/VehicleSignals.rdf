@@ -849,6 +849,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;CAN">
 		<rdfs:subClassOf rdf:resource="&sosa;Sensor"/>
+		<rdfs:label xml:lang="en">CAN</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;Camera">
@@ -876,6 +877,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;CatalystTemperatureSensor">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
+		<rdfs:label xml:lang="en">catalyst temperature sensor</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;ChildLock">
@@ -1026,6 +1028,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;CoolantTemperatureSensor">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
+		<rdfs:label xml:lang="en">coolant temperature sensor</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;CoolantThermometer">
@@ -1036,6 +1039,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;CrankshaftPositionSensor">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
+		<rdfs:label xml:lang="en">crankshaft position sensor</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;CruiseControlError">
@@ -1229,6 +1233,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;CushionPositionSensor">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
+		<rdfs:label xml:lang="en">cushion position sensor</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;CushionUp">
@@ -1362,6 +1367,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;DiagnosticSystem">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
+		<rdfs:label xml:lang="en">diagnostic system</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;DimmingSystem">
@@ -1546,6 +1552,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;EGRSystemMonitor">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
+		<rdfs:label xml:lang="en">EGR system monitor</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;EOP">
@@ -1629,6 +1636,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;EVAPSystem">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
+		<rdfs:label xml:lang="en">EVAP system</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;EVAPVaporPressure">
@@ -1791,6 +1799,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;FluidSensor">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
+		<rdfs:label xml:lang="en">fluid sensor</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;FreezeDTC">
@@ -1861,6 +1870,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;FuelPressureSensor">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
+		<rdfs:label xml:lang="en">fuel pressure sensor</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;FuelRailPressureAbsolute">
@@ -1901,6 +1911,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;FuelRailPressureSensor">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
+		<rdfs:label xml:lang="en">fuel rail pressure sensor</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;FuelRailPressureVac">
@@ -2293,6 +2304,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;Intake-AirTemperatureSensor">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
+		<rdfs:label xml:lang="en">intake air temperature sensor</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;IntakeTemperature">
@@ -2339,6 +2351,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;IsBackUpLightOn">
 		<rdfs:subClassOf rdf:resource="&auto-vs;ActuableSignal"/>
+		<rdfs:label xml:lang="en">is backup light on</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;IsBackupLightOn">
@@ -2957,6 +2970,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;LeftIndicatorLight">
 		<rdfs:subClassOf rdf:resource="&auto-vs;ActuableSignal"/>
+		<rdfs:label xml:lang="en">left indicator light</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;LeftIndicatorSwitch">
@@ -2967,6 +2981,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;Lidar">
 		<rdfs:subClassOf rdf:resource="&sosa;Sensor"/>
+		<rdfs:label xml:lang="en">lidar</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;LightIntensity">
@@ -3188,6 +3203,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;LumbarPressureSensor">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
+		<rdfs:label xml:lang="en">lumbar pressure sensor</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;LumbarUp">
@@ -3222,6 +3238,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;MAFSensor">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
+		<rdfs:label xml:lang="en">MAF sensor</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;MAP">
@@ -4027,6 +4044,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;RightIndicatorLight">
 		<rdfs:subClassOf rdf:resource="&auto-vs;ActuableSignal"/>
+		<rdfs:label xml:lang="en">right indicator light</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;RightIndicatorSwitch">
@@ -4368,6 +4386,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;Sonar">
 		<rdfs:subClassOf rdf:resource="&sosa;Sensor"/>
+		<rdfs:label xml:lang="en">sonar</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;SpeedSet">
@@ -4690,6 +4709,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;ThrottleActuator">
 		<rdfs:subClassOf rdf:resource="&sosa;Actuator"/>
+		<rdfs:label xml:lang="en">throttle actuator</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;ThrottlePosition">
@@ -5086,6 +5106,7 @@
 	
 	<owl:Class rdf:about="&auto-vs;VoltageSensor">
 		<rdfs:subClassOf rdf:resource="&auto-vs;VehicleSensor"/>
+		<rdfs:label xml:lang="en">voltage sensor</rdfs:label>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vs;WarmupsSinceDTCClear">

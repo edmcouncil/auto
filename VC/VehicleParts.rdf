@@ -452,7 +452,7 @@ It contains many classes and properties extracted from:
 	<owl:Class rdf:about="&auto-vp;ClearanceLamp">
 		<rdfs:subClassOf rdf:resource="&auto-vp;ExternalLights"/>
 		<rdfs:label xml:lang="en">clearanece lamp</rdfs:label>
-		<rdfs:label xml:lang="en">lamp that provides light to the front or rear, mounted on the permanent structure of the vehicle, such that it indicates the overall width of the vehicle</rdfs:label>
+		<skos:definition xml:lang="en">lamp that provides light to the front or rear, mounted on the permanent structure of the vehicle, such that it indicates the overall width of the vehicle</skos:definition>
 	</owl:Class>
 	
 	<owl:Class rdf:about="&auto-vp;CombinationHeadlamp">
@@ -1897,13 +1897,6 @@ It contains many classes and properties extracted from:
 	</owl:Axiom>
 	<owl:Axiom>
 		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
-		<owl:annotatedProperty rdf:resource="&rdfs;label"/>
-		<owl:annotatedSource rdf:resource="&auto-vp;ClearanceLamp"/>
-		<owl:annotatedTarget xml:lang="en">lamp that provides light to the front or rear, mounted on the permanent structure of the vehicle, such that it indicates the overall width of the vehicle</owl:annotatedTarget>
-		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
-	</owl:Axiom>
-	<owl:Axiom>
-		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
 		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-vp;AirBrakeSystem"/>
 		<owl:annotatedTarget xml:lang="en">system, including an air-over-hydraulic brake subsystem, that uses air as a medium for transmitting pressure or force from the driver control to the service brake but does not include a system that uses compressed air or vacuum only to assist the driver in applying muscular force to hydraulic or mechanical components</owl:annotatedTarget>
@@ -1969,6 +1962,13 @@ It contains many classes and properties extracted from:
 		<owl:annotatedProperty rdf:resource="&skos;definition"/>
 		<owl:annotatedSource rdf:resource="&auto-vp;Chassis"/>
 		<owl:annotatedTarget xml:lang="en">load-supporting frame of a commercial motor vehicle, exclusive of any appurtenances which might be added to accommodate cargo</owl:annotatedTarget>
+	</owl:Axiom>
+	<owl:Axiom>
+		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
+		<owl:annotatedProperty rdf:resource="&skos;definition"/>
+		<owl:annotatedSource rdf:resource="&auto-vp;ClearanceLamp"/>
+		<owl:annotatedTarget xml:lang="en">lamp that provides light to the front or rear, mounted on the permanent structure of the vehicle, such that it indicates the overall width of the vehicle</owl:annotatedTarget>
+		<fibo-fnd-utl-av:adaptedFrom>49 C.F.R. § 393.5</fibo-fnd-utl-av:adaptedFrom>
 	</owl:Axiom>
 	<owl:Axiom>
 		<rdfs:seeAlso>https://www.law.cornell.edu/cfr/text/49/393.5</rdfs:seeAlso>
