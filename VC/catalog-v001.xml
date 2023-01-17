@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1672862913153" name="https://spec.edmcouncil.org/auto/ontology/VC/MetadataVC/" uri="MetadataVC.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1672862913153" name="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/" uri="VehicleCore.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1672862913153" name="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/" uri="VehicleParts.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1673703866514" name="https://spec.edmcouncil.org/auto/ontology/VC/MetadataVC/" uri="MetadataVC.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1673703866514" name="https://spec.edmcouncil.org/auto/ontology/VC/VehicleCore/" uri="VehicleCore.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1673703866514" name="https://spec.edmcouncil.org/auto/ontology/VC/VehicleParts/" uri="VehicleParts.rdf"/>
     </group>
 </catalog>
