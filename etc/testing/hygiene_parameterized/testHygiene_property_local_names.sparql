@@ -1,0 +1,23 @@
+PREFIX owl:   <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX afn:   <http://jena.apache.org/ARQ/function#>
+
+
+##
+# banner A property's name should be in the lower Camel Case.
+
+
+SELECT DISTINCT ?warning ?property
+WHERE 
+{
+  ?property rdf:type ?type.
+  VALUES ?type {owl:AnnotationProperty owl:ObjectProperty owl:DatatypeProperty}
+
+  FILTER (!(regex(afn:localname(?property), "[a-z0-9\\-_]([A-Z][a-z0-9\\-_]+)*")))
+
+  FILTER regex(str(?resource), <HYGIENE_TESTS_FILTER_PARAMETER>)	
+
+  BIND (CONCAT("WARN: Name of property ", STR(?property), " may not be in the lower Camel Case.") AS ?warning)
+}

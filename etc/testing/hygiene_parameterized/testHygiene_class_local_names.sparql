@@ -1,0 +1,21 @@
+PREFIX owl:   <http://www.w3.org/2002/07/owl#> 
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX afn:   <http://jena.apache.org/ARQ/function#>
+
+
+##
+# banner A class's name should be in the Upper Camel Case.
+
+
+SELECT DISTINCT ?warning ?class
+WHERE 
+{
+  ?class a owl:Class .
+  FILTER (!(regex(afn:localname(?class), "([A-Z][a-z0-9\\-_]+)+")))
+
+  FILTER regex(str(?resource), <HYGIENE_TESTS_FILTER_PARAMETER>)	
+
+  BIND (CONCAT("WARN: Name of class ", STR(?class), " may not be in the Upper Camel Case.") AS ?warning)
+}
