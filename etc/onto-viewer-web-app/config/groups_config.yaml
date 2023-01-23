@@ -63,6 +63,7 @@ groups_config:
         - '@viewer.axiom.AnnotationPropertyDomain'
         - '@viewer.axiom.AnnotationPropertyRangeOf'
         - '@viewer.axiom.InverseObjectProperties'
+        - '@viewer.function.axiom_object_property'
         - 'http://purl.org/dc/terms/hasPart'
         - 'http://www.omg.org/techprocess/ab/SpecificationMetadata/dependsOn'
     - name: Meta-information
