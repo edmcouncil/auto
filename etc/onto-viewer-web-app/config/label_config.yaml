@@ -52,7 +52,7 @@ label_config:
     - id: '@viewer.axiom.DataPropertyRange'
       name: Data property range
     - id: '@viewer.function.axiom_object_property'
-      name: SuperProperty Of (Chain)
+      name: Property chains
     - id: '@viewer.axiom.AnnotationPropertyDomain'
       name: Annotation property domain
     - id: '@viewer.axiom.AnnotationPropertyRangeOf'
